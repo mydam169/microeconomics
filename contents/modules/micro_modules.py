@@ -11,6 +11,7 @@ def load_viz_settings():
                   'grid.color' : 'grey', 
                   'grid.linewidth' : '1', 
                   'font.family' : 'arial', 
+                  'figure.figsize': (4, 4)
                   }
     for kk, vv in plot_params.items():
         plt.rcParams[kk] = vv
@@ -86,12 +87,12 @@ def plotIC_curve():
     plt.plot(x, y, color='green')
     plt.xlabel('$x_1$')
     plt.ylabel('$x_2$')
-    plt.title('An indifference curve')
+    # plt.title('An indifference curve')
 
     # Add text annotations
-    plt.text(1.5, 2, 'Upper contour set (UCS)\n$\{y \in\mathbb{R}^2_+: y \succeq x\}$', fontsize=11)
-    plt.text(0.25, 0.5, 'Lower contour set (LCS)\n$\{y \in\mathbb{R}^2_+: x \succeq y\}$', fontsize=10)
-    plt.text(1.5, 0.75, 'Indifference set\n$\{y \in\mathbb{R}^2_+: y \sim x\}$', fontsize=12, color='green')
+    plt.text(1., 1.5, 'Upper contour set (UCS)\n$\{y \in\mathbb{R}^2_+: y \succeq x\}$', fontsize=10)
+    plt.text(0.25, 0.25, 'Lower contour set (LCS)\n$\{y \in\mathbb{R}^2_+: x \succeq y\}$', fontsize=10)
+    plt.text(1.5, 0.85, 'Indifference set\n$\{y \in\mathbb{R}^2_+: y \sim x\}$', fontsize=10, color='green')
 
     # Add a point X on the curve
     plt.plot(1, 1, 'ko')

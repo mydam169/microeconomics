@@ -8,8 +8,8 @@ format:
         toc: true
         toc-depth: 3
         toc-title: "Content"
-        toc-expand: true
-        toc-location: "right"
+        # toc-expand: true
+        # toc-location: "left"
         # embed-resources: true
 ---
 
@@ -470,7 +470,7 @@ Since a homogeneous utility function is homothetic, homogeneous preferences are 
 
 * Constant elasticity of substitution (CES) utility function:
   $$
-    u(x, y) = [\alpha x^p + (1 - \alpha)y^p]^(1/p),
+    u(x, y) = [\alpha x^p + (1 - \alpha)y^p]^{1/p},
   $${#eq-CES-utility}
   where $p\neq 0$ and $\alpha \in (0, 1)$. 
   
@@ -512,7 +512,7 @@ Since a homogeneous utility function is homothetic, homogeneous preferences are 
 
 * If preferences are strictly convex, this set is a singleton: the correspondence becomes a function (_Walrasian demand function_)
 
-Here are some properties of the Walrasian demand correspondence:
+### Properties of the Walrasian demand correspondence
 
 If the utility function is continuous and preferences satisfy LNS (thin ICs) over the consumption set $\mathbb{R}^L_+$, then the Walrasian demand satisfies:
 
@@ -536,14 +536,15 @@ $$
 L = u(x) + \lambda (w - px)
 $${#eq-Lagrangian}
 
-The KTT theorem tells us that if $x^*$ is a solution to the UMP then there exists $\lambda^*$ such that the following conditions are satisfied:
+Denote $L_i$ the partial derivative of the Lagrangian with respect to good $i$. The KTT theorem tells us that if $x^*$ is a solution to the UMP then there exists $\lambda^*\geq 0$ such that the following conditions are satisfied:
 $$
 \begin{aligned}
-L_i(x^*) \equiv \frac{\partial L}{\partial x_i}(x^*) &\leq 0 \quad \forall i=1,\dots, L\\
-L_i(x^*) &= 0 \text{ if } x^*_i>0, \quad \forall i=1, \\
-\lambda^* &\geq 0 \text{ and } \lambda^*(w - px^*) = 0. 
+& L_i(x^*) \leq 0 \quad \forall i=1,\dots, L \\ 
+& L_i(x^*) = 0 \text{ if } x^*_i>0, \quad \forall i, \\
+& \lambda^* \geq 0 \text{ and } \lambda^*(w - px^*) = 0. 
 \end{aligned}
-$${#eq-KT_conds_UMP}
+$${#eq-NFOCs}
+
 
 Assume interior solution, then the first set of conditions yields 
 $$
