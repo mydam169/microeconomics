@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   page-navigation: true
@@ -8,8 +9,7 @@ website:
   
   # site-url: ""
   # repo-url: ""
-  # repo-actions: [edit, issue]
-
+  
   open-graph: true
 
   # page-footer: 
