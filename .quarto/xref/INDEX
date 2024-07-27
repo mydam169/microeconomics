@@ -1,0 +1,35 @@
+{
+  "index.qmd": {
+    "index.html": "93947ac7"
+  },
+  "about.qmd": {
+    "about.html": "244b4461"
+  },
+  "contact.qmd": {
+    "contact.html": "0d14ccff"
+  },
+  "contents/lecture_1.qmd": {
+    "lecture_1.html": "53ca55de"
+  },
+  "contents/lecture_2.qmd": {
+    "lecture_2.html": "2ed8afd3"
+  },
+  "contents/references.qmd": {
+    "references.html": "fb32548b"
+  },
+  "contents/lecture_3.qmd": {
+    "lecture_3.html": "8d4ecf59"
+  },
+  "contents/lecture_4.qmd": {
+    "lecture_4.html": "1b728514"
+  },
+  "contents/lecture_5.qmd": {
+    "lecture_5.html": "53477695"
+  },
+  "contents/lecture_6.qmd": {
+    "lecture_6.html": "1371fd68"
+  },
+  "contents/lecture_7.qmd": {
+    "lecture_7.html": "2cb48d7d"
+  }
+}

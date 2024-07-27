@@ -1,0 +1,80 @@
+---
+title: "Intermediate Microeconomics - Summer 2024"
+---
+
+This is a Quarto website.
+
+To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+
+# Course outline and references
+
+## Outline
+
+1. Consumers and demand
+    * Consumer preferences and utility
+    * Consumer choice
+    * Demand theory
+2. Firms and supply
+    * Firms and production
+    * Input demands
+    * Expenditure minimization problem and cost functions
+        
+3. Competitive markets and applications
+    * Short-run and long-run partial equilibrium
+    * General equilibrium
+    
+4. Monopoly and monopsony
+    * Monopoly and profit maximization
+    * Common misunderstandings of monopoly
+    * Lerner Index and inverse elasticity pricing rule
+    * Welfare analysis under monopoly
+    * Monopsony
+        
+5. Introduction to game theory
+    * Introduction to games, solution concepts and graphical representation
+    * Simultaneous games
+        * Cournot model: simultaneous quantity competition
+        * Bertrand model: simultaneous price competition
+        * Cartels and collusion
+    * Sequential games
+        * Stackelberg model: sequential quantity competition
+    
+6. Choice and uncertainty
+    * Lotteries
+    * Preferences over lotteries
+    * Expected utility theory
+    * Risk preferences and measurement of risk preferences
+    * Application
+    
+7. Externalities and public goods
+    * Implications of externalities and public goods on the competitive market equilibrium
+    * Private and public solutions to restore efficiency in presence of externalities and public goods
+        * Coase theorem
+        * Pollution rights
+        * Pigouvian taxation
+    
+## References
+
+Main reference:
+
+1. _Intermediate Microeconomic Theory: Tools and Step-by-Step Examples_ (Ana Espinola-Arredondo and Felix Munoz-Garcia), MIT Press
+
+Other references:
+
+2. _Advanced Microeconomic Theory: An Intuitive Approach with Examples_ (Felix Munoz-Garcia), MIT Press
+3. _Advanced Microeconomic Theory_ (Geoffrey Jehle and Philip Reny), Pearson
+
+Math references:
+
+4. _Mathematical Methods for Economic Theory_, Martin J. Osborne. [Link](https://mjo.osborne.economics.utoronto.ca/index.php/tutorial/index/1/int/i)
+
+
+
+
+For a demonstration of a line plot on a polar axis, see @fig-polar.
+
+
+```{python}
+import numpy as np
+np.sqrt(4)
+```

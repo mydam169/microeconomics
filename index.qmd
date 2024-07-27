@@ -1,0 +1,56 @@
+---
+title: "Course plan"
+---
+
+In this page you will find the course plan, general topics of discussion associated with each lecture as well as links to corresponding materials. The first seven class meetings (on zoom) are scheduled to be from 6pm to 9pm (GMT+7), every other day from 19/8/2024 (Mon) to 04/09/2024 (Wed), except weekends and holidays. The last meeting on Wednesday 13/11/2024 will be dedicated to a revision of the topics covered, exam preparation and Q&As.
+
+::: column-screen-inset-right
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+| Lecture  | Date       | Topics                                                              | References         | Slides |
++:========:+:===========+:====================================================================+:===================+========+
+| 1        | 19/8/2024  | **Consumers and demand**                                            | Chapter 1 (AF Adv) |        |
+|          |            |                                                                     |                    |        |
+|          | (Mon)      | -   Preferences and utility                                         |                    |        |
+|          |            | -   Consumer choice and demand function                             |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+| 2        | 21/8/2024  | **Firms and supply**                                                | Chapter 5 (AF Int) |        |
+|          |            |                                                                     |                    |        |
+|          | (Wed)      | -   Firms and production                                            |                    |        |
+|          |            | -   Expenditure minimization problem and cost function              |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+| 3        | 23/08/2024 | **Competitive markets and general equilibrium**                     |                    |        |
+|          |            |                                                                     |                    |        |
+|          | (Fri)      | -   Short-run and long-run partial equilibrium                      |                    |        |
+|          |            | -   General equilibrium                                             |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+| 4        | 26/08/2024 | **Monopoly**                                                        |                    |        |
+|          |            |                                                                     |                    |        |
+|          | (Mon)      | -   Monopoly and profit maximization                                |                    |        |
+|          |            | -   Lerner index and IEPR                                           |                    |        |
+|          |            | -   Welfare analysis                                                |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+| 5        | 28/08/2024 | **Game theory primer**                                              |                    |        |
+|          |            |                                                                     |                    |        |
+|          | (Wed)      | -   Definition, solution concepts and representation                |                    |        |
+|          |            | -   Common simultaneous and sequential games                        |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+| 6        | 30/08/2024 | **Exerternalities and public goods**                                |                    |        |
+|          |            |                                                                     |                    |        |
+|          | (Fri)      | -   Implications on the efficiency of competitive market equilibria |                    |        |
+|          |            | -   Common policy remedies                                          |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+| 7        | 04/09/2024 | **Choice under uncertainty**                                        |                    |        |
+|          |            |                                                                     |                    |        |
+|          | (Wed)      | -   Lotteries and preferences over lotteries                        |                    |        |
+|          |            | -   Expected utility theory                                         |                    |        |
+|          |            | -   Applications                                                    |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+| 8        | 13/11/2024 | **Revision**                                                        |                    |        |
+|          |            |                                                                     |                    |        |
+|          | (Wed)      |                                                                     |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+|          | 17/11/2024 | **Exam**                                                            |                    |        |
+|          |            |                                                                     |                    |        |
+|          | (Sun)      |                                                                     |                    |        |
++----------+------------+---------------------------------------------------------------------+--------------------+--------+
+:::

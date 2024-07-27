@@ -1,0 +1,13 @@
+---
+toc: false
+---
+
+## Main reference
+-   Intermediate Microeconomic Theory: Tools and Step-by-Step Examples (Ana Espinola-Arredondo and Felix Munoz-Garcia), MIT Press __[AF Int]__
+
+## Other references
+-   Advanced Microeconomic Theory: An Intuitive Approach with Examples (Felix Munoz-Garcia), MIT Press __[AF Adv]__
+-   Advanced Microeconomic Theory (Geoffrey Jehle and Philip Reny), Pearson
+
+## Math references
+-   Mathematical Methods for Economic Theory, Martin J. Osborne. Link

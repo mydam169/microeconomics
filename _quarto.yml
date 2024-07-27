@@ -1,0 +1,58 @@
+project:
+  type: website
+
+website:
+  page-navigation: true
+  title: Intermediate Microeconomics
+  description: Materials for CASED's pre-Master course in Microeconomics
+  
+  # site-url: ""
+  # repo-url: ""
+  # repo-actions: [edit, issue]
+
+  open-graph: true
+
+  # page-footer: 
+
+  navbar:
+    background: "#012345"
+    left:
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - text: Contact
+        href: contact.qmd
+  
+  sidebar: 
+    background: "#D3D3D3"
+    style: docked
+    collapse-level: 1
+    pinned: true
+    contents:
+      - section: "Course information"
+        contents:
+          - text: "Schedule"
+            href: index.qmd
+          - text: "References"
+            href: contents/references.qmd
+      - section: "Lectures"
+        contents:
+          - text: "Lecture 1"
+            href: contents/lecture_1.qmd
+          - text: "Lecture 2"
+            href: contents/lecture_2.qmd
+          
+
+
+format:
+  html:
+    theme: 
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 2
+
+
+
