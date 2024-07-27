@@ -414,7 +414,7 @@ The idea is to identify the isocost line touching the isoquant that is as close 
     $$
     \begin{aligned}
     &\mathcal{L}_L (L^*, K^*, \lambda^*) \leq 0, \quad
-    \partial \mathcal{L}_K (L^*, K^*, \lambda^*) \leq 0\\
+    \mathcal{L}_K (L^*, K^*, \lambda^*) \leq 0\\
     &\quad \quad \quad \text{ with equality for interior solutions }\\
     &\lambda^* \geq 0, \quad \lambda^*(q(L^*, K^*) - m) = 0.
     \end{aligned}
@@ -562,6 +562,8 @@ plt.plot(q, MCSR(q), label='Short-run marginal cost')
 plt.legend(loc=0)
 plt.xlabel('Units of output')
 plt.ylabel('AC, MC')
+plt.xticks([])
+plt.yticks([])
 plt.show()
 ```
 :::
