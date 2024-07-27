@@ -88,7 +88,7 @@
     "href": "contents/lecture_1.html#utility-maximization-problem-ump",
     "title": "Chapter 1. Consumers and demand",
     "section": "2.1 Utility maximization problem (UMP)",
-    "text": "2.1 Utility maximization problem (UMP)\n\nDenote \\(w&gt;0\\) the consumer’s wage/income, \\(p\\) the vector of prices, \\(x\\) the bundle of goods and services, and \\(u:\\mathbb{R}^L_+\\to \\mathbb{R}\\) the utility function representing the preferences of the consumer. Futhermore, denote \\(pw\\) the dot product of \\(p\\) and \\(w\\) when they are vectors\nThe UMP faced by the consumer is: \\[\n      \\max_{x \\geq 0} u(x) \\text{ s.t. } px \\leq w      \n   \\tag{11}\\]\nThe budget set or budget constraint: \\(B(p,w) \\equiv \\{x \\geq 0: px \\leq w\\}\\).\nIf \\(w&gt;0\\) and \\(p\\gg 0\\) and \\(u\\) is continuous then a solution to the UMP exists (Weirestrass theorem)\nA solution to the UMP, if exists, is a list of goods and services that maximizes the utility of the consumer given her budget constraint.",
+    "text": "2.1 Utility maximization problem (UMP)\n\nDenote \\(w&gt;0\\) the consumer’s wage/income, \\(p\\) the vector of prices, \\(x\\) the bundle of goods and services, and \\(u:\\mathbb{R}^L_+\\to \\mathbb{R}\\) the utility function representing the preferences of the consumer. Futhermore, denote \\(pw\\) the dot product of \\(p\\) and \\(w\\) when they are vectors\nThe UMP faced by the consumer is: \\[\n      \\max_{x \\geq 0} u(x) \\text{ s.t. } px \\leq w      \n   \\tag{11}\\]\nThe budget set or budget constraint: \\(B(p,w) \\equiv \\{x \\geq 0: px \\leq w\\}\\).\nIf \\(w&gt;0\\) and \\(p &gt; 0\\) and \\(u\\) is continuous then a solution to the UMP exists (Weirestrass theorem)\nA solution to the UMP, if exists, is a list of goods and services that maximizes the utility of the consumer given her budget constraint.",
     "crumbs": [
       "Home",
       "Lectures",
@@ -112,7 +112,7 @@
     "href": "contents/lecture_1.html#solving-the-ump",
     "title": "Chapter 1. Consumers and demand",
     "section": "2.3 Solving the UMP",
-    "text": "2.3 Solving the UMP\n\n2.3.1 Necessary conditions\nThe Lagragian associated with the UMP: \\[\nL = u(x) + \\lambda (w - px)\n\\tag{12}\\]\nDenote \\(L_i\\) the partial derivative of the Lagrangian with respect to good \\(i\\). The KTT theorem tells us that if \\(x^*\\) is a solution to the UMP then there exists \\(\\lambda^*\\geq 0\\) such that the following conditions are satisfied: \\[\n\\begin{aligned}\n& L_i(x^*) \\leq 0 \\quad \\forall i=1,\\dots, L \\\\\n& L_i(x^*) = 0 \\text{ if } x^*_i&gt;0, \\quad \\forall i, \\\\\n& \\lambda^* \\geq 0 \\text{ and } \\lambda^*(w - px^*) = 0.\n\\end{aligned}\n\\tag{13}\\]\nAssume interior solution, then the first set of conditions yields \\[\nu_i(x^*) = \\lambda^* p_i.\n\\]\nIf \\(u\\) satisfies strict monotonicity (\\(u_i&gt;0\\)), then \\(\\lambda^*&gt;0\\) since prices are strictly positive. But \\(\\lambda^*&gt;0\\) implies that \\(w = px^*\\), which confirms the LoW.\nTo eliminate the multiplier, we can form the ratio: \\[\n\\begin{aligned}\n\\frac{u_i(x^*)}{u_j(x^*)} &= \\frac{p_i}{p_j} \\\\\nMRS_{i,j}(x^*) &= \\frac{p_i}{p_j} \\\\\n\\implies \\frac{u_i(x^*)}{p_i} &= \\frac{u_j(x^*)}{p_j} = \\lambda^*.\n\\end{aligned}\n\\tag{14}\\]\nHence at an interior optimum:\n\nThe rate at which the individual substitutes one good for the other is equal to the ratio of their prices - the market value of one good relative to the other good. Price levels do not matter\nMarginal utilities per unit of the constraint (e.g. dollar) are equalized across all goods and are equal to the Langrage multiplier, the shadow price\n\n\n\n2.3.2 The shadow price\n\n\\(\\lambda^*\\) is often interpreted as the shadow price: increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit\nIn other words, it is the shadow price on the constraint (on \\(w\\))\nMathematically, \\[\\lambda^* = \\frac{\\partial u(x^*(p,w))}{\\partial w}.\\]\n\n\n\nProof\n\nWe can show this by differentiating the value function w.r.t income: \\[\n\\begin{aligned}\n\\frac{\\partial u(x^*(p,w))}{\\partial w} &= \\sum_{i=1}^L u_i(x^*)\\frac{\\partial x_i(w,p)}{\\partial w} \\\\\n&= \\lambda^*\\sum_{i=1}^L p_i \\frac{\\partial x_i(w,p)}{\\partial w} \\\\\n&= \\lambda^*.\n\\end{aligned}\n\\]\nHere we have used the fact that: \\[\n\\sum_{i=1}^L p_i \\frac{\\partial x_i(w,p)}{\\partial w} = 1,\n\\] which comes directly from the binding budget constraint.\n\n\n\n2.3.3 Sufficient conditions\n\nHow to be sure that the necessary conditions above provide a max, and not a min?\nThe KKT conditions are also sufficient for a max if:\n\n\\(u\\) is quasiconcave\n\nUCS is convex\n\n\\(u\\) is monotone\n\nICs are downward sloping\n\n\\(u_i(x) \\neq 0 \\: \\forall i \\iff \\nabla u(x) \\neq 0\\)\n\nThere is no bliss point\nIf such a point existed then LNS would be violated, which would contradict monotonicity",
+    "text": "2.3 Solving the UMP\n\n2.3.1 Necessary conditions\nThe Lagragian associated with the UMP: \\[\nL = u(x) + \\lambda (w - px)\n\\tag{12}\\]\nDenote \\(L_i\\) the partial derivative of the Lagrangian with respect to good \\(i\\). The KTT theorem tells us that if \\(x^*\\) is a solution to the UMP then there exists \\(\\lambda^*\\geq 0\\) such that the following conditions are satisfied: \\[\n\\begin{aligned}\n& L_i(x^*) \\leq 0, \\quad  i=1,\\dots, L \\\\\n& L_i(x^*) = 0 \\text{ if } x^*_i&gt;0, \\quad i=1,\\dots,L \\\\\n& \\lambda^* \\geq 0 \\text{ and } \\lambda^*(w - px^*) = 0.\n\\end{aligned}\n\\tag{13}\\]\nAssume interior solution, then the first set of conditions yields \\[\nu_i(x^*) = \\lambda^* p_i.\n\\]\nIf \\(u\\) satisfies strict monotonicity (\\(u_i&gt;0\\)), then \\(\\lambda^*&gt;0\\) since prices are strictly positive. But \\(\\lambda^*&gt;0\\) implies that \\(w = px^*\\), which confirms the LoW.\nTo eliminate the multiplier, we can form the ratio: \\[\n\\begin{aligned}\n\\frac{u_i(x^*)}{u_j(x^*)} &= \\frac{p_i}{p_j} \\\\\nMRS_{i,j}(x^*) &= \\frac{p_i}{p_j} \\\\\n\\implies \\frac{u_i(x^*)}{p_i} &= \\frac{u_j(x^*)}{p_j} = \\lambda^*.\n\\end{aligned}\n\\tag{14}\\]\nHence at an interior optimum:\n\nThe rate at which the individual substitutes one good for the other is equal to the ratio of their prices - the market value of one good relative to the other good. Price levels do not matter\nMarginal utilities per unit of the constraint (e.g. dollar) are equalized across all goods and are equal to the Langrage multiplier, the shadow price\n\n\n\n2.3.2 The shadow price\n\n\\(\\lambda^*\\) is often interpreted as the shadow price: increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit\nIn other words, it is the shadow price on the constraint (on \\(w\\))\nMathematically, \\[\\lambda^* = \\frac{\\partial u(x^*(p,w))}{\\partial w}.\\]\n\n\n\nProof\n\nWe can show this by differentiating the value function w.r.t income: \\[\n\\begin{aligned}\n\\frac{\\partial u(x^*(p,w))}{\\partial w} &= \\sum_{i=1}^L u_i(x^*)\\frac{\\partial x_i(w,p)}{\\partial w} \\\\\n&= \\lambda^*\\sum_{i=1}^L p_i \\frac{\\partial x_i(w,p)}{\\partial w} \\\\\n&= \\lambda^*.\n\\end{aligned}\n\\]\nHere we have used the fact that: \\[\n\\sum_{i=1}^L p_i \\frac{\\partial x_i(w,p)}{\\partial w} = 1,\n\\] which comes directly from the binding budget constraint.\n\n\n\n2.3.3 Sufficient conditions\n\nHow to be sure that the necessary conditions above provide a max, and not a min?\nThe KKT conditions are also sufficient for a max if:\n\n\\(u\\) is quasiconcave\n\nUCS is convex\n\n\\(u\\) is monotone\n\nICs are downward sloping\n\n\\(u_i(x) \\neq 0 \\: \\forall i \\iff \\nabla u(x) \\neq 0\\)\n\nThere is no bliss point\nIf such a point existed then LNS would be violated, which would contradict monotonicity",
     "crumbs": [
       "Home",
       "Lectures",
@@ -160,9 +160,237 @@
   {
     "objectID": "contents/lecture_2.html",
     "href": "contents/lecture_2.html",
-    "title": "Intermediate Microeconomics",
+    "title": "Chapter 2. Producers and supply",
     "section": "",
-    "text": "content for second lecture\nsome changes here",
+    "text": "A production function describes how inputs (factors of production such as labor, capital and land, etc.) can be transformed into outputs. We denote the production function by \\(f:\\mathbb{R}^n\\to\\mathbb{R}_+\\), where \\(n\\) is the number of inputs. In the case of two inputs, capital (\\(K\\)) and labor (\\(L\\)): \\[\nq = f(K, L),\n\\] where \\(q\\) is the amount of output.\n\nExample 1  \n\nCobb-Douglas production function: \\(q = AK^{\\alpha}L^{\\beta}\\), where \\(A&gt;0\\) and \\(\\alpha, \\beta \\in (0,1)\\)\nLeontief production function: \\(q = A\\min\\{aK, bL\\}\\), where \\(A, a, b&gt;0.\\) This production function captures the idea that inputs must be used in fixed proportion\nLinear production function: \\(q = aK + bL\\) where \\(a, b &gt; 0.\\) Here inputs are perfectly substitutable (e.g., robots vs human workers in the future)\nQuasilinear production function: \\(q = AK^a + bL\\) where \\(A, a, b&gt;0.\\) This production function could be used to capture different returns to scales of different inputs. For example scaling is quite straightforward for labor or raw materials but might be complex for capital and land.\nThe Cobb-Douglas, linear and fixed-proportion production functions are all special cases of the CES production function: \\[\n     q = \\left(aL^{\\frac{s-1}{s}} + bK^{\\frac{s-1}{s}}\\right)^{\\frac{s}{s-1}},\n  \\tag{1}\\]\nwhere \\(s\\) is the EoS. Special cases:\n\nAs \\(s\\to \\infty\\): CES \\(\\to\\) linear production function\nAs \\(s \\to 0\\): CES \\(\\to\\) fixed-proportion production function\nAs \\(s \\to 1\\): CES \\(\\to\\) the Cobb-Douglas production function\n\nWhy is it called CES? Let \\(q(L, K)\\) be a twice differentiable production function of two inputs. The elasticity of substitution between the two factors measures the percentage in the ratio of the inputs in response to a percentage change in the MRTS. Mathematically:\n\\[\n     s = \\frac{d\\ln \\left(\\frac{K}{L}\\right)}{d \\ln MRTS_{L,K}},\n  \\tag{2}\\]\nwhere \\(MRTS_{L,K} = MP_L/MP_K\\).",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#average-product-and-productivity",
+    "href": "contents/lecture_2.html#average-product-and-productivity",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.1 Average product and productivity",
+    "text": "2.1 Average product and productivity\n\nThe average product is the total units of output produced per unit of input used\n\nThe average product or productivity of labor, \\(AP_L = q / L\\)\nThe average product or productivity of capital, \\(AP_K = q / K\\)\n\nThe higher is the average product, the higher is the productivity\nProductivity typically depends on the production technology and the levels of input used\n\n\nExample 2 For each of the following production functions, compute the average product of labor (or labor productivity). Determine if increasing labor improves productivity.\n\n\\(q = 100 \\sqrt{L}\\)\n\\(q = 5 L^{1/2} + 3L - 6\\)",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#marginal-product",
+    "href": "contents/lecture_2.html#marginal-product",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.2 Marginal product",
+    "text": "2.2 Marginal product\n\nThe marginal product is the rate at which total output changes as the firm uses one additional unit of input\n\nThe marginal product of labor: \\(MP_L = \\frac{\\Delta q}{\\Delta L}\\) when \\(L\\) is discrete (e.g. number of workers) and \\(MP_L = \\frac{\\partial q}{\\partial L}\\) when \\(L\\) is continuous (e.g. working hours)\nThe marginal product of capital: \\(MP_K = \\frac{\\Delta q}{\\Delta K}\\) when \\(K\\) is discrete and \\(MP_K = \\frac{\\partial q}{\\partial K}\\) when \\(K\\) is continuous\n\nExample: Compute the marginal product of labor for the production functions in the previous example and determine if it is increasing or decreasing in the amount of input used.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#decreasing-marginal-products",
+    "href": "contents/lecture_2.html#decreasing-marginal-products",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.3 Decreasing marginal products",
+    "text": "2.3 Decreasing marginal products\n\n\n\n\n\n\n\n\nFigure 1: Increasing labor increases output, but at decreasing rates",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#decreasing-marginal-products-1",
+    "href": "contents/lecture_2.html#decreasing-marginal-products-1",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.4 Decreasing marginal products",
+    "text": "2.4 Decreasing marginal products\n\n\n\n\n\n\n\n\nFigure 2: Increasing labor increases output, but at decreasing rates",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#relationship-beteen-average-and-marginal-products",
+    "href": "contents/lecture_2.html#relationship-beteen-average-and-marginal-products",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.5 Relationship beteen average and marginal products",
+    "text": "2.5 Relationship beteen average and marginal products\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Relationship between marginal and average products\n\n\n\nFigure 3 suggests that the AP curve crosses the MP curve at its maximum. In particular, as the AP is increasing when it is less than the MP and it is decreasing when it is greater than the MP. This makes sense intuitively since the MP being greater than the AP means the added worker is more productive than the average worker in the existing team, and vice versa.\nLet us formalize this observation. Consider the case of continuous labor input and differentiable production function. Let \\(\\bar{q}(L) = q(L) / L\\) be the average product. Differentiating with respect to \\(L\\) yields:\n\\[\n\\begin{aligned}\n    \\bar{q}'(L) &= \\frac{q'(L)L - q(L)}{L^2}, \\quad L &gt; 0. \\\\\n    \\bar{q}'(L) \\geq 0 &\\iff q'(L)L - q(L) \\geq 0 \\\\\n    &\\iff q'(L) \\geq \\frac{q(L)}{L} \\\\\n    &\\iff q'(L) \\geq \\bar{q}(L).         \n\\end{aligned}\n\\tag{3}\\]",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#definition",
+    "href": "contents/lecture_2.html#definition",
+    "title": "Chapter 2. Producers and supply",
+    "section": "3.1 Definition",
+    "text": "3.1 Definition\n\nIn the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation\n\nEach IC represents combinations of goods that give the consumer the same level of utility\n\nIsoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output\nKey difference with ICs: the levels assocated with isoquants are cardinal: they represent actual outputs and not just fictive units invented to rank bundles",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#example",
+    "href": "contents/lecture_2.html#example",
+    "title": "Chapter 2. Producers and supply",
+    "section": "3.2 Example",
+    "text": "3.2 Example\n\nConsider the production function \\(q(K, L) = 5K^{1/2} L^{1/2}\\). Find the isoquant corresponding to \\(m &gt; 0\\) units of output.\n\\(m &gt; 0\\) implies that both inputs are strictly positive. We have: \\[\n  5K^{1/2} L^{1/2} = m \\\\\n  \\iff K = \\frac{m^2}{25L}.\n  \\]\n\n\n\n\n\n\n\n\n\nFigure 4: Cobb-Douglas production function and isoquants",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#marginal-rate-of-technical-substitution-mrts",
+    "href": "contents/lecture_2.html#marginal-rate-of-technical-substitution-mrts",
+    "title": "Chapter 2. Producers and supply",
+    "section": "3.3 Marginal rate of technical substitution (MRTS)",
+    "text": "3.3 Marginal rate of technical substitution (MRTS)\n\n3.3.1 Definition\n\nThe MRTS is the slope of the isoquant (in absolute value):\n\\[\n  \\frac{-dK}{dL} = \\frac{MP_L}{MP_K} \\equiv MRTS_{L,K}.\n   \\tag{4}\\]\nIt tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output. Or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting its output\nAs in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where \\(q(L, K) = m\\) for some constant \\(m&gt;0\\):\n\\[\n  \\begin{aligned}\n  dq(L, K) &= 0 \\\\\n  \\iff q_L dL + q_K dK &= 0 \\\\\n  \\iff \\frac{-dK}{dL} &= \\frac{q_L}{q_K} \\\\\n  &= \\frac{MP_L}{MP_K} \\equiv MRTS_{L,K}.\n  \\end{aligned}\n   \\tag{5}\\]\n\n\n\n3.3.2 Properties\nIn the case of Cobb-Douglas production function above, the MRTS is decreasing as we move in the south-east direction along one isoquant:\n\nWhen capital is abundant, the firm is willing to give up many units of capital to hire an additional worker\nWhen capital is scarce, firm is less willing to replace it with workers",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#returns-to-scale",
+    "href": "contents/lecture_2.html#returns-to-scale",
+    "title": "Chapter 2. Producers and supply",
+    "section": "4.1 Returns to scale",
+    "text": "4.1 Returns to scale\n\nLet \\(\\alpha &gt; 0\\) be the factor by which all inputs change (i.e., each input is multiplied by \\(\\alpha\\))\nSuppose \\(q(\\alpha K, \\alpha L) = \\alpha^k q(K, L)\\) for some number \\(k\\)\n\nIf \\(k &gt; 1\\): the firm exhibits increasing returns to scale (IRS)\nIf \\(k = 1\\): the firm exhibits constant returns to scale (CRS)\nIf \\(k &lt; 1\\): the firm exhibits decreasing returns to scale (DRS)\n\nNote that the characterization holds regardless of whether \\(\\alpha\\) is greater or smaller than one. If \\(\\alpha \\in (0, 1)\\) then increasing returns to scale means that as we reduce inputs by a factor of \\(\\alpha\\), the firm’s output falls by more than \\(\\alpha\\).\n\n\nExample 3 Consider the Cobb-Douglas production function \\(q = AK^a L^b\\) where \\(A, a, b\\) are strictly positive constants. For which values of \\(a, b\\) does this function exhibit increasing, constant or decreasing returns to scale? What kind of returns to scale do linear and fixed-proportion production functions exhibit?\n\n\nAnswer\n\n\nCobb-Douglass:\n\nFor some \\(\\alpha &gt; 0\\), we have: \\[\n  \\begin{aligned}\n  q(\\alpha L, \\alpha K) &= A \\alpha^{a+b} K^a L^b \\\\\n  &= \\alpha^{a+b} q(L, K).\n  \\end{aligned}\n   \\tag{6}\\]\nHence the nature of returns to scale depends on \\(a+b\\). In particular:\n\nIRS if \\(a+b &gt; 1\\)\nDRS if \\(a+b &lt; 1\\)\nCRS if \\(a+b = 1\\)\n\n\nLinear and fixed-proportion production functions both exhibit CRS",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#definition-2",
+    "href": "contents/lecture_2.html#definition-2",
+    "title": "Chapter 2. Producers and supply",
+    "section": "5.1 Definition",
+    "text": "5.1 Definition\n\nTechnical advances that allow firms to produce more with the same amount of inputs\nThree types of technical progress:\n\nLabor enhancing: MPL increases by more than MPK\nCapital enhancing: MPK increases by more than MPL\nNeutral: MPL and MPK increase by the same amount (in percentage terms)\n\nSuppose the firm has production function \\(q = A_1 L^a K^b\\). After a technical progress, it has one of the following PFs.\n\n\\(q = A_1 L^{a + \\delta} K^b\\) with \\(\\delta &gt; 0\\)\n\\(q = A_1 L^a K^{b + \\delta}\\) with \\(\\delta &gt; 0\\)\n\\(q = A_2 L^a K^b\\) with \\(A_2 &gt; A_1\\)\n\nLet us determine the type of progress that the firm has undergone.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#types-of-technological-progress",
+    "href": "contents/lecture_2.html#types-of-technological-progress",
+    "title": "Chapter 2. Producers and supply",
+    "section": "5.2 Types of technological progress",
+    "text": "5.2 Types of technological progress\n\nThe percentage change in the marginal product of each input: \\[\n  \\frac{MP'_i - MP_i}{MP_i} = \\frac{MP'_i}{MP_i} - 1, \\quad i\\in\\{K, L\\},\n  \\] where \\(MP'_i\\) denotes the marginal product of input \\(i\\) after the technological progress\nObserve that: \\[\n  \\frac{MP'_L - MP_L}{MP_L} \\geq \\frac{MP'_K - MP_K}{MP_K} \\\\\n  % \\iff \\frac{MP'_L}{MP_L} \\geq \\frac{MP'_K}{MP_K} \\\\\n  % \\iff \\frac{MP'_L}{MP'_K} \\geq \\frac{MP_L}{MP_K} \\\\\n  \\iff MRTS'_{L,K} \\geq MRTS_{L,K}.\n  \\]\nHence the type of the tech progress can be determined by comparing the MRTSs",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#labor-enhancing-technological-progress",
+    "href": "contents/lecture_2.html#labor-enhancing-technological-progress",
+    "title": "Chapter 2. Producers and supply",
+    "section": "5.3 Labor-enhancing technological progress",
+    "text": "5.3 Labor-enhancing technological progress\n\nConsider \\(q = A_1 L^{a + \\delta} K^b\\) with \\(\\delta &gt; 0\\)\nThe MRTS before tech progress: \\[MRTS_{L,K} = \\frac{a}{b}\\frac{K}{L}.\\]\nAfter tech progress: \\[MRTS'_{L,K} = \\frac{a+\\delta}{b}\\frac{K}{L}.\\]\nSince \\(\\delta &gt; 0\\), we have \\(MRTS'_{L,K} &gt; MRTS_{L,K}\\), implying that this is a labor-enhancing (or labor-saving) tech progress\nGraphically, on the \\((K, L)\\) plane, the isoquants become steeper",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#capital-enhancing-technological-progress",
+    "href": "contents/lecture_2.html#capital-enhancing-technological-progress",
+    "title": "Chapter 2. Producers and supply",
+    "section": "5.4 Capital-enhancing technological progress",
+    "text": "5.4 Capital-enhancing technological progress\n\nConsider \\(q = A_1 L^a K^{b + \\delta}\\) with \\(\\delta &gt; 0\\)\nThe MRTS before tech progress: \\[MRTS_{L,K} = \\frac{a}{b}\\frac{K}{L}.\\]\nAfter tech progress: \\[MRTS'_{L,K} = \\frac{a}{b+\\delta}\\frac{K}{L}.\\]\nSince \\(\\delta &gt; 0\\), we have \\(MRTS'_{L,K} &lt; MRTS_{L,K}\\), which is equivalent to \\(MRTS'_{K,L} &gt; MRTS_{K,L}\\), implying that this is a capital-enhancing (capital-saving) tech progress\nHow do the isoquants change graphically?",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#neutral-technological-progress",
+    "href": "contents/lecture_2.html#neutral-technological-progress",
+    "title": "Chapter 2. Producers and supply",
+    "section": "5.5 Neutral technological progress",
+    "text": "5.5 Neutral technological progress\n\nFinally, consider \\(q = A_2 L^a K^b\\) with \\(A_2 &gt; A_1\\)\nIn this case the \\(MRTS\\) does not change after the progress, implying that this is a neutral one\nGraphically the isoquants do not change",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#isocost-lines",
+    "href": "contents/lecture_2.html#isocost-lines",
+    "title": "Chapter 2. Producers and supply",
+    "section": "6.1 Isocost lines",
+    "text": "6.1 Isocost lines\n\nDefinition 1 (Isocost) An isocost line is the set of input combinations that yield the same total cost (TC) for the firm. Mathematically, let \\(w&gt;0\\) and \\(r&gt;0\\) be the prices of labor and capital, respectively. Then the isocost consists of all \\((w, r)\\) pairs such that: \\[\nTC = wL + rK.\n\\tag{7}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: Isocostline for the case of two inputs\n\n\n\nObserve that the slope of the isocost line is \\(-w/r\\), implying that as \\(w\\) rises, this line gets steeper.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#cost-minimization-problem-cmp",
+    "href": "contents/lecture_2.html#cost-minimization-problem-cmp",
+    "title": "Chapter 2. Producers and supply",
+    "section": "6.2 Cost minimization problem (CMP)",
+    "text": "6.2 Cost minimization problem (CMP)\nThe cost minimization problem entails finding a combination of inputs such that the total cost to attain a certain level of output is minimized.\n\nDefinition 2 (CMP) \\[\n\\begin{aligned}\n&\\min_{L,K} C = wL + rK \\\\\n&\\text{s.t. } q(L, K) \\geq m,\n\\end{aligned}\n\\tag{8}\\] where \\(m\\) is the target output level.\n\nThe idea is to identify the isocost line touching the isoquant that is as close to the origin as possible.\n\n6.2.1 Necessary conditions\n\nSet up the Lagrangian:\n\\[\n  \\mathcal{L}(\\lambda, L, K) = - C(L, K) + \\lambda (q(L,K) - m).\n   \\tag{9}\\]\nKTT theorem: If \\((L^*, K^*)\\) is a solution to the CMP, then there exist \\(\\lambda^* \\geq 0\\) such that:\n\\[\n  \\begin{aligned}\n  &\\mathcal{L}_L (L^*, K^*, \\lambda^*) \\leq 0, \\quad\n  \\partial \\mathcal{L}_K (L^*, K^*, \\lambda^*) \\leq 0\\\\\n  &\\quad \\quad \\quad \\text{ with equality for interior solutions }\\\\\n  &\\lambda^* \\geq 0, \\quad \\lambda^*(q(L^*, K^*) - m) = 0.\n  \\end{aligned}\n   \\tag{10}\\]\nAssuming interior solutions, the FOCs yield: \\[\n  \\begin{aligned}\n  \\lambda^* q_L(L^*, K^*) &=  w, \\\\\n  \\lambda^* q_K(L^*, K^*) &=  r.\n  \\end{aligned}\n   \\tag{11}\\]\nThis implies: \\[\n  \\frac{MP_L}{MP_K} = \\frac{w}{r} \\\\\n  \\iff \\frac{MP_L}{w} = \\frac{MP_K}{r}=\\frac{1}{\\lambda^*}.\n   \\tag{12}\\]\nAgain \\(\\lambda^*\\) can be interpreted as a shadow price: the cost of increasing output by a unit: \\[\\lambda^* = \\frac{\\partial C^*(r,w,m)}{\\partial m}.\\]\nEquation 12 states that when minimizing the production cost, the firm rearranges inputs in such manner that the marginal product per currency unit is equalized across all factors (sounds familiar?)\n\nIf for example \\(\\frac{MP_L}{w} &gt; \\frac{MP_K}{r}\\) then we should increase \\(L\\) by reducing \\(K\\) since the former has greater bang for the buck\n\nThe condition \\(\\frac{MP_L}{MP_K} = \\frac{w}{r} \\iff MRTS_{L,K} = \\frac{w}{r}\\) tells us that the interior optimum is located where the isoquant is tangent to the isocost\nNote that in general we should also check corner solutions (one or both of the inputs being null) or incorporate these constraints directly into the Langrangian (i.e. to add \\(\\lambda_K K + \\lambda_L L\\))",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#comparative-statics",
+    "href": "contents/lecture_2.html#comparative-statics",
+    "title": "Chapter 2. Producers and supply",
+    "section": "6.3 Comparative statics",
+    "text": "6.3 Comparative statics\n\nSolutions to the CMP give us input demands, which typically depend on input prices and the target output, i.e., on \\(w, r\\) and \\(m\\).\nThis allows us to perform comparative statics\nThe cost is the expenditure that a firm incurs when hiring the optimal amounts of inputs\nAs with input demands, we can express the (optimal) cost function as a function of input prices and target output\n\\[\n  C(w, r, m) = wL(w, r, m) + rK(w, r, m).\n   \\tag{13}\\]\nLikewise, we can also perform comparative statics on it",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#types-of-costs",
+    "href": "contents/lecture_2.html#types-of-costs",
+    "title": "Chapter 2. Producers and supply",
+    "section": "6.4 Types of costs:",
+    "text": "6.4 Types of costs:\n\n6.4.1 Explicit vs implicit costs\n\nExplicit costs: Costs that require monetary payments\nImplicit costs: Do not require monetary outlays but reflect opportunity costs\nExample: What is your cost of attending this course?\n\nExplicit cost: tuition, transportation, etc.\nImplicit cost: the salary you could have earned during the time of study\n\n\n\n\n6.4.2 Sunk vs nonsunk costs\n\nSunk costs: costs that cannot be recoverred even if the firm chooses to shut down its operations.\n\nExample: The rental the firm has already paid for the building if the lease does not allow subletting\nThis means that there is a fixed positive cost that the firm incurs even in the case of no production\n\nNonsunk costs: costs that can be sold back (recoverable or partially recoverable costs) in case the firm shuts down\n\nExample: Raw materials\n\n\n\n\n6.4.3 Long-run vs short-run costs\n\nIn the long run (LR), the firm has enough time to vary the amount of all inputs as much as necessary\nIn the short run (SR), the amount of at least one input is fixed\nExample: In short run, production factors such as land or capital are typically fixed, whereas labor is variable. In the long run, it is possible to buy more land and set up new factories, allowing all factors of production to vary.\n\nConsider a firm with Cobb-Douglas production \\(q = L^a K^b\\) where \\(K=\\bar{K}&gt;0\\) is fixed in the SR. Thus the cost function found above is the LR cost. The SR cost can be found by solving the CMP with respect to \\(L\\) only\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Short-run vs long-run cost function\n\n\n\n\n\n6.4.4 Average and marginal costs\n\n\nAverage cost (AC): total cost of production per output unit:\n\\[\n  AC(q) = \\frac{C(q)}{q},\n   \\tag{14}\\] where \\(C(q)\\) is the total cost.\nMarginal cost (MC): the rate at which the total cost increases as the firm produces an additional unit of output. Graphically it is the slope of the total cost curve:\n\\[\n  MC(q) = C'(q)\n   \\tag{15}\\] in the continuous case.1\nThe MC curve crosses the AC curve at the AC’s minimum. In other words, the AC is decreasing when it is above the MC and increasing when it is above the MC.\nIntuition:\n\nInitially when output is small, the variable cost is small and the fixed cost dominates the total cost\nAs output increases, the importance of fixed cost declines. Meanwhile, the MC increases (due to decreasing marginal product)\nAfter a threshold, producing an additional unit costs more than the AC of existing units\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7: Short-run average and marginal costs",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#footnotes",
+    "href": "contents/lecture_2.html#footnotes",
+    "title": "Chapter 2. Producers and supply",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIt is equal to \\(\\Delta C / \\Delta q\\) in the discrete case↩︎",
     "crumbs": [
       "Home",
       "Lectures",

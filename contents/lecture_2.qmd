@@ -1,3 +1,597 @@
-content for second lecture
+---
+title: "Chapter 2. Producers and supply"
+number-sections: true
+execute:
+    echo: false
+format:
+    html:
+        toc: true
+        toc-depth: 3
+        toc-title: "Content"
+        # toc-expand: true
+        # toc-location: "left"
+        # embed-resources: true
+---
 
-some changes here
+```{python}
+%load_ext autoreload
+%autoreload 2
+```
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm
+import seaborn as sns
+import pandas as pd
+import dataframe_image as dfi
+import ipywidgets as widgets
+from IPython.display import display
+from ipywidgets import interact
+import pandas as pd
+```
+
+```{python}
+import sys
+import os
+mod_dir = os.path.join(os.getcwd(), 'modules')
+if mod_dir not in sys.path:
+    sys.path.append(mod_dir)
+
+import micro_modules as mm
+mm.load_viz_settings()
+```
+
+# Production function
+
+A production function describes how inputs (factors of production such as labor, capital and land, etc.) can be transformed into outputs. We denote the production function by $f:\mathbb{R}^n\to\mathbb{R}_+$, where $n$ is the number of inputs. In the case of two inputs, capital ($K$) and labor ($L$):
+$$
+q = f(K, L),
+$$
+where $q$ is the amount of output.
+
+::: {#exm-prodFun}
+1. Cobb-Douglas production function: $q = AK^{\alpha}L^{\beta}$, where $A>0$ and $\alpha, \beta \in (0,1)$
+2. Leontief production function: $q = A\min\{aK, bL\}$, where $A, a, b>0.$ This production function captures the idea that inputs must be used in fixed proportion
+3. Linear production function: $q = aK + bL$ where $a, b > 0.$ Here inputs are perfectly substitutable (e.g., robots vs human workers in the future)
+4. Quasilinear production function: $q = AK^a + bL$ where $A, a, b>0.$ This production function could be used to capture different returns to scales of different inputs. For example scaling is quite straightforward for labor or raw materials but might be complex for capital and land. 
+5. The Cobb-Douglas, linear and fixed-proportion production functions are all special cases of the CES production function:
+    $$
+        q = \left(aL^{\frac{s-1}{s}} + bK^{\frac{s-1}{s}}\right)^{\frac{s}{s-1}}, 
+    $${#eq-CES_prod_function}
+    
+    where $s$ is the EoS. Special cases:
+
+    * As $s\to \infty$: CES $\to$ linear production function
+    * As $s \to 0$: CES $\to$ fixed-proportion production function
+    * As $s \to 1$: CES  $\to$ the Cobb-Douglas production function
+
+    Why is it called CES? Let $q(L, K)$ be a twice differentiable production function of two inputs. The elasticity of substitution between the two factors measures the percentage in the ratio of the inputs in response to a percentage change in the MRTS. Mathematically:
+
+    $$
+        s = \frac{d\ln \left(\frac{K}{L}\right)}{d \ln MRTS_{L,K}}, 
+    $${#eq-EoS_def}
+
+    where $MRTS_{L,K} = MP_L/MP_K$. 
+:::
+
+# Average and marginal products
+
+## Average product and productivity
+
+* The _average product_ is the total units of output produced per unit of input used
+    * The average product or _productivity of labor_, $AP_L = q / L$
+    * The average product or _productivity of capital_, $AP_K = q / K$
+
+* The higher is the average product, the higher is the productivity
+
+* Productivity typically depends on the production technology and the levels of input used
+
+::: {#exm-APMP}
+For each of the following production functions, compute the average product of labor (or labor productivity). Determine if increasing labor improves productivity. 
+
+1. $q = 100 \sqrt{L}$
+2. $q = 5 L^{1/2} + 3L - 6$
+:::
+
+## Marginal product
+
+* The _marginal product_ is the rate at which total output changes as the firm uses one additional unit of input
+    * The marginal product of labor: $MP_L = \frac{\Delta q}{\Delta L}$ when $L$ is discrete (e.g. number of workers) and $MP_L = \frac{\partial q}{\partial L}$ when $L$ is continuous (e.g. working hours)
+    * The marginal product of capital: $MP_K = \frac{\Delta q}{\Delta K}$ when $K$ is discrete and $MP_K = \frac{\partial q}{\partial K}$ when $K$ is continuous
+    
+* Example: Compute the marginal product of labor for the production functions in the previous example and determine if it is increasing or decreasing in the amount of input used.
+
+## Decreasing marginal products
+
+```{python}
+q1 = '$q=100 L^{1/2}$'
+q2 = '$q=5L^{1/2} + 3L - 6$'
+
+def pf1(L):
+    return 100 * np.sqrt(L)
+
+def pf2(L):
+    return 5 * (L ** 0.5) + 3 * L - 6
+
+def mp1(L):
+    return 50 * (L ** (-0.5))
+
+def mp2(L):
+    return 2.5 * (L ** (-0.5)) + 3
+
+def ap2(L):
+    return 5 * (L ** (-0.5)) + 3 - 6 / L
+    
+```
+
+```{python}
+#| label: fig-decMPL
+#| fig-cap: Increasing labor increases output, but at decreasing rates
+x = np.arange(0.1, 5, 0.1)
+# plt.figure(figsize=(6, 4))
+plt.plot(x, pf1(x), label='$q=100 L^{1/2}$')
+plt.plot(x, mp1(x), label='$MP_L=50 L^{-1/2}$')
+plt.legend(loc='best')
+plt.show()
+```
+
+## Decreasing marginal products
+
+
+```{python}
+#| label: fig-decMPL2
+#| fig-cap: Increasing labor increases output, but at decreasing rates
+x = np.arange(0.1, 5, 0.1)
+# plt.figure(figsize=(6, 4))
+plt.plot(x, pf2(x), label='$q=5L^{1/2} + 3L - 6$')
+plt.plot(x, mp2(x), label='$MP_L=2.5L^{-1/2} + 3$')
+plt.legend(loc='best')
+plt.show()
+```
+
+## Relationship beteen average and marginal products
+::: {#fig-MPAP fig-cap="Relationship between marginal and average products"}
+```{python}
+x = np.arange(2, 15, .1)
+plt.plot(x, mp2(x), label='$MP_L$')
+plt.plot(x, ap2(x), label='$AP_L$')
+plt.title(q2)
+plt.legend(loc=0)
+plt.show()
+```
+:::
+
+@fig-MPAP suggests that the AP curve crosses the MP curve at its maximum. In particular, as the AP is increasing when it is less than the MP and it is decreasing when it is greater than the MP. This makes sense intuitively since the MP being greater than the AP means the added worker is more productive than the average worker in the existing team, and vice versa. 
+
+Let us formalize this observation. Consider the case of continuous labor input and differentiable production function. Let $\bar{q}(L) = q(L) / L$ be the average product. Differentiating with respect to $L$ yields:
+
+$$
+\begin{aligned}
+    \bar{q}'(L) &= \frac{q'(L)L - q(L)}{L^2}, \quad L > 0. \\
+    \bar{q}'(L) \geq 0 &\iff q'(L)L - q(L) \geq 0 \\
+    &\iff q'(L) \geq \frac{q(L)}{L} \\
+    &\iff q'(L) \geq \bar{q}(L).         
+\end{aligned}
+$${#eq-AP_and_MP}
+    
+# Isoquants
+
+## Definition
+
+* In the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer's preference relation
+    * Each IC represents combinations of goods that give the consumer the same level of utility 
+
+* Isoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output
+
+* Key difference with ICs: the _levels_ assocated with isoquants are _cardinal_: they represent actual outputs and not just fictive units invented to rank bundles
+
+## Example
+
+* Consider the production function $q(K, L) = 5K^{1/2} L^{1/2}$. Find the isoquant corresponding to $m > 0$ units of output. 
+
+* $m > 0$ implies that both inputs are strictly positive. We have:
+    $$
+    5K^{1/2} L^{1/2} = m \\
+    \iff K = \frac{m^2}{25L}.
+    $$
+    
+
+
+```{python}
+def isoquant(L, m):
+    return m ** 2 / (25 * L)
+q = np.arange(100, 600, 100)
+L = np.arange(1, 100, 1)
+```
+
+
+```{python}
+#|label: fig-isoquants
+#|fig-cap: Cobb-Douglas production function and isoquants
+mm.plotIC(L, L, 0.5, 0.5, 5, levels=q, lab=True, name='$q(L, K) = 5K^{1/2}L^{1/2}$')
+```
+
+## Marginal rate of technical substitution (MRTS)
+
+### Definition
+
+* The MRTS is the slope of the isoquant (in absolute value):
+
+    $$
+    \frac{-dK}{dL} = \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+    $${#eq-MRST_def}
+
+* It tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output. Or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting its output
+
+* As in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where $q(L, K) = m$ for some constant $m>0$:
+
+    $$
+    \begin{aligned}
+    dq(L, K) &= 0 \\
+    \iff q_L dL + q_K dK &= 0 \\ 
+    \iff \frac{-dK}{dL} &= \frac{q_L}{q_K} \\
+    &= \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+    \end{aligned}
+    $${#eq-MRST_proof}
+    
+
+### Properties
+
+In the case of Cobb-Douglas production function above, the _MRTS is decreasing_ as we move in the south-east direction along one isoquant:
+
+* When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker
+
+* When capital is scarce, firm is less willing to replace it with workers
+    
+# Homogeneity and returns to scale
+
+## Returns to scale
+
+* Let $\alpha > 0$ be the factor by which all inputs change (i.e., each input is multiplied by $\alpha$)
+
+* Suppose $q(\alpha K, \alpha L) = \alpha^k q(K, L)$ for some number $k$
+    * If $k > 1$: the firm exhibits increasing returns to scale (IRS)
+    * If $k = 1$: the firm exhibits constant returns to scale (CRS)
+    * If $k < 1$: the firm exhibits decreasing returns to scale (DRS)
+    
+* Note that the characterization holds regardless of whether $\alpha$ is greater or smaller than one. If $\alpha \in (0, 1)$ then increasing returns to scale means that as we reduce inputs by a factor of $\alpha$, the firm's output falls by more than $\alpha$.
+
+::: {#exm-RSC}
+Consider the Cobb-Douglas production function $q = AK^a L^b$ where $A, a, b$ are strictly positive constants. For which values of $a, b$ does this function exhibit increasing, constant or decreasing returns to scale? What kind of returns to scale do linear and fixed-proportion production functions exhibit?
+
+<details>
+<summary>Answer</summary>
+
+* Cobb-Douglass:
+  * For some $\alpha > 0$, we have:
+      $$
+      \begin{aligned}
+      q(\alpha L, \alpha K) &= A \alpha^{a+b} K^a L^b \\
+      &= \alpha^{a+b} q(L, K).
+      \end{aligned}
+      $${#eq-RTS_cobb_douglas}
+      
+  * Hence the nature of returns to scale depends on $a+b$. In particular:
+      * IRS if $a+b > 1$ 
+      * DRS if $a+b < 1$
+      * CRS if $a+b = 1$
+* Linear and fixed-proportion production functions both exhibit CRS
+</details>
+:::
+
+# Technological progress
+
+## Definition
+
+* Technical advances that allow firms to produce more with the same amount of inputs 
+
+* Three types of technical progress:
+    * __Labor enhancing__: MPL increases by more than MPK
+    * __Capital enhancing__: MPK increases by more than MPL
+    * __Neutral__: MPL and MPK increase by the same amount (in percentage terms)
+    
+* Suppose the firm has production function $q = A_1 L^a K^b$. After a technical progress, it has one of the following PFs. 
+    1. $q = A_1 L^{a + \delta} K^b$ with $\delta > 0$
+    2. $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$
+    3. $q = A_2 L^a K^b$ with $A_2 > A_1$
+    
+    Let us determine the type of progress that the firm has undergone.
+
+## Types of technological progress
+
+* The percentage change in the marginal product of each input:
+    $$
+    \frac{MP'_i - MP_i}{MP_i} = \frac{MP'_i}{MP_i} - 1, \quad i\in\{K, L\}, 
+    $$
+    where $MP'_i$ denotes the marginal product of input $i$ after the technological progress
+    
+* Observe that:
+    $$
+    \frac{MP'_L - MP_L}{MP_L} \geq \frac{MP'_K - MP_K}{MP_K} \\
+    % \iff \frac{MP'_L}{MP_L} \geq \frac{MP'_K}{MP_K} \\
+    % \iff \frac{MP'_L}{MP'_K} \geq \frac{MP_L}{MP_K} \\
+    \iff MRTS'_{L,K} \geq MRTS_{L,K}.
+    $$
+    
+* Hence the type of the tech progress can be determined by comparing the MRTSs
+
+## Labor-enhancing technological progress
+
+* Consider $q = A_1 L^{a + \delta} K^b$ with $\delta > 0$ 
+
+* The MRTS before tech progress:
+    $$MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.$$
+    
+* After tech progress:
+    $$MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.$$
+
+* Since $\delta > 0$, we have $MRTS'_{L,K} > MRTS_{L,K}$, implying that this is a labor-enhancing (or labor-saving) tech progress
+
+* Graphically, on the $(K, L)$ plane, the isoquants become steeper
+
+## Capital-enhancing technological progress
+
+* Consider $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$
+
+* The MRTS before tech progress:
+    $$MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.$$
+    
+* After tech progress:
+    $$MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.$$
+
+* Since $\delta > 0$, we have $MRTS'_{L,K} < MRTS_{L,K}$, which is equivalent to $MRTS'_{K,L} > MRTS_{K,L}$, implying that this is a capital-enhancing (capital-saving) tech progress
+
+* How do the isoquants change graphically?
+
+## Neutral technological progress
+
+* Finally, consider $q = A_2 L^a K^b$ with $A_2 > A_1$
+
+* In this case the $MRTS$ does not change after the progress, implying that this is a neutral one
+
+* Graphically the isoquants do not change
+
+# Cost functions
+
+## Isocost lines
+
+::: {#def-isocost}
+## Isocost
+An isocost line is the set of input combinations that yield the same total cost (TC) for the firm. Mathematically, let $w>0$ and $r>0$ be the prices of labor and capital, respectively. Then the isocost consists of all $(w, r)$ pairs such that:
+$$
+TC = wL + rK.
+$${#eq-isocost_def}
+:::
+
+::: {#fig-isocost fig-cap="Isocostline for the case of two inputs"}
+```{python}
+x = np.linspace(0, 3, 400)
+y = 2.5 - x
+plt.plot(x, y, 'k-', lw=2)
+plt.text(0.05, 2.55, "$TC/r$")
+plt.text(2.5, .15, "$TC/w$")
+
+plt.xlabel('$L$')
+plt.ylabel('$K$')
+plt.xlim([0, 3])
+plt.ylim([0, 3])
+plt.xticks([])
+plt.yticks([])
+plt.show()
+```
+:::
+
+Observe that the slope of the isocost line is $-w/r$, implying that as $w$ rises, this line gets steeper. 
+
+## Cost minimization problem (CMP)
+
+The cost minimization problem entails finding a combination of inputs such that the total cost to attain a certain level of output is minimized.
+
+::: {#def-CMP}
+## CMP
+$$
+\begin{aligned}
+&\min_{L,K} C = wL + rK \\
+&\text{s.t. } q(L, K) \geq m,
+\end{aligned}
+$${#eq-CMP_def}
+where $m$ is the target output level.
+:::
+
+The idea is to identify the isocost line touching the isoquant that is as close to the origin as possible. 
+
+### Necessary conditions
+
+* Set up the Lagrangian:
+
+    $$
+    \mathcal{L}(\lambda, L, K) = - C(L, K) + \lambda (q(L,K) - m).
+    $${#eq-Lagrange_cmp}
+    
+* KTT theorem: If $(L^*, K^*)$ is a solution to the CMP, then there exist $\lambda^* \geq 0$ such that:
+
+    $$
+    \begin{aligned}
+    &\mathcal{L}_L (L^*, K^*, \lambda^*) \leq 0, \quad
+    \partial \mathcal{L}_K (L^*, K^*, \lambda^*) \leq 0\\
+    &\quad \quad \quad \text{ with equality for interior solutions }\\
+    &\lambda^* \geq 0, \quad \lambda^*(q(L^*, K^*) - m) = 0.
+    \end{aligned}
+    $${#eq-KT_cmp}
+    
+* Assuming interior solutions, the FOCs yield:
+    $$
+    \begin{aligned}
+    \lambda^* q_L(L^*, K^*) &=  w, \\
+    \lambda^* q_K(L^*, K^*) &=  r.
+    \end{aligned}
+    $${#eq-FOCs}
+    
+* This implies:
+    $$
+    \frac{MP_L}{MP_K} = \frac{w}{r} \\
+    \iff \frac{MP_L}{w} = \frac{MP_K}{r}=\frac{1}{\lambda^*}.
+    $${#eq-sols_interior}
+    
+* Again $\lambda^*$ can be interpreted as a shadow price: the cost of increasing output by a unit:
+    $$\lambda^* = \frac{\partial C^*(r,w,m)}{\partial m}.$$
+
+* @eq-sols_interior states that when minimizing the production cost, the firm rearranges inputs in such manner that the marginal product per currency unit is equalized across all factors (sounds familiar?)
+
+    * If for example $\frac{MP_L}{w} > \frac{MP_K}{r}$ then we should increase $L$ by reducing $K$ since the former has greater bang for the buck
+
+* The condition $\frac{MP_L}{MP_K} = \frac{w}{r} \iff MRTS_{L,K} = \frac{w}{r}$ tells us that the interior optimum is located where the isoquant is tangent to the isocost
+
+* Note that in general we should also check corner solutions (one or both of the inputs being null) or incorporate these constraints directly into the Langrangian (i.e. to add $\lambda_K K + \lambda_L L$)
+
+## Comparative statics
+
+* Solutions to the CMP give us input demands, which typically depend on input prices and the target output, i.e., on $w, r$ and $m$. 
+* This allows us to perform comparative statics
+* The cost is the expenditure that a firm incurs when hiring the _optimal_ amounts of inputs
+* As with input demands, we can express the (optimal) cost function as a function of input prices and target output
+  
+    $$
+    C(w, r, m) = wL(w, r, m) + rK(w, r, m). 
+    $${#eq-cost_fun}
+    
+* Likewise, we can also perform comparative statics on it
+
+## Types of costs: 
+
+### Explicit vs implicit costs
+
+* Explicit costs: Costs that require monetary payments
+
+* Implicit costs: Do not require monetary outlays but reflect opportunity costs
+
+* Example: What is your cost of attending this course?
+    * Explicit cost: tuition, transportation, etc.
+    * Implicit cost: the salary you could have earned during the time of study
+    
+### Sunk vs nonsunk costs
+
+* Sunk costs: costs that cannot be recoverred even if the firm chooses to shut down its operations.
+    * Example: The rental the firm has already paid for the building if the lease does not allow subletting
+    * This means that there is a fixed positive cost that the firm incurs even in the case of no production
+
+* Nonsunk costs: costs that can be sold back (recoverable or partially recoverable costs) in case the firm shuts down
+    * Example: Raw materials 
+    
+### Long-run vs short-run costs
+
+* In the long run (LR), the firm has enough time to vary the amount of all inputs as much as necessary
+
+* In the short run (SR), the amount of _at least one input is fixed_
+
+* Example: In short run, production factors such as land or capital are typically fixed, whereas labor is variable. In the long run, it is possible to buy more land and set up new factories, allowing all factors of production to vary.
+
+    * Consider a firm with Cobb-Douglas production $q = L^a K^b$ where $K=\bar{K}>0$ is fixed in the SR. Thus the cost function found above is the LR cost. The SR cost can be found by solving the CMP with respect to $L$ only
+
+<!--     * SR greater than LR: makes sense since we have more flexibility (less constraint) to minimize cost than in the SR.  -->
+
+::: {#fig-SRLRcost fig-cap="Short-run vs long-run cost function"}
+
+```{python}
+def TCSR(q):
+    return 1500 + (4 / 15) * q ** 2
+
+def TCLR(q):
+    return 40 * q
+
+def ACSR(q):
+    return TCSR(q) / q
+
+def ACLR(q):
+    return TCLR(q) / q
+
+def MCSR(q):
+    return (8 / 15) * q
+
+def MCLR(q):
+    return 40
+
+q = np.arange(1, 200)
+# plt.figure(figsize=(6, 4))
+plt.plot(q, TCSR(q), label='Short-run total cost')
+plt.plot(q, TCLR(q), label='Long-run total cost')
+# plt.title('$w=40$ and $r=10$')
+plt.xlabel('Units of output')
+plt.ylabel('Total cost')
+plt.legend(loc=0)
+plt.xticks([])
+plt.yticks([])
+plt.show()
+```
+:::
+
+### Average and marginal costs
+
+<!-- * The total cost of production consists of fixed cost and variable costs -->
+
+* Average cost (AC): total cost of production _per output unit_: 
+
+    $$ 
+    AC(q) = \frac{C(q)}{q}, 
+    $${#eq-ATC_def}
+    where $C(q)$ is the total cost.
+    
+* Marginal cost (MC): the rate at which the total cost increases as the firm produces an additional unit of output. Graphically it is the slope of the total cost curve:
+
+    $$ 
+    MC(q) = C'(q)
+    $${#eq-MC_def}
+    in the continuous case.^[It is equal to $\Delta C / \Delta q$ in the discrete case]
+    
+* The MC curve crosses the AC curve at the AC's minimum. In other words, the AC is decreasing when it is above the MC and increasing when it is above the MC. 
+
+* Intuition:
+    * Initially when output is small, the variable cost is small and the fixed cost dominates the total cost
+    * As output increases, the importance of fixed cost declines. Meanwhile, the MC increases (due to decreasing marginal product)
+    * After a threshold, producing an additional unit costs more than the AC of existing units
+
+<!--     * Only SR has a fixed cost; the relationship is thus clearer for this case -->
+
+::: {#fig-ACMCSR fig-cap="Short-run average and marginal costs"}
+```{python}
+q = np.arange(30, 150, 1)
+# plt.figure(figsize=(10, 6))
+plt.plot(q, ACSR(q), label='Short-run average cost')
+plt.plot(q, MCSR(q), label='Short-run marginal cost')
+plt.legend(loc=0)
+plt.xlabel('Units of output')
+plt.ylabel('AC, MC')
+plt.show()
+```
+:::
+
+-------------------------------------------------
+# Exercises
+
+::: {#exr-CMP1}
+For each of the following production functions, set up and solve the CMP.
+
+1. Cobb-Douglas production function: $q(L,K) = L^a K^b$ where $a, b>0$ and $a+b=1$
+2. Linear production function: $q(L,K) = aL + bK$ where $a, b>0$
+    * Hint: Consider 3 cases: $w/r = a/b$, $w/r < a/b$ and $w/r > a/b$
+:::
+
+::: {#exr-CMP2}
+Consider again the Cobb-Douglas production function in @exr-CMP1. Let $K(w, r, m)$  and $L(w, r, m)$ denote the input demand for capital and labor, respectively.
+
+1. How do input demands change with the ouput level $m$, and the input price?
+2. Are they homogeneous functions? If yes of which degree?
+:::
+
+::: {#exr-CostFun}
+Derive the cost function for a firm with a Cobb-Douglas production function. Is it a homogenous function? Of which degree? Explain.
+:::
+
+::: {#exr-LRSRcost}
+Let $q = L^{1/2} K^{1/2}$ be the production function. Suppose that in the short run capital is fixed at $\bar{K}=150$. Find the long-run and short-run cost functions. Which one is smaller? Does it make sense?
+:::
+
+::: {#exr-ACMC}
+Suppose $w=\$40$ and $r=\$10$. Derive the average and the marginal costs for the Cobb-Douglas production function $q = L^{1/2} K^{1/2}$ in the SR and the LR. 
+:::

@@ -500,7 +500,7 @@ Since a homogeneous utility function is homothetic, homogeneous preferences are 
     
 * The budget set or budget constraint: $B(p,w) \equiv \{x \geq 0: px \leq w\}$. 
 
-* If $w>0$ and $p\gg 0$ and $u$ is continuous then a solution to the UMP exists (Weirestrass theorem)
+* If $w>0$ and $p > 0$ and $u$ is continuous then a solution to the UMP exists (Weirestrass theorem)
 
 * A solution to the UMP, if exists, is a list of goods and services that maximizes the utility of the consumer given her budget constraint. 
 
@@ -539,8 +539,8 @@ $${#eq-Lagrangian}
 Denote $L_i$ the partial derivative of the Lagrangian with respect to good $i$. The KTT theorem tells us that if $x^*$ is a solution to the UMP then there exists $\lambda^*\geq 0$ such that the following conditions are satisfied:
 $$
 \begin{aligned}
-& L_i(x^*) \leq 0 \quad \forall i=1,\dots, L \\ 
-& L_i(x^*) = 0 \text{ if } x^*_i>0, \quad \forall i, \\
+& L_i(x^*) \leq 0, \quad  i=1,\dots, L \\ 
+& L_i(x^*) = 0 \text{ if } x^*_i>0, \quad i=1,\dots,L \\
 & \lambda^* \geq 0 \text{ and } \lambda^*(w - px^*) = 0. 
 \end{aligned}
 $${#eq-NFOCs}

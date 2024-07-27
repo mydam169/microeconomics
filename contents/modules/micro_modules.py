@@ -28,7 +28,7 @@ def plotIC(x, y, alph, bet, A=1, name='', lab=False, levels=np.arange(.5,  2, .2
     fig.suptitle(name)
     
     ax = fig.add_subplot(1, 2, 1)
-    ax = plt.contour(X, Y, U, levels=levels, cmap='plasma', linewidth=2)
+    ax = plt.contour(X, Y, U, levels=levels, cmap='plasma')
     if lab:
         plt.clabel(ax, inline=True, fontsize=10)
     # plt.colorbar(ax)
