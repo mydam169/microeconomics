@@ -19,8 +19,8 @@ website:
     left:
       - text: Home
         href: index.qmd
-      - text: About
-        href: about.qmd
+      # - text: About
+        # href: about.qmd
       - text: Contact
         href: contact.qmd
   
@@ -42,6 +42,8 @@ website:
             href: contents/lecture_1.qmd
           - text: "Lecture 2"
             href: contents/lecture_2.qmd
+          - text: "Lecture 3"
+            href: contents/lecture_3.qmd
           
 
 

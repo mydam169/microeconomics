@@ -12,6 +12,66 @@
     ]
   },
   {
+    "objectID": "contents/lecture_3.html",
+    "href": "contents/lecture_3.html",
+    "title": "Chapter 3. Equlibrium",
+    "section": "",
+    "text": "In this chapter we will be examining market equilibria. We shall begin by deriving the market supply curve, which results from firms’ optimal production decision. Likewise, market demand results from consumers’ optimal consumption decision. Searching for an equilibrium is essentially searching for prices that equalize demand and supply in the market. When a single market is considered in isolation, its equilibrium is a partial one. When all markets are considered, we speak of a general equilibrium. In a pure exchange economy, all markets are markets of consumption goods. In a production economy, the relevant markets include those of factors of production such as labor, capital and land. In this course, we will be mostly interested in general equilibria in a pure exchange economy.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#the-pmp",
+    "href": "contents/lecture_3.html#the-pmp",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.1 The PMP",
+    "text": "2.1 The PMP\n\n\nDefinition 1 (Firm’s PMP) Consider a price-taking firm in the market of the output good Given \\(p\\), the market price of the good, every firm’s PMP is: \\[\n\\max_{q\\geq 0} \\pi = R(q) - C(q) = pq - C(q),\n\\] where \\(C(q)\\) is the total cost function derived from the CMP introduced previously, \\(R(q)\\) denotes the total revenue.\n\nObserve that the PMP includes the CMP as a first step",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#necessary-conditions",
+    "href": "contents/lecture_3.html#necessary-conditions",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.2 Necessary conditions",
+    "text": "2.2 Necessary conditions\nAccording to the KT conditions, either\n\nwe have a corner solution \\(q=0\\), or\nWe have an interior solution \\(q&gt;0\\) satisfying the FOC:\n\\[\n      \\pi'(q) = 0 \\iff p = C'(q) \\\\\n      \\iff p = MC(q).\n  \\]\nObserve that for a price-taking firm, the marginal revenue is the market price of the good (as we shall see later, for a firm with market power, the marginal revenue is less than the price)\nThe FOC above implies that the firm produces up to a point where the marginal revenue (marginal benefit) is equal to the marginal cost.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#sufficient-condition",
+    "href": "contents/lecture_3.html#sufficient-condition",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.3 Sufficient condition",
+    "text": "2.3 Sufficient condition\n\nThe FOC is sufficient for a max if the profit function is concave in output. This is called the second-order condition (SOC)\nWe have:\n\\[ \\pi''(q) = -C''(q), \\]\nimplying that the SOC is satisfied whenever the cost function is convex in \\(q\\) (i.e., whenever the MC is increasing in output)",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#example",
+    "href": "contents/lecture_3.html#example",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.4 Example",
+    "text": "2.4 Example\nLet us solve the PMP of a price-taking firm in the output market (and inputs market). Assume that it has a Cobb-Douglas production function defined by \\(q(L, K) = L^{1/2}K^{1/2}\\). The factor prices are \\(w=\\$40\\) and \\(r=\\$10\\) as before.\n\nStep 1: Solve the CMP:\n\\[\\min_{K,L} 40L + 10K \\\\\n  \\text{s.t. } q(L, K) = L^{1/2}K^{1/2} \\geq q,\n  \\]\nfor some target output level \\(q\\).\n\nThe cost function can be obtained by replacing the solutions of the CMP into the objective function. This yields:\n\n\\[\n  C(q) = 40q.\n  \\]\nStep 2: Substitute \\(C(q)\\) obtained from the CMP into the PMP so that this problem reads:\n\\[\n  \\max_{q\\geq0} \\pi(q) = pq - 40q = (p - 40)q.\n  \\]\n\nClearly if \\(p&lt;40\\) the firm should shut down\nIf \\(p\\geq 40\\), the firm produces as much as possible since the profit is then incresing in output\nWe thus obtain a perfectly elastic individual supply curve",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 3"
+    ]
+  },
+  {
     "objectID": "contents/lecture_1.html",
     "href": "contents/lecture_1.html",
     "title": "Chapter 1. Consumers and demand",

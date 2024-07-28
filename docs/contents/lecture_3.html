@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lecture_3 – Intermediate Microeconomics</title>
+<title>Chapter 3. Equlibrium – Intermediate Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../contents/lecture_2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,9 +69,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Intermediate Microeconomics">
+<meta property="og:title" content="Chapter 3. Equlibrium – Intermediate Microeconomics">
+<meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
 <meta property="og:site_name" content="Intermediate Microeconomics">
 </head>
 
@@ -96,10 +127,6 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about.html"> 
-<span class="menu-text">About</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="../contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
@@ -115,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_3.html">Lecture 3</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -152,13 +179,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Lectures</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../contents/lecture_1.html" class="sidebar-item-text sidebar-link">
@@ -171,6 +198,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Lecture 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 3</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -178,17 +211,121 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
+   
+  <ul>
+  <li><a href="#perfectly-competitive-markets" id="toc-perfectly-competitive-markets" class="nav-link active" data-scroll-target="#perfectly-competitive-markets"><span class="header-section-number">1</span> Perfectly competitive markets</a></li>
+  <li><a href="#firms-profit-maxmimization-problem-pmp" id="toc-firms-profit-maxmimization-problem-pmp" class="nav-link" data-scroll-target="#firms-profit-maxmimization-problem-pmp"><span class="header-section-number">2</span> Firm’s profit maxmimization problem (PMP)</a>
+  <ul class="collapse">
+  <li><a href="#the-pmp" id="toc-the-pmp" class="nav-link" data-scroll-target="#the-pmp"><span class="header-section-number">2.1</span> The PMP</a></li>
+  <li><a href="#necessary-conditions" id="toc-necessary-conditions" class="nav-link" data-scroll-target="#necessary-conditions"><span class="header-section-number">2.2</span> Necessary conditions</a></li>
+  <li><a href="#sufficient-condition" id="toc-sufficient-condition" class="nav-link" data-scroll-target="#sufficient-condition"><span class="header-section-number">2.3</span> Sufficient condition</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">2.4</span> Example</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_3.html">Lecture 3</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 3. Equlibrium</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>In this chapter we will be examining market equilibria. We shall begin by deriving the market supply curve, which results from firms’ optimal production decision. Likewise, market demand results from consumers’ optimal consumption decision. Searching for an equilibrium is essentially searching for prices that equalize demand and supply in the market. When a single market is considered in isolation, its equilibrium is a partial one. When all markets are considered, we speak of a general equilibrium. In a pure exchange economy, all markets are markets of consumption goods. In a production economy, the relevant markets include those of factors of production such as labor, capital and land. In this course, we will be mostly interested in general equilibria in a pure exchange economy.</p>
+<section id="perfectly-competitive-markets" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Perfectly competitive markets</h1>
+<p>Our markets in this chapter are perfectly competitive, their features are:</p>
+<ul>
+<li><p>Fragmentation: large number of producers and consumers whose decisions (to produce or consume) do not influence market prices of the goods. In other words, all market participants are price-takers</p></li>
+<li><p>Undifferentiated products: products of all firms in the same industry are regarded as identical by consumers</p></li>
+<li><p>Perfect information: information on prices are transparent and freely accessible by consumers</p></li>
+<li><p>Free entry and exit: in the long run (LR), firms can freely enter and exit</p></li>
+</ul>
+<p>Example: Wheat, corn, or agricultural commodities</p>
+</section>
+<section id="firms-profit-maxmimization-problem-pmp" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Firm’s profit maxmimization problem (PMP)</h1>
+<section id="the-pmp" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-pmp"><span class="header-section-number">2.1</span> The PMP</h2>
+<!-- * Is the dual problem of the cost minimization problem (CMP) introduced previously
+    * In that problem, we implicitly assumed that firms were price-takers in the markets of inputs -->
+<div id="def-PMP" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Firm’s PMP)</strong></span> Consider a price-taking firm in the market of the output good Given <span class="math inline">\(p\)</span>, the market price of the good, every firm’s PMP is: <span class="math display">\[
+\max_{q\geq 0} \pi = R(q) - C(q) = pq - C(q),
+\]</span> where <span class="math inline">\(C(q)\)</span> is the total cost function derived from the CMP introduced previously, <span class="math inline">\(R(q)\)</span> denotes the total revenue.</p>
+</div>
+<p>Observe that the PMP includes the CMP as a first step</p>
+</section>
+<section id="necessary-conditions" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="necessary-conditions"><span class="header-section-number">2.2</span> Necessary conditions</h2>
+<p>According to the KT conditions, either</p>
+<ul>
+<li><p>we have a corner solution <span class="math inline">\(q=0\)</span>, or</p></li>
+<li><p>We have an interior solution <span class="math inline">\(q&gt;0\)</span> satisfying the FOC:</p>
+<p><span class="math display">\[
+      \pi'(q) = 0 \iff p = C'(q) \\
+      \iff p = MC(q).
+  \]</span></p></li>
+<li><p>Observe that for a price-taking firm, the marginal revenue is the market price of the good (as we shall see later, for a firm with market power, the marginal revenue is <em>less</em> than the price)</p></li>
+<li><p>The FOC above implies that the firm produces up to a point where the marginal revenue (marginal benefit) is equal to the marginal cost.</p></li>
+</ul>
+</section>
+<section id="sufficient-condition" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sufficient-condition"><span class="header-section-number">2.3</span> Sufficient condition</h2>
+<ul>
+<li><p>The FOC is sufficient for a max if the profit function is concave in output. This is called the second-order condition (SOC)</p></li>
+<li><p>We have:</p>
+<p><span class="math display">\[ \pi''(q) = -C''(q), \]</span></p>
+<p>implying that the SOC is satisfied whenever the cost function is convex in <span class="math inline">\(q\)</span> (i.e., whenever the MC is increasing in output)</p></li>
+</ul>
+</section>
+<section id="example" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="example"><span class="header-section-number">2.4</span> Example</h2>
+<p>Let us solve the PMP of a price-taking firm in the output market (and inputs market). Assume that it has a Cobb-Douglas production function defined by <span class="math inline">\(q(L, K) = L^{1/2}K^{1/2}\)</span>. The factor prices are <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span> as before.</p>
+<ul>
+<li><p>Step 1: Solve the CMP:</p>
+<p><span class="math display">\[\min_{K,L} 40L + 10K \\
+  \text{s.t. } q(L, K) = L^{1/2}K^{1/2} \geq q,
+  \]</span></p>
+<p>for some target output level <span class="math inline">\(q\)</span>.</p>
+<ul>
+<li>The cost function can be obtained by replacing the solutions of the CMP into the objective function. This yields:</li>
+</ul>
+<p><span class="math display">\[
+  C(q) = 40q.
+  \]</span></p></li>
+<li><p>Step 2: Substitute <span class="math inline">\(C(q)\)</span> obtained from the CMP into the PMP so that this problem reads:</p>
+<p><span class="math display">\[
+  \max_{q\geq0} \pi(q) = pq - 40q = (p - 40)q.
+  \]</span></p>
+<ul>
+<li><p>Clearly if <span class="math inline">\(p&lt;40\)</span> the firm should shut down</p></li>
+<li><p>If <span class="math inline">\(p\geq 40\)</span>, the firm produces as much as possible since the profit is then incresing in output</p></li>
+<li><p>We thus obtain a perfectly elastic individual supply curve</p></li>
+</ul></li>
+</ul>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -755,6 +892,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../contents/lecture_2.html" class="pagination-link" aria-label="Lecture 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture 2</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
