@@ -3,26 +3,31 @@
 
 body {
   font-family: 'Calibri', sans-serif;
-  font-size: large;
+  font-size: medium;
+  font-weight: 500
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Calibri', sans-serif;
-  font-weight: 900;
+  font-size: large;
+  font-weight: 600;
 }
 
 p {
-  font-family: 'Calibri', sans-serif;
+  font-family: 'Calibri', serif;
   font-weight: 500;
 }
 
 .navbar-brand {
-    font-size: 1.75rem; 
+    font-family: 'Calibri', sans-serif;
+    font-size: 1.2rem; 
   }
 
 .navbar .nav-link {
-    font-size: 1.2rem; 
+    font-family: 'Calibri', sans-serif;
+    font-size: medium; 
   }
+
 
   
 

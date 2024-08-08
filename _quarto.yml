@@ -15,7 +15,7 @@ website:
   # page-footer: 
 
   navbar:
-    background: "#012345"
+    background: "#33404d"
     left:
       - text: Home
         href: index.qmd
@@ -42,19 +42,20 @@ website:
             href: contents/lecture_1.qmd
           - text: "Lecture 2"
             href: contents/lecture_2.qmd
-          - text: "Lecture 3"
-            href: contents/lecture_3.qmd
-          
-
+          # - text: "Lecture 3"
+          #   href: contents/lecture_3.qmd
 
 format:
   html:
     theme: 
-      light: cosmo
+      light: lux
       dark: darkly
     css: styles.css
     toc: true
     toc-depth: 2
+
+
+
 
 
 

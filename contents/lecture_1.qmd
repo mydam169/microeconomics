@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Chapter 1. Consumers and demand"
 number-sections: true
 execute:
@@ -11,7 +11,7 @@ format:
         # toc-expand: true
         # toc-location: "left"
         # embed-resources: true
----
+--- -->
 
 ```{python}
 %load_ext autoreload
@@ -37,7 +37,6 @@ import os
 mod_dir = os.path.join(os.getcwd(), 'modules')
 if mod_dir not in sys.path:
     sys.path.append(mod_dir)
-
 import micro_modules as mm
 mm.load_viz_settings()
 ```

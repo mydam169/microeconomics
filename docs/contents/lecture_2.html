@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapter 2. Producers and supply – Intermediate Microeconomics</title>
+<title>lecture_2 – Intermediate Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,7 +63,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../contents/lecture_3.html" rel="next">
 <link href="../contents/lecture_1.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -101,7 +134,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Chapter 2. Producers and supply – Intermediate Microeconomics">
+<meta property="og:title" content="Intermediate Microeconomics">
 <meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
 <meta property="og:site_name" content="Intermediate Microeconomics">
 </head>
@@ -199,12 +232,6 @@ window.Quarto = {
  <span class="menu-text">Lecture 2</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../contents/lecture_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Lecture 3</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -214,84 +241,95 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Content</h2>
+    <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#production-function" id="toc-production-function" class="nav-link active" data-scroll-target="#production-function"><span class="header-section-number">1</span> Production function</a></li>
-  <li><a href="#average-and-marginal-products" id="toc-average-and-marginal-products" class="nav-link" data-scroll-target="#average-and-marginal-products"><span class="header-section-number">2</span> Average and marginal products</a>
   <ul class="collapse">
-  <li><a href="#average-product-and-productivity" id="toc-average-product-and-productivity" class="nav-link" data-scroll-target="#average-product-and-productivity"><span class="header-section-number">2.1</span> Average product and productivity</a></li>
-  <li><a href="#marginal-product" id="toc-marginal-product" class="nav-link" data-scroll-target="#marginal-product"><span class="header-section-number">2.2</span> Marginal product</a></li>
-  <li><a href="#decreasing-marginal-products" id="toc-decreasing-marginal-products" class="nav-link" data-scroll-target="#decreasing-marginal-products"><span class="header-section-number">2.3</span> Decreasing marginal products</a></li>
-  <li><a href="#decreasing-marginal-products-1" id="toc-decreasing-marginal-products-1" class="nav-link" data-scroll-target="#decreasing-marginal-products-1"><span class="header-section-number">2.4</span> Decreasing marginal products</a></li>
-  <li><a href="#relationship-beteen-average-and-marginal-products" id="toc-relationship-beteen-average-and-marginal-products" class="nav-link" data-scroll-target="#relationship-beteen-average-and-marginal-products"><span class="header-section-number">2.5</span> Relationship beteen average and marginal products</a></li>
-  </ul></li>
-  <li><a href="#isoquants" id="toc-isoquants" class="nav-link" data-scroll-target="#isoquants"><span class="header-section-number">3</span> Isoquants</a>
+  <li><a href="#production-function" id="toc-production-function" class="nav-link active" data-scroll-target="#production-function">Production function</a></li>
+  <li><a href="#average-and-marginal-products" id="toc-average-and-marginal-products" class="nav-link" data-scroll-target="#average-and-marginal-products">Average and marginal products</a>
   <ul class="collapse">
-  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition"><span class="header-section-number">3.1</span> Definition</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">3.2</span> Example</a></li>
-  <li><a href="#marginal-rate-of-technical-substitution-mrts" id="toc-marginal-rate-of-technical-substitution-mrts" class="nav-link" data-scroll-target="#marginal-rate-of-technical-substitution-mrts"><span class="header-section-number">3.3</span> Marginal rate of technical substitution (MRTS)</a>
+  <li><a href="#average-product-and-productivity" id="toc-average-product-and-productivity" class="nav-link" data-scroll-target="#average-product-and-productivity">Average product and productivity</a></li>
+  <li><a href="#marginal-product" id="toc-marginal-product" class="nav-link" data-scroll-target="#marginal-product">Marginal product</a></li>
+  <li><a href="#decreasing-marginal-products" id="toc-decreasing-marginal-products" class="nav-link" data-scroll-target="#decreasing-marginal-products">Decreasing marginal products</a></li>
+  <li><a href="#decreasing-marginal-products-1" id="toc-decreasing-marginal-products-1" class="nav-link" data-scroll-target="#decreasing-marginal-products-1">Decreasing marginal products</a></li>
+  <li><a href="#relationship-beteen-average-and-marginal-products" id="toc-relationship-beteen-average-and-marginal-products" class="nav-link" data-scroll-target="#relationship-beteen-average-and-marginal-products">Relationship beteen average and marginal products</a></li>
+  </ul></li>
+  <li><a href="#isoquants" id="toc-isoquants" class="nav-link" data-scroll-target="#isoquants">Isoquants</a>
   <ul class="collapse">
-  <li><a href="#definition-1" id="toc-definition-1" class="nav-link" data-scroll-target="#definition-1"><span class="header-section-number">3.3.1</span> Definition</a></li>
-  <li><a href="#properties" id="toc-properties" class="nav-link" data-scroll-target="#properties"><span class="header-section-number">3.3.2</span> Properties</a></li>
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition">Definition</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
+  <li><a href="#marginal-rate-of-technical-substitution-mrts" id="toc-marginal-rate-of-technical-substitution-mrts" class="nav-link" data-scroll-target="#marginal-rate-of-technical-substitution-mrts">Marginal rate of technical substitution (MRTS)</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#homogeneity-and-returns-to-scale" id="toc-homogeneity-and-returns-to-scale" class="nav-link" data-scroll-target="#homogeneity-and-returns-to-scale"><span class="header-section-number">4</span> Homogeneity and returns to scale</a>
+  <li><a href="#homogeneity-and-returns-to-scale" id="toc-homogeneity-and-returns-to-scale" class="nav-link" data-scroll-target="#homogeneity-and-returns-to-scale">Homogeneity and returns to scale</a>
   <ul class="collapse">
-  <li><a href="#returns-to-scale" id="toc-returns-to-scale" class="nav-link" data-scroll-target="#returns-to-scale"><span class="header-section-number">4.1</span> Returns to scale</a></li>
+  <li><a href="#returns-to-scale" id="toc-returns-to-scale" class="nav-link" data-scroll-target="#returns-to-scale">Returns to scale</a></li>
   </ul></li>
-  <li><a href="#technological-progress" id="toc-technological-progress" class="nav-link" data-scroll-target="#technological-progress"><span class="header-section-number">5</span> Technological progress</a>
+  <li><a href="#technological-progress" id="toc-technological-progress" class="nav-link" data-scroll-target="#technological-progress">Technological progress</a>
   <ul class="collapse">
-  <li><a href="#definition-2" id="toc-definition-2" class="nav-link" data-scroll-target="#definition-2"><span class="header-section-number">5.1</span> Definition</a></li>
-  <li><a href="#types-of-technological-progress" id="toc-types-of-technological-progress" class="nav-link" data-scroll-target="#types-of-technological-progress"><span class="header-section-number">5.2</span> Types of technological progress</a></li>
-  <li><a href="#labor-enhancing-technological-progress" id="toc-labor-enhancing-technological-progress" class="nav-link" data-scroll-target="#labor-enhancing-technological-progress"><span class="header-section-number">5.3</span> Labor-enhancing technological progress</a></li>
-  <li><a href="#capital-enhancing-technological-progress" id="toc-capital-enhancing-technological-progress" class="nav-link" data-scroll-target="#capital-enhancing-technological-progress"><span class="header-section-number">5.4</span> Capital-enhancing technological progress</a></li>
-  <li><a href="#neutral-technological-progress" id="toc-neutral-technological-progress" class="nav-link" data-scroll-target="#neutral-technological-progress"><span class="header-section-number">5.5</span> Neutral technological progress</a></li>
+  <li><a href="#definition-2" id="toc-definition-2" class="nav-link" data-scroll-target="#definition-2">Definition</a></li>
+  <li><a href="#types-of-technological-progress" id="toc-types-of-technological-progress" class="nav-link" data-scroll-target="#types-of-technological-progress">Types of technological progress</a></li>
+  <li><a href="#labor-enhancing-technological-progress" id="toc-labor-enhancing-technological-progress" class="nav-link" data-scroll-target="#labor-enhancing-technological-progress">Labor-enhancing technological progress</a></li>
+  <li><a href="#capital-enhancing-technological-progress" id="toc-capital-enhancing-technological-progress" class="nav-link" data-scroll-target="#capital-enhancing-technological-progress">Capital-enhancing technological progress</a></li>
+  <li><a href="#neutral-technological-progress" id="toc-neutral-technological-progress" class="nav-link" data-scroll-target="#neutral-technological-progress">Neutral technological progress</a></li>
   </ul></li>
-  <li><a href="#cost-functions" id="toc-cost-functions" class="nav-link" data-scroll-target="#cost-functions"><span class="header-section-number">6</span> Cost functions</a>
+  <li><a href="#cost-functions" id="toc-cost-functions" class="nav-link" data-scroll-target="#cost-functions">Cost functions</a>
   <ul class="collapse">
-  <li><a href="#isocost-lines" id="toc-isocost-lines" class="nav-link" data-scroll-target="#isocost-lines"><span class="header-section-number">6.1</span> Isocost lines</a></li>
-  <li><a href="#cost-minimization-problem-cmp" id="toc-cost-minimization-problem-cmp" class="nav-link" data-scroll-target="#cost-minimization-problem-cmp"><span class="header-section-number">6.2</span> Cost minimization problem (CMP)</a>
-  <ul class="collapse">
-  <li><a href="#necessary-conditions" id="toc-necessary-conditions" class="nav-link" data-scroll-target="#necessary-conditions"><span class="header-section-number">6.2.1</span> Necessary conditions</a></li>
+  <li><a href="#isocost-lines" id="toc-isocost-lines" class="nav-link" data-scroll-target="#isocost-lines">Isocost lines</a></li>
+  <li><a href="#cost-minimization-problem-cmp" id="toc-cost-minimization-problem-cmp" class="nav-link" data-scroll-target="#cost-minimization-problem-cmp">Cost minimization problem (CMP)</a></li>
+  <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics">Comparative statics</a></li>
+  <li><a href="#types-of-costs" id="toc-types-of-costs" class="nav-link" data-scroll-target="#types-of-costs">Types of costs:</a></li>
   </ul></li>
-  <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics"><span class="header-section-number">6.3</span> Comparative statics</a></li>
-  <li><a href="#types-of-costs" id="toc-types-of-costs" class="nav-link" data-scroll-target="#types-of-costs"><span class="header-section-number">6.4</span> Types of costs:</a>
-  <ul class="collapse">
-  <li><a href="#explicit-vs-implicit-costs" id="toc-explicit-vs-implicit-costs" class="nav-link" data-scroll-target="#explicit-vs-implicit-costs"><span class="header-section-number">6.4.1</span> Explicit vs implicit costs</a></li>
-  <li><a href="#sunk-vs-nonsunk-costs" id="toc-sunk-vs-nonsunk-costs" class="nav-link" data-scroll-target="#sunk-vs-nonsunk-costs"><span class="header-section-number">6.4.2</span> Sunk vs nonsunk costs</a></li>
-  <li><a href="#long-run-vs-short-run-costs" id="toc-long-run-vs-short-run-costs" class="nav-link" data-scroll-target="#long-run-vs-short-run-costs"><span class="header-section-number">6.4.3</span> Long-run vs short-run costs</a></li>
-  <li><a href="#average-and-marginal-costs" id="toc-average-and-marginal-costs" class="nav-link" data-scroll-target="#average-and-marginal-costs"><span class="header-section-number">6.4.4</span> Average and marginal costs</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">7</span> Exercises</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_2.html">Lecture 2</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Chapter 2. Producers and supply</h1>
+
+
+
+<!-- ---
+title: "Chapter 2. Producers and supply"
+number-sections: true
+execute:
+    echo: false
+format:
+    html:
+        toc: true
+        toc-depth: 3
+        toc-title: "Content"
+        # toc-expand: true
+        # toc-location: "left"
+        # embed-resources: true
+--- -->
+<div id="5fa0ade1" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext autoreload</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<section id="production-function" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Production function</h1>
+<div id="7113a766" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dataframe_image <span class="im">as</span> dfi</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="c8141ab1" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mod_dir <span class="op">=</span> os.path.join(os.getcwd(), <span class="st">'modules'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> mod_dir <span class="kw">not</span> <span class="kw">in</span> sys.path:</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    sys.path.append(mod_dir)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> micro_modules <span class="im">as</span> mm</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>mm.load_viz_settings()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="production-function" class="level1">
+<h1>Production function</h1>
 <p>A production function describes how inputs (factors of production such as labor, capital and land, etc.) can be transformed into outputs. We denote the production function by <span class="math inline">\(f:\mathbb{R}^n\to\mathbb{R}_+\)</span>, where <span class="math inline">\(n\)</span> is the number of inputs. In the case of two inputs, capital (<span class="math inline">\(K\)</span>) and labor (<span class="math inline">\(L\)</span>): <span class="math display">\[
 q = f(K, L),
 \]</span> where <span class="math inline">\(q\)</span> is the amount of output.</p>
@@ -319,10 +357,10 @@ q = f(K, L),
 </ol>
 </div>
 </section>
-<section id="average-and-marginal-products" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Average and marginal products</h1>
-<section id="average-product-and-productivity" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="average-product-and-productivity"><span class="header-section-number">2.1</span> Average product and productivity</h2>
+<section id="average-and-marginal-products" class="level1">
+<h1>Average and marginal products</h1>
+<section id="average-product-and-productivity" class="level2">
+<h2 class="anchored" data-anchor-id="average-product-and-productivity">Average product and productivity</h2>
 <ul>
 <li><p>The <em>average product</em> is the total units of output produced per unit of input used</p>
 <ul>
@@ -340,8 +378,8 @@ q = f(K, L),
 </ol>
 </div>
 </section>
-<section id="marginal-product" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="marginal-product"><span class="header-section-number">2.2</span> Marginal product</h2>
+<section id="marginal-product" class="level2">
+<h2 class="anchored" data-anchor-id="marginal-product">Marginal product</h2>
 <ul>
 <li>The <em>marginal product</em> is the rate at which total output changes as the firm uses one additional unit of input
 <ul>
@@ -351,9 +389,34 @@ q = f(K, L),
 <li>Example: Compute the marginal product of labor for the production functions in the previous example and determine if it is increasing or decreasing in the amount of input used.</li>
 </ul>
 </section>
-<section id="decreasing-marginal-products" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="decreasing-marginal-products"><span class="header-section-number">2.3</span> Decreasing marginal products</h2>
+<section id="decreasing-marginal-products" class="level2">
+<h2 class="anchored" data-anchor-id="decreasing-marginal-products">Decreasing marginal products</h2>
+<div id="86a67b12" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>q1 <span class="op">=</span> <span class="st">'$q=100 L^{1/2}$'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>q2 <span class="op">=</span> <span class="st">'$q=5L^{1/2} + 3L - 6$'</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pf1(L):</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">100</span> <span class="op">*</span> np.sqrt(L)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> pf2(L):</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">5</span> <span class="op">*</span> (L <span class="op">**</span> <span class="fl">0.5</span>) <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> L <span class="op">-</span> <span class="dv">6</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mp1(L):</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">50</span> <span class="op">*</span> (L <span class="op">**</span> (<span class="op">-</span><span class="fl">0.5</span>))</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> mp2(L):</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">2.5</span> <span class="op">*</span> (L <span class="op">**</span> (<span class="op">-</span><span class="fl">0.5</span>)) <span class="op">+</span> <span class="dv">3</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ap2(L):</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">5</span> <span class="op">*</span> (L <span class="op">**</span> (<span class="op">-</span><span class="fl">0.5</span>)) <span class="op">+</span> <span class="dv">3</span> <span class="op">-</span> <span class="dv">6</span> <span class="op">/</span> L</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div id="cell-fig-decMPL" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="fl">0.1</span>, <span class="dv">5</span>, <span class="fl">0.1</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.figure(figsize=(6, 4))</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x, pf1(x), label<span class="op">=</span><span class="st">'$q=100 L^{1/2}$'</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, mp1(x), label<span class="op">=</span><span class="st">'$MP_L=50 L^{-1/2}$'</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-decmpl" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -368,9 +431,15 @@ Figure&nbsp;1: Increasing labor increases output, but at decreasing rates
 </div>
 </div>
 </section>
-<section id="decreasing-marginal-products-1" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="decreasing-marginal-products-1"><span class="header-section-number">2.4</span> Decreasing marginal products</h2>
+<section id="decreasing-marginal-products-1" class="level2">
+<h2 class="anchored" data-anchor-id="decreasing-marginal-products-1">Decreasing marginal products</h2>
 <div id="cell-fig-decMPL2" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="fl">0.1</span>, <span class="dv">5</span>, <span class="fl">0.1</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.figure(figsize=(6, 4))</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x, pf2(x), label<span class="op">=</span><span class="st">'$q=5L^{1/2} + 3L - 6$'</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, mp2(x), label<span class="op">=</span><span class="st">'$MP_L=2.5L^{-1/2} + 3$'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-decmpl2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -385,12 +454,18 @@ Figure&nbsp;2: Increasing labor increases output, but at decreasing rates
 </div>
 </div>
 </section>
-<section id="relationship-beteen-average-and-marginal-products" class="level2" data-number="2.5">
-<h2 data-number="2.5" class="anchored" data-anchor-id="relationship-beteen-average-and-marginal-products"><span class="header-section-number">2.5</span> Relationship beteen average and marginal products</h2>
+<section id="relationship-beteen-average-and-marginal-products" class="level2">
+<h2 class="anchored" data-anchor-id="relationship-beteen-average-and-marginal-products">Relationship beteen average and marginal products</h2>
 <div id="fig-MPAP" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-MPAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="b6ebd1e3" class="cell" data-execution_count="7">
+<div id="bcf5be31" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">2</span>, <span class="dv">15</span>, <span class="fl">.1</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.plot(x, mp2(x), label<span class="op">=</span><span class="st">'$MP_L$'</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x, ap2(x), label<span class="op">=</span><span class="st">'$AP_L$'</span>)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>plt.title(q2)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -417,10 +492,10 @@ Figure&nbsp;3: Relationship between marginal and average products
 \tag{3}\]</span></span></p>
 </section>
 </section>
-<section id="isoquants" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Isoquants</h1>
-<section id="definition" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">3.1</span> Definition</h2>
+<section id="isoquants" class="level1">
+<h1>Isoquants</h1>
+<section id="definition" class="level2">
+<h2 class="anchored" data-anchor-id="definition">Definition</h2>
 <ul>
 <li><p>In the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation</p>
 <ul>
@@ -430,8 +505,8 @@ Figure&nbsp;3: Relationship between marginal and average products
 <li><p>Key difference with ICs: the <em>levels</em> assocated with isoquants are <em>cardinal</em>: they represent actual outputs and not just fictive units invented to rank bundles</p></li>
 </ul>
 </section>
-<section id="example" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="example"><span class="header-section-number">3.2</span> Example</h2>
+<section id="example" class="level2">
+<h2 class="anchored" data-anchor-id="example">Example</h2>
 <ul>
 <li><p>Consider the production function <span class="math inline">\(q(K, L) = 5K^{1/2} L^{1/2}\)</span>. Find the isoquant corresponding to <span class="math inline">\(m &gt; 0\)</span> units of output.</p></li>
 <li><p><span class="math inline">\(m &gt; 0\)</span> implies that both inputs are strictly positive. We have: <span class="math display">\[
@@ -439,7 +514,14 @@ Figure&nbsp;3: Relationship between marginal and average products
   \iff K = \frac{m^2}{25L}.
   \]</span></p></li>
 </ul>
+<div id="47572efd" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> isoquant(L, m):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> m <span class="op">**</span> <span class="dv">2</span> <span class="op">/</span> (<span class="dv">25</span> <span class="op">*</span> L)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.arange(<span class="dv">100</span>, <span class="dv">600</span>, <span class="dv">100</span>)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>L <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">100</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div id="cell-fig-isoquants" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mm.plotIC(L, L, <span class="fl">0.5</span>, <span class="fl">0.5</span>, <span class="dv">5</span>, levels<span class="op">=</span>q, lab<span class="op">=</span><span class="va">True</span>, name<span class="op">=</span><span class="st">'$q(L, K) = 5K^{1/2}L^{1/2}$'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-isoquants" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -454,10 +536,10 @@ Figure&nbsp;4: Cobb-Douglas production function and isoquants
 </div>
 </div>
 </section>
-<section id="marginal-rate-of-technical-substitution-mrts" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="marginal-rate-of-technical-substitution-mrts"><span class="header-section-number">3.3</span> Marginal rate of technical substitution (MRTS)</h2>
-<section id="definition-1" class="level3" data-number="3.3.1">
-<h3 data-number="3.3.1" class="anchored" data-anchor-id="definition-1"><span class="header-section-number">3.3.1</span> Definition</h3>
+<section id="marginal-rate-of-technical-substitution-mrts" class="level2">
+<h2 class="anchored" data-anchor-id="marginal-rate-of-technical-substitution-mrts">Marginal rate of technical substitution (MRTS)</h2>
+<section id="definition-1" class="level3">
+<h3 class="anchored" data-anchor-id="definition-1">Definition</h3>
 <ul>
 <li><p>The MRTS is the slope of the isoquant (in absolute value):</p>
 <p><span id="eq-MRST_def"><span class="math display">\[
@@ -475,8 +557,8 @@ Figure&nbsp;4: Cobb-Douglas production function and isoquants
    \tag{5}\]</span></span></p></li>
 </ul>
 </section>
-<section id="properties" class="level3" data-number="3.3.2">
-<h3 data-number="3.3.2" class="anchored" data-anchor-id="properties"><span class="header-section-number">3.3.2</span> Properties</h3>
+<section id="properties" class="level3">
+<h3 class="anchored" data-anchor-id="properties">Properties</h3>
 <p>In the case of Cobb-Douglas production function above, the <em>MRTS is decreasing</em> as we move in the south-east direction along one isoquant:</p>
 <ul>
 <li><p>When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker</p></li>
@@ -485,10 +567,10 @@ Figure&nbsp;4: Cobb-Douglas production function and isoquants
 </section>
 </section>
 </section>
-<section id="homogeneity-and-returns-to-scale" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Homogeneity and returns to scale</h1>
-<section id="returns-to-scale" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="returns-to-scale"><span class="header-section-number">4.1</span> Returns to scale</h2>
+<section id="homogeneity-and-returns-to-scale" class="level1">
+<h1>Homogeneity and returns to scale</h1>
+<section id="returns-to-scale" class="level2">
+<h2 class="anchored" data-anchor-id="returns-to-scale">Returns to scale</h2>
 <ul>
 <li><p>Let <span class="math inline">\(\alpha &gt; 0\)</span> be the factor by which all inputs change (i.e., each input is multiplied by <span class="math inline">\(\alpha\)</span>)</p></li>
 <li><p>Suppose <span class="math inline">\(q(\alpha K, \alpha L) = \alpha^k q(K, L)\)</span> for some number <span class="math inline">\(k\)</span></p>
@@ -527,10 +609,10 @@ Answer
 </div>
 </section>
 </section>
-<section id="technological-progress" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Technological progress</h1>
-<section id="definition-2" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="definition-2"><span class="header-section-number">5.1</span> Definition</h2>
+<section id="technological-progress" class="level1">
+<h1>Technological progress</h1>
+<section id="definition-2" class="level2">
+<h2 class="anchored" data-anchor-id="definition-2">Definition</h2>
 <ul>
 <li><p>Technical advances that allow firms to produce more with the same amount of inputs</p></li>
 <li><p>Three types of technical progress:</p>
@@ -548,8 +630,8 @@ Answer
 <p>Let us determine the type of progress that the firm has undergone.</p></li>
 </ul>
 </section>
-<section id="types-of-technological-progress" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="types-of-technological-progress"><span class="header-section-number">5.2</span> Types of technological progress</h2>
+<section id="types-of-technological-progress" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-technological-progress">Types of technological progress</h2>
 <ul>
 <li><p>The percentage change in the marginal product of each input: <span class="math display">\[
   \frac{MP'_i - MP_i}{MP_i} = \frac{MP'_i}{MP_i} - 1, \quad i\in\{K, L\},
@@ -563,28 +645,34 @@ Answer
 <li><p>Hence the type of the tech progress can be determined by comparing the MRTSs</p></li>
 </ul>
 </section>
-<section id="labor-enhancing-technological-progress" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="labor-enhancing-technological-progress"><span class="header-section-number">5.3</span> Labor-enhancing technological progress</h2>
+<section id="labor-enhancing-technological-progress" class="level2">
+<h2 class="anchored" data-anchor-id="labor-enhancing-technological-progress">Labor-enhancing technological progress</h2>
 <ul>
 <li><p>Consider <span class="math inline">\(q = A_1 L^{a + \delta} K^b\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></p></li>
 <li><p>The MRTS before tech progress: <span class="math display">\[MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.\]</span></p></li>
-<li><p>After tech progress: <span class="math display">\[MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.\]</span></p></li>
+<li><p>After tech progress: <span class="math display">\[
+  MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.
+  \]</span></p></li>
 <li><p>Since <span class="math inline">\(\delta &gt; 0\)</span>, we have <span class="math inline">\(MRTS'_{L,K} &gt; MRTS_{L,K}\)</span>, implying that this is a labor-enhancing (or labor-saving) tech progress</p></li>
 <li><p>Graphically, on the <span class="math inline">\((K, L)\)</span> plane, the isoquants become steeper</p></li>
 </ul>
 </section>
-<section id="capital-enhancing-technological-progress" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="capital-enhancing-technological-progress"><span class="header-section-number">5.4</span> Capital-enhancing technological progress</h2>
+<section id="capital-enhancing-technological-progress" class="level2">
+<h2 class="anchored" data-anchor-id="capital-enhancing-technological-progress">Capital-enhancing technological progress</h2>
 <ul>
 <li><p>Consider <span class="math inline">\(q = A_1 L^a K^{b + \delta}\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></p></li>
-<li><p>The MRTS before tech progress: <span class="math display">\[MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.\]</span></p></li>
-<li><p>After tech progress: <span class="math display">\[MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.\]</span></p></li>
+<li><p>The MRTS before tech progress: <span class="math display">\[
+  MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
+  \]</span></p></li>
+<li><p>After tech progress: <span class="math display">\[
+  MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.
+  \]</span></p></li>
 <li><p>Since <span class="math inline">\(\delta &gt; 0\)</span>, we have <span class="math inline">\(MRTS'_{L,K} &lt; MRTS_{L,K}\)</span>, which is equivalent to <span class="math inline">\(MRTS'_{K,L} &gt; MRTS_{K,L}\)</span>, implying that this is a capital-enhancing (capital-saving) tech progress</p></li>
 <li><p>How do the isoquants change graphically?</p></li>
 </ul>
 </section>
-<section id="neutral-technological-progress" class="level2" data-number="5.5">
-<h2 data-number="5.5" class="anchored" data-anchor-id="neutral-technological-progress"><span class="header-section-number">5.5</span> Neutral technological progress</h2>
+<section id="neutral-technological-progress" class="level2">
+<h2 class="anchored" data-anchor-id="neutral-technological-progress">Neutral technological progress</h2>
 <ul>
 <li><p>Finally, consider <span class="math inline">\(q = A_2 L^a K^b\)</span> with <span class="math inline">\(A_2 &gt; A_1\)</span></p></li>
 <li><p>In this case the <span class="math inline">\(MRTS\)</span> does not change after the progress, implying that this is a neutral one</p></li>
@@ -592,10 +680,10 @@ Answer
 </ul>
 </section>
 </section>
-<section id="cost-functions" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Cost functions</h1>
-<section id="isocost-lines" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="isocost-lines"><span class="header-section-number">6.1</span> Isocost lines</h2>
+<section id="cost-functions" class="level1">
+<h1>Cost functions</h1>
+<section id="isocost-lines" class="level2">
+<h2 class="anchored" data-anchor-id="isocost-lines">Isocost lines</h2>
 <div id="def-isocost" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Isocost)</strong></span> An isocost line is the set of input combinations that yield the same total cost (TC) for the firm. Mathematically, let <span class="math inline">\(w&gt;0\)</span> and <span class="math inline">\(r&gt;0\)</span> be the prices of labor and capital, respectively. Then the isocost consists of all <span class="math inline">\((w, r)\)</span> pairs such that: <span id="eq-isocost_def"><span class="math display">\[
 TC = wL + rK.
@@ -604,7 +692,20 @@ TC = wL + rK.
 <div id="fig-isocost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-isocost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="845accf7" class="cell" data-execution_count="10">
+<div id="acd30d97" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">400</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="fl">2.5</span> <span class="op">-</span> x</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y, <span class="st">'k-'</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="fl">0.05</span>, <span class="fl">2.55</span>, <span class="st">"$TC/r$"</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="fl">2.5</span>, <span class="fl">.15</span>, <span class="st">"$TC/w$"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'$L$'</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'$K$'</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">0</span>, <span class="dv">3</span>])</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="dv">0</span>, <span class="dv">3</span>])</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>plt.xticks([])</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>plt.yticks([])</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -621,8 +722,8 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 </div>
 <p>Observe that the slope of the isocost line is <span class="math inline">\(-w/r\)</span>, implying that as <span class="math inline">\(w\)</span> rises, this line gets steeper.</p>
 </section>
-<section id="cost-minimization-problem-cmp" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="cost-minimization-problem-cmp"><span class="header-section-number">6.2</span> Cost minimization problem (CMP)</h2>
+<section id="cost-minimization-problem-cmp" class="level2">
+<h2 class="anchored" data-anchor-id="cost-minimization-problem-cmp">Cost minimization problem (CMP)</h2>
 <p>The cost minimization problem entails finding a combination of inputs such that the total cost to attain a certain level of output is minimized.</p>
 <div id="def-CMP" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (CMP)</strong></span> <span id="eq-CMP_def"><span class="math display">\[
@@ -633,8 +734,8 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 \tag{8}\]</span></span> where <span class="math inline">\(m\)</span> is the target output level.</p>
 </div>
 <p>The idea is to identify the isocost line touching the isoquant that is as close to the origin as possible.</p>
-<section id="necessary-conditions" class="level3" data-number="6.2.1">
-<h3 data-number="6.2.1" class="anchored" data-anchor-id="necessary-conditions"><span class="header-section-number">6.2.1</span> Necessary conditions</h3>
+<section id="necessary-conditions" class="level3">
+<h3 class="anchored" data-anchor-id="necessary-conditions">Necessary conditions</h3>
 <ul>
 <li><p>Set up the Lagrangian:</p>
 <p><span id="eq-Lagrange_cmp"><span class="math display">\[
@@ -659,7 +760,9 @@ Figure&nbsp;5: Isocostline for the case of two inputs
   \frac{MP_L}{MP_K} = \frac{w}{r} \\
   \iff \frac{MP_L}{w} = \frac{MP_K}{r}=\frac{1}{\lambda^*}.
    \tag{12}\]</span></span></p></li>
-<li><p>Again <span class="math inline">\(\lambda^*\)</span> can be interpreted as a shadow price: the cost of increasing output by a unit: <span class="math display">\[\lambda^* = \frac{\partial C^*(r,w,m)}{\partial m}.\]</span></p></li>
+<li><p>Again <span class="math inline">\(\lambda^*\)</span> can be interpreted as a shadow price: the cost of increasing output by a unit: <span class="math display">\[
+  \lambda^* = \frac{\partial C^*(r,w,m)}{\partial m}.
+  \]</span></p></li>
 <li><p><a href="#eq-sols_interior" class="quarto-xref">Equation&nbsp;12</a> states that when minimizing the production cost, the firm rearranges inputs in such manner that the marginal product per currency unit is equalized across all factors (sounds familiar?)</p>
 <ul>
 <li>If for example <span class="math inline">\(\frac{MP_L}{w} &gt; \frac{MP_K}{r}\)</span> then we should increase <span class="math inline">\(L\)</span> by reducing <span class="math inline">\(K\)</span> since the former has greater bang for the buck</li>
@@ -669,8 +772,8 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 </ul>
 </section>
 </section>
-<section id="comparative-statics" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="comparative-statics"><span class="header-section-number">6.3</span> Comparative statics</h2>
+<section id="comparative-statics" class="level2">
+<h2 class="anchored" data-anchor-id="comparative-statics">Comparative statics</h2>
 <ul>
 <li><p>Solutions to the CMP give us input demands, which typically depend on input prices and the target output, i.e., on <span class="math inline">\(w, r\)</span> and <span class="math inline">\(m\)</span>.</p></li>
 <li><p>This allows us to perform comparative statics</p></li>
@@ -682,10 +785,10 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <li><p>Likewise, we can also perform comparative statics on it</p></li>
 </ul>
 </section>
-<section id="types-of-costs" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="types-of-costs"><span class="header-section-number">6.4</span> Types of costs:</h2>
-<section id="explicit-vs-implicit-costs" class="level3" data-number="6.4.1">
-<h3 data-number="6.4.1" class="anchored" data-anchor-id="explicit-vs-implicit-costs"><span class="header-section-number">6.4.1</span> Explicit vs implicit costs</h3>
+<section id="types-of-costs" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-costs">Types of costs:</h2>
+<section id="explicit-vs-implicit-costs" class="level3">
+<h3 class="anchored" data-anchor-id="explicit-vs-implicit-costs">Explicit vs implicit costs</h3>
 <ul>
 <li><p>Explicit costs: Costs that require monetary payments</p></li>
 <li><p>Implicit costs: Do not require monetary outlays but reflect opportunity costs</p></li>
@@ -696,8 +799,8 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 </ul></li>
 </ul>
 </section>
-<section id="sunk-vs-nonsunk-costs" class="level3" data-number="6.4.2">
-<h3 data-number="6.4.2" class="anchored" data-anchor-id="sunk-vs-nonsunk-costs"><span class="header-section-number">6.4.2</span> Sunk vs nonsunk costs</h3>
+<section id="sunk-vs-nonsunk-costs" class="level3">
+<h3 class="anchored" data-anchor-id="sunk-vs-nonsunk-costs">Sunk vs nonsunk costs</h3>
 <ul>
 <li>Sunk costs: costs that cannot be recoverred even if the firm chooses to shut down its operations.
 <ul>
@@ -710,8 +813,8 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 </ul></li>
 </ul>
 </section>
-<section id="long-run-vs-short-run-costs" class="level3" data-number="6.4.3">
-<h3 data-number="6.4.3" class="anchored" data-anchor-id="long-run-vs-short-run-costs"><span class="header-section-number">6.4.3</span> Long-run vs short-run costs</h3>
+<section id="long-run-vs-short-run-costs" class="level3">
+<h3 class="anchored" data-anchor-id="long-run-vs-short-run-costs">Long-run vs short-run costs</h3>
 <ul>
 <li><p>In the long run (LR), the firm has enough time to vary the amount of all inputs as much as necessary</p></li>
 <li><p>In the short run (SR), the amount of <em>at least one input is fixed</em></p></li>
@@ -724,7 +827,36 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <div id="fig-SRLRcost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SRLRcost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="60e42a1e" class="cell" data-execution_count="11">
+<div id="61f445e3" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> TCSR(q):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1500</span> <span class="op">+</span> (<span class="dv">4</span> <span class="op">/</span> <span class="dv">15</span>) <span class="op">*</span> q <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> TCLR(q):</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">40</span> <span class="op">*</span> q</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ACSR(q):</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> TCSR(q) <span class="op">/</span> q</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ACLR(q):</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> TCLR(q) <span class="op">/</span> q</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MCSR(q):</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (<span class="dv">8</span> <span class="op">/</span> <span class="dv">15</span>) <span class="op">*</span> q</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MCLR(q):</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">40</span></span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.arange(<span class="dv">1</span>, <span class="dv">200</span>)</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.figure(figsize=(6, 4))</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>plt.plot(q, TCSR(q), label<span class="op">=</span><span class="st">'Short-run total cost'</span>)</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>plt.plot(q, TCLR(q), label<span class="op">=</span><span class="st">'Long-run total cost'</span>)</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.title('$w=40$ and $r=10$')</span></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Units of output'</span>)</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Total cost'</span>)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>plt.xticks([])</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a>plt.yticks([])</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -740,8 +872,8 @@ Figure&nbsp;6: Short-run vs long-run cost function
 </figure>
 </div>
 </section>
-<section id="average-and-marginal-costs" class="level3" data-number="6.4.4">
-<h3 data-number="6.4.4" class="anchored" data-anchor-id="average-and-marginal-costs"><span class="header-section-number">6.4.4</span> Average and marginal costs</h3>
+<section id="average-and-marginal-costs" class="level3">
+<h3 class="anchored" data-anchor-id="average-and-marginal-costs">Average and marginal costs</h3>
 <!-- * The total cost of production consists of fixed cost and variable costs -->
 <ul>
 <li><p>Average cost (AC): total cost of production <em>per output unit</em>:</p>
@@ -764,7 +896,17 @@ Figure&nbsp;6: Short-run vs long-run cost function
 <div id="fig-ACMCSR" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ACMCSR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="c7f72a00" class="cell" data-execution_count="12">
+<div id="c56c338b" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.arange(<span class="dv">30</span>, <span class="dv">150</span>, <span class="dv">1</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.figure(figsize=(10, 6))</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>plt.plot(q, ACSR(q), label<span class="op">=</span><span class="st">'Short-run average cost'</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>plt.plot(q, MCSR(q), label<span class="op">=</span><span class="st">'Short-run marginal cost'</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Units of output'</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'AC, MC'</span>)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>plt.xticks([])</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>plt.yticks([])</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -783,8 +925,8 @@ Figure&nbsp;7: Short-run average and marginal costs
 </section>
 </section>
 </section>
-<section id="exercises" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Exercises</h1>
+<section id="exercises" class="level1">
+<h1>Exercises</h1>
 <div id="exr-CMP1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1</strong></span> For each of the following production functions, set up and solve the CMP.</p>
 <ol type="1">
@@ -1393,9 +1535,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../contents/lecture_3.html" class="pagination-link" aria-label="Lecture 3">
-        <span class="nav-page-text">Lecture 3</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Chapter 2. Producers and supply"
 number-sections: true
 execute:
@@ -11,7 +11,7 @@ format:
         # toc-expand: true
         # toc-location: "left"
         # embed-resources: true
----
+--- -->
 
 ```{python}
 %load_ext autoreload
@@ -324,7 +324,9 @@ Consider the Cobb-Douglas production function $q = AK^a L^b$ where $A, a, b$ are
     $$MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.$$
     
 * After tech progress:
-    $$MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.$$
+    $$
+    MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.
+    $$
 
 * Since $\delta > 0$, we have $MRTS'_{L,K} > MRTS_{L,K}$, implying that this is a labor-enhancing (or labor-saving) tech progress
 
@@ -335,10 +337,14 @@ Consider the Cobb-Douglas production function $q = AK^a L^b$ where $A, a, b$ are
 * Consider $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$
 
 * The MRTS before tech progress:
-    $$MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.$$
+    $$
+    MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
+    $$
     
 * After tech progress:
-    $$MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.$$
+    $$
+    MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.
+    $$
 
 * Since $\delta > 0$, we have $MRTS'_{L,K} < MRTS_{L,K}$, which is equivalent to $MRTS'_{K,L} > MRTS_{K,L}$, implying that this is a capital-enhancing (capital-saving) tech progress
 
@@ -365,6 +371,7 @@ $${#eq-isocost_def}
 :::
 
 ::: {#fig-isocost fig-cap="Isocostline for the case of two inputs"}
+
 ```{python}
 x = np.linspace(0, 3, 400)
 y = 2.5 - x
@@ -435,7 +442,9 @@ The idea is to identify the isocost line touching the isoquant that is as close 
     $${#eq-sols_interior}
     
 * Again $\lambda^*$ can be interpreted as a shadow price: the cost of increasing output by a unit:
-    $$\lambda^* = \frac{\partial C^*(r,w,m)}{\partial m}.$$
+    $$
+    \lambda^* = \frac{\partial C^*(r,w,m)}{\partial m}.
+    $$
 
 * @eq-sols_interior states that when minimizing the production cost, the firm rearranges inputs in such manner that the marginal product per currency unit is equalized across all factors (sounds familiar?)
 

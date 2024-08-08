@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.55">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapter 3. Equlibrium – Intermediate Microeconomics</title>
+<title>lecture_3 – Intermediate Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,7 +63,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../contents/lecture_2.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -100,7 +133,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Chapter 3. Equlibrium – Intermediate Microeconomics">
+<meta property="og:title" content="Intermediate Microeconomics">
 <meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
 <meta property="og:site_name" content="Intermediate Microeconomics">
 </head>
@@ -142,7 +175,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_3.html">Lecture 3</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -179,13 +212,13 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Lectures</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../contents/lecture_1.html" class="sidebar-item-text sidebar-link">
@@ -198,12 +231,6 @@ window.Quarto = {
  <span class="menu-text">Lecture 2</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../contents/lecture_3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Lecture 3</span></a>
-  </div>
-</li>
       </ul>
   </li>
     </ul>
@@ -213,45 +240,76 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Content</h2>
+    <h2 id="toc-title">On this page</h2>
    
-  <ul>
-  <li><a href="#perfectly-competitive-markets" id="toc-perfectly-competitive-markets" class="nav-link active" data-scroll-target="#perfectly-competitive-markets"><span class="header-section-number">1</span> Perfectly competitive markets</a></li>
-  <li><a href="#firms-profit-maxmimization-problem-pmp" id="toc-firms-profit-maxmimization-problem-pmp" class="nav-link" data-scroll-target="#firms-profit-maxmimization-problem-pmp"><span class="header-section-number">2</span> Firm’s profit maxmimization problem (PMP)</a>
   <ul class="collapse">
-  <li><a href="#the-pmp" id="toc-the-pmp" class="nav-link" data-scroll-target="#the-pmp"><span class="header-section-number">2.1</span> The PMP</a></li>
-  <li><a href="#necessary-conditions" id="toc-necessary-conditions" class="nav-link" data-scroll-target="#necessary-conditions"><span class="header-section-number">2.2</span> Necessary conditions</a></li>
-  <li><a href="#sufficient-condition" id="toc-sufficient-condition" class="nav-link" data-scroll-target="#sufficient-condition"><span class="header-section-number">2.3</span> Sufficient condition</a></li>
-  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">2.4</span> Example</a></li>
+  <li><a href="#perfectly-competitive-markets" id="toc-perfectly-competitive-markets" class="nav-link active" data-scroll-target="#perfectly-competitive-markets">Perfectly competitive markets</a></li>
+  <li><a href="#firms-profit-maxmimization-problem-pmp" id="toc-firms-profit-maxmimization-problem-pmp" class="nav-link" data-scroll-target="#firms-profit-maxmimization-problem-pmp">Firm’s profit maxmimization problem (PMP)</a>
+  <ul class="collapse">
+  <li><a href="#the-pmp" id="toc-the-pmp" class="nav-link" data-scroll-target="#the-pmp">The PMP</a></li>
+  <li><a href="#necessary-conditions" id="toc-necessary-conditions" class="nav-link" data-scroll-target="#necessary-conditions">Necessary conditions</a></li>
+  <li><a href="#sufficient-condition" id="toc-sufficient-condition" class="nav-link" data-scroll-target="#sufficient-condition">Sufficient condition</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples">Examples</a></li>
+  <li><a href="#long-run-vs-short-run-firms-supply" id="toc-long-run-vs-short-run-firms-supply" class="nav-link" data-scroll-target="#long-run-vs-short-run-firms-supply">Long-run vs short-run firm’s supply</a></li>
   </ul></li>
+  <li><a href="#partial-equilibrium" id="toc-partial-equilibrium" class="nav-link" data-scroll-target="#partial-equilibrium">Partial Equilibrium</a>
+  <ul class="collapse">
+  <li><a href="#short-run-equilibrium" id="toc-short-run-equilibrium" class="nav-link" data-scroll-target="#short-run-equilibrium">Short-run equilibrium</a></li>
+  <li><a href="#long-run-equilibrium" id="toc-long-run-equilibrium" class="nav-link" data-scroll-target="#long-run-equilibrium">Long-run equilibrium</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_3.html">Lecture 3</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Chapter 3. Equlibrium</h1>
+
+
+
+<!-- ---
+title: "Chapter 3. Equlibrium"
+number-sections: true
+execute:
+    echo: false
+format:
+    html:
+        toc: true
+        toc-depth: 3
+        toc-title: "Content"
+        # toc-expand: true
+        # toc-location: "left"
+        # embed-resources: true
+--- -->
+<div id="19dd528c" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext autoreload</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
+<div id="9bde0711" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dataframe_image <span class="im">as</span> dfi</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="f31ef041" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mod_dir <span class="op">=</span> os.path.join(os.getcwd(), <span class="st">'modules'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> mod_dir <span class="kw">not</span> <span class="kw">in</span> sys.path:</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    sys.path.append(mod_dir)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> micro_modules <span class="im">as</span> mm</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>mm.load_viz_settings()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>In this chapter we will be examining market equilibria. We shall begin by deriving the market supply curve, which results from firms’ optimal production decision. Likewise, market demand results from consumers’ optimal consumption decision. Searching for an equilibrium is essentially searching for prices that equalize demand and supply in the market. When a single market is considered in isolation, its equilibrium is a partial one. When all markets are considered, we speak of a general equilibrium. In a pure exchange economy, all markets are markets of consumption goods. In a production economy, the relevant markets include those of factors of production such as labor, capital and land. In this course, we will be mostly interested in general equilibria in a pure exchange economy.</p>
-<section id="perfectly-competitive-markets" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Perfectly competitive markets</h1>
+<section id="perfectly-competitive-markets" class="level1">
+<h1>Perfectly competitive markets</h1>
 <p>Our markets in this chapter are perfectly competitive, their features are:</p>
 <ul>
 <li><p>Fragmentation: large number of producers and consumers whose decisions (to produce or consume) do not influence market prices of the goods. In other words, all market participants are price-takers</p></li>
@@ -261,10 +319,10 @@ window.Quarto = {
 </ul>
 <p>Example: Wheat, corn, or agricultural commodities</p>
 </section>
-<section id="firms-profit-maxmimization-problem-pmp" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Firm’s profit maxmimization problem (PMP)</h1>
-<section id="the-pmp" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="the-pmp"><span class="header-section-number">2.1</span> The PMP</h2>
+<section id="firms-profit-maxmimization-problem-pmp" class="level1">
+<h1>Firm’s profit maxmimization problem (PMP)</h1>
+<section id="the-pmp" class="level2">
+<h2 class="anchored" data-anchor-id="the-pmp">The PMP</h2>
 <!-- * Is the dual problem of the cost minimization problem (CMP) introduced previously
     * In that problem, we implicitly assumed that firms were price-takers in the markets of inputs -->
 <div id="def-PMP" class="theorem definition">
@@ -274,8 +332,8 @@ window.Quarto = {
 </div>
 <p>Observe that the PMP includes the CMP as a first step</p>
 </section>
-<section id="necessary-conditions" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="necessary-conditions"><span class="header-section-number">2.2</span> Necessary conditions</h2>
+<section id="necessary-conditions" class="level2">
+<h2 class="anchored" data-anchor-id="necessary-conditions">Necessary conditions</h2>
 <p>According to the KT conditions, either</p>
 <ul>
 <li><p>we have a corner solution <span class="math inline">\(q=0\)</span>, or</p></li>
@@ -288,22 +346,28 @@ window.Quarto = {
 <li><p>The FOC above implies that the firm produces up to a point where the marginal revenue (marginal benefit) is equal to the marginal cost.</p></li>
 </ul>
 </section>
-<section id="sufficient-condition" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="sufficient-condition"><span class="header-section-number">2.3</span> Sufficient condition</h2>
+<section id="sufficient-condition" class="level2">
+<h2 class="anchored" data-anchor-id="sufficient-condition">Sufficient condition</h2>
 <ul>
 <li><p>The FOC is sufficient for a max if the profit function is concave in output. This is called the second-order condition (SOC)</p></li>
 <li><p>We have:</p>
-<p><span class="math display">\[ \pi''(q) = -C''(q), \]</span></p>
-<p>implying that the SOC is satisfied whenever the cost function is convex in <span class="math inline">\(q\)</span> (i.e., whenever the MC is increasing in output)</p></li>
+<p><span class="math display">\[
+  \pi''(q) = -C''(q),
+  \]</span></p>
+<p>implying that the SOC is satisfied if the cost function is convex in <span class="math inline">\(q\)</span> (i.e., if the MC is increasing in output)</p></li>
 </ul>
 </section>
-<section id="example" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="example"><span class="header-section-number">2.4</span> Example</h2>
-<p>Let us solve the PMP of a price-taking firm in the output market (and inputs market). Assume that it has a Cobb-Douglas production function defined by <span class="math inline">\(q(L, K) = L^{1/2}K^{1/2}\)</span>. The factor prices are <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span> as before.</p>
+<section id="examples" class="level2">
+<h2 class="anchored" data-anchor-id="examples">Examples</h2>
+<div id="exm-ESCex" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> Let us solve the PMP of a price-taking firm in the output market (and inputs market). Assume that it has a Cobb-Douglas production function defined by <span class="math inline">\(q(L, K) = L^{1/2}K^{1/2}\)</span>. The factor prices are <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span> as before.</p>
 <ul>
 <li><p>Step 1: Solve the CMP:</p>
-<p><span class="math display">\[\min_{K,L} 40L + 10K \\
-  \text{s.t. } q(L, K) = L^{1/2}K^{1/2} \geq q,
+<p><span class="math display">\[
+  \begin{aligned}
+  &amp;\min_{K,L} 40L + 10K \\
+  \text{s.t. } &amp;q(L, K) = L^{1/2}K^{1/2} \geq q,
+  \end{aligned}
   \]</span></p>
 <p>for some target output level <span class="math inline">\(q\)</span>.</p>
 <ul>
@@ -320,11 +384,310 @@ window.Quarto = {
 <li><p>Clearly if <span class="math inline">\(p&lt;40\)</span> the firm should shut down</p></li>
 <li><p>If <span class="math inline">\(p\geq 40\)</span>, the firm produces as much as possible since the profit is then incresing in output</p></li>
 <li><p>We thus obtain a perfectly elastic individual supply curve</p></li>
+<li><p>Note that this is the long-run individual supply curve since all inputs are variable. One can also verify that the long-run cost function does not have a fixed cost.</p></li>
 </ul></li>
 </ul>
-
-
+<div id="fig-PEScurve" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-PEScurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="cc5e1931" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> np.ones(<span class="bu">len</span>(q)) <span class="op">*</span> <span class="dv">40</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.plot(q, p, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>plt.vlines(x<span class="op">=</span><span class="dv">0</span>, ymin<span class="op">=</span><span class="dv">0</span>, ymax<span class="op">=</span><span class="dv">40</span>, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Quantity ($q$)'</span>, loc<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Price ($p$)'</span>, loc<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="dv">0</span>, <span class="dv">60</span>])</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">0</span>])</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>plt.yticks([<span class="dv">40</span>])</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">False</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-5-output-1.png" width="361" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PEScurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A perfectly elastic long-run supply curve
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="exm-linearSC" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2</strong></span> Suppose we have obtained a convex cost function for the firm of the form: <span class="math display">\[
+C(q) = 0.5 a q^2 + bq + c,
+\]</span> where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are strictly positive constants. Observe that this is a short-run cost function since fixed costs (<span class="math inline">\(c\)</span>) are present. The profit maximizing condition for the firm is: <span id="eq-optimal-SR-supply"><span class="math display">\[
+C'(q) = a q + b = p \iff q = \frac{p - b}{a}.
+\tag{1}\]</span></span></p>
+<p>To determine the short-run supply curve of the firm, we need to understand the nature of the fixed costs represented by <span class="math inline">\(c.\)</span> In the short-run, firms are typically do not try to make positive profits, i.e., they do not need to sell each unit for at least their average total cost. Firms only need to recuperate the non-sunk part of the fixed cost. <strong>Sunk</strong> costs are fixed costs that cannot be recovered by the firm and thus should not affect its decision on future output. For example, advertising costs once spent cannot be recovered. Lease payments, on the other hand, are <strong>non-sunk</strong> fixed costs can be recovered by sublease if the firm eventually decides to shut down.</p>
+<p>For simplicity, suppose that <span class="math inline">\(c\)</span> is non-sunk. The average total cost in this case is equal to the average non-sunk total cost (ANSC).The firm produces so long as the market price is above the ANSC: <span id="eq-positive-prof-cond"><span class="math display">\[
+\begin{aligned}
+\pi(q^*) &gt; 0 &amp;\iff p &gt; \frac{C(q^*)}{q^*} \\
+&amp;\iff p &gt; 0.5 a q^* + b + \frac{c}{q^*} \\
+&amp;\iff p &gt; 0.5 a \frac{p - b}{a} + b + \frac{ca}{p - b} \\
+&amp;\iff (p - b)^2 &gt; 2ca \\
+&amp;\iff p &gt; b + \sqrt{2ca}.
+\end{aligned}
+\tag{2}\]</span></span></p>
+<p>Observe that the last line follows from the fact that <span class="math inline">\(q^* &gt; 0\)</span> if and only if <span class="math inline">\(p &gt; b\)</span> in view of <a href="#eq-optimal-SR-supply" class="quarto-xref">Equation&nbsp;1</a>. This condition tells us that in the SR, the firm suffers from a fixed cost (<span class="math inline">\(c\)</span>), which might prevent it from earning positive profits even if it is operating optimally. Note that <span class="math inline">\(p &gt; b + \sqrt{2ca}\)</span> is equivalent to <span class="math inline">\(q &gt; \sqrt{2c/a}.\)</span></p>
+<div id="fig-profFunc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-profFunc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="803b10f8" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> costFunc(q):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.5</span> <span class="op">*</span> a <span class="op">*</span> q<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b <span class="op">*</span> q <span class="op">+</span> c</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> profFunc(q, p):</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> q <span class="op">*</span> p <span class="op">-</span> costFunc(q)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> optQ(p):</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (p <span class="op">-</span> b) <span class="op">/</span> a</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>pricelabs <span class="op">=</span> [<span class="st">'low price'</span>, <span class="st">'break-even price'</span>, <span class="st">'high price'</span>]</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(q, costFunc(q))</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> p <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    plt.plot(q, profFunc(q, p<span class="op">+</span><span class="dv">2</span>), label<span class="op">=</span>pricelabs[p])</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    plt.ylim([<span class="op">-</span><span class="dv">7</span>, <span class="dv">5</span>])</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    plt.xlim([<span class="dv">0</span>, <span class="dv">5</span>])</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">'Quantity ($q$)'</span>, loc<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Profit ($\pi$)'</span>, loc<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    plt.legend(loc<span class="op">=</span><span class="st">'lower left'</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    plt.hlines(y<span class="op">=</span><span class="dv">0</span>, xmin<span class="op">=</span><span class="dv">0</span>, xmax<span class="op">=</span><span class="dv">5</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">None</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    plt.yticks([<span class="dv">0</span>])</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    plt.xticks([<span class="dv">0</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-6-output-1.png" width="353" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-profFunc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Profit as a function of market price
+</figcaption>
+</figure>
+</div>
+<div id="fig-linearSC" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linearSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="788e3d12" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>q_min <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> c <span class="op">/</span> a)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.linspace(q_min, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>p_min <span class="op">=</span> b <span class="op">+</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> a <span class="op">*</span> c)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> a <span class="op">*</span> q <span class="op">+</span> b </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.plot(q, p, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.vlines(x<span class="op">=</span><span class="dv">0</span>, ymin<span class="op">=</span><span class="dv">0</span>, ymax<span class="op">=</span>p_min, lw<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.vlines(x<span class="op">=</span>q_min, ymin<span class="op">=</span><span class="dv">0</span>, ymax<span class="op">=</span>p_min, linestyle<span class="op">=</span><span class="st">'dotted'</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>plt.hlines(y<span class="op">=</span>p_min, xmin<span class="op">=</span><span class="dv">0</span>, xmax<span class="op">=</span>q_min, linestyles<span class="op">=</span><span class="st">'dotted'</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="fl">0.5</span>, <span class="dv">6</span>])</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="op">-</span><span class="fl">0.04</span>, <span class="dv">4</span>])</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>plt.text(<span class="op">-</span><span class="dv">1</span>, <span class="fl">0.95</span> <span class="op">*</span> p_min, <span class="st">'$b + \sqrt</span><span class="sc">{2ac}</span><span class="st">$'</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.text(q_min <span class="op">*</span> <span class="fl">0.8</span>, <span class="fl">0.15</span>, <span class="vs">r"$\sqrt{2c/a}$"</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Quantity($q$)'</span>, loc<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Price ($p$)'</span>, loc<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">0</span>])</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>plt.yticks([])</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">None</span>)</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>plt.tight_layout</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-7-output-1.png" width="388" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linearSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A SR upward sloping supply curve <span class="math inline">\(q = \frac{p - b}{a}\)</span> for <span class="math inline">\(p &gt; b + \sqrt{2ac}\)</span>
+</figcaption>
+</figure>
+</div>
+</div>
 </section>
+<section id="long-run-vs-short-run-firms-supply" class="level2">
+<h2 class="anchored" data-anchor-id="long-run-vs-short-run-firms-supply">Long-run vs short-run firm’s supply</h2>
+<p>The profit maximizing condition for a competitive firm is that its marginal cost is equal to the market price. This is common for the firm both in the long run and in the short run. The difference lies in the shutdown condition.</p>
+<p>In the short run, firms shutdown if the price cannot cover the average non-sunk costs (ANSC), implying that supply will be:</p>
+<ul>
+<li>zero for all levels of output for which the marginal cost (which is equal to the market price under profit maximizing) is <em>below</em> the ANSC curve, and</li>
+<li>the part of the marginal cost that is <em>above</em> the ANSC (when output is positive)</li>
+</ul>
+<div id="fig-SRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-SRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="dc73aac4" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>q_min <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> c <span class="op">/</span> a)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>p_min <span class="op">=</span> b <span class="op">+</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> a <span class="op">*</span> c)</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> LRAC(q):</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (costFunc(q) <span class="op">-</span> c) <span class="op">/</span> q </span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ANSC(q):</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (costFunc(q) <span class="op">-</span> c <span class="op">/</span> <span class="dv">2</span>) <span class="op">/</span> q </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> SRAC(q):</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> costFunc(q) <span class="op">/</span> q </span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MC(q):</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">*</span> q <span class="op">+</span> b</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>ANSC_min <span class="op">=</span> q[np.argmin(ANSC(q))]</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>SRAC_min <span class="op">=</span> q[np.argmin(SRAC(q))]</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>plt.plot(q, MC(q), label<span class="op">=</span><span class="st">'MC'</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>plt.plot(q, ANSC(q), label<span class="op">=</span><span class="st">'ANSC'</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>plt.plot(q, SRAC(q), label<span class="op">=</span><span class="st">'SRAC'</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.plot(q, LRAC(q), label='AVC or LRAC')</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>plt.vlines(x<span class="op">=</span><span class="fl">0.1</span>, ymin<span class="op">=</span><span class="dv">0</span>, ymax<span class="op">=</span>ANSC(q).<span class="bu">min</span>(), lw<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">'k'</span>)</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>qnew <span class="op">=</span> np.linspace(ANSC_min, <span class="dv">4</span>, <span class="dv">100</span>)</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>plt.plot(qnew, MC(qnew), color<span class="op">=</span><span class="st">'k'</span>, lw<span class="op">=</span><span class="dv">3</span>, label<span class="op">=</span><span class="st">'SR Supply'</span>)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="dv">1</span>, <span class="dv">5</span>])</span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="op">-</span><span class="fl">0.1</span>, <span class="dv">4</span>])</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">0</span>])</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>plt.yticks([])</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Quantity($q$)'</span>, loc<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Price ($p$)'</span>, loc<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-8-output-1.png" width="337" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: SR supply curve
+</figcaption>
+</figure>
+</div>
+<p>In the long run, all costs are variable. The average cost (AC) is just the average variable cost (AVC). The firm produces so long as the market price can cover the AVC (or the AC), hence the LR supply curve will be:</p>
+<ul>
+<li>zero for all levels of output for which the marginal cost (which is equal to the market price under profit maximizing) is <em>below</em> the AC (or AVC) curve, and</li>
+<li>the part of the marginal cost that is <em>above</em> the AC (or AVC)</li>
+</ul>
+<p>Note that the SR firms might suffer from losses due to non-sunk fixed costs, but so long as the price can cover the ANSC, it is optimal for them to produce. In the LR, however, the firm produces so long as it earns positive profits and shuts down otherwise.</p>
+<div id="fig-LRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-LRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="58c7e9c1" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>q_min <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> c <span class="op">/</span> a)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>p_min <span class="op">=</span> b <span class="op">+</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> a <span class="op">*</span> c)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.linspace(<span class="fl">0.1</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> LRAC(q):</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (costFunc(q) <span class="op">-</span> c) <span class="op">/</span> q </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ANSC(q):</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (costFunc(q) <span class="op">-</span> c <span class="op">/</span> <span class="dv">2</span>) <span class="op">/</span> q </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> SRAC(q):</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> costFunc(q) <span class="op">/</span> q </span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> MC(q):</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">*</span> q <span class="op">+</span> b</span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>ANSC_min <span class="op">=</span> q[np.argmin(ANSC(q))]</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>SRAC_min <span class="op">=</span> q[np.argmin(SRAC(q))]</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>plt.plot(q, ANSC(q), label<span class="op">=</span><span class="st">'ANSC'</span>)</span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>plt.plot(q, LRAC(q), label<span class="op">=</span><span class="st">'LRAC'</span>)</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>plt.plot(q, MC(q), label<span class="op">=</span><span class="st">'MC = LR Supply'</span>, color<span class="op">=</span><span class="st">'k'</span>, lw<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="dv">1</span>, <span class="dv">5</span>])</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="op">-</span><span class="fl">0.1</span>, <span class="dv">4</span>])</span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">0</span>])</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>plt.yticks([])</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'best'</span>)</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Quantity($q$)'</span>, loc<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Price ($p$)'</span>, loc<span class="op">=</span><span class="st">'top'</span>)</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-9-output-1.png" width="337" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-LRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: LR supply curve
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="partial-equilibrium" class="level1">
+<h1>Partial Equilibrium</h1>
+<p>The equilibrium of a market is a vector of price and quantity for which the market supply and demand are equal. In other words, the equilibrium price is the price that clears the market by equating demand and supply. We have already discussed the market demand curve in the first lecture. We now examine the supply side of the market for which there exist differences between the long run and the short run.</p>
+<section id="short-run-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="short-run-equilibrium">Short-run equilibrium</h2>
+<p>In the short run, the market supply curve is an horizontal aggregation of individual supplies. In other words, to construct the SR market supply curve, one adds up the quantities supplied by all the firms in the market at each given price. The market demand curve is constructed in the same manner. By equating supply and demand, we can determine the market equilibrium.</p>
+<div id="exm-SREQ" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3</strong></span> Suppose the market demand is given by <span class="math inline">\(q^D(p) = 100 - 2p.\)</span> Consider a market with <span class="math inline">\(N\)</span> identical firms, each facing the same cost function <span class="math inline">\(C(q)=10−5q+2q^2.\)</span> In view of <a href="#exr-SRSupply" class="quarto-xref">Exercise&nbsp;1</a>, the SR market supply is given by: <span class="math display">\[
+q^S(p) =
+\begin{cases} N(p/4 + 5/4) &amp; p &gt; 4\sqrt{2.5}-5\approx 1.32 \\
+                     0 &amp; \mathrm{otherwise.}
+\end{cases}
+\]</span></p>
+<p>In equilibrium <span class="math inline">\(q^S(p) = q^D(p)\)</span>: <span class="math display">\[
+\begin{aligned}
+100 - 2p &amp;= N(p/4 + 5/4) \\
+p &amp;= \frac{5(80 - N)}{8 + N}.
+\end{aligned}
+\]</span> Hence the market price is a decreasing function of the number of firms. Knowing the shutdown price, we can determine the maximum number of firms that can exist in this market: <span class="math display">\[
+\frac{5(80 - N)}{8 + N} = 1.32 \iff N = 61.6.
+\]</span></p>
+</div>
+<p>The short-run equilibrium quantity is:</p>
+<p><span class="math display">\[
+q^* = 100 - 2p^* = \frac{110N}{8 + N}, \quad N \leq 61.
+\]</span></p>
+<p>Hence given the number of firms in the market, we can determine its SR supply curve, which together with the market demand curve defines the equilibrium price and quantity. The market shuts down if <span class="math inline">\(N\)</span> is too large.</p>
+</section>
+<section id="long-run-equilibrium" class="level2">
+<h2 class="anchored" data-anchor-id="long-run-equilibrium">Long-run equilibrium</h2>
+</section>
+</section>
+<section id="exercises" class="level1">
+<h1>Exercises</h1>
+<div id="exr-SRSupply" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Consider a firm with the total cost function <span class="math inline">\(C(q)=10−5q+2q^2\)</span>. Assume that this fixed cost is evenly distributed into sunk costs, <span class="math inline">\(\$5\)</span>, and non-sunk costs, <span class="math inline">\(\$5\)</span>. Show that the firm’s SR supply curve is given by:</p>
+<p><span class="math display">\[
+q(p) =
+\begin{cases} p/4 + 5/4 &amp; p &gt; 4\sqrt{2.5}-5\approx 1.32 \\
+                     0 &amp; \mathrm{otherwise.}
+\end{cases}
+\]</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<ul>
+<li><p>The nonsunk cost is <span class="math inline">\(NSC(q) = 5 - 5q + 2q^2\)</span></p></li>
+<li><p>Effectively we maximize <span class="math inline">\(pq - NSC(q)\)</span> (we forget about the sunk costs), which is convex in <span class="math inline">\(q\)</span></p></li>
+<li><p>FOC gives: <span class="math display">\[p = MC(q) \iff p = 4q - 5 \iff q = (p+5)/4\]</span></p></li>
+<li><p>Firm produces iff revenue covers nonsunk costs, i.e., if price is greater than ANSC. Shutdown point (crossing point between MC and ANCS):</p>
+<p><span class="math display">\[p = MC(q) = ANSC(q) = \frac{5}{q}-5+2q \\
+  \iff q=\sqrt{2.5}
+  \implies p = 4\sqrt{2.5} - 5 \approx 1.32.
+  \]</span></p>
+<ul>
+<li>Below <span class="math inline">\(p=1.32\)</span>, the firm shuts down since it cannot recover nonsunk costs</li>
+</ul></li>
+</ul>
+</details>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
@@ -892,15 +1255,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../contents/lecture_2.html" class="pagination-link" aria-label="Lecture 2">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture 2</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-  </div>
-</nav>
 </div> <!-- /content -->
 
 
