@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>lecture_1 – Intermediate Microeconomics</title>
+<title>Chapter 1. Consumers and demand – Intermediate Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -135,7 +101,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Intermediate Microeconomics">
+<meta property="og:title" content="Chapter 1. Consumers and demand – Intermediate Microeconomics">
 <meta property="og:site_name" content="Intermediate Microeconomics">
 </head>
 
@@ -241,93 +207,89 @@ window.Quarto = {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+    <h2 id="toc-title">Content</h2>
    
+  <ul>
+  <li><a href="#consumer-preferences" id="toc-consumer-preferences" class="nav-link active" data-scroll-target="#consumer-preferences"><span class="header-section-number">1</span> Consumer preferences</a>
   <ul class="collapse">
-  <li><a href="#consumer-preferences" id="toc-consumer-preferences" class="nav-link active" data-scroll-target="#consumer-preferences">Consumer preferences</a>
+  <li><a href="#bundles" id="toc-bundles" class="nav-link" data-scroll-target="#bundles"><span class="header-section-number">1.1</span> Bundles</a></li>
+  <li><a href="#the-preference-relation" id="toc-the-preference-relation" class="nav-link" data-scroll-target="#the-preference-relation"><span class="header-section-number">1.2</span> The preference relation</a>
   <ul class="collapse">
-  <li><a href="#bundles" id="toc-bundles" class="nav-link" data-scroll-target="#bundles">Bundles</a></li>
-  <li><a href="#the-preference-relation" id="toc-the-preference-relation" class="nav-link" data-scroll-target="#the-preference-relation">The preference relation</a></li>
-  <li><a href="#utility-functions" id="toc-utility-functions" class="nav-link" data-scroll-target="#utility-functions">Utility functions</a></li>
-  <li><a href="#indifference-set" id="toc-indifference-set" class="nav-link" data-scroll-target="#indifference-set">Indifference set</a></li>
-  <li><a href="#homogeneity-and-homotheticity" id="toc-homogeneity-and-homotheticity" class="nav-link" data-scroll-target="#homogeneity-and-homotheticity">Homogeneity and homotheticity</a></li>
+  <li><a href="#notations" id="toc-notations" class="nav-link" data-scroll-target="#notations"><span class="header-section-number">1.2.1</span> Notations</a></li>
+  <li><a href="#reflexivity" id="toc-reflexivity" class="nav-link" data-scroll-target="#reflexivity"><span class="header-section-number">1.2.2</span> Reflexivity</a></li>
+  <li><a href="#completeness" id="toc-completeness" class="nav-link" data-scroll-target="#completeness"><span class="header-section-number">1.2.3</span> Completeness</a></li>
+  <li><a href="#transitivity" id="toc-transitivity" class="nav-link" data-scroll-target="#transitivity"><span class="header-section-number">1.2.4</span> Transitivity</a></li>
+  <li><a href="#monotonicity" id="toc-monotonicity" class="nav-link" data-scroll-target="#monotonicity"><span class="header-section-number">1.2.5</span> Monotonicity</a></li>
+  <li><a href="#nonsatiation-and-local-nonsatiation" id="toc-nonsatiation-and-local-nonsatiation" class="nav-link" data-scroll-target="#nonsatiation-and-local-nonsatiation"><span class="header-section-number">1.2.6</span> Nonsatiation and local nonsatiation</a></li>
+  <li><a href="#relationships-between-properties" id="toc-relationships-between-properties" class="nav-link" data-scroll-target="#relationships-between-properties"><span class="header-section-number">1.2.7</span> Relationships between properties</a></li>
+  <li><a href="#continuity" id="toc-continuity" class="nav-link" data-scroll-target="#continuity"><span class="header-section-number">1.2.8</span> Continuity</a></li>
   </ul></li>
-  <li><a href="#utility-maximization-and-demand-for-goods-and-services" id="toc-utility-maximization-and-demand-for-goods-and-services" class="nav-link" data-scroll-target="#utility-maximization-and-demand-for-goods-and-services">Utility maximization and demand for goods and services</a>
+  <li><a href="#utility-functions" id="toc-utility-functions" class="nav-link" data-scroll-target="#utility-functions"><span class="header-section-number">1.3</span> Utility functions</a>
   <ul class="collapse">
-  <li><a href="#utility-maximization-problem-ump" id="toc-utility-maximization-problem-ump" class="nav-link" data-scroll-target="#utility-maximization-problem-ump">Utility maximization problem (UMP)</a></li>
-  <li><a href="#walrasian-demand" id="toc-walrasian-demand" class="nav-link" data-scroll-target="#walrasian-demand">Walrasian demand</a></li>
-  <li><a href="#solving-the-ump" id="toc-solving-the-ump" class="nav-link" data-scroll-target="#solving-the-ump">Solving the UMP</a></li>
-  <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics">Comparative statics</a></li>
+  <li><a href="#ordinality" id="toc-ordinality" class="nav-link" data-scroll-target="#ordinality"><span class="header-section-number">1.3.1</span> Ordinality</a></li>
+  <li><a href="#sec-mono" id="toc-sec-mono" class="nav-link" data-scroll-target="#sec-mono"><span class="header-section-number">1.3.2</span> Monotonicity</a></li>
   </ul></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#indifference-set" id="toc-indifference-set" class="nav-link" data-scroll-target="#indifference-set"><span class="header-section-number">1.4</span> Indifference set</a>
+  <ul class="collapse">
+  <li><a href="#implication-of-lns" id="toc-implication-of-lns" class="nav-link" data-scroll-target="#implication-of-lns"><span class="header-section-number">1.4.1</span> Implication of LNS</a></li>
+  <li><a href="#implication-of-strict-monotonicity" id="toc-implication-of-strict-monotonicity" class="nav-link" data-scroll-target="#implication-of-strict-monotonicity"><span class="header-section-number">1.4.2</span> Implication of strict monotonicity</a></li>
+  <li><a href="#convexity-of-preferences" id="toc-convexity-of-preferences" class="nav-link" data-scroll-target="#convexity-of-preferences"><span class="header-section-number">1.4.3</span> Convexity of preferences</a></li>
+  <li><a href="#concavity-and-quasiconcavity" id="toc-concavity-and-quasiconcavity" class="nav-link" data-scroll-target="#concavity-and-quasiconcavity"><span class="header-section-number">1.4.4</span> Concavity and quasiconcavity</a></li>
+  </ul></li>
+  <li><a href="#homogeneity-and-homotheticity" id="toc-homogeneity-and-homotheticity" class="nav-link" data-scroll-target="#homogeneity-and-homotheticity"><span class="header-section-number">1.5</span> Homogeneity and homotheticity</a>
+  <ul class="collapse">
+  <li><a href="#homogeneity" id="toc-homogeneity" class="nav-link" data-scroll-target="#homogeneity"><span class="header-section-number">1.5.1</span> Homogeneity</a></li>
+  <li><a href="#homotheticity" id="toc-homotheticity" class="nav-link" data-scroll-target="#homotheticity"><span class="header-section-number">1.5.2</span> Homotheticity</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">1.5.3</span> Examples</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#utility-maximization-and-demand-for-goods-and-services" id="toc-utility-maximization-and-demand-for-goods-and-services" class="nav-link" data-scroll-target="#utility-maximization-and-demand-for-goods-and-services"><span class="header-section-number">2</span> Utility maximization and demand for goods and services</a>
+  <ul class="collapse">
+  <li><a href="#utility-maximization-problem-ump" id="toc-utility-maximization-problem-ump" class="nav-link" data-scroll-target="#utility-maximization-problem-ump"><span class="header-section-number">2.1</span> Utility maximization problem (UMP)</a></li>
+  <li><a href="#walrasian-demand" id="toc-walrasian-demand" class="nav-link" data-scroll-target="#walrasian-demand"><span class="header-section-number">2.2</span> Walrasian demand</a>
+  <ul class="collapse">
+  <li><a href="#properties-of-the-walrasian-demand-correspondence" id="toc-properties-of-the-walrasian-demand-correspondence" class="nav-link" data-scroll-target="#properties-of-the-walrasian-demand-correspondence"><span class="header-section-number">2.2.1</span> Properties of the Walrasian demand correspondence</a></li>
+  </ul></li>
+  <li><a href="#solving-the-ump" id="toc-solving-the-ump" class="nav-link" data-scroll-target="#solving-the-ump"><span class="header-section-number">2.3</span> Solving the UMP</a>
+  <ul class="collapse">
+  <li><a href="#necessary-conditions" id="toc-necessary-conditions" class="nav-link" data-scroll-target="#necessary-conditions"><span class="header-section-number">2.3.1</span> Necessary conditions</a></li>
+  <li><a href="#the-shadow-price" id="toc-the-shadow-price" class="nav-link" data-scroll-target="#the-shadow-price"><span class="header-section-number">2.3.2</span> The shadow price</a></li>
+  <li><a href="#sufficient-conditions" id="toc-sufficient-conditions" class="nav-link" data-scroll-target="#sufficient-conditions"><span class="header-section-number">2.3.3</span> Sufficient conditions</a></li>
+  </ul></li>
+  <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics"><span class="header-section-number">2.4</span> Comparative statics</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3</span> Exercises</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lecture 1</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 1. Consumers and demand</h1>
+</div>
 
 
 
-<!-- ---
-title: "Chapter 1. Consumers and demand"
-number-sections: true
-execute:
-    echo: false
-format:
-    html:
-        toc: true
-        toc-depth: 3
-        toc-title: "Content"
-        # toc-expand: true
-        # toc-location: "left"
-        # embed-resources: true
---- -->
-<div id="bd08a805" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext autoreload</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="e9017f6d" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> dataframe_image <span class="im">as</span> dfi</span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> ipywidgets <span class="im">as</span> widgets</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="d4a5d6c0" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mod_dir <span class="op">=</span> os.path.join(os.getcwd(), <span class="st">'modules'</span>)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> mod_dir <span class="kw">not</span> <span class="kw">in</span> sys.path:</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    sys.path.append(mod_dir)</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> micro_modules <span class="im">as</span> mm</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>mm.load_viz_settings()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="consumer-preferences" class="level1">
-<h1>Consumer preferences</h1>
-<section id="bundles" class="level2">
-<h2 class="anchored" data-anchor-id="bundles">Bundles</h2>
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="consumer-preferences" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Consumer preferences</h1>
+<section id="bundles" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="bundles"><span class="header-section-number">1.1</span> Bundles</h2>
 <p>In economics, a bundle is a list or a vector of quantities of goods and services. In an <span class="math inline">\(n\)</span>-good economy, each bundle <span class="math inline">\(x\)</span> is an element of <span class="math inline">\(\mathbb{R}^n\)</span>. In the example below, the consumption bundle of Alex is <span class="math inline">\(x_A = (1, 1.5)\)</span>. If we know the prices of these goods in the economy, we can calculate the cost of his consumption as the dot product of the price vector and the consumption bundle. In addition, if we know his income, we can express his budget constraint mathematically as: <span class="math inline">\(p\cdot x_A \leq I_A\)</span>, where <span class="math inline">\(p\)</span> is the price vector and <span class="math inline">\(I_A\)</span> is Alex’s income.</p>
-<div id="21b9b5eb" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>alex <span class="op">=</span> [<span class="dv">1</span>, <span class="fl">1.5</span>]</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>bob <span class="op">=</span> [<span class="fl">0.5</span>, <span class="dv">2</span>]</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>conso <span class="op">=</span> pd.DataFrame(np.array([alex, bob]), </span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                    index<span class="op">=</span>[<span class="st">'Alex'</span>, <span class="st">'Bob'</span>], </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                    columns<span class="op">=</span>[<span class="st">'rice'</span>, <span class="st">'meat'</span>])</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># dfi.export(conso, 'tbl_bundle.png')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 <div id="cell-fig-conso_bundle_two_goods" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">4</span>))</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sns.scatterplot(conso, x<span class="op">=</span><span class="st">'rice'</span>, y<span class="op">=</span><span class="st">'meat'</span>, hue<span class="op">=</span>conso.index, s<span class="op">=</span><span class="dv">200</span>)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">0</span>, <span class="dv">3</span>])</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="dv">0</span>, <span class="dv">3</span>])</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.savefig(<span class="st">'images/fig_bundle'</span>)</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-conso_bundle_two_goods" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -342,11 +304,11 @@ Figure&nbsp;1: Consumption bundle with two goods
 </div>
 </div>
 </section>
-<section id="the-preference-relation" class="level2">
-<h2 class="anchored" data-anchor-id="the-preference-relation">The preference relation</h2>
+<section id="the-preference-relation" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="the-preference-relation"><span class="header-section-number">1.2</span> The preference relation</h2>
 <p>Learning about preferences for bundles is essentially learning about how individuals compare bundles. Let us have a look at some key properties of the preference relation, namely: reflexivity, completeness, transitivity, continuity, monotonicity and (local) nonsasiation.</p>
-<section id="notations" class="level3">
-<h3 class="anchored" data-anchor-id="notations">Notations</h3>
+<section id="notations" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="notations"><span class="header-section-number">1.2.1</span> Notations</h3>
 <p>Before discussing these properties, let us fix the notations. Let <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> be two consumption bundles (or alternatives) in the set <span class="math inline">\(X \subset \mathbb{R}^n\)</span> (the set of alternatives or the choice set). Then for some individual <span class="math inline">\(i\)</span>:</p>
 <table class="caption-top table">
 <caption>Preference relation</caption>
@@ -393,17 +355,17 @@ Figure&nbsp;1: Consumption bundle with two goods
 </table>
 <p>For example we typically assume that goods’ prices are strictly positive <span class="math inline">\(p\gg 0\)</span>, which we sometimes write <span class="math inline">\(p \in \mathbb{R}^n_{++}\)</span>. The notation <span class="math inline">\(x\ge y\)</span> means that the quantity of each good in <span class="math inline">\(x\)</span> is at least as much as that in <span class="math inline">\(y\)</span>, whereas <span class="math inline">\(x\gt y\)</span> means that <span class="math inline">\(x\)</span> has strictly more of every good than <span class="math inline">\(y\)</span>. The former permits <span class="math inline">\(x=y\)</span> but the latter does not.</p>
 </section>
-<section id="reflexivity" class="level3">
-<h3 class="anchored" data-anchor-id="reflexivity">Reflexivity</h3>
+<section id="reflexivity" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="reflexivity"><span class="header-section-number">1.2.2</span> Reflexivity</h3>
 <p>A preference relation satisfies reflexivity if it any alternative is weakly preferred to itself, i.e., <span class="math inline">\(x \succeq x\)</span> for any <span class="math inline">\(x\in X\)</span>.</p>
 </section>
-<section id="completeness" class="level3">
-<h3 class="anchored" data-anchor-id="completeness">Completeness</h3>
+<section id="completeness" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="completeness"><span class="header-section-number">1.2.3</span> Completeness</h3>
 <p>A preference relation over the set of alternatives <span class="math inline">\(X\)</span> is complete if for any <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in <span class="math inline">\(X\)</span>, either <span class="math inline">\(x \succeq y\)</span>, <span class="math inline">\(y \succeq x\)</span>, or both (<span class="math inline">\(x \sim y\)</span>). Observe that a strict preference of <span class="math inline">\(y\)</span> over <span class="math inline">\(x\)</span> would be equivalent to <span class="math inline">\(x \succeq y\)</span> and <span class="math inline">\(y \not\succeq x\)</span>.</p>
 <p>Intuitively completeness conveys the property that one can rank any two alternatives; it is not possible to answer “I don’t know” when ask to make a comparison between two bundles.</p>
 </section>
-<section id="transitivity" class="level3">
-<h3 class="anchored" data-anchor-id="transitivity">Transitivity</h3>
+<section id="transitivity" class="level3" data-number="1.2.4">
+<h3 data-number="1.2.4" class="anchored" data-anchor-id="transitivity"><span class="header-section-number">1.2.4</span> Transitivity</h3>
 <p>Let <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span> and <span class="math inline">\(C\)</span> be three alternatives. A preference relation is said to be transitive if:</p>
 <p><span id="eq-ch1-transitivity"><span class="math display">\[
     A \succeq B \text{ and } B \succeq C \implies A \succeq C.
@@ -411,8 +373,8 @@ Figure&nbsp;1: Consumption bundle with two goods
 <p>Preferences that are both complete and transitive are said to be <strong>rational</strong>.</p>
 <p>Condition <a href="#eq-ch1-transitivity" class="quarto-xref">Equation&nbsp;1</a> might seem obvious at first sight, but evidence of intransitivity is rather prevalent. One of the most remarkable reasons for intransitivity is <em>framing</em>, the idea that ranking of preferences depends on the context. For example, one might prefer a mango to an avocado when thinking of them as fruits, but might prefer an avocado to a mango when thinking of making a salad. Other causes of intransitivity include cognitive difficulty when comparing close alternatives, or when each alternative involves multiple criteria (see textbook for details).</p>
 </section>
-<section id="monotonicity" class="level3">
-<h3 class="anchored" data-anchor-id="monotonicity">Monotonicity</h3>
+<section id="monotonicity" class="level3" data-number="1.2.5">
+<h3 data-number="1.2.5" class="anchored" data-anchor-id="monotonicity"><span class="header-section-number">1.2.5</span> Monotonicity</h3>
 <p>Consider two alternatives <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> in <span class="math inline">\(X\subset \mathbb{R}^n\)</span>. We say that the preference relation <span class="math inline">\(\succeq\)</span> satisfies <em>monotonicity</em> if the following conditions are satisfied:</p>
 <p><span id="eq-ch1-monotonicity"><span class="math display">\[
 \begin{aligned}
@@ -426,10 +388,10 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 \tag{3}\]</span></span></p>
 <p>Strict monotonicity implies that we cannot have bads in the bundle. Monotonicity implies that we cannot have all bads in the bundle, otherwise <span class="math inline">\(A&gt;B\)</span> would imply the contrary. Note that a bad, as opposed to a good, is something we dislike (for e.g., trash); we pay to acquire a good, but to get rid of a bad.</p>
 </section>
-<section id="nonsatiation-and-local-nonsatiation" class="level3">
-<h3 class="anchored" data-anchor-id="nonsatiation-and-local-nonsatiation">Nonsatiation and local nonsatiation</h3>
-<section id="nonsatiation" class="level4">
-<h4 class="anchored" data-anchor-id="nonsatiation">Nonsatiation</h4>
+<section id="nonsatiation-and-local-nonsatiation" class="level3" data-number="1.2.6">
+<h3 data-number="1.2.6" class="anchored" data-anchor-id="nonsatiation-and-local-nonsatiation"><span class="header-section-number">1.2.6</span> Nonsatiation and local nonsatiation</h3>
+<section id="nonsatiation" class="level4" data-number="1.2.6.1">
+<h4 data-number="1.2.6.1" class="anchored" data-anchor-id="nonsatiation"><span class="header-section-number">1.2.6.1</span> Nonsatiation</h4>
 <p>A preference relation satisfies <em>nonsatiation</em> (NS) if for every bundle, there exists a strictly preferred bundle. Let <span class="math inline">\(X\)</span> be the set of all alternatives or bundles, then NS implies that for any <span class="math inline">\(A\in X\)</span> there exists <span class="math inline">\(B\in X\)</span> such that:</p>
 <p><span class="math display">\[B \succ A\]</span></p>
 <div id="rem-remark-NS" class="proof remark">
@@ -440,8 +402,8 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 </ul>
 </div>
 </section>
-<section id="local-nonsatiation" class="level4">
-<h4 class="anchored" data-anchor-id="local-nonsatiation">Local nonsatiation</h4>
+<section id="local-nonsatiation" class="level4" data-number="1.2.6.2">
+<h4 data-number="1.2.6.2" class="anchored" data-anchor-id="local-nonsatiation"><span class="header-section-number">1.2.6.2</span> Local nonsatiation</h4>
 <p>On the other hand, a preference relation satisfies <em>local nonsatiation</em> (LNS) if for every bundle there exists in strictly preferred bundle <em>within any</em> <span class="math inline">\(\epsilon\)</span>-distance from it (i.e.&nbsp;<span class="math inline">\(B \in N_{\epsilon} A\)</span> for all <span class="math inline">\(\epsilon &gt; 0\)</span>). Mathematically,</p>
 <p><span id="eq-LNS-def"><span class="math display">\[
         \forall A \in X,\: \forall \epsilon &gt; 0: \: \exists B \in N_{\epsilon} A \text{ s.t. } B \succ A.
@@ -455,8 +417,8 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 </div>
 </section>
 </section>
-<section id="relationships-between-properties" class="level3">
-<h3 class="anchored" data-anchor-id="relationships-between-properties">Relationships between properties</h3>
+<section id="relationships-between-properties" class="level3" data-number="1.2.7">
+<h3 data-number="1.2.7" class="anchored" data-anchor-id="relationships-between-properties"><span class="header-section-number">1.2.7</span> Relationships between properties</h3>
 <p>Here is a quick summary of the relationships between monotonicity, SM, NS, LNS:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -465,8 +427,8 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 \end{aligned}
 \]</span></p>
 </section>
-<section id="continuity" class="level3">
-<h3 class="anchored" data-anchor-id="continuity">Continuity</h3>
+<section id="continuity" class="level3" data-number="1.2.8">
+<h3 data-number="1.2.8" class="anchored" data-anchor-id="continuity"><span class="header-section-number">1.2.8</span> Continuity</h3>
 <p>Continuity (together with rationality) is needed to guarantee a utility representation of a preference relation.</p>
 <ul>
 <li><p>A preference relation defined on the set of alternatives <span class="math inline">\(X\)</span> is continuous if it is preserved under limits.</p>
@@ -478,8 +440,8 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 </ul>
 </section>
 </section>
-<section id="utility-functions" class="level2">
-<h2 class="anchored" data-anchor-id="utility-functions">Utility functions</h2>
+<section id="utility-functions" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="utility-functions"><span class="header-section-number">1.3</span> Utility functions</h2>
 <p><em>Utility</em> was first used in the context of economics by Jeremy Bentham (1748-1832) as a <em>measure of pleasure, happiness or satisfaction derived from the consumption of goods and services</em>.</p>
 <p>The utility function was first introduced by the Swiss mathematician Daniel Bernoulli (1700-1782) in the context of probability (gambling) to account for the St.&nbsp;Petersburg paradox</p>
 <div id="thm-utility-existence" class="theorem">
@@ -487,8 +449,8 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 </div>
 <p>A utility function <span class="math inline">\(u: X \to \mathbb{R}\)</span> is said to <strong>represent</strong> a preference relation <span class="math inline">\(\succeq\)</span> over <span class="math inline">\(X\)</span> if for all <span class="math inline">\(A, B \in X\)</span>, it holds <span class="math inline">\(A \succeq B \iff u(A) \geq u(B)\)</span>. In other words, ranking bundles is equivalent to ranking utilities assigned to them.</p>
 <p>Let us now look at some common properties of a utility function. Ideally, these properties should correspond to those desired of a preference relation.</p>
-<section id="ordinality" class="level3">
-<h3 class="anchored" data-anchor-id="ordinality">Ordinality</h3>
+<section id="ordinality" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="ordinality"><span class="header-section-number">1.3.1</span> Ordinality</h3>
 <ul>
 <li>Utilities are ordinal (not cardinal)
 <ul>
@@ -501,8 +463,8 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 </ul></li>
 </ul>
 </section>
-<section id="sec-mono" class="level3">
-<h3 class="anchored" data-anchor-id="sec-mono">Monotonicity</h3>
+<section id="sec-mono" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="sec-mono"><span class="header-section-number">1.3.2</span> Monotonicity</h3>
 <p>Let <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> be two alternatives in <span class="math inline">\(X \subset \mathbb{R}^n\)</span>. Then:</p>
 <ul>
 <li>Monotonic preferences <span class="math inline">\(\iff\)</span> (weakly) increasing utility functions
@@ -525,10 +487,9 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 <p>Since monotonicity implies LNS (which in turns implies NS), both of these utility functions satisfy LNS and NS.</p>
 </section>
 </section>
-<section id="indifference-set" class="level2">
-<h2 class="anchored" data-anchor-id="indifference-set">Indifference set</h2>
+<section id="indifference-set" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="indifference-set"><span class="header-section-number">1.4</span> Indifference set</h2>
 <div id="cell-fig-IC_curve" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mm.plotIC_curve()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-ic_curve" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -542,11 +503,10 @@ Figure&nbsp;2: Indifference set, upper and lower contour sets
 </div>
 </div>
 </div>
-<section id="implication-of-lns" class="level3">
-<h3 class="anchored" data-anchor-id="implication-of-lns">Implication of LNS</h3>
+<section id="implication-of-lns" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="implication-of-lns"><span class="header-section-number">1.4.1</span> Implication of LNS</h3>
 <p>We have stated above that LNS implies that the ICs cannot be thick since if it were the case we would be able to find a sufficiently small neighborhood in which no alternative is strictly better than any other.</p>
 <div id="cell-fig-NLS_and_IC" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>mm.plotIC_thick()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-nls_and_ic" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -561,8 +521,8 @@ Figure&nbsp;3: LNS rules out thick IC (in gray)
 </div>
 </div>
 </section>
-<section id="implication-of-strict-monotonicity" class="level3">
-<h3 class="anchored" data-anchor-id="implication-of-strict-monotonicity">Implication of strict monotonicity</h3>
+<section id="implication-of-strict-monotonicity" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="implication-of-strict-monotonicity"><span class="header-section-number">1.4.2</span> Implication of strict monotonicity</h3>
 <p>Why do we often see that the ICs are downward sloping? It is because of strict monotonicity. Indeed, let <span class="math inline">\(u(x, y)\)</span> be a utility function representing strictly monotonic preferences. For simplicity suppose that <span class="math inline">\(u\)</span> is differentiable, then the partial derivatives of <span class="math inline">\(u(\cdot)\)</span> with respect to each argument, <span class="math inline">\(u_x\)</span> and <span class="math inline">\(u_y\)</span>, are strictly positive. Along an IC, the level of utility is constant. By totally differentiating, we get:</p>
 <p><span id="eq-total-diff-u"><span class="math display">\[
 \begin{aligned}
@@ -572,11 +532,10 @@ u_x dx + u_y dy &amp;= 0 \\
 \end{aligned}
 \tag{5}\]</span></span></p>
 </section>
-<section id="convexity-of-preferences" class="level3">
-<h3 class="anchored" data-anchor-id="convexity-of-preferences">Convexity of preferences</h3>
+<section id="convexity-of-preferences" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="convexity-of-preferences"><span class="header-section-number">1.4.3</span> Convexity of preferences</h3>
 <p>Convexity of preferences captures an individual’s taste for diversification. Formally, we say that preferences are convex if the upper-contour set (UCS) is a convex set.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
 <div id="cell-fig-convex_UCS" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>mm.plot_convex_UCS()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-convex_ucs" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -596,7 +555,6 @@ MRS_{x, y} \equiv \frac{u_x}{u_y} = -\frac{dy}{dx}.
 \tag{6}\]</span></span></p>
 <p>The MRS captures our willingness to exchange one good for an additional unit of another. In particular, <span class="math inline">\(MRS_{x,y}\)</span> captures the amount of good <span class="math inline">\(y\)</span> the individual is willing to give up for an additional unit of good <span class="math inline">\(x\)</span> in order to maintain the same level of utility. The intuition behind a decreasing MRS is that as one good gets abundant, we are willing to sacrifice less of the other good for an additional unit of the abundant good. This is due to the preference for variety captured by convexity.</p>
 <div id="cell-fig-MRS" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mm.plotMRS()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div id="fig-mrs" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -611,8 +569,8 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </section>
-<section id="concavity-and-quasiconcavity" class="level3">
-<h3 class="anchored" data-anchor-id="concavity-and-quasiconcavity">Concavity and quasiconcavity</h3>
+<section id="concavity-and-quasiconcavity" class="level3" data-number="1.4.4">
+<h3 data-number="1.4.4" class="anchored" data-anchor-id="concavity-and-quasiconcavity"><span class="header-section-number">1.4.4</span> Concavity and quasiconcavity</h3>
 <div id="def-quasiconc" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 1 (Quasiconcavity 1)</strong></span> A utility function defined on a convex set <span class="math inline">\(X\)</span> is quasiconcave if for all <span class="math inline">\(x \in X\)</span>, the upper contour set of <span class="math inline">\(x\)</span>, defined by <span class="math inline">\(\mathrm{UCS}(x) = \{y \in X: u(y) \geq u(x)\}\)</span>, is convex.</p>
 </div>
@@ -622,39 +580,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 <p>It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.</p>
 <p>The converse is not true. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
-<div id="987e333a" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plotIC(alph, name<span class="op">=</span><span class="st">''</span>, lab<span class="op">=</span><span class="va">False</span>):</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">2.5</span>, <span class="dv">50</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="fl">2.5</span>, <span class="dv">50</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    X, Y <span class="op">=</span> np.meshgrid(x, y)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    U <span class="op">=</span> mm.cobb_douglas(X, Y, alph, alph)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># fig = plt.figure(figsize=plt.figaspect(.5))</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    fig <span class="op">=</span> plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>))</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    fig.suptitle(name)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> plt.contour(X, Y, U, levels<span class="op">=</span>np.arange(<span class="fl">.5</span>,  <span class="dv">2</span>, <span class="fl">.25</span>), </span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>                      <span class="co"># colors='k',</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>                 <span class="co"># cmap='coolwarm', </span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>                     cmap<span class="op">=</span><span class="st">'plasma'</span>,</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>                    <span class="co">#   linewidth=2</span></span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>                      )</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> lab:</span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        plt.clabel(ax, inline<span class="op">=</span><span class="va">True</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># plt.colorbar(ax)</span></span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>    ax <span class="op">=</span> fig.add_subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>, projection<span class="op">=</span><span class="st">"3d"</span>)</span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    ax.plot_surface(X, Y, U, edgecolor<span class="op">=</span><span class="st">'white'</span>, </span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>                    <span class="co"># color='k',</span></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>                    cmap<span class="op">=</span>cm.plasma,</span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>                    lw<span class="op">=</span><span class="fl">.5</span>, </span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>                    rstride<span class="op">=</span><span class="dv">4</span>, </span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>                    cstride<span class="op">=</span><span class="dv">4</span>, </span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>                    alpha<span class="op">=</span><span class="fl">.8</span></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>                   )</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div id="c5a3c9a3" class="cell" data-lab="fig-concaveU" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>plotIC(<span class="fl">.25</span>, name<span class="op">=</span><span class="st">'$u=x^</span><span class="sc">{0.25}</span><span class="st">y^</span><span class="sc">{0.25}</span><span class="st">$'</span>, lab<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="5014fcf2" class="cell" data-lab="fig-concaveU" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -664,8 +590,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </div>
-<div id="21142be9" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plotIC(<span class="fl">1.5</span>, name<span class="op">=</span><span class="st">'$u=x^</span><span class="sc">{1.5}</span><span class="st">y^</span><span class="sc">{1.5}</span><span class="st">$'</span>, lab<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="0ec63c19" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -677,10 +602,10 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </section>
 </section>
-<section id="homogeneity-and-homotheticity" class="level2">
-<h2 class="anchored" data-anchor-id="homogeneity-and-homotheticity">Homogeneity and homotheticity</h2>
-<section id="homogeneity" class="level3">
-<h3 class="anchored" data-anchor-id="homogeneity">Homogeneity</h3>
+<section id="homogeneity-and-homotheticity" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="homogeneity-and-homotheticity"><span class="header-section-number">1.5</span> Homogeneity and homotheticity</h2>
+<section id="homogeneity" class="level3" data-number="1.5.1">
+<h3 data-number="1.5.1" class="anchored" data-anchor-id="homogeneity"><span class="header-section-number">1.5.1</span> Homogeneity</h3>
 <div id="def-homogen" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 3 (Homogeneous function)</strong></span> A function <span class="math inline">\(u:\mathbb{R}^n\to\mathbb{R}\)</span> is homogeneous of degree <span class="math inline">\(k\)</span> if for all <span class="math inline">\(\alpha &gt; 0\)</span>, we have <span class="math inline">\(u(\alpha x) = \alpha^k u(x)\)</span>.</p>
 </div>
@@ -701,8 +626,8 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 <div id="def-homogen-pref" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Homogeneous preference)</strong></span> A preference relation is homogeneous if it can be represented by a homogeneous utility function</p>
 </div>
-<section id="properties" class="level4">
-<h4 class="anchored" data-anchor-id="properties">Properties</h4>
+<section id="properties" class="level4" data-number="1.5.1.1">
+<h4 data-number="1.5.1.1" class="anchored" data-anchor-id="properties"><span class="header-section-number">1.5.1.1</span> Properties</h4>
 <ol type="1">
 <li><p>If <span class="math inline">\(u\)</span> is homogeneous of degree <span class="math inline">\(k\)</span>, then its first-order partial derivatives are homogeneous of degree <span class="math inline">\(k-1\)</span>: <span id="eq-homg_prop1"><span class="math display">\[
 u(\alpha x) = \alpha^k u(x) \implies u_j(\alpha x) = \alpha^{k-1} u_j(x).
@@ -743,8 +668,8 @@ MRS_{1,2}(x) \equiv \frac{U_1(x)}{U_2(x)}
 </details>
 </section>
 </section>
-<section id="homotheticity" class="level3">
-<h3 class="anchored" data-anchor-id="homotheticity">Homotheticity</h3>
+<section id="homotheticity" class="level3" data-number="1.5.2">
+<h3 data-number="1.5.2" class="anchored" data-anchor-id="homotheticity"><span class="header-section-number">1.5.2</span> Homotheticity</h3>
 <div id="def-homoth" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Homothetic function)</strong></span> A function <span class="math inline">\(u:\mathbb{R}^n\to\mathbb{R}\)</span> is homothetic if it is obtained by a monotonic transformation of a homogeneous function (<a href="#def-homogen" class="quarto-xref">Definition&nbsp;3</a>), i.e., if there exist a strictly increasing function <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> and a homogeneous function <span class="math inline">\(v:X\to\mathbb{R}\)</span> such that: <span id="eq-homt_def"><span class="math display">\[
 u(x) = f(v(x)).
@@ -755,8 +680,8 @@ u(x) = f(v(x)).
 <p><span class="theorem-title"><strong>Definition 6 (Homothetic preference)</strong></span> A preference relation is homothetic if it can be represented by a homothetic utility function (<a href="#def-homoth" class="quarto-xref">Definition&nbsp;5</a>).</p>
 </div>
 <p>Since a homogeneous utility function is homothetic, homogeneous preferences are also homothetic, but the converse is not true.</p>
-<section id="properties-1" class="level4">
-<h4 class="anchored" data-anchor-id="properties-1">Properties</h4>
+<section id="properties-1" class="level4" data-number="1.5.2.1">
+<h4 data-number="1.5.2.1" class="anchored" data-anchor-id="properties-1"><span class="header-section-number">1.5.2.1</span> Properties</h4>
 <ol type="1">
 <li><p>ICs are radial expansion of the origin: <span class="math inline">\(x \sim y \implies \alpha x \sim \alpha y\)</span> for all scalar <span class="math inline">\(\alpha &gt;  0\)</span></p></li>
 <li><p>MRS is homogeneous of degree <span class="math inline">\(0\)</span>: The rate at which the individual substitutes one good for another <em>depends only on the proportion</em> of the two goods consumed, and not on:</p>
@@ -777,8 +702,8 @@ Proof
 </details>
 </section>
 </section>
-<section id="examples" class="level3">
-<h3 class="anchored" data-anchor-id="examples">Examples</h3>
+<section id="examples" class="level3" data-number="1.5.3">
+<h3 data-number="1.5.3" class="anchored" data-anchor-id="examples"><span class="header-section-number">1.5.3</span> Examples</h3>
 <ul>
 <li><p>Constant elasticity of substitution (CES) utility function: <span id="eq-CES-utility"><span class="math display">\[
   u(x, y) = [\alpha x^p + (1 - \alpha)y^p]^{1/p},
@@ -799,10 +724,10 @@ u(x) = \begin{cases}
 </section>
 </section>
 </section>
-<section id="utility-maximization-and-demand-for-goods-and-services" class="level1">
-<h1>Utility maximization and demand for goods and services</h1>
-<section id="utility-maximization-problem-ump" class="level2">
-<h2 class="anchored" data-anchor-id="utility-maximization-problem-ump">Utility maximization problem (UMP)</h2>
+<section id="utility-maximization-and-demand-for-goods-and-services" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Utility maximization and demand for goods and services</h1>
+<section id="utility-maximization-problem-ump" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="utility-maximization-problem-ump"><span class="header-section-number">2.1</span> Utility maximization problem (UMP)</h2>
 <ul>
 <li><p>Denote <span class="math inline">\(w&gt;0\)</span> the consumer’s wage/income, <span class="math inline">\(p\)</span> the vector of prices, <span class="math inline">\(x\)</span> the bundle of goods and services, and <span class="math inline">\(u:\mathbb{R}^L_+\to \mathbb{R}\)</span> the utility function representing the preferences of the consumer. Futhermore, denote <span class="math inline">\(pw\)</span> the dot product of <span class="math inline">\(p\)</span> and <span class="math inline">\(w\)</span> when they are vectors</p></li>
 <li><p>The UMP faced by the consumer is: <span id="eq-UMP"><span class="math display">\[
@@ -813,15 +738,15 @@ u(x) = \begin{cases}
 <li><p>A solution to the UMP, if exists, is a list of goods and services that maximizes the utility of the consumer given her budget constraint.</p></li>
 </ul>
 </section>
-<section id="walrasian-demand" class="level2">
-<h2 class="anchored" data-anchor-id="walrasian-demand">Walrasian demand</h2>
+<section id="walrasian-demand" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="walrasian-demand"><span class="header-section-number">2.2</span> Walrasian demand</h2>
 <ul>
 <li><p>Let <span class="math inline">\(x(p,w)\)</span> be the solution to the UMP: it is called the <strong>Walrasian demand correspondence</strong></p></li>
 <li><p>For each <span class="math inline">\((p,w)\)</span> pair, the correspondence specifies a <em>set</em> of optimal bundles</p></li>
 <li><p>If preferences are strictly convex, this set is a singleton: the correspondence becomes a function (<em>Walrasian demand function</em>)</p></li>
 </ul>
-<section id="properties-of-the-walrasian-demand-correspondence" class="level3">
-<h3 class="anchored" data-anchor-id="properties-of-the-walrasian-demand-correspondence">Properties of the Walrasian demand correspondence</h3>
+<section id="properties-of-the-walrasian-demand-correspondence" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="properties-of-the-walrasian-demand-correspondence"><span class="header-section-number">2.2.1</span> Properties of the Walrasian demand correspondence</h3>
 <p>If the utility function is continuous and preferences satisfy LNS (thin ICs) over the consumption set <span class="math inline">\(\mathbb{R}^L_+\)</span>, then the Walrasian demand satisfies:</p>
 <ol type="1">
 <li><em>Homogeneity of degree</em> <span class="math inline">\(0\)</span>: <span class="math inline">\(x(p,w) = x(\alpha p, \alpha w)\)</span> for all <span class="math inline">\(p\gg 0\)</span> and <span class="math inline">\(w&gt;0\)</span>
@@ -839,10 +764,10 @@ u(x) = \begin{cases}
 </ol>
 </section>
 </section>
-<section id="solving-the-ump" class="level2">
-<h2 class="anchored" data-anchor-id="solving-the-ump">Solving the UMP</h2>
-<section id="necessary-conditions" class="level3">
-<h3 class="anchored" data-anchor-id="necessary-conditions">Necessary conditions</h3>
+<section id="solving-the-ump" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="solving-the-ump"><span class="header-section-number">2.3</span> Solving the UMP</h2>
+<section id="necessary-conditions" class="level3" data-number="2.3.1">
+<h3 data-number="2.3.1" class="anchored" data-anchor-id="necessary-conditions"><span class="header-section-number">2.3.1</span> Necessary conditions</h3>
 <p>The Lagragian associated with the UMP: <span id="eq-Lagrangian"><span class="math display">\[
 L = u(x) + \lambda (w - px)
 \tag{12}\]</span></span></p>
@@ -870,8 +795,8 @@ MRS_{i,j}(x^*) &amp;= \frac{p_i}{p_j} \\
 <li><p>Marginal utilities per unit of the constraint (e.g.&nbsp;dollar) are equalized across all goods and are equal to the Langrage multiplier, the shadow price</p></li>
 </ul>
 </section>
-<section id="the-shadow-price" class="level3">
-<h3 class="anchored" data-anchor-id="the-shadow-price">The shadow price</h3>
+<section id="the-shadow-price" class="level3" data-number="2.3.2">
+<h3 data-number="2.3.2" class="anchored" data-anchor-id="the-shadow-price"><span class="header-section-number">2.3.2</span> The shadow price</h3>
 <ul>
 <li><p><span class="math inline">\(\lambda^*\)</span> is often interpreted as the shadow price: increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit</p></li>
 <li><p>In other words, it is the shadow price on the constraint (on <span class="math inline">\(w\)</span>)</p></li>
@@ -893,8 +818,8 @@ Proof
 \]</span> which comes directly from the binding budget constraint.</p>
 </details>
 </section>
-<section id="sufficient-conditions" class="level3">
-<h3 class="anchored" data-anchor-id="sufficient-conditions">Sufficient conditions</h3>
+<section id="sufficient-conditions" class="level3" data-number="2.3.3">
+<h3 data-number="2.3.3" class="anchored" data-anchor-id="sufficient-conditions"><span class="header-section-number">2.3.3</span> Sufficient conditions</h3>
 <ul>
 <li><p>How to be sure that the necessary conditions above provide a max, and not a min?</p></li>
 <li><p>The KKT conditions are also <em>sufficient</em> for a max if:</p>
@@ -916,8 +841,8 @@ Proof
 </ul>
 </section>
 </section>
-<section id="comparative-statics" class="level2">
-<h2 class="anchored" data-anchor-id="comparative-statics">Comparative statics</h2>
+<section id="comparative-statics" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="comparative-statics"><span class="header-section-number">2.4</span> Comparative statics</h2>
 <ol type="1">
 <li><p>Price elasticity: percentage change in demand following a percentage change in the price of the good: <span id="eq-own_elast_def"><span class="math display">\[
 \epsilon_{x_i, p_i} = \frac{\partial x_i(p,w)}{\partial p_i}\frac{p_i}{x_i(p,w)}.
@@ -946,8 +871,8 @@ Proof
 <hr>
 </section>
 </section>
-<section id="exercises" class="level1">
-<h1>Exercises</h1>
+<section id="exercises" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Exercises</h1>
 <div id="exr-exo-lexico" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1 (Lexicographic preferences)</strong></span> Consider the preference relation over <span class="math inline">\(X=\mathbb{R}^2_+\)</span> as follows: <span class="math display">\[
 \forall x, y \in X:\: x \succeq y \text{ if }

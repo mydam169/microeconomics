@@ -281,11 +281,11 @@ format:
         # toc-location: "left"
         # embed-resources: true
 --- -->
-<div id="19dd528c" class="cell" data-execution_count="1">
+<div id="820f76c9" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>load_ext autoreload</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>autoreload <span class="dv">2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="9bde0711" class="cell" data-execution_count="2">
+<div id="2f9376f4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> cm</span>
@@ -297,7 +297,7 @@ format:
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> ipywidgets <span class="im">import</span> interact</span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="f31ef041" class="cell" data-execution_count="3">
+<div id="112eccf5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mod_dir <span class="op">=</span> os.path.join(os.getcwd(), <span class="st">'modules'</span>)</span>
@@ -390,7 +390,7 @@ format:
 <div id="fig-PEScurve" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-PEScurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="cc5e1931" class="cell" data-execution_count="4">
+<div id="3842ee26" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> np.ones(<span class="bu">len</span>(q)) <span class="op">*</span> <span class="dv">40</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>plt.plot(q, p, lw<span class="op">=</span><span class="dv">2</span>)</span>
@@ -437,7 +437,7 @@ C'(q) = a q + b = p \iff q = \frac{p - b}{a}.
 <div id="fig-profFunc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-profFunc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="803b10f8" class="cell" data-execution_count="5">
+<div id="5e7f260f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> costFunc(q):</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">0.5</span> <span class="op">*</span> a <span class="op">*</span> q<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b <span class="op">*</span> q <span class="op">+</span> c</span>
@@ -476,7 +476,7 @@ Figure&nbsp;2: Profit as a function of market price
 <div id="fig-linearSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-linearSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="788e3d12" class="cell" data-execution_count="6">
+<div id="a188b3ac" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>q_min <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> c <span class="op">/</span> a)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>q <span class="op">=</span> np.linspace(q_min, <span class="dv">5</span>, <span class="dv">100</span>)</span>
@@ -524,7 +524,7 @@ Figure&nbsp;3: A SR upward sloping supply curve <span class="math inline">\(q = 
 <div id="fig-SRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="dc73aac4" class="cell" data-execution_count="7">
+<div id="2c61a015" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>q_min <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> c <span class="op">/</span> a)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>p_min <span class="op">=</span> b <span class="op">+</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> a <span class="op">*</span> c)</span>
@@ -580,7 +580,7 @@ Figure&nbsp;4: SR supply curve
 <div id="fig-LRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="58c7e9c1" class="cell" data-execution_count="8">
+<div id="0ba3627c" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>q_min <span class="op">=</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> c <span class="op">/</span> a)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>p_min <span class="op">=</span> b <span class="op">+</span> np.sqrt(<span class="dv">2</span> <span class="op">*</span> a <span class="op">*</span> c)</span>

@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: "Chapter 1. Consumers and demand"
 number-sections: true
 execute:
@@ -11,7 +11,7 @@ format:
         # toc-expand: true
         # toc-location: "left"
         # embed-resources: true
---- -->
+---
 
 ```{python}
 %load_ext autoreload
