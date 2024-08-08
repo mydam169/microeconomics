@@ -1,4 +1,4 @@
-<!-- ---
+---
 title: "Chapter 3. Equlibrium"
 number-sections: true
 execute:
@@ -9,9 +9,9 @@ format:
         toc-depth: 3
         toc-title: "Content"
         # toc-expand: true
-        # toc-location: "left"
+        toc-location: "left"
         # embed-resources: true
---- -->
+---
 
 
 ```{python}
@@ -41,6 +41,11 @@ if mod_dir not in sys.path:
 
 import micro_modules as mm
 mm.load_viz_settings()
+```
+
+```{python}
+import warnings
+warnings.filterwarnings("ignore")
 ```
 
 In this chapter we will be examining market equilibria. We shall begin by deriving the market supply curve, which results from firms' optimal production decision. Likewise, market demand results from consumers' optimal consumption decision. Searching for an equilibrium is essentially searching for prices that equalize demand and supply in the market. When a single market is considered in isolation, its equilibrium is a partial one. When all markets are considered, we speak of a general equilibrium. In a pure exchange economy, all markets are markets of consumption goods. In  a production economy, the relevant markets include those of factors of production such as labor, capital and land. In this course, we will be mostly interested in general equilibria in a pure exchange economy. 
@@ -332,7 +337,7 @@ plt.grid(None)
 
 # Partial Equilibrium
 
-The equilibrium of a market is a vector of price and quantity for which the market supply and demand are equal. In other words, the equilibrium price is the price that clears the market by equating demand and supply. We have already discussed the market demand curve in the first lecture. We now examine the supply side of the market for which there exist differences between the long run and the short run. 
+The equilibrium of a market is a vector of price and quantity for which the market supply and demand are equal. In other words, the equilibrium price is the price that clears the market by equating demand and supply. We have already discussed the market demand curve in the first lecture. We now examine the supply side of the market for which there exists differences between the long run and the short run. 
 
 ## Short-run equilibrium
 
@@ -371,6 +376,76 @@ Hence given the number of firms in the market, we can determine its SR supply cu
 
 ## Long-run equilibrium
 
+In a competitive market, firms can freely enter or exit. If there is an opportunity to make __economic profits__ in a market, firms will enter, pushing down market prices and drive away profits. Note that making profits does not imply making economic profits. Economic profits take into account the opportunity cost of the firm. For instance, if leaving money in a bank earns an interest of 5% per month and the firm is generating less than 5% return on investment, it is not making economic profits even though it is making profits. A long-run equilibrium is reached when the following conditions are satisfied:
+
+1. Every firm is maximizing profits: $p=MC(q)$
+2. Each firm makes zero economic profits: $p=AC(q)$
+    * This means that firms make the same profits in other competitive markets (hence no incentives for other firms to enter or for existing firms to exit)
+3. Market demand equal to LR market supply
+    * $q^S(p) = q^D(p)$
+
+Hence in a LR equilibrium, firms are doing the best they can do in the market which they have no incentives to leave and no other firms have incentives to enter because of zero economic profits, and the price is such that supply is equal to demand. 
+
+::: {exm-LRPartialEQM}
+Consider a perfectly competitive industry populated by identical firms with the cost function $C(q)=10 - 5q + 2q^2$. We would like to determine the long-run equilibrium of the market as well as the equilibrium number of firms operating in it.[^1]
+
+[^1]: Note that we are given a short-run cost function, which has a fixed cost, but we would like to determine the market equilibrium in the long run.
+
+Denote the LR equilibrium quantity, price and market size $q^*$, $p^*$ and $N^*$, respectively.
+
+* Since each firm in the market sets $MC(q_i^*) = AC(q_i^*)$:
+    $$
+    \begin{aligned}
+    -5 + 4 q^*_i &= \frac{10}{q_i^*} - 5 + 2 q_i^* \\
+    q_i^* &= \sqrt{5} \approx 2.24.
+    \end{aligned}
+    $$
+    
+* Since $MC(q_i^*) = p^*$, we can deduce the LR equilibrium market price:
+    $$ 
+    p^* = -5 + 4 q^*_i = -5 + 4 \sqrt{5} \approx 3.94 
+    $$
+    
+* Equilibirum quantity can be found using the market demand equation:
+    $$ 
+    q^* = 100 - 2p^* \approx 92.11 
+    $$
+    
+* The number of active firms in the LR:
+    $$ 
+    N^* = \frac{q^*}{q_i^*} \approx 41.19 
+    $$
+
+* Hence in the LR equilibrium, the price will be about $\$3.94$ per unit. At this price about $92$ units will be produced by about $41$ firms.[^2]
+
+:::
+
+# General equilibrium in a pure exchange economy
+
+The Edgeworth box is a useful tool to represent an exchange economy with two consumers and two goods. The width and length of the box represent the total endowment of each good.
+
+::: {#fig-EWbox fig-cap="An Edgeworth box with two goods and two consumers
+in a pure exchange economy. The total endownment of each good is 10 units. At the intial endowment, agent A has 2 units of $x_1$ and 8 units of $x_2$ whereas agent B has 8 units of $x_1$ and 2 units of $x_2$."}
+```{python}
+mm.plotEWBox()
+```
+:::
+
+
+An __allocation__ lists the amount of each good that each consumer consumes:
+$$ 
+x \equiv (x_1^A, x_2^A, x_1^B, x_2^B). 
+$$
+    
+Note that $x$ can be different from $e$ with trade. An allocation is __feasible__ if $x \geq e$. In particular, this requires:
+$$ 
+\begin{aligned}
+x_1^A + x_1^B &\leq e_1^A + e_1^B, \\
+x_2^A + x_2^B &\leq e_2^A + e_2^B. 
+\end{aligned}
+$$
+    
+* Any point _within_ the Edgeworth box is feasible
 
 # Exercises
 
@@ -407,6 +482,17 @@ $$
 </details>
 :::
 
+
+::: {#exr-LRPEQM}
+
+Consider a perfectly competitive industry populated by identical firms with the cost function $C(q)=10 - 5q + 2q^2$. Suppose the market demand is given by $q^D(p) = 400 - 2p$.
+Determine the long-run equilibrium price, quantity and the number of firms. 
+
+<details>
+<summary>Answer</summary>
+See @exr-LRPEQM. Observe the change in demand and equilibrium of the market.
+</details>
+:::
 
 
 

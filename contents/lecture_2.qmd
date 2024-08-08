@@ -9,7 +9,7 @@ format:
         toc-depth: 3
         toc-title: "Content"
         # toc-expand: true
-        # toc-location: "left"
+        toc-location: "left"
         # embed-resources: true
 ---
 
@@ -79,13 +79,13 @@ where $q$ is the amount of output.
 
 ## Average product and productivity
 
-* The _average product_ is the total units of output produced per unit of input used
-    * The average product or _productivity of labor_, $AP_L = q / L$
-    * The average product or _productivity of capital_, $AP_K = q / K$
+The _average product_ is the total units of output produced per unit of input used
 
-* The higher is the average product, the higher is the productivity
-
-* Productivity typically depends on the production technology and the levels of input used
+* The average product or _productivity of labor_, $AP_L = q / L$
+* The average product or _productivity of capital_, $AP_K = q / K$
+ 
+The higher is the average product, the higher is the productivity.
+Productivity typically depends on the production technology and the levels of input used.
 
 ::: {#exm-APMP}
 For each of the following production functions, compute the average product of labor (or labor productivity). Determine if increasing labor improves productivity. 
@@ -96,11 +96,15 @@ For each of the following production functions, compute the average product of l
 
 ## Marginal product
 
-* The _marginal product_ is the rate at which total output changes as the firm uses one additional unit of input
-    * The marginal product of labor: $MP_L = \frac{\Delta q}{\Delta L}$ when $L$ is discrete (e.g. number of workers) and $MP_L = \frac{\partial q}{\partial L}$ when $L$ is continuous (e.g. working hours)
-    * The marginal product of capital: $MP_K = \frac{\Delta q}{\Delta K}$ when $K$ is discrete and $MP_K = \frac{\partial q}{\partial K}$ when $K$ is continuous
+The _marginal product_ is the rate at which total output changes as the firm uses one additional unit of input
+
+* The marginal product of labor: $MP_L = \frac{\Delta q}{\Delta L}$ when $L$ is discrete (e.g. number of workers) and $MP_L = \frac{\partial q}{\partial L}$ when $L$ is continuous (e.g. working hours)
+  
+* The marginal product of capital: $MP_K = \frac{\Delta q}{\Delta K}$ when $K$ is discrete and $MP_K = \frac{\partial q}{\partial K}$ when $K$ is continuous
     
-* Example: Compute the marginal product of labor for the production functions in the previous example and determine if it is increasing or decreasing in the amount of input used.
+::: {#exm-MPoL}
+Compute the marginal product of labor for the production functions in @exm-APMP and determine if it is increasing or decreasing in the amount of input used.
+:::
 
 ## Decreasing marginal products
 
@@ -212,9 +216,9 @@ L = np.arange(1, 100, 1)
 mm.plotIC(L, L, 0.5, 0.5, 5, levels=q, lab=True, name='$q(L, K) = 5K^{1/2}L^{1/2}$')
 ```
 
-## Marginal rate of technical substitution (MRTS)
+# Marginal rate of technical substitution (MRTS)
 
-### Definition
+## Definition
 
 * The MRTS is the slope of the isoquant (in absolute value):
 
@@ -236,7 +240,7 @@ mm.plotIC(L, L, 0.5, 0.5, 5, levels=q, lab=True, name='$q(L, K) = 5K^{1/2}L^{1/2
     $${#eq-MRST_proof}
     
 
-### Properties
+## Properties
 
 In the case of Cobb-Douglas production function above, the _MRTS is decreasing_ as we move in the south-east direction along one isoquant:
 
@@ -246,16 +250,13 @@ In the case of Cobb-Douglas production function above, the _MRTS is decreasing_ 
     
 # Homogeneity and returns to scale
 
-## Returns to scale
 
-* Let $\alpha > 0$ be the factor by which all inputs change (i.e., each input is multiplied by $\alpha$)
-
-* Suppose $q(\alpha K, \alpha L) = \alpha^k q(K, L)$ for some number $k$
-    * If $k > 1$: the firm exhibits increasing returns to scale (IRS)
-    * If $k = 1$: the firm exhibits constant returns to scale (CRS)
-    * If $k < 1$: the firm exhibits decreasing returns to scale (DRS)
+Let $\alpha > 0$ be the factor by which all inputs change (i.e., each input is multiplied by $\alpha$). Suppose $q(\alpha K, \alpha L) = \alpha^k q(K, L)$ for some number $k$
+  * If $k > 1$: the firm exhibits increasing returns to scale (IRS)
+  * If $k = 1$: the firm exhibits constant returns to scale (CRS)
+  * If $k < 1$: the firm exhibits decreasing returns to scale (DRS)
     
-* Note that the characterization holds regardless of whether $\alpha$ is greater or smaller than one. If $\alpha \in (0, 1)$ then increasing returns to scale means that as we reduce inputs by a factor of $\alpha$, the firm's output falls by more than $\alpha$.
+Note that the characterization holds regardless of whether $\alpha$ is greater or smaller than one. If $\alpha \in (0, 1)$ then increasing returns to scale means that as we reduce inputs by a factor of $\alpha$, the firm's output falls by more than $\alpha$.
 
 ::: {#exm-RSC}
 Consider the Cobb-Douglas production function $q = AK^a L^b$ where $A, a, b$ are strictly positive constants. For which values of $a, b$ does this function exhibit increasing, constant or decreasing returns to scale? What kind of returns to scale do linear and fixed-proportion production functions exhibit?
@@ -282,81 +283,67 @@ Consider the Cobb-Douglas production function $q = AK^a L^b$ where $A, a, b$ are
 
 # Technological progress
 
-## Definition
+A technical progress is a technical advance that allows firms to produce more with the same amount of inputs. In general a technical progress can be:
+  * __Labor enhancing__ if  MPL increases by more than MPK
+  * __Capital enhancing__ if MPK increases by more than MPL
+  * __Neutral__ if MPL and MPK increase by the same amount (in percentage terms)
 
-* Technical advances that allow firms to produce more with the same amount of inputs 
-
-* Three types of technical progress:
-    * __Labor enhancing__: MPL increases by more than MPK
-    * __Capital enhancing__: MPK increases by more than MPL
-    * __Neutral__: MPL and MPK increase by the same amount (in percentage terms)
+Hence to determine the nature of the tech progress, we need to compare the relative change of the productivity of labor and capital following the change. The percentage change in the marginal product of each input can be expressed as:
+$$
+\frac{MP'_i - MP_i}{MP_i} = \frac{MP'_i}{MP_i} - 1, \quad i\in\{K, L\}, 
+$$
+where $MP'_i$ denotes the marginal product of input $i$ after the technological progress. Observe that:
+$$
+\begin{aligned}
+\frac{MP'_L - MP_L}{MP_L} &\geq \frac{MP'_K - MP_K}{MP_K} \\
+% \iff \frac{MP'_L}{MP_L} \geq \frac{MP'_K}{MP_K} \\
+% \iff \frac{MP'_L}{MP'_K} \geq \frac{MP_L}{MP_K} \\
+\iff MRTS'_{L,K} &\geq MRTS_{L,K}.
+\end{aligned}
+$$
     
-* Suppose the firm has production function $q = A_1 L^a K^b$. After a technical progress, it has one of the following PFs. 
-    1. $q = A_1 L^{a + \delta} K^b$ with $\delta > 0$
-    2. $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$
-    3. $q = A_2 L^a K^b$ with $A_2 > A_1$
+Hence the type of the tech progress can be determined by comparing the MRTSs.
     
-    Let us determine the type of progress that the firm has undergone.
-
-## Types of technological progress
-
-* The percentage change in the marginal product of each input:
-    $$
-    \frac{MP'_i - MP_i}{MP_i} = \frac{MP'_i}{MP_i} - 1, \quad i\in\{K, L\}, 
-    $$
-    where $MP'_i$ denotes the marginal product of input $i$ after the technological progress
+::: {#exm-typesOfTP}
+Suppose the firm has production function $q = A_1 L^a K^b$. After a technical progress, it has one of the following PFs. 
+  1. $q = A_1 L^{a + \delta} K^b$ with $\delta > 0$
+  2. $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$
+  3. $q = A_2 L^a K^b$ with $A_2 > A_1$
     
-* Observe that:
-    $$
-    \frac{MP'_L - MP_L}{MP_L} \geq \frac{MP'_K - MP_K}{MP_K} \\
-    % \iff \frac{MP'_L}{MP_L} \geq \frac{MP'_K}{MP_K} \\
-    % \iff \frac{MP'_L}{MP'_K} \geq \frac{MP_L}{MP_K} \\
-    \iff MRTS'_{L,K} \geq MRTS_{L,K}.
-    $$
-    
-* Hence the type of the tech progress can be determined by comparing the MRTSs
+Let us determine the type of progress that the firm has undergone. 
 
-## Labor-enhancing technological progress
+### Labor-enhancing technological progress
 
-* Consider $q = A_1 L^{a + \delta} K^b$ with $\delta > 0$ 
+Consider $q = A_1 L^{a + \delta} K^b$ with $\delta > 0$ 
+The MRTS before tech progress:
+$$
+MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
+$$
+After tech progress:
+$$
+MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.
+$$
 
-* The MRTS before tech progress:
-    $$MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.$$
-    
-* After tech progress:
-    $$
-    MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.
-    $$
+Since $\delta > 0$, we have $MRTS'_{L,K} > MRTS_{L,K}$, implying that this is a labor-enhancing (or labor-saving) tech progress. Graphically, on the $(K, L)$ plane, the isoquants become steeper
 
-* Since $\delta > 0$, we have $MRTS'_{L,K} > MRTS_{L,K}$, implying that this is a labor-enhancing (or labor-saving) tech progress
+### Capital-enhancing technological progress
 
-* Graphically, on the $(K, L)$ plane, the isoquants become steeper
+Consider $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$.
+The MRTS before tech progress:
+$$
+MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
+$$
+After tech progress:
+$$
+MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.
+$$
 
-## Capital-enhancing technological progress
+Since $\delta > 0$, we have $MRTS'_{L,K} < MRTS_{L,K}$, which is equivalent to $MRTS'_{K,L} > MRTS_{K,L}$, implying that this is a capital-enhancing (capital-saving) tech progress. How do the isoquants change graphically?
 
-* Consider $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$
+### Neutral technological progress
 
-* The MRTS before tech progress:
-    $$
-    MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
-    $$
-    
-* After tech progress:
-    $$
-    MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.
-    $$
-
-* Since $\delta > 0$, we have $MRTS'_{L,K} < MRTS_{L,K}$, which is equivalent to $MRTS'_{K,L} > MRTS_{K,L}$, implying that this is a capital-enhancing (capital-saving) tech progress
-
-* How do the isoquants change graphically?
-
-## Neutral technological progress
-
-* Finally, consider $q = A_2 L^a K^b$ with $A_2 > A_1$
-
-* In this case the $MRTS$ does not change after the progress, implying that this is a neutral one
-
-* Graphically the isoquants do not change
+In the final example $q = A_2 L^a K^b$ with $A_2 > A_1$, the $MRTS$ does not change after the progress, implying that this is a neutral one. Graphically the isoquants do not change.
+:::
 
 # Cost functions
 
@@ -482,11 +469,10 @@ The idea is to identify the isocost line touching the isoquant that is as close 
 ### Sunk vs nonsunk costs
 
 * Sunk costs: costs that cannot be recoverred even if the firm chooses to shut down its operations.
-    * Example: The rental the firm has already paid for the building if the lease does not allow subletting
-    * This means that there is a fixed positive cost that the firm incurs even in the case of no production
+    * Examples: Advertising expenses already spent, the rent the firm has already paid for the building if the lease does not allow subletting
 
 * Nonsunk costs: costs that can be sold back (recoverable or partially recoverable costs) in case the firm shuts down
-    * Example: Raw materials 
+    * Example: Raw materials, the rental cost of the building if the contract allows subleases
     
 ### Long-run vs short-run costs
 

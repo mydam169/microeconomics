@@ -9,7 +9,7 @@ format:
         toc-depth: 3
         toc-title: "Content"
         # toc-expand: true
-        # toc-location: "left"
+        toc-location: "left"
         # embed-resources: true
 ---
 
@@ -92,7 +92,7 @@ To facilitate comparison, we shall also fix the following notations:
 | $x \geq y$ | $x_j \geq y_j$ for all good $j=1,2, \dots, n$. |
 | $x \gt y$  | $x_j > y_j$ for all good $j=1,2, \cdots, n$.   |
 
-For example we typically assume that goods' prices are strictly positive $p\gg 0$, which we sometimes write $p \in \mathbb{R}^n_{++}$. The notation $x\ge y$ means that the quantity of each good in $x$ is at least as much as that in $y$, whereas $x\gt y$ means that $x$ has strictly more of every good than $y$. The former permits $x=y$ but the latter does not.
+For example we typically assume that goods' prices are strictly positive $p\gt 0$, which we sometimes write $p \in \mathbb{R}^n_{++}$. The notation $x\ge y$ means that the quantity of each good in $x$ is at least as much as that in $y$, whereas $x\gt y$ means that $x$ has strictly more of every good than $y$. The former permits $x=y$ but the latter does not.
 
 ### Reflexivity
 

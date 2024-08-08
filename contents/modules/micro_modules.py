@@ -182,6 +182,82 @@ def plotMRS():
 
     plt.show()
 
+def plotEWBox():
+    # Total endowments of the goods
+    X_T = 10
+    Y_T = 10
+
+    # Agent A's utility function (Cobb-Douglas: U_A = X_A^alpha * Y_A^(1-alpha))
+    alpha_A = 0.4
+    def indifference_curve_A(X_A, U_A):
+        return (U_A / X_A**alpha_A)**(1/(1 - alpha_A))
+
+    # Agent B's utility function (Cobb-Douglas: U_B = X_B^beta * Y_B^(1-beta))
+    beta_B = 0.6
+    def indifference_curve_B(X_B, U_B):
+        return (U_B / X_B**beta_B)**(1/(1 - beta_B))
+
+    # Generate points for the indifference curves
+    X_values = np.linspace(0.2, X_T, 100)
+    # U_A_levels = [2, 4, 4.55, 6]
+    U_A_levels = [2, 4, 5.65]
+    U_B_levels = [4.55, 6.2, 8.12]
+
+    # Plot the Edgeworth Box
+    plt.figure(figsize=(6, 6))
+
+    # Plot indifference curves for Agent A
+    for U_A in U_A_levels:
+        Y_A = indifference_curve_A(X_values, U_A)
+        plt.plot(
+            X_values, Y_A, 
+            color='C1',
+            lw=1.5
+            )
+    plt.plot(
+        X_values, indifference_curve_A(X_values, U_A_levels[0]),
+        color='C1', lw=1.5, label='ICs of A'
+        )
+    # Plot indifference curves for Agent B
+    for U_B in U_B_levels:
+        X_B = X_T - X_values
+        Y_B = Y_T - indifference_curve_B(X_B, U_B)
+        plt.plot(
+            X_values, Y_B, 
+            color='C0', 
+            lw=1.5
+            )
+
+    U_B = U_B_levels[0]
+    X_B = X_T - X_values
+    Y_B = Y_T - indifference_curve_B(X_B, U_B)
+    plt.plot(
+        X_values, Y_B,
+        color='C0', lw=1.5, label='ICs of B'
+        )
+
+    # init endowment
+    plt.vlines(x=2, ymin=0, ymax=10, linestyle='--', color='gray')
+    plt.hlines(y=8, xmin=0, xmax=10, linestyle='--', color='gray')
+    plt.scatter(2, 8, color='k', s=100, label='Initial endowment')
+
+    # Set the labels and limits
+    plt.xlabel("Good $x_1$ (Agent A $\\longrightarrow$, Agent B $\\longleftarrow$)")
+    plt.ylabel("Good $x_2$ (Agent A $\\longrightarrow$, Agent B $\\longleftarrow$)")
+    plt.xlim(0, X_T)
+    plt.ylim(0, Y_T)
+
+    # Plot the initial endowments and dimensions of the box
+    plt.axhline(Y_T, color='black', linestyle='-')
+    plt.axvline(X_T, color='black', linestyle='-')
+    plt.axhline(0, color='black', linestyle='-')
+    plt.axvline(0, color='black', linestyle='-')
+
+    plt.grid(None)
+    plt.legend()
+
+    plt.show()
+
 
     
     

@@ -43,7 +43,7 @@ website:
           - text: "Lecture 2"
             href: contents/lecture_2.qmd
           # - text: "Lecture 3"
-          #   href: contents/lecture_3.qmd
+            # href: contents/lecture_3.qmd
 
 format:
   html:
