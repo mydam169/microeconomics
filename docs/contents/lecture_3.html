@@ -156,13 +156,13 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Course information</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../index.html" class="sidebar-item-text sidebar-link">
@@ -345,7 +345,7 @@ window.Quarto = {
 <div id="fig-PEScurve" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-PEScurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="8930c302" class="cell" data-execution_count="5">
+<div id="1d2fbc5e" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -381,7 +381,7 @@ C'(q) = a q + b = p \iff q = \frac{p - b}{a}.
 <div id="fig-profFunc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-profFunc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="28559ca0" class="cell" data-execution_count="6">
+<div id="f15d66d0" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -399,7 +399,7 @@ Figure&nbsp;2: Profit as a function of market price
 <div id="fig-linearSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-linearSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="e498d61c" class="cell" data-execution_count="7">
+<div id="c4c705b0" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -427,7 +427,7 @@ Figure&nbsp;3: A SR upward sloping supply curve <span class="math inline">\(q = 
 <div id="fig-SRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="77321cc4" class="cell" data-execution_count="8">
+<div id="d56f8b9e" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -451,7 +451,7 @@ Figure&nbsp;4: SR supply curve
 <div id="fig-LRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="2aedd6c8" class="cell" data-execution_count="9">
+<div id="c4918873" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -545,7 +545,7 @@ e \equiv (e_1^A, e_2^A;e_1^B, e_2^B).
 <div id="fig-EWbox" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EWbox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="5cce05fe" class="cell" data-execution_count="10">
+<div id="dc5fa62d" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -695,31 +695,23 @@ e &amp;= (100, 350, 100, 50) \\
 <h1 data-number="6"><span class="header-section-number">6</span> General equilibrium with production</h1>
 <section id="adding-production-to-the-economy" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="adding-production-to-the-economy"><span class="header-section-number">6.1</span> Adding production to the economy</h2>
-<ul>
-<li><p>Consumers own factors of production, which they can rent out to firms to earn income</p></li>
-<li><p>Firms choose the quantity of factors of production to maximize profit, taking as given the prices (of factors and final consumption goods)</p></li>
-<li><p>Consumers choose the quantity of consumption goods to maximize utility, taking as given prices (of factors and final consumption goods)</p></li>
-<li><p>In equilibrium, aggregate demand is equal to aggregate supply in each market, including markets of production factors</p></li>
-</ul>
+<p>In a production economy, consumers own factors of production, which they can rent out to firms to earn income. Firms choose the quantity of factors of production to maximize profit, taking as given the prices (of factors and final consumption goods). Consumers choose the quantity of consumption goods to maximize utility, taking as given prices (of factors and final consumption goods). In equilibrium, aggregate demand is equal to aggregate supply in each market, including markets of production factors.</p>
 <div id="exm-GEwithProd" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5</strong></span> &nbsp;</p>
-<ul>
-<li><p>Consider an economy two consumers with Cobb-Douglas utility function <span class="math display">\[
-  u(x_1^i, x_2^i) = x_1^i x_2^i
-  \]</span> for each consumer <span class="math inline">\(i=A, B\)</span>.</p></li>
-<li><p>Their endowments: <span id="eq-endowment"><span class="math display">\[
-  e^A = (k^A, l^A), \quad e^B = (k^B, l^B).
-   \tag{10}\]</span></span></p></li>
-<li><p>There are two firms in the economy, each producing one of the consumption goods according to a Cobb-Douglas technology:</p>
-<p><span class="math display">\[
-  \begin{aligned}
-  y_1 = F^1(K_1, L_1) &amp;= K_1^a L_1^b, \\
-  y_2 = F^2(K_2, L_2) &amp;= K_2^b L_2^a,
-  \end{aligned}
-  \]</span></p>
-<p>where <span class="math inline">\(a+b=1\)</span> and <span class="math inline">\(a, b \in (0,1)\)</span>.</p></li>
-</ul>
-<p>An allocation <span class="math inline">\((x_1^A, x_1^B, x_2^A, x_2^B, K_1, L_1, K_2, L_2)\)</span> and a price vector <span class="math inline">\(p=(p_1, p_2, w, r)\)</span> constitute a competive equilibrium (or Walrasian equilibrium) the production economy if:</p>
+<p><span class="theorem-title"><strong>Example 5</strong></span> Consider an economy two consumers with Cobb-Douglas utility function <span class="math display">\[
+u(x_1^i, x_2^i) = x_1^i x_2^i
+\]</span> for each consumer <span class="math inline">\(i=A, B\)</span> whose endowments are: <span id="eq-endowment"><span class="math display">\[
+\begin{aligned}
+e^A &amp;= (k^A, l^A), \\
+e^B &amp;= (k^B, l^B).
+\end{aligned}
+\tag{10}\]</span></span></p>
+<p>Suppose there are two firms in the economy, each producing one of the consumption goods according to a Cobb-Douglas technology: <span class="math display">\[
+\begin{aligned}
+y_1 = F^1(K_1, L_1) &amp;= K_1^a L_1^b, \\
+y_2 = F^2(K_2, L_2) &amp;= K_2^b L_2^a,
+\end{aligned}
+\]</span> where <span class="math inline">\(a+b=1\)</span> and <span class="math inline">\(a, b \in (0,1)\)</span>.</p>
+<p>An allocation <span class="math inline">\((x_1^A, x_1^B, x_2^A, x_2^B, K_1, L_1, K_2, L_2)\)</span> and a price vector <span class="math inline">\(p=(p_1, p_2, w, r)\)</span> constitute a competive equilibrium (or Walrasian equilibrium) of the production economy if:</p>
 <ol type="1">
 <li><p>Given prices, <span class="math inline">\((x_1^i, x_2^i)\)</span> solves the UMP for each consumer <span class="math inline">\(i\in\{A,B\}.\)</span></p></li>
 <li><p>Given prices, <span class="math inline">\((K_j, L_j)\)</span> solves the PMP for each firm <span class="math inline">\(j\in \{1,2\}.\)</span></p></li>
@@ -729,103 +721,88 @@ e &amp;= (100, 350, 100, 50) \\
 \text{Capital good:   }\sum_j K_j &amp;= k^A + k^B, \\
 \text{Labor good:   }\sum_j L_j &amp;= l^A + l^B.
 \end{aligned}
-\]</span></p></li>
+\]</span> In other words, we are in an equilibrium if ever agent optimizes and markets clear. Let us first consider the consumers, who face the UMP.</p></li>
 </ol>
 <section id="ump" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="ump"><span class="header-section-number">6.2</span> UMP</h2>
-<ul>
-<li><p>Consumer <span class="math inline">\(i\)</span> solves: <span id="eq-UMP"><span class="math display">\[
-  \max_{x^i} u(x^i) \text{    s.t.   } px^i \leq wl^i + rk^i.
-   \tag{11}\]</span></span></p></li>
-<li><p>FONC yields: <span id="eq-FOC_UMP"><span class="math display">\[
-  u'_j(x^i) = \lambda_i p_j, \quad\forall j=1,2.
-   \tag{12}\]</span></span></p></li>
-<li><p>Since <span class="math inline">\(u'_j&gt;0\)</span> we must have <span class="math inline">\(\lambda &gt; 0\)</span> in optimality, implying that the BC binds:</p>
-<p><span class="math display">\[px^i = wl^i + rk^i.\]</span></p></li>
-<li><p>Moreover: <span id="eq-MRS_i"><span class="math display">\[
-  MRS_{1,2}^i = \frac{p_1}{p_2},\quad \forall i\in\{A,B\}.
-   \tag{13}\]</span></span></p></li>
-<li><p><a href="#eq-MRS_i" class="quarto-xref">Equation&nbsp;13</a> implies:</p>
+<p>Consumer <span class="math inline">\(i\)</span> solves: <span id="eq-UMP"><span class="math display">\[
+\begin{aligned}
+&amp;\max_{x^i} u(x^i) \\
+&amp;\text{s.t. } px^i \leq wl^i + rk^i.
+\end{aligned}
+\tag{11}\]</span></span></p>
+<p>Observe that since consumers own labor and capital, their income come from renting out these factors of production. The FONC yields: <span id="eq-FOC_UMP"><span class="math display">\[
+u'_j(x^i) = \lambda_i p_j, \quad\forall j=1,2.
+\tag{12}\]</span></span></p>
+<p>Since <span class="math inline">\(u'_j&gt;0\)</span> we must have <span class="math inline">\(\lambda &gt; 0\)</span> in optimality, implying that the BC binds: <span class="math display">\[
+px^i = wl^i + rk^i.
+\]</span></p>
+<p>Moreover: <span id="eq-MRS_i"><span class="math display">\[
+MRS_{1,2}^i = \frac{p_1}{p_2},\quad \forall i\in\{A,B\}.
+\tag{13}\]</span></span></p>
+<p><a href="#eq-MRS_i" class="quarto-xref">Equation&nbsp;13</a> implies:</p>
 <p><span class="math display">\[
-  \frac{x^i_2}{x^i_1} = \frac{p_1}{p_2} \quad \forall i,
-  \]</span></p>
-<p>which together with the binding BC provide the optimal consumption bundle for each consumer as function of factor prices and endowments.</p></li>
-<li><p>In particular:</p>
+\frac{x^i_2}{x^i_1} = \frac{p_1}{p_2} \quad \forall i,
+\]</span></p>
+<p>which together with the binding BC provide the optimal consumption bundle for each consumer as function of factor prices and endowments. In particular:</p>
 <p><span id="eq-demand_conso"><span class="math display">\[
-  x_j^i = \frac{wl^i + rk^i}{2p_j},\quad i\in\{A, B\},\quad j\in\{1, 2\}.
-   \tag{14}\]</span></span></p></li>
-<li><p>Denote the total endowment <span class="math inline">\(l=\sum_i l^i\)</span> and <span class="math inline">\(k= \sum_i k^i.\)</span></p></li>
-<li><p>By the market clearing condition for good 1:</p>
-<p><span id="eq-MC_x1"><span class="math display">\[
-  \begin{aligned}
-  x_1^A + x_1^B &amp;= y_1 = F^1(K_1, L_1) = K_1^a L_1^b \\
-  \frac{wl + rk}{2p_1} &amp;= K_1^a L_1^b.
-  \end{aligned}
-   \tag{15}\]</span></span></p></li>
-<li><p>Likewise for the second good:</p>
-<p><span id="eq-MC_x2"><span class="math display">\[
-  \frac{wl + rk}{2p_2} = K_2^b L_2^a.
-   \tag{16}\]</span></span></p></li>
-<li><p>Dividing <a href="#eq-MC_x2" class="quarto-xref">Equation&nbsp;16</a> by <a href="#eq-MC_x1" class="quarto-xref">Equation&nbsp;15</a> side by side yields:</p>
-<p><span id="eq-prices_UMP"><span class="math display">\[
-  \frac{p_1}{p_2} = \frac{K_2^b L_2^a}{K_1^a L_1^b}.
-   \tag{17}\]</span></span></p></li>
-</ul>
-<p>Next firms optimize.</p>
+x_j^i = \frac{wl^i + rk^i}{2p_j},\quad i\in\{A, B\},\quad j\in\{1, 2\}.
+\tag{14}\]</span></span></p>
+<p>Denote the total endowment <span class="math inline">\(l=\sum_i l^i\)</span> and <span class="math inline">\(k= \sum_i k^i.\)</span> By the market clearing condition for good 1: <span id="eq-MC_x1"><span class="math display">\[
+\begin{aligned}
+x_1^A + x_1^B &amp;= y_1 = F^1(K_1, L_1) = K_1^a L_1^b \\
+\frac{wl + rk}{2p_1} &amp;= K_1^a L_1^b.
+\end{aligned}
+\tag{15}\]</span></span></p>
+<p>Likewise for the second good: <span id="eq-MC_x2"><span class="math display">\[
+\frac{wl + rk}{2p_2} = K_2^b L_2^a.
+\tag{16}\]</span></span></p>
+<p>Dividing <a href="#eq-MC_x2" class="quarto-xref">Equation&nbsp;16</a> by <a href="#eq-MC_x1" class="quarto-xref">Equation&nbsp;15</a> side by side yields: <span id="eq-prices_UMP"><span class="math display">\[
+\frac{p_1}{p_2} = \frac{K_2^b L_2^a}{K_1^a L_1^b}.
+\tag{17}\]</span></span></p>
+<p>Next we consider firms, who seek to maximize profits.</p>
 </section>
 <section id="pmp" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="pmp"><span class="header-section-number">6.3</span> PMP</h2>
-<ul>
-<li><p>Each firm <span class="math inline">\(j=1,2\)</span> solves:</p>
+<p>Each firm <span class="math inline">\(j=1,2\)</span> solves their profit maximization problem (PMP):</p>
 <p><span id="eq-PMPj"><span class="math display">\[
-  \max_{K_j, L_j} \pi_j = p_j F^j(K_j, L_j) - rK_j - wL_j.
-   \tag{18}\]</span></span></p></li>
-<li><p>FONC yields:</p>
-<p><span id="eq-PMPj_FOC"><span class="math display">\[
-  p_j F_K^j = r, \quad p_j F_L^j = w.
-   \tag{19}\]</span></span></p></li>
-<li><p>Hence:</p>
-<p><span id="eq-prices_PMP"><span class="math display">\[
-  \begin{aligned}
-  \frac{p_1}{p_2} &amp;= \frac{F_K^2}{F_K^1} = \frac{F_L^2}{F_L^1} \\
-  \frac{p_1}{p_2}&amp;= MRT_{1,2}^K = MRT_{1,2}^L.
-  \end{aligned}
-   \tag{20}\]</span></span></p></li>
-<li><p>The <span class="math inline">\(MRT^K_{1,2}\)</span> is the rate at which the economy transforms the second good into the first good using capital.</p></li>
-<li><p>Observe that <a href="#eq-MRS_i" class="quarto-xref">Equation&nbsp;13</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> together say that at an optimum, the economy transforms one good for the other at the rate consumers are willing to substitute one for the other.</p></li>
-<li><p>From <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> and the fact that <span class="math inline">\(a+b=1,\)</span> we have:</p>
-<p><span id="eq-rels_K"><span class="math display">\[
-  \begin{aligned}
-  \frac{p_1}{p_2} = \frac{F_K^2}{F_K^1} &amp;= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
-  \frac{b K_2^{b-1} L_2^a}{a K_1^{a-1} L_1^b} &amp;= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
-  \implies \frac{K_2}{K_1} &amp;= \frac{b}{a}.
-  \end{aligned}
-   \tag{21}\]</span></span></p></li>
-</ul>
+\max_{K_j, L_j} \pi_j = p_j F^j(K_j, L_j) - rK_j - wL_j.
+\tag{18}\]</span></span></p>
+<p>In optimality: <span id="eq-PMPj_FOC"><span class="math display">\[
+p_j F_K^j = r, \quad p_j F_L^j = w.
+\tag{19}\]</span></span></p>
+<p>Hence: <span id="eq-prices_PMP"><span class="math display">\[
+\begin{aligned}
+\frac{p_1}{p_2} &amp;= \frac{F_K^2}{F_K^1} = \frac{F_L^2}{F_L^1} \\
+\frac{p_1}{p_2}&amp;= MRT_{1,2}^K = MRT_{1,2}^L.
+\end{aligned}
+\tag{20}\]</span></span></p>
+<p>The <span class="math inline">\(MRT^K_{1,2}\)</span> is the rate at which the economy transforms the second good into the first good using capital. Observe that <a href="#eq-MRS_i" class="quarto-xref">Equation&nbsp;13</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> together say that at an optimum, the economy transforms one good for the other at the rate consumers are willing to substitute one for the other. From <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> and the fact that <span class="math inline">\(a+b=1,\)</span> we have: <span id="eq-rels_K"><span class="math display">\[
+\begin{aligned}
+\frac{p_1}{p_2} = \frac{F_K^2}{F_K^1} &amp;= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
+\frac{b K_2^{b-1} L_2^a}{a K_1^{a-1} L_1^b} &amp;= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
+\implies \frac{K_2}{K_1} &amp;= \frac{b}{a}.
+\end{aligned}
+\tag{21}\]</span></span></p>
+<p>We will now solve for the CEA of this economy using the market clearing conditions.</p>
 </section>
 <section id="the-cea" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="the-cea"><span class="header-section-number">6.4</span> The CEA</h2>
-<ul>
-<li><p>Combining <a href="#eq-rels_K" class="quarto-xref">Equation&nbsp;21</a> and the market clearing condition for the capital market <span class="math inline">\(K_1 + K_2 = k,\)</span> we can solve for the optimal values of capital. In particular,</p>
+<p>Combining <a href="#eq-rels_K" class="quarto-xref">Equation&nbsp;21</a> and the market clearing condition for the capital market <span class="math inline">\(K_1 + K_2 = k,\)</span> we can solve for the optimal values of capital. In particular,</p>
 <p><span id="eq-allo_K"><span class="math display">\[
-  K_1 = a k, \quad K_2 = b k.
-   \tag{22}\]</span></span></p></li>
-<li><p>From <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> and the fact that <span class="math inline">\(a+b=1,\)</span> we have:</p>
-<p><span id="eq-rels_L"><span class="math display">\[
-  \frac{L_2}{L_1} = \frac{a}{b}.
-   \tag{23}\]</span></span></p></li>
-<li><p>Again, combining <a href="#eq-rels_L" class="quarto-xref">Equation&nbsp;23</a> and the market clearing condition for the labor market <span class="math inline">\(L_1 + L_2 = l,\)</span> we obtain:</p>
+K_1 = a k, \quad K_2 = b k.
+\tag{22}\]</span></span></p>
+<p>From <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> and the fact that <span class="math inline">\(a+b=1,\)</span> we have: <span id="eq-rels_L"><span class="math display">\[
+\frac{L_2}{L_1} = \frac{a}{b}.
+\tag{23}\]</span></span></p>
+<p>Again, combining <a href="#eq-rels_L" class="quarto-xref">Equation&nbsp;23</a> and the market clearing condition for the labor market <span class="math inline">\(L_1 + L_2 = l,\)</span> we obtain:</p>
 <p><span id="eq-allo_L"><span class="math display">\[
-  L_1 = a l, \quad L_2 = bl.
-   \tag{24}\]</span></span></p></li>
-<li><p>Having computed factor demands, we can substitute these values into <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> to determine equilibrium price ratio <span class="math inline">\(p_1/p_2\)</span></p></li>
-<li><p>We can then normalize <span class="math inline">\(p_2\equiv 1,\)</span> which implies</p>
-<p><span id="eq-price_x1"><span class="math display">\[
-  p_1 = \frac{b}{a}\left(\frac{k}{l}\right)^{b-a}.
-   \tag{25}\]</span></span></p></li>
-<li><p>Factor prices can then be determined from <a href="#eq-PMPj_FOC" class="quarto-xref">Equation&nbsp;19</a></p></li>
-<li><p>We can then compute <span class="math inline">\(x^A, x^B\)</span> by substituting factor and consumption prices into <a href="#eq-demand_conso" class="quarto-xref">Equation&nbsp;14</a></p></li>
-</ul>
+L_1 = a l, \quad L_2 = bl.
+\tag{24}\]</span></span></p>
+<p>Having computed factor demands, we can substitute these values into <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> to determine equilibrium price ratio <span class="math inline">\(p_1/p_2\)</span>. We can then normalize <span class="math inline">\(p_2\equiv 1,\)</span> to obtain: <span id="eq-price_x1"><span class="math display">\[
+p_1 = \frac{b}{a}\left(\frac{k}{l}\right)^{b-a}.
+\tag{25}\]</span></span></p>
+<p>Factor prices can then be determined from <a href="#eq-PMPj_FOC" class="quarto-xref">Equation&nbsp;19</a>. The equilibrium allocations <span class="math inline">\(x^A, x^B\)</span> can be determined by substituting factor and consumption prices into <a href="#eq-demand_conso" class="quarto-xref">Equation&nbsp;14</a>.</p>
 </section>
 <section id="the-social-planners-problem-in-a-pure-exchange-economy" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> The social planner’s problem in a pure exchange economy</h1>
@@ -838,42 +815,31 @@ e &amp;= (100, 350, 100, 50) \\
 <p>where <span class="math inline">\(w_i\)</span> are social welfare weights. Note that there are no prices in the social planner’s problem (SPP), why is that? In a decentralized economy, selfish interest and prices guide individuals to efficient decisions. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently.</p>
 <section id="the-pea-in-a-pure-exchange-economy" class="level3" data-number="7.0.1">
 <h3 data-number="7.0.1" class="anchored" data-anchor-id="the-pea-in-a-pure-exchange-economy"><span class="header-section-number">7.0.1</span> The PEA in a pure exchange economy</h3>
-<ul>
-<li><p>The KKT conditions yield: <span class="math display">\[
+<p>The KKT conditions for the SPP’s problem: <span class="math display">\[
 \begin{aligned}
-  w^i u^i_j(x^i) &amp;= \lambda_j, \quad \forall j\in J, \: i\in I, \\
-  \sum_{i\in I} x^i_j &amp;= \sum_{i\in I} e^i_j, \quad \forall j\in J.
+    w^i u^i_j(x^i) &amp;= \lambda_j, \quad \forall j\in J, \: i\in I, \\
+    \sum_{i\in I} x^i_j &amp;= \sum_{i\in I} e^i_j, \quad \forall j\in J.
 \end{aligned}
-\]</span></p></li>
-<li><p>In this particular example consumers have identical preferences. Hence:</p>
+\]</span></p>
+<p>Consumers have identical preferences. Hence: <span class="math display">\[
+\begin{aligned}
+w^A u^A_j(x^A) &amp;= w^B u^B_j(x^B) = \lambda_j\\
+w^A x_j^A &amp;= w^B x_j^B, \\
+\implies \frac{x_j^A}{x_j^B} &amp;= \frac{w^A}{w^B}, \quad j=1,2.
+\end{aligned}
+\]</span></p>
+<p>This together with the binding feasibility constraints characterize the PEA for this economy:</p>
 <p><span class="math display">\[
-  \begin{aligned}
-  w^A u^A_j(x^A) &amp;= w^B u^B_j(x^B) = \lambda_j\\
-  w^A x_j^A &amp;= w^B x_j^B, \\
-  \implies \frac{x_j^A}{x_j^B} &amp;= \frac{w^A}{w^B}, \quad j=1,2.
-  \end{aligned}
-  \]</span></p></li>
-<li><p>This together with the binding feasibility constraints characterize the PEA for this economy:</p>
-<p><span class="math display">\[
-  x^A = w^A e, \quad x^B = w^B e.
-  \]</span></p></li>
-<li><p>Hence in a pure exchange economy the PEA is proportional to the social weight of the individual. If the social weights are equal, the aggregate endowments will be divided equally among the consumers. The results will be different if:</p>
-<ul>
-<li>Social weights are different</li>
-<li>Preferences are different</li>
-</ul></li>
-</ul>
+x^A = w^A e, \quad x^B = w^B e.
+\]</span></p>
+<p>Thus in a pure exchange economy the PEA is proportional to the social weight of the individual. If the social weights are equal, the aggregate endowments will be divided equally among the consumers. In general the results will be different if social weights are different or preferences are different among consumers.</p>
 </section>
 <section id="the-social-planners-problem-in-a-production-economy" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="the-social-planners-problem-in-a-production-economy"><span class="header-section-number">7.1</span> The social planner’s problem in a production economy</h2>
-<ul>
-<li><p>According to the FWT the CEA in the production economy also Pareto efficient</p></li>
-<li><p>Let us show that the CEA is also a PEA, i.e., that the FWT is verified in this production economy.</p></li>
-<li><p>A PEA consists of a vector of consumption goods and factors of production <span class="math inline">\((x_i)_{i\in I}, (K_j, L_j)_{j=J}\)</span> that maximizes aggregate welfare subject to feasibility constraints</p></li>
-</ul>
+<p>According to the FWT the CEA in the production economy also Pareto efficient. Let us show that the CEA is also a PEA, i.e., that the FWT is verified in this production economy. A PEA consists of a vector of consumption goods and factors of production <span class="math inline">\((x_i)_{i\in I}, (K_j, L_j)_{j=J}\)</span> that maximizes aggregate welfare subject to feasibility constraints.</p>
 <section id="the-pea-in-a-production-economy" class="level3" data-number="7.1.1">
 <h3 data-number="7.1.1" class="anchored" data-anchor-id="the-pea-in-a-production-economy"><span class="header-section-number">7.1.1</span> The PEA in a production economy</h3>
-<p>The social planner’s problem:</p>
+<p>The social planner’s problem for a production economy reads:</p>
 <p><span id="eq-SPP"><span class="math display">\[
 \max_{(x^i)_{i\in I}, (K_j, L_j)_{j\in J}} \sum_{i\in I} w^i u^i(x^i) \\
 \text{s.t. } \begin{cases}
@@ -883,10 +849,9 @@ e &amp;= (100, 350, 100, 50) \\
 \end{cases},
 \tag{27}\]</span></span></p>
 <p>where <span class="math inline">\(w_i\)</span> are social welfare weights.</p>
-<ul>
-<li><p>The first constraint is the feasibility constraint for each consumption good</p></li>
-<li><p>The last two constraints are feasibility constraints for the factors of production</p></li>
-</ul>
+<div id="rem-SPPProdEco" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em>. </span>Observe that the first constraint in the SPP is the feasibility constraint on each consumption good. The last two constraints are feasibility constraints on the factors of production.</p>
+</div>
 <p>To solve the SPP, we first set up the Lagrangian:</p>
 <p><span id="eq-SPP_Lang"><span class="math display">\[
 \begin{aligned}
@@ -904,21 +869,18 @@ e &amp;= (100, 350, 100, 50) \\
     \frac{\partial \mathcal{L}}{\partial L_j} &amp;= 0 \iff \lambda_j MPL_j = \mu_L.
 \end{aligned}
 \]</span></p>
-<ul>
-<li><p>Observe that <span class="math inline">\(\lambda_j&gt;0\)</span> for all good <span class="math inline">\(j\)</span> and <span class="math inline">\(\mu_K&gt;0\)</span>, <span class="math inline">\(\mu_L&gt;0\)</span>, implying that the feasibility constraints bind at a PEA.</p></li>
-<li><p>From the FOC w.r.t to the consumption good we obtain: <span id="eq-SPP_FOC"><span class="math display">\[
-  MRS^A_{1,2}(x^A) = MRS^B_{1,2}(x^B).
-   \tag{29}\]</span></span></p></li>
-<li><p>From the FOC w.r.t to factors:</p>
+<p>Observe that <span class="math inline">\(\lambda_j&gt;0\)</span> for all good <span class="math inline">\(j\)</span> and <span class="math inline">\(\mu_K&gt;0\)</span>, <span class="math inline">\(\mu_L&gt;0\)</span>, implying that the feasibility constraints bind at a PEA. From the FOC w.r.t to the consumption good we obtain: <span id="eq-SPP_FOC"><span class="math display">\[
+MRS^A_{1,2}(x^A) = MRS^B_{1,2}(x^B).
+\tag{29}\]</span></span></p>
+<p>From the FOC w.r.t to factors:</p>
 <p><span class="math display">\[
-  \begin{aligned}
-      \lambda_1 MPK_1 = \lambda_2 MPK_2 \iff \frac{\lambda_1}{\lambda_2} &amp;= MRT^K_{1,2} \\
-      \lambda_1 MPL_1 = \lambda_2 MPL_2 \iff \frac{\lambda_1}{\lambda_2} &amp;= MRT^L_{1,2} \\
-      \frac{MPK_1}{MPL_1} = \frac{MPK_2}{MPL_2} \iff MRTS^1_{K,L} &amp;= MRTS^2_{K,L}.
-  \end{aligned}
-  \]</span></p></li>
-<li><p>These conditions being satisfied by the WEA, implying that the WEA is also PE.</p></li>
-</ul>
+\begin{aligned}
+    \lambda_1 MPK_1 = \lambda_2 MPK_2 \iff \frac{\lambda_1}{\lambda_2} &amp;= MRT^K_{1,2} \\
+    \lambda_1 MPL_1 = \lambda_2 MPL_2 \iff \frac{\lambda_1}{\lambda_2} &amp;= MRT^L_{1,2} \\
+    \frac{MPK_1}{MPL_1} = \frac{MPK_2}{MPL_2} \iff MRTS^1_{K,L} &amp;= MRTS^2_{K,L}.
+\end{aligned}
+\]</span></p>
+<p>These conditions being satisfied by the CEA, implying that the CEA is also a PEA.</p>
 </section>
 </section>
 </section>
@@ -944,7 +906,8 @@ Answer
 <li><p>Effectively we maximize <span class="math inline">\(pq - NSC(q)\)</span> (we forget about the sunk costs), which is convex in <span class="math inline">\(q\)</span></p></li>
 <li><p>FOC gives: <span class="math display">\[p = MC(q) \iff p = 4q - 5 \iff q = (p+5)/4\]</span></p></li>
 <li><p>Firm produces iff revenue covers nonsunk costs, i.e., if price is greater than ANSC. Shutdown point (crossing point between MC and ANCS):</p>
-<p><span class="math display">\[p = MC(q) = ANSC(q) = \frac{5}{q}-5+2q \\
+<p><span class="math display">\[
+  p = MC(q) = ANSC(q) = \frac{5}{q}-5+2q \\
   \iff q=\sqrt{2.5}
   \implies p = 4\sqrt{2.5} - 5 \approx 1.32.
   \]</span></p>
