@@ -231,6 +231,16 @@ window.Quarto = {
   <li><a href="#general-equilibrium-with-production" id="toc-general-equilibrium-with-production" class="nav-link" data-scroll-target="#general-equilibrium-with-production"><span class="header-section-number">6</span> General equilibrium with production</a>
   <ul class="collapse">
   <li><a href="#adding-production-to-the-economy" id="toc-adding-production-to-the-economy" class="nav-link" data-scroll-target="#adding-production-to-the-economy"><span class="header-section-number">6.1</span> Adding production to the economy</a></li>
+  <li><a href="#ump" id="toc-ump" class="nav-link" data-scroll-target="#ump"><span class="header-section-number">6.2</span> UMP</a></li>
+  <li><a href="#pmp" id="toc-pmp" class="nav-link" data-scroll-target="#pmp"><span class="header-section-number">6.3</span> PMP</a></li>
+  <li><a href="#the-cea" id="toc-the-cea" class="nav-link" data-scroll-target="#the-cea"><span class="header-section-number">6.4</span> The CEA</a></li>
+  </ul></li>
+  <li><a href="#the-social-planners-problem-spp" id="toc-the-social-planners-problem-spp" class="nav-link" data-scroll-target="#the-social-planners-problem-spp"><span class="header-section-number">7</span> The social planner’s problem (SPP)</a>
+  <ul class="collapse">
+  <li><a href="#the-spp-in-a-pure-exchange-economy" id="toc-the-spp-in-a-pure-exchange-economy" class="nav-link" data-scroll-target="#the-spp-in-a-pure-exchange-economy"><span class="header-section-number">7.1</span> The SPP in a pure-exchange economy</a></li>
+  <li><a href="#the-pea-in-a-pure-exchange-economy" id="toc-the-pea-in-a-pure-exchange-economy" class="nav-link" data-scroll-target="#the-pea-in-a-pure-exchange-economy"><span class="header-section-number">7.2</span> The PEA in a pure exchange economy</a></li>
+  <li><a href="#the-spp-in-a-production-economy" id="toc-the-spp-in-a-production-economy" class="nav-link" data-scroll-target="#the-spp-in-a-production-economy"><span class="header-section-number">7.3</span> The SPP in a production economy</a></li>
+  <li><a href="#the-pea-in-a-production-economy" id="toc-the-pea-in-a-production-economy" class="nav-link" data-scroll-target="#the-pea-in-a-production-economy"><span class="header-section-number">7.4</span> The PEA in a production economy</a></li>
   </ul></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">8</span> Exercises</a></li>
   </ul>
@@ -345,7 +355,7 @@ window.Quarto = {
 <div id="fig-PEScurve" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-PEScurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="88daefd8" class="cell" data-execution_count="5">
+<div id="ad52add7" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -381,7 +391,7 @@ C'(q) = a q + b = p \iff q = \frac{p - b}{a}.
 <div id="fig-profFunc" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-profFunc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="32eaadad" class="cell" data-execution_count="6">
+<div id="b565abc9" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -399,7 +409,7 @@ Figure&nbsp;2: Profit as a function of market price
 <div id="fig-linearSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-linearSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="80177b95" class="cell" data-execution_count="7">
+<div id="97ca8100" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -427,7 +437,7 @@ Figure&nbsp;3: A SR upward sloping supply curve <span class="math inline">\(q = 
 <div id="fig-SRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="ec425393" class="cell" data-execution_count="8">
+<div id="b815c82d" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -451,7 +461,7 @@ Figure&nbsp;4: SR supply curve
 <div id="fig-LRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-LRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="235dff49" class="cell" data-execution_count="9">
+<div id="3bfb5410" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -500,20 +510,14 @@ q^* = 100 - 2p^* = \frac{110N}{8 + N}, \quad N \leq 61.
 <h2 data-number="3.2" class="anchored" data-anchor-id="long-run-equilibrium"><span class="header-section-number">3.2</span> Long-run equilibrium</h2>
 <p>In a competitive market, firms can freely enter or exit. If there is an opportunity to make <strong>economic profits</strong> in a market, firms will enter, pushing down market prices and drive away profits. Note that making profits does not imply making economic profits. Economic profits take into account the opportunity cost of the firm. For instance, if leaving money in a bank earns an interest of 5% per month and the firm is generating less than 5% return on investment, it is not making economic profits even though it is making profits. A long-run equilibrium is reached when the following conditions are satisfied:</p>
 <ol type="1">
-<li>Every firm is maximizing profits: <span class="math inline">\(p=MC(q)\)</span></li>
-<li>Each firm makes zero economic profits: <span class="math inline">\(p=AC(q)\)</span>
-<ul>
-<li>This means that firms make the same profits in other competitive markets (hence no incentives for other firms to enter or for existing firms to exit)</li>
-</ul></li>
-<li>Market demand equal to LR market supply
-<ul>
-<li><span class="math inline">\(q^S(p) = q^D(p)\)</span></li>
-</ul></li>
+<li>Every firm is <strong>maximizing profits</strong>: <span class="math inline">\(p=MC(q)\)</span></li>
+<li>Each firm makes <strong>zero economic profits</strong>: <span class="math inline">\(p=AC(q)\)</span>. This means that firms make the same profits in other competitive markets (hence no incentives for other firms to enter or for existing firms to exit)</li>
+<li>The market clears: market demand equal to LR market supply at the equilibrium price</li>
 </ol>
 <p>Hence in a LR equilibrium, firms are doing the best they can do in the market which they have no incentives to leave and no other firms have incentives to enter because of zero economic profits, and the price is such that supply is equal to demand.</p>
 <div class="{exm-LRPartialEQM}">
 <p>Consider a perfectly competitive industry populated by identical firms with the cost function <span class="math inline">\(C(q)=10 - 5q + 2q^2\)</span>. We would like to determine the long-run equilibrium of the market as well as the equilibrium number of firms operating in it.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<p>Denote the LR equilibrium quantity, price and market size <span class="math inline">\(q^*\)</span>, <span class="math inline">\(p^*\)</span> and <span class="math inline">\(N^*\)</span>, respectively.</p>
+<p>Denote the LR equilibrium quantity, price and market size <span class="math inline">\(q^*\)</span>, <span class="math inline">\(p^*\)</span> and <span class="math inline">\(N^*,\)</span> respectively.</p>
 <ul>
 <li><p>Since each firm in the market sets <span class="math inline">\(MC(q_i^*) = AC(q_i^*)\)</span>: <span class="math display">\[
   \begin{aligned}
@@ -545,7 +549,7 @@ e \equiv (e_1^A, e_2^A;e_1^B, e_2^B).
 <div id="fig-EWbox" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-EWbox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="f6f0caf4" class="cell" data-execution_count="10">
+<div id="8fa251e0" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -602,11 +606,11 @@ e^B &amp;=&amp; (100, 50)
 \end{eqnarray}
 \]</span> In autarky each individual can always consumer their endowments. The question is, can they do better with trade? If yes, how much (the allocation), and at which terms (the price ratio)? Let us first solve each individual’s UMP, which is: <span class="math display">\[
 \begin{aligned}
-&amp;\max_{x^i} u(x^i) = x_1^i x_2^i,
+&amp;\max_{x^i} u(x^i) = x_1^i x_2^i,\\
 &amp;\text{s.t. } px^i \leq pe^i,\quad i=A,B.
 \end{aligned}
 \]</span> In optimality: <span id="eq-FOCexm"><span class="math display">\[
-MRS^i_{1,2} = \frac{p_1}{p_2} \iff p_1x_1^i = p2_x2^i.
+MRS^i_{1,2} = \frac{p_1}{p_2} \iff p_1x_1^i = p_2x_2^i.
 \tag{5}\]</span></span> The budget constraints bind, implying: <span id="eq-BC"><span class="math display">\[
 \begin{aligned}
 px^i &amp;= pe^i \\
@@ -696,8 +700,7 @@ e &amp;= (100, 350, 100, 50) \\
 <section id="adding-production-to-the-economy" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="adding-production-to-the-economy"><span class="header-section-number">6.1</span> Adding production to the economy</h2>
 <p>In a production economy, consumers own factors of production, which they can rent out to firms to earn income. Firms choose the quantity of factors of production to maximize profit, taking as given the prices (of factors and final consumption goods). Consumers choose the quantity of consumption goods to maximize utility, taking as given prices (of factors and final consumption goods). In equilibrium, aggregate demand is equal to aggregate supply in each market, including markets of production factors.</p>
-<div id="exm-GEwithProd" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5</strong></span> Consider an economy two consumers with Cobb-Douglas utility function <span class="math display">\[
+<p>Consider an economy two consumers with Cobb-Douglas utility function <span class="math display">\[
 u(x_1^i, x_2^i) = x_1^i x_2^i
 \]</span> for each consumer <span class="math inline">\(i=A, B\)</span> whose endowments are: <span id="eq-endowment"><span class="math display">\[
 \begin{aligned}
@@ -723,6 +726,7 @@ y_2 = F^2(K_2, L_2) &amp;= K_2^b L_2^a,
 \end{aligned}
 \]</span> In other words, we are in an equilibrium if ever agent optimizes and markets clear. Let us first consider the consumers, who face the UMP.</p></li>
 </ol>
+</section>
 <section id="ump" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="ump"><span class="header-section-number">6.2</span> UMP</h2>
 <p>Consumer <span class="math inline">\(i\)</span> solves: <span id="eq-UMP"><span class="math display">\[
@@ -804,17 +808,22 @@ p_1 = \frac{b}{a}\left(\frac{k}{l}\right)^{b-a}.
 \tag{25}\]</span></span></p>
 <p>Factor prices can then be determined from <a href="#eq-PMPj_FOC" class="quarto-xref">Equation&nbsp;19</a>. The equilibrium allocations <span class="math inline">\(x^A, x^B\)</span> can be determined by substituting factor and consumption prices into <a href="#eq-demand_conso" class="quarto-xref">Equation&nbsp;14</a>.</p>
 </section>
-<section id="the-social-planners-problem-in-a-pure-exchange-economy" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> The social planner’s problem in a pure exchange economy</h1>
-<p>In a centralized economy, the benevolent social planner allocates resources in such a way that maximizes a social welfare function (weighted sum of utilities) subject to some feasibility constraints. A solution to the social planner’s problem is Pareto efficient. Mathematically, the social planner solves: <span id="eq-SPP_exchange"><span class="math display">\[
+</section>
+<section id="the-social-planners-problem-spp" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> The social planner’s problem (SPP)</h1>
+<p>In a centralized economy, the benevolent social planner allocates resources in such a way that maximizes a social welfare function (weighted sum of utilities) subject to some feasibility constraints. A solution to the social planner’s problem is Pareto efficient.</p>
+<section id="the-spp-in-a-pure-exchange-economy" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="the-spp-in-a-pure-exchange-economy"><span class="header-section-number">7.1</span> The SPP in a pure-exchange economy</h2>
+<p>Mathematically, the social planner solves: <span id="eq-SPP_exchange"><span class="math display">\[
 \begin{aligned}
 &amp;\max_{(x^i)_{i\in I}} \sum_{i\in I} w^i u^i(x^i) \\
 &amp;\text{s.t. } \sum_{i\in I} x^i_j \leq \sum_{i\in I} e^i_j, \quad \forall j\in J,
 \end{aligned}
 \tag{26}\]</span></span></p>
 <p>where <span class="math inline">\(w_i\)</span> are social welfare weights. Note that there are no prices in the social planner’s problem (SPP), why is that? In a decentralized economy, selfish interest and prices guide individuals to efficient decisions. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently.</p>
-<section id="the-pea-in-a-pure-exchange-economy" class="level3" data-number="7.0.1">
-<h3 data-number="7.0.1" class="anchored" data-anchor-id="the-pea-in-a-pure-exchange-economy"><span class="header-section-number">7.0.1</span> The PEA in a pure exchange economy</h3>
+</section>
+<section id="the-pea-in-a-pure-exchange-economy" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="the-pea-in-a-pure-exchange-economy"><span class="header-section-number">7.2</span> The PEA in a pure exchange economy</h2>
 <p>The KKT conditions for the SPP’s problem: <span class="math display">\[
 \begin{aligned}
     w^i u^i_j(x^i) &amp;= \lambda_j, \quad \forall j\in J, \: i\in I, \\
@@ -834,19 +843,22 @@ x^A = w^A e, \quad x^B = w^B e.
 \]</span></p>
 <p>Thus in a pure exchange economy the PEA is proportional to the social weight of the individual. If the social weights are equal, the aggregate endowments will be divided equally among the consumers. In general the results will be different if social weights are different or preferences are different among consumers.</p>
 </section>
-<section id="the-social-planners-problem-in-a-production-economy" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="the-social-planners-problem-in-a-production-economy"><span class="header-section-number">7.1</span> The social planner’s problem in a production economy</h2>
+<section id="the-spp-in-a-production-economy" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="the-spp-in-a-production-economy"><span class="header-section-number">7.3</span> The SPP in a production economy</h2>
 <p>According to the FWT the CEA in the production economy also Pareto efficient. Let us show that the CEA is also a PEA, i.e., that the FWT is verified in this production economy. A PEA consists of a vector of consumption goods and factors of production <span class="math inline">\((x_i)_{i\in I}, (K_j, L_j)_{j=J}\)</span> that maximizes aggregate welfare subject to feasibility constraints.</p>
-<section id="the-pea-in-a-production-economy" class="level3" data-number="7.1.1">
-<h3 data-number="7.1.1" class="anchored" data-anchor-id="the-pea-in-a-production-economy"><span class="header-section-number">7.1.1</span> The PEA in a production economy</h3>
+</section>
+<section id="the-pea-in-a-production-economy" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="the-pea-in-a-production-economy"><span class="header-section-number">7.4</span> The PEA in a production economy</h2>
 <p>The social planner’s problem for a production economy reads:</p>
 <p><span id="eq-SPP"><span class="math display">\[
-\max_{(x^i)_{i\in I}, (K_j, L_j)_{j\in J}} \sum_{i\in I} w^i u^i(x^i) \\
-\text{s.t. } \begin{cases}
-                \sum_{i\in I} x^i_j \leq F(K_j, L_j), &amp;\forall j \\
+\begin{aligned}
+&amp;\max_{(x^i)_{i\in I}, (K_j, L_j)_{j\in J}} \sum_{i\in I} w^i u^i(x^i) \\
+\text{s.t. }&amp;\begin{cases}
+                \sum_{i\in I} x^i_j \leq F(K_j, L_j) \:\forall j \\
                 \sum_{j\in J} K_j \leq \sum_i k^i \equiv k \\
                 \sum_{j\in J} L_j \leq \sum_i l^i \equiv l
-\end{cases},
+\end{cases}
+\end{aligned}
 \tag{27}\]</span></span></p>
 <p>where <span class="math inline">\(w_i\)</span> are social welfare weights.</p>
 <div id="rem-SPPProdEco" class="proof remark">
@@ -881,10 +893,6 @@ MRS^A_{1,2}(x^A) = MRS^B_{1,2}(x^B).
 \end{aligned}
 \]</span></p>
 <p>These conditions being satisfied by the CEA, implying that the CEA is also a PEA.</p>
-</section>
-</section>
-</section>
-</div>
 </section>
 </section>
 <section id="exercises" class="level1" data-number="8">
