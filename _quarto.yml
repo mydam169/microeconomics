@@ -27,7 +27,7 @@ website:
   sidebar: 
     background: "#D3D3D3"
     style: docked
-    collapse-level: 1
+    collapse-level: 2
     pinned: true
     contents:
       - section: "Course information"
@@ -42,8 +42,8 @@ website:
             href: contents/lecture_1.qmd
           - text: "Lecture 2"
             href: contents/lecture_2.qmd
-          # - text: "Lecture 3"
-          #   href: contents/lecture_3.qmd
+          - text: "Lecture 3"
+            href: contents/lecture_3.qmd
 
 format:
   html:

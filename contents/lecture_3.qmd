@@ -422,6 +422,13 @@ Denote the LR equilibrium quantity, price and market size $q^*$, $p^*$ and $N^*$
 
 # General equilibrium in a pure exchange economy
 
+The partial equlibrium we consider above concerns a single market. In a general equilibrium analysis, we examine all markets at the same time, taking into account the interconnectedness among different markets. We shall restrict our attention to the case of an exchange economy with two consumers and two consumption goods. Each individual has an initial endowment and they can trade with one another if they wish. 
+
+A list or a vector of __endowments__ keeps track of the amount of each good each consumer can enjoy when they do not trade:
+$$ 
+e \equiv (e_1^A, e_2^A;e_1^B, e_2^B).
+$$
+
 The Edgeworth box is a useful tool to represent an exchange economy with two consumers and two goods. The width and length of the box represent the total endowment of each good.
 
 ::: {#fig-EWbox fig-cap="An Edgeworth box with two goods and two consumers
@@ -431,22 +438,491 @@ mm.plotEWBox()
 ```
 :::
 
-
 An __allocation__ lists the amount of each good that each consumer consumes:
 $$ 
 x \equiv (x_1^A, x_2^A, x_1^B, x_2^B). 
 $$
     
-Note that $x$ can be different from $e$ with trade. An allocation is __feasible__ if $x \geq e$. In particular, this requires:
+Note that $x$ can be different from $e$ with trade. An allocation is __feasible__ if the total demand/allocation of each good does not exceed its total supply/endowment. In an economy of $N$ consumers and $L$ goods, this means:
 $$ 
 \begin{aligned}
-x_1^A + x_1^B &\leq e_1^A + e_1^B, \\
-x_2^A + x_2^B &\leq e_2^A + e_2^B. 
+\sum_{i=1}^N x^i_j \leq \sum_{i=1}^N e^i_j,\quad  j=1,\dots,L.
+\end{aligned}
+$$
+
+In our case of interest $i\in\{A, B\}$ and $L=2.$
+Observe that any point inside or on the side of the Edgeworth box is feasible.
+
+::: {#def-GE}
+## General equilibrium in an exchange economy
+
+We say that a price vector $p\in\mathbb{R^L_{++}}$ and an allocation $x\in\mathbb{R^L_{+}}$ constitute a competitive general equilibrium in an exchange economy if:
+
+1. The allocation $x$ is feasible
+2. Given prices, $x$ solves the UMP of every consumer
+3. The equilibrium price $p$ clears all markets. This means that the aggregate demand is equal to aggregate supply for each good:
+    $$ 
+    q_j^D(p_j) = q_j^S(p_j),\quad \forall j=1,\dots,L. 
+    $$
+    In the case of a pure exchange economy, aggregate supply is equal to total endowment
+:::
+
+Recall that for each consumer that has an interior solultion to their UMP, the marginal utility per dollar is equalized across the goods. Mathematically, this condition was:
+
+$$
+    \frac{U^i_k(x^*)}{p_k} = \frac{U^i_l(x^*)}{p_l},
+$${#eq-EQMfoc1}
+
+where $U^i_k(x^*)$ denotes the partial derivative of $U^i$, the utility function of consumer $i$ with respect to good $k$, evaluated at the optimal consumption bundle $x^{*}$ of this person, and $p_k$ is the price of good $k$. This condition must hold for all goods $k,l=1,\dots,L$ and for every individual $i=1,\dots,N$. Observe that @eq-EQMfoc1 is equivalent to:
+
+$$
+% \begin{aligned}
+    % \frac{U^i_k(x^*)}{U^i_l(x^*)} &= \frac{p_k}{p_l} \\
+    MRS^i_{k,l}(x^*) = \frac{p_k}{p_l}, \quad\forall i=1,\dots,N.
+% \end{aligned}
+$${#eq-EQMfoc2}
+
+Hence in equilibrium, the MRS is equal to the price ratio for each individual. This condition together with binding budget constraints will give us the optimal allocation as a function of prices (or more precisely price ratios), which can in turn be determined by the market clearning conditions.  Let us look at an example.
+
+
+::: {#exm-EQM-exchange-eco}
+Consider two consumers with identical preferences represented by a Cobb-Douglas utility function:
+$$
+u(x_1, x_2) = x_1 x_2.
+$$
+Their initial endowment is:
+
+$$
+\begin{eqnarray}
+e^A &=& (100, 350) \\
+e^B &=& (100, 50)
+\end{eqnarray}
+$$
+In autarky each individual can always consumer their endowments. The question is, can they do better with trade? If yes, how much (the allocation), and at which terms (the price ratio)? Let us first solve each individual's UMP, which is:
+$$
+\begin{aligned}
+&\max_{x^i} u(x^i) = x_1^i x_2^i,
+&\text{s.t. } px^i \leq pe^i,\quad i=A,B.
+\end{aligned}
+$$
+In optimality:
+$$
+MRS^i_{1,2} = \frac{p_1}{p_2} \iff p_1x_1^i = p2_x2^i.
+$${#eq-FOCexm}
+The budget constraints bind, implying:
+$$
+\begin{aligned}
+px^i &= pe^i \\
+\end{aligned}
+$${#eq-BC}
+@eq-FOCexm and @eq-BC provide a system of two equations in two unknowns for each consumer. Solving this system yields:
+$$
+\begin{aligned}
+x_1^i &= \frac{pe^i}{2p_1}, \quad i=A,B \\
+x_2^i &= \frac{pe^i}{2p_2}, \quad i=A,B. \\
+\end{aligned}
+$${#eq-OptAll}
+In order to solve for the price ratio, we only need to consider the market clearing condition for $L-1$ markets, which is just a single market in this example. Let us consider this condition for the market of $x_1$:
+$$
+\begin{aligned}
+x_1^A + x_1^B &= e_1^A + e_1^B \\
+\frac{pe^A + pe^B}{2p_1} &= e_1^A + e_1^B \\
+p_2(e^A_2 + e^B_2) &= p_1(e_1^A + e_1^B)
+\end{aligned}
+$$
+
+$$
+\frac{p_2}{p_1} = \frac{e_1^A + e_1^B}{e_2^A + e_2^B}.
+$${#eq-OptPrice}
+Substituting the specific values of endownments into @eq-OptAll and @eq-OptPrice, we obtain the equilibrium allocation and price ratio. In particular:
+
+$$
+\begin{aligned}
+(x_1^A, x_2^A) &= (137.5,275), \\
+(x_1^B, x_2^B) &= (62.5,125), \\
+\frac{p_2}{p_1} &=\frac{1}{2}.
+\end{aligned}
+$$
+
+Observe that in equilibrium, the first good is twice as valuable as the first one. This is no coincidence: each consumer extracts the same utility from each good, and yet the second one is twice as abundant as the first.
+:::
+
+
+::: {#rem-RemQM} 
+Note that in a market of $L$ goods, one good is chosen as a numeraire and the price ratios give us the prices of the other goods in the units of the numeraire. In a sense, this gives us the _real_ prices of goods, which, rather than _nominal_ prices, matter for optimal allocation. One can verify this intuition quickly by imagining a situation when prices double for all goods (i.e., water raises all boats by the same proportion): the nominal value of wealth doubles, but so does the cost of consumption, hence the optimal allocation should not be modified.
+:::
+
+# Welfare theorems
+
+The equilibrium we have found in the previous section is called a competitive equilibrium. It is _competitive_ in the sense that each person does what is in the best interest and the markets clear at the equilibrium prices. This is also referred to as a decentralized equilibrium because it is not the result of some benevolent central authority allocating aggregate resources in a way that they judge best. 
+
+Economic decisions are all about efficient allocation of resources. Economic problems exist because resources are scarce. A natural question arises, then, is the __competitive equilibrium allocation (CEA)__ obtained by each one acting in their best interest, efficient?
+
+In economics, the notion of efficiency of interest is Pareto efficiency. We say that an allocation is __Pareto efficient__ if there exists no other allocation that is strictly better off for someone without being worse off for someone else. In other words, an efficient allocation is one that cannot be improved for someone without hurting someone else. In a market with no market failures, it can be shown that under mild conditions, a CEA is Pareto efficient. This is the first welfare theorem (FWT). Graphically, the Pareto efficient allocation lies at the tangency of any two ICs in the Edgeworth box. This means that such allocations are not unique, and in fact the locus of all __Pareto efficient allocations (PEA)__ forms the so-called __contract curve__. How come we found only one of them in the previous example? This is because which Pareto efficient allocation can be achieved by market forces alone depends on the initial endowment. If we want to alter the outcome, we need to modify the starting point. This is the idea behind the second welfare theorem (SWT).
+
+Another natural question that one might ask is why would an economy prefer a different Pareto efficient allocation? Why bother redistributing resources to incentivise the market to achieve a different allocation at all? It is because on top of efficiency, societies also care about equality. If one starts out with abundant resources, then market forces alone tend to lead to an efficient allocation that gives more to the haves and less to the have-nots. 
+
+To sum up, the FWT tells us that when there are no market failures, the CEA is Pareto efficient. The SWT says that any Pareto efficient, i.e., any point on the contract curve, can be obtained by redistributing initial resources and then letting the market work (again under some conditions). Let us state these important results formally.
+
+::: {#thm-FWT}
+## First welfare theorem
+Every competitive equilibrium allocation is Pareto efficient.
+:::
+
+::: {#thm-SWT}
+## Second welfare theorem
+Consider an a efficient allocation $\bar{x}$ and a _redistribution_ of the initial endowment from $e$ to $\bar{e}$ such that $p\bar{e}^i = p\bar{x}^i$ for every individual $i=A, B$. Then every efficient allocation can be supported by a competitive equilibrium allocation.
+:::
+
+Let us illustrate the SWT by continuing with @exm-EQM-exchange-eco. The condition for an allocation to be a CEA was:
+$$
+\begin{eqnarray}
+MRS_{1,2}^A(x^A) &=& MRS_{1,2}^B(x^B) = \frac{p_1}{p_2} \\
+\frac{x_2^A}{x_1^A} &=& \frac{x_2^B}{x_1^B} = \frac{1}{2}.
+\end{eqnarray}
+$$
+Hence any allocation satisfying $x_2^i = 2 x_1^i$ is a CEA, which is also a PEA by the FWT. Given the initial endowment, we have obtained for this example:
+
+$$
+\begin{aligned}
+(x_1^A, x_2^A) &= (137.5,275), \\
+(x_1^B, x_2^B) &= (62.5,125).
 \end{aligned}
 $$
     
-* Any point _within_ the Edgeworth box is feasible
+But this is not the only PEA. For example, another PEA satisfying $x_2^i = 2 x_1^i$ is 
+$$
+\bar{x}^i \equiv (x_1^i, x_2^i) = (100, 200), \quad i=A,B.
+$$
+Can this this PEA emerge as a CEA? The SWT tells us yes. According to the SWT, we need to modify the initial endowments in such a way that the budget constraint still binds for each consumer:
+$$
+\begin{aligned}
+p\bar{x}^i &= p\bar{e}^i \\
+p_1 \bar{x}_1^i + p_2 \bar{x}_2^i &= p_1 \bar{e}_1^i + p_2 \bar{e}_2^i \\
+\bar{x}_1^i + \frac{p_2}{p_1} \bar{x}_2^i &= \bar{e}_1^i + \frac{p_2}{p_1} \bar{e}_2^i
+\end{aligned}
+$$
 
+$$
+\therefore \bar{x}_1^i + 2\bar{x}_2^i = \bar{e}_1^i + 2\bar{e}_2^i.
+$${#eq-temp}
+
+Substituting the values of the new PEA into @eq-temp for each consumer, we obtain two equations in four unknowns $\bar{e}_1^A, \bar{e}_2^A, \bar{e}_1^B, \bar{e}_2^B$. We need two other equations to solve for these unknowns; they come from the market clearing conditions. Putting all this together, we obtain the following system:
+$$
+\begin{aligned}
+\bar{x}_1^A + 2\bar{x}_2^A &= \bar{e}_1^A + 2\bar{e}_2^A, \\
+\bar{x}_1^B + 2\bar{x}_2^B &= \bar{e}_1^B + 2\bar{e}_2^B, \\
+\bar{x}_1^A + \bar{x}_1^B &= \bar{e}_1^A + \bar{e}_1^B, \\
+\bar{x}_2^A + \bar{x}_2^B &= \bar{e}_2^A + \bar{e}_2^B.
+\end{aligned}
+$$
+    
+Note that only three of the four equations from the system above are linearly independent (one degree of freedom), implying that solutions are not unique.
+One immediate solution is $\bar{e} = \bar{x}$. In other words, if we give each individual a PEA, they will stick to it.
+Observe that
+$$
+\begin{aligned}
+e &= (100, 350, 100, 50) \\
+\bar{e} &= (100, 200, 100, 200).
+\end{aligned}
+$$
+Thus one way to redistribute is to tax $A$ an amount equivalent to 150 units of the first good and give them to $B$. 
+
+
+# General equilibrium with production
+
+## Adding production to the economy
+
+* Consumers own factors of production, which they can rent out to firms to earn income
+
+* Firms choose the quantity of factors of production to maximize profit, taking as given the prices (of factors and final consumption goods)
+
+* Consumers choose the quantity of consumption goods to maximize utility, taking as given prices (of factors and final consumption goods) 
+
+* In equilibrium, aggregate demand is equal to aggregate supply in each market, including markets of production factors
+    
+::: {#exm-GEwithProd}
+
+* Consider an economy two consumers with Cobb-Douglas utility function
+    $$
+    u(x_1^i, x_2^i) = x_1^i x_2^i
+    $$ 
+    for each consumer $i=A, B$.
+
+* Their endowments:
+    $$
+    e^A = (k^A, l^A), \quad e^B = (k^B, l^B).
+    $${#eq-endowment}
+    
+* There are two firms in the economy, each producing one of the consumption goods according to a Cobb-Douglas technology:
+    
+    $$
+    \begin{aligned}
+    y_1 = F^1(K_1, L_1) &= K_1^a L_1^b, \\
+    y_2 = F^2(K_2, L_2) &= K_2^b L_2^a,
+    \end{aligned}
+    $$
+    
+    where $a+b=1$ and $a, b \in (0,1)$.
+    
+An allocation $(x_1^A, x_1^B, x_2^A, x_2^B, K_1, L_1, K_2, L_2)$ and a price vector $p=(p_1, p_2, w, r)$ constitute a competive equilibrium (or Walrasian equilibrium) the production economy if:
+
+1. Given prices, $(x_1^i, x_2^i)$ solves the UMP for each consumer $i\in\{A,B\}.$
+
+2. Given prices, $(K_j, L_j)$ solves the PMP for each firm $j\in \{1,2\}.$
+
+3. Prices are such that markets clear:
+    $$
+    \begin{aligned}
+    \text{Consumption goods:   }\sum_i x^i_j &= y_j \equiv F^j(K_j, L_j), \quad \forall j=1,2, \\
+    \text{Capital good:   }\sum_j K_j &= k^A + k^B, \\
+    \text{Labor good:   }\sum_j L_j &= l^A + l^B.
+    \end{aligned}
+    $$
+
+
+## UMP
+
+* Consumer $i$ solves:
+    $$
+    \max_{x^i} u(x^i) \text{    s.t.   } px^i \leq wl^i + rk^i.
+    $${#eq-UMP}
+    
+* FONC yields:
+    $$
+    u'_j(x^i) = \lambda_i p_j, \quad\forall j=1,2.
+    $${#eq-FOC_UMP}
+    
+* Since $u'_j>0$ we must have $\lambda > 0$ in optimality, implying that the BC binds:
+
+    $$px^i = wl^i + rk^i.$$
+    
+* Moreover:
+    $$
+    MRS_{1,2}^i = \frac{p_1}{p_2},\quad \forall i\in\{A,B\}.
+    $${#eq-MRS_i}
+    
+
+* @eq-MRS_i implies:
+    
+    $$
+    \frac{x^i_2}{x^i_1} = \frac{p_1}{p_2} \quad \forall i, 
+    $$
+    
+    which together with the binding BC provide the optimal consumption bundle for each consumer as function of factor prices and endowments.
+    
+* In particular:
+    
+    $$
+    x_j^i = \frac{wl^i + rk^i}{2p_j},\quad i\in\{A, B\},\quad j\in\{1, 2\}.
+    $${#eq-demand_conso}
+  
+* Denote the total endowment $l=\sum_i l^i$ and $k= \sum_i k^i.$
+
+* By the market clearing condition for good 1:
+    
+    $$
+    \begin{aligned}
+    x_1^A + x_1^B &= y_1 = F^1(K_1, L_1) = K_1^a L_1^b \\
+    \frac{wl + rk}{2p_1} &= K_1^a L_1^b.
+    \end{aligned}
+    $${#eq-MC_x1}
+    
+* Likewise for the second good:
+    
+    $$
+    \frac{wl + rk}{2p_2} = K_2^b L_2^a.
+    $${#eq-MC_x2}
+    
+* Dividing @eq-MC_x2 by @eq-MC_x1 side by side yields:
+
+    $$
+    \frac{p_1}{p_2} = \frac{K_2^b L_2^a}{K_1^a L_1^b}.
+    $${#eq-prices_UMP}
+
+Next firms optimize.
+
+## PMP
+
+* Each firm $j=1,2$ solves:
+    
+    $$
+    \max_{K_j, L_j} \pi_j = p_j F^j(K_j, L_j) - rK_j - wL_j.
+    $${#eq-PMPj}
+    
+* FONC yields:
+    
+    $$
+    p_j F_K^j = r, \quad p_j F_L^j = w.
+    $${#eq-PMPj_FOC}
+    
+* Hence:
+    
+    $$
+    \begin{aligned}
+    \frac{p_1}{p_2} &= \frac{F_K^2}{F_K^1} = \frac{F_L^2}{F_L^1} \\
+    \frac{p_1}{p_2}&= MRT_{1,2}^K = MRT_{1,2}^L.
+    \end{aligned}
+    $${#eq-prices_PMP}
+
+* The $MRT^K_{1,2}$ is the rate at which the economy transforms the second good into the first good using capital. 
+
+* Observe that @eq-MRS_i and @eq-prices_PMP together say that at an optimum, the economy transforms one good for the other at the rate consumers are willing to substitute one for the other.
+
+* From @eq-prices_UMP and @eq-prices_PMP and the fact that $a+b=1,$ we have:
+    
+    $$
+    \begin{aligned}
+    \frac{p_1}{p_2} = \frac{F_K^2}{F_K^1} &= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
+    \frac{b K_2^{b-1} L_2^a}{a K_1^{a-1} L_1^b} &= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
+    \implies \frac{K_2}{K_1} &= \frac{b}{a}.
+    \end{aligned}
+    $${#eq-rels_K}
+
+## The CEA
+
+* Combining @eq-rels_K and the market clearing condition for the capital market $K_1 + K_2 = k,$ we can solve for the optimal values of capital. In particular,
+
+    $$
+    K_1 = a k, \quad K_2 = b k.
+    $${#eq-allo_K}
+
+* From @eq-prices_UMP and @eq-prices_PMP and the fact that $a+b=1,$ we have:
+    
+    $$
+    \frac{L_2}{L_1} = \frac{a}{b}.
+    $${#eq-rels_L}
+    
+* Again, combining @eq-rels_L and the market clearing condition for the labor market $L_1 + L_2 = l,$ we obtain:
+    
+    $$
+    L_1 = a l, \quad L_2 = bl.
+    $${#eq-allo_L}
+
+* Having computed factor demands, we can substitute these values into @eq-prices_UMP to determine equilibrium price ratio $p_1/p_2$
+
+* We can then normalize $p_2\equiv 1,$ which implies
+    
+    $$
+    p_1 = \frac{b}{a}\left(\frac{k}{l}\right)^{b-a}.
+    $${#eq-price_x1}
+    
+
+* Factor prices can then be determined from @eq-PMPj_FOC
+
+* We can then compute $x^A, x^B$ by substituting factor and consumption prices into @eq-demand_conso
+
+# The social planner's problem in a pure exchange economy
+
+In a centralized economy, the benevolent social planner allocates resources in such a way that maximizes a social welfare function (weighted sum of utilities) subject to some feasibility constraints. A solution to the social planner's problem is Pareto efficient. Mathematically, the social planner solves:
+$$
+\begin{aligned}
+&\max_{(x^i)_{i\in I}} \sum_{i\in I} w^i u^i(x^i) \\
+&\text{s.t. } \sum_{i\in I} x^i_j \leq \sum_{i\in I} e^i_j, \quad \forall j\in J,
+\end{aligned}
+$${#eq-SPP_exchange}
+
+where $w_i$ are social welfare weights. Note that there are no prices in the social planner's problem (SPP), why is that? In a decentralized economy, selfish interest and prices guide individuals to efficient decisions. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently. 
+
+### The PEA in a pure exchange economy
+
+* The KKT conditions yield:
+$$
+\begin{aligned}
+    w^i u^i_j(x^i) &= \lambda_j, \quad \forall j\in J, \: i\in I, \\
+    \sum_{i\in I} x^i_j &= \sum_{i\in I} e^i_j, \quad \forall j\in J.
+\end{aligned}
+$$
+
+* In this particular example consumers have identical preferences. Hence:
+    
+    $$
+    \begin{aligned}
+    w^A u^A_j(x^A) &= w^B u^B_j(x^B) = \lambda_j\\
+    w^A x_j^A &= w^B x_j^B, \\
+    \implies \frac{x_j^A}{x_j^B} &= \frac{w^A}{w^B}, \quad j=1,2.
+    \end{aligned}
+    $$
+    
+
+* This together with the binding feasibility constraints characterize the PEA for this economy:
+    
+    $$
+    x^A = w^A e, \quad x^B = w^B e.
+    $$
+    
+* Hence in a pure exchange economy the PEA is proportional to the social weight of the individual. If the social weights are equal, the aggregate endowments will be divided equally among the consumers. The results will be different if:
+
+    * Social weights are different
+    * Preferences are different
+    
+## The social planner's problem in a production economy
+
+* According to the FWT the CEA in the production economy also Pareto efficient
+    
+* Let us show that the CEA is also a PEA, i.e., that the FWT is verified in this production economy.
+
+* A PEA consists of a vector of consumption goods and factors of production $(x_i)_{i\in I}, (K_j, L_j)_{j=J}$ that maximizes aggregate welfare subject to feasibility constraints
+
+### The PEA in a production economy
+
+The social planner's problem:
+
+$$
+\max_{(x^i)_{i\in I}, (K_j, L_j)_{j\in J}} \sum_{i\in I} w^i u^i(x^i) \\
+\text{s.t. } \begin{cases}
+                \sum_{i\in I} x^i_j \leq F(K_j, L_j), &\forall j \\
+                \sum_{j\in J} K_j \leq \sum_i k^i \equiv k \\
+                \sum_{j\in J} L_j \leq \sum_i l^i \equiv l
+\end{cases},
+$${#eq-SPP}
+
+where $w_i$ are social welfare weights.
+
+* The first constraint is the feasibility constraint for each consumption good
+
+* The last two constraints are feasibility constraints for the factors of production
+
+To solve the SPP, we first set up the Lagrangian:
+
+$$
+\begin{aligned}
+\mathcal{L} &= \sum_{i\in I} w^i u^i(x^i) \\
+&+ \sum_{j\in J} \lambda_j\left[F(K_j, L_j) - \sum_{i\in I}x^i_j\right] \\
+&+ \mu_K (k - \sum_{j\in J} K_j) \\
+&+ \mu_L (l - \sum_{j\in J} L_j).
+\end{aligned}
+$${#eq-SPP_Lang}
+    
+The FOCs yield:
+
+$$
+\begin{aligned}
+    \frac{\partial \mathcal{L}}{\partial x^i_j} &= 0 \iff w^i u^i_j(x^i) = \lambda_j, \quad \forall j\in J, \: i\in I, \\
+    \frac{\partial \mathcal{L}}{\partial K_j} &= 0 \iff \lambda_j MPK_j = \mu_K, \\
+    \frac{\partial \mathcal{L}}{\partial L_j} &= 0 \iff \lambda_j MPL_j = \mu_L. 
+\end{aligned}
+$$
+
+* Observe that $\lambda_j>0$ for all good $j$ and $\mu_K>0$, $\mu_L>0$, implying that the feasibility constraints bind at a PEA. 
+
+* From the FOC w.r.t to the consumption good we obtain:
+    $$
+    MRS^A_{1,2}(x^A) = MRS^B_{1,2}(x^B).
+    $${#eq-SPP_FOC}
+    
+* From the FOC w.r.t to factors:
+    
+    $$
+    \begin{aligned}
+        \lambda_1 MPK_1 = \lambda_2 MPK_2 \iff \frac{\lambda_1}{\lambda_2} &= MRT^K_{1,2} \\
+        \lambda_1 MPL_1 = \lambda_2 MPL_2 \iff \frac{\lambda_1}{\lambda_2} &= MRT^L_{1,2} \\
+        \frac{MPK_1}{MPL_1} = \frac{MPK_2}{MPL_2} \iff MRTS^1_{K,L} &= MRTS^2_{K,L}.
+    \end{aligned}
+    $$
+
+* These conditions being satisfied by the WEA, implying that the WEA is also PE.
+:::
 # Exercises
 
 ::: {#exr-SRSupply}
@@ -492,6 +968,22 @@ Determine the long-run equilibrium price, quantity and the number of firms.
 <summary>Answer</summary>
 See @exr-LRPEQM. Observe the change in demand and equilibrium of the market.
 </details>
+:::
+
+::: {#exr-PEPOpt}
+Consider a two-person two-good economy with the following preferences:
+$$
+\begin{align}
+    u_1(x_1, y_1) &= x_1y_1, \\
+    u_2(x_2, y_2) &= x_2y_2^2,
+\end{align}
+$$
+where $x_i$ and $y_i$ the amounts of good $x$ and good $y$ that individual $i$ consumes, respectively. Suppose that the first person has an initial endowment of $40$ units of $x$ and $160$ units of $y$ while the second has $240$ units of $x$ and $120$ units of $y$. 
+
+1. Represent this economy using and Edgeworth box.
+2. Define and compute the competitive equililibrium of this economy. Are the consumers better off with exchange (compared to eating their own endowments)?
+3. Define and solve the social planner's problem for this economy and determine the set of Pareto efficient allocations (the contract curve) of this economy. 
+4. Does the first welfare theorem hold for this economy? 
 :::
 
 
