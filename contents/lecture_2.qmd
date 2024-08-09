@@ -284,9 +284,10 @@ Consider the Cobb-Douglas production function $q = AK^a L^b$ where $A, a, b$ are
 # Technological progress
 
 A technical progress is a technical advance that allows firms to produce more with the same amount of inputs. In general a technical progress can be:
+
   * __Labor enhancing__ if  MPL increases by more than MPK
   * __Capital enhancing__ if MPK increases by more than MPL
-  * __Neutral__ if MPL and MPK increase by the same amount (in percentage terms)
+  * __Neutral__ if MPL and MPK increase by the same proportion
 
 Hence to determine the nature of the tech progress, we need to compare the relative change of the productivity of labor and capital following the change. The percentage change in the marginal product of each input can be expressed as:
 $$
