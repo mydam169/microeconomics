@@ -542,6 +542,126 @@
     ]
   },
   {
+    "objectID": "contents/lecture_4.html",
+    "href": "contents/lecture_4.html",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Unlike a competitive firm, who is a price-taker, a monopolist can determine the outpout level of the whole market and thus is a price-maker. A monopolist can choose any point on the demand curve: choosing the level of output is equivalent to choosing the price at which to sell the good.\nA monopoly emerges due to barriers to entry such as:\n\nStructural barriers: such as cost advantage or demand advantage of incumbent firms\nLegal barriers: such as patents\nStrategic barriers: incumbent firms can engage in price wars (matching low prices of competitors) to build reputation as an aggressive competitor and deter entry\n\n\n\n\nJust as any other firm, the objective of the monopolist is to maximize profits. The quantity supplied in a monopoly is the solution to the monopolist’s PMP, which is:\n\\[\n\\max_q \\pi = R(q) - C(q) = p(q) q - C(q),\n\\]\nwhere \\(p(q)\\) is the inverse demand function and \\(C(q)\\) is the firm’s total cost. Assuming differentiability, the FOC reads:\n\\[\n\\begin{aligned}\n\\pi'(q) = p(q) + p'(q)q - C'(q) &= 0 \\\\\np(q) + p'(q)q &= C'(q) \\\\\nMR(q) &= MC(q).\n\\end{aligned}\n\\tag{1}\\]\nAt the profit maximizing output, the monopolist equalizes marginal revenue (MR) and marginal cost (MC).\nIn order for the FOC to be sufficient, the SOC needs to be verified, i.e.,\n\\[\n\\pi''(q) = MR'(q) - MC'(q) \\leq 0,\n\\]\nmeaning that the slope of the marginal cost curve is greater or equal to that of the marginal revenue curve. This condition is clearly satisfied in the case of downward sloping MR and upward sloping MC (convex cost function).\nIf the SOC then the profit maximizing output is such that \\(MR(q) = MC(q)\\) since:\n\nIf \\(MR(q) &gt; MC(q)\\), raising output increases profits\nIf \\(MR(q) &lt; MC(q)\\), raising output hurts profits\n\n\n\n\nRecall that for a price-taker, the marginal revenue is the market price. For a monopolist, this is no longer true since the monopolist influences the market price via their output level. In particular, in a monopoly, MR is less than the market price whenever the law of demand holds (decreasing demand curve): \\[\nMR(q) = p(q) + p'(q)q &lt; p(q).\n\\tag{2}\\]\nHence as output increases, there are two opposing forces acting on the firm’s revenue. On the one hand, selling one additional unit yields an additional revenue equal to the price \\(p(q)\\). On the other hand, higher supply depresses the price of the good since the demand curve is downward sloping.\nMarginal revenue being less than the price implies that graphically the MR curve lies below the demand curve. Notice that the MR curve and the demand curves originate at the same height since \\(MR(0) = p(0).\\) This is the highest price anyone is willing to pay for the good (the maximum willingness to pay or reservation price).\n\nExample 1 Consider the linear inverse demand function \\(p(q) = a - bq\\) where \\(a, b &gt; 0\\). The marginal revenue is \\(RM(q) = R'(q) = a - 2bq,\\) which is twice as steep as the demand curve but originates at the same point \\((0,a)\\) as the demand curve. Suppose the market is a monopoly and the monopolist has constant marginal cost \\(MC(q)=c,\\) then monopolist maximizes profits by selling \\(q=\\frac{a-c}{2b}\\) at the price \\(p=\\frac{a+c}{2}\\). Observe that \\(a\\) measures the highest reservation price, if \\(a &lt; c\\) the market would cease to exist.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: A monopoly with linear demand and constant marginal cost. The monopoly price is higher and the quantity is lower than in a competitive market. The consumer surplus shrinks and there is a dead weight loss (DWL).\n\n\n\n\n\n\n\n\nBeing the only firm in the market, the monopolist has market power, but this does not mean it can set any price. Indeed, monopoly prices depend on the market demand, which is the aggegration of consumers’ demand, as we saw previously. The price and quantity combination of the monopolist is constrained by the market demand curve. Since the demand curve is in general downward sloping, in general it is not optimal for the monopolist to set prices as high as possible since as prices increase, the quantity demanded declines.\n\n\n\nThe monopolist does not have a supply curve since it is a price maker. Indeed, recall that the supply curve is constructed by associating each given price with a quantity that firms are willing to produce. In a monopoly there is no given price: for a monopolist, deciding how much to produce is equivalent to choosing at which price to sell; the two are determined simulatenously via the demand curve.\n\n\n\nMonopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). By reducing the price by 1%, the monopolist increases sales by more than 1% thereby increasing revenues. It will then have incentives to raise output (reduce prices) so long as it is on the inelastic part of the demand curve.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Going from the left to the right, the demand curve becomes less and less elastic even if its slope is constant.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#what-is-a-monopoly",
+    "href": "contents/lecture_4.html#what-is-a-monopoly",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Unlike a competitive firm, who is a price-taker, a monopolist can determine the outpout level of the whole market and thus is a price-maker. A monopolist can choose any point on the demand curve: choosing the level of output is equivalent to choosing the price at which to sell the good.\nA monopoly emerges due to barriers to entry such as:\n\nStructural barriers: such as cost advantage or demand advantage of incumbent firms\nLegal barriers: such as patents\nStrategic barriers: incumbent firms can engage in price wars (matching low prices of competitors) to build reputation as an aggressive competitor and deter entry",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#profit-maximizing-problem-pmp",
+    "href": "contents/lecture_4.html#profit-maximizing-problem-pmp",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Just as any other firm, the objective of the monopolist is to maximize profits. The quantity supplied in a monopoly is the solution to the monopolist’s PMP, which is:\n\\[\n\\max_q \\pi = R(q) - C(q) = p(q) q - C(q),\n\\]\nwhere \\(p(q)\\) is the inverse demand function and \\(C(q)\\) is the firm’s total cost. Assuming differentiability, the FOC reads:\n\\[\n\\begin{aligned}\n\\pi'(q) = p(q) + p'(q)q - C'(q) &= 0 \\\\\np(q) + p'(q)q &= C'(q) \\\\\nMR(q) &= MC(q).\n\\end{aligned}\n\\tag{1}\\]\nAt the profit maximizing output, the monopolist equalizes marginal revenue (MR) and marginal cost (MC).\nIn order for the FOC to be sufficient, the SOC needs to be verified, i.e.,\n\\[\n\\pi''(q) = MR'(q) - MC'(q) \\leq 0,\n\\]\nmeaning that the slope of the marginal cost curve is greater or equal to that of the marginal revenue curve. This condition is clearly satisfied in the case of downward sloping MR and upward sloping MC (convex cost function).\nIf the SOC then the profit maximizing output is such that \\(MR(q) = MC(q)\\) since:\n\nIf \\(MR(q) &gt; MC(q)\\), raising output increases profits\nIf \\(MR(q) &lt; MC(q)\\), raising output hurts profits",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#monopolistic-outcomes",
+    "href": "contents/lecture_4.html#monopolistic-outcomes",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Recall that for a price-taker, the marginal revenue is the market price. For a monopolist, this is no longer true since the monopolist influences the market price via their output level. In particular, in a monopoly, MR is less than the market price whenever the law of demand holds (decreasing demand curve): \\[\nMR(q) = p(q) + p'(q)q &lt; p(q).\n\\tag{2}\\]\nHence as output increases, there are two opposing forces acting on the firm’s revenue. On the one hand, selling one additional unit yields an additional revenue equal to the price \\(p(q)\\). On the other hand, higher supply depresses the price of the good since the demand curve is downward sloping.\nMarginal revenue being less than the price implies that graphically the MR curve lies below the demand curve. Notice that the MR curve and the demand curves originate at the same height since \\(MR(0) = p(0).\\) This is the highest price anyone is willing to pay for the good (the maximum willingness to pay or reservation price).\n\nExample 1 Consider the linear inverse demand function \\(p(q) = a - bq\\) where \\(a, b &gt; 0\\). The marginal revenue is \\(RM(q) = R'(q) = a - 2bq,\\) which is twice as steep as the demand curve but originates at the same point \\((0,a)\\) as the demand curve. Suppose the market is a monopoly and the monopolist has constant marginal cost \\(MC(q)=c,\\) then monopolist maximizes profits by selling \\(q=\\frac{a-c}{2b}\\) at the price \\(p=\\frac{a+c}{2}\\). Observe that \\(a\\) measures the highest reservation price, if \\(a &lt; c\\) the market would cease to exist.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: A monopoly with linear demand and constant marginal cost. The monopoly price is higher and the quantity is lower than in a competitive market. The consumer surplus shrinks and there is a dead weight loss (DWL).",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#common-misunderstandings-of-monopoly",
+    "href": "contents/lecture_4.html#common-misunderstandings-of-monopoly",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Being the only firm in the market, the monopolist has market power, but this does not mean it can set any price. Indeed, monopoly prices depend on the market demand, which is the aggegration of consumers’ demand, as we saw previously. The price and quantity combination of the monopolist is constrained by the market demand curve. Since the demand curve is in general downward sloping, in general it is not optimal for the monopolist to set prices as high as possible since as prices increase, the quantity demanded declines.\n\n\n\nThe monopolist does not have a supply curve since it is a price maker. Indeed, recall that the supply curve is constructed by associating each given price with a quantity that firms are willing to produce. In a monopoly there is no given price: for a monopolist, deciding how much to produce is equivalent to choosing at which price to sell; the two are determined simulatenously via the demand curve.\n\n\n\nMonopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). By reducing the price by 1%, the monopolist increases sales by more than 1% thereby increasing revenues. It will then have incentives to raise output (reduce prices) so long as it is on the inelastic part of the demand curve.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Going from the left to the right, the demand curve becomes less and less elastic even if its slope is constant.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#lerner-index",
+    "href": "contents/lecture_4.html#lerner-index",
+    "title": "Chapter 4. Monopoly",
+    "section": "2.1 Lerner index",
+    "text": "2.1 Lerner index\nThe Lerner index is the ratio between the markup (difference between the price and the marginal cost) and the price. It is thus also known as the markup index.\n\\[\n\\frac{p - MC(q)}{p}.\n\\tag{3}\\]\nObserve that for any perfectly competitive firm, the Lerner index is zero.\nRecall that the price-elasticity of demand for any price variation (not just small ones) is: \\[\n\\epsilon_{p,q} = \\frac{\\%\\Delta q}{\\%\\Delta p}\\frac{p}{q}\n\\implies \\frac{1}{\\epsilon_{p,q}} = \\frac{\\%\\Delta p}{\\%\\Delta q}\\frac{q}{p}.\n\\]\nHence for a small variation in quantity, we can write: \\[\n\\frac{1}{\\epsilon_{p,q}} = \\frac{\\partial p}{\\partial q}\\frac{q}{p}.\n\\tag{4}\\]\nFor a monopolist, since \\(MC(q) = MR(q) = p(q) + p'(q)q\\),\n\\[\n\\begin{aligned}\n\\frac{p - MC(q)}{p} &= \\frac{p(q) - p(q) - p'(q)q}{p(q)} \\\\\n&=\\frac{-p'(q)q}{p(q)} \\\\\n&= -\\frac{\\partial p}{\\partial q}\\frac{q}{p} \\\\\n&= - \\frac{1}{\\epsilon_{p,q}}.\n\\end{aligned}\n\\]\n\nTherefore the monopoly Lerner index is: \\[\n\\frac{p - MC(q)}{p} = - \\frac{1}{\\epsilon_{p,q}}.\n\\tag{5}\\]\nEquation 5 tells us that a monopolist’s ability to set price above the marginal cost (as captured its Lerner index) is inversely related to the price-elasticity of demand:\n\nOn more elastic portions of the demand curve, the Lerner index is small\nAs demand becomes relatively inelastic, the Lerner index rises\n\nAgain, a high Lerner index in general does not imply higher profits. In particular, profits per sale are represented by the gap between the price and the average cost, not the marginal cost\n\nExample 2 The Lerner index for a monopoly with constant marginal cost \\(c\\) and linear demand \\(p(q)=a-bq\\) is \\(\\frac{a-c}{a+c} &lt; 1:\\) the monopolist cannot have a markup over 100%.\n\n\nExample 3 Consider again a monopolist with constant marginal cost \\(c\\) facing a constant elasticity demand function \\(q(p)=ap^{-\\epsilon},\\) where \\(a\\) and \\(\\epsilon\\) are strictly positive. The Lerner index in this market is \\(1/\\epsilon,\\) indicating higher markup power for less elastic market.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#inverse-elasticity-pricing-rule-iepr",
+    "href": "contents/lecture_4.html#inverse-elasticity-pricing-rule-iepr",
+    "title": "Chapter 4. Monopoly",
+    "section": "2.2 Inverse elasticity pricing rule (IEPR)",
+    "text": "2.2 Inverse elasticity pricing rule (IEPR)\nThe IEPR can be derived from the monopoly Lerner index (Equation 5):\n\\[\np = \\frac{MC(q)}{1 + \\frac{1}{\\epsilon_{q,p}}}.\n\\tag{6}\\]\n\nExample 4 Consider the constant elasticity demand function above. Suppose the monopolist faces a constant marginal cost of \\(c\\) as before. The monopoly price according to the IEPR is:\n\\[\np^M = \\frac{c}{1 - \\frac{1}{\\epsilon}},\n\\] implying thatthat \\(p^M &gt; 0\\) if and only if \\(\\epsilon &gt; 1:\\) the monopolist operates on an elastic portion of the demand curve.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#what-is-a-monopsony",
+    "href": "contents/lecture_4.html#what-is-a-monopsony",
+    "title": "Chapter 4. Monopoly",
+    "section": "6.1 What is a monopsony?",
+    "text": "6.1 What is a monopsony?\nIn contrast to a monopoly, in a monopsony, there is a single buyer and several sellers. The buyer will be able to pay less for each unit of the good than if it had to compete against other buyers.\n\nExample 6 Examples of a monopsonies abound, spanning from the labor, retail, technology to the public sector.\n\nLabor market: Large factories in remote areas in developing countries might be the sole buyer of labor in the region. These companies can exert significant control over wages and employment conditions.\nRetail: Big supermarket chains such as Walmart (US), Carrefour (France) or Amazon (online) might have important negotiating power over suppliers when they are the dominant buyers of certain products.\nContent platforms such as YouTube, Instagram or Spotify might have monopsonistic power over content creators\nPublic defense: In many countries, the government is the sole purchaser of military equipment and defense-related goods. Companies producing such goods often have to accept the terms and prices dictated by the government.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#modeling-a-monopsony",
+    "href": "contents/lecture_4.html#modeling-a-monopsony",
+    "title": "Chapter 4. Monopoly",
+    "section": "6.2 Modeling a monopsony",
+    "text": "6.2 Modeling a monopsony\nConsider a firm with production function \\(q=f(L)\\) which is twice differentiable, strictly increasing (\\(f'&gt;0\\)) and strictly concave (\\(f''&lt;0\\)) The firm faces only linear labor cost \\(w(L)L\\) and its profits are given by: \\[\n\\pi = pq - w(L)L,\n\\] where \\(p\\) is the price of the good produced by the firm\nNote that \\(w\\) is increasing in \\(L\\): the higher demand for labor, the higher the wage. In other words, the firm is not a price-taker in the labor market: it has influences over the wage by deciding on the number of workers to hire.\nThe monopsonist’s PMP: \\[\n\\max_{L\\geq 0} \\pi =pq - w(L)L = pf(L) - w(L)L.\n\\]\nDifferentiating w.r.t \\(L\\) yields: \\[\n\\pi'(L) = 0 \\iff pf'(L) = w(L) + w'(L)L.\n\\tag{11}\\]\nObserve that the LHS of Equation 11 represents the marginal revenue brought about but an additional worker (\\(f'\\) is the marginal output). It is often referred to as the marginal revenue product of labor (\\(MRP\\)).\nThe RHS of Equation 11 captures the marginal cost or the marginal expenditure on labor (\\(ME\\)). As the labor market becomes scarce, employing an additional worker raises the wage to \\(w(L)\\). The increased wage \\(w'&gt;0\\) must be enjoyed by all the workers, which is captured by the second term. An analogy with the monopoly might help us remember these terms. In particular:\n\n\\(w(L)\\) to \\(p(q)\\): Supply to demand\n\\(ME(L)\\) to \\(MR(q)\\): Marginal expenditure to marginal revenue\n\\(MRP(L)\\) to \\(MC(q)\\). Marginal revenue product to marginal cost\n\nLet us look at a numerical example.\n\nExample 7 Consider a coal mine in a small town with production function \\(q = 30\\ln L\\). The market for coal is a perfectly competitive one with price \\(p=\\$5\\) per unit. The labor market where the mine operates has supply given by \\(w(L) = 5 + \\frac{1}{2}L.\\) Determine the number of workers hired and the equilibrium wage in this market.\nThe monopsony’s PMP: \\[\n\\pi(L) = 150\\ln(L) - (5 + \\frac{1}{2}L)L,\n\\]\nwhich is strictly concave in \\(L.\\) The necessary and sufficient condition for a max is: \\[\n\\begin{aligned}\n\\pi'(L) = 0 \\iff \\frac{150}{L} &= 5 + L \\\\\nL^2 + 5L - 150 &= 0 \\\\\nL &= 10.\n\\end{aligned}\n\\]\nHence the optimal number of hires is 26 for a wage rate of \\(w(10) = \\$10.\\)\nIf the market were competitive, the firm would have taken the wage as given while soving its PMP. The condition for a max in this case would have been:\n\\[\n\\begin{aligned}\npq'(L) &= w(L) \\\\\n\\frac{150}{L} &= 5 + \\frac{1}{2}L \\\\\nL &= -5 + \\sqrt{325} \\approx 13.\n\\end{aligned}\n\\]\nThe competitive wage would have been \\(w(13)=11.5.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Consequences of monopsony\n\n\n\nTo conclude, we see that compared to a competitive buyer, the monopsonist buys a lower quantity at a lower price and this creates a dead weight loss in the market, as in the case of the monopoly.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#footnotes",
+    "href": "contents/lecture_4.html#footnotes",
+    "title": "Chapter 4. Monopoly",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn the linear demand case above the DLW was the area of a triangle which we were about to compute without integration.↩︎",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Lecture 4"
+    ]
+  },
+  {
     "objectID": "contents/references.html",
     "href": "contents/references.html",
     "title": "Intermediate Microeconomics",

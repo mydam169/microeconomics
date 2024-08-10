@@ -362,84 +362,80 @@ plotIC(1.5, name='$u=x^{1.5}y^{1.5}$', lab=True)
 ### Homogeneity
 
 ::: {#def-homogen}
-
 ## Homogeneous function
 
 A function $u:\mathbb{R}^n\to\mathbb{R}$ is homogeneous of degree $k$ if for all $\alpha > 0$, we have $u(\alpha x) = \alpha^k u(x)$.
-
 :::
 
-* Varying the amount of goods by a common factor $\alpha$ changes the utility by a factor $\alpha^k$. 
-    * $\alpha > 1$: an increase
-    * $\alpha \in (0, 1)$: a reduction
-    * 
-* For a production function, the degree of homogeneity tells us about returns to scales of the production technology. In particular:
-  * $k<1$: DRS
-  * $k=1$: CRS
-  * $k>1$: IRS
+-   Varying the amount of goods by a common factor $\alpha$ changes the utility by a factor $\alpha^k$.
+    -   $\alpha > 1$: an increase
+    -   $\alpha \in (0, 1)$: a reduction
+    -   
+-   For a production function, the degree of homogeneity tells us about returns to scales of the production technology. In particular:
+    -   $k<1$: DRS
+    -   $k=1$: CRS
+    -   $k>1$: IRS
 
-::: {#def-homogen-pref} 
+::: {#def-homogen-pref}
 ## Homogeneous preference
+
 A preference relation is homogeneous if it can be represented by a homogeneous utility function
 :::
 
 #### Properties
 
-1. If $u$ is homogeneous of degree $k$, then its first-order partial derivatives are homogeneous of degree $k-1$:
-    $$
-    u(\alpha x) = \alpha^k u(x) \implies u_j(\alpha x) = \alpha^{k-1} u_j(x).
-    $${#eq-homg_prop1}
+1.  If $u$ is homogeneous of degree $k$, then its first-order partial derivatives are homogeneous of degree $k-1$: $$
+     u(\alpha x) = \alpha^k u(x) \implies u_j(\alpha x) = \alpha^{k-1} u_j(x).
+     $$ {#eq-homg_prop1}
 
-2. The ICs of homogeneous functions are radial expansions of one another, i.e., if $x$ and $y$ lie on the same IC, then so are $\alpha y$ and $\alpha x$:
-    $$ 
-    u(x) = u(y) \implies u(\alpha x) = u(\alpha y).
-    $${#eq-homg_prop2}
-    
-    * Knowing the shape of a single IC tells us the shape of all other ICs
-        
-3. The MRS of a homogeneous function is constant for all points along each ray from the origin (homogeneity of degree $0$): $$MRS_{1,2}(x) = MRS_{1,2}(\alpha x), \quad \forall x\in X.$$
+2.  The ICs of homogeneous functions are radial expansions of one another, i.e., if $x$ and $y$ lie on the same IC, then so are $\alpha y$ and $\alpha x$: $$ 
+     u(x) = u(y) \implies u(\alpha x) = u(\alpha y).
+     $$ {#eq-homg_prop2}
+
+    -   Knowing the shape of a single IC tells us the shape of all other ICs
+
+3.  The MRS of a homogeneous function is constant for all points along each ray from the origin (homogeneity of degree $0$): $$MRS_{1,2}(x) = MRS_{1,2}(\alpha x), \quad \forall x\in X.$$
 
 <details>
-<summary>Proof</summary>
-::: {.proof}
 
-1. Partially differentiating w.r.t $x_i$ yields:
-    $$
-    \begin{aligned}
-    \frac{\partial u(\alpha x)}{\partial (\alpha x_j)}\alpha &= \alpha^k \frac{\partial u(x)}{\partial x_j} \\
-    u_j(\alpha x) &= \alpha^{k-1} u_j(x).
-    \end{aligned}
-    $$
-    
-2. This comes from the definition:
-    $$
-    u(x) = u(y) \iff \alpha^k u(x) = \alpha^k u(y) \iff u(\alpha x) = u(\alpha y).
-    $$
-    
-3. This can be proven by using the first property:
-    $$
-    \begin{aligned}
-    MRS_{1,2}(x) \equiv \frac{U_1(x)}{U_2(x)}
-    &= \frac{\alpha^{k-1}U_1(x)}{\alpha^{k-1}U_2(x)} \\
-    &= \frac{U_1(\alpha x)}{U_2(\alpha x)}.
-    \end{aligned}
-    $$
+<summary>Proof</summary>
+
+::: proof
+1.  Partially differentiating w.r.t $x_i$ yields: $$
+     \begin{aligned}
+     \frac{\partial u(\alpha x)}{\partial (\alpha x_j)}\alpha &= \alpha^k \frac{\partial u(x)}{\partial x_j} \\
+     u_j(\alpha x) &= \alpha^{k-1} u_j(x).
+     \end{aligned}
+     $$
+
+2.  This comes from the definition: $$
+     u(x) = u(y) \iff \alpha^k u(x) = \alpha^k u(y) \iff u(\alpha x) = u(\alpha y).
+     $$
+
+3.  This can be proven by using the first property: $$
+     \begin{aligned}
+     MRS_{1,2}(x) \equiv \frac{U_1(x)}{U_2(x)}
+     &= \frac{\alpha^{k-1}U_1(x)}{\alpha^{k-1}U_2(x)} \\
+     &= \frac{U_1(\alpha x)}{U_2(\alpha x)}.
+     \end{aligned}
+     $$
 :::
+
 </details>
 
 ### Homotheticity
 
 ::: {#def-homoth}
 ## Homothetic function
-A function $u:\mathbb{R}^n\to\mathbb{R}$ is homothetic if it is obtained by a monotonic transformation of a homogeneous function (@def-homogen), i.e., if there exist a strictly increasing function $f:\mathbb{R}\to\mathbb{R}$ and a homogeneous function $v:X\to\mathbb{R}$ such that:
-$$ 
+
+A function $u:\mathbb{R}^n\to\mathbb{R}$ is homothetic if it is obtained by a monotonic transformation of a homogeneous function (@def-homogen), i.e., if there exist a strictly increasing function $f:\mathbb{R}\to\mathbb{R}$ and a homogeneous function $v:X\to\mathbb{R}$ such that: $$ 
 u(x) = f(v(x)).
-$${#eq-homt_def}
+$$ {#eq-homt_def}
 :::
 
 Clearly, a homogeneneous function is also homothetic (let $f$ be the identity function). Importantly, homotheticity is preserved under a monotone transformation whereas homogeneity is not. It is thus a desirable property of utility functions. As in the case of homogeneity, we can also talk about homothetic preferences.
 
-::: {#def-homoth-pref} 
+::: {#def-homoth-pref}
 ## Homothetic preference
 
 A preference relation is homothetic if it can be represented by a homothetic utility function (@def-homoth).
@@ -449,139 +445,130 @@ Since a homogeneous utility function is homothetic, homogeneous preferences are 
 
 #### Properties
 
-1. ICs are radial expansion of the origin: $x \sim y \implies \alpha x \sim \alpha y$ for all scalar $\alpha >  0$
+1.  ICs are radial expansion of the origin: $x \sim y \implies \alpha x \sim \alpha y$ for all scalar $\alpha >  0$
 
-2. MRS is homogeneous of degree $0$: The rate at which the individual substitutes one good for another _depends only on the proportion_ of the two goods consumed, and not on: 
-    * the utility level obtained 
-    * the absolute quantities of the goods
-    
-3. Homotheticity is preserved under a monotonic transformation, while homogeneity is not
+2.  MRS is homogeneous of degree $0$: The rate at which the individual substitutes one good for another *depends only on the proportion* of the two goods consumed, and not on:
+
+    -   the utility level obtained
+    -   the absolute quantities of the goods
+
+3.  Homotheticity is preserved under a monotonic transformation, while homogeneity is not
 
 <details>
+
 <summary>Proof</summary>
 
-* Suppose $u$ is homothetic. We want to show $u=f(v(x))$ for some homothetic $v$ and strictly increasing function $f$. Since $v$ is homothetic there exists a strictly increasing function $h$ and a homogeneous function $t$ such that $v=h(t(x))$. Hence $u=f(h(t(x))) = (f\circ h) (t(x))$ where $f\circ h$ is strictly increasing. This shows that $u$ is a monotonic transformation of $t$, a homog function, hence is homothetic
-  
-* That homogeneity is not preseved under a monotonic transformation can be shown by a counter example. For instance, consider $u(x, y) = xy$, which is homogeneous of degree 2 (why?), but the monotone transformation $f(u) = u + a$ for some constant $a>0$ is not.
+-   Suppose $u$ is homothetic. We want to show $u=f(v(x))$ for some homothetic $v$ and strictly increasing function $f$. Since $v$ is homothetic there exists a strictly increasing function $h$ and a homogeneous function $t$ such that $v=h(t(x))$. Hence $u=f(h(t(x))) = (f\circ h) (t(x))$ where $f\circ h$ is strictly increasing. This shows that $u$ is a monotonic transformation of $t$, a homog function, hence is homothetic
+
+-   That homogeneity is not preseved under a monotonic transformation can be shown by a counter example. For instance, consider $u(x, y) = xy$, which is homogeneous of degree 2 (why?), but the monotone transformation $f(u) = u + a$ for some constant $a>0$ is not.
+
 </details>
 
 ### Examples
 
-* Constant elasticity of substitution (CES) utility function:
-  $$
-    u(x, y) = [\alpha x^p + (1 - \alpha)y^p]^{1/p},
-  $${#eq-CES-utility}
-  where $p\neq 0$ and $\alpha \in (0, 1)$. 
-  
-  The CES function is a generalization of several other functions. 
-  * When $p$ approaches 0, it becomes the Cobb-Douglas utility function
-  * When $p$ approachs $-\infty$, we obtain $u(x, y) = \min \{ax, by\}$, the Leontief utility function
-  * When $p=1$, we obtain $u(x, y)= ax + by$, which represents preferences for perfect substitutes
-* Constant relative risk aversion (CRRA) utility: 
-  $$
-  u(x) = \begin{cases}
-  \frac{x^{1-\sigma}}{1-\sigma}, & \sigma>0,\: \sigma\neq 1 \\
-  \ln (x), & \sigma = 1.
-  \end{cases}
-  $$
-  The CRRA utility function is used extensively in models of decision making under uncertainty.
-  
+-   Constant elasticity of substitution (CES) utility function: $$
+      u(x, y) = [\alpha x^p + (1 - \alpha)y^p]^{1/p},
+    $$ {#eq-CES-utility} where $p\neq 0$ and $\alpha \in (0, 1)$.
+
+    The CES function is a generalization of several other functions.
+
+    -   When $p$ approaches 0, it becomes the Cobb-Douglas utility function
+    -   When $p$ approachs $-\infty$, we obtain $u(x, y) = \min \{ax, by\}$, the Leontief utility function
+    -   When $p=1$, we obtain $u(x, y)= ax + by$, which represents preferences for perfect substitutes
+
+-   Constant relative risk aversion (CRRA) utility: $$
+    u(x) = \begin{cases}
+    \frac{x^{1-\sigma}}{1-\sigma}, & \sigma>0,\: \sigma\neq 1 \\
+    \ln (x), & \sigma = 1.
+    \end{cases}
+    $$ The CRRA utility function is used extensively in models of decision making under uncertainty.
+
 # Utility maximization and demand for goods and services
 
 ## Utility maximization problem (UMP)
 
-* Denote $w>0$ the consumer's wage/income, $p$ the vector of prices, $x$ the bundle of goods and services, and $u:\mathbb{R}^L_+\to \mathbb{R}$ the utility function representing the preferences of the consumer. Futhermore, denote $pw$ the dot product of $p$ and $w$ when they are vectors
+-   Denote $w>0$ the consumer's wage/income, $p$ the vector of prices, $x$ the bundle of goods and services, and $u:\mathbb{R}^L_+\to \mathbb{R}$ the utility function representing the preferences of the consumer. Futhermore, denote $pw$ the dot product of $p$ and $w$ when they are vectors
 
-* The UMP faced by the consumer is:
-    $$
-        \max_{x \geq 0} u(x) \text{ s.t. } px \leq w      
-    $${#eq-UMP}
-    
-* The budget set or budget constraint: $B(p,w) \equiv \{x \geq 0: px \leq w\}$. 
+-   The UMP faced by the consumer is: $$
+          \max_{x \geq 0} u(x) \text{ s.t. } px \leq w      
+      $$ {#eq-UMP}
 
-* If $w>0$ and $p > 0$ and $u$ is continuous then a solution to the UMP exists (Weirestrass theorem)
+-   The budget set or budget constraint: $B(p,w) \equiv \{x \geq 0: px \leq w\}$.
 
-* A solution to the UMP, if exists, is a list of goods and services that maximizes the utility of the consumer given her budget constraint. 
+-   If $w>0$ and $p > 0$ and $u$ is continuous then a solution to the UMP exists (Weirestrass theorem)
+
+-   A solution to the UMP, if exists, is a list of goods and services that maximizes the utility of the consumer given her budget constraint.
 
 ## Walrasian demand
 
-* Let $x(p,w)$ be the solution to the UMP: it is called the __Walrasian demand correspondence__
+-   Let $x(p,w)$ be the solution to the UMP: it is called the **Walrasian demand correspondence**
 
-* For each $(p,w)$ pair, the correspondence specifies a _set_ of optimal bundles
+-   For each $(p,w)$ pair, the correspondence specifies a *set* of optimal bundles
 
-* If preferences are strictly convex, this set is a singleton: the correspondence becomes a function (_Walrasian demand function_)
+-   If preferences are strictly convex, this set is a singleton: the correspondence becomes a function (*Walrasian demand function*)
 
 ### Properties of the Walrasian demand correspondence
 
 If the utility function is continuous and preferences satisfy LNS (thin ICs) over the consumption set $\mathbb{R}^L_+$, then the Walrasian demand satisfies:
 
-1. _Homogeneity of degree_ $0$: $x(p,w) = x(\alpha p, \alpha w)$ for all $p\gg 0$ and $w>0$
-    * No monetary illusion: raising income by the same proportion as prices does not modify optimal consumption
-    * Example: we receive a 10\% raise but the cost of living also increases by 10\%
-    * Formally, this is because the budget set is unchanged; the UMP being the same, so is its solution
-    
-2. _Law of Walras_ (LoW): $px = w$ for all $x=x(p,w)$
-    * All income is optimally spent on consumption (no excess demand) 
-    * This follows from LNS: Any bundle in the interior of the budget set is not optimal since there exists another bundle strictly better in a sufficiently small neighborhood of this bundle
-    
-3. _Convexity_: If preferences are convex, then $x(p,w)$ defines a convex set. If moreover preferences are strictly convex, then $x(p,w)$ contains a singleton
+1.  *Homogeneity of degree* $0$: $x(p,w) = x(\alpha p, \alpha w)$ for all $p\gg 0$ and $w>0$
+    -   No monetary illusion: raising income by the same proportion as prices does not modify optimal consumption
+    -   Example: we receive a 10% raise but the cost of living also increases by 10%
+    -   Formally, this is because the budget set is unchanged; the UMP being the same, so is its solution
+2.  *Law of Walras* (LoW): $px = w$ for all $x=x(p,w)$
+    -   All income is optimally spent on consumption (no excess demand)
+    -   This follows from LNS: Any bundle in the interior of the budget set is not optimal since there exists another bundle strictly better in a sufficiently small neighborhood of this bundle
+3.  *Convexity*: If preferences are convex, then $x(p,w)$ defines a convex set. If moreover preferences are strictly convex, then $x(p,w)$ contains a singleton
 
 ## Solving the UMP
 
 ### Necessary conditions
 
-The Lagragian associated with the UMP:
-$$
+The Lagragian associated with the UMP: $$
 L = u(x) + \lambda (w - px)
-$${#eq-Lagrangian}
+$$ {#eq-Lagrangian}
 
-Denote $L_i$ the partial derivative of the Lagrangian with respect to good $i$. The KTT theorem tells us that if $x^*$ is a solution to the UMP then there exists $\lambda^*\geq 0$ such that the following conditions are satisfied:
-$$
+Denote $L_i$ the partial derivative of the Lagrangian with respect to good $i$. The KTT theorem tells us that if $x^*$ is a solution to the UMP then there exists $\lambda^*\geq 0$ such that the following conditions are satisfied: $$
 \begin{aligned}
 & L_i(x^*) \leq 0, \quad  i=1,\dots, L \\ 
 & L_i(x^*) = 0 \text{ if } x^*_i>0, \quad i=1,\dots,L \\
 & \lambda^* \geq 0 \text{ and } \lambda^*(w - px^*) = 0. 
 \end{aligned}
-$${#eq-NFOCs}
+$$ {#eq-NFOCs}
 
-
-Assume interior solution, then the first set of conditions yields 
-$$
+Assume interior solution, then the first set of conditions yields $$
 u_i(x^*) = \lambda^* p_i.
 $$
 
 If $u$ satisfies strict monotonicity ($u_i>0$), then $\lambda^*>0$ since prices are strictly positive. But $\lambda^*>0$ implies that $w = px^*$, which confirms the LoW.
 
-To eliminate the multiplier, we can form the ratio:
-$$ 
+To eliminate the multiplier, we can form the ratio: $$ 
 \begin{aligned}
 \frac{u_i(x^*)}{u_j(x^*)} &= \frac{p_i}{p_j} \\
 MRS_{i,j}(x^*) &= \frac{p_i}{p_j} \\
 \implies \frac{u_i(x^*)}{p_i} &= \frac{u_j(x^*)}{p_j} = \lambda^*.
 \end{aligned}
-$${#eq-nec_cond_UMP}
-
+$$ {#eq-nec_cond_UMP}
 
 Hence at an interior optimum:
 
- * The rate at which the individual substitutes one good for the other is equal to the ratio of their prices - the market value of one good _relative_ to the other good. Price levels do not matter
- 
- * Marginal utilities per unit of the constraint (e.g. dollar) are equalized across all goods and are equal to the Langrage multiplier, the shadow price
+-   The rate at which the individual substitutes one good for the other is equal to the ratio of their prices - the market value of one good *relative* to the other good. Price levels do not matter
+
+-   Marginal utilities per unit of the constraint (e.g. dollar) are equalized across all goods and are equal to the Langrage multiplier, the shadow price
 
 ### The shadow price
 
-* $\lambda^*$ is often interpreted as the shadow price: increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit
+-   $\lambda^*$ is often interpreted as the shadow price: increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit
 
-* In other words, it is the shadow price on the constraint (on $w$)
+-   In other words, it is the shadow price on the constraint (on $w$)
 
-* Mathematically,
-    $$\lambda^* = \frac{\partial u(x^*(p,w))}{\partial w}.$$
+-   Mathematically, $$\lambda^* = \frac{\partial u(x^*(p,w))}{\partial w}.$$
 
 <details>
+
 <summary>Proof</summary>
 
-We can show this by differentiating the value function w.r.t income:
-$$
+We can show this by differentiating the value function w.r.t income: $$
 \begin{aligned}
 \frac{\partial u(x^*(p,w))}{\partial w} &= \sum_{i=1}^L u_i(x^*)\frac{\partial x_i(w,p)}{\partial w} \\
 &= \lambda^*\sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} \\
@@ -589,64 +576,61 @@ $$
 \end{aligned}
 $$
 
-Here we have used the fact that:
-$$
+Here we have used the fact that: $$
 \sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} = 1,
-$$
-which comes directly from the binding budget constraint.
+$$ which comes directly from the binding budget constraint.
 
 </details>
 
 ### Sufficient conditions
 
-* How to be sure that the necessary conditions above provide a max, and not a min?
+-   How to be sure that the necessary conditions above provide a max, and not a min?
 
-* The KKT conditions are also _sufficient_ for a max if:
-    1. $u$ is quasiconcave
-        * UCS is convex
-    2. $u$ is monotone
-        * ICs are downward sloping
-    3. $u_i(x) \neq 0 \: \forall i \iff \nabla u(x) \neq 0$
-        * There is no bliss point
-        * If such a point existed then LNS would be violated, which would contradict monotonicity
+-   The KKT conditions are also *sufficient* for a max if:
 
+    1.  $u$ is quasiconcave
+        -   UCS is convex
+    2.  $u$ is monotone
+        -   ICs are downward sloping
+    3.  $u_i(x) \neq 0 \: \forall i \iff \nabla u(x) \neq 0$
+        -   There is no bliss point
+        -   If such a point existed then LNS would be violated, which would contradict monotonicity
 
 ## Comparative statics
 
+1.  Price elasticity: percentage change in demand following a percentage change in the price of the good: $$
+     \epsilon_{x_i, p_i} = \frac{\partial x_i(p,w)}{\partial p_i}\frac{p_i}{x_i(p,w)}.
+     $$ {#eq-own_elast_def}
 
-1. Price elasticity: percentage change in demand following a percentage change in the price of the good:
-    $$
-    \epsilon_{x_i, p_i} = \frac{\partial x_i(p,w)}{\partial p_i}\frac{p_i}{x_i(p,w)}.
-    $${#eq-own_elast_def}
+    -   If positive: Giffen goods
+    -   If negative: normal goods
 
-    * If positive: Giffen goods
-    * If negative: normal goods
-    
-2. Cross-price elasticity: percentage change in the demand of a good following a percentage change in the price of another good:
+2.  Cross-price elasticity: percentage change in the demand of a good following a percentage change in the price of another good:
 
     $$
-    \epsilon_{x_i, p_j} = \frac{\partial x_i(p,w)}{\partial p_j}\frac{p_j}{x_i(p,w)}.
-    $${#eq-cross_elast_def}
-    
-    * If positive: substitutes
-    * If negative: complements
+     \epsilon_{x_i, p_j} = \frac{\partial x_i(p,w)}{\partial p_j}\frac{p_j}{x_i(p,w)}.
+     $$ {#eq-cross_elast_def}
 
-3. Income elasticity: percentage change in the demand of a good following a percentage change in income:
+    -   If positive: substitutes
+    -   If negative: complements
+
+3.  Income elasticity: percentage change in the demand of a good following a percentage change in income:
 
     $$
-    \epsilon_{x_i, w} = \frac{\partial x_i(p,w)}{\partial w}\frac{w}{x_i(p,w)}.
-    $${#eq-income_elast_def}
-    
-    * If postive: normal goods
-    * If negative: inferior goods
+     \epsilon_{x_i, w} = \frac{\partial x_i(p,w)}{\partial w}\frac{w}{x_i(p,w)}.
+     $$ {#eq-income_elast_def}
+
+    -   If postive: normal goods
+    -   If negative: inferior goods
 
 ------------------------------------------------------------------------
+
 # Exercises
 
 ::: {#exr-exo-lexico}
 ## Lexicographic preferences
-Consider the preference relation over $X=\mathbb{R}^2_+$ as follows: 
-$$
+
+Consider the preference relation over $X=\mathbb{R}^2_+$ as follows: $$
 \forall x, y \in X:\: x \succeq y \text{ if } 
 \begin{cases}
     x_1 > y_1, \text{ or} \\
@@ -655,10 +639,13 @@ $$
 $$
 
 It is called lexicographic because it resembles the way we look up a word in a paper dictionary. Why does such a preference violate continuity?
+
 <details>
+
 <summary>Answer</summary>
-Consider the sequence $x^n=(1/n, 0)$ and $y^n=(0, 1)$, for $n=1,2,...$
-Observe that $x^n \succeq y^n$ for all finite $n$, but $\lim y^n = (0,1) \succeq \lim x^n = (0,0)$.
+
+Consider the sequence $x^n=(1/n, 0)$ and $y^n=(0, 1)$, for $n=1,2,...$ Observe that $x^n \succeq y^n$ for all finite $n$, but $\lim y^n = (0,1) \succeq \lim x^n = (0,0)$.
+
 </details>
 :::
 
@@ -668,8 +655,11 @@ Observe that $x^n \succeq y^n$ for all finite $n$, but $\lim y^n = (0,1) \succeq
 St.Petersburg paradox: We pay a fee to play a game of chance in which we toss a fair coin until the first it turns heads. The prize is $2^k$ where $k$ is the round on which the first head is obtained. Most people are not willing to pay more than a few dollars to play the game, does it make sense? What is the expected value (EV) of the game?
 
 <details>
+
 <summary>Answer</summary>
+
 The expected value of this game is $\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty$.
+
 </details>
 :::
 
@@ -716,8 +706,7 @@ Prove that (strict) concavity implies (strict) quasiconcavity.
 
 -   A function $u:X\to \mathbb{R}$ is concave if for all $x, y \in X$ and $\alpha \in (0,1)$: $$ u(\alpha x + (1 - \alpha) y) \geq \alpha u(x) + (1-\alpha) u(y)$$ {#eq-concave_def}
 
--   Since $u(x) \geq \min\{u(x), u(y)\}$ and $u(y) \geq \min\{u(x), u(y)\}$: 
-    $$
+-   Since $u(x) \geq \min\{u(x), u(y)\}$ and $u(y) \geq \min\{u(x), u(y)\}$: $$
     \begin{aligned}
           u(\alpha x + (1 - \alpha) y) &\geq \alpha u(x) + (1-\alpha) u(y) \\
           &\geq \alpha \min\{u(x), u(y)\} + (1-\alpha)\min\{ u(x), u(y)\} \\
@@ -731,24 +720,23 @@ Prove that (strict) concavity implies (strict) quasiconcavity.
 :::
 
 ::: {#exr-homotheticity}
-Consider the Cobb-Douglas utility function $u(x,y)=x^{1/3}y^{2/3}.$ Is it concave? quasiconcave? homogeneous? homothetic? How about its log transformation? 
+Consider the Cobb-Douglas utility function $u(x,y)=x^{1/3}y^{2/3}.$ Is it concave? quasiconcave? homogeneous? homothetic? How about its log transformation?
 :::
 
-
 ::: {#exr-ump}
-## Walrasian demand 
+## Walrasian demand
 
-Consider the Cobb-Douglas utility function over two goods defined by $u(x,y)=x^a y^b$, where $a,b>0$ and $a+b=1$. Let $p > 0$ the price vector and $w>0$ the income of the individual. 
+Consider the Cobb-Douglas utility function over two goods defined by $u(x,y)=x^a y^b$, where $a,b>0$ and $a+b=1$. Let $p > 0$ the price vector and $w>0$ the income of the individual.
 
-1. Write the UMP faced by the individual
+1.  Write the UMP faced by the individual
 
-2. Form the Lagragian
+2.  Form the Lagragian
 
-3. What are the KKT necessary conditions? Are they also sufficient? What is the meaning of the Lagrange multiplier?
+3.  What are the KKT necessary conditions? Are they also sufficient? What is the meaning of the Lagrange multiplier?
 
-4. Find the Walrasian demand 
+4.  Find the Walrasian demand
 
-5. Verify that the Walrasian demand you have found satisfies the three properties above, namely homogeneity of degree $0$, LoW and convexity
+5.  Verify that the Walrasian demand you have found satisfies the three properties above, namely homogeneity of degree $0$, LoW and convexity
 
-6. Compute the common elasticities presented in the lecture and comment
+6.  Compute the common elasticities presented in the lecture and comment
 :::

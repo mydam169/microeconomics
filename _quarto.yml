@@ -44,6 +44,8 @@ website:
             href: contents/lecture_2.qmd
           - text: "Lecture 3"
             href: contents/lecture_3.qmd
+          - text: "Lecture 4"
+            href: contents/lecture_4.qmd
 
 format:
   html:

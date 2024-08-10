@@ -204,6 +204,12 @@ window.Quarto = {
  <span class="menu-text">Lecture 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lecture 4</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -586,7 +592,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 <p>It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.</p>
 <p>The converse is not true. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
-<div id="5cee67bc" class="cell" data-lab="fig-concaveU" data-execution_count="11">
+<div id="0cadb9e1" class="cell" data-lab="fig-concaveU" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -596,7 +602,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </div>
-<div id="2d3c5038" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
+<div id="ce0262aa" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -887,12 +893,12 @@ Proof
     x_1 = y_1 \text{ and } x_2 &gt; x_1
 \end{cases}
 \]</span></p>
-It is called lexicographic because it resembles the way we look up a word in a paper dictionary. Why does such a preference violate continuity?
+<p>It is called lexicographic because it resembles the way we look up a word in a paper dictionary. Why does such a preference violate continuity?</p>
 <details>
 <summary>
 Answer
 </summary>
-Consider the sequence <span class="math inline">\(x^n=(1/n, 0)\)</span> and <span class="math inline">\(y^n=(0, 1)\)</span>, for <span class="math inline">\(n=1,2,...\)</span> Observe that <span class="math inline">\(x^n \succeq y^n\)</span> for all finite <span class="math inline">\(n\)</span>, but <span class="math inline">\(\lim y^n = (0,1) \succeq \lim x^n = (0,0)\)</span>.
+<p>Consider the sequence <span class="math inline">\(x^n=(1/n, 0)\)</span> and <span class="math inline">\(y^n=(0, 1)\)</span>, for <span class="math inline">\(n=1,2,...\)</span> Observe that <span class="math inline">\(x^n \succeq y^n\)</span> for all finite <span class="math inline">\(n\)</span>, but <span class="math inline">\(\lim y^n = (0,1) \succeq \lim x^n = (0,0)\)</span>.</p>
 </details>
 </div>
 <div id="exr-exo-SPparadox" class="theorem exercise">
@@ -901,7 +907,7 @@ Consider the sequence <span class="math inline">\(x^n=(1/n, 0)\)</span> and <spa
 <summary>
 Answer
 </summary>
-The expected value of this game is <span class="math inline">\(\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty\)</span>.
+<p>The expected value of this game is <span class="math inline">\(\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty\)</span>.</p>
 </details>
 </div>
 <div id="exr-exo-convexity" class="theorem exercise">

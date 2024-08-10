@@ -29,6 +29,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../contents/lecture_3.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -68,9 +69,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
 <meta property="og:title" content="Chapter 4. Monopoly – Intermediate Microeconomics">
+<meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
 <meta property="og:site_name" content="Intermediate Microeconomics">
 </head>
 
@@ -111,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapter 4. Monopoly</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_4.html">Lecture 4</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -173,11 +204,48 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Lecture 3</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 4</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
     </div>
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
+   
+  <ul>
+  <li><a href="#monopoly" id="toc-monopoly" class="nav-link active" data-scroll-target="#monopoly"><span class="header-section-number">1</span> Monopoly</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-monopoly" id="toc-what-is-a-monopoly" class="nav-link" data-scroll-target="#what-is-a-monopoly"><span class="header-section-number">1.1</span> What is a monopoly?</a></li>
+  <li><a href="#profit-maximizing-problem-pmp" id="toc-profit-maximizing-problem-pmp" class="nav-link" data-scroll-target="#profit-maximizing-problem-pmp"><span class="header-section-number">1.2</span> Profit maximizing problem (PMP)</a></li>
+  <li><a href="#monopolistic-outcomes" id="toc-monopolistic-outcomes" class="nav-link" data-scroll-target="#monopolistic-outcomes"><span class="header-section-number">1.3</span> Monopolistic outcomes</a></li>
+  <li><a href="#common-misunderstandings-of-monopoly" id="toc-common-misunderstandings-of-monopoly" class="nav-link" data-scroll-target="#common-misunderstandings-of-monopoly"><span class="header-section-number">1.4</span> Common misunderstandings of monopoly</a>
+  <ul class="collapse">
+  <li><a href="#the-monopolist-can-set-infinitely-high-prices" id="toc-the-monopolist-can-set-infinitely-high-prices" class="nav-link" data-scroll-target="#the-monopolist-can-set-infinitely-high-prices"><span class="header-section-number">1.4.1</span> The monopolist can set infinitely high prices</a></li>
+  <li><a href="#the-monopolist-has-a-supply-curve" id="toc-the-monopolist-has-a-supply-curve" class="nav-link" data-scroll-target="#the-monopolist-has-a-supply-curve"><span class="header-section-number">1.4.2</span> The monopolist has a supply curve</a></li>
+  <li><a href="#the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve" id="toc-the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve" class="nav-link" data-scroll-target="#the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve"><span class="header-section-number">1.4.3</span> The monopolist operates in the inelastic portion of the demand curve</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#the-lerner-index-and-the-inverse-elasticity-pricing-rule" id="toc-the-lerner-index-and-the-inverse-elasticity-pricing-rule" class="nav-link" data-scroll-target="#the-lerner-index-and-the-inverse-elasticity-pricing-rule"><span class="header-section-number">2</span> The Lerner index and the inverse elasticity pricing rule</a>
+  <ul class="collapse">
+  <li><a href="#lerner-index" id="toc-lerner-index" class="nav-link" data-scroll-target="#lerner-index"><span class="header-section-number">2.1</span> Lerner index</a></li>
+  <li><a href="#inverse-elasticity-pricing-rule-iepr" id="toc-inverse-elasticity-pricing-rule-iepr" class="nav-link" data-scroll-target="#inverse-elasticity-pricing-rule-iepr"><span class="header-section-number">2.2</span> Inverse elasticity pricing rule (IEPR)</a></li>
+  </ul></li>
+  <li><a href="#multipliant-monopoly-and-cartel" id="toc-multipliant-monopoly-and-cartel" class="nav-link" data-scroll-target="#multipliant-monopoly-and-cartel"><span class="header-section-number">3</span> Multipliant monopoly and cartel</a></li>
+  <li><a href="#impacts-on-welfare" id="toc-impacts-on-welfare" class="nav-link" data-scroll-target="#impacts-on-welfare"><span class="header-section-number">4</span> Impacts on welfare</a></li>
+  <li><a href="#regulation-of-monopolies" id="toc-regulation-of-monopolies" class="nav-link" data-scroll-target="#regulation-of-monopolies"><span class="header-section-number">5</span> Regulation of monopolies</a></li>
+  <li><a href="#monopsony" id="toc-monopsony" class="nav-link" data-scroll-target="#monopsony"><span class="header-section-number">6</span> Monopsony</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-monopsony" id="toc-what-is-a-monopsony" class="nav-link" data-scroll-target="#what-is-a-monopsony"><span class="header-section-number">6.1</span> What is a monopsony?</a></li>
+  <li><a href="#modeling-a-monopsony" id="toc-modeling-a-monopsony" class="nav-link" data-scroll-target="#modeling-a-monopsony"><span class="header-section-number">6.2</span> Modeling a monopsony</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">7</span> Exercises</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
@@ -186,7 +254,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_4.html">Lecture 4</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Chapter 4. Monopoly</h1>
 </div>
@@ -205,10 +273,415 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="monopoly" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Monopoly</h1>
+<section id="what-is-a-monopoly" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-a-monopoly"><span class="header-section-number">1.1</span> What is a monopoly?</h2>
+<p>Unlike a competitive firm, who is a price-taker, a monopolist can determine the outpout level of the whole market and thus is a price-maker. A monopolist can choose any point on the demand curve: choosing the level of output is equivalent to choosing the price at which to sell the good.</p>
+<p>A monopoly emerges due to barriers to entry such as:</p>
+<ol type="1">
+<li><strong>Structural barriers</strong>: such as cost advantage or demand advantage of incumbent firms</li>
+<li><strong>Legal barriers</strong>: such as patents</li>
+<li><strong>Strategic barriers</strong>: incumbent firms can engage in price wars (matching low prices of competitors) to build reputation as an aggressive competitor and deter entry</li>
+</ol>
+</section>
+<section id="profit-maximizing-problem-pmp" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="profit-maximizing-problem-pmp"><span class="header-section-number">1.2</span> Profit maximizing problem (PMP)</h2>
+<p>Just as any other firm, the objective of the monopolist is to maximize profits. The quantity supplied in a monopoly is the solution to the monopolist’s PMP, which is:</p>
+<p><span class="math display">\[
+\max_q \pi = R(q) - C(q) = p(q) q - C(q),
+\]</span></p>
+<p>where <span class="math inline">\(p(q)\)</span> is the inverse demand function and <span class="math inline">\(C(q)\)</span> is the firm’s total cost. Assuming differentiability, the FOC reads:</p>
+<p><span id="eq-FOC"><span class="math display">\[
+\begin{aligned}
+\pi'(q) = p(q) + p'(q)q - C'(q) &amp;= 0 \\
+p(q) + p'(q)q &amp;= C'(q) \\
+MR(q) &amp;= MC(q).
+\end{aligned}
+\tag{1}\]</span></span></p>
+<p>At the profit maximizing output, the monopolist equalizes marginal revenue (MR) and marginal cost (MC).</p>
+<p>In order for the FOC to be sufficient, the SOC needs to be verified, i.e.,</p>
+<p><span class="math display">\[
+\pi''(q) = MR'(q) - MC'(q) \leq 0,
+\]</span></p>
+<p>meaning that the slope of the marginal cost curve is greater or equal to that of the marginal revenue curve. This condition is clearly satisfied in the case of downward sloping MR and upward sloping MC (convex cost function).</p>
+<p>If the SOC then the profit maximizing output is such that <span class="math inline">\(MR(q) = MC(q)\)</span> since:</p>
+<ul>
+<li>If <span class="math inline">\(MR(q) &gt; MC(q)\)</span>, raising output increases profits</li>
+<li>If <span class="math inline">\(MR(q) &lt; MC(q)\)</span>, raising output hurts profits</li>
+</ul>
+</section>
+<section id="monopolistic-outcomes" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="monopolistic-outcomes"><span class="header-section-number">1.3</span> Monopolistic outcomes</h2>
+<p>Recall that for a price-taker, the marginal revenue is the market price. For a monopolist, this is no longer true since the monopolist influences the market price via their output level. In particular, in a monopoly, MR is <em>less</em> than the market price whenever the law of demand holds (decreasing demand curve): <span id="eq-MR"><span class="math display">\[
+MR(q) = p(q) + p'(q)q &lt; p(q).
+\tag{2}\]</span></span></p>
+<p>Hence as output increases, there are two opposing forces acting on the firm’s revenue. On the one hand, selling one additional unit yields an additional revenue equal to the price <span class="math inline">\(p(q)\)</span>. On the other hand, higher supply depresses the price of the good since the demand curve is downward sloping.</p>
+<p>Marginal revenue being less than the price implies that graphically the MR curve lies <em>below</em> the demand curve. Notice that the MR curve and the demand curves originate at the same height since <span class="math inline">\(MR(0) = p(0).\)</span> This is the highest price anyone is willing to pay for the good (the maximum willingness to pay or reservation price).</p>
+<div id="exm-LinearDemand" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> Consider the linear inverse demand function <span class="math inline">\(p(q) = a - bq\)</span> where <span class="math inline">\(a, b &gt; 0\)</span>. The marginal revenue is <span class="math inline">\(RM(q) = R'(q) = a - 2bq,\)</span> which is twice as steep as the demand curve but originates at the same point <span class="math inline">\((0,a)\)</span> as the demand curve. Suppose the market is a monopoly and the monopolist has constant marginal cost <span class="math inline">\(MC(q)=c,\)</span> then monopolist maximizes profits by selling <span class="math inline">\(q=\frac{a-c}{2b}\)</span> at the price <span class="math inline">\(p=\frac{a+c}{2}\)</span>. Observe that <span class="math inline">\(a\)</span> measures the highest reservation price, if <span class="math inline">\(a &lt; c\)</span> the market would cease to exist.</p>
+</div>
+<div id="fig-linDemand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linDemand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="347294d7" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-6-output-1.png" width="499" height="348" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linDemand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A monopoly with linear demand and constant marginal cost. The monopoly price is higher and the quantity is lower than in a competitive market. The consumer surplus shrinks and there is a dead weight loss (DWL).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="common-misunderstandings-of-monopoly" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="common-misunderstandings-of-monopoly"><span class="header-section-number">1.4</span> Common misunderstandings of monopoly</h2>
+<section id="the-monopolist-can-set-infinitely-high-prices" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="the-monopolist-can-set-infinitely-high-prices"><span class="header-section-number">1.4.1</span> The monopolist can set infinitely high prices</h3>
+<p>Being the only firm in the market, the monopolist has market power, but this does not mean it can set any price. Indeed, monopoly prices depend on the market demand, which is the aggegration of consumers’ demand, as we saw previously. The price and quantity combination of the monopolist is constrained by the market demand curve. Since the demand curve is in general downward sloping, in general it is not optimal for the monopolist to set prices as high as possible since as prices increase, the quantity demanded declines.</p>
+</section>
+<section id="the-monopolist-has-a-supply-curve" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="the-monopolist-has-a-supply-curve"><span class="header-section-number">1.4.2</span> The monopolist has a supply curve</h3>
+<p>The monopolist does not have a supply curve since it is a price maker. Indeed, recall that the supply curve is constructed by associating each <em>given price</em> with a quantity that firms are willing to produce. In a monopoly there is <em>no given price</em>: for a monopolist, deciding how much to produce is equivalent to choosing at which price to sell; the two are determined simulatenously via the demand curve.</p>
+</section>
+<section id="the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve"><span class="header-section-number">1.4.3</span> The monopolist operates in the inelastic portion of the demand curve</h3>
+<p>Monopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). By reducing the price by 1%, the monopolist increases sales by <em>more than</em> 1% thereby increasing revenues. It will then have incentives to raise output (reduce prices) so long as it is on the inelastic part of the demand curve.</p>
+<div id="fig-Elasticity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Elasticity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="81841560" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-7-output-1.png" width="508" height="332" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Elasticity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Going from the left to the right, the demand curve becomes less and less elastic <em>even if</em> its slope is constant.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="the-lerner-index-and-the-inverse-elasticity-pricing-rule" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The Lerner index and the inverse elasticity pricing rule</h1>
+<section id="lerner-index" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="lerner-index"><span class="header-section-number">2.1</span> Lerner index</h2>
+<p>The Lerner index is the ratio between the markup (difference between the price and the marginal cost) and the price. It is thus also known as the <em>markup index</em>.</p>
+<p><span id="eq-lerner"><span class="math display">\[
+\frac{p - MC(q)}{p}.
+\tag{3}\]</span></span></p>
+<p>Observe that for any perfectly competitive firm, the Lerner index is zero.</p>
+<p>Recall that the price-elasticity of demand for any price variation (not just small ones) is: <span class="math display">\[
+\epsilon_{p,q} = \frac{\%\Delta q}{\%\Delta p}\frac{p}{q}
+\implies \frac{1}{\epsilon_{p,q}} = \frac{\%\Delta p}{\%\Delta q}\frac{q}{p}.
+\]</span></p>
+<p>Hence for a small variation in quantity, we can write: <span id="eq-elasticity_inv"><span class="math display">\[
+\frac{1}{\epsilon_{p,q}} = \frac{\partial p}{\partial q}\frac{q}{p}.
+\tag{4}\]</span></span></p>
+<p>For a monopolist, since <span class="math inline">\(MC(q) = MR(q) = p(q) + p'(q)q\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{p - MC(q)}{p} &amp;= \frac{p(q) - p(q) - p'(q)q}{p(q)} \\
+&amp;=\frac{-p'(q)q}{p(q)} \\
+&amp;= -\frac{\partial p}{\partial q}\frac{q}{p} \\
+&amp;= - \frac{1}{\epsilon_{p,q}}.
+\end{aligned}
+\]</span></p>
+<!-- * This is referred to as the inverse elasticity pricing rule (IEPR) -->
+<p>Therefore the monopoly Lerner index is: <span id="eq-Lerner_mon"><span class="math display">\[
+\frac{p - MC(q)}{p} = - \frac{1}{\epsilon_{p,q}}.
+\tag{5}\]</span></span></p>
+<p><a href="#eq-Lerner_mon" class="quarto-xref">Equation&nbsp;5</a> tells us that a monopolist’s ability to set price above the marginal cost (as captured its Lerner index) is inversely related to the price-elasticity of demand:</p>
+<ul>
+<li>On more elastic portions of the demand curve, the Lerner index is small</li>
+<li>As demand becomes relatively inelastic, the Lerner index rises</li>
+</ul>
+<p>Again, a high Lerner index in general does not imply higher profits. In particular, profits per sale are represented by the gap between the price and the <em>average cost</em>, not the marginal cost</p>
+<div id="exm-Lerner-lindemand" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2</strong></span> The Lerner index for a monopoly with constant marginal cost <span class="math inline">\(c\)</span> and linear demand <span class="math inline">\(p(q)=a-bq\)</span> is <span class="math inline">\(\frac{a-c}{a+c} &lt; 1:\)</span> the monopolist cannot have a markup over 100%.</p>
+</div>
+<div id="exm-Lerner-CEdemand" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3</strong></span> Consider again a monopolist with constant marginal cost <span class="math inline">\(c\)</span> facing a constant elasticity demand function <span class="math inline">\(q(p)=ap^{-\epsilon},\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(\epsilon\)</span> are strictly positive. The Lerner index in this market is <span class="math inline">\(1/\epsilon,\)</span> indicating higher markup power for less elastic market.</p>
+</div>
+</section>
+<section id="inverse-elasticity-pricing-rule-iepr" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="inverse-elasticity-pricing-rule-iepr"><span class="header-section-number">2.2</span> Inverse elasticity pricing rule (IEPR)</h2>
+<p>The IEPR can be derived from the monopoly Lerner index (<a href="#eq-Lerner_mon" class="quarto-xref">Equation&nbsp;5</a>):</p>
+<p><span id="eq-IEPR"><span class="math display">\[
+p = \frac{MC(q)}{1 + \frac{1}{\epsilon_{q,p}}}.
+\tag{6}\]</span></span></p>
+<div id="exm-IEPR" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4</strong></span> Consider the constant elasticity demand function above. Suppose the monopolist faces a constant marginal cost of <span class="math inline">\(c\)</span> as before. The monopoly price according to the IEPR is:</p>
+<p><span class="math display">\[
+p^M = \frac{c}{1 - \frac{1}{\epsilon}},
+\]</span> implying thatthat <span class="math inline">\(p^M &gt; 0\)</span> if and only if <span class="math inline">\(\epsilon &gt; 1:\)</span> the monopolist operates on an elastic portion of the demand curve.</p>
+</div>
+</section>
+</section>
+<section id="multipliant-monopoly-and-cartel" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Multipliant monopoly and cartel</h1>
+<p>A mulitpliant monopoly is a monopoly producing the same good in different factories (for example across the globe to cut costs). In each factory, the firm might face a different cost function.</p>
+<p>Consider a monopolist producing the <em>same good in two different plants</em> (factories) and denote:</p>
+<ul>
+<li><span class="math inline">\(q_i\)</span> the output produced in plant <span class="math inline">\(i=\{1,2\}\)</span></li>
+<li><span class="math inline">\(Q = \sum_i q_i\)</span> the total output produced by the monopolist</li>
+</ul>
+<p>The PMP is:</p>
+<p><span id="eq-PMP_multi"><span class="math display">\[
+\begin{aligned}
+\max_{q_1,q_2} \pi_1 + \pi_2 &amp;= R_1(q_1, q_2) - C_1(q_1) + R_2(q_1, q_2) - C_2(q_1) \\
+&amp;= p(q_1, q_2)q_1 - C_1(q_1) + p(q_1, q_2)q_2 - C_2(q_1) \\
+&amp;= p(q_1, q_2)(1_1 + q_2) - C_1(q_1) - C_2(q_1).
+\end{aligned}
+\tag{7}\]</span></span></p>
+<p>Differentiating w.r.t <span class="math inline">\(q_i\)</span> yields:</p>
+<p><span id="eq-FOCs_multi"><span class="math display">\[
+\begin{aligned}
+p(q_1, q_2) + \frac{\partial p}{\partial q_i}q_i &amp;= \frac{\partial C_i(q_i)}{\partial q_i} \\
+MR_i(q_1, q_2) &amp;= MC_i(q_i), \quad i=1,2.
+\end{aligned}
+\tag{8}\]</span></span></p>
+<div id="exm-cartel" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5</strong></span> A <strong>cartel</strong> is a group of firms coordinating their production decisions to maximize joint profits.</p>
+<p>A famous example of a cartel is the OPEC (Organization of Petrolium Exporting Countries). Some countries, such as Saudi Arabia have lower MC (cost of extracting an additional barrel of oil) while others, such as Angola or Venezuela have higher MC. They coordinate on total output, i.e., agree on the quantity that each member produces, and redistribute joint profits.</p>
+<p>Here is another cartel example in the automotive industry. In 2016, several major European truck manufacturers, including Daimler, Volvo/Renault, Iveco, and DAF, were fined by the European Commission for forming a cartel. These companies had colluded for 14 years to fix prices and delay the introduction of more environmentally friendly truck models. The fines totaled over €2.9 billion, making it one of the largest cartel fines in history.</p>
+</div>
+</section>
+<section id="impacts-on-welfare" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Impacts on welfare</h1>
+<p>The following table sums up the impact on welfare of monopolies compared to more competitive markets</p>
+<div id="tbl-welfareImpact" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-welfareImpact-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Impacts of monopolies on welfare
+</figcaption>
+<div aria-describedby="tbl-welfareImpact-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Consumer Surplus</td>
+<td style="text-align: left;">Lower</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Producer Surplus</td>
+<td style="text-align: left;">Higher</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dead weight loss (DWL)</td>
+<td style="text-align: left;">Higher for monopolies with a unique price</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-SD-perfectComp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-SD-perfectComp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="26e91203" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-8-output-1.png" width="335" height="330" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SD-perfectComp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Welfare distribution in perfect competition
+</figcaption>
+</figure>
+</div>
+<div id="fig-SDMon" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-SDMon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="0899d029" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-9-output-1.png" width="335" height="330" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SDMon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Welfare distribution in monopoly
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-elasticityDWL" class="quarto-xref">Figure&nbsp;5</a> shows the impact of price-elasticity of demand on the magnitidue of the dead weight loss due to monpoly. The more elastic is the demand curve, the smaller the DWL appears to be. This is because a higher price-elasticity of demand reduces the markup potential of the monopolist, resulting in an outcome that is closer to the perfectly competitive one. In <a href="#exr-Lerner-CEdemand" class="quarto-xref">Exercise&nbsp;2</a>, you are asked to show the dependence of DWL on elasticity for the constant-elasticity demand case. Note that in general we can always write the DWL as:</p>
+<p><span id="eq-DWL"><span class="math display">\[
+    DWL = \int_{q_M}^{q_C} [p(q) - MC(q)] dq,
+\tag{9}\]</span></span></p>
+<p>where <span class="math inline">\(q_M\)</span> and <span class="math inline">\(q_C\)</span> denote the monopoly and the competitve outputs, respectively.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>With some algebra we can show the following relationship for the constant-elasticity demand: <span id="eq-QMQC-mon"><span class="math display">\[
+    q_M = \left(1 - \frac{1}{\epsilon}\right)^{\frac{\epsilon}{1 + \epsilon}} q_C.
+\tag{10}\]</span></span></p>
+<p>Observe that <span class="math inline">\(q_M \to q_C\)</span> as <span class="math inline">\(\epsilon\to\infty,\)</span> as we have remarked above.</p>
+<div id="fig-elasticityDWL" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-elasticityDWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="a3f3e56c" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-10-output-1.png" width="353" height="359" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-10-output-2.png" width="353" height="359" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elasticityDWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Price-elasticity of demand and dead weight loss.
+</figcaption>
+</figure>
+</div>
+<div id="rem-DWL-mon-vs-DWL-tax" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em>. </span>It is also important to note that this relationship between the price-elasticity of demand and monopoly DWL does not typically apply to other types of DWL. For example, in the context of an excise tax, the distorsion caused by the tax (or the DWL) would be higher the flatter the demand curve. This is because consumers in a market with relatively more elastic demand, consumers have more alternatives which they can turn to rather than continuing to consume the good whose price has increased.</p>
+</div>
+</section>
+<section id="regulation-of-monopolies" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Regulation of monopolies</h1>
+<p>Monopolies cause a reduction in consumer welfare and a loss of market efficiency. It is a case of market failure. What can the government do to mitigate the consequences? In general it depends on the type of monopolies. A monopoly that arises and persists thanks to economies of scale (decreasing average cost) is called a <strong>natural monopoly</strong>.</p>
+<p>If the monopoly is not a natural monopoly, i.e., if they maintain their dominant position by anticompetitive or restrictive practices (e.g., exclusive dealing, tying, bundling, predatory pricing, etc.), then the general public approach is to try and break them by using antitrust laws.</p>
+<p>If it is a natural monopoly, then the government might attempt to regulate. Now the government faces a dilemma since it is more efficient for a single firm to serve the market thanks to economies of scale. For a natural monopoly the average cost is declining in output. Recall that for output levels for which the average cost is declining, the marginal cost is <em>less</em> than the average cost. If the government requires that the natural monopolist sets price equal to the marginal cost as if it were operating in a perfectly competitive market, it would incur a loss since this price would be below its average cost.</p>
+<p>One public solution is to allow natural monopolists to charge different prices to different groups of customers (e.g., different electricity/water rates depending on whether customers are businesses or households) in such a way that the losses incurred would be offset by the positive profits.</p>
+</section>
+<section id="monopsony" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Monopsony</h1>
+<section id="what-is-a-monopsony" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="what-is-a-monopsony"><span class="header-section-number">6.1</span> What is a monopsony?</h2>
+<p>In contrast to a monopoly, in a <em>monopsony</em>, there is a single buyer and several sellers. The buyer will be able to pay less for each unit of the good than if it had to compete against other buyers.</p>
+<div id="exm-monopsony-quali" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6</strong></span> Examples of a monopsonies abound, spanning from the labor, retail, technology to the public sector.</p>
+<ul>
+<li><p><strong>Labor</strong> market: Large factories in remote areas in developing countries might be the sole buyer of labor in the region. These companies can exert significant control over wages and employment conditions.</p></li>
+<li><p><strong>Retail</strong>: Big supermarket chains such as Walmart (US), Carrefour (France) or Amazon (online) might have important negotiating power over suppliers when they are the dominant buyers of certain products.</p></li>
+<li><p><strong>Content platforms</strong> such as YouTube, Instagram or Spotify might have monopsonistic power over content creators</p></li>
+<li><p>Public <strong>defense</strong>: In many countries, the government is the sole purchaser of military equipment and defense-related goods. Companies producing such goods often have to accept the terms and prices dictated by the government.</p></li>
+</ul>
+</div>
+</section>
+<section id="modeling-a-monopsony" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="modeling-a-monopsony"><span class="header-section-number">6.2</span> Modeling a monopsony</h2>
+<p>Consider a firm with production function <span class="math inline">\(q=f(L)\)</span> which is twice differentiable, strictly increasing (<span class="math inline">\(f'&gt;0\)</span>) and strictly concave (<span class="math inline">\(f''&lt;0\)</span>) The firm faces only linear labor cost <span class="math inline">\(w(L)L\)</span> and its profits are given by: <span class="math display">\[
+\pi = pq - w(L)L,
+\]</span> where <span class="math inline">\(p\)</span> is the price of the good produced by the firm</p>
+<p>Note that <span class="math inline">\(w\)</span> is increasing in <span class="math inline">\(L\)</span>: the higher demand for labor, the higher the wage. In other words, the firm is not a price-taker in the labor market: it has influences over the wage by deciding on the number of workers to hire.</p>
+<p>The monopsonist’s PMP: <span class="math display">\[
+\max_{L\geq 0} \pi =pq - w(L)L = pf(L) - w(L)L.
+\]</span></p>
+<p>Differentiating w.r.t <span class="math inline">\(L\)</span> yields: <span id="eq-FOC_monopsony"><span class="math display">\[
+\pi'(L) = 0 \iff pf'(L) = w(L) + w'(L)L.
+\tag{11}\]</span></span></p>
+<p>Observe that the LHS of <a href="#eq-FOC_monopsony" class="quarto-xref">Equation&nbsp;11</a> represents the marginal revenue brought about but an additional worker (<span class="math inline">\(f'\)</span> is the marginal output). It is often referred to as the <strong>marginal revenue product</strong> of labor (<span class="math inline">\(MRP\)</span>).</p>
+<p>The RHS of <a href="#eq-FOC_monopsony" class="quarto-xref">Equation&nbsp;11</a> captures the marginal cost or the <strong>marginal expenditure</strong> on labor (<span class="math inline">\(ME\)</span>). As the labor market becomes scarce, employing an additional worker raises the wage to <span class="math inline">\(w(L)\)</span>. The increased wage <span class="math inline">\(w'&gt;0\)</span> must be enjoyed by all the workers, which is captured by the second term. An analogy with the monopoly might help us remember these terms. In particular:</p>
+<ul>
+<li><span class="math inline">\(w(L)\)</span> to <span class="math inline">\(p(q)\)</span>: Supply to demand</li>
+<li><span class="math inline">\(ME(L)\)</span> to <span class="math inline">\(MR(q)\)</span>: Marginal expenditure to marginal revenue</li>
+<li><span class="math inline">\(MRP(L)\)</span> to <span class="math inline">\(MC(q)\)</span>. Marginal revenue product to marginal cost</li>
+</ul>
+<p>Let us look at a numerical example.</p>
+<div id="exm-monop-Quant" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7</strong></span> Consider a coal mine in a small town with production function <span class="math inline">\(q = 30\ln L\)</span>. The market for coal is a perfectly competitive one with price <span class="math inline">\(p=\$5\)</span> per unit. The labor market where the mine operates has supply given by <span class="math inline">\(w(L) = 5 + \frac{1}{2}L.\)</span> Determine the number of workers hired and the equilibrium wage in this market.</p>
+<p>The monopsony’s PMP: <span class="math display">\[
+\pi(L) = 150\ln(L) - (5 + \frac{1}{2}L)L,
+\]</span></p>
+<p>which is strictly concave in <span class="math inline">\(L.\)</span> The necessary and sufficient condition for a max is: <span class="math display">\[
+\begin{aligned}
+\pi'(L) = 0 \iff \frac{150}{L} &amp;= 5 + L \\
+L^2 + 5L - 150 &amp;= 0 \\
+L &amp;= 10.
+\end{aligned}
+\]</span></p>
+<p>Hence the optimal number of hires is 26 for a wage rate of <span class="math inline">\(w(10) = \$10.\)</span></p>
+<p>If the market were competitive, the firm would have taken the wage as given while soving its PMP. The condition for a max in this case would have been:</p>
+<p><span class="math display">\[
+\begin{aligned}
+pq'(L) &amp;= w(L) \\
+\frac{150}{L} &amp;= 5 + \frac{1}{2}L \\
+L &amp;= -5 + \sqrt{325} \approx 13.
+\end{aligned}
+\]</span></p>
+<p>The competitive wage would have been <span class="math inline">\(w(13)=11.5.\)</span></p>
+</div>
+<div id="fig-monopsony-DWL" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-monopsony-DWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="b28aa84c" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-11-output-1.png" width="339" height="330" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-monopsony-DWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Consequences of monopsony
+</figcaption>
+</figure>
+</div>
+<p>To conclude, we see that compared to a competitive buyer, the monopsonist buys a lower quantity at a lower price and this creates a dead weight loss in the market, as in the case of the monopoly.</p>
+</section>
+</section>
+<section id="exercises" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Exercises</h1>
+<div id="exr-elasticityD" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Consider a market with a linear demand curve <span class="math inline">\(p(q) = a - bq,\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are strictly positive constants. Determine the range of quantities for which the demand curve is elastic or inelastic. Suppose the market is a monopoly and the monopolist faces a linear cost function <span class="math inline">\(C(q)=cq,\)</span> what are the monopoly price and quantity? Does this quantity belong to the elastic or inelastic part of the demand curve?</p>
+</div>
+<div id="exr-Lerner-CEdemand" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Consider a monopolist with linear marginal cost <span class="math inline">\(MC(q)=cq\)</span> facing a constant elasticity demand function:</p>
+<p><span class="math display">\[
+q(p) = a p ^{-\epsilon} \quad a&gt;0,\:\epsilon &gt; 0.
+\]</span></p>
+<ol type="1">
+<li><p>Show that the monopoly output and price are given by: <span id="eq-CEdemand-Monopoly"><span class="math display">\[
+\begin{aligned}
+q_M &amp;= \left[\frac{\left(1 - 1/\epsilon\right)a^{1/\epsilon}}{c}\right]^{\frac{\epsilon}{1+\epsilon}}, \\
+p_M &amp;= \left(\frac{a}{q}\right)^{\frac{1}{\epsilon}}.
+\end{aligned}
+    \tag{12}\]</span></span></p></li>
+<li><p>Verify that the monopolist operates on an elastic portion of the demand curve</p></li>
+<li><p>Compute the dead weight loss, how does it depend on <span class="math inline">\(\epsilon\)</span>? Interpret.</p></li>
+</ol>
+</div>
+<div id="exr-multipliant" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Consider a multipliant monopoly producing in two different plants, each of which has total cost: <span class="math inline">\(C_i(q_i) = a_i + b_i q_i + \frac{1}{2}c_i q_i^2\)</span>, where <span class="math inline">\(a_i, b_i, c_i&gt;0\)</span>, <span class="math inline">\(i=\{1, 2\}\)</span>. The monopolist faces a linear demand curve given by <span class="math inline">\(p(Q) = A - Q\)</span> with <span class="math inline">\(Q=q_1 + q_2\)</span>. Determine the output of each plant and their joint profits.</p>
+</div>
 
 
+</section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In the linear demand case above the DLW was the area of a triangle which we were about to compute without integration.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -773,6 +1246,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../contents/lecture_3.html" class="pagination-link" aria-label="Lecture 3">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture 3</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
