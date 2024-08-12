@@ -1,5 +1,8 @@
 ---
 title: "Chapter 1. Consumers and demand"
+author:
+    name: My Dam
+    email: my-thi-tra.dam@universite-paris-saclay.fr
 number-sections: true
 execute:
     echo: false
@@ -80,8 +83,6 @@ Before discussing these properties, let us fix the notations. Let $x$ and $y$ be
 | $i$ weakly prefers $x$ over $y$        | $x \succeq_i y$ |
 | $i$ strictly prefers $x$ over $y$      | $x \succ_i y$   |
 | $i$ is indifferent between $x$ and $y$ | $x \sim_i y$    |
-
-: Preference relation
 
 When it is clear from context that we will eliminate the letter $i$ from the notations. Note that the equivalence relation $\sim$ simply means that $x\succeq y$ and $y\succeq x$ . We also refer to the preference relation $\succeq$ as the *weak* preference relation, as opposed to the *strict* preference relation $\succ$.
 

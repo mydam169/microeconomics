@@ -1,0 +1,784 @@
+---
+title: "Chapter 5. Game theory and imperfect competition"
+author:
+    name: My Dam
+    email: my-thi-tra.dam@universite-paris-saclay.fr
+number-sections: true
+execute:
+    echo: false
+    warning: false
+format:
+    html:
+        toc: true
+        toc-depth: 3
+        toc-title: "Content"
+        # toc-expand: true
+        toc-location: "left"
+---
+
+```{python}
+%load_ext autoreload
+%autoreload 2
+```
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib import cm
+import seaborn as sns
+import pandas as pd
+import dataframe_image as dfi
+import ipywidgets as widgets
+# from IPython.display import display
+# from ipywidgets import interact
+import pandas as pd
+```
+
+```{python}
+import sys
+import os
+mod_dir = os.path.join(os.getcwd(), 'modules')
+if mod_dir not in sys.path:
+    sys.path.append(mod_dir)
+
+import micro_modules as mm
+mm.load_viz_settings()
+```
+
+```{python}
+import warnings
+warnings.filterwarnings("ignore")
+```
+
+# A word on organization 
+
+This chapter contains a lot of definitions and concepts specific to game theory. In order to help quickly locate and link these concepts together, I have decided to put them all in @sec-concepts. Whenever you encounter a new concept throughout the chapter, you will most likely find its definition there. 
+
+# Game theory basics
+
+## Game building blocks and examples
+
+In order to define a game, we typically need at least four elements:
+
+* **Players**: who are playing the game (at least two)
+* **Rules**: what are the rules of the game, what _moves_ are possible and what are prohibited
+* **Outcomes**: what are the possible results of the games (score combinations leading to a win or a loss, scenario(s) of a draw, etc.)
+* **Payoffs**: the players' preferences over outcomes
+
+The objective of each player in a game is to identify strategies that maximize potential payoffs, given what they know about the rules of the game, their opponents, the possible outcomes and their preferences. A __strategy__ is a complete contingent plan telling a player what action to take in every possible situation of the game.
+
+Let us illustrate these elements via a couple of examples.
+
+::: {#exm-matchingPennies}
+## Matching pennies
+
+* Players: There are two players A and B
+* Rules: Each player puts down a coin, either heads or tails up
+* Outcomes: Player A wins if the coins match (both heads or tails). Player B wins if the coins do not match.
+:::
+
+
+::: {#exm-tennis}
+
+## Tennis
+
+Let us consider a tennis game in a single tennis tournament (there are doubles and mixed doubles, too). A tennis match typically consists of up to seven sets, each of which consists of several games. We will be considering a single tennis game.
+
+* Players: two players of the same sex
+* Rules:
+  
+  * Scoring: A game is scored as 15, 30, 40 and game. If both players reach 40, it's called "deuce." To win from deuce, a player must win two consecutive points (advantage and game).
+  * Service: One player serves in each game. The server must hit the ball diagonally into the opponent's service box. A serve that touches the net but lands in the correct box is a "let" and is replayed. A serve is a fault if it lands outside the service box or if the server misses the ball. Two consecutive faults result in a double fault, giving the point to the opponent.
+  * Rallies: After the serve, players rally by hitting the ball back and forth. The ball must be hit before it bounces twice on the player's side.
+  * Winning Points: A point is won if the opponent fails to return the ball within the court boundaries, hits it into the net, or touches the net after hitting the ball before the ball lands on the other side of the court, etc.
+* Results: A single winner by means of the scoring rule (no ties).
+:::
+
+## Assumption of common knowledge of rationality
+
+In all games studied, we assume that players are rational. Each player knows every element of the game, namely, the players involved, the strategy in each contingency and the resulting payoff in each situation. In addition, every player knows that the other player(s) know all of this, including the fact that this player knows that they know. 
+
+# Graphical representation of games
+
+There are two ways to represent a game: by means of a matrix (normal form) or a game tree (extensive form). 
+
+## Normal form
+
+The normal form is the representation of a game using a matrix whose columns and rows represent all possible outcomes. It is best used to represent games of simultaneous moves where order of play is not important. 
+
+In the examples that follow, the first number represents the payoff to the player whose strategies show up on each row of the matrix. The second number reprsents the payoff to the player whose strategies show up on each column.Let us try to determine the best responses and the Nash equilibrium  of each game. 
+
+::: {#exm-pennies}
+::: {#fig-pmatch fig-cap="Normal form representation of the game of matching pennies. If pennies matched B pays A one dollar, otherwise A pays B one dollar."}
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th colspan=2 style="text-align:center">Player A</th>
+    </tr>
+    <tr style="text-align:center">
+        <th></th>
+        <th></th>
+        <td>Heads</td>
+        <td>Tails</td>
+    </tr>
+    <tr>
+        <th rowspan=2>Player B</th>
+        <td>Heads</td>
+        <td style="text-align:center">(-1,1)</td>
+        <td style="text-align:center">(1,-1)</td>
+    </tr>
+    <tr>
+        <td>Tails</td>
+        <td style="text-align:center">(1,-1)</td>
+        <td style="text-align:center">(-1,1)</td>
+    </tr>
+</table>
+:::
+:::
+
+::: {#exm-crops}
+Consider this example from [CoreEcon](https://core-econ.org/the-economy/microeconomics/04-strategic-interactions-02-game-theory.html) which describes a strategic situation between two farmers who decide on which crop to grow. If both grow the same crop, they will flood the market with the same good and pushing down the price. The land of the person named Anil is equally suitable for both types of crops (cassava and rice). For the other person, Bala, the land is as good as that of Anil for growing rice, but less so for cassava. The outcome of this situation can be predicted using a simple game theory setupt.
+
+::: {#fig-crop fig-cap="An agricultural game"}
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th colspan=2 style="text-align:center">Bala</th>
+    </tr>
+    <tr style="text-align:center">
+        <th></th>
+        <th></th>
+        <td>Rice</td>
+        <td>Cassava</td>
+    </tr>
+    <tr>
+        <th rowspan=2>Anil</th>
+        <td>Rice</td>
+        <td style="text-align:center">(4,4)</td>
+        <td style="text-align:center">(6,3)</td>
+    </tr>
+    <tr>
+        <td>Cassava</td>
+        <td style="text-align:center">(6,6)</td>
+        <td style="text-align:center">(5,2)</td>
+    </tr>
+</table>
+:::
+:::
+
+::: {#exm-auto}
+Consider a automobile market serviced by two firms, Ford and BMW. If both innovate (for example, introducing new EV models, incorporating AI, etc.), then they will share the market as before but earn lower profits due to the high R&D costs. If one innovates and the other does not, then the market share gained from the former will more than compensate for the high costs and it generates higher profits as a result. If both do not innovate, they continue to earn high profits.
+
+::: {#fig-duopoly fig-cap="A prisoners' dilemma game of innovation"}
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th colspan=2 style="text-align:center">Vueling</th>
+    </tr>
+    <tr style="text-align:center">
+        <th></th>
+        <th></th>
+        <td>Innovate</td>
+        <td>Do not innovate</td>
+    </tr>
+    <tr>
+        <th rowspan=2>EasyJet</th>
+        <td>Innovate</td>
+        <td style="text-align:center">(5,5)</td>
+        <td style="text-align:center">(10,2)</td>
+    </tr>
+    <tr>
+        <td>Do not innovate</td>
+        <td style="text-align:center">(2,10)</td>
+        <td style="text-align:center">(7,7)</td>
+    </tr>
+</table>
+:::
+:::
+
+::: {#exm-dating}
+Game theory is very much alive in dating. In the simplest scenario, imagine two individuals (the _players_) deciding how much effort to put into the relationship. If both slack off, they split quickly and move on with no damage done. If one is committed while the other is lukewarm, the one committed ends up paying a higher price and potentially feeling resentful after the split. If both are committed (exerting high efforts), the relationship blossoms and they live happily ever after.[^1]
+
+[^1]: This is not the only dating theory so please don't get too carried away.
+
+::: {#fig-dating fig-cap="A dating game with multiple Nash equilibria"}
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th colspan=2 style="text-align:center">Lover A</th>
+    </tr>
+    <tr style="text-align:center">
+        <th></th>
+        <th></th>
+        <td>Commit</td>
+        <td>Slack off</td>
+    </tr>
+    <tr>
+        <th rowspan=2>Lover B</th>
+        <td>Commit</td>
+        <td style="text-align:center">(7,7)</td>
+        <td style="text-align:center">(-2,5)</td>
+    </tr>
+    <tr>
+        <td>Slack off</td>
+        <td style="text-align:center">(5,-2)</td>
+        <td style="text-align:center">(0,0)</td>
+    </tr>
+</table>
+:::
+:::
+
+What are the differences in the outcomes of these games? Observe that the game of matching pennies in @exm-pennies does not have an equilibrium. There is always an incentive to deviate from a chosen strategy depending on the choice of the opponent. In @exm-crops, we have a unique Nash equilibrium that is also Pareto optimal.[^2] In @exm-auto, we have a unique Nash equilibrium which is not Pareto optimal: the pursuit of individual interest does not lead to a socially optimal outcome. This is an example of the famous Prisoners' Dilemma game. In @exm-dating, we see a situation of non-uniqueness of equilibria. 
+
+[^2]: An allocation is called Pareto optimal if there exists no other feasible allocations that strictly improve the payoff of at least one individual without sacrificing the payoff of another.
+
+
+## Extensive form 
+
+The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in @fig-normFormExtGame. In particular, the normal form representation provies two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant's "In" is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as _sequentially irrational_ because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of __subgame-perfect equilibrium__(@def-SPE).
+
+::: {#fig-extForm fig-cap="An extensive form game with two players, P1 (entrant) and P2 (incumbent). The entrant moves first."}
+```{mermaid}
+flowchart LR
+   entrant{P1} --> |In| incumbent{P2} 
+   entrant -- Out --> A("(0,10)")
+   incumbent -- Accommodate --> B("(5,5)")
+   incumbent -- Price war --> C("(-2,-2)")
+
+   linkStyle 0 stroke:#111,stroke-width:4px,color:#000
+   linkStyle 2 stroke:#111,stroke-width:4px,color:#000
+```
+:::
+
+::: {#fig-normFormExtGame fig-cap="Normal form representation of a sequential moves game"}
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th colspan=2 style="text-align:center">Potential entrant</th>
+    </tr>
+    <tr style="text-align:center">
+        <th></th>
+        <th></th>
+        <td>In</td>
+        <td>Out</td>
+    </tr>
+    <tr>
+        <th rowspan=2>Incumbent</th>
+        <td>Accommodate</td>
+        <td style="text-align:center">(5,5)</td>
+        <td style="text-align:center">(10,0)</td>
+    </tr>
+    <tr>
+        <td>Price war</td>
+        <td style="text-align:center">(-2,-2)</td>
+        <td style="text-align:center">(10,0)</td>
+    </tr>
+</table>
+:::
+
+## Backward induction and SPE
+
+It is important to know how to identify and write an SPE. We solve for SPE using backward induction:
+
+  1. Start for the farthest end of the tree, focus on the decision point(s) of the last mover (the smallest subgames)
+  2. Identify her BR and shade the branch associated with her BR (i.e., the NE associated with each of these subgames)
+  3. Consider the second-to-last mover, identify her BR to the BR of the last mover, then shade this branch (another NE identified)
+  4. Repeat the previous step until we reach the first mover at the root node (the largest subgame is the entire game itself)
+
+Then we need to express the SPE as a strategy profile, which specifies the strategy for each player for every possible decision node where that player could be called to move, _even for nodes that are not reached_ in equilibrium.
+
+::: {#exm-SPE}
+Consider the following dynamic game with the first mover being Player 1 (P1). We would like to identify the SPE. For convenience I have put all the decision nodes in the diamond boxes.
+
+```{mermaid}
+flowchart LR
+    %% upper branch
+    first{P1} -- L --> secondL{P2} 
+    secondL -- A --> firstL{P1}
+    firstL -- V --> out2("(1,6)")
+    firstL -- W --> out3("(4,5)")
+    firstL -- X --> out4("(5,2)")
+    secondL -- B --> out1("(7,1)")
+    %% lower branch
+    first -- R --> secondR{P2}
+    secondR -- C --> out5("(2,7)")
+    secondR -- D --> out6("(3,4)")
+    secondR -- E --> firstR{P1}
+    firstR -- Y --> out7("(6,8)")
+    firstR -- Z --> out8("(8,3)")
+```
+
+Observe that there are 5 subgames including the entire game itself. Let us use backward induction to solve for the NE in every subgame.
+
+::: {#fig-sgall fig-cap="Subgames"}
+```{mermaid}
+flowchart LR
+    %% upper branch
+    first{P1} -- L --> secondL{P2} 
+
+    subgraph SG4
+        secondL -- A --> firstL{P1}
+        subgraph SG1
+            firstL -- V --> out2("(1,6)")
+            firstL -- W --> out3("(4,5)")
+            firstL -- X --> out4("(5,2)")
+        end
+        secondL -- B --> out1("(7,1)")
+        %% lower branch
+    end
+    
+    first -- R --> secondR{P2}
+    
+    subgraph SG3
+        secondR -- C --> out5("(2,7)")
+        secondR -- D --> out6("(3,4)")
+        secondR -- E --> firstR{P1}
+        subgraph SG2
+            firstR -- Y --> out7("(6,8)")
+            firstR -- Z --> out8("(8,3)")
+        end
+    end
+
+    style SG1 stroke:#0072c7,stroke-width:2px
+    style SG2 stroke:#4fe1d6,stroke-width:2px
+    style SG3 stroke:#db63d6,stroke-width:2px
+```
+:::
+
+We now look for the NE in each subgame.
+
+::: {#fig-sg1 fig-cap="First subgame (last one on the upper branch)"}
+```{mermaid}
+flowchart LR
+    firstL{P1} -- V --> out2("(1,6)")
+    firstL -- W --> out3("(4,5)")
+    firstL -- X --> out4("(5,2)")
+    linkStyle 2 stroke:#111,stroke-width:4px,color:#000
+```
+:::
+
+::: {#fig-sg2 fig-cap="Second subgame (last one on the lower branch)"}
+```{mermaid}
+flowchart LR
+    firstR{P1} -- Y --> out7("(6,8)")
+    firstR -- Z --> out8("(8,3)")
+    linkStyle 1 stroke:#111,stroke-width:4px,color:#000
+```
+:::
+
+::: {#fig-sg3 fig-cap="Third subgame"}
+```{mermaid}
+flowchart LR
+    secondL{P2} -- A --> out4("(5,2)")
+    secondL -- B --> out1("(7,1)")
+    linkStyle 0 stroke:#111,stroke-width:4px,color:#000
+```
+:::
+
+::: {#fig-sg4 fig-cap="Forth subgame"}
+```{mermaid}
+flowchart LR
+    secondR{P2} -- C --> out5("(2,7)")
+    secondR -- D --> out6("(3,4)")
+    secondR -- E --> out8("(8,3)")
+    linkStyle 0 stroke:#111,stroke-width:4px,color:#000
+```
+:::
+
+::: {#fig-sg5 fig-cap="Fifth subgame"}
+```{mermaid}
+flowchart LR
+    first{P1} -- L --> out4("(5,2)") 
+    first -- R --> out5("(2,7)")
+    linkStyle 0 stroke:#111,stroke-width:4px,color:#000
+```
+:::
+
+Finally putting it all together, we can write the SPE as:
+$$
+SPE = \{(L,\: A/C, \:, X/Z\}.
+$${#eq-SPE}
+Recall that we have to specify the strategy for each player for every possible decision node where that player could be called to move, _even for nodes that are not reached_ in equilibrium.
+
+```{mermaid}
+flowchart LR
+    %% upper branch
+    first{P1} -- L --> secondL{P2} 
+    secondL -- A --> firstL{P1}
+    firstL -- V --> out2("(1,6)")
+    firstL -- W --> out3("(4,5)")
+    firstL -- X --> out4("(5,2)")
+    secondL -- B --> out1("(7,1)")
+    %% lower branch
+    first -- R --> secondR{P2}
+    secondR -- C --> out5("(2,7)")
+    secondR -- D --> out6("(3,4)")
+    secondR -- E --> firstR{P1}
+    firstR -- Y --> out7("(6,8)")
+    firstR -- Z --> out8("(8,3)")
+    linkStyle 0 stroke:#0072c7,stroke-width:4px,color:#000
+    linkStyle 4 stroke:#0072c7,stroke-width:4px,color:#000
+    linkStyle 7 stroke:#db63d6,stroke-width:4px,color:#000
+    linkStyle 11 stroke:#0072c7,stroke-width:4px,color:#000
+    linkStyle 1 stroke:#db63d6,stroke-width:4px,color:#000
+```
+:::
+
+
+# Key game concepts {#sec-concepts}
+
+::: {#def-strategy}
+## Strategy
+A strategy is a complete contingent plan specifying which action a player selects in every possible situation (contingency) she might face during a game.
+:::
+
+::: {#exm-stratey}
+In the pennies matching game in @exm-matchingPennies, each player has two possible strategies: heads (H) or tails (T). We can write
+$S_A=S_B=\{H, T\}.$
+:::
+
+::: {#def-strategyProfile}
+## Strategy profile
+A strategy profile is a list describing the strategies that _each_ player selects. In a game of $N$ players, a strategy profile is $s=(s_1,s_2,\dots,s_N)$. Equivalently we often write $s=(s_i,s_{-i})$ for any $i=1,\dots,N.$ Here $s_{-i}$ means the strategies selected by players other than $i.$
+:::
+
+::: {#exm-stratProf}
+In the pennies matching game, there are four possible strategy profiles:
+$$
+s \in \{(H,T), (T,H), (T,T), (H,H)\}.
+$$
+Hence a strategy profile is an element in the product space $S_A\times S_B,$ or more generally an element in $S_i\times S_{-i}$ for any $i=1,\dots,N.$
+:::
+
+
+::: {#def-payoff}
+## Payoff function
+The payoff function of a player $i$ is a mapping from a strategy profile to a real number $u_i : S_i \times S_{-i} \to \mathbb{R}.$
+:::
+
+Observe that the payoff of a player typically depends on the strategies selected by the others. This is the _strategic_ property of games.
+
+::: {#def-weakDom}
+## Strategic dominance
+Strategy $s_i$ is a weakly dominant strategy of player $i$ if
+$$
+u_i(s_i, s_{-i}) \geq u_i(s_j, s_{-i}),
+$${#eq-weak-dom}
+for every $s_i \neq s_j$ and $s_{-i}$ selected by the other players.
+If the inequality sign in condition [-@eq-weak-dom] is strict, then $s_i$ is called a strictly dominant strategy. If the inequality sign reverses direction, then player $i$ views $s_i$ as a weakly dominated strategy (strictly dominated if the inequality sign is strict.)
+:::
+
+::: {#def-bestResponse}
+## Best response
+The strategy $s_i$ of player $i$ is called the best response to her opponents' strategy profile $s_{-i}$ if:
+$$
+u_i(s_i, s_{-i}) \geq u_i(s_j, s_{-i}), \quad\forall j\neq i.
+$${#eq-BRdef}
+We often write:
+$$
+s_i \in BR_i(s_{-i}). 
+$${#eq-BRcorr}
+:::
+
+::: {#rem-BRcorr}
+In general, for each strategy profile $s_{-i},$ the best response coming from $i$ needs not be unique, i.e., the best response is a correspondence. When $BR_i(s_{-i})$ is a singleton for every possible $s_{-i},$ we have a best response function.
+:::
+
+::: {#rem-BRvsSdom}
+Observe that a dominant strategy is a best response, but not conversely. In order for a best response to be a dominant strategy, condition [-@eq-BRdef] has to hold for _every possible_ strategy profile selected by the other players. In other words, whatever the strategies selected by the other player(s), the best response remains the same for player $i.$ Strategic dominance is thus a much stronger than best response.
+:::
+
+::: {#def-NashEqm}
+## Nash equilibrium
+A strategy profile $s^*=(s^*_i, s^*_{-i})$ is a Nash equilibrium if every player plays their best reponse given their opponnents' strategies, that is:
+$$
+s^*_i \in BR_i(s^*_{-i}),\quad \forall i=1,...,N.
+$${#eq-NE}
+:::
+
+::: {#def-infoSet}
+## Information set
+In the context of extensive form games, an information set faced by a player is a set that connects all the nodes that the player cannot distinguish.
+:::
+
+::: {#def-subgame}
+## Subgame
+A subgame is a portion of an extensive-form game that contains a decision node and all subsequent nodes following it.
+Graphically, if we draw a circle around a subgame, then this circle cannot cross any information set: every subgame must contain all its information sets. The presence of information sets thus reduces the number of subgames.
+:::
+
+::: {#def-SPE}
+## Subgame-perfect equilibrium
+A strategy profile $(s_i^*, s^*_{-i})$ is a SPE if it specifies a Nash equilibrium in each subgame.
+:::
+
+# Applications to imperfect competition
+
+## Cournot model
+
+The Cournot model is a simultaneous-moves game in which firms compete on quantity. Consider an industry with two firms (i.e., a douopoly) selling a homogeneous product. Each firm $i$ independently and simultaneously determines output $q_i$ to maximize profits, $i=\{1, 2\}.$
+They each face a linear total cost $C_i(q_i) = cq_i$, $c>0.$
+Linear inverse demand curve: $p(q_1, q_2) = a - b\left(\sum_{i=1}^N q_i\right)$ where $a, b>0.$ Notice that the production choice of each firm affects the market price of the good and consquently the bottom line of the other firm. This would not have been the case in a perfectly competitive market.
+
+Each firm $i$ solves its profit maximization problem to determine the optimal production level:
+$$
+\begin{aligned}
+\max_{q_i} \pi_i &= R_i(q_i) - C_i(q_i) \\
+&= p(q_1, q_2)q_i - cq_i \\
+&= [a - b(q_1 + q_2)]q_i - cq_i
+\end{aligned}
+$${#eq-PMP_cournot}
+    
+The FOC yields:
+$$
+\frac{\partial \pi_i}{\partial q_i} = 0 \iff a - 2bq_i - bq_j = c.
+$${#eq-FOC_cournot}
+    
+From @eq-FOC_cournot we can derive the best response (BR) function, which specifies the optimal output of each firm given the output choice of the other firm:
+
+$$ 
+q_i = BR_i(q_j) = \frac{a - c}{2b} - \frac{q_j}{2}, \quad i\neq j.
+$${#eq-BR_cournot}
+    
+The two best response functions specify the Nash equiblirium of the the game.
+$$
+\begin{cases}
+q_1 &=  \frac{a - c}{2b} - \frac{q_2}{2} \\
+q_2 &=  \frac{a - c}{2b} - \frac{q_1}{2}. 
+\end{cases}
+$$
+
+Solving this system, we obtain the NE of the Cournot game:
+$$
+(q_1^*, q_2^*) = \left(\frac{a-c}{3b}, \frac{a-c}{3b}\right).
+$${#eq-NE-cournot}
+
+Let us try and visualize this outcome.
+
+::: {#fig-cournot-game fig-cap="Cournot competition on quantity in a duopoly"}
+
+```{python}
+a, b, c = 6, .75, 2
+qmax = (a - c) / b
+qstar = (a - c) / (3 * b)
+qmid = (a - c) / (2 * b)
+q = np.linspace(0, 7, 100)
+qCournot = (a - c) / (3 * b)
+def BR1(q):
+    return (a - c) / (2 * b) - 0.5 * q
+def BR2(q):
+    return (a - c) / b - 2 * q
+def eqline(q):
+    return q
+plt.plot(q, BR1(q), label='$BR_1(q_2)$', color='k', lw=1.5)
+plt.plot(q, BR2(q), label='$BR_2(q_1)$', color='C0', lw=1.5)
+plt.plot(q[:65], eqline(q[:65]), linestyle="--", color='gray', label="$q_1=q_2$")
+plt.vlines(x=0, ymin=qmax*0.99, ymax=q.max(), color='C0', lw=4)
+plt.hlines(y=0, xmin=qmax*0.99, xmax=q.max(), color='k', lw=4)
+plt.scatter(qstar, qstar, color='r', s=50, label="Cournot NE")
+
+# annotations
+plt.vlines(x=qstar, ymin=0, ymax=qstar, linestyle='--', lw=.5, color='k')
+plt.hlines(y=qstar, xmin=0, xmax=qstar, linestyle='--', lw=.5, color='k')
+plt.text(qstar*0.85, -.5, "$\\frac{a-c}{3b}$")
+plt.text(qmid*0.95, -.5, "$\\frac{a-c}{2b}$")
+plt.text(qmax*0.95, -.5, "$\\frac{a-c}{b}$")
+plt.text(-0.75, qstar*0.9, "$\\frac{a-c}{3b}$")
+plt.text(-0.75, qmid*0.95, "$\\frac{a-c}{2b}$")
+plt.text(-0.75, qmax, "$\\frac{a-c}{b}$")
+
+
+plt.xlabel("$q_1$", loc='right')
+plt.ylabel("$q_2$", loc='top')
+plt.ylim([0, q.max()])
+plt.xlim([0, q.max()])
+plt.xticks([])
+plt.yticks([])
+plt.legend(loc='best')
+plt.show()
+```
+:::
+
+For completeness let us compute the equilibrium price of the duopoly, aggregate output and the profits earned by each firm.
+
+* Total output:
+    $$ 
+    Q^C = q_1 + q_2 = 2q^C = \frac{2(a - c)}{3b}. 
+    $${#eq-totQ_cournot}
+    
+* Equlibrium price via the market demand curve:
+    $$ 
+    p^C = a - bQ^C = \frac{a + 2c}{3}. 
+    $${#eq-price_cournot}
+    
+* Identical individual profits equal to:
+    $$ 
+    \pi^C = p^C q^C - cq^C = \frac{(a - c)^2}{9b}.
+    $${#eq-profit_cournot}
+    
+
+
+## Stackelberg model
+
+Consider 2 firms with the same constant marginal cost $c$ as in the Cournot case. They also compete on quantity, but _sequentially_.
+THe structure of the game is the following:
+
+  * First, firm 1 chooses $q_1$
+  * Then, having observed the choice of firm 1, firm 2 chooses $q_2$
+    
+The first mover advantage can be due to legal barriers. For example, if firm 1 invents a new drug, it typically has a patent that gives exclusive rights to produce and sell it during the lifetime of the patent (up to 20 years for certain drugs).
+
+We solve this game by backward induction, starting from firm 2, the follower.
+
+### PMP of the follower
+
+The PMP of the follower (Firm 2):
+$$
+\max_{q_2} [a - b(q_1 + q_2)]q_2 - cq_2.
+$$
+
+FOC w.r.t $q_2$ yields the BR function for Firm 2:
+$$ 
+q_2(q_1) \equiv BR_2(q_1) = \frac{a - c}{2b} - \frac{q_1}{2}.
+$${#eq-BR_stack}
+
+Observe that @eq-BR_stack coincides with @eq-BR_cournot since in both cases Firm 2 treats $q_1$ as exogenous
+
+### PMP of the leader
+
+Firm 1 chooses its own output to maximize profits:
+$$
+\max_{q_1} [a - b(q_1 + BR_2(q_1))]q_1 - cq_1.
+$${#eq-PMP_stack_leader}
+
+In @eq-PMP_stack_leader, Firm 1 anticipates that Firm 2 will be maximizing her profits, i.e., settig $q_2 = BR_2(q_1)$.
+
+The FOC w.r.t $q_1$ yields the BR function for Firm 1:
+$$ 
+\frac{a - c - 2bq_1}{2} = 0
+\iff q_1^S = \frac{a-c}{2b}.
+$${#eq-output_leader_stack}
+
+Firm 2's output can be found using @eq-BR_stack:
+$$
+q_2^S = \frac{a - c}{4b} = \frac{q_1^S}{2}.
+$${#eq-output_follower_stack}
+    
+### Stackelberg vs Cournot
+
+
+* In Cournot games, both firms produce the same output that is _less_ than that of the Stackelberg's leader but _more_ than that of the Stackelberg's follower:
+    $$
+    q^S_{\text{follower}} < q^C < q^S_{\text{leader}}.
+    $$
+    
+* The equilibrium price can be computed using the demand function:
+    $$
+    p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = \frac{3a + c}{4},
+    $${#eq-price_stack}
+    which is greater than the Cournot price $p^C=\frac{a+2c}{3}$ since $a>c.$
+    
+* Profits:
+    $$
+    \pi_{\text{leader}} = q^S_1(p^S - c) = \frac{3(a-c)^2}{8b}.
+    $${#eq-profit_leader_stack}
+    
+    $$
+    \pi_{\text{follower}} = q^S_2(p^S - c) = \frac{3(a-c)^2}{16b}.
+    $${#eq-profit_follower_stack}
+
+    Hence the leader earns a higher profits than in the Cournot case thanks to the first mover advantage, but the follower earns lower profits.
+
+To sum up:
+
+$$
+\begin{aligned}
+&p^S > p^C, \\
+&q^S_{\text{follower}} < q^C < q^S_{\text{leader}}, \\
+&\pi_{\text{follower}} < \pi^C < \pi_{\text{leader}}.
+\end{aligned}
+$$
+    
+
+
+
+
+# Exercises
+
+::: {#exr-RPS}
+Rock-Paper-Scissors is another simultaneous moves game. It can be played among multiple players; @fig-rockPaperS illustrates such a game between two. If two players make the same move, it is a draw. Otherwise rock beats scissors, which beats paper, which in turn beats rock. Find the best response of each player and determine the Nash equilibrium of the game.
+
+::: {#fig-rockPaperS fig-cap="Rock Paper Scissors game between two players"}
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th colspan=3 style="text-align:center">Player A</th>
+    </tr>
+    <tr style="text-align:center">
+        <th></th>
+        <th></th>
+        <td>Rock</td>
+        <td>Paper</td>
+        <td>Scissors</td>
+    </tr>
+    <tr>
+        <th rowspan=3>Player B</th>
+        <td>Rock</td>
+        <td style="text-align:center">(0,0)</td>
+        <td style="text-align:center">(-1,1)</td>
+        <td style="text-align:center">(1,-1)</td>
+    </tr>
+    <tr>
+        <td>Paper</td>
+        <td style="text-align:center">(1,-1)</td>
+        <td style="text-align:center">(0,0)</td>
+        <td style="text-align:center">(-1,1)</td>
+    </tr>
+    <tr>
+        <td>Scissors</td>
+        <td style="text-align:center">(-1,1)</td>
+        <td style="text-align:center">(1,-1)</td>
+        <td style="text-align:center">(0,0)</td>
+    </tr>
+</table>
+:::
+:::
+
+::: {#exr-cournot}
+Consider two firms competing à la Cournot facing the same linear demand function $p(q_1,q_2)=a-b(q_1+q_2)$ but with asymmetric costs $C_i(q_i) = c_i q_i$ for $c_i > 0$ and $c_i\neq c_j$, $i,j=\{1, 2\}$. Determine the NE of the Cournot game, the market price as well as the profits earned by each firm in equilibrium.
+:::
+
+::: {#exr-SPE-with-info}
+Find the SPE of the following game with imperfect information. The dashed box means that the player in question faces an information set when called to make a move. In this example, if P1 makes the R move, she will not be able to observe P2's move when it is her turn to move again. In other words, she does not know whether she is on the C or the D branch.
+
+```{mermaid}
+graph LR
+    %% left branch
+    player1{P1} -- L --> player2L{P2}
+    player2L -- A --> player1LL{P1}
+    player2L -- B --> player1LR{P1}
+    player1LL -- U --> au("(1,4)")
+    player1LL -- V --> av("(4,5)")
+    player1LR -- W --> bw("(7,2)")
+    player1LR -- X --> bx("(3,8)")
+
+    player1 -- R --> player2R{P2}
+    player2R -- C --> player1RL{P1}
+    player2R -- D --> player1RR{P1}
+    player1RL -- Y --> cy("(7,2)")
+    player1RL -- Z --> cz("(8,1)")
+    player1RR -- Y --> dy("(6,3)")
+    player1RR -- Z --> dz("(5,7)")
+        
+    style player1RL stroke-dasharray: 4 4
+    style player1RR stroke-dasharray: 4 4
+
+```
+
+:::

@@ -1,5 +1,8 @@
 ---
 title: "Chapter 3. Equlibrium"
+author:
+    name: My Dam
+    email: my-thi-tra.dam@universite-paris-saclay.fr
 number-sections: true
 execute:
     echo: false

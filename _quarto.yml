@@ -46,6 +46,8 @@ website:
             href: contents/lecture_3.qmd
           - text: "Lecture 4"
             href: contents/lecture_4.qmd
+          - text: "Lecture 5"
+            href: contents/lecture_5.qmd
 
 format:
   html:
@@ -55,6 +57,8 @@ format:
     css: styles.css
     toc: true
     toc-depth: 2
+    mermaid:
+      theme: neutral
 
 
 

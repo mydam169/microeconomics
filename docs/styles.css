@@ -28,6 +28,12 @@ p {
     font-size: medium; 
   }
 
+  td {
+    border: 1px solid gray
+  }
+
+
+
 
   
 

@@ -1,5 +1,8 @@
 ---
 title: "Chapter 4. Monopoly"
+author:
+    name: My Dam
+    email: my-thi-tra.dam@universite-paris-saclay.fr
 number-sections: true
 execute:
     echo: false
@@ -542,7 +545,7 @@ Examples of a monopsonies abound, spanning from the labor, retail, technology to
 
 * **Content platforms** such as YouTube, Instagram or Spotify might have monopsonistic power over content creators
 
-* Public **defense**: In many countries, the government is the sole purchaser of military equipment and defense-related goods. Companies producing such goods often have to accept the terms and prices dictated by the government.
+* **Public defense**: In many countries, the government is the sole purchaser of military equipment and defense-related goods. Companies producing such goods often have to accept the terms and prices dictated by the government.
 :::
 
 ## Modeling a monopsony
@@ -626,8 +629,8 @@ def wage(L):
 wm = wage(Lm)
 wc = wage(Lc)
 plt.plot(L, MRP(L), label='$MRP(L)$')
-plt.plot(L, ME(L), label='$ME(L)$')
-plt.plot(L, wage(L), label='$w(L)$')
+plt.plot(L, ME(L), label='$ME(L)$', color='r', lw=1.5)
+plt.plot(L, wage(L), label='$w(L)$', color='k', lw=1.5)
 
 plt.vlines(x=Lm, ymin=0, ymax=ME(Lm), linestyle='--', color='gray', lw=.5)
 plt.vlines(x=Lc, ymin=0, ymax=wc, linestyle='--', color='gray', lw=.5)
