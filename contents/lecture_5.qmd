@@ -106,7 +106,9 @@ There are two ways to represent a game: by means of a matrix (normal form) or a 
 
 The normal form is the representation of a game using a matrix whose columns and rows represent all possible outcomes. It is best used to represent games of simultaneous moves where order of play is not important. 
 
-In the examples that follow, the first number represents the payoff to the player whose strategies show up on each row of the matrix. The second number reprsents the payoff to the player whose strategies show up on each column.Let us try to determine the best responses and the Nash equilibrium  of each game. 
+### Pure strategy Nash equilibrium
+
+In the examples that follow, the first number represents the payoff to the player whose strategies show up on each row of the matrix. The second number reprsents the payoff to the player whose strategies show up on each column.Let us try to determine the best responses and the Nash equilibrium  of each game. The NE that consists of a strategies that each player chooses with certainty is called __a pure strategy NE__. We will see that not all games have a pure strategy NE but if we allow players to choose certain strategies probablistically (as is often the case in sports), then a NE generally exists. This type of NE is called a __mixed strategy NE__.
 
 ::: {#exm-pennies}
 ::: {#fig-pmatch fig-cap="Normal form representation of the game of matching pennies. If pennies matched B pays A one dollar, otherwise A pays B one dollar."}
@@ -235,6 +237,133 @@ Game theory is very much alive in dating. In the simplest scenario, imagine two 
 What are the differences in the outcomes of these games? Observe that the game of matching pennies in @exm-pennies does not have an equilibrium. There is always an incentive to deviate from a chosen strategy depending on the choice of the opponent. In @exm-crops, we have a unique Nash equilibrium that is also Pareto optimal.[^2] In @exm-auto, we have a unique Nash equilibrium which is not Pareto optimal: the pursuit of individual interest does not lead to a socially optimal outcome. This is an example of the famous Prisoners' Dilemma game. In @exm-dating, we see a situation of non-uniqueness of equilibria. 
 
 [^2]: An allocation is called Pareto optimal if there exists no other feasible allocations that strictly improve the payoff of at least one individual without sacrificing the payoff of another.
+
+### Mixed strategy Nash equilibrium
+
+Let us return to @exm-pennies to illustrate mixed strategy NE. Suppose that B chooses H with probability $p$ and T with probability $1-p,$ and A chooses H with probability $q$ and T with probability $1-q.$ The modified pennies matching game can be rerpresented as in @fig-penniesMixedStrategy.
+
+::: {#fig-penniesMixedStrategy fig-cap="A mixed strategy matching pennies game"}
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th colspan=2 style="text-align:center">Player A</th>
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <td>$q$</td>
+        <td>$1-q$</td>        
+    </tr>
+    <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <td>Heads</td>
+        <td>Tails</td>        
+    </tr>
+    <tr>
+        <th rowspan=2 style="text-align:center">Player B</th>
+        <td>$p$</td>
+        <td>Heads</td>
+        <td>(-1,1)</td>
+        <td>(1,-1)</td>        
+    </tr>
+    <tr>
+        <td>$1-p$</td>
+        <td>Tails</td>
+        <td>(1,-1)</td>
+        <td>(-1,1)</td>        
+    </tr>
+</table>
+:::
+
+For each player, one strategy is preferred to the other iff it generates a higher _expected payoff_. For A, the expected payoff from playing Heads is:
+
+$$
+    \mathbb{E}^A_H[X] = p \times 1 + (1 - p) \times (-1) = 2p - 1.
+$$
+
+And from playing Tails is:
+
+$$
+    \mathbb{E}^A_T[X] = p \times (-1) + (1 - p) \times 1 = 1 - 2p.
+$$
+
+Hence A strictly prefers Heads to Tails if and only if
+
+$$
+\mathbb{E}^A_H[X] \gt \mathbb{E}^A_T[X] \iff p > \frac{1}{2}.
+$$
+
+Hence the best response of $A$ could be written as:
+$$
+q(p) = \begin{cases}
+    1 & p > 0.5 \\
+    \in [0,1] & p = 0.5 \\
+    0 & p < 0.5.
+\end{cases}
+$${#eq-BRA-ms}
+
+Likewise for B:
+
+$$
+\begin{aligned}
+\mathbb{E}^B_H[X] &\gt \mathbb{E}^B_T[X] \\
+1 - 2q &\gt 2q - 1 \\
+q &< \frac{1}{2}
+\end{aligned}
+$$
+
+The best response of $B$ is thus:
+
+$$
+p(q) = \begin{cases}
+    1 & q < 0.5 \\
+    \in [0,1] & q = 0.5 \\
+    0 & q > 0.5
+\end{cases}
+$${#eq-BRB-ms}
+
+The msNE is at the intersection of the two best response curves (red dot in @fig-msNE), which is when both probabilities are equal to one-half:
+
+$$
+    \mathrm{msNE}(q, p) = (0.5, 0.5).
+$${#eq-msNE-pennies}
+
+::: {#fig-msNE fig-cap="Best response functions and msNE in the pennies matching game"}
+```{python}
+q = np.linspace(0, 1.5, 50)
+# BR of B
+plt.hlines(y=1, xmin=0, xmax=0.5, lw=2, color='k')
+plt.vlines(x=0.5, ymin=0, ymax=1, lw=2, color='k')
+plt.hlines(y=0, xmin=0.5, xmax=1, lw=2, color='k', label='BR of B: $p(q)$')
+
+# BR of A
+plt.vlines(x=0, ymin=0, ymax=0.5, lw=2)
+plt.hlines(y=0.5, xmin=0, xmax=1, lw=2)
+plt.vlines(x=1, ymin=0.5, ymax=1, lw=2, label='BR of A: $q(p)$')
+
+# msNE
+plt.scatter(.5, .5, color='r', s=75, label='msNE')
+
+plt.ylabel('$p$ (Probability of B playing H)', loc='top')
+plt.xlabel('$q$ (Probability of A playing H)', loc='right')
+plt.xlim([-.1, 1.5])
+plt.ylim([-.1, 1.5])
+plt.xticks(np.linspace(0, 1, 5))
+plt.yticks(np.linspace(0, 1, 5))
+plt.legend(loc='best')
+plt.grid(None)
+plt.show()
+```
+:::
+
+If A and B are complete strangers then it is safe to assume that both play each strategy with the same probability (i.e., completely random). In this case, each player _randomizes_ and we have a mixed strategy Nash equilibrium (msNE). 
+After a few rounds, they might know each other better and are able to _update_ the values of $q$ and $p$ accordingly and the game might end up with a pure strategy NE.
+In highly competitive sports, sometimes many strong players lose to completely unknown ones, why might it be the case? One explanation is data availability. Matches of highly ranked players receive much wider media coverage. Their style of play, strengths and weaknesses are analyzed to excruciating details by experts, including the opponents and their coaches. Consequently, we have a player that is almost completely exposed while the other remains a wild card. The lack of information plays to the advantage of the relatively unknown player, typically causing difficulties to the opponent in the first few rallies or encounters. But if there is anything remarkable about top athletes, it is their ability to adapt, i.e., to _update_ their knowledge about the opponent's style and counterstrike effectively. The advantage due to initial ignorance wears out pretty rapidly if the unknown player does not have real strengths.
 
 
 ## Extensive form 
@@ -575,22 +704,22 @@ def BR2(q):
     return (a - c) / b - 2 * q
 def eqline(q):
     return q
-plt.plot(q, BR1(q), label='$BR_1(q_2)$', color='k', lw=1.5)
-plt.plot(q, BR2(q), label='$BR_2(q_1)$', color='C0', lw=1.5)
+plt.plot(q, BR1(q), label='$BR_2(q_1)$', color='k', lw=2)
+plt.plot(q, BR2(q), label='$BR_1(q_2)$', color='C0', lw=2)
 plt.plot(q[:65], eqline(q[:65]), linestyle="--", color='gray', label="$q_1=q_2$")
 plt.vlines(x=0, ymin=qmax*0.99, ymax=q.max(), color='C0', lw=4)
 plt.hlines(y=0, xmin=qmax*0.99, xmax=q.max(), color='k', lw=4)
-plt.scatter(qstar, qstar, color='r', s=50, label="Cournot NE")
+plt.scatter(qstar, qstar, color='r', s=70, label="Cournot NE")
 
 # annotations
 plt.vlines(x=qstar, ymin=0, ymax=qstar, linestyle='--', lw=.5, color='k')
 plt.hlines(y=qstar, xmin=0, xmax=qstar, linestyle='--', lw=.5, color='k')
-plt.text(qstar*0.85, -.5, "$\\frac{a-c}{3b}$")
-plt.text(qmid*0.95, -.5, "$\\frac{a-c}{2b}$")
-plt.text(qmax*0.95, -.5, "$\\frac{a-c}{b}$")
-plt.text(-0.75, qstar*0.9, "$\\frac{a-c}{3b}$")
-plt.text(-0.75, qmid*0.95, "$\\frac{a-c}{2b}$")
-plt.text(-0.75, qmax, "$\\frac{a-c}{b}$")
+plt.text(qstar*0.85, -.5, "$\\frac{a-c}{3b}$", fontsize=12)
+plt.text(qmid*0.95, -.5, "$\\frac{a-c}{2b}$", fontsize=12)
+plt.text(qmax*0.95, -.5, "$\\frac{a-c}{b}$", fontsize=12)
+plt.text(-0.75, qstar*0.9, "$\\frac{a-c}{3b}$", fontsize=12)
+plt.text(-0.75, qmid*0.95, "$\\frac{a-c}{2b}$", fontsize=12)
+plt.text(-0.75, qmax, "$\\frac{a-c}{b}$", fontsize=12)
 
 
 plt.xlabel("$q_1$", loc='right')
@@ -671,28 +800,27 @@ $${#eq-output_follower_stack}
     
 ### Stackelberg vs Cournot
 
+In Cournot games, both firms produce the same output that is _less_ than that of the Stackelberg's leader but _more_ than that of the Stackelberg's follower:
+$$
+q^S_{\text{follower}} < q^C < q^S_{\text{leader}}.
+$$
 
-* In Cournot games, both firms produce the same output that is _less_ than that of the Stackelberg's leader but _more_ than that of the Stackelberg's follower:
-    $$
-    q^S_{\text{follower}} < q^C < q^S_{\text{leader}}.
-    $$
-    
-* The equilibrium price can be computed using the demand function:
-    $$
-    p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = \frac{3a + c}{4},
-    $${#eq-price_stack}
-    which is greater than the Cournot price $p^C=\frac{a+2c}{3}$ since $a>c.$
-    
-* Profits:
-    $$
-    \pi_{\text{leader}} = q^S_1(p^S - c) = \frac{3(a-c)^2}{8b}.
-    $${#eq-profit_leader_stack}
-    
-    $$
-    \pi_{\text{follower}} = q^S_2(p^S - c) = \frac{3(a-c)^2}{16b}.
-    $${#eq-profit_follower_stack}
+The equilibrium price can be computed using the demand function:
+$$
+p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = \frac{3a + c}{4},
+$${#eq-price_stack}
+which is greater than the Cournot price $p^C=\frac{a+2c}{3}$ since $a>c.$
 
-    Hence the leader earns a higher profits than in the Cournot case thanks to the first mover advantage, but the follower earns lower profits.
+Profits:
+$$
+\pi_{\text{leader}} = q^S_1(p^S - c) = \frac{3(a-c)^2}{8b}.
+$${#eq-profit_leader_stack}
+
+$$
+\pi_{\text{follower}} = q^S_2(p^S - c) = \frac{3(a-c)^2}{16b}.
+$${#eq-profit_follower_stack}
+
+Hence the leader earns higher profits than in the Cournot case thanks to the first mover's advantage, but the follower earns lower profits.
 
 To sum up:
 
@@ -704,7 +832,7 @@ $$
 \end{aligned}
 $$
     
-
+<!-- add a table here -->
 
 
 
@@ -752,6 +880,10 @@ Rock-Paper-Scissors is another simultaneous moves game. It can be played among m
 
 ::: {#exr-cournot}
 Consider two firms competing à la Cournot facing the same linear demand function $p(q_1,q_2)=a-b(q_1+q_2)$ but with asymmetric costs $C_i(q_i) = c_i q_i$ for $c_i > 0$ and $c_i\neq c_j$, $i,j=\{1, 2\}$. Determine the NE of the Cournot game, the market price as well as the profits earned by each firm in equilibrium.
+:::
+
+::: {#exr-cournotNfirms}
+Consider again the Cournot model with identical linear costs and linear demand function. Determine the NE in the general case of $N$ firms. How do the equilibrium quantity, price and profits change as a function of $N?$ What happens as $N$ tends to infinity?
 :::
 
 ::: {#exr-SPE-with-info}

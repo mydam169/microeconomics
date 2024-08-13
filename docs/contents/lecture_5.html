@@ -237,7 +237,11 @@ window.Quarto = {
   </ul></li>
   <li><a href="#graphical-representation-of-games" id="toc-graphical-representation-of-games" class="nav-link" data-scroll-target="#graphical-representation-of-games"><span class="header-section-number">3</span> Graphical representation of games</a>
   <ul class="collapse">
-  <li><a href="#normal-form" id="toc-normal-form" class="nav-link" data-scroll-target="#normal-form"><span class="header-section-number">3.1</span> Normal form</a></li>
+  <li><a href="#normal-form" id="toc-normal-form" class="nav-link" data-scroll-target="#normal-form"><span class="header-section-number">3.1</span> Normal form</a>
+  <ul class="collapse">
+  <li><a href="#pure-strategy-nash-equilibrium" id="toc-pure-strategy-nash-equilibrium" class="nav-link" data-scroll-target="#pure-strategy-nash-equilibrium"><span class="header-section-number">3.1.1</span> Pure strategy Nash equilibrium</a></li>
+  <li><a href="#mixed-strategy-nash-equilibrium" id="toc-mixed-strategy-nash-equilibrium" class="nav-link" data-scroll-target="#mixed-strategy-nash-equilibrium"><span class="header-section-number">3.1.2</span> Mixed strategy Nash equilibrium</a></li>
+  </ul></li>
   <li><a href="#extensive-form" id="toc-extensive-form" class="nav-link" data-scroll-target="#extensive-form"><span class="header-section-number">3.2</span> Extensive form</a></li>
   <li><a href="#backward-induction-and-spe" id="toc-backward-induction-and-spe" class="nav-link" data-scroll-target="#backward-induction-and-spe"><span class="header-section-number">3.3</span> Backward induction and SPE</a></li>
   </ul></li>
@@ -339,7 +343,9 @@ window.Quarto = {
 <section id="normal-form" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="normal-form"><span class="header-section-number">3.1</span> Normal form</h2>
 <p>The normal form is the representation of a game using a matrix whose columns and rows represent all possible outcomes. It is best used to represent games of simultaneous moves where order of play is not important.</p>
-<p>In the examples that follow, the first number represents the payoff to the player whose strategies show up on each row of the matrix. The second number reprsents the payoff to the player whose strategies show up on each column.Let us try to determine the best responses and the Nash equilibrium of each game.</p>
+<section id="pure-strategy-nash-equilibrium" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="pure-strategy-nash-equilibrium"><span class="header-section-number">3.1.1</span> Pure strategy Nash equilibrium</h3>
+<p>In the examples that follow, the first number represents the payoff to the player whose strategies show up on each row of the matrix. The second number reprsents the payoff to the player whose strategies show up on each column.Let us try to determine the best responses and the Nash equilibrium of each game. The NE that consists of a strategies that each player chooses with certainty is called <strong>a pure strategy NE</strong>. We will see that not all games have a pure strategy NE but if we allow players to choose certain strategies probablistically (as is often the case in sports), then a NE generally exists. This type of NE is called a <strong>mixed strategy NE</strong>.</p>
 <div id="exm-pennies" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3</strong></span> &nbsp;</p>
 <div id="fig-pmatch" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -582,9 +588,153 @@ Figure&nbsp;4: A dating game with multiple Nash equilibria
 </div>
 <p>What are the differences in the outcomes of these games? Observe that the game of matching pennies in <a href="#exm-pennies" class="quarto-xref">Example&nbsp;3</a> does not have an equilibrium. There is always an incentive to deviate from a chosen strategy depending on the choice of the opponent. In <a href="#exm-crops" class="quarto-xref">Example&nbsp;4</a>, we have a unique Nash equilibrium that is also Pareto optimal.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> In <a href="#exm-auto" class="quarto-xref">Example&nbsp;5</a>, we have a unique Nash equilibrium which is not Pareto optimal: the pursuit of individual interest does not lead to a socially optimal outcome. This is an example of the famous Prisoners’ Dilemma game. In <a href="#exm-dating" class="quarto-xref">Example&nbsp;6</a>, we see a situation of non-uniqueness of equilibria.</p>
 </section>
+<section id="mixed-strategy-nash-equilibrium" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="mixed-strategy-nash-equilibrium"><span class="header-section-number">3.1.2</span> Mixed strategy Nash equilibrium</h3>
+<p>Let us return to <a href="#exm-pennies" class="quarto-xref">Example&nbsp;3</a> to illustrate mixed strategy NE. Suppose that B chooses H with probability <span class="math inline">\(p\)</span> and T with probability <span class="math inline">\(1-p,\)</span> and A chooses H with probability <span class="math inline">\(q\)</span> and T with probability <span class="math inline">\(1-q.\)</span> The modified pennies matching game can be rerpresented as in <a href="#fig-penniesMixedStrategy" class="quarto-xref">Figure&nbsp;5</a>.</p>
+<div id="fig-penniesMixedStrategy" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-penniesMixedStrategy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table style="width:80%">
+<tbody><tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<th colspan="2" style="text-align:center">
+Player A
+</th>
+</tr>
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<td>
+<span class="math inline">\(q\)</span>
+</td>
+<td>
+<span class="math inline">\(1-q\)</span>
+</td>
+</tr>
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+</th>
+<td>
+Heads
+</td>
+<td>
+Tails
+</td>
+</tr>
+<tr>
+<th rowspan="2" style="text-align:center">
+Player B
+</th>
+<td>
+<span class="math inline">\(p\)</span>
+</td>
+<td>
+Heads
+</td>
+<td>
+(-1,1)
+</td>
+<td>
+(1,-1)
+</td>
+</tr>
+<tr>
+<td>
+<span class="math inline">\(1-p\)</span>
+</td>
+<td>
+Tails
+</td>
+<td>
+(1,-1)
+</td>
+<td>
+(-1,1)
+</td>
+</tr>
+</tbody></table>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-penniesMixedStrategy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: A mixed strategy matching pennies game
+</figcaption>
+</figure>
+</div>
+<p>For each player, one strategy is preferred to the other iff it generates a higher <em>expected payoff</em>. For A, the expected payoff from playing Heads is:</p>
+<p><span class="math display">\[
+    \mathbb{E}^A_H[X] = p \times 1 + (1 - p) \times (-1) = 2p - 1.
+\]</span></p>
+<p>And from playing Tails is:</p>
+<p><span class="math display">\[
+    \mathbb{E}^A_T[X] = p \times (-1) + (1 - p) \times 1 = 1 - 2p.
+\]</span></p>
+<p>Hence A strictly prefers Heads to Tails if and only if</p>
+<p><span class="math display">\[
+\mathbb{E}^A_H[X] \gt \mathbb{E}^A_T[X] \iff p &gt; \frac{1}{2}.
+\]</span></p>
+<p>Hence the best response of <span class="math inline">\(A\)</span> could be written as: <span id="eq-BRA-ms"><span class="math display">\[
+q(p) = \begin{cases}
+    1 &amp; p &gt; 0.5 \\
+    \in [0,1] &amp; p = 0.5 \\
+    0 &amp; p &lt; 0.5.
+\end{cases}
+\tag{1}\]</span></span></p>
+<p>Likewise for B:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbb{E}^B_H[X] &amp;\gt \mathbb{E}^B_T[X] \\
+1 - 2q &amp;\gt 2q - 1 \\
+q &amp;&lt; \frac{1}{2}
+\end{aligned}
+\]</span></p>
+<p>The best response of <span class="math inline">\(B\)</span> is thus:</p>
+<p><span id="eq-BRB-ms"><span class="math display">\[
+p(q) = \begin{cases}
+    1 &amp; q &lt; 0.5 \\
+    \in [0,1] &amp; q = 0.5 \\
+    0 &amp; q &gt; 0.5
+\end{cases}
+\tag{2}\]</span></span></p>
+<p>The msNE is at the intersection of the two best response curves (red dot in <a href="#fig-msNE" class="quarto-xref">Figure&nbsp;6</a>), which is when both probabilities are equal to one-half:</p>
+<p><span id="eq-msNE-pennies"><span class="math display">\[
+    \mathrm{msNE}(q, p) = (0.5, 0.5).
+\tag{3}\]</span></span></p>
+<div id="fig-msNE" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-msNE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="1cdf79c7" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_5_files/figure-html/cell-6-output-1.png" width="372" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-msNE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Best response functions and msNE in the pennies matching game
+</figcaption>
+</figure>
+</div>
+<p>If A and B are complete strangers then it is safe to assume that both play each strategy with the same probability (i.e., completely random). In this case, each player <em>randomizes</em> and we have a mixed strategy Nash equilibrium (msNE). After a few rounds, they might know each other better and are able to <em>update</em> the values of <span class="math inline">\(q\)</span> and <span class="math inline">\(p\)</span> accordingly and the game might end up with a pure strategy NE. In highly competitive sports, sometimes many strong players lose to completely unknown ones, why might it be the case? One explanation is data availability. Matches of highly ranked players receive much wider media coverage. Their style of play, strengths and weaknesses are analyzed to excruciating details by experts, including the opponents and their coaches. Consequently, we have a player that is almost completely exposed while the other remains a wild card. The lack of information plays to the advantage of the relatively unknown player, typically causing difficulties to the opponent in the first few rallies or encounters. But if there is anything remarkable about top athletes, it is their ability to adapt, i.e., to <em>update</em> their knowledge about the opponent’s style and counterstrike effectively. The advantage due to initial ignorance wears out pretty rapidly if the unknown player does not have real strengths.</p>
+</section>
+</section>
 <section id="extensive-form" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="extensive-form"><span class="header-section-number">3.2</span> Extensive form</h2>
-<p>The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in <a href="#fig-normFormExtGame" class="quarto-xref">Figure&nbsp;6</a>. In particular, the normal form representation provies two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant’s “In” is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as <em>sequentially irrational</em> because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of <strong>subgame-perfect equilibrium</strong>(<a href="#def-SPE" class="quarto-xref">Definition&nbsp;9</a>).</p>
+<p>The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in <a href="#fig-normFormExtGame" class="quarto-xref">Figure&nbsp;8</a>. In particular, the normal form representation provies two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant’s “In” is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as <em>sequentially irrational</em> because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of <strong>subgame-perfect equilibrium</strong>(<a href="#def-SPE" class="quarto-xref">Definition&nbsp;9</a>).</p>
 <div id="fig-extForm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-extForm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -609,7 +759,7 @@ Figure&nbsp;4: A dating game with multiple Nash equilibria
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-extForm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: An extensive form game with two players, P1 (entrant) and P2 (incumbent). The entrant moves first.
+Figure&nbsp;7: An extensive form game with two players, P1 (entrant) and P2 (incumbent). The entrant moves first.
 </figcaption>
 </figure>
 </div>
@@ -666,7 +816,7 @@ Price war
 </tbody></table>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-normFormExtGame-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Normal form representation of a sequential moves game
+Figure&nbsp;8: Normal form representation of a sequential moves game
 </figcaption>
 </figure>
 </div>
@@ -756,7 +906,7 @@ Figure&nbsp;6: Normal form representation of a sequential moves game
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sgall-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: Subgames
+Figure&nbsp;9: Subgames
 </figcaption>
 </figure>
 </div>
@@ -782,7 +932,7 @@ Figure&nbsp;7: Subgames
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: First subgame (last one on the upper branch)
+Figure&nbsp;10: First subgame (last one on the upper branch)
 </figcaption>
 </figure>
 </div>
@@ -806,7 +956,7 @@ Figure&nbsp;8: First subgame (last one on the upper branch)
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Second subgame (last one on the lower branch)
+Figure&nbsp;11: Second subgame (last one on the lower branch)
 </figcaption>
 </figure>
 </div>
@@ -830,7 +980,7 @@ Figure&nbsp;9: Second subgame (last one on the lower branch)
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: Third subgame
+Figure&nbsp;12: Third subgame
 </figcaption>
 </figure>
 </div>
@@ -855,7 +1005,7 @@ Figure&nbsp;10: Third subgame
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: Forth subgame
+Figure&nbsp;13: Forth subgame
 </figcaption>
 </figure>
 </div>
@@ -879,13 +1029,13 @@ Figure&nbsp;11: Forth subgame
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12: Fifth subgame
+Figure&nbsp;14: Fifth subgame
 </figcaption>
 </figure>
 </div>
 <p>Finally putting it all together, we can write the SPE as: <span id="eq-SPE"><span class="math display">\[
 SPE = \{(L,\: A/C, \:, X/Z\}.
-\tag{1}\]</span></span> Recall that we have to specify the strategy for each player for every possible decision node where that player could be called to move, <em>even for nodes that are not reached</em> in equilibrium.</p>
+\tag{4}\]</span></span> Recall that we have to specify the strategy for each player for every possible decision node where that player could be called to move, <em>even for nodes that are not reached</em> in equilibrium.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -943,25 +1093,25 @@ s \in \{(H,T), (T,H), (T,T), (H,H)\}.
 <div id="def-weakDom" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4 (Strategic dominance)</strong></span> Strategy <span class="math inline">\(s_i\)</span> is a weakly dominant strategy of player <span class="math inline">\(i\)</span> if <span id="eq-weak-dom"><span class="math display">\[
 u_i(s_i, s_{-i}) \geq u_i(s_j, s_{-i}),
-\tag{2}\]</span></span> for every <span class="math inline">\(s_i \neq s_j\)</span> and <span class="math inline">\(s_{-i}\)</span> selected by the other players. If the inequality sign in condition <a href="#eq-weak-dom" class="quarto-xref">2</a> is strict, then <span class="math inline">\(s_i\)</span> is called a strictly dominant strategy. If the inequality sign reverses direction, then player <span class="math inline">\(i\)</span> views <span class="math inline">\(s_i\)</span> as a weakly dominated strategy (strictly dominated if the inequality sign is strict.)</p>
+\tag{5}\]</span></span> for every <span class="math inline">\(s_i \neq s_j\)</span> and <span class="math inline">\(s_{-i}\)</span> selected by the other players. If the inequality sign in condition <a href="#eq-weak-dom" class="quarto-xref">5</a> is strict, then <span class="math inline">\(s_i\)</span> is called a strictly dominant strategy. If the inequality sign reverses direction, then player <span class="math inline">\(i\)</span> views <span class="math inline">\(s_i\)</span> as a weakly dominated strategy (strictly dominated if the inequality sign is strict.)</p>
 </div>
 <div id="def-bestResponse" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 5 (Best response)</strong></span> The strategy <span class="math inline">\(s_i\)</span> of player <span class="math inline">\(i\)</span> is called the best response to her opponents’ strategy profile <span class="math inline">\(s_{-i}\)</span> if: <span id="eq-BRdef"><span class="math display">\[
 u_i(s_i, s_{-i}) \geq u_i(s_j, s_{-i}), \quad\forall j\neq i.
-\tag{3}\]</span></span> We often write: <span id="eq-BRcorr"><span class="math display">\[
+\tag{6}\]</span></span> We often write: <span id="eq-BRcorr"><span class="math display">\[
 s_i \in BR_i(s_{-i}).
-\tag{4}\]</span></span></p>
+\tag{7}\]</span></span></p>
 </div>
 <div id="rem-BRcorr" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em>. </span>In general, for each strategy profile <span class="math inline">\(s_{-i},\)</span> the best response coming from <span class="math inline">\(i\)</span> needs not be unique, i.e., the best response is a correspondence. When <span class="math inline">\(BR_i(s_{-i})\)</span> is a singleton for every possible <span class="math inline">\(s_{-i},\)</span> we have a best response function.</p>
 </div>
 <div id="rem-BRvsSdom" class="proof remark">
-<p><span class="proof-title"><em>Remark 2</em>. </span>Observe that a dominant strategy is a best response, but not conversely. In order for a best response to be a dominant strategy, condition <a href="#eq-BRdef" class="quarto-xref">3</a> has to hold for <em>every possible</em> strategy profile selected by the other players. In other words, whatever the strategies selected by the other player(s), the best response remains the same for player <span class="math inline">\(i.\)</span> Strategic dominance is thus a much stronger than best response.</p>
+<p><span class="proof-title"><em>Remark 2</em>. </span>Observe that a dominant strategy is a best response, but not conversely. In order for a best response to be a dominant strategy, condition <a href="#eq-BRdef" class="quarto-xref">6</a> has to hold for <em>every possible</em> strategy profile selected by the other players. In other words, whatever the strategies selected by the other player(s), the best response remains the same for player <span class="math inline">\(i.\)</span> Strategic dominance is thus a much stronger than best response.</p>
 </div>
 <div id="def-NashEqm" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 6 (Nash equilibrium)</strong></span> A strategy profile <span class="math inline">\(s^*=(s^*_i, s^*_{-i})\)</span> is a Nash equilibrium if every player plays their best reponse given their opponnents’ strategies, that is: <span id="eq-NE"><span class="math display">\[
 s^*_i \in BR_i(s^*_{-i}),\quad \forall i=1,...,N.
-\tag{5}\]</span></span></p>
+\tag{8}\]</span></span></p>
 </div>
 <div id="def-infoSet" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 7 (Information set)</strong></span> In the context of extensive form games, an information set faced by a player is a set that connects all the nodes that the player cannot distinguish.</p>
@@ -984,14 +1134,14 @@ s^*_i \in BR_i(s^*_{-i}),\quad \forall i=1,...,N.
 &amp;= p(q_1, q_2)q_i - cq_i \\
 &amp;= [a - b(q_1 + q_2)]q_i - cq_i
 \end{aligned}
-\tag{6}\]</span></span></p>
+\tag{9}\]</span></span></p>
 <p>The FOC yields: <span id="eq-FOC_cournot"><span class="math display">\[
 \frac{\partial \pi_i}{\partial q_i} = 0 \iff a - 2bq_i - bq_j = c.
-\tag{7}\]</span></span></p>
-<p>From <a href="#eq-FOC_cournot" class="quarto-xref">Equation&nbsp;7</a> we can derive the best response (BR) function, which specifies the optimal output of each firm given the output choice of the other firm:</p>
+\tag{10}\]</span></span></p>
+<p>From <a href="#eq-FOC_cournot" class="quarto-xref">Equation&nbsp;10</a> we can derive the best response (BR) function, which specifies the optimal output of each firm given the output choice of the other firm:</p>
 <p><span id="eq-BR_cournot"><span class="math display">\[
 q_i = BR_i(q_j) = \frac{a - c}{2b} - \frac{q_j}{2}, \quad i\neq j.
-\tag{8}\]</span></span></p>
+\tag{11}\]</span></span></p>
 <p>The two best response functions specify the Nash equiblirium of the the game. <span class="math display">\[
 \begin{cases}
 q_1 &amp;=  \frac{a - c}{2b} - \frac{q_2}{2} \\
@@ -1000,23 +1150,23 @@ q_2 &amp;=  \frac{a - c}{2b} - \frac{q_1}{2}.
 \]</span></p>
 <p>Solving this system, we obtain the NE of the Cournot game: <span id="eq-NE-cournot"><span class="math display">\[
 (q_1^*, q_2^*) = \left(\frac{a-c}{3b}, \frac{a-c}{3b}\right).
-\tag{9}\]</span></span></p>
+\tag{12}\]</span></span></p>
 <p>Let us try and visualize this outcome.</p>
 <div id="fig-cournot-game" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cournot-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="fb026a8f" class="cell" data-execution_count="5">
+<div id="08171f0a" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="lecture_5_files/figure-html/cell-6-output-1.png" width="349" height="342" class="figure-img"></p>
+<p><img src="lecture_5_files/figure-html/cell-7-output-1.png" width="349" height="343" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cournot-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;13: Cournot competition on quantity in a duopoly
+Figure&nbsp;15: Cournot competition on quantity in a duopoly
 </figcaption>
 </figure>
 </div>
@@ -1024,13 +1174,13 @@ Figure&nbsp;13: Cournot competition on quantity in a duopoly
 <ul>
 <li><p>Total output: <span id="eq-totQ_cournot"><span class="math display">\[
   Q^C = q_1 + q_2 = 2q^C = \frac{2(a - c)}{3b}.
-   \tag{10}\]</span></span></p></li>
+   \tag{13}\]</span></span></p></li>
 <li><p>Equlibrium price via the market demand curve: <span id="eq-price_cournot"><span class="math display">\[
   p^C = a - bQ^C = \frac{a + 2c}{3}.
-   \tag{11}\]</span></span></p></li>
+   \tag{14}\]</span></span></p></li>
 <li><p>Identical individual profits equal to: <span id="eq-profit_cournot"><span class="math display">\[
   \pi^C = p^C q^C - cq^C = \frac{(a - c)^2}{9b}.
-   \tag{12}\]</span></span></p></li>
+   \tag{15}\]</span></span></p></li>
 </ul>
 </section>
 <section id="stackelberg-model" class="level2" data-number="5.2">
@@ -1049,40 +1199,38 @@ Figure&nbsp;13: Cournot competition on quantity in a duopoly
 \]</span></p>
 <p>FOC w.r.t <span class="math inline">\(q_2\)</span> yields the BR function for Firm 2: <span id="eq-BR_stack"><span class="math display">\[
 q_2(q_1) \equiv BR_2(q_1) = \frac{a - c}{2b} - \frac{q_1}{2}.
-\tag{13}\]</span></span></p>
-<p>Observe that <a href="#eq-BR_stack" class="quarto-xref">Equation&nbsp;13</a> coincides with <a href="#eq-BR_cournot" class="quarto-xref">Equation&nbsp;8</a> since in both cases Firm 2 treats <span class="math inline">\(q_1\)</span> as exogenous</p>
+\tag{16}\]</span></span></p>
+<p>Observe that <a href="#eq-BR_stack" class="quarto-xref">Equation&nbsp;16</a> coincides with <a href="#eq-BR_cournot" class="quarto-xref">Equation&nbsp;11</a> since in both cases Firm 2 treats <span class="math inline">\(q_1\)</span> as exogenous</p>
 </section>
 <section id="pmp-of-the-leader" class="level3" data-number="5.2.2">
 <h3 data-number="5.2.2" class="anchored" data-anchor-id="pmp-of-the-leader"><span class="header-section-number">5.2.2</span> PMP of the leader</h3>
 <p>Firm 1 chooses its own output to maximize profits: <span id="eq-PMP_stack_leader"><span class="math display">\[
 \max_{q_1} [a - b(q_1 + BR_2(q_1))]q_1 - cq_1.
-\tag{14}\]</span></span></p>
-<p>In <a href="#eq-PMP_stack_leader" class="quarto-xref">Equation&nbsp;14</a>, Firm 1 anticipates that Firm 2 will be maximizing her profits, i.e., settig <span class="math inline">\(q_2 = BR_2(q_1)\)</span>.</p>
+\tag{17}\]</span></span></p>
+<p>In <a href="#eq-PMP_stack_leader" class="quarto-xref">Equation&nbsp;17</a>, Firm 1 anticipates that Firm 2 will be maximizing her profits, i.e., settig <span class="math inline">\(q_2 = BR_2(q_1)\)</span>.</p>
 <p>The FOC w.r.t <span class="math inline">\(q_1\)</span> yields the BR function for Firm 1: <span id="eq-output_leader_stack"><span class="math display">\[
 \frac{a - c - 2bq_1}{2} = 0
 \iff q_1^S = \frac{a-c}{2b}.
-\tag{15}\]</span></span></p>
-<p>Firm 2’s output can be found using <a href="#eq-BR_stack" class="quarto-xref">Equation&nbsp;13</a>: <span id="eq-output_follower_stack"><span class="math display">\[
+\tag{18}\]</span></span></p>
+<p>Firm 2’s output can be found using <a href="#eq-BR_stack" class="quarto-xref">Equation&nbsp;16</a>: <span id="eq-output_follower_stack"><span class="math display">\[
 q_2^S = \frac{a - c}{4b} = \frac{q_1^S}{2}.
-\tag{16}\]</span></span></p>
+\tag{19}\]</span></span></p>
 </section>
 <section id="stackelberg-vs-cournot" class="level3" data-number="5.2.3">
 <h3 data-number="5.2.3" class="anchored" data-anchor-id="stackelberg-vs-cournot"><span class="header-section-number">5.2.3</span> Stackelberg vs Cournot</h3>
-<ul>
-<li><p>In Cournot games, both firms produce the same output that is <em>less</em> than that of the Stackelberg’s leader but <em>more</em> than that of the Stackelberg’s follower: <span class="math display">\[
-  q^S_{\text{follower}} &lt; q^C &lt; q^S_{\text{leader}}.
-  \]</span></p></li>
-<li><p>The equilibrium price can be computed using the demand function: <span id="eq-price_stack"><span class="math display">\[
-  p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = \frac{3a + c}{4},
-   \tag{17}\]</span></span> which is greater than the Cournot price <span class="math inline">\(p^C=\frac{a+2c}{3}\)</span> since <span class="math inline">\(a&gt;c.\)</span></p></li>
-<li><p>Profits: <span id="eq-profit_leader_stack"><span class="math display">\[
-  \pi_{\text{leader}} = q^S_1(p^S - c) = \frac{3(a-c)^2}{8b}.
-   \tag{18}\]</span></span></p>
+<p>In Cournot games, both firms produce the same output that is <em>less</em> than that of the Stackelberg’s leader but <em>more</em> than that of the Stackelberg’s follower: <span class="math display">\[
+q^S_{\text{follower}} &lt; q^C &lt; q^S_{\text{leader}}.
+\]</span></p>
+<p>The equilibrium price can be computed using the demand function: <span id="eq-price_stack"><span class="math display">\[
+p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = \frac{3a + c}{4},
+\tag{20}\]</span></span> which is greater than the Cournot price <span class="math inline">\(p^C=\frac{a+2c}{3}\)</span> since <span class="math inline">\(a&gt;c.\)</span></p>
+<p>Profits: <span id="eq-profit_leader_stack"><span class="math display">\[
+\pi_{\text{leader}} = q^S_1(p^S - c) = \frac{3(a-c)^2}{8b}.
+\tag{21}\]</span></span></p>
 <p><span id="eq-profit_follower_stack"><span class="math display">\[
-  \pi_{\text{follower}} = q^S_2(p^S - c) = \frac{3(a-c)^2}{16b}.
-   \tag{19}\]</span></span></p>
-<p>Hence the leader earns a higher profits than in the Cournot case thanks to the first mover advantage, but the follower earns lower profits.</p></li>
-</ul>
+\pi_{\text{follower}} = q^S_2(p^S - c) = \frac{3(a-c)^2}{16b}.
+\tag{22}\]</span></span></p>
+<p>Hence the leader earns higher profits than in the Cournot case thanks to the first mover’s advantage, but the follower earns lower profits.</p>
 <p>To sum up:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -1091,13 +1239,14 @@ q_2^S = \frac{a - c}{4b} = \frac{q_1^S}{2}.
 &amp;\pi_{\text{follower}} &lt; \pi^C &lt; \pi_{\text{leader}}.
 \end{aligned}
 \]</span></p>
+<!-- add a table here -->
 </section>
 </section>
 </section>
 <section id="exercises" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Exercises</h1>
 <div id="exr-RPS" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1</strong></span> Rock-Paper-Scissors is another simultaneous moves game. It can be played among multiple players; <a href="#fig-rockPaperS" class="quarto-xref">Figure&nbsp;14</a> illustrates such a game between two. If two players make the same move, it is a draw. Otherwise rock beats scissors, which beats paper, which in turn beats rock. Find the best response of each player and determine the Nash equilibrium of the game.</p>
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Rock-Paper-Scissors is another simultaneous moves game. It can be played among multiple players; <a href="#fig-rockPaperS" class="quarto-xref">Figure&nbsp;16</a> illustrates such a game between two. If two players make the same move, it is a draw. Otherwise rock beats scissors, which beats paper, which in turn beats rock. Find the best response of each player and determine the Nash equilibrium of the game.</p>
 <div id="fig-rockPaperS" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rockPaperS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1174,7 +1323,7 @@ Scissors
 </tbody></table>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rockPaperS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14: Rock Paper Scissors game between two players
+Figure&nbsp;16: Rock Paper Scissors game between two players
 </figcaption>
 </figure>
 </div>
@@ -1182,8 +1331,11 @@ Figure&nbsp;14: Rock Paper Scissors game between two players
 <div id="exr-cournot" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 2</strong></span> Consider two firms competing à la Cournot facing the same linear demand function <span class="math inline">\(p(q_1,q_2)=a-b(q_1+q_2)\)</span> but with asymmetric costs <span class="math inline">\(C_i(q_i) = c_i q_i\)</span> for <span class="math inline">\(c_i &gt; 0\)</span> and <span class="math inline">\(c_i\neq c_j\)</span>, <span class="math inline">\(i,j=\{1, 2\}\)</span>. Determine the NE of the Cournot game, the market price as well as the profits earned by each firm in equilibrium.</p>
 </div>
+<div id="exr-cournotNfirms" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Consider again the Cournot model with identical linear costs and linear demand function. Determine the NE in the general case of <span class="math inline">\(N\)</span> firms. How do the equilibrium quantity, price and profits change as a function of <span class="math inline">\(N?\)</span> What happens as <span class="math inline">\(N\)</span> tends to infinity?</p>
+</div>
 <div id="exr-SPE-with-info" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3</strong></span> Find the SPE of the following game with imperfect information. The dashed box means that the player in question faces an information set when called to make a move. In this example, if P1 makes the R move, she will not be able to observe P2’s move when it is her turn to move again. In other words, she does not know whether she is on the C or the D branch.</p>
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Find the SPE of the following game with imperfect information. The dashed box means that the player in question faces an information set when called to make a move. In this example, if P1 makes the R move, she will not be able to observe P2’s move when it is her turn to move again. In other words, she does not know whether she is on the C or the D branch.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>

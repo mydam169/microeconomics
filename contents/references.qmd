@@ -3,10 +3,13 @@ toc: false
 ---
 
 ## Main references
+
 -   Intermediate Microeconomic Theory: Tools and Step-by-Step Examples (Ana Espinola-Arredondo and Felix Munoz-Garcia), MIT Press __[AF Int]__
   
 -  Advanced Microeconomic Theory: An Intuitive Approach with Examples (Felix Munoz-Garcia), MIT Press __[AF Adv]__
   
 ## Other references 
+
 -   Intermediate Microeconomics with Calculus (Hal R. Varian) __[Varian]__
+-   The Economy 2.0 Microeconomics ([core-econ.org](https://core-econ.org/the-economy/microeconomics/0-3-contents.html))
 
