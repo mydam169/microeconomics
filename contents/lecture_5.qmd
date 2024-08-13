@@ -914,9 +914,9 @@ This exercise on complementary pricing is adapted from exercise 11 of chapter 13
     </tr>
 </table>
 
-1. Findall pure-strategy Nash equilibria of this game. 
+1. Find all pure-strategy Nash equilibria of this game. 
 
-2. Suppose now that one firm sets their price first, and then the other observes and responds. Depict the extensive form of this game and find the SPE. You should consider two cases in of which corresponds to a different first mover.
+2. Suppose now that one firm sets their price first, and then the other observes and responds. Depict the extensive form of this game and find the SPE. You should consider two cases each of which corresponds to a different first mover.
  
 3. Compare the results from the previous parts. Comment on the similarities and/or differences.
 :::
