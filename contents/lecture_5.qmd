@@ -450,7 +450,7 @@ flowchart LR
     %% upper branch
     first{P1} -- L --> secondL{P2} 
 
-    subgraph SG4
+    subgraph SG3
         secondL -- A --> firstL{P1}
         subgraph SG1
             firstL -- V --> out2("(1,6)")
@@ -463,7 +463,7 @@ flowchart LR
     
     first -- R --> secondR{P2}
     
-    subgraph SG3
+    subgraph SG4
         secondR -- C --> out5("(2,7)")
         secondR -- D --> out6("(3,4)")
         secondR -- E --> firstR{P1}
@@ -481,7 +481,7 @@ flowchart LR
 
 We now look for the NE in each subgame.
 
-::: {#fig-sg1 fig-cap="First subgame (last one on the upper branch)"}
+::: {#fig-sg1 fig-cap="First subgame (SG1)"}
 ```{mermaid}
 flowchart LR
     firstL{P1} -- V --> out2("(1,6)")
@@ -491,7 +491,7 @@ flowchart LR
 ```
 :::
 
-::: {#fig-sg2 fig-cap="Second subgame (last one on the lower branch)"}
+::: {#fig-sg2 fig-cap="Second subgame (SG2)"}
 ```{mermaid}
 flowchart LR
     firstR{P1} -- Y --> out7("(6,8)")
@@ -500,7 +500,7 @@ flowchart LR
 ```
 :::
 
-::: {#fig-sg3 fig-cap="Third subgame"}
+::: {#fig-sg3 fig-cap="Third subgame (SG3)"}
 ```{mermaid}
 flowchart LR
     secondL{P2} -- A --> out4("(5,2)")
@@ -509,7 +509,7 @@ flowchart LR
 ```
 :::
 
-::: {#fig-sg4 fig-cap="Forth subgame"}
+::: {#fig-sg4 fig-cap="Fourth subgame (SG4)"}
 ```{mermaid}
 flowchart LR
     secondR{P2} -- C --> out5("(2,7)")
@@ -519,7 +519,7 @@ flowchart LR
 ```
 :::
 
-::: {#fig-sg5 fig-cap="Fifth subgame"}
+::: {#fig-sg5 fig-cap="Fifth subgame (root node)"}
 ```{mermaid}
 flowchart LR
     first{P1} -- L --> out4("(5,2)") 
@@ -839,7 +839,7 @@ $$
 # Exercises
 
 ::: {#exr-RPS}
-Rock-Paper-Scissors is another simultaneous moves game. It can be played among multiple players; @fig-rockPaperS illustrates such a game between two. If two players make the same move, it is a draw. Otherwise rock beats scissors, which beats paper, which in turn beats rock. Find the best response of each player and determine the Nash equilibrium of the game.
+Rock-Paper-Scissors is another simultaneous moves game. It can be played among multiple players; @fig-rockPaperS illustrates such a game between two. If two players make the same move, it is a draw. Otherwise rock beats scissors, which beats paper, which in turn beats rock. Find the best response of each player and determine if the game has a pure strategy NE. How about a mixed strategy NE?
 
 ::: {#fig-rockPaperS fig-cap="Rock Paper Scissors game between two players"}
 <table style="width:80%">
@@ -884,6 +884,41 @@ Consider two firms competing à la Cournot facing the same linear demand functio
 
 ::: {#exr-cournotNfirms}
 Consider again the Cournot model with identical linear costs and linear demand function. Determine the NE in the general case of $N$ firms. How do the equilibrium quantity, price and profits change as a function of $N?$ What happens as $N$ tends to infinity?
+:::
+
+::: {#exr-complPricing }
+This exercise on complementary pricing is adapted from exercise 11 of chapter 13 of the AF Int textbook. Consider a situation where two firms of complementary goods simultaneously decide on how to price their goods. Suppose that there are only two actions possible: High or Low. The normal-form representation is presented here where the payoffs (in dollars) denote the profits for each firm:
+
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th colspan=2 style="text-align:center">Firm 2</th>
+    </tr>
+    <tr style="text-align:center">
+        <th></th>
+        <th></th>
+        <td>High</td>
+        <td>Low</td>
+    </tr>
+    <tr>
+        <th rowspan=2>Firm 1</th>
+        <td>High</td>
+        <td style="text-align:center">(90,75)</td>
+        <td style="text-align:center">(35,40)</td>
+    </tr>
+    <tr>
+        <td>Low</td>
+        <td style="text-align:center">(45,30)</td>
+        <td style="text-align:center">(60,60)</td>
+    </tr>
+</table>
+
+1. Findall pure-strategy Nash equilibria of this game. 
+
+2. Suppose now that one firm sets their price first, and then the other observes and responds. Depict the extensive form of this game and find the SPE. You should consider two cases in of which corresponds to a different first mover.
+ 
+3. Compare the results from the previous parts. Comment on the similarities and/or differences.
 :::
 
 ::: {#exr-SPE-with-info}

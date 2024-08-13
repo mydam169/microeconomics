@@ -714,7 +714,7 @@ p(q) = \begin{cases}
 <div id="fig-msNE" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-msNE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="1cdf79c7" class="cell" data-execution_count="5">
+<div id="83e6e555" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -872,7 +872,7 @@ Figure&nbsp;8: Normal form representation of a sequential moves game
     %% upper branch
     first{P1} -- L --&gt; secondL{P2} 
 
-    subgraph SG4
+    subgraph SG3
         secondL -- A --&gt; firstL{P1}
         subgraph SG1
             firstL -- V --&gt; out2("(1,6)")
@@ -885,7 +885,7 @@ Figure&nbsp;8: Normal form representation of a sequential moves game
     
     first -- R --&gt; secondR{P2}
     
-    subgraph SG3
+    subgraph SG4
         secondR -- C --&gt; out5("(2,7)")
         secondR -- D --&gt; out6("(3,4)")
         secondR -- E --&gt; firstR{P1}
@@ -932,7 +932,7 @@ Figure&nbsp;9: Subgames
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10: First subgame (last one on the upper branch)
+Figure&nbsp;10: First subgame (SG1)
 </figcaption>
 </figure>
 </div>
@@ -956,7 +956,7 @@ Figure&nbsp;10: First subgame (last one on the upper branch)
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: Second subgame (last one on the lower branch)
+Figure&nbsp;11: Second subgame (SG2)
 </figcaption>
 </figure>
 </div>
@@ -980,7 +980,7 @@ Figure&nbsp;11: Second subgame (last one on the lower branch)
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;12: Third subgame
+Figure&nbsp;12: Third subgame (SG3)
 </figcaption>
 </figure>
 </div>
@@ -1005,7 +1005,7 @@ Figure&nbsp;12: Third subgame
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;13: Forth subgame
+Figure&nbsp;13: Fourth subgame (SG4)
 </figcaption>
 </figure>
 </div>
@@ -1029,7 +1029,7 @@ Figure&nbsp;13: Forth subgame
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sg5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;14: Fifth subgame
+Figure&nbsp;14: Fifth subgame (root node)
 </figcaption>
 </figure>
 </div>
@@ -1155,7 +1155,7 @@ q_2 &amp;=  \frac{a - c}{2b} - \frac{q_1}{2}.
 <div id="fig-cournot-game" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cournot-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="08171f0a" class="cell" data-execution_count="6">
+<div id="9b82af10" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1246,7 +1246,7 @@ p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = \frac{3a + c}{4},
 <section id="exercises" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Exercises</h1>
 <div id="exr-RPS" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1</strong></span> Rock-Paper-Scissors is another simultaneous moves game. It can be played among multiple players; <a href="#fig-rockPaperS" class="quarto-xref">Figure&nbsp;16</a> illustrates such a game between two. If two players make the same move, it is a draw. Otherwise rock beats scissors, which beats paper, which in turn beats rock. Find the best response of each player and determine the Nash equilibrium of the game.</p>
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Rock-Paper-Scissors is another simultaneous moves game. It can be played among multiple players; <a href="#fig-rockPaperS" class="quarto-xref">Figure&nbsp;16</a> illustrates such a game between two. If two players make the same move, it is a draw. Otherwise rock beats scissors, which beats paper, which in turn beats rock. Find the best response of each player and determine if the game has a pure strategy NE. How about a mixed strategy NE?</p>
 <div id="fig-rockPaperS" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-rockPaperS-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1334,8 +1334,64 @@ Figure&nbsp;16: Rock Paper Scissors game between two players
 <div id="exr-cournotNfirms" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3</strong></span> Consider again the Cournot model with identical linear costs and linear demand function. Determine the NE in the general case of <span class="math inline">\(N\)</span> firms. How do the equilibrium quantity, price and profits change as a function of <span class="math inline">\(N?\)</span> What happens as <span class="math inline">\(N\)</span> tends to infinity?</p>
 </div>
+<div id="exr-complPricing" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> This exercise on complementary pricing is adapted from exercise 11 of chapter 13 of the AF Int textbook. Consider a situation where two firms of complementary goods simultaneously decide on how to price their goods. Suppose that there are only two actions possible: High or Low. The normal-form representation is presented here where the payoffs (in dollars) denote the profits for each firm:</p>
+<table style="width:80%">
+<tbody><tr>
+<th>
+</th>
+<th>
+</th>
+<th colspan="2" style="text-align:center">
+Firm 2
+</th>
+</tr>
+<tr style="text-align:center">
+<th>
+</th>
+<th>
+</th>
+<td>
+High
+</td>
+<td>
+Low
+</td>
+</tr>
+<tr>
+<th rowspan="2">
+Firm 1
+</th>
+<td>
+High
+</td>
+<td style="text-align:center">
+(90,75)
+</td>
+<td style="text-align:center">
+(35,40)
+</td>
+</tr>
+<tr>
+<td>
+Low
+</td>
+<td style="text-align:center">
+(45,30)
+</td>
+<td style="text-align:center">
+(60,60)
+</td>
+</tr>
+</tbody></table>
+<ol type="1">
+<li><p>Findall pure-strategy Nash equilibria of this game.</p></li>
+<li><p>Suppose now that one firm sets their price first, and then the other observes and responds. Depict the extensive form of this game and find the SPE. You should consider two cases in of which corresponds to a different first mover.</p></li>
+<li><p>Compare the results from the previous parts. Comment on the similarities and/or differences.</p></li>
+</ol>
+</div>
 <div id="exr-SPE-with-info" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4</strong></span> Find the SPE of the following game with imperfect information. The dashed box means that the player in question faces an information set when called to make a move. In this example, if P1 makes the R move, she will not be able to observe P2’s move when it is her turn to move again. In other words, she does not know whether she is on the C or the D branch.</p>
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Find the SPE of the following game with imperfect information. The dashed box means that the player in question faces an information set when called to make a move. In this example, if P1 makes the R move, she will not be able to observe P2’s move when it is her turn to move again. In other words, she does not know whether she is on the C or the D branch.</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
 <div>
