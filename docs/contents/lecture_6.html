@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="My Dam">
 
-<title>lecture_6 – Intermediate Microeconomics</title>
+<title>Chapter 6. Decision making under uncertainty – Intermediate Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,6 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<link href="../contents/lecture_5.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -67,10 +69,44 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<meta name="mermaid-theme" content="neutral">
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Intermediate Microeconomics">
+<meta property="og:title" content="Chapter 6. Decision making under uncertainty – Intermediate Microeconomics">
+<meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
 <meta property="og:site_name" content="Intermediate Microeconomics">
 </head>
 
@@ -111,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_6.html">Lecture 6</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -185,26 +221,583 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Lecture 5</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_6.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Lecture 6</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
     </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
+   
+  <ul>
+  <li><a href="#lotteries" id="toc-lotteries" class="nav-link active" data-scroll-target="#lotteries"><span class="header-section-number">1</span> Lotteries</a></li>
+  <li><a href="#preferences-over-lotteries" id="toc-preferences-over-lotteries" class="nav-link" data-scroll-target="#preferences-over-lotteries"><span class="header-section-number">2</span> Preferences over lotteries</a></li>
+  <li><a href="#expected-utility-theory" id="toc-expected-utility-theory" class="nav-link" data-scroll-target="#expected-utility-theory"><span class="header-section-number">3</span> Expected utility theory</a></li>
+  <li><a href="#indifference-curves" id="toc-indifference-curves" class="nav-link" data-scroll-target="#indifference-curves"><span class="header-section-number">4</span> Indifference curves</a></li>
+  <li><a href="#money-lotteries" id="toc-money-lotteries" class="nav-link" data-scroll-target="#money-lotteries"><span class="header-section-number">5</span> Money lotteries</a></li>
+  <li><a href="#risk-preferences" id="toc-risk-preferences" class="nav-link" data-scroll-target="#risk-preferences"><span class="header-section-number">6</span> Risk preferences</a>
+  <ul class="collapse">
+  <li><a href="#three-preferences-towards-risk" id="toc-three-preferences-towards-risk" class="nav-link" data-scroll-target="#three-preferences-towards-risk"><span class="header-section-number">6.1</span> Three preferences towards risk</a></li>
+  <li><a href="#certainty-equivalent-and-risk-premium" id="toc-certainty-equivalent-and-risk-premium" class="nav-link" data-scroll-target="#certainty-equivalent-and-risk-premium"><span class="header-section-number">6.2</span> Certainty equivalent and risk premium</a></li>
+  <li><a href="#measure-of-risk-aversion" id="toc-measure-of-risk-aversion" class="nav-link" data-scroll-target="#measure-of-risk-aversion"><span class="header-section-number">6.3</span> Measure of risk aversion</a></li>
+  </ul></li>
+  <li><a href="#comparing-payoff-distributions" id="toc-comparing-payoff-distributions" class="nav-link" data-scroll-target="#comparing-payoff-distributions"><span class="header-section-number">7</span> Comparing payoff distributions</a>
+  <ul class="collapse">
+  <li><a href="#first-order-stochastic-dominance-fosd" id="toc-first-order-stochastic-dominance-fosd" class="nav-link" data-scroll-target="#first-order-stochastic-dominance-fosd"><span class="header-section-number">7.1</span> First order stochastic dominance (FOSD)</a></li>
+  <li><a href="#second-order-stochastic-dominance-sosd" id="toc-second-order-stochastic-dominance-sosd" class="nav-link" data-scroll-target="#second-order-stochastic-dominance-sosd"><span class="header-section-number">7.2</span> Second order stochastic dominance (SOSD)</a></li>
+  <li><a href="#other-measures-of-stochastic-dominance" id="toc-other-measures-of-stochastic-dominance" class="nav-link" data-scroll-target="#other-measures-of-stochastic-dominance"><span class="header-section-number">7.3</span> Other measures of stochastic dominance</a>
+  <ul class="collapse">
+  <li><a href="#hazard-rate-dominance-hrd" id="toc-hazard-rate-dominance-hrd" class="nav-link" data-scroll-target="#hazard-rate-dominance-hrd"><span class="header-section-number">7.3.1</span> Hazard rate dominance (HRD)</a></li>
+  <li><a href="#reverse-hazard-rate-dominance-rhrd" id="toc-reverse-hazard-rate-dominance-rhrd" class="nav-link" data-scroll-target="#reverse-hazard-rate-dominance-rhrd"><span class="header-section-number">7.3.2</span> Reverse hazard rate dominance (RHRD)</a></li>
+  <li><a href="#likelihood-ration-dominance-lrd" id="toc-likelihood-ration-dominance-lrd" class="nav-link" data-scroll-target="#likelihood-ration-dominance-lrd"><span class="header-section-number">7.3.3</span> Likelihood ration dominance (LRD)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#paradoxes-and-alternative-theories" id="toc-paradoxes-and-alternative-theories" class="nav-link" data-scroll-target="#paradoxes-and-alternative-theories"><span class="header-section-number">8</span> Paradoxes and alternative theories</a>
+  <ul class="collapse">
+  <li><a href="#allaiss-paradox" id="toc-allaiss-paradox" class="nav-link" data-scroll-target="#allaiss-paradox"><span class="header-section-number">8.1</span> Allais’s paradox</a></li>
+  <li><a href="#ellsbergs-paradox-and-ambiguity-aversion" id="toc-ellsbergs-paradox-and-ambiguity-aversion" class="nav-link" data-scroll-target="#ellsbergs-paradox-and-ambiguity-aversion"><span class="header-section-number">8.2</span> Ellsberg’s paradox and ambiguity aversion</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">9</span> Exercises</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_6.html">Lecture 6</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 6. Decision making under uncertainty</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>My Dam <a href="mailto:my-thi-tra.dam@universite-paris-saclay.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
+</header>
 
-</main> <!-- /main -->
+
+<p>Life abounds with uncertainty, which can be viewed as danger or oppotunities. Pandemics are bad. Wars are bad. But if one has the guts to enter the market during the bear, she will be amply rewarded once it gets to the bull. If there were no uncertainty, there would be no bets. Many games and financial products would not have existed. Investment opportunities range from the high risk type, such as startups, cryptocurrencies, leveraged positions in equity trading to safer ones such as highly rated government bonds. We buy insurance to protect ourselves from the risk of sickness. We save <em>more</em> when we are uncertain about the future. Much of the human evolution has been marked with our species’ ingenuity in adapting to and thriving in uncertain environments. Making decisions under uncertainty is often hard, especially when the uncertainty is not quantifiable<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. In this chapter, we will be mainly intererested in quantifiable uncertainty or risk, situations in which the decision-maker knows the underlying probability distribution of the random variable of interest (such as future earnings or losses due to sickness). Often times it is hard to make a choice based on pure calculation. Anyone who has ever invested knows that emotion plays no small role in our ability to succeed in a volatile environment.</p>
+<section id="lotteries" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Lotteries</h1>
+<p>The simplest way to model an uncertain prospect is by means of a lottery.</p>
+<div id="def-lottery" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Lottery)</strong></span> A simple loterry is a list of probabilities over a finite set of consequences or prizes. In particular let <span class="math inline">\(C=\{c_1,c_2,\dots,c_N\}\)</span> be the set of consequences and <span class="math inline">\(p_n\)</span> be the probability that <span class="math inline">\(c_n\)</span> is realized. Then the simple lottery <span class="math inline">\(L\)</span> over the set <span class="math inline">\(C\)</span> is: <span id="eq-lottery"><span class="math display">\[
+L = \{p_1,p_2,\dots,p_N\},
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(p_i = P(X=c_i)\)</span> satisfying <span class="math inline">\(p_i\ge 0\)</span> for all <span class="math inline">\(i=1,...,N\)</span> and <span class="math inline">\(\sum_{i=1}^N p_i = 1.\)</span></p>
+</div>
+<div id="rem-altDef" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em>. </span>In some textbooks a lottery is defined as a list of consequence-probability <em>pairs</em> instead of just a list of probabilities.</p>
+</div>
+<p>A lottery with <span class="math inline">\(p_i=1\)</span> for some <span class="math inline">\(i\)</span> is called a <em>degenerated</em> lottery.</p>
+<div id="def-simplex" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (Simplex)</strong></span> The simplex or probability simplex of lotteries, denoted by <span class="math inline">\(\mathcal{L}\)</span> (or <span class="math inline">\(\Delta\)</span>) is the set of all simple lotteries over a set of outcomes: <span class="math display">\[
+\mathcal{L} = \{p \geq 0: \sum_{i=1}^N p_i = 1\}.
+\]</span></p>
+</div>
+<p>Sometimes the prizes are lotteries themselves. Lotteries over such prizes are called compound lotteries.</p>
+<div id="def-compoundLottery" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 3 (Compound lottery)</strong></span> Let <span class="math inline">\((L_1, L_2, ... L_K)\)</span> be simple lotteries over the same set of prizes (i.e., <span class="math inline">\(L_k\in \Delta\)</span> for all <span class="math inline">\(k=1,...,K.\)</span>) Let <span class="math inline">\(\alpha_k\)</span> be the probability of obtaining <span class="math inline">\(L_k.\)</span> Then the compound lottery can be written as: <span class="math display">\[
+(L_1,L_2,\dots,L_K;\alpha_1,\alpha_2,\dots,\alpha_K).
+\]</span></p>
+</div>
+<p>Note that any compound lottery can be reduced to a simple lottery: <span id="eq-comp_to_red"><span class="math display">\[
+L = \sum_{k=1}^K \alpha_k L_k.
+\tag{2}\]</span></span></p>
+<p>According to the <strong>consequentialist hypothesis</strong>, only consequences and the probability associated to each consequence matters; the route through which a consequence is obtained is irrelevant. If you have taken a course in probability, you know that this is just the law of total probability.</p>
+<div id="fig-compoundLottery" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-compoundLottery-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="7c234fa4" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_6_files/figure-html/cell-6-output-1.png" width="466" height="630" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-compoundLottery-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A compound lottery and its reduced simple lottery
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="preferences-over-lotteries" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Preferences over lotteries</h1>
+<p>Let <span class="math inline">\(C\)</span> be the set of outcomes (consequences) and <span class="math inline">\(\mathcal{L}\)</span> the set of all simple lotteries over <span class="math inline">\(C\)</span></p>
+<p>A preference relation <span class="math inline">\(\succeq\)</span> over <span class="math inline">\(\mathcal{L}\)</span> is said to satisfy:</p>
+<ol type="1">
+<li><p><strong>Completeness</strong> if for any <span class="math inline">\(L, L' \in \mathcal{L}\)</span>, either <span class="math inline">\(L\succeq L'\)</span> or <span class="math inline">\(L'\succeq L\)</span> or both</p></li>
+<li><p><strong>Transitivity</strong> if for any <span class="math inline">\(L, L', L'' \in \mathcal{L}\)</span>, if <span class="math inline">\(L\succeq L'\)</span> and <span class="math inline">\(L' \succeq L''\)</span> then <span class="math inline">\(L\succeq L''.\)</span></p></li>
+<li><p><strong>Continuity</strong> if for <span class="math inline">\(L, L' \in \mathcal{L}\)</span> such that <span class="math inline">\(L\succ L'\)</span>, there are neighborhoods <span class="math inline">\(B(L)\)</span> of <span class="math inline">\(L\)</span> and <span class="math inline">\(B(L')\)</span> of <span class="math inline">\(L'\)</span> such that for all <span class="math inline">\(L_a \in B(L)\)</span> and <span class="math inline">\(L_b \in B(L')\)</span>, the direction of preference is preserved: <span class="math inline">\(L_a \succ L_b.\)</span> Intuitively, this means that if one strictly prefers a lottery to another, then a slight modification of the lotteries will not alter her ranking.</p></li>
+<li><p><strong>Independence axiom (IA)</strong> if for any <span class="math inline">\(L, L', L'' \in \mathcal{L}\)</span> and <span class="math inline">\(\alpha \in (0,1)\)</span>: <span id="eq-IA"><span class="math display">\[
+L\succeq L' \iff \alpha L + (1-\alpha)L'' \succeq \alpha L' + (1-\alpha)L''.
+  \tag{3}\]</span></span></p>
+<p>Intuitively, this means that if one prefers a lottery to another then mixing each by the same proportion with a third lottery will not alter the preference ordering.</p></li>
+</ol>
+</section>
+<section id="expected-utility-theory" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Expected utility theory</h1>
+<div id="def-EU" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Expected utility)</strong></span> The utility function <span class="math inline">\(U:\mathcal{L} \to \mathbb{R}\)</span> has the expected utility form if there exist an assignment of numbers <span class="math inline">\((u_1, ..., u_N)\)</span> to the <span class="math inline">\(N\)</span> possible outcomes such that for every simple lottery <span class="math inline">\(L=(p_1,..., p_N) \in \mathcal{L}\)</span>, we have: <span id="eq-EU_form"><span class="math display">\[
+U(L) = \sum_{n=1}^N p_n u_n.
+\tag{4}\]</span></span></p>
+</div>
+<p>In other words, <span class="math inline">\(U\)</span> has an expected utility form if there exists some utility function <span class="math inline">\(u:\mathbb{R}\to\mathbb{R}\)</span> that assigns <span class="math inline">\(u_i\)</span> to each consequence <span class="math inline">\(i\)</span> of the lottery <span class="math inline">\(L.\)</span> If such a representation exists, then <span class="math inline">\(U\)</span> is referred to as the von-Neumann Morgenstern (vNM) utility function. We can then compare lotteries by computing the expected utilities associated with them. When does such a representation exist?</p>
+<div id="thm-reprsentation" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (Representability)</strong></span> If a decision-maker’s preferences over lotteries satisfy completeness, transitivity, continuity and the independence axiom, then it has an expected utility reprsentation.</p>
+</div>
+<p>Observe that if an expected utility representation exists, then comparing lotteries is equivalent to comparing expected utilities derived from lotteries.</p>
+<p>Since <span class="math inline">\(U\)</span> is essentially a mathematical expectation, it is a linear map, i.e., let <span class="math inline">\((L_1,\dots,L_K;\alpha_1,\dots,\alpha_K)\)</span> be a compound lottery, then:</p>
+<p><span id="eq-linearity-of-U"><span class="math display">\[
+U\left(\sum_{k=1}^K L_k\right) = \sum_{k=1}^K U(L_k).
+\tag{5}\]</span></span></p>
+<p>Another way to see this is to observe that the term inside the brackets on the LHS, by the consequentialist assumption, is a simple lottery:</p>
+<p><span class="math display">\[
+L = \left(\sum_{k=1}^K \alpha_k p^k_1, \sum_{k=1}^K \alpha_k p^k_2, \dots, \sum_{k=1}^K \alpha_k p^k_N\right)
+\]</span></p>
+<p>over the set of outcomes <span class="math inline">\((u_1,u_2,\cdots,u_N),\)</span> where <span class="math inline">\(p^k_i\)</span> denotes the probability of <span class="math inline">\(u_i\)</span> under lottery <span class="math inline">\(k.\)</span> We can think of <span class="math inline">\(\sum_{k=1}^K \alpha_k p^k_i\)</span> as the average probability of <span class="math inline">\(u_i\)</span> across <span class="math inline">\(K\)</span> lotteries (<span class="math inline">\(K\)</span> different scenarii).</p>
+<p>We can then rewrite the LHS as:</p>
+<p><span id="eq-LHS-temp"><span class="math display">\[
+U\left(\sum_{k=1}^K \alpha_k L_k\right) = U(L) = \sum_{i=1}^N \sum_{k=1}^K \alpha_k p^k_i u_i.
+\tag{6}\]</span></span></p>
+<p>The RHS of <a href="#eq-linearity-of-U" class="quarto-xref">Equation&nbsp;5</a> can be written as:</p>
+<p><span class="math display">\[
+\sum_{k=1}^K \alpha_k \sum_{i=1}^N p^k_i u_i,
+\]</span></p>
+<p>which is equivalent to <a href="#eq-LHS-temp" class="quarto-xref">Equation&nbsp;6</a>.</p>
+<p>Another important property of the vNM utility is that it is <strong>cardinal</strong>, i.e., the value of the function <span class="math inline">\(U:\mathcal{L} \to \mathbb{R}\)</span> is not just used for ranking; it also has a meaning. It is thus defined only up to a positive affine transformation, i.e., if <span class="math inline">\(U\)</span> reprsents the preferences <span class="math inline">\(\succeq\)</span> over the lotteries then so is <span class="math inline">\(aU + b\)</span> for <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(b\in\mathbb{R}.\)</span> This is in contrast to the ordinal utility function introduced in the first chapter, which is preserved under any positive monotone transformation.</p>
+</section>
+<section id="indifference-curves" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Indifference curves</h1>
+<p>How do indifference curves (IC) look like for preferences over lotteries? They must be <strong>straight lines</strong> and are <strong>parallel</strong> to one another.</p>
+<p>Why straight lines? Suppose <span class="math inline">\(L\)</span> and <span class="math inline">\(L'\)</span> lie on the same IC, i.e., <span class="math inline">\(L \sim L'.\)</span> By the IA, if we mix <span class="math inline">\(L\)</span> and <span class="math inline">\(L'\)</span> with the same lottery by the same proportion, our preference ranking would remain unchanged. Mathematically for any <span class="math inline">\(\alpha\in[0,1]:\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+L &amp;\sim L' \\
+\alpha L + (1-\alpha)L &amp;\sim \alpha L' + (1-\alpha)L \\
+L &amp;\sim \alpha L' + (1-\alpha)L.
+\end{aligned}
+\]</span></p>
+<p>In other words, if we fix any two lotteries on the same IC, then any convex combination between them (the line connecting the two lotteries) must lie on the same IC. Since <span class="math inline">\(L\)</span> and <span class="math inline">\(L'\)</span> can be arbitrarily chosen, it follows that an IC must be a straight line.</p>
+<p>Why must ICs be parallel to one another? Suppose by contrast there exist two indifference curves <span class="math inline">\(IC_1\)</span> and <span class="math inline">\(IC_2\)</span> intersecting at some lottery <span class="math inline">\(L.\)</span> Let <span class="math inline">\(L_1\)</span> be a lottery on <span class="math inline">\(IC_1\)</span> and <span class="math inline">\(L_2\)</span> be a lottery on <span class="math inline">\(IC_2\)</span> and WLOG suppose that <span class="math inline">\(U(L_2) &gt; U(L_1).\)</span> Now <span class="math inline">\(L \in IC_1\)</span> hence <span class="math inline">\(U(L)=U(L_1).\)</span> But <span class="math inline">\(L \in IC_2\)</span> implying <span class="math inline">\(U(L)=U(L_2) &gt; U(L_1) = U(L),\)</span> a contradiction. Hence no two ICs can intersect.</p>
+</section>
+<section id="money-lotteries" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Money lotteries</h1>
+<p>We now consider a more general space of consequences <span class="math inline">\(C=\mathbb{R}.\)</span> In other words, the outcomes are a continuous variables. The lottery will thus be the probability law underlying some continuous random variable <span class="math inline">\(X.\)</span> In particular we define money lotteries by means of the cdf of <span class="math inline">\(X,\)</span> that is <span class="math inline">\(F:\mathbb{R}\to[0,1]\)</span> defined by:</p>
+<p><span class="math display">\[
+F(x) = Pr(X \leq x), \quad x \in \mathbb{R}.
+\]</span></p>
+<p>From probability theory we know that a random variable is characterized by its cdf. The same reduction principle applies to compound lotteries. In particular, let <span class="math inline">\(F_1(x), F_2(x),\dots,F_K(x)\)</span> be <span class="math inline">\(K\)</span> simple money lotteries, each with probability <span class="math inline">\(\alpha_k\)</span> of occurence. Then the compound lottery can be represented as: <span id="eq-compound-money-lot"><span class="math display">\[
+F(x) = \sum_{k=1}^K \alpha_k F_k(x).
+\tag{7}\]</span></span></p>
+<p>We now consider positive monetary amounts, letting <span class="math inline">\(C=\mathbb{R}_+.\)</span> The expected utility derived from the lottery <span class="math inline">\(F(x)\)</span> of a decision-maker whose preferences admit an expected utility representation is:</p>
+<p><span id="eq-EU-cont-case"><span class="math display">\[
+U(F) \equiv \mathbb{E}[u(X)] = \int u(x) dF(x) = \int u(x)f(x)dx,
+\tag{8}\]</span></span></p>
+<p>where <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}_+\)</span> is the pdf of <span class="math inline">\(X,\)</span> if it exists (i.e.&nbsp;if the cdf is <a href="https://en.wikipedia.org/wiki/Absolute_continuity">absolutely continuous</a>), and <span class="math inline">\(u(x)\)</span> is the utility obtained from <span class="math inline">\(x\)</span> dollars. The function <span class="math inline">\(u\)</span> is assumed to be continuous, increasing and bounded.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> It is often referred to as the Bernoulli utility function.</p>
+<div id="exm-MVutility" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1 (Mean-variance utility)</strong></span> Let <span class="math inline">\(u:\mathbb{R}_+\to\mathbb{R}\)</span> be defined by <span class="math inline">\(u(x)=\beta x^2 + \gamma x,\)</span> where <span class="math inline">\(\gamma &gt;0, \: \beta &lt; 0\)</span> and <span class="math inline">\(F\)</span> the cdf of <span class="math inline">\(X.\)</span> Then: <span class="math display">\[
+\begin{aligned}
+\mathbb{E}u(X) = U(F) &amp;= \int u(x) dF(x) \\
+&amp;= \int(\beta x^2 + \gamma x) dF(x) \\
+&amp;= \beta \int x^2 dF(x) + \gamma \int x dF(x) \\
+&amp;= \beta \sigma^2_X + \gamma \mu_x + \beta \mu_x^2,
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(\sigma^2_X\)</span> and <span class="math inline">\(\mu_X\)</span> are the variance and mean of <span class="math inline">\(X,\)</span> respectively. Thus the expected utility derived from <span class="math inline">\(X\)</span> depends only on the mean and the variance of <span class="math inline">\(X,\)</span> i.e., only on the first two moments of this random variable.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+</div>
+</section>
+<section id="risk-preferences" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Risk preferences</h1>
+<section id="three-preferences-towards-risk" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="three-preferences-towards-risk"><span class="header-section-number">6.1</span> Three preferences towards risk</h2>
+<p>Let <span class="math inline">\(X\)</span> be a positive-valued random variable that an individual receives. We say that she is <strong>risk-averse</strong> (or exhibits risk aversion) if:</p>
+<p><span id="eq-RA-def"><span class="math display">\[
+\mathbb{E}[u(X)] \leq u(\mathbb{E}[X]).
+\tag{9}\]</span></span> <span id="eq-RA-def2"><span class="math display">\[
+\int u(x)dF(x) \leq u\left(\int x dF(x)\right).
+\tag{10}\]</span></span></p>
+<p>If the inequality (<a href="#eq-RA-def" class="quarto-xref">9</a>) or (<a href="#eq-RA-def2" class="quarto-xref">10</a>) reverts, then the individual is <strong>risk-loving</strong>. If the inequality sign becomes an equality, she is <strong>risk-neutral</strong>. Mathematically, risk aversion is captured by a concave Bernoulli utility function <span class="math inline">\(u\)</span>, risk loving by a convex and risk neutrality by a linear Bernoulli utility function respectively.</p>
+<p>Intuitively, someone who dislikes risk would prefer a sure gain equivalent to the mean of a random variable rather than playing the lottery over the outcomes of the random variable.</p>
+<div id="exm-risk-aversion" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2</strong></span> Consider a game in which one is proposed two options. In the first option, she can either win nothing or $10,000 with equal probabilities (by tossing a fair coin, for example). In the second, she can walk away with $5000 for sure. Which option will she choose? If she is (strictly) risk-averse, then she will (strictly) prefer the second. If risk-loving, she will prefer the first. If risk-neutral, she will be indifferent.</p>
+<div id="fig-ra-exm" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ra-exm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="columns">
+<div class="column" style="width:45%;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    opt1[Option 1] -- 0.5 --&gt; $10000
+    opt1 -- 0.5 --&gt; $0
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:45%;">
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart TB
+    opt2[Option 2] -- 1 --&gt; $5000
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ra-exm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Choices between lotteries and risk preferences
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="certainty-equivalent-and-risk-premium" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="certainty-equivalent-and-risk-premium"><span class="header-section-number">6.2</span> Certainty equivalent and risk premium</h2>
+<p>Being strictly risk averse implies that the individual strictly prefers a sure gain to a lottery of the same mean. By continuity, this implies there exists a smaller sure gain that makes the individual indifferent between this smaller sure gain and the lottery. This amount is called the <strong>certainty equivalent</strong> of the lottery.</p>
+<div id="def-CE" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5 (Certainty equivalent)</strong></span> Let <span class="math inline">\(X\)</span> be a positive-valued continuous random variable with cdf <span class="math inline">\(F:\mathbb{R}_+\to [0,1].\)</span> Consider a decision-maker whose risk preferences is represented by continuous, strictly increasing and bounded utility function <span class="math inline">\(u:\mathbb{R}_+\to\mathbb{R}.\)</span> The certainty equivalent of <span class="math inline">\(F\)</span> for this decision-maker is: <span class="math display">\[
+\begin{aligned}
+c(u, F) &amp;= u^{-1}\left(U(F)\right) \\
+&amp;=u^{-1}\left(\int u(x) dF(x)\right).
+\end{aligned}
+\]</span></p>
+</div>
+<p>Note that the CE is monetary amount. Clearly the CE is smaller/equal/greater than the mean of the monetary random variable if the decision-maker is risk-averse/neutral/loving. The difference between the CE and the mean of the random monetary prize is called the <strong>risk premium</strong>, which is positive if and only if the decision-maker is risk-averse.</p>
+<div id="def-RP" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 6 (Risk premium)</strong></span> The risk premium is the maxmium amount that a decision maker is willing to pay eliminate risk, i.e., to be indifferent between receving the sure gain equal to the mean prize and the lottery. Mathematically, <span id="eq-riskPrem"><span class="math display">\[
+\begin{aligned}
+RP(u, F) &amp;= EV - c(u, F) \\
+&amp;= \int x dF(x) - c(F, u) \\
+&amp;= \int x dF(x) - u^{-1}\left(\int u(x) dF(x)\right).
+\end{aligned}
+\tag{11}\]</span></span></p>
+</div>
+<p>Sometimes we denote the risk premium by <span class="math inline">\(\pi.\)</span> Let us illustrate these two important concepts graphically.</p>
+<div id="fig-CEandRP" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-CEandRP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="690c816a" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_6_files/figure-html/cell-7-output-1.png" width="446" height="412" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-CEandRP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Certainty equivalent and risk premium
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="measure-of-risk-aversion" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="measure-of-risk-aversion"><span class="header-section-number">6.3</span> Measure of risk aversion</h2>
+<p>There are two common measures of risk aversion: the (Arrow-Pratt) coefficient of absolute risk aversion and coefficient of relative risk aversion.</p>
+<div id="def-ARAandRRA" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 7 (Absolute and relative risk aversion)</strong></span> The Arrow-Pratt coefficient of absolute risk aversion for a decision maker with Bernoulli utility function <span class="math inline">\(u:\mathbb{R}_+\to\mathbb{R}\)</span> is: <span id="eq-coefARA"><span class="math display">\[
+A(x) = -\frac{u''(x)}{u'(x)}.
+\tag{12}\]</span></span> The coefficient of <em>relative risk aversion</em> for the same decision-maker is: <span id="eq-coefRRA"><span class="math display">\[
+R(x) = - \frac{u''(x)x}{u'(x)}.
+\tag{13}\]</span></span></p>
+</div>
+<p>Why don’t we just use the convexity of <span class="math inline">\(u,\)</span> namely the second derivative of <span class="math inline">\(u?\)</span> Because this measure has an undesirable property: it is not invariant to a positive linear transformation of <span class="math inline">\(u.\)</span></p>
+<div id="exm-utilityFunctions" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3 (CARA utility)</strong></span> The following utility satisfies constant absolute risk aversion <span id="eq-CARAutility"><span class="math display">\[
+u(x) = -e^{-ax},
+\tag{14}\]</span></span> where <span class="math inline">\(a&gt;0\)</span> is the coefficient of absolute risk aversion.</p>
+</div>
+<div id="exm-utilityFunctions" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4 (CRRA utility)</strong></span> The following utility satisfies constant relative risk aversion <span id="eq-CRRAutility"><span class="math display">\[
+u(x) = \begin{cases}
+    \frac{x^{1-\sigma}-1}{1-\sigma}, &amp; \sigma \neq 1 \\
+    \ln (x), &amp; \sigma = 1.
+\end{cases}
+\tag{15}\]</span></span> The coefficient of constasnt relative risk aversion is <span class="math inline">\(R(x)=\sigma.\)</span> Note that the vNM utility function is <em>homothetic</em> if and only if the Bernoulli utility function is satisfies CRRA.</p>
+</div>
+<div id="fig-cara" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-cara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="1adcc6e6" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_6_files/figure-html/cell-8-output-1.png" width="372" height="375" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-cara-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: CARA utility function and increasing absolute risk aversion
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="comparing-payoff-distributions" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Comparing payoff distributions</h1>
+<p>The previous section compares different attitudes towards risk (uncertain payoffs). We now compare distributions of payoff (lotteries) using the concept of <strong>stochastic dominance</strong>.</p>
+<section id="first-order-stochastic-dominance-fosd" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="first-order-stochastic-dominance-fosd"><span class="header-section-number">7.1</span> First order stochastic dominance (FOSD)</h2>
+<div id="def-FSD" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (FOSD)</strong></span> Lottery <span class="math inline">\(F\)</span> is said to first order stochastically dominate (FOSD) lottery <span class="math inline">\(G\)</span> if for all payoff <span class="math inline">\(x\)</span>: <span class="math display">\[
+F(x) \leq G(x).
+\]</span></p>
+</div>
+<p>Intuitively, the stochastically dominant lottery concentrates more probability weight on higher payoff values. Graphically, <span class="math inline">\(F\)</span> FOSD <span class="math inline">\(G\)</span> if <span class="math inline">\(F\)</span> is below <span class="math inline">\(G\)</span>.</p>
+<div id="exm-FSD" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5</strong></span> Suppose <span class="math inline">\(X\sim U(0,1)\)</span> and <span class="math inline">\(Y\sim U(0,2).\)</span> Denote the cdf of <span class="math inline">\(X\)</span> by <span class="math inline">\(F_X\)</span> and the cdf of <span class="math inline">\(Y\)</span> by <span class="math inline">\(F_Y.\)</span> Then <span class="math inline">\(F_Y\)</span> FOSD <span class="math inline">\(F_X.\)</span> Indeed, the cdf of a <span class="math inline">\(U(a,b)\)</span> random variable is given by: <span id="eq-Ucdf"><span class="math display">\[
+F(x) = \begin{cases}
+    0 &amp; x &lt; a \\
+    \frac{x - a}{b - a} &amp; x \in [a, b] \\
+    1 &amp; x &gt; b.
+\end{cases}
+\tag{16}\]</span></span> Hence <span class="math display">\[
+F_X(x) = \begin{cases}
+    0 &amp; x &lt; 0 \\
+    x &amp; x \in [0, 1] \\
+    1 &amp; x &gt; 1.
+\end{cases}
+\]</span> and <span class="math display">\[
+F_Y(x) = \begin{cases}
+    0 &amp; x &lt; 0 \\
+    \frac{x}{2} &amp; x \in [0, 2] \\
+    1 &amp; x &gt; 2.
+\end{cases}
+\]</span></p>
+<p>Clearly <span class="math inline">\(F_Y(x) \leq F_X(x)\)</span> for all <span class="math inline">\(x,\)</span> implying that <span class="math inline">\(F_Y\)</span> FOSD <span class="math inline">\(F_X.\)</span></p>
+<div id="fig-FSDUnif" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-FSDUnif-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="96171ff7" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_6_files/figure-html/cell-9-output-1.png" width="345" height="336" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-FSDUnif-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: FOSD of <span class="math inline">\(U(0,2)\)</span> over <span class="math inline">\(U(0,1)\)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="second-order-stochastic-dominance-sosd" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="second-order-stochastic-dominance-sosd"><span class="header-section-number">7.2</span> Second order stochastic dominance (SOSD)</h2>
+<div id="def-SOSD" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 9 (SOSD)</strong></span> Lottery <span class="math inline">\(F\)</span> is said to second order stochastically dominate lottery <span class="math inline">\(G,\)</span> denoted <span class="math inline">\(F\)</span> SOSD <span class="math inline">\(G,\)</span> if they have the same mean and for every nondecreasing concave utility function <span class="math inline">\(u:\mathbb{R}\to\mathbb{R},\)</span> the expected utility under <span class="math inline">\(F\)</span> is greater than that under <span class="math inline">\(G.\)</span> Mathematically:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathbb{E}_F[X] &amp;= \mathbb{E}_G[X], \\
+\mathbb{E}_F [u(X)] &amp;\geq \mathbb{E}_G[u(X)].
+\end{aligned}
+\]</span> or equivalently: <span class="math display">\[
+\begin{aligned}
+\int x dF(x) &amp;= \int x dG(x), \\
+\int u(x) dF(x) &amp;\geq \int u(x) dG(x).
+\end{aligned}
+\]</span></p>
+</div>
+<div id="rem-SOSD-inv-rule" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em>. </span>Note that the inequality condition in <a href="#def-SOSD" class="quarto-xref">Definition&nbsp;9</a> can be shown to be equivalent to: <span id="eq-SOSD-alt-cond"><span class="math display">\[
+\int_a^x [G(t) - F(t)]dt \geq 0,\quad x \in [a,b].
+\tag{17}\]</span></span></p>
+</div>
+<div id="exm-SOSD" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6 (Mean-preserving spread)</strong></span> Consider again two random payoffs <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> where <span class="math inline">\(X\sim U(a,b)\)</span> and <span class="math inline">\(Y\sim U(a-\epsilon,b+\epsilon),\)</span> where <span class="math inline">\(b&gt;a&gt;0\)</span> and <span class="math inline">\(\epsilon &gt;0.\)</span> Observe that both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> have the same mean equal to <span class="math inline">\((b-a)/2\)</span> but the distribution of <span class="math inline">\(Y\)</span> is more spread out about the mean compared to that of <span class="math inline">\(X.\)</span> We say that the distribution of <span class="math inline">\(Y\)</span> is obtained by a mean-preserving spread of the distribution of <span class="math inline">\(X,\)</span> hence is riskier. Let us show that <span class="math inline">\(F_X\)</span> SOSD <span class="math inline">\(F_Y.\)</span> Denote <span class="math inline">\(f_X\)</span> and <span class="math inline">\(f_Y\)</span> the pdfs of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y,\)</span> respectively. Note that: <span class="math display">\[
+\begin{aligned}
+f_X(x) &amp;= \frac{1}{b-a}\mathbb{1}_{x\in[a,b]}, \\
+f_Y(x) &amp;= \frac{1}{b-a+2\epsilon}\mathbb{1}_{x\in[a-\epsilon,b+\epsilon]},
+\end{aligned}
+\]</span> where <span class="math inline">\(\mathbb{1}_{x\in[c,d]}\)</span> is an indicator function taking value of one if <span class="math inline">\(x\in[c,d]\)</span> and zero otherwise. It is easy to check that the cdfs of <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> can be written as follows: <span class="math display">\[
+F_X(x) = \begin{cases}
+    0 &amp; x &lt; a \\
+    \frac{x-a}{b-a} &amp; x \in [a, b] \\
+    1 &amp; x &gt; b.
+\end{cases}
+\]</span> and <span class="math display">\[
+F_Y(x) = \begin{cases}
+    0 &amp; x &lt; a-\epsilon \\
+    \frac{x-a+\epsilon}{b-a+2\epsilon} &amp; x \in [a-\epsilon,b+\epsilon] \\
+    1 &amp; x &gt; b+\epsilon.
+\end{cases}
+\]</span> We will be proving SOSD using (<a href="#eq-SOSD-alt-cond" class="quarto-xref">17</a>). In particular, we only need to verify this condition for <span class="math inline">\(x\in[a,b],\)</span> namely: <span class="math display">\[
+\int_{a}^x [F_Y(t) - F_X(t)] dt \geq 0,\quad \forall x\in[a,b].
+\]</span> Indeed: <span class="math display">\[
+\begin{aligned}
+F_Y(t) - F_X(t) &amp;= \frac{x-a-\epsilon}{b-a+2\epsilon} - \frac{x-a}{b-a} \\
+&amp;=\frac{\epsilon (a+b-2t)}{(b-a+2\epsilon)(b-a)} \\
+\implies \int_{a}^x [F_Y(t) - F_X(t)] dt &amp;= \frac{\epsilon}{(b-a+2\epsilon)(b-a)}\left[(a+b)x - x^2\right]_a^x \\
+&amp;= \frac{\epsilon}{(b-a+2\epsilon)(b-a)}(x-a)(b-x) \\
+&amp;\geq 0,
+\end{aligned}
+\]</span> where the last inequality holds strictly for <span class="math inline">\(x\in(a,b).\)</span></p>
+</div>
+</section>
+<section id="other-measures-of-stochastic-dominance" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="other-measures-of-stochastic-dominance"><span class="header-section-number">7.3</span> Other measures of stochastic dominance</h2>
+<p>Let <span class="math inline">\(X\)</span> be a random variable (such as monetary payoffs). Let <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> are two cdfs over the support of <span class="math inline">\(X\)</span>. Suppose also that the pdf associated with <span class="math inline">\(F\)</span> and <span class="math inline">\(G\)</span> exist and are denoted by <span class="math inline">\(f\)</span> and <span class="math inline">\(g,\)</span> respectively.</p>
+<section id="hazard-rate-dominance-hrd" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="hazard-rate-dominance-hrd"><span class="header-section-number">7.3.1</span> Hazard rate dominance (HRD)</h3>
+<p>The hazard rate of a lottery <span class="math inline">\(F\)</span> is given by:</p>
+<p><span id="eq-hazard-rate"><span class="math display">\[
+HR_F(x) = \frac{f(x)}{1 - F(x)}.
+\tag{18}\]</span></span></p>
+<p>Intuitively, the hazard rate is the conditional density of <span class="math inline">\(X\)</span> given the probability of the payoff exceeding <span class="math inline">\(x.\)</span></p>
+<p>We say that <span class="math inline">\(F\)</span> dominates <span class="math inline">\(G\)</span> in terms of the hazard rate if:</p>
+<p><span id="eq-hazard-rate-dom"><span class="math display">\[
+HR_F(x) \leq HR_G(x), \quad \forall x.
+\tag{19}\]</span></span></p>
+<div id="exr-HRD" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Show that HRD implies FOSD.</p>
+</div>
+</section>
+<section id="reverse-hazard-rate-dominance-rhrd" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="reverse-hazard-rate-dominance-rhrd"><span class="header-section-number">7.3.2</span> Reverse hazard rate dominance (RHRD)</h3>
+<p>The reverse hazard rate of a lottery <span class="math inline">\(F\)</span> is given by:</p>
+<p><span id="eq-rev-hazard-rate"><span class="math display">\[
+RHR_F(x) = \frac{f(x)}{F(x)}.
+\tag{20}\]</span></span></p>
+<p>Intuitively, the reverse hazard rate is the conditional density of <span class="math inline">\(X\)</span> given the probability of the payoff being less than <span class="math inline">\(x.\)</span></p>
+<p>We say that <span class="math inline">\(F\)</span> dominates <span class="math inline">\(G\)</span> in terms of the reverse hazard rate if:</p>
+<p><span id="eq-rev-hazard-rate-dom"><span class="math display">\[
+HR_F(x) \geq HR_G(x), \quad \forall x.
+\tag{21}\]</span></span></p>
+<div id="exr-RHRD" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Show that RHRD implies FOSD.</p>
+</div>
+</section>
+<section id="likelihood-ration-dominance-lrd" class="level3" data-number="7.3.3">
+<h3 data-number="7.3.3" class="anchored" data-anchor-id="likelihood-ration-dominance-lrd"><span class="header-section-number">7.3.3</span> Likelihood ration dominance (LRD)</h3>
+<p>We say that <span class="math inline">\(F\)</span> dominates <span class="math inline">\(G\)</span> in terms of the likelihood ratio if:</p>
+<p><span id="eq-LRD"><span class="math display">\[
+\frac{f(x)}{g(x)} \leq \frac{f(y)}{g(y)}, \quad \forall x &lt; y.
+\tag{22}\]</span></span></p>
+<div id="exr-LRD" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Show that LRD implies HRD.</p>
+</div>
+<p>Hence LRD is a very strong notion of stochastic dominance, it implies HRD which in turn implies FOSD.</p>
+</section>
+</section>
+</section>
+<section id="paradoxes-and-alternative-theories" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Paradoxes and alternative theories</h1>
+<section id="allaiss-paradox" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="allaiss-paradox"><span class="header-section-number">8.1</span> Allais’s paradox</h2>
+<p>The Allais’s paradox illustrates the violation of the independence axiom (IA). Consider the set of prizes <span class="math inline">\(C=\{\$2.5M, \$0.5M, 0\}\)</span> and two lotteries over <span class="math inline">\(C:\)</span> <span id="eq-allais_choice1"><span class="math display">\[
+L_1 = (0, 1, 0), \quad L_1'=\left(\frac{10}{100}, \frac{89}{100}, \frac{1}{100}\right).
+\tag{23}\]</span></span></p>
+<p>Most respondents in controlled experiments will choose <span class="math inline">\(L_1,\)</span> which gives a sure prize of 0.5M: <span id="eq-allais_1"><span class="math display">\[
+L_1 \succ L_1'\iff u_{0.5} &gt; \frac{10}{100}u_{2.5} + \frac{89}{100}u_{0.5} + \frac{1}{100}u_{0}.
+\tag{24}\]</span></span></p>
+<p>Now consider the same set of outcomes but two other lotteries: <span id="eq-allais_choice2"><span class="math display">\[
+L_2=\left(0, \frac{11}{100}, \frac{89}{100}\right), \quad
+L_2'=\left(\frac{10}{100}, 0, \frac{90}{100}\right).
+\tag{25}\]</span></span></p>
+<p>Most people strictly prefer <span class="math inline">\(L_2'\)</span> over <span class="math inline">\(L_2.\)</span> By the IA if we add <span class="math inline">\(\frac{89}{100}u_0 - \frac{89}{100}u_{0.5}\)</span> to both sides of <a href="#eq-allais_1" class="quarto-xref">Equation&nbsp;24</a> we should preserve the direction of the inequality, this yields: <span class="math display">\[
+\frac{11}{100}u_{0.5} + \frac{89}{100}u_{0} &gt; \frac{10}{100}u_{5} + \frac{90}{100}u_{0}.
+\]</span><br>
+But a strict preference of <span class="math inline">\(L_2'\)</span> over <span class="math inline">\(L_2\)</span> implies: <span class="math display">\[\frac{10}{100}u_{5} + \frac{90}{100}u_{0} &gt; \frac{11}{100}u_{0.5} + \frac{89}{100}u_{0},
+\]</span> a contradiction.</p>
+<p>One explanation for this paradox is the unrealistic values of probabilities presented, which are close to one or zero and hence are rarely encountered in practice. Another justification comes from <em>regret theory</em>, according to which individuals do not wish to regret a sure win.</p>
+</section>
+<section id="ellsbergs-paradox-and-ambiguity-aversion" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="ellsbergs-paradox-and-ambiguity-aversion"><span class="header-section-number">8.2</span> Ellsberg’s paradox and ambiguity aversion</h2>
+<p>In real life situations, we often have to form some probabilistic judgement while making a decision. In tossing a fair coin, we know that the probability of obtaining either results is one half. But in predicting the probability of a presidential candidate winning, we often need to form some subjective evaluation. One nice thing about subjective probabilities is that they can evolve with new information, and the Bayesian school of thoughts provides us with a natural framework to update our beliefs with new information. The space is too limited here to present the theory of subjective probability and its version of expected utility, but we shall attempt to get a glimpse at it by presenting one of the most (if not the most) famous thought experiments that refreshed and ignited research interest in this domain.</p>
+<p>There are several versions of this paradox. One of such is the following. In this experiment, Ellsberg presents the subjects with an urn containing 90 balls, 30 of which are known to be red, the remaining 60 balls are black or yellow in unknown proportion. The experiment consists of two parts:</p>
+<ol type="1">
+<li><p>A ball is randomly drawn from the urn. Subjects are asked to bet on the color of the ball, choosing between on red and black. The ball is then returned to the urn.</p></li>
+<li><p>A ball is drawn randomly from the same urn. Subjects are asked to choose between two choices again, but now between red or yellow and black or yellow.</p></li>
+</ol>
+<p>Suppose that betting correctly would result in $1000 prize. How would you make your choice in the first part, and in the second part of the experiment?</p>
+<p>In the first part of the experiment, most subjects prefer betting on red. In the second part, most prefer betting on black or yellow. This is paradoxical because choosing red in the first experiment implies that their subjective probability of the ball being black, <span class="math inline">\(P(B)\)</span> is less than <span class="math inline">\(1/3,\)</span> the objectively (known) probability of the ball being red. This implies that their subjective probability of the ball being yellow, <span class="math inline">\(P(Y),\)</span> is greater than <span class="math inline">\(1/3.\)</span> On the other hand the probability of the ball being black or yellow is <span class="math inline">\(P(B\cup Y)=2/3,\)</span> whereas <span class="math inline">\(P(R\cup Y)=P(R)+P(Y)=1/3+P(Y).\)</span> Betting on black or yellow in the second part would imply <span class="math inline">\(P(Y)&lt;1/3,\)</span> contradicting the subjective evaluation of the same individual in the first part. One explanation for this behavior is <em>ambiguity aversion</em>, which leads individuals to prefer situations with known odds.</p>
+<p>The literature on ambiguity aversion is extensive and growing. Seminal works include the maximin expected utility model (MEU) of Gilboa and Smeidler (1989), the smooth ambiguity aversion model of Klibanoff et al.&nbsp;(2005,2009), to name just a few.</p>
+</section>
+</section>
+<section id="exercises" class="level1" data-number="9">
+<h1 data-number="9"><span class="header-section-number">9</span> Exercises</h1>
+<div id="exr-exoRP" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Create a plot similar to <a href="#fig-CEandRP" class="quarto-xref">Figure&nbsp;3</a> for the cases where <span class="math inline">\(u\)</span> is convex and linear. What are the CE and RP in each case?</p>
+</div>
+<div id="exr-exoCoefRa" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Prove that the Arrow-Pratt coefficient of absolute risk aversion defined in (<a href="#eq-coefARA" class="quarto-xref">12</a>) is invariant to a positive linear transformation.</p>
+</div>
+<div id="exr-MVutility" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> Consider again the mean-variance utility function in <a href="#exm-MVutility" class="quarto-xref">Example&nbsp;1</a>.</p>
+<ol type="1">
+<li>Show that it exhibits decreasing absolute risk aversion.</li>
+<li>Consider a decision maker with initial wealth <span class="math inline">\(w\)</span> deciding on the proportion of wealth <span class="math inline">\(\alpha\in[0,1]\)</span> to invest in a risky asset <span class="math inline">\(X\)</span> with mean and standard deviation <span class="math inline">\(\mu_X\)</span> and <span class="math inline">\(\sigma_X,\)</span> respectively. What is the value of <span class="math inline">\(\alpha\)</span> that maximizes the expected utility of the decision maker? How does this value change in wealth? Interpret.</li>
+</ol>
+</div>
+<div id="exr-optInsurance" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 7 (Optimal insurance demand)</strong></span> Consider an individual with the utility function: <span class="math display">\[
+u(c, h) = \ln c - \frac{L}{h} \quad L&gt;0,
+\]</span> where <span class="math inline">\(c\)</span> is his consumption expenditure and <span class="math inline">\(h\)</span> his health insurance expenditure, <span class="math inline">\(L\)</span> is a random variable indicating monetary loss due to sickness.</p>
+<p>For simplicity, the loss distribution can be described as: <span class="math display">\[
+L = \begin{cases}
+1 &amp; \text{with probability } \gamma \in [0,1] \\
+0 &amp; \text{with probability } 1 - \gamma.
+\end{cases}
+\]</span> The individual total wealth is <span class="math inline">\(w&gt;0.\)</span></p>
+<p>Determine the optimal consumption and health insurance expenditures. How do they vary in wealth and the probability of sickness?</p>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>A situation known as ambiguity or Knightian uncertainty. Under ambiguity, unlike under risk, the decision-maker does not know the probability law underlying the random variable of interest. Sometimes in the vernacular, risk is referred to as the <em>known unknown</em> and ambiguity as the <em>unknown unknown</em>. Even though they are both uncertainty, ambiguity has been documented to result in higher cognitive load than risk because while risk is processed by the rational powerhouse of our brain, the prefrontal cortex, ambiguity tends to trigger fear and anxiety which are associated with the amygdala in our brain.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Boundedness is needed to rule out the St.Petersburg paradox.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Observe that this utility function is increasing only for <span class="math inline">\(x \geq -2\beta/\gamma.\)</span><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -769,6 +1362,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../contents/lecture_5.html" class="pagination-link" aria-label="Lecture 5">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Lecture 5</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
 </div> <!-- /content -->
 
 
