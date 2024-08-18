@@ -534,7 +534,7 @@
     "href": "contents/lecture_2.html#relationship-beteen-average-and-marginal-products",
     "title": "Chapter 2. Producers and supply",
     "section": "2.5 Relationship beteen average and marginal products",
-    "text": "2.5 Relationship beteen average and marginal products\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Relationship between marginal and average products\n\n\n\nFigure 3 suggests that the AP curve crosses the MP curve at its maximum. In particular, as the AP is increasing when it is less than the MP and it is decreasing when it is greater than the MP. This makes sense intuitively since the MP being greater than the AP means the added worker is more productive than the average worker in the existing team, and vice versa.\nLet us formalize this observation. Consider the case of continuous labor input and differentiable production function. Let \\(\\bar{q}(L) = q(L) / L\\) be the average product. Differentiating with respect to \\(L\\) yields:\n\\[\n\\begin{aligned}\n    \\bar{q}'(L) &= \\frac{q'(L)L - q(L)}{L^2}, \\quad L &gt; 0. \\\\\n    \\bar{q}'(L) \\geq 0 &\\iff q'(L)L - q(L) \\geq 0 \\\\\n    &\\iff q'(L) \\geq \\frac{q(L)}{L} \\\\\n    &\\iff q'(L) \\geq \\bar{q}(L).         \n\\end{aligned}\n\\tag{3}\\]",
+    "text": "2.5 Relationship beteen average and marginal products\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Relationship between marginal and average products\n\n\n\nFigure 3 suggests that the AP curve crosses the MP curve at its maximum. In particular, as the AP is increasing when it is less than the MP and it is decreasing when it is greater than the MP. This makes sense intuitively since the MP being greater than the AP means the added worker is more productive than the average worker in the existing team, and vice versa.\nLet us formalize this observation. Consider the case of continuous labor input and differentiable production function. Let \\(\\bar{q}(L) = q(L) / L\\) be the average product. Differentiating with respect to \\(L\\) yields:\n\\[\n\\begin{aligned}\n    \\bar{q}'(L) &= \\frac{q'(L)L - q(L)}{L^2}, \\quad L &gt; 0. \\\\\n    \\bar{q}'(L) \\geq 0 &\\iff q'(L)L - q(L) \\geq 0 \\\\\n    &\\iff q'(L) \\geq \\frac{q(L)}{L} \\\\\n    &\\iff q'(L) \\geq \\bar{q}(L).         \n\\end{aligned}\n\\tag{3}\\]\nThus the average product, \\(\\bar{q}\\), is increasing when the marginal product \\(q'\\) is greater than the average product and is decreasing otherwise.",
     "crumbs": [
       "Home",
       "Lectures",
@@ -546,7 +546,7 @@
     "href": "contents/lecture_2.html#definition",
     "title": "Chapter 2. Producers and supply",
     "section": "3.1 Definition",
-    "text": "3.1 Definition\n\nIn the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation\n\nEach IC represents combinations of goods that give the consumer the same level of utility\n\nIsoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output\nKey difference with ICs: the levels assocated with isoquants are cardinal: they represent actual outputs and not just fictive units invented to rank bundles",
+    "text": "3.1 Definition\nIn the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation. In particular, each IC represents combinations of goods that give the consumer the same level of utility.\nIsoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output, but the the levels assocated with the isoquants are cardinal: they represent actual outputs, not just fictive units used to rank bundles.",
     "crumbs": [
       "Home",
       "Lectures",
@@ -558,7 +558,7 @@
     "href": "contents/lecture_2.html#example",
     "title": "Chapter 2. Producers and supply",
     "section": "3.2 Example",
-    "text": "3.2 Example\n\nConsider the production function \\(q(K, L) = 5K^{1/2} L^{1/2}\\). Find the isoquant corresponding to \\(m &gt; 0\\) units of output.\n\\(m &gt; 0\\) implies that both inputs are strictly positive. We have: \\[\n  5K^{1/2} L^{1/2} = m \\\\\n  \\iff K = \\frac{m^2}{25L}.\n  \\]\n\n\n\n\n\n\n\n\n\nFigure 4: Cobb-Douglas production function and isoquants",
+    "text": "3.2 Example\nConsider the production function \\(q(K, L) = 5K^{1/2} L^{1/2}\\). We would like to find the the isoquant corresponding to \\(m &gt; 0\\) units of output.\nObserve that \\(m &gt; 0\\) implies that both inputs are strictly positive. We have: \\[\n5K^{1/2} L^{1/2} = m \\\\\n\\iff K = \\frac{m^2}{25L}.\n\\]\n\n\n\n\n\n\n\n\nFigure 4: Cobb-Douglas production function and isoquants",
     "crumbs": [
       "Home",
       "Lectures",
@@ -570,7 +570,7 @@
     "href": "contents/lecture_2.html#definition-1",
     "title": "Chapter 2. Producers and supply",
     "section": "4.1 Definition",
-    "text": "4.1 Definition\n\nThe MRTS is the slope of the isoquant (in absolute value):\n\\[\n  \\frac{-dK}{dL} = \\frac{MP_L}{MP_K} \\equiv MRTS_{L,K}.\n   \\tag{4}\\]\nIt tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output. Or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting its output\nAs in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where \\(q(L, K) = m\\) for some constant \\(m&gt;0\\):\n\\[\n  \\begin{aligned}\n  dq(L, K) &= 0 \\\\\n  \\iff q_L dL + q_K dK &= 0 \\\\\n  \\iff \\frac{-dK}{dL} &= \\frac{q_L}{q_K} \\\\\n  &= \\frac{MP_L}{MP_K} \\equiv MRTS_{L,K}.\n  \\end{aligned}\n   \\tag{5}\\]",
+    "text": "4.1 Definition\nThe MRTS is the slope of the isoquant (in absolute value):\n\\[\n\\frac{-dK}{dL} = \\frac{MP_L}{MP_K} \\equiv MRTS_{L,K}.\n\\tag{4}\\]\nIt tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting outputs.\nAs in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where \\(q(L, K) = m\\) for some constant \\(m&gt;0\\):\n\\[\n\\begin{aligned}\ndq(L, K) &= 0 \\\\\n\\iff q_L dL + q_K dK &= 0 \\\\\n\\iff \\frac{-dK}{dL} &= \\frac{q_L}{q_K} \\\\\n&= \\frac{MP_L}{MP_K} \\equiv MRTS_{L,K}.\n\\end{aligned}\n\\tag{5}\\]",
     "crumbs": [
       "Home",
       "Lectures",
@@ -582,7 +582,7 @@
     "href": "contents/lecture_2.html#properties",
     "title": "Chapter 2. Producers and supply",
     "section": "4.2 Properties",
-    "text": "4.2 Properties\nIn the case of Cobb-Douglas production function above, the MRTS is decreasing as we move in the south-east direction along one isoquant:\n\nWhen capital is abundant, the firm is willing to give up many units of capital to hire an additional worker\nWhen capital is scarce, firm is less willing to replace it with workers",
+    "text": "4.2 Properties\nIn the case of Cobb-Douglas production function above, the MRTS is decreasing as we move in the south-east direction along one isoquant:\n\nWhen capital is abundant, the firm is willing to give up many units of capital to hire an additional worker.\nWhen capital is scarce, firm is less willing to replace it with workers.",
     "crumbs": [
       "Home",
       "Lectures",

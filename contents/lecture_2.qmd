@@ -182,28 +182,28 @@ $$
 \end{aligned}
 $${#eq-AP_and_MP}
     
+Thus the average product, $\bar{q}$, is increasing when the marginal product $q'$ is greater than the average product and is decreasing otherwise.
+
 # Isoquants
 
 ## Definition
 
-* In the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer's preference relation
-    * Each IC represents combinations of goods that give the consumer the same level of utility 
+In the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer's preference relation.
+In particular, each IC represents combinations of goods that give the consumer the same level of utility. 
 
-* Isoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output
-
-* Key difference with ICs: the _levels_ assocated with isoquants are _cardinal_: they represent actual outputs and not just fictive units invented to rank bundles
+Isoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output, but the
+the _levels_ assocated with the isoquants are _cardinal_: they represent actual outputs, not just fictive units used to rank bundles.
 
 ## Example
 
-* Consider the production function $q(K, L) = 5K^{1/2} L^{1/2}$. Find the isoquant corresponding to $m > 0$ units of output. 
+Consider the production function $q(K, L) = 5K^{1/2} L^{1/2}$. We would like to find the the isoquant corresponding to $m > 0$ units of output. 
 
-* $m > 0$ implies that both inputs are strictly positive. We have:
-    $$
-    5K^{1/2} L^{1/2} = m \\
-    \iff K = \frac{m^2}{25L}.
-    $$
+Observe that $m > 0$ implies that both inputs are strictly positive. We have:
+$$
+5K^{1/2} L^{1/2} = m \\
+\iff K = \frac{m^2}{25L}.
+$$
     
-
 
 ```{python}
 def isoquant(L, m):
@@ -223,38 +223,39 @@ mm.plotIC(L, L, 0.5, 0.5, 5, levels=q, lab=True, name='$q(L, K) = 5K^{1/2}L^{1/2
 
 ## Definition
 
-* The MRTS is the slope of the isoquant (in absolute value):
+The MRTS is the slope of the isoquant (in absolute value):
 
-    $$
-    \frac{-dK}{dL} = \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
-    $${#eq-MRST_def}
+$$
+\frac{-dK}{dL} = \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+$${#eq-MRST_def}
 
-* It tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output. Or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting its output
+It tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting outputs.
 
-* As in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where $q(L, K) = m$ for some constant $m>0$:
+As in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where $q(L, K) = m$ for some constant $m>0$:
 
-    $$
-    \begin{aligned}
-    dq(L, K) &= 0 \\
-    \iff q_L dL + q_K dK &= 0 \\ 
-    \iff \frac{-dK}{dL} &= \frac{q_L}{q_K} \\
-    &= \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
-    \end{aligned}
-    $${#eq-MRST_proof}
+$$
+\begin{aligned}
+dq(L, K) &= 0 \\
+\iff q_L dL + q_K dK &= 0 \\ 
+\iff \frac{-dK}{dL} &= \frac{q_L}{q_K} \\
+&= \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+\end{aligned}
+$${#eq-MRST_proof}
     
 
 ## Properties
 
 In the case of Cobb-Douglas production function above, the _MRTS is decreasing_ as we move in the south-east direction along one isoquant:
 
-* When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker
+* When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker.
 
-* When capital is scarce, firm is less willing to replace it with workers
+* When capital is scarce, firm is less willing to replace it with workers.
     
 # Homogeneity and returns to scale
 
 
 Let $\alpha > 0$ be the factor by which all inputs change (i.e., each input is multiplied by $\alpha$). Suppose $q(\alpha K, \alpha L) = \alpha^k q(K, L)$ for some number $k$
+
   * If $k > 1$: the firm exhibits increasing returns to scale (IRS)
   * If $k = 1$: the firm exhibits constant returns to scale (CRS)
   * If $k < 1$: the firm exhibits decreasing returns to scale (DRS)

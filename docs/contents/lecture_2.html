@@ -402,7 +402,7 @@ Figure&nbsp;2: Increasing labor increases output, but at decreasing rates
 <div id="fig-MPAP" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-MPAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="7c310e3f" class="cell" data-execution_count="7">
+<div id="b81e2b1b" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -427,30 +427,23 @@ Figure&nbsp;3: Relationship between marginal and average products
     &amp;\iff q'(L) \geq \bar{q}(L).         
 \end{aligned}
 \tag{3}\]</span></span></p>
+<p>Thus the average product, <span class="math inline">\(\bar{q}\)</span>, is increasing when the marginal product <span class="math inline">\(q'\)</span> is greater than the average product and is decreasing otherwise.</p>
 </section>
 </section>
 <section id="isoquants" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Isoquants</h1>
 <section id="definition" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">3.1</span> Definition</h2>
-<ul>
-<li><p>In the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation</p>
-<ul>
-<li>Each IC represents combinations of goods that give the consumer the same level of utility</li>
-</ul></li>
-<li><p>Isoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output</p></li>
-<li><p>Key difference with ICs: the <em>levels</em> assocated with isoquants are <em>cardinal</em>: they represent actual outputs and not just fictive units invented to rank bundles</p></li>
-</ul>
+<p>In the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation. In particular, each IC represents combinations of goods that give the consumer the same level of utility.</p>
+<p>Isoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output, but the the <em>levels</em> assocated with the isoquants are <em>cardinal</em>: they represent actual outputs, not just fictive units used to rank bundles.</p>
 </section>
 <section id="example" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="example"><span class="header-section-number">3.2</span> Example</h2>
-<ul>
-<li><p>Consider the production function <span class="math inline">\(q(K, L) = 5K^{1/2} L^{1/2}\)</span>. Find the isoquant corresponding to <span class="math inline">\(m &gt; 0\)</span> units of output.</p></li>
-<li><p><span class="math inline">\(m &gt; 0\)</span> implies that both inputs are strictly positive. We have: <span class="math display">\[
-  5K^{1/2} L^{1/2} = m \\
-  \iff K = \frac{m^2}{25L}.
-  \]</span></p></li>
-</ul>
+<p>Consider the production function <span class="math inline">\(q(K, L) = 5K^{1/2} L^{1/2}\)</span>. We would like to find the the isoquant corresponding to <span class="math inline">\(m &gt; 0\)</span> units of output.</p>
+<p>Observe that <span class="math inline">\(m &gt; 0\)</span> implies that both inputs are strictly positive. We have: <span class="math display">\[
+5K^{1/2} L^{1/2} = m \\
+\iff K = \frac{m^2}{25L}.
+\]</span></p>
 <div id="cell-fig-isoquants" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div id="fig-isoquants" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -471,35 +464,38 @@ Figure&nbsp;4: Cobb-Douglas production function and isoquants
 <h1 data-number="4"><span class="header-section-number">4</span> Marginal rate of technical substitution (MRTS)</h1>
 <section id="definition-1" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="definition-1"><span class="header-section-number">4.1</span> Definition</h2>
-<ul>
-<li><p>The MRTS is the slope of the isoquant (in absolute value):</p>
+<p>The MRTS is the slope of the isoquant (in absolute value):</p>
 <p><span id="eq-MRST_def"><span class="math display">\[
-  \frac{-dK}{dL} = \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
-   \tag{4}\]</span></span></p></li>
-<li><p>It tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output. Or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting its output</p></li>
-<li><p>As in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where <span class="math inline">\(q(L, K) = m\)</span> for some constant <span class="math inline">\(m&gt;0\)</span>:</p>
+\frac{-dK}{dL} = \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+\tag{4}\]</span></span></p>
+<p>It tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting outputs.</p>
+<p>As in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where <span class="math inline">\(q(L, K) = m\)</span> for some constant <span class="math inline">\(m&gt;0\)</span>:</p>
 <p><span id="eq-MRST_proof"><span class="math display">\[
-  \begin{aligned}
-  dq(L, K) &amp;= 0 \\
-  \iff q_L dL + q_K dK &amp;= 0 \\
-  \iff \frac{-dK}{dL} &amp;= \frac{q_L}{q_K} \\
-  &amp;= \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
-  \end{aligned}
-   \tag{5}\]</span></span></p></li>
-</ul>
+\begin{aligned}
+dq(L, K) &amp;= 0 \\
+\iff q_L dL + q_K dK &amp;= 0 \\
+\iff \frac{-dK}{dL} &amp;= \frac{q_L}{q_K} \\
+&amp;= \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+\end{aligned}
+\tag{5}\]</span></span></p>
 </section>
 <section id="properties" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="properties"><span class="header-section-number">4.2</span> Properties</h2>
 <p>In the case of Cobb-Douglas production function above, the <em>MRTS is decreasing</em> as we move in the south-east direction along one isoquant:</p>
 <ul>
-<li><p>When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker</p></li>
-<li><p>When capital is scarce, firm is less willing to replace it with workers</p></li>
+<li><p>When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker.</p></li>
+<li><p>When capital is scarce, firm is less willing to replace it with workers.</p></li>
 </ul>
 </section>
 </section>
 <section id="homogeneity-and-returns-to-scale" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Homogeneity and returns to scale</h1>
-<p>Let <span class="math inline">\(\alpha &gt; 0\)</span> be the factor by which all inputs change (i.e., each input is multiplied by <span class="math inline">\(\alpha\)</span>). Suppose <span class="math inline">\(q(\alpha K, \alpha L) = \alpha^k q(K, L)\)</span> for some number <span class="math inline">\(k\)</span> * If <span class="math inline">\(k &gt; 1\)</span>: the firm exhibits increasing returns to scale (IRS) * If <span class="math inline">\(k = 1\)</span>: the firm exhibits constant returns to scale (CRS) * If <span class="math inline">\(k &lt; 1\)</span>: the firm exhibits decreasing returns to scale (DRS)</p>
+<p>Let <span class="math inline">\(\alpha &gt; 0\)</span> be the factor by which all inputs change (i.e., each input is multiplied by <span class="math inline">\(\alpha\)</span>). Suppose <span class="math inline">\(q(\alpha K, \alpha L) = \alpha^k q(K, L)\)</span> for some number <span class="math inline">\(k\)</span></p>
+<ul>
+<li>If <span class="math inline">\(k &gt; 1\)</span>: the firm exhibits increasing returns to scale (IRS)</li>
+<li>If <span class="math inline">\(k = 1\)</span>: the firm exhibits constant returns to scale (CRS)</li>
+<li>If <span class="math inline">\(k &lt; 1\)</span>: the firm exhibits decreasing returns to scale (DRS)</li>
+</ul>
 <p>Note that the characterization holds regardless of whether <span class="math inline">\(\alpha\)</span> is greater or smaller than one. If <span class="math inline">\(\alpha \in (0, 1)\)</span> then increasing returns to scale means that as we reduce inputs by a factor of <span class="math inline">\(\alpha\)</span>, the firm’s output falls by more than <span class="math inline">\(\alpha\)</span>.</p>
 <div id="exm-RSC" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4</strong></span> Consider the Cobb-Douglas production function <span class="math inline">\(q = AK^a L^b\)</span> where <span class="math inline">\(A, a, b\)</span> are strictly positive constants. For which values of <span class="math inline">\(a, b\)</span> does this function exhibit increasing, constant or decreasing returns to scale? What kind of returns to scale do linear and fixed-proportion production functions exhibit?</p>
@@ -585,7 +581,7 @@ TC = wL + rK.
 <div id="fig-isocost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-isocost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="0e8c7776" class="cell" data-execution_count="10">
+<div id="b6a7515f" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -695,7 +691,7 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <div id="fig-SRLRcost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SRLRcost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="ca909fc3" class="cell" data-execution_count="11">
+<div id="09a5c6e4" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -735,7 +731,7 @@ Figure&nbsp;6: Short-run vs long-run cost function
 <div id="fig-ACMCSR" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ACMCSR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="e7de8302" class="cell" data-execution_count="12">
+<div id="d9e1c32f" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
