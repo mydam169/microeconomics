@@ -169,7 +169,7 @@ def plotMRS():
     plt.text(1.5, 1.5, 'C', fontsize=14)
     plt.text(0.35, 3, '$\\Delta y$')
     plt.text(0.6, 2.1, '$\\Delta x$')
-    plt.text(0.85, 1.6, "$\\Delta y'$")
+    plt.text(0.75, 1.6, "$\\Delta y'$")
     plt.text(1.2, 1.1, '$\\Delta x$')
 
     plt.xlabel('x')

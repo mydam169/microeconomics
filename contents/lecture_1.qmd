@@ -142,7 +142,9 @@ Strict monotonicity implies that we cannot have bads in the bundle. Monotonicity
 
 A preference relation satisfies *nonsatiation* (NS) if for every bundle, there exists a strictly preferred bundle. Let $X$ be the set of all alternatives or bundles, then NS implies that for any $A\in X$ there exists $B\in X$ such that:
 
-$$B \succ A$$
+$$
+B \succ A
+$$
 
 ::: {#rem-remark-NS}
 -   NS allows some of the items in the bundle to be bads
@@ -229,7 +231,7 @@ The utility function $u: X\subset\mathbb{R^2}\to\mathbb{R}$ defined by $u(x_1, x
 ::: {#exm-eg-mono-ps}
 ## Perfect substitutes
 
-The utility function $u: X\subset\mathbb{R^2}\to\mathbb{R}$ defined by $u(x_1, x_2)=ax_1 + bx_2$ where $a>0$ and $b>0$ represents a monotonic but not strictly monotonic preference relation.
+The utility function $u: X\subset\mathbb{R^2}\to\mathbb{R}$ defined by $u(x_1, x_2)=ax_1 + bx_2$ where $a>0$ and $b>0$ represents a strictly monotonic preference relation.
 :::
 
 Since monotonicity implies LNS (which in turns implies NS), both of these utility functions satisfy LNS and NS.
@@ -402,18 +404,21 @@ A preference relation is homogeneous if it can be represented by a homogeneous u
 <summary>Proof</summary>
 
 ::: proof
-1.  Partially differentiating w.r.t $x_i$ yields: $$
+1. Partially differentiating w.r.t $x_i$ yields: 
+   $$
      \begin{aligned}
      \frac{\partial u(\alpha x)}{\partial (\alpha x_j)}\alpha &= \alpha^k \frac{\partial u(x)}{\partial x_j} \\
      u_j(\alpha x) &= \alpha^{k-1} u_j(x).
      \end{aligned}
-     $$
+    $$
 
-2.  This comes from the definition: $$
+2.  This comes from the definition: 
+   $$
      u(x) = u(y) \iff \alpha^k u(x) = \alpha^k u(y) \iff u(\alpha x) = u(\alpha y).
-     $$
+    $$
 
-3.  This can be proven by using the first property: $$
+3.  This can be proven by using the first property: 
+   $$
      \begin{aligned}
      MRS_{1,2}(x) \equiv \frac{U_1(x)}{U_2(x)}
      &= \frac{\alpha^{k-1}U_1(x)}{\alpha^{k-1}U_2(x)} \\
@@ -429,7 +434,9 @@ A preference relation is homogeneous if it can be represented by a homogeneous u
 ::: {#def-homoth}
 ## Homothetic function
 
-A function $u:\mathbb{R}^n\to\mathbb{R}$ is homothetic if it is obtained by a monotonic transformation of a homogeneous function (@def-homogen), i.e., if there exist a strictly increasing function $f:\mathbb{R}\to\mathbb{R}$ and a homogeneous function $v:X\to\mathbb{R}$ such that: $$ 
+A function $u:\mathbb{R}^n\to\mathbb{R}$ is homothetic if it is obtained by a monotonic transformation of a homogeneous function (@def-homogen), i.e., if there exist a strictly increasing function $f:\mathbb{R}\to\mathbb{R}$ and a homogeneous function $v:X\to\mathbb{R}$ such that: 
+
+$$ 
 u(x) = f(v(x)).
 $$ {#eq-homt_def}
 :::
@@ -631,7 +638,8 @@ $$ which comes directly from the binding budget constraint.
 ::: {#exr-exo-lexico}
 ## Lexicographic preferences
 
-Consider the preference relation over $X=\mathbb{R}^2_+$ as follows: $$
+Consider the preference relation over $X=\mathbb{R}^2_+$ as follows: 
+$$
 \forall x, y \in X:\: x \succeq y \text{ if } 
 \begin{cases}
     x_1 > y_1, \text{ or} \\
@@ -659,7 +667,7 @@ St.Petersburg paradox: We pay a fee to play a game of chance in which we toss a 
 
 <summary>Answer</summary>
 
-The expected value of this game is $\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty$.
+The expected value of this game is $\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty.$
 
 </details>
 :::
@@ -688,14 +696,6 @@ $$
 ## Monotonicity
 
 Prove that the utility function in @exm-eg-mono-leontief satisfy monotonicity but not strict monotonicity, and the utility function in @exm-eg-mono-ps satisfy monotonicity.
-
-<details>
-
-<summary>Answer</summary>
-
-See lecture slide.
-
-</details>
 :::
 
 ::: {#exr-quasiconc}
@@ -705,13 +705,19 @@ Prove that (strict) concavity implies (strict) quasiconcavity.
 
 <summary>Answer</summary>
 
--   A function $u:X\to \mathbb{R}$ is concave if for all $x, y \in X$ and $\alpha \in (0,1)$: $$ u(\alpha x + (1 - \alpha) y) \geq \alpha u(x) + (1-\alpha) u(y)$$ {#eq-concave_def}
+-   A function $u:X\to \mathbb{R}$ is concave if for all $x, y \in X$ and $\alpha \in (0,1)$: 
+  
+    $$ 
+    u(\alpha x + (1 - \alpha) y) \geq \alpha u(x) + (1-\alpha) u(y)
+    $${#eq-concave_def}
 
--   Since $u(x) \geq \min\{u(x), u(y)\}$ and $u(y) \geq \min\{u(x), u(y)\}$: $$
+-   Since $u(x) \geq \min\{u(x), u(y)\}$ and $u(y) \geq \min\{u(x), u(y)\}$: 
+  
+    $$
     \begin{aligned}
-          u(\alpha x + (1 - \alpha) y) &\geq \alpha u(x) + (1-\alpha) u(y) \\
-          &\geq \alpha \min\{u(x), u(y)\} + (1-\alpha)\min\{ u(x), u(y)\} \\
-          &= \min\{u(x), u(y)\}
+            u(\alpha x + (1 - \alpha) y) &\geq \alpha u(x) + (1-\alpha) u(y) \\
+            &\geq \alpha \min\{u(x), u(y)\} + (1-\alpha)\min\{ u(x), u(y)\} \\
+            &= \min\{u(x), u(y)\}
     \end{aligned}
     $$ {#eq-conc_qsconc}
 

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="My Dam">
 
-<title>lecture_7 – Intermediate Microeconomics</title>
+<title>Chapter 7. Externalities and public goods – Intermediate Microeconomics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -68,9 +69,39 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Intermediate Microeconomics">
+<meta property="og:title" content="Chapter 7. Externalities and public goods – Intermediate Microeconomics">
+<meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
 <meta property="og:site_name" content="Intermediate Microeconomics">
 </head>
 
@@ -111,7 +142,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Chapter 7. Externalities and public goods</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -195,20 +226,260 @@ ul.task-list li input[type="checkbox"] {
   </li>
     </ul>
     </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
+   
+  <ul>
+  <li><a href="#externalities" id="toc-externalities" class="nav-link active" data-scroll-target="#externalities"><span class="header-section-number">1</span> Externalities</a>
+  <ul class="collapse">
+  <li><a href="#definition-and-examples" id="toc-definition-and-examples" class="nav-link" data-scroll-target="#definition-and-examples"><span class="header-section-number">1.1</span> Definition and examples</a></li>
+  <li><a href="#modeling-externalities" id="toc-modeling-externalities" class="nav-link" data-scroll-target="#modeling-externalities"><span class="header-section-number">1.2</span> Modeling externalities</a>
+  <ul class="collapse">
+  <li><a href="#the-representative-firm" id="toc-the-representative-firm" class="nav-link" data-scroll-target="#the-representative-firm"><span class="header-section-number">1.2.1</span> The representative firm</a></li>
+  <li><a href="#the-reprsentative-consumer" id="toc-the-reprsentative-consumer" class="nav-link" data-scroll-target="#the-reprsentative-consumer"><span class="header-section-number">1.2.2</span> The reprsentative consumer</a></li>
+  <li><a href="#competitive-and-pareto-equilibrium-externality" id="toc-competitive-and-pareto-equilibrium-externality" class="nav-link" data-scroll-target="#competitive-and-pareto-equilibrium-externality"><span class="header-section-number">1.2.3</span> Competitive and pareto equilibrium externality</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#public-goods" id="toc-public-goods" class="nav-link" data-scroll-target="#public-goods"><span class="header-section-number">2</span> Public goods</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">3</span> Exercises</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Chapter 7. Externalities and public goods</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>My Dam <a href="mailto:my-thi-tra.dam@universite-paris-saclay.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
+</header>
+
+
+<p>Just like market power, externalities and public goods are two other causes of market failures. In presence of externalities or public goods, the competitive market fails to produce an efficient outcome. In this chapter, we will be analyzing these problems and their common solutions.</p>
+<section id="externalities" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Externalities</h1>
+<section id="definition-and-examples" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="definition-and-examples"><span class="header-section-number">1.1</span> Definition and examples</h2>
+<p>An externality is the effect that agent has on the welfare of another agent beyond the effects transmitted by changes in prices. It typically represents an effect imposed on or benefited by a third party to an exchange/transaction.</p>
+<div id="tbl-ext-exm" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ext-exm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Externalities: types and examples
+</figcaption>
+<div aria-describedby="tbl-ext-exm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table style="text-align:left; width=100%">
+<tbody><tr>
+<th>
+</th>
+<th>
+Negative
+</th>
+<th>
+Positive
+</th>
+</tr>
+<tr>
+<th align="left">
+From consumption
+</th>
+<td>
+<ul>
+<li>
+Passive smoking
+</li>
+<li>
+Noisy neighbors
+</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>
+Vaccination
+</li>
+<li>
+Education
+</li>
+</ul>
+</td>
+</tr>
+<tr>
+<th>
+From production
+</th>
+<td>
+<ul>
+<li>
+Air pollution by coal-powered power stations
+</li>
+<li>
+Water contamination by a firm that dumps industrial wastes directly into the river
+</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>
+Unpatented research and development
+</li>
+<li>
+Apiculture
+</li>
+</ul>
+</td>
+</tr>
+</tbody></table>
+</div>
+</figure>
+</div>
+</section>
+<section id="modeling-externalities" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="modeling-externalities"><span class="header-section-number">1.2</span> Modeling externalities</h2>
+<p>Consider a economy with two types of agents: a firm and a consumer. The firm’s productive activities generate negative externalities that affect the consumer.</p>
+<section id="the-representative-firm" class="level3" data-number="1.2.1">
+<h3 data-number="1.2.1" class="anchored" data-anchor-id="the-representative-firm"><span class="header-section-number">1.2.1</span> The representative firm</h3>
+<p>The firm’s objective is to maximize profit <span class="math inline">\(\pi(x,p)\)</span> where <span class="math inline">\(p\)</span> is the price vector and <span class="math inline">\(x\)</span> the amount of externality generated. In a competitive market the firm is a price taker, taking <span class="math inline">\(p\)</span> as given, allowing us to write the profit function s <span class="math inline">\(\pi(x).\)</span> We assume that the profit functionis twice differentiable, increasing and concave:</p>
+<p><span id="eq-assumption-profit"><span class="math display">\[
+\pi'(x) &gt; 0 &gt; \pi''(x).
+\tag{1}\]</span></span></p>
+<p>In words, we assume that profits increase with externalities since the firm does not bear the full marginal cost of production. Nevertheless, the marginal benefits of pollution decline. Note that since externalities are generated by production, making decision on externalities can be considered equivalent to making decision on output, as illustrated in <a href="#exm-eqm-ext" class="quarto-xref">Example&nbsp;1</a>.</p>
+</section>
+<section id="the-reprsentative-consumer" class="level3" data-number="1.2.2">
+<h3 data-number="1.2.2" class="anchored" data-anchor-id="the-reprsentative-consumer"><span class="header-section-number">1.2.2</span> The reprsentative consumer</h3>
+<p>The consumer has preferences reprsented by an utility function <span class="math inline">\(u(q,x),\)</span> where <span class="math inline">\(q\in\mathbb{R}_+^n\)</span> is the consumption bundle, the vector of <em>tradable goods</em>, and <span class="math inline">\(x\)</span> is the negative externatlity, which is <em>not tradable</em> (otherwise it would have had a price and the impact would have been internalized!). We assume:</p>
+<p><span id="eq-assume-u-q"><span class="math display">\[
+u_k \equiv \frac{\partial u}{\partial q_k} \geq 0,\quad \forall k=1,\dots,n.
+\tag{2}\]</span></span></p>
+<p>and</p>
+<p><span id="eq-assum-u-x"><span class="math display">\[
+u_x \equiv \frac{\partial u}{\partial x} \lt 0.
+\tag{3}\]</span></span></p>
+<p>Denote <span class="math inline">\(w\)</span> the consumer’s income and <span class="math inline">\(q^*(p,w,x)\)</span> the Walrasian demand function. Then the indirect utility function (the maximized utility function) is:</p>
+<p><span id="eq-indirect-u"><span class="math display">\[
+    v(x) = u(q*(p,w,x),x).
+\tag{4}\]</span></span></p>
+<p>Observe that <span class="math inline">\(v'(x)&lt;0\)</span> for all <span class="math inline">\(x&gt;0.\)</span></p>
+</section>
+<section id="competitive-and-pareto-equilibrium-externality" class="level3" data-number="1.2.3">
+<h3 data-number="1.2.3" class="anchored" data-anchor-id="competitive-and-pareto-equilibrium-externality"><span class="header-section-number">1.2.3</span> Competitive and pareto equilibrium externality</h3>
+<p>In a competitive equilibrium, the firm selects the (private) level of externatlity that maximizes its profits:</p>
+<p><span id="eq-firm-CE"><span class="math display">\[
+x^P = \arg\max_{x\geq 0} \pi(x),
+\tag{5}\]</span></span></p>
+<p>The FOC of which yields (for an interior solution):</p>
+<p><span id="eq-foc-CE"><span class="math display">\[
+\pi'(x^P) = 0,.
+\tag{6}\]</span></span></p>
+<p>In a Pareto equilibrium, the social planner selects the level of externality that maximizes the sum of profits and utilities:</p>
+<p><span id="eq-SP"><span class="math display">\[
+x^E = \arg\max_{x\geq 0} \pi(x) + v(x).
+\tag{7}\]</span></span></p>
+<p>The necessary condition for an iterior solution is:</p>
+<p><span id="eq-FOC-SP"><span class="math display">\[
+\pi'(x^E) = - v'(x^E).
+\tag{8}\]</span></span></p>
+<p>In other words, the social planner selects a level of externality such that the marginal benefit derived from it by the firm is equal to the marignal cost (disutility) suffered by the consumer.</p>
+<p>Since <span class="math inline">\(v'(x)&lt;0,\)</span> and <span class="math inline">\(\pi''(x)&lt;0,\)</span> we have:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\pi'(x^E) &gt; 0 &amp;= \pi'(x^P) \\
+x^E &amp;&lt; x^P.
+\end{aligned}
+\]</span></p>
+<p>Hence the Pareto efficient level of pollution, <span class="math inline">\(x^E\)</span> is less than the competitve level <span class="math inline">\(x^P\)</span> selected by the firm.</p>
+<div id="exm-eqm-ext" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> Consider a firm with <span class="math inline">\(\pi = pq - cq^2\)</span> where <span class="math inline">\(q\)</span> is the output, <span class="math inline">\(p\)</span> is the price of the good and <span class="math inline">\(c&gt;0\)</span> is a constant. Suppose that externality is a linear function of quantity, namely <span class="math inline">\(x=a q,\)</span> with <span class="math inline">\(a &gt;0.\)</span> Hence:</p>
+<p><span class="math display">\[
+\pi(x) = p\frac{x}{a} - c\left(\frac{x}{a}\right)^2.
+\]</span></p>
+<p>The FOC yields: <span class="math display">\[
+x^P = \frac{ap}{2c}.
+\]</span></p>
+<p>Suppose that the consumer has a damange function defined by:</p>
+<p><span class="math display">\[
+v(x) = b - cx - \frac{dx^2}{2},\quad b,d&gt;0.
+\]</span> Observe that the marginal cost of the damage increases in the level of pollution. This makes sense intuitively if we think about how health deterioration accelerates as pollution gets worse.</p>
+<p>In view of <a href="#eq-FOC-SP" class="quarto-xref">Equation&nbsp;8</a>, we can determine the Pareto efficient level of externality:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\pi'(x^E) &amp;= -v'(x^E) \\
+\frac{p}{a}-\frac{2c}{a^2}x^E &amp;= c+dx^E \\
+x^E &amp;= \frac{ap-a^2c}{2c+ad}.
+\end{aligned}
+\]</span></p>
+<p>When is it efficient to have a positive amount of externality, i.e., to have <span class="math inline">\(x^E&gt;0?\)</span> Observe that <span class="math inline">\(v'(0)=-c\)</span> and <span class="math inline">\(\pi'(0)=p/a\)</span> and <span class="math inline">\(x^E &gt; 0\)</span> if and only if <span class="math inline">\(pa-ca^2 &gt;0,\)</span> which is equivalent to <span class="math inline">\(p/a &gt; c\)</span> or <span class="math inline">\(\pi'(0)&gt;-v'(0).\)</span> In other words, the economy should generate negative externalities if the marginal benefits of doing so for firms are greater than the marginal costs to consumers at the origin.</p>
+</div>
+<div id="exm-positive-ext" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2 (Positive externalities)</strong></span> Consider two neighboring countries, <span class="math inline">\(i\)</span> and <span class="math inline">\(j,\)</span> simultaneously choosing the level of investment in recycling activities <span class="math inline">\(x_i.\)</span> The benefit from recycling is given by:</p>
+<p><span class="math display">\[
+\pi_i(x_i,x_j) = (a - 0.5x_i + 0.25x_j)x_i - bx_i,
+\]</span></p>
+<p>where <span class="math inline">\(a,b&gt;0.\)</span></p>
+<p>In a competitive equilibrium, country <span class="math inline">\(i\)</span> chooses <span class="math inline">\(x_i\)</span> so as to maximize its own benefit. The optimal conditions provide the best response functions for the firms. In particular: <span class="math display">\[
+\begin{aligned}
+\frac{\partial{\pi_i}}{\partial x_i} = 0
+\iff x_i &amp;= a - b + \frac{x_j}{4} \\
+BR_i(x_j) &amp;= a - b + \frac{x_j}{4},
+\end{aligned}
+\]</span></p>
+<p>and likewise for country <span class="math inline">\(j.\)</span></p>
+<p>The NE of this game is: <span id="eq-NE-comp"><span class="math display">\[
+x_i^* = x_j^* = \frac{4(a - b)}{3}.
+\tag{9}\]</span></span></p>
+<p>To be Pareto optimal, each country considers not only its own benefit but also that of the other country when making a decision. Another way to think about this is to make a decision from the point of view of a social planner who determines both investment levels to maximize joint benefits:</p>
+<p><span id="eq-pos-ext-SP"><span class="math display">\[
+\max_{x_i,x_j} \pi(x_i,x_j) \equiv \pi_i(x_i,x_j) + \pi_j(x_i,x_j).
+\tag{10}\]</span></span></p>
+<p>The FOC condition for country <span class="math inline">\(i\)</span> gives:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{\partial \pi}{\partial x_i} &amp;= 0 \\
+\frac{\partial \pi_i(x_i,x_j)}{\partial x_i} + \frac{\partial \pi_j(x_i,x_j)}{\partial x_i} &amp;= 0 \\
+x_i &amp;= a - b + \frac{x_j}{2}.
+\end{aligned}
+\]</span></p>
+<p>Likewise for country <span class="math inline">\(j:\)</span></p>
+<p><span class="math display">\[
+x_j = a - b \frac{x_i}{2}.
+\]</span></p>
+<p>Hence the best response lines are steeper compared to the competitive case, resulting in higher equilibrium investments. In particular, the socially efficient NE is:</p>
+<p><span class="math display">\[
+x_i^E = x_j^E = 2(a-b).
+\]</span></p>
+</div>
+</section>
+</section>
+</section>
+<section id="public-goods" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Public goods</h1>
+</section>
+<section id="exercises" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Exercises</h1>
+
+
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

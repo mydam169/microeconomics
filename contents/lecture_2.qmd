@@ -143,8 +143,6 @@ plt.legend(loc='best')
 plt.show()
 ```
 
-## Decreasing marginal products
-
 
 ```{python}
 #| label: fig-decMPL2

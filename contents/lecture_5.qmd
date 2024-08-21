@@ -530,7 +530,7 @@ flowchart LR
 
 Finally putting it all together, we can write the SPE as:
 $$
-SPE = \{(L,\: A/C, \:, X/Z\}.
+SPE = \{(L,\: A/C, \: X/Z\}.
 $${#eq-SPE}
 Recall that we have to specify the strategy for each player for every possible decision node where that player could be called to move, _even for nodes that are not reached_ in equilibrium.
 

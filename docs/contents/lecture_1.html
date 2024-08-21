@@ -423,7 +423,9 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 <section id="nonsatiation" class="level4" data-number="1.2.6.1">
 <h4 data-number="1.2.6.1" class="anchored" data-anchor-id="nonsatiation"><span class="header-section-number">1.2.6.1</span> Nonsatiation</h4>
 <p>A preference relation satisfies <em>nonsatiation</em> (NS) if for every bundle, there exists a strictly preferred bundle. Let <span class="math inline">\(X\)</span> be the set of all alternatives or bundles, then NS implies that for any <span class="math inline">\(A\in X\)</span> there exists <span class="math inline">\(B\in X\)</span> such that:</p>
-<p><span class="math display">\[B \succ A\]</span></p>
+<p><span class="math display">\[
+B \succ A
+\]</span></p>
 <div id="rem-remark-NS" class="proof remark">
 <p><span class="proof-title"><em>Remark 1</em>. </span></p>
 <ul>
@@ -512,7 +514,7 @@ A \geq B \text{ and } a_k \neq b_k \text{ for some } k \implies A \succ B.
 <p><span class="theorem-title"><strong>Example 1 (Perfect complements)</strong></span> The utility function <span class="math inline">\(u: X\subset\mathbb{R^2}\to\mathbb{R}\)</span> defined by <span class="math inline">\(u(x_1, x_2)=\mathrm{min}\{ax_1, bx_2\}\)</span> where <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(b&gt;0\)</span> represents a monotonic but not strictly monotonic preference relation.</p>
 </div>
 <div id="exm-eg-mono-ps" class="theorem example">
-<p><span class="theorem-title"><strong>Example 2 (Perfect substitutes)</strong></span> The utility function <span class="math inline">\(u: X\subset\mathbb{R^2}\to\mathbb{R}\)</span> defined by <span class="math inline">\(u(x_1, x_2)=ax_1 + bx_2\)</span> where <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(b&gt;0\)</span> represents a monotonic but not strictly monotonic preference relation.</p>
+<p><span class="theorem-title"><strong>Example 2 (Perfect substitutes)</strong></span> The utility function <span class="math inline">\(u: X\subset\mathbb{R^2}\to\mathbb{R}\)</span> defined by <span class="math inline">\(u(x_1, x_2)=ax_1 + bx_2\)</span> where <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(b&gt;0\)</span> represents a strictly monotonic preference relation.</p>
 </div>
 <p>Since monotonicity implies LNS (which in turns implies NS), both of these utility functions satisfy LNS and NS.</p>
 </section>
@@ -610,7 +612,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 <p>It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.</p>
 <p>The converse is not true. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
-<div id="87145d9f" class="cell" data-lab="fig-concaveU" data-execution_count="11">
+<div id="25fc1f95" class="cell" data-lab="fig-concaveU" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -620,7 +622,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </div>
-<div id="15434376" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
+<div id="99d93d54" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -678,10 +680,10 @@ Proof
 <p><span class="proof-title"><em>Proof</em>. </span></p>
 <ol type="1">
 <li><p>Partially differentiating w.r.t <span class="math inline">\(x_i\)</span> yields: <span class="math display">\[
-\begin{aligned}
-\frac{\partial u(\alpha x)}{\partial (\alpha x_j)}\alpha &amp;= \alpha^k \frac{\partial u(x)}{\partial x_j} \\
-u_j(\alpha x) &amp;= \alpha^{k-1} u_j(x).
-\end{aligned}
+  \begin{aligned}
+  \frac{\partial u(\alpha x)}{\partial (\alpha x_j)}\alpha &amp;= \alpha^k \frac{\partial u(x)}{\partial x_j} \\
+  u_j(\alpha x) &amp;= \alpha^{k-1} u_j(x).
+  \end{aligned}
 \]</span></p></li>
 <li><p>This comes from the definition: <span class="math display">\[
 u(x) = u(y) \iff \alpha^k u(x) = \alpha^k u(y) \iff u(\alpha x) = u(\alpha y).
@@ -701,7 +703,8 @@ MRS_{1,2}(x) \equiv \frac{U_1(x)}{U_2(x)}
 <section id="homotheticity" class="level3" data-number="1.5.2">
 <h3 data-number="1.5.2" class="anchored" data-anchor-id="homotheticity"><span class="header-section-number">1.5.2</span> Homotheticity</h3>
 <div id="def-homoth" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Homothetic function)</strong></span> A function <span class="math inline">\(u:\mathbb{R}^n\to\mathbb{R}\)</span> is homothetic if it is obtained by a monotonic transformation of a homogeneous function (<a href="#def-homogen" class="quarto-xref">Definition&nbsp;3</a>), i.e., if there exist a strictly increasing function <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> and a homogeneous function <span class="math inline">\(v:X\to\mathbb{R}\)</span> such that: <span id="eq-homt_def"><span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 5 (Homothetic function)</strong></span> A function <span class="math inline">\(u:\mathbb{R}^n\to\mathbb{R}\)</span> is homothetic if it is obtained by a monotonic transformation of a homogeneous function (<a href="#def-homogen" class="quarto-xref">Definition&nbsp;3</a>), i.e., if there exist a strictly increasing function <span class="math inline">\(f:\mathbb{R}\to\mathbb{R}\)</span> and a homogeneous function <span class="math inline">\(v:X\to\mathbb{R}\)</span> such that:</p>
+<p><span id="eq-homt_def"><span class="math display">\[
 u(x) = f(v(x)).
 \tag{9}\]</span></span></p>
 </div>
@@ -925,7 +928,7 @@ Answer
 <summary>
 Answer
 </summary>
-<p>The expected value of this game is <span class="math inline">\(\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty\)</span>.</p>
+<p>The expected value of this game is <span class="math inline">\(\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty.\)</span></p>
 </details>
 </div>
 <div id="exr-exo-convexity" class="theorem exercise">
@@ -946,12 +949,6 @@ ax_1^2 + bx_2^2 &amp; \times &amp; \times \\
 </div>
 <div id="exr-check-mono" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 4 (Monotonicity)</strong></span> Prove that the utility function in <a href="#exm-eg-mono-leontief" class="quarto-xref">Example&nbsp;1</a> satisfy monotonicity but not strict monotonicity, and the utility function in <a href="#exm-eg-mono-ps" class="quarto-xref">Example&nbsp;2</a> satisfy monotonicity.</p>
-<details>
-<summary>
-Answer
-</summary>
-<p>See lecture slide.</p>
-</details>
 </div>
 <div id="exr-quasiconc" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 5</strong></span> Prove that (strict) concavity implies (strict) quasiconcavity.</p>
@@ -960,12 +957,16 @@ Answer
 Answer
 </summary>
 <ul>
-<li><p>A function <span class="math inline">\(u:X\to \mathbb{R}\)</span> is concave if for all <span class="math inline">\(x, y \in X\)</span> and <span class="math inline">\(\alpha \in (0,1)\)</span>: <span id="eq-concave_def"><span class="math display">\[ u(\alpha x + (1 - \alpha) y) \geq \alpha u(x) + (1-\alpha) u(y) \tag{18}\]</span></span></p></li>
-<li><p>Since <span class="math inline">\(u(x) \geq \min\{u(x), u(y)\}\)</span> and <span class="math inline">\(u(y) \geq \min\{u(x), u(y)\}\)</span>: <span id="eq-conc_qsconc"><span class="math display">\[
+<li><p>A function <span class="math inline">\(u:X\to \mathbb{R}\)</span> is concave if for all <span class="math inline">\(x, y \in X\)</span> and <span class="math inline">\(\alpha \in (0,1)\)</span>:</p>
+<p><span id="eq-concave_def"><span class="math display">\[
+u(\alpha x + (1 - \alpha) y) \geq \alpha u(x) + (1-\alpha) u(y)
+\tag{18}\]</span></span></p></li>
+<li><p>Since <span class="math inline">\(u(x) \geq \min\{u(x), u(y)\}\)</span> and <span class="math inline">\(u(y) \geq \min\{u(x), u(y)\}\)</span>:</p>
+<p><span id="eq-conc_qsconc"><span class="math display">\[
 \begin{aligned}
-      u(\alpha x + (1 - \alpha) y) &amp;\geq \alpha u(x) + (1-\alpha) u(y) \\
-      &amp;\geq \alpha \min\{u(x), u(y)\} + (1-\alpha)\min\{ u(x), u(y)\} \\
-      &amp;= \min\{u(x), u(y)\}
+        u(\alpha x + (1 - \alpha) y) &amp;\geq \alpha u(x) + (1-\alpha) u(y) \\
+        &amp;\geq \alpha \min\{u(x), u(y)\} + (1-\alpha)\min\{ u(x), u(y)\} \\
+        &amp;= \min\{u(x), u(y)\}
 \end{aligned}
 \tag{19}\]</span></span></p></li>
 <li><p>That strict concavity implies strict quasiconcavity can be proven in the same fashion</p></li>
