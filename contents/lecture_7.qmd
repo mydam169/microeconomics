@@ -152,7 +152,7 @@ $$
 x^E = \arg\max_{x\geq 0} \pi(x) + v(x).
 $${#eq-SP}
 
-The necessary condition for an iterior solution is:
+The necessary condition for an interior solution ($x^E>0$) is:
 
 $$
 \pi'(x^E) = - v'(x^E).
@@ -172,6 +172,7 @@ $$
 Hence the Pareto efficient level of pollution, $x^E$ is less than the competitve level $x^P$ selected by the firm. 
 
 ::: {#exm-eqm-ext}
+## Negative externalities
 Consider a firm with $\pi = pq - cq^2$ where $q$ is the output, $p$ is the price of the good and $c>0$ is a constant. Suppose that externality is a linear function of quantity, namely $x=a q,$ with $a >0.$ Hence:
 
 $$
@@ -248,7 +249,7 @@ $$
 Likewise for country $j:$ 
 
 $$
-x_j = a - b \frac{x_i}{2}.
+x_j = a - b + \frac{x_i}{2}.
 $$
 
 Hence the best response lines are steeper compared to the competitive case, resulting in higher equilibrium investments. In particular, the socially efficient NE is:
@@ -256,10 +257,396 @@ Hence the best response lines are steeper compared to the competitive case, resu
 $$
 x_i^E = x_j^E = 2(a-b).
 $$
-
 :::
+
+## Solutions to externalities
+
+Externalities lead to an inefficient equilibrium quantity. In the case of negative externalities, the party generating externalities does not fully bear the cost of the production or consumption of the good. Consequently, the economy tends to overproduce or overconsume.
+In the case of positive externalities, it is the converse. The party generating externalities does not consider the benefits of their consumption or production activities enjoyed by other parties, hence tend to underproduce or underconsume. In either cases, the inefficient quantity leads to a deadweight loss. There are two approaches to address the problem of externalities. One is based on the clear establishment of property rights and the negotiation among the parties involved. When transaction costs become prohibitive, private negotiation might not be possible, calling for public intervention. The most popular forms of public policy interventions include quotas, Pigouvian taxation (or subsidization) and tradable permits.
+
+### Private solution
+
+According to the **Coase theorem**, in absence of transaction costs and presence of well-established property rights, the two parties can negotiate to achieve an efficient level of externality.
+
+The result of the negotation will typically be a transfer _to the party that has the property rights_ from the other party. Note that it does not matter who suffers from negative externalities, the party that is supposed to be compensated is the property rights holder.
+
+::: {#exm-neg-ext-sol-private}
+## Private solution to negative externalities
+Consider again @exm-eqm-ext and suppose that the party suffering from negative externalities, the consumer, has the property rights. The firm makes a lump-sum transfer $T>0$ to the consumer if and only if:
+
+$$
+\pi(x) - T \geq \pi(0),
+$$
+
+which can be viewed as the participation constraint of the firm. Given this condition, the consumer determines $T,x$ that maximizes her welfare:
+
+$$
+\begin{aligned}
+&\max_{x\geq 0, T} w + v(x) + T \\
+\text{s.t. }& \pi(x) - T \geq \pi(0),
+\end{aligned}
+$$
+
+where $w$ is the initial wealth of the consumer.
+Observe that the participation constraint binds at the optimum (otherwise the consumer could just demand a larger transfer). We can rewrite the consumder's program as:
+
+$$
+\max_{x\geq 0, T} v(x) + \pi(x) + w - \pi(0).
+$$
+
+The FOC yields:
+
+$$
+\pi'(x) \leq -v'(x), \quad \text{with equality for } x > 0.
+$${#eq-FOC-coase}
+
+Observe that the optimality condition ([-@eq-FOC-coase]) coincides with that of the SP's problem (@eq-FOC-SP). This implies that the solution to this problem is also Pareto efficient.
+:::
+
+What if the property rights are assigned to the firm, the party that generates externalities? In this case the consumer will make a transfer to the firm to reduce externalities.
+
+::: {#exr-sol-private}
+Show that an efficient level of externality is also achieved when the firm is the holder of the property rights. Hints:
+
+1. The consumer will offer the firm a payment of $T$ to reduce externalities to $x$
+2. Without negotation, the firm chooses the level of externality $x^P$ which maximizes its profits. What will be the participation constraint of the firm?
+3. The consumer solves the UMP to determine the optimal levels of $x$ and $T,$ taking into account the partcipation constraint of the firm
+4. Does the constraint bind at the optimum?
+5. What is the optimality condition? Does it suggest that the externality level selected by the consumer is Pareto efficient?
+:::
+
+There are advantages and disadvantages associated with the private solution to the externality problem proposed by the Coase theorem. In particular, the disadvantages include:
+
+* Property rights must be clearly defined and enforced
+* Transaction costs must be sufficiently small
+
+The advantage of the private solution is that there is no need for regulator's intervention (except possibily in the assignment and enforcement of property rights). 
+
+
+### Public solution
+
+#### Quota
+
+One public solution is imposing a quota equal to the Pareto-efficient level of externality. Anything beyond that will be subject to a fine. The disadvantage of this approach is that the social planner must have perfect information about the benefits and the costs of externalities (in order to determine the efficient externality level of _each_ firm).
+
+#### Pigouvian taxation
+
+An alternative solution is the Pigouvian taxation (on negative externalities) and Pigouvian subsidies (for positive externalities).
+
+The Pigouvian **tax** sets the unit price of externality. The firm's PMP becomes:
+
+$$
+\max_{x\geq 0} \pi(x) - tx,
+$${#eq-PMP-avec-taxe}
+
+where $t$ is the magnitude of the tax.
+The FOC gives:
+
+$$
+\pi'(x) \leq t,\quad\text{with equality for } x >0.
+$${#eq-FOC-PMP-avec-tax}
+
+In order to incentivize $x^E,$ the Pareto-efficient externality level, the tax must be such that:
+
+$$
+-v'(x^E) = t.
+$${#eq-Pigou-tax}
+
+The tax thus induces the firm to internalize the externality it inflicts on the consumer. 
+
+The Pigouvian __subsidy__ is a reward to the firm producing any unit beyond its competitive level (and approaching the socially efficient level). The PMP in this case reads:
+
+$$
+\max_{x\geq 0} \pi(x) + s(x^E - x).
+$${#eq-PMP-avec-subsidy}
+
+The FOC yields:
+
+$$
+\pi'(x) \leq s,\quad\text{with equality for } x >0.
+$${#eq-FOC-PMP-avec-tax}
+
+The magnitude of the subsidy must be equal to the marginal benefit received by the consumer, namely:
+
+$$
+s = -v'(x^E).
+$${#eq-Pigou-sub}
+
+Under complete information, setting quotas and taxing or subsidizing are equivalent.
+
+#### Tradable permits
+
+The public authority controls the quantity of externality by creating a number of permits, typically pollution permits, each of which grants the right to a fixed level of pollution. Firms can trade permits, thereby creating a market for pollution rights (or carbon market). The price of pollution is determined by market forces rather than being set by the authority.
+
+Each firm $j$ has a permit that grants them $\bar{x}_j$ units of pollution. The authority controls the aggregate level of pollution by setting:
+
+$$
+x^E = \sum_j \bar{x}_j.
+$$
+
+Each firm $j,$ being the price-taker in the pollution market, solves:
+
+$$
+\max_{x_j \geq 0} \pi_j(x_j) + p(\bar{x}_j - x_j),
+$$
+
+where $p$ is the price the firm needs to pay for the rights to pollute beyond its permit's allowance. 
+
+The FOC yields:
+
+$$
+\pi'_j(x_j) - p \leq 0, \quad \text{with equality for } x > 0.
+$$
+
+In equilibrium, the price of a permit has to be such that the market clears, namely:
+
+$$
+x^E = \sum_j x_j(p), 
+$$
+
+i.e., some firms might pollute more, some firms less, but in equilibrium aggregate demand (RHS) must be equal to aggregate supply. The advantage of this approach is that the public authority only needs to gather information at the aggregate level to determine $x^E,$ the total efficient pollution level. In particular, it only needs data on aggregate industry costs and benefits of externalities. This is an advantage of this approach compared to quotas or Pigouvian taxation.
+
+
 
 # Public goods
 
+## Definition
+
+* Goods can be categorized by two properties:
+    * Excludability
+    * Rivality
+
+* A good is said to be _excludable_ if it is possible to prevent an individual from enjoying it. Otherwise it is _nonexcludable_
+    * Examples of excludable goods: essentially anything that is not freely accessible (access requires a payment, a password, etc.)
+    * Examples of nonexludable goods: national defense, street lighting, clean air
+
+* A good is said to be _rival_ (in consumption) if the consumption of the good of an agent reduces the amount available to other agents. Otherwise it is _nonrival_
+    * Examples of rival goods: Most goods we consume on a daily basis (food, drinks, sweets, snacks, etc.)
+    * Examples of nonrival goods: A movie on Netflix, an annoucement from a public radio, a software, the roads very early in the morning
+    
+## Categorization of goods
+
+| | Excludable | Nonexcludable |
+|:--|:--|:--|
+|__Rival__|Private goods <br/> (Example: a cake)|Common resources <br/> (Example: fishing grounds)|
+|__Non-rival__|Artificially scarce goods <br/> (Example: streaming services)|Public goods <br/> (Example: national defense)|
+
+* Only private goods can be efficiently produced by the competitive market
+
+* A good that is nonexcludable is subject to __freeriders__: individuals who do not pay or do not sufficiently contribute because they expect the others to do it
+    * Can you think of an example?
+    
+* The competitive equilibrium quantity will generally be inefficiently low
+<!--     * Nonexcludability: insufficient production
+    * Nonrivality: insufficient consumption -->
+    
+## Free-riding of public goods
+
+When goods are not excludable, they are subject to free-riding: the insufficient contribution of each consumer to the maintenance or replenishment of the goods. This is a common problem in practice. Let us illustrate it with a simple example.
+
+::: {#exm-cleaning}
+
+Consider two roommates who clean their apartment every Saturday.
+Every roommate $i$ simultaneously and independently chooses the number of hours she spends cleaning, $h_i \in [0, \bar{h}]$ where $\bar{h}$ denotes the maximum time one can devote to housework.
+More time devoted to cleaning means less time for leisure (which gives her disutility), but a cleaner leaving space gives her satistfaction.
+
+Her utility from cleaning can thus be written as:
+$$
+u_i(h_i, h_j) = (\bar{h} - h_i) + \beta \ln(h_i + h_j),
+$${#eq-ff_example}
+where $\beta \ln(h_i + h_j)$ captures the pleasure derived from cleanliness which is increasing in $h_i, h_j$ and $\beta >0.$
+
+Observe that this is a simultaneous-moves game with two players, the solution is the NE of the game, which can be found by first identifying the best response function of each player $BR_i(h_j).$
+
+The BR function of $i$ is the optimal choice of $h_i$ as a function of $h_j$, which $i$ determines by maximizing @eq-ff_example subject to $h_i \in [0, \bar{h}].$ Observe that $u_i$ is strictly concave in $h_i$ given $h_j$, implying that the FOC is also sufficient.
+The FOC for an interior solution gives:
+$$
+1 = \frac{\beta}{h_i + h_j}\\
+\iff h_i(h_j) = \beta - h_j.
+$${#eq-ff_FOC_i}
+    
+As the other friend increases cleaning time, individual $i$ will do the opposite: free-riding behavior.
+In particular if $h_j \geq \beta$ then roommate $i$ will not spend time cleaning.
+If $h_j=0$ it is in the best interest of $i$ to clean $h_i=\beta >0.$ Moreover $h_i$ increases in $\beta$ for any fixed $h_j.$
+    
+The NE of the game can be determined by solving for the system of equations involving the two BRs. By symmetry $h^*_i = h^*_j \equiv h^*.$
+Substituting $h^*_i = h^*_j \equiv h^*$ into @eq-ff_FOC_i and simplying, we obtain:
+$$
+h^* = \frac{\beta}{2},
+$$
+which is strictly less than $\beta.$
+    
+For example, if $\beta=2$, then each flatmate will spend 1 hour cleaning in equilibrium.
+:::
+
+## Solutions to free-riding
+
+One way to address free-riding is to require all individuals to pay for the good via taxes rather than voluntary contributions.
+In the cleaning example, the two could draft the house rules specifiying that each flatmate spends exactly the same number of hours cleaning, even if one of them travels most of the week.
+
+A less rigid solution is to require users to pay for every usage, such as
+highway tolls, or entrance fees to public parks.
+This works if "usage" is unambiguously defined; it could be tricky in the cleaning case (what if one travels half of the week? or having guests over?)
+
+## Common resources
+
+Common resources are highly vulnerable to overexploitation and depletion since they are rivalrous but non-excludable in consumption.
+Examples of common resources include fish in a small lake, roads during traffic hours, etc.
+When one agent consumes the good, she generates negative externalities by reducing the amount available to others.
+    
+<!-- * Some resources are renewable given sufficient time (trees in the forest, fish in the lake, etc.) while others are non-renewable (oil, natural minerals, etc.) -->
+
+::: {#exm-common-resources}
+
+Let $S > 0$ denote the resource stock, for example the number of fish in a lake, which we assume to be fixed on any given day.
+Assume that $N$ individuals can fish in the lake
+Fish once caught can be sold in a competitive fish market at competitive market price $p$ (fishers are price-takers)
+The cost function of individual $i$ can be written as:
+$$
+C(q_i, Q_{-i}) = \frac{q_i(q_i + Q_{-i})}{S},
+$${#eq-common_res_cost}
+where $Q_{-i}=\sum_{j\neq i} q_j$ is the total quantity caught by individuals other than $i$.
+
+@eq-common_res_cost says that:
+
+  * The more fish the lake has, the easier it will be to catch one
+
+  * The cost increases in the number of fish caught
+
+  * The fewer the individuals, the easier (less costly in terms of time and effort, etc.) it will be to catch a fish
+        
+Every fisherman $i$ simultaneously and independently solves:
+$$
+\max_{q_i} \pi_i = p q_i - C(q_i, Q_{-i}).
+$${#eq-common_res_PMP}
+    
+The necessary and sufficient condition for a max is:
+$$
+p = \frac{2q_i + Q_{-i}}{S}.
+$${#eq-common_res_FOC}
+    
+@eq-common_res_FOC gives us the best-response function of each individual $i$:
+
+$$
+q_i(Q_{-i}) = \frac{pS - Q_{-i}}{2} = \frac{pS}{2} - \frac{Q_{-i}}{2}.
+$${#eq-common_res_BR}
+    
+
+Rhe BR function tells us that:
+
+* The individual appropriation $q_i$ increases in:
+    * The market value of the resourch $p$
+    * The amount of the resource available
+* The individual appropriation decreases if other individuals' appropriation increases (negative externality)
+    * It is an externality because it affects $q_i$ _not_ via the price $p$, which is taken as given
+    * If $Q_{-i} \geq pS$, then $q_i = 0.$
+        
+Let us find the equilibrium appropriation by invoking symmetry:
+$$
+q^*_1 = q^*_2 = \dots = q^*_N = q^*.
+$$
+    
+Substituting this into the BR function to obtain:
+$$
+2q^* = pS - (N-1)q^* \\
+\iff q^* = \frac{pS}{N+1}.
+$${#eq-common_res_NE}
+
+Observe that the individual equilibrium appropriation increases in the resource stock but decreases in the number of individuals competing for it.
+:::
+
+## Common resources: Joint profit maximization
+
+In the @exm-common-resources, individuals make decisions independently. 
+If individuals coordinate on the level of appropriation to maximize joint profit, i.e., they can achieve even higher level of profits.
+Interestingly, the joint venture also leads to _less intensive_ resource exploitation. Consider again the setting of @exm-common-resources but now suppose that fishermen decide on the level of appropriation to maximize _joint profits_.
+
+The joint PMP is:
+$$
+\begin{aligned}
+\max_{q_1,...,q_N} \pi &\equiv \sum_{i=1}^N \pi_i \\
+&= \sum_{i=1}^N p q_i - \sum_{i=1}^N C(q_i, Q_{-i}) \\
+&= pQ - \frac{Q^2}{S},
+\end{aligned}
+$${#eq-joint_PMP}
+where $Q\equiv \sum_{i=1}^N q_i = q_i + Q_{-i}$ is the total appropriation.
+        
+The FOC w.r.t $q_i$ yields:
+$$
+p = \frac{2Q}{S} \\
+\iff \frac{pS}{2} = q_i + Q_{-i} \\
+\iff q_i = \frac{pS}{2} - Q_{-i}, 
+$${#eq-joint_BR}
+which is the best response function of $i$.
+    
+The equilibrium output is thus:
+$$
+    Nq^J = \frac{pS}{2} \iff q^J = \frac{pS}{2N}.
+$${#eq-common_joint_eq}
+    
+
+Since $2N > N + 1$ for $N > 1$, we conclude that the joint equilibrium appropriation $q^J$ is strictly less than the independent equilibrium appropriation $q^*$ (@eq-common_res_NE).
+
+Let us compare profits between the two cases.
+
+In the case of independent exploitation:
+  
+$$
+\pi^* = pq^* - \frac{N{q^*}^2}{S}.
+$$
+  
+In the case of cooperative exploitation:
+$$
+\pi^J = pq^J - \frac{N{q^J}^2}{S}.
+$$
+
+The difference in profits is thus:
+$$
+\begin{aligned}
+\pi^J - \pi^* &= -p(q^* - q^J) + \frac{N}{S}(q^* - q^J)^2 \\
+&= \frac{1}{S}(q^* - q^J)[N(q^* + q^J) - pS]. 
+\end{aligned}
+$${#eq-prof_diff}
+    
+Note that the sign of $\pi^J - \pi^*$ depends on the sign of $[N(q^* + q^J) - pS].$ Observe that $pS = (N + 1)q^* = 2N q^J$, implying that we can write:
+$$
+pS = \frac{(N + 1)q^* + 2N q^J}{2}.
+$${#eq-pS_exp}
+
+Substituting @eq-pS_exp into the term inside the square bracket of @eq-prof_diff, we get:
+$$
+N(q^* + q^J) - \frac{(N + 1)q^* + 2N q^J}{2} \\
+= \frac{2N q^* - (N + 1)q^*}{2} \\
+= \frac{(N - 1)q^*}{2},
+$$
+which is strictly positive for $N>1.$
+    
+Hence cooperative profits are also greater. In other words, letting individuals form cooperatives to jointly exploit a common resource may alleviate the over-exploitation problem.
+
+::: {#rem-common-resources}
+Common resources are particularly vulnerable to over-exploitation due to their non-excludable and rivalrous properties.
+If individuals independently decide on the amount to appropriate from the common resource stock, they will tend to take more than what is socially optimal. From our analyses we can propose two solutions, both of which aim at incentivizing individuals to internalize the externalities of their action:
+
+  * Nationalization of the common resource
+  * Assigning exclusive rights to cooperatives and not individuals to extract a common resource
+:::
 
 # Exercises
+
+::: {#exr-car-accident}
+
+Consider an economy with two individuals with preferences given by:
+    
+$$
+u^i(s^i, q^i) = v^i(s^i) + \alpha w^i, \quad i=A, B,
+$$
+    
+where $s^i$ denote the speed at which individual $i$ drives, $w^i$ is his wealth and $\alpha > 0.$ Assume $v^i$ is strictly increasing and concave in $s^i.$ The probability of accident $p(s^A, s^B)$ depends on the driving speed of both. In particular:
+$$
+p_i \equiv \frac{\partial p}{\partial s^i} > 0,\quad i=A,B.
+$$
+    
+When an accident occurs, individual $i$ incurs a cost of damage $c^i > 0.$
+  
+Determine the competitive equilibrium speeds and the socially optimal ones. Which one is greater? If the government wishes to restore social effciency by imposing a fine, how large must it be? For simplicity assume that $p_i = \beta_i = const>0.$ 
+:::

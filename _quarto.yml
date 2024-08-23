@@ -50,8 +50,8 @@ website:
             href: contents/lecture_5.qmd
           - text: "Lecture 6"
             href: contents/lecture_6.qmd
-          # - text: "Lecture 7"
-          #   href: contents/lecture_7.qmd
+          - text: "Lecture 7"
+            href: contents/lecture_7.qmd
 
 format:
   html:
