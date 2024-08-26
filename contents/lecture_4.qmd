@@ -188,7 +188,7 @@ The monopolist does not have a supply curve since it is a price maker. Indeed, r
 
 ### The monopolist operates in the inelastic portion of the demand curve
 
-Monopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). By reducing the price by 1%, the monopolist increases sales by *more than* 1% thereby increasing revenues. It will then have incentives to raise output (reduce prices) so long as it is on the inelastic part of the demand curve.
+Monopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). Increasing the price by 1% would reduce sales by *less than* 1% for the monopolist, thereby increasing revenues. It will then have incentives to reduce output (raise prices) so long as it is on the inelastic part of the demand curve.
 
 ::: {#fig-Elasticity fig-cap="Going from the left to the right, the demand curve becomes less and less elastic _even if_ its slope is constant."}
 ```{python}
