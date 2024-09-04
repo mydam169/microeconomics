@@ -208,7 +208,7 @@ Observe that if an expected utility representation exists, then comparing lotter
 Since $U$ is essentially a mathematical expectation, it is a linear map, i.e., let $(L_1,\dots,L_K;\alpha_1,\dots,\alpha_K)$ be a compound lottery, then:
 
 $$
-U\left(\sum_{k=1}^K L_k\right) = \sum_{k=1}^K U(L_k).
+U\left(\sum_{k=1}^K \alpha_k L_k\right) = \sum_{k=1}^K \alpha_k U(L_k).
 $${#eq-linearity-of-U}
 
 Another way to see this is to observe that the term inside the brackets on the LHS, by the consequentialist assumption, is a simple lottery:
