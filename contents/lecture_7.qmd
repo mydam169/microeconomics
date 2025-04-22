@@ -142,7 +142,7 @@ $${#eq-foc-CE}
 In a Pareto equilibrium, the social planner selects the level of externality that maximizes the sum of profits and utilities:
 
 $$
-x^E = \arg\max_{x\geq 0} \pi(x) + u(q, x).
+x^E \in \arg\max_{x\geq 0} \pi(x) + u(q, x).
 $${#eq-SP}
 
 The necessary condition for an interior solution ($x^E>0$) is:
@@ -151,7 +151,7 @@ $$
 \pi'(x^E) = - u'(x^E).
 $${#eq-FOC-SP}
 
-In other words, the social planner selects a level of externality such that the marginal benefit derived from it by the firm is equal to the marignal cost (disutility) suffered by the consumer.
+In other words, the social planner selects a level of externality such that the marginal benefit derived from it by the firm is equal to the marignal damage (disutility) suffered by the consumer.
 
 Since $u'(x)<0,$ and $\pi''(x)<0,$ we have:
 
@@ -163,6 +163,8 @@ $$
 $$
 
 Hence the Pareto efficient level of pollution, $x^E$ is less than the competitve level $x^P$ selected by the firm. 
+
+Observe that if the firm generates positive externalities, then $u'(x) > 0$ and the Pareto efficient level of externality would be greater than that chosen by the firm. 
 
 ::: {#exm-eqm-ext}
 ## Negative externalities
@@ -180,8 +182,9 @@ $$
 Suppose that the consumer has a damange function defined by:
 
 $$
-v(x) = b - cx - \frac{dx^2}{2},\quad b,d>0.
+u(x) = b - cx - \frac{dx^2}{2},\quad b,d>0,
 $$
+
 Observe that the marginal cost of the damage increases in the level of pollution. This makes sense intuitively if we think about how health deterioration accelerates as pollution gets worse.
 
 In view of @eq-FOC-SP, we can determine the Pareto efficient level of externality:
@@ -194,7 +197,7 @@ x^E &= \frac{ap-a^2c}{2c+ad}.
 \end{aligned}
 $$
 
-When is it efficient to have a positive amount of externality, i.e., to have $x^E>0?$ Observe that $v'(0)=-c$ and $\pi'(0)=p/a$ and $x^E > 0$ if and only if $pa-ca^2 >0,$ which is equivalent to $p/a > c$ or $\pi'(0)>-v'(0).$ In other words, the economy should generate negative externalities if the marginal benefits of doing so for firms are greater than the marginal costs to consumers at the origin.
+When is it efficient to have a positive amount of externality, i.e., to have $x^E>0?$ Observe that $u'(0)=-c$ and $\pi'(0)=p/a$ and $x^E > 0$ if and only if $pa-ca^2 >0,$ which is equivalent to $p/a > c$ or $\pi'(0)>-u'(0).$ In other words, the economy should generate negative externalities if the marginal benefits of doing so for firms are greater than the marginal costs to consumers at the origin.
 ::: 
 
 ::: {#exm-positive-ext}
@@ -271,11 +274,11 @@ $$
 \pi(x) - T \geq \pi(0),
 $$
 
-which can be viewed as the participation constraint of the firm. Given this condition, the consumer determines $T,x$ that maximizes her welfare:
+which can be viewed as the participation constraint of the firm. Given this condition, the consumer determines $T,x$ to maximize welfare:
 
 $$
 \begin{aligned}
-&\max_{x\geq 0, T} w + v(x) + T \\
+&\max_{x\geq 0, T} w + u(x) + T \\
 \text{s.t. }& \pi(x) - T \geq \pi(0),
 \end{aligned}
 $$
@@ -284,16 +287,24 @@ where $w$ is the initial wealth of the consumer.
 Observe that the participation constraint binds at the optimum (otherwise the consumer could just demand a larger transfer). We can rewrite the consumder's program as:
 
 $$
-\max_{x\geq 0, T} v(x) + \pi(x) + w - \pi(0).
+\max_{x\geq 0, T} u(x) + \pi(x) + w - \pi(0).
 $$
 
-The FOC yields:
+The FOC for an interior solution yields:
 
 $$
-\pi'(x) \leq -v'(x), \quad \text{with equality for } x > 0.
+\pi'(x) = -u'(x).
 $${#eq-FOC-coase}
 
-Observe that the optimality condition ([-@eq-FOC-coase]) coincides with that of the SP's problem (@eq-FOC-SP). This implies that the solution to this problem is also Pareto efficient.
+Observe that the optimality condition ([-@eq-FOC-coase]) coincides with that of the SP's problem (@eq-FOC-SP). This implies that the solution to this problem is Pareto efficient. Moreover the size of the transfer will be $T^*=\pi(x^E)-\pi(0)$.
+
+An alternative way to solve this program is to consider the Lagrangian function:
+
+$$
+L(x, T, \lambda) = w + u(x) + T + \lambda\left[\pi(x) - T - \pi(0)\right].
+$$
+
+The FOC with respect to $T$ implies that $\lambda=1$, which together with the FOC with respect to $x$ implies $\pi'(x)=-u'(x)$ at the optimum.
 :::
 
 What if the property rights are assigned to the firm, the party that generates externalities? In this case the consumer will make a transfer to the firm to reduce externalities.
@@ -342,7 +353,7 @@ $${#eq-FOC-PMP-avec-tax}
 In order to incentivize $x^E,$ the Pareto-efficient externality level, the tax must be such that:
 
 $$
--v'(x^E) = t.
+-u'(x^E) = t.
 $${#eq-Pigou-tax}
 
 The tax thus induces the firm to internalize the externality it inflicts on the consumer. 
@@ -362,10 +373,32 @@ $${#eq-FOC-PMP-avec-tax}
 The magnitude of the subsidy must be equal to the marginal benefit received by the consumer, namely:
 
 $$
-s = -v'(x^E).
+s = -u'(x^E).
 $${#eq-Pigou-sub}
 
 Under complete information, setting quotas and taxing or subsidizing are equivalent.
+
+::: {#exr-sol-pigouvian-tax}
+James and Andy share an office. James enjoys smoking while Andy does not. The following functions represent their utilities (or disutilities) from smoking:
+
+$$
+\begin{aligned}
+u^J(x) &= 100 + 10x - 0.1x^2, \\
+u^A(x) &= 100 - 10x,
+\end{aligned}
+$$
+
+where $x$ is the number of cigarettes smoked by James (inside the office). The utility function of James takes into account the cost of cigarettes. 
+
+a. If James does not take into account the harm suffered by Andy, what is the number of cigarettes he smokes?
+
+b. What is the efficient number of cigarettes?
+
+c. Suppose that we wish to use the Coase theorem to achieve an efficient outcome by bargaining. Determine the size of the transfer and the recipient of this transfer if the property rights holder is (i) Andy and (ii) James.
+
+d. Suppose a private negotation is impossible and we need to rely on a command and control solution to the problem. Determine the size of the Pigouvian tax that must be levied on each cigarette in order to achieve the efficient outcome.
+:::
+
 
 #### Tradable permits
 

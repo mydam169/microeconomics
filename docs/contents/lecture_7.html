@@ -409,13 +409,13 @@ x^P = \arg\max_{x\geq 0} \pi(x),
 \tag{5}\]</span></span></p>
 <p>In a Pareto equilibrium, the social planner selects the level of externality that maximizes the sum of profits and utilities:</p>
 <p><span id="eq-SP"><span class="math display">\[
-x^E = \arg\max_{x\geq 0} \pi(x) + u(q, x).
+x^E \in \arg\max_{x\geq 0} \pi(x) + u(q, x).
 \tag{6}\]</span></span></p>
 <p>The necessary condition for an interior solution (<span class="math inline">\(x^E&gt;0\)</span>) is:</p>
 <p><span id="eq-FOC-SP"><span class="math display">\[
 \pi'(x^E) = - u'(x^E).
 \tag{7}\]</span></span></p>
-<p>In other words, the social planner selects a level of externality such that the marginal benefit derived from it by the firm is equal to the marignal cost (disutility) suffered by the consumer.</p>
+<p>In other words, the social planner selects a level of externality such that the marginal benefit derived from it by the firm is equal to the marignal damage (disutility) suffered by the consumer.</p>
 <p>Since <span class="math inline">\(u'(x)&lt;0,\)</span> and <span class="math inline">\(\pi''(x)&lt;0,\)</span> we have:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -424,6 +424,7 @@ x^E = \arg\max_{x\geq 0} \pi(x) + u(q, x).
 \end{aligned}
 \]</span></p>
 <p>Hence the Pareto efficient level of pollution, <span class="math inline">\(x^E\)</span> is less than the competitve level <span class="math inline">\(x^P\)</span> selected by the firm.</p>
+<p>Observe that if the firm generates positive externalities, then <span class="math inline">\(u'(x) &gt; 0\)</span> and the Pareto efficient level of externality would be greater than that chosen by the firm.</p>
 <div id="exm-eqm-ext" class="theorem example">
 <p><span class="theorem-title"><strong>Example 1 (Negative externalities)</strong></span> Consider a firm with <span class="math inline">\(\pi = pq - cq^2\)</span> where <span class="math inline">\(q\)</span> is the output, <span class="math inline">\(p\)</span> is the price of the good and <span class="math inline">\(c&gt;0\)</span> is a constant. Suppose that externality is a linear function of quantity, namely <span class="math inline">\(x=a q,\)</span> with <span class="math inline">\(a &gt;0.\)</span> Hence:</p>
 <p><span class="math display">\[
@@ -434,8 +435,9 @@ x^P = \frac{ap}{2c}.
 \]</span></p>
 <p>Suppose that the consumer has a damange function defined by:</p>
 <p><span class="math display">\[
-v(x) = b - cx - \frac{dx^2}{2},\quad b,d&gt;0.
-\]</span> Observe that the marginal cost of the damage increases in the level of pollution. This makes sense intuitively if we think about how health deterioration accelerates as pollution gets worse.</p>
+u(x) = b - cx - \frac{dx^2}{2},\quad b,d&gt;0,
+\]</span></p>
+<p>Observe that the marginal cost of the damage increases in the level of pollution. This makes sense intuitively if we think about how health deterioration accelerates as pollution gets worse.</p>
 <p>In view of <a href="#eq-FOC-SP" class="quarto-xref">Equation&nbsp;7</a>, we can determine the Pareto efficient level of externality:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -444,7 +446,7 @@ v(x) = b - cx - \frac{dx^2}{2},\quad b,d&gt;0.
 x^E &amp;= \frac{ap-a^2c}{2c+ad}.
 \end{aligned}
 \]</span></p>
-<p>When is it efficient to have a positive amount of externality, i.e., to have <span class="math inline">\(x^E&gt;0?\)</span> Observe that <span class="math inline">\(v'(0)=-c\)</span> and <span class="math inline">\(\pi'(0)=p/a\)</span> and <span class="math inline">\(x^E &gt; 0\)</span> if and only if <span class="math inline">\(pa-ca^2 &gt;0,\)</span> which is equivalent to <span class="math inline">\(p/a &gt; c\)</span> or <span class="math inline">\(\pi'(0)&gt;-v'(0).\)</span> In other words, the economy should generate negative externalities if the marginal benefits of doing so for firms are greater than the marginal costs to consumers at the origin.</p>
+<p>When is it efficient to have a positive amount of externality, i.e., to have <span class="math inline">\(x^E&gt;0?\)</span> Observe that <span class="math inline">\(u'(0)=-c\)</span> and <span class="math inline">\(\pi'(0)=p/a\)</span> and <span class="math inline">\(x^E &gt; 0\)</span> if and only if <span class="math inline">\(pa-ca^2 &gt;0,\)</span> which is equivalent to <span class="math inline">\(p/a &gt; c\)</span> or <span class="math inline">\(\pi'(0)&gt;-u'(0).\)</span> In other words, the economy should generate negative externalities if the marginal benefits of doing so for firms are greater than the marginal costs to consumers at the origin.</p>
 </div>
 <div id="exm-positive-ext" class="theorem example">
 <p><span class="theorem-title"><strong>Example 2 (Positive externalities)</strong></span> Consider two neighboring countries, <span class="math inline">\(i\)</span> and <span class="math inline">\(j,\)</span> simultaneously choosing the level of investment in recycling activities <span class="math inline">\(x_i.\)</span> The benefit from recycling is given by:</p>
@@ -498,22 +500,27 @@ x_i^E = x_j^E = 2(a-b).
 <p><span class="math display">\[
 \pi(x) - T \geq \pi(0),
 \]</span></p>
-<p>which can be viewed as the participation constraint of the firm. Given this condition, the consumer determines <span class="math inline">\(T,x\)</span> that maximizes her welfare:</p>
+<p>which can be viewed as the participation constraint of the firm. Given this condition, the consumer determines <span class="math inline">\(T,x\)</span> to maximize welfare:</p>
 <p><span class="math display">\[
 \begin{aligned}
-&amp;\max_{x\geq 0, T} w + v(x) + T \\
+&amp;\max_{x\geq 0, T} w + u(x) + T \\
 \text{s.t. }&amp; \pi(x) - T \geq \pi(0),
 \end{aligned}
 \]</span></p>
 <p>where <span class="math inline">\(w\)</span> is the initial wealth of the consumer. Observe that the participation constraint binds at the optimum (otherwise the consumer could just demand a larger transfer). We can rewrite the consumder’s program as:</p>
 <p><span class="math display">\[
-\max_{x\geq 0, T} v(x) + \pi(x) + w - \pi(0).
+\max_{x\geq 0, T} u(x) + \pi(x) + w - \pi(0).
 \]</span></p>
-<p>The FOC yields:</p>
+<p>The FOC for an interior solution yields:</p>
 <p><span id="eq-FOC-coase"><span class="math display">\[
-\pi'(x) \leq -v'(x), \quad \text{with equality for } x &gt; 0.
+\pi'(x) = -u'(x).
 \tag{10}\]</span></span></p>
-<p>Observe that the optimality condition (<a href="#eq-FOC-coase" class="quarto-xref">10</a>) coincides with that of the SP’s problem (<a href="#eq-FOC-SP" class="quarto-xref">Equation&nbsp;7</a>). This implies that the solution to this problem is also Pareto efficient.</p>
+<p>Observe that the optimality condition (<a href="#eq-FOC-coase" class="quarto-xref">10</a>) coincides with that of the SP’s problem (<a href="#eq-FOC-SP" class="quarto-xref">Equation&nbsp;7</a>). This implies that the solution to this problem is Pareto efficient. Moreover the size of the transfer will be <span class="math inline">\(T^*=\pi(x^E)-\pi(0)\)</span>.</p>
+<p>An alternative way to solve this program is to consider the Lagrangian function:</p>
+<p><span class="math display">\[
+L(x, T, \lambda) = w + u(x) + T + \lambda\left[\pi(x) - T - \pi(0)\right].
+\]</span></p>
+<p>The FOC with respect to <span class="math inline">\(T\)</span> implies that <span class="math inline">\(\lambda=1\)</span>, which together with the FOC with respect to <span class="math inline">\(x\)</span> implies <span class="math inline">\(\pi'(x)=-u'(x)\)</span> at the optimum.</p>
 </div>
 <p>What if the property rights are assigned to the firm, the party that generates externalities? In this case the consumer will make a transfer to the firm to reduce externalities.</p>
 <div id="exr-sol-private" class="theorem exercise">
@@ -552,7 +559,7 @@ x_i^E = x_j^E = 2(a-b).
 \tag{12}\]</span></span></p>
 <p>In order to incentivize <span class="math inline">\(x^E,\)</span> the Pareto-efficient externality level, the tax must be such that:</p>
 <p><span id="eq-Pigou-tax"><span class="math display">\[
--v'(x^E) = t.
+-u'(x^E) = t.
 \tag{13}\]</span></span></p>
 <p>The tax thus induces the firm to internalize the externality it inflicts on the consumer.</p>
 <p>The Pigouvian <strong>subsidy</strong> is a reward to the firm producing any unit beyond its competitive level (and approaching the socially efficient level). The PMP in this case reads:</p>
@@ -565,9 +572,25 @@ x_i^E = x_j^E = 2(a-b).
 \tag{15}\]</span></span></p>
 <p>The magnitude of the subsidy must be equal to the marginal benefit received by the consumer, namely:</p>
 <p><span id="eq-Pigou-sub"><span class="math display">\[
-s = -v'(x^E).
+s = -u'(x^E).
 \tag{16}\]</span></span></p>
 <p>Under complete information, setting quotas and taxing or subsidizing are equivalent.</p>
+<div id="exr-sol-pigouvian-tax" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> James and Andy share an office. James enjoys smoking while Andy does not. The following functions represent their utilities (or disutilities) from smoking:</p>
+<p><span class="math display">\[
+\begin{aligned}
+u^J(x) &amp;= 100 + 10x - 0.1x^2, \\
+u^A(x) &amp;= 100 - 10x,
+\end{aligned}
+\]</span></p>
+<p>where <span class="math inline">\(x\)</span> is the number of cigarettes smoked by James (inside the office). The utility function of James takes into account the cost of cigarettes.</p>
+<ol type="a">
+<li><p>If James does not take into account the harm suffered by Andy, what is the number of cigarettes he smokes?</p></li>
+<li><p>What is the efficient number of cigarettes?</p></li>
+<li><p>Suppose that we wish to use the Coase theorem to achieve an efficient outcome by bargaining. Determine the size of the transfer and the recipient of this transfer if the property rights holder is (i) Andy and (ii) James.</p></li>
+<li><p>Suppose a private negotation is impossible and we need to rely on a command and control solution to the problem. Determine the size of the Pigouvian tax that must be levied on each cigarette in order to achieve the efficient outcome.</p></li>
+</ol>
+</div>
 </section>
 <section id="tradable-permits" class="level4" data-number="1.3.2.3">
 <h4 data-number="1.3.2.3" class="anchored" data-anchor-id="tradable-permits"><span class="header-section-number">1.3.2.3</span> Tradable permits</h4>
@@ -780,7 +803,7 @@ N(q^* + q^J) - \frac{(N + 1)q^* + 2N q^J}{2} \\
 <section id="exercises" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Exercises</h1>
 <div id="exr-car-accident" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2</strong></span> Consider an economy with two individuals with preferences given by:</p>
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Consider an economy with two individuals with preferences given by:</p>
 <p><span class="math display">\[
 u^i(s^i, q^i) = v^i(s^i) + \alpha w^i, \quad i=A, B,
 \]</span></p>
