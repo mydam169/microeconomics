@@ -97,11 +97,11 @@ It typically represents an effect imposed on or benefited by a third party to an
 
 ## Modeling externalities
 
-Consider a economy with two types of agents: a firm and a consumer. The firm's productive activities generate negative externalities that affect the consumer.
+Consider a economy with two types of agents: a firm and a consumer. The firm's productive activities generate negative externalities that affect the consumer. 
 
 ### The representative firm
 
-The firm's objective is to maximize profit $\pi(x,p)$ where $p$ is the price vector and $x$ the amount of externality generated. In a competitive market the firm is a price taker, taking $p$ as given, allowing us to write the profit function s $\pi(x).$ We assume that the profit functionis twice differentiable, increasing and concave:
+The firm's objective is to select the optimal level of externality $x$ to maximize profit $\pi(x)$. We assume that the profit functionis twice differentiable, increasing and concave:
 
 $$
 \pi'(x) > 0 > \pi''(x).
@@ -123,13 +123,6 @@ $$
 u_x \equiv \frac{\partial u}{\partial x} \lt 0.
 $${#eq-assum-u-x}
 
-Denote $w$ the consumer's income and $q^*(p,w,x)$ the Walrasian demand function. Then the indirect utility function (the maximized utility function) is:
-
-$$
-    v(x) = u(q*(p,w,x),x).
-$${#eq-indirect-u}
-
-Observe that $v'(x)<0$ for all $x>0.$
 
 ### Competitive and pareto equilibrium externality
 
@@ -139,33 +132,33 @@ $$
 x^P = \arg\max_{x\geq 0} \pi(x),
 $${#eq-firm-CE}
 
-The FOC of which yields (for an interior solution):
+The FOC (for an interior solution) yields:
 
 $$
-\pi'(x^P) = 0,.
+\pi'(x^P) = 0.
 $${#eq-foc-CE}
 
 
 In a Pareto equilibrium, the social planner selects the level of externality that maximizes the sum of profits and utilities:
 
 $$
-x^E = \arg\max_{x\geq 0} \pi(x) + v(x).
+x^E = \arg\max_{x\geq 0} \pi(x) + u(q, x).
 $${#eq-SP}
 
 The necessary condition for an interior solution ($x^E>0$) is:
 
 $$
-\pi'(x^E) = - v'(x^E).
+\pi'(x^E) = - u'(x^E).
 $${#eq-FOC-SP}
 
 In other words, the social planner selects a level of externality such that the marginal benefit derived from it by the firm is equal to the marignal cost (disutility) suffered by the consumer.
 
-Since $v'(x)<0,$ and $\pi''(x)<0,$ we have:
+Since $u'(x)<0,$ and $\pi''(x)<0,$ we have:
 
 $$
 \begin{aligned}
-\pi'(x^E) > 0 &= \pi'(x^P) \\
-x^E &< x^P.
+\pi'(x^E) &> \pi'(x^P) \\
+\implies x^E &< x^P.
 \end{aligned}
 $$
 

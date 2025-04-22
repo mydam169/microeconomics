@@ -108,7 +108,7 @@ Hence as output increases, there are two opposing forces acting on the firm's re
 Marginal revenue being less than the price implies that graphically the MR curve lies *below* the demand curve. Notice that the MR curve and the demand curves originate at the same height since $MR(0) = p(0).$ This is the highest price anyone is willing to pay for the good (the maximum willingness to pay or reservation price).
 
 ::: {#exm-LinearDemand}
-Consider the linear inverse demand function $p(q) = a - bq$ where $a, b > 0$. The marginal revenue is $RM(q) = R'(q) = a - 2bq,$ which is twice as steep as the demand curve but originates at the same point $(0,a)$ as the demand curve. Suppose the market is a monopoly and the monopolist has constant marginal cost $MC(q)=c,$ then monopolist maximizes profits by selling $q=\frac{a-c}{2b}$ at the price $p=\frac{a+c}{2}$. Observe that $a$ measures the highest reservation price, if $a < c$ the market would cease to exist.
+Consider the linear inverse demand function $p(q) = a - bq$ where $a, b > 0.$ The marginal revenue is $RM(q) = R'(q) = a - 2bq,$ which is twice as steep as the demand curve but originates at the same point $(0,a)$ as the demand curve. Suppose the market is a monopoly and the monopolist has constant marginal cost $MC(q)=c,$ then monopolist maximizes profits by selling $q=\frac{a-c}{2b}$ at the price $p=\frac{a+c}{2}$. Observe that $a$ measures the highest reservation price, if $a < c$ the market would cease to exist.
 :::
 
 ::: {#fig-linDemand fig-cap="A monopoly with linear demand and constant marginal cost. The monopoly price is higher and the quantity is lower than in a competitive market. The consumer surplus shrinks and there is a dead weight loss (DWL)."}

@@ -380,7 +380,7 @@ Apiculture
 <p>Consider a economy with two types of agents: a firm and a consumer. The firm’s productive activities generate negative externalities that affect the consumer.</p>
 <section id="the-representative-firm" class="level3" data-number="1.2.1">
 <h3 data-number="1.2.1" class="anchored" data-anchor-id="the-representative-firm"><span class="header-section-number">1.2.1</span> The representative firm</h3>
-<p>The firm’s objective is to maximize profit <span class="math inline">\(\pi(x,p)\)</span> where <span class="math inline">\(p\)</span> is the price vector and <span class="math inline">\(x\)</span> the amount of externality generated. In a competitive market the firm is a price taker, taking <span class="math inline">\(p\)</span> as given, allowing us to write the profit function s <span class="math inline">\(\pi(x).\)</span> We assume that the profit functionis twice differentiable, increasing and concave:</p>
+<p>The firm’s objective is to select the optimal level of externality <span class="math inline">\(x\)</span> to maximize profit <span class="math inline">\(\pi(x)\)</span>. We assume that the profit functionis twice differentiable, increasing and concave:</p>
 <p><span id="eq-assumption-profit"><span class="math display">\[
 \pi'(x) &gt; 0 &gt; \pi''(x).
 \tag{1}\]</span></span></p>
@@ -396,36 +396,31 @@ u_k \equiv \frac{\partial u}{\partial q_k} \geq 0,\quad \forall k=1,\dots,n.
 <p><span id="eq-assum-u-x"><span class="math display">\[
 u_x \equiv \frac{\partial u}{\partial x} \lt 0.
 \tag{3}\]</span></span></p>
-<p>Denote <span class="math inline">\(w\)</span> the consumer’s income and <span class="math inline">\(q^*(p,w,x)\)</span> the Walrasian demand function. Then the indirect utility function (the maximized utility function) is:</p>
-<p><span id="eq-indirect-u"><span class="math display">\[
-    v(x) = u(q*(p,w,x),x).
-\tag{4}\]</span></span></p>
-<p>Observe that <span class="math inline">\(v'(x)&lt;0\)</span> for all <span class="math inline">\(x&gt;0.\)</span></p>
 </section>
 <section id="competitive-and-pareto-equilibrium-externality" class="level3" data-number="1.2.3">
 <h3 data-number="1.2.3" class="anchored" data-anchor-id="competitive-and-pareto-equilibrium-externality"><span class="header-section-number">1.2.3</span> Competitive and pareto equilibrium externality</h3>
 <p>In a competitive equilibrium, the firm selects the (private) level of externatlity that maximizes its profits:</p>
 <p><span id="eq-firm-CE"><span class="math display">\[
 x^P = \arg\max_{x\geq 0} \pi(x),
-\tag{5}\]</span></span></p>
-<p>The FOC of which yields (for an interior solution):</p>
+\tag{4}\]</span></span></p>
+<p>The FOC (for an interior solution) yields:</p>
 <p><span id="eq-foc-CE"><span class="math display">\[
-\pi'(x^P) = 0,.
-\tag{6}\]</span></span></p>
+\pi'(x^P) = 0.
+\tag{5}\]</span></span></p>
 <p>In a Pareto equilibrium, the social planner selects the level of externality that maximizes the sum of profits and utilities:</p>
 <p><span id="eq-SP"><span class="math display">\[
-x^E = \arg\max_{x\geq 0} \pi(x) + v(x).
-\tag{7}\]</span></span></p>
+x^E = \arg\max_{x\geq 0} \pi(x) + u(q, x).
+\tag{6}\]</span></span></p>
 <p>The necessary condition for an interior solution (<span class="math inline">\(x^E&gt;0\)</span>) is:</p>
 <p><span id="eq-FOC-SP"><span class="math display">\[
-\pi'(x^E) = - v'(x^E).
-\tag{8}\]</span></span></p>
+\pi'(x^E) = - u'(x^E).
+\tag{7}\]</span></span></p>
 <p>In other words, the social planner selects a level of externality such that the marginal benefit derived from it by the firm is equal to the marignal cost (disutility) suffered by the consumer.</p>
-<p>Since <span class="math inline">\(v'(x)&lt;0,\)</span> and <span class="math inline">\(\pi''(x)&lt;0,\)</span> we have:</p>
+<p>Since <span class="math inline">\(u'(x)&lt;0,\)</span> and <span class="math inline">\(\pi''(x)&lt;0,\)</span> we have:</p>
 <p><span class="math display">\[
 \begin{aligned}
-\pi'(x^E) &gt; 0 &amp;= \pi'(x^P) \\
-x^E &amp;&lt; x^P.
+\pi'(x^E) &amp;&gt; \pi'(x^P) \\
+\implies x^E &amp;&lt; x^P.
 \end{aligned}
 \]</span></p>
 <p>Hence the Pareto efficient level of pollution, <span class="math inline">\(x^E\)</span> is less than the competitve level <span class="math inline">\(x^P\)</span> selected by the firm.</p>
@@ -441,7 +436,7 @@ x^P = \frac{ap}{2c}.
 <p><span class="math display">\[
 v(x) = b - cx - \frac{dx^2}{2},\quad b,d&gt;0.
 \]</span> Observe that the marginal cost of the damage increases in the level of pollution. This makes sense intuitively if we think about how health deterioration accelerates as pollution gets worse.</p>
-<p>In view of <a href="#eq-FOC-SP" class="quarto-xref">Equation&nbsp;8</a>, we can determine the Pareto efficient level of externality:</p>
+<p>In view of <a href="#eq-FOC-SP" class="quarto-xref">Equation&nbsp;7</a>, we can determine the Pareto efficient level of externality:</p>
 <p><span class="math display">\[
 \begin{aligned}
 \pi'(x^E) &amp;= -v'(x^E) \\
@@ -467,11 +462,11 @@ BR_i(x_j) &amp;= a - b + \frac{x_j}{4},
 <p>and likewise for country <span class="math inline">\(j.\)</span></p>
 <p>The NE of this game is: <span id="eq-NE-comp"><span class="math display">\[
 x_i^* = x_j^* = \frac{4(a - b)}{3}.
-\tag{9}\]</span></span></p>
+\tag{8}\]</span></span></p>
 <p>To be Pareto optimal, each country considers not only its own benefit but also that of the other country when making a decision. Another way to think about this is to make a decision from the point of view of a social planner who determines both investment levels to maximize joint benefits:</p>
 <p><span id="eq-pos-ext-SP"><span class="math display">\[
 \max_{x_i,x_j} \pi(x_i,x_j) \equiv \pi_i(x_i,x_j) + \pi_j(x_i,x_j).
-\tag{10}\]</span></span></p>
+\tag{9}\]</span></span></p>
 <p>The FOC condition for country <span class="math inline">\(i\)</span> gives:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -517,8 +512,8 @@ x_i^E = x_j^E = 2(a-b).
 <p>The FOC yields:</p>
 <p><span id="eq-FOC-coase"><span class="math display">\[
 \pi'(x) \leq -v'(x), \quad \text{with equality for } x &gt; 0.
-\tag{11}\]</span></span></p>
-<p>Observe that the optimality condition (<a href="#eq-FOC-coase" class="quarto-xref">11</a>) coincides with that of the SP’s problem (<a href="#eq-FOC-SP" class="quarto-xref">Equation&nbsp;8</a>). This implies that the solution to this problem is also Pareto efficient.</p>
+\tag{10}\]</span></span></p>
+<p>Observe that the optimality condition (<a href="#eq-FOC-coase" class="quarto-xref">10</a>) coincides with that of the SP’s problem (<a href="#eq-FOC-SP" class="quarto-xref">Equation&nbsp;7</a>). This implies that the solution to this problem is also Pareto efficient.</p>
 </div>
 <p>What if the property rights are assigned to the firm, the party that generates externalities? In this case the consumer will make a transfer to the firm to reduce externalities.</p>
 <div id="exr-sol-private" class="theorem exercise">
@@ -550,28 +545,28 @@ x_i^E = x_j^E = 2(a-b).
 <p>The Pigouvian <strong>tax</strong> sets the unit price of externality. The firm’s PMP becomes:</p>
 <p><span id="eq-PMP-avec-taxe"><span class="math display">\[
 \max_{x\geq 0} \pi(x) - tx,
-\tag{12}\]</span></span></p>
+\tag{11}\]</span></span></p>
 <p>where <span class="math inline">\(t\)</span> is the magnitude of the tax. The FOC gives:</p>
 <p><span id="eq-FOC-PMP-avec-tax"><span class="math display">\[
 \pi'(x) \leq t,\quad\text{with equality for } x &gt;0.
-\tag{13}\]</span></span></p>
+\tag{12}\]</span></span></p>
 <p>In order to incentivize <span class="math inline">\(x^E,\)</span> the Pareto-efficient externality level, the tax must be such that:</p>
 <p><span id="eq-Pigou-tax"><span class="math display">\[
 -v'(x^E) = t.
-\tag{14}\]</span></span></p>
+\tag{13}\]</span></span></p>
 <p>The tax thus induces the firm to internalize the externality it inflicts on the consumer.</p>
 <p>The Pigouvian <strong>subsidy</strong> is a reward to the firm producing any unit beyond its competitive level (and approaching the socially efficient level). The PMP in this case reads:</p>
 <p><span id="eq-PMP-avec-subsidy"><span class="math display">\[
 \max_{x\geq 0} \pi(x) + s(x^E - x).
-\tag{15}\]</span></span></p>
+\tag{14}\]</span></span></p>
 <p>The FOC yields:</p>
 <p><span id="eq-FOC-PMP-avec-tax"><span class="math display">\[
 \pi'(x) \leq s,\quad\text{with equality for } x &gt;0.
-\tag{16}\]</span></span></p>
+\tag{15}\]</span></span></p>
 <p>The magnitude of the subsidy must be equal to the marginal benefit received by the consumer, namely:</p>
 <p><span id="eq-Pigou-sub"><span class="math display">\[
 s = -v'(x^E).
-\tag{17}\]</span></span></p>
+\tag{16}\]</span></span></p>
 <p>Under complete information, setting quotas and taxing or subsidizing are equivalent.</p>
 </section>
 <section id="tradable-permits" class="level4" data-number="1.3.2.3">
@@ -666,14 +661,14 @@ x^E = \sum_j x_j(p),
 <p><span class="theorem-title"><strong>Example 4</strong></span> Consider two roommates who clean their apartment every Saturday. Every roommate <span class="math inline">\(i\)</span> simultaneously and independently chooses the number of hours she spends cleaning, <span class="math inline">\(h_i \in [0, \bar{h}]\)</span> where <span class="math inline">\(\bar{h}\)</span> denotes the maximum time one can devote to housework. More time devoted to cleaning means less time for leisure (which gives her disutility), but a cleaner leaving space gives her satistfaction.</p>
 <p>Her utility from cleaning can thus be written as: <span id="eq-ff_example"><span class="math display">\[
 u_i(h_i, h_j) = (\bar{h} - h_i) + \beta \ln(h_i + h_j),
-\tag{18}\]</span></span> where <span class="math inline">\(\beta \ln(h_i + h_j)\)</span> captures the pleasure derived from cleanliness which is increasing in <span class="math inline">\(h_i, h_j\)</span> and <span class="math inline">\(\beta &gt;0.\)</span></p>
+\tag{17}\]</span></span> where <span class="math inline">\(\beta \ln(h_i + h_j)\)</span> captures the pleasure derived from cleanliness which is increasing in <span class="math inline">\(h_i, h_j\)</span> and <span class="math inline">\(\beta &gt;0.\)</span></p>
 <p>Observe that this is a simultaneous-moves game with two players, the solution is the NE of the game, which can be found by first identifying the best response function of each player <span class="math inline">\(BR_i(h_j).\)</span></p>
-<p>The BR function of <span class="math inline">\(i\)</span> is the optimal choice of <span class="math inline">\(h_i\)</span> as a function of <span class="math inline">\(h_j\)</span>, which <span class="math inline">\(i\)</span> determines by maximizing <a href="#eq-ff_example" class="quarto-xref">Equation&nbsp;18</a> subject to <span class="math inline">\(h_i \in [0, \bar{h}].\)</span> Observe that <span class="math inline">\(u_i\)</span> is strictly concave in <span class="math inline">\(h_i\)</span> given <span class="math inline">\(h_j\)</span>, implying that the FOC is also sufficient. The FOC for an interior solution gives: <span id="eq-ff_FOC_i"><span class="math display">\[
+<p>The BR function of <span class="math inline">\(i\)</span> is the optimal choice of <span class="math inline">\(h_i\)</span> as a function of <span class="math inline">\(h_j\)</span>, which <span class="math inline">\(i\)</span> determines by maximizing <a href="#eq-ff_example" class="quarto-xref">Equation&nbsp;17</a> subject to <span class="math inline">\(h_i \in [0, \bar{h}].\)</span> Observe that <span class="math inline">\(u_i\)</span> is strictly concave in <span class="math inline">\(h_i\)</span> given <span class="math inline">\(h_j\)</span>, implying that the FOC is also sufficient. The FOC for an interior solution gives: <span id="eq-ff_FOC_i"><span class="math display">\[
 1 = \frac{\beta}{h_i + h_j}\\
 \iff h_i(h_j) = \beta - h_j.
-\tag{19}\]</span></span></p>
+\tag{18}\]</span></span></p>
 <p>As the other friend increases cleaning time, individual <span class="math inline">\(i\)</span> will do the opposite: free-riding behavior. In particular if <span class="math inline">\(h_j \geq \beta\)</span> then roommate <span class="math inline">\(i\)</span> will not spend time cleaning. If <span class="math inline">\(h_j=0\)</span> it is in the best interest of <span class="math inline">\(i\)</span> to clean <span class="math inline">\(h_i=\beta &gt;0.\)</span> Moreover <span class="math inline">\(h_i\)</span> increases in <span class="math inline">\(\beta\)</span> for any fixed <span class="math inline">\(h_j.\)</span></p>
-<p>The NE of the game can be determined by solving for the system of equations involving the two BRs. By symmetry <span class="math inline">\(h^*_i = h^*_j \equiv h^*.\)</span> Substituting <span class="math inline">\(h^*_i = h^*_j \equiv h^*\)</span> into <a href="#eq-ff_FOC_i" class="quarto-xref">Equation&nbsp;19</a> and simplying, we obtain: <span class="math display">\[
+<p>The NE of the game can be determined by solving for the system of equations involving the two BRs. By symmetry <span class="math inline">\(h^*_i = h^*_j \equiv h^*.\)</span> Substituting <span class="math inline">\(h^*_i = h^*_j \equiv h^*\)</span> into <a href="#eq-ff_FOC_i" class="quarto-xref">Equation&nbsp;18</a> and simplying, we obtain: <span class="math display">\[
 h^* = \frac{\beta}{2},
 \]</span> which is strictly less than <span class="math inline">\(\beta.\)</span></p>
 <p>For example, if <span class="math inline">\(\beta=2\)</span>, then each flatmate will spend 1 hour cleaning in equilibrium.</p>
@@ -691,8 +686,8 @@ h^* = \frac{\beta}{2},
 <div id="exm-common-resources" class="theorem example">
 <p><span class="theorem-title"><strong>Example 5</strong></span> Let <span class="math inline">\(S &gt; 0\)</span> denote the resource stock, for example the number of fish in a lake, which we assume to be fixed on any given day. Assume that <span class="math inline">\(N\)</span> individuals can fish in the lake Fish once caught can be sold in a competitive fish market at competitive market price <span class="math inline">\(p\)</span> (fishers are price-takers) The cost function of individual <span class="math inline">\(i\)</span> can be written as: <span id="eq-common_res_cost"><span class="math display">\[
 C(q_i, Q_{-i}) = \frac{q_i(q_i + Q_{-i})}{S},
-\tag{20}\]</span></span> where <span class="math inline">\(Q_{-i}=\sum_{j\neq i} q_j\)</span> is the total quantity caught by individuals other than <span class="math inline">\(i\)</span>.</p>
-<p><a href="#eq-common_res_cost" class="quarto-xref">Equation&nbsp;20</a> says that:</p>
+\tag{19}\]</span></span> where <span class="math inline">\(Q_{-i}=\sum_{j\neq i} q_j\)</span> is the total quantity caught by individuals other than <span class="math inline">\(i\)</span>.</p>
+<p><a href="#eq-common_res_cost" class="quarto-xref">Equation&nbsp;19</a> says that:</p>
 <ul>
 <li><p>The more fish the lake has, the easier it will be to catch one</p></li>
 <li><p>The cost increases in the number of fish caught</p></li>
@@ -700,14 +695,14 @@ C(q_i, Q_{-i}) = \frac{q_i(q_i + Q_{-i})}{S},
 </ul>
 <p>Every fisherman <span class="math inline">\(i\)</span> simultaneously and independently solves: <span id="eq-common_res_PMP"><span class="math display">\[
 \max_{q_i} \pi_i = p q_i - C(q_i, Q_{-i}).
-\tag{21}\]</span></span></p>
+\tag{20}\]</span></span></p>
 <p>The necessary and sufficient condition for a max is: <span id="eq-common_res_FOC"><span class="math display">\[
 p = \frac{2q_i + Q_{-i}}{S}.
-\tag{22}\]</span></span></p>
-<p><a href="#eq-common_res_FOC" class="quarto-xref">Equation&nbsp;22</a> gives us the best-response function of each individual <span class="math inline">\(i\)</span>:</p>
+\tag{21}\]</span></span></p>
+<p><a href="#eq-common_res_FOC" class="quarto-xref">Equation&nbsp;21</a> gives us the best-response function of each individual <span class="math inline">\(i\)</span>:</p>
 <p><span id="eq-common_res_BR"><span class="math display">\[
 q_i(Q_{-i}) = \frac{pS - Q_{-i}}{2} = \frac{pS}{2} - \frac{Q_{-i}}{2}.
-\tag{23}\]</span></span></p>
+\tag{22}\]</span></span></p>
 <p>Rhe BR function tells us that:</p>
 <ul>
 <li>The individual appropriation <span class="math inline">\(q_i\)</span> increases in:
@@ -727,7 +722,7 @@ q^*_1 = q^*_2 = \dots = q^*_N = q^*.
 <p>Substituting this into the BR function to obtain: <span id="eq-common_res_NE"><span class="math display">\[
 2q^* = pS - (N-1)q^* \\
 \iff q^* = \frac{pS}{N+1}.
-\tag{24}\]</span></span></p>
+\tag{23}\]</span></span></p>
 <p>Observe that the individual equilibrium appropriation increases in the resource stock but decreases in the number of individuals competing for it.</p>
 </div>
 </section>
@@ -740,16 +735,16 @@ q^*_1 = q^*_2 = \dots = q^*_N = q^*.
 &amp;= \sum_{i=1}^N p q_i - \sum_{i=1}^N C(q_i, Q_{-i}) \\
 &amp;= pQ - \frac{Q^2}{S},
 \end{aligned}
-\tag{25}\]</span></span> where <span class="math inline">\(Q\equiv \sum_{i=1}^N q_i = q_i + Q_{-i}\)</span> is the total appropriation.</p>
+\tag{24}\]</span></span> where <span class="math inline">\(Q\equiv \sum_{i=1}^N q_i = q_i + Q_{-i}\)</span> is the total appropriation.</p>
 <p>The FOC w.r.t <span class="math inline">\(q_i\)</span> yields: <span id="eq-joint_BR"><span class="math display">\[
 p = \frac{2Q}{S} \\
 \iff \frac{pS}{2} = q_i + Q_{-i} \\
 \iff q_i = \frac{pS}{2} - Q_{-i},
-\tag{26}\]</span></span> which is the best response function of <span class="math inline">\(i\)</span>.</p>
+\tag{25}\]</span></span> which is the best response function of <span class="math inline">\(i\)</span>.</p>
 <p>The equilibrium output is thus: <span id="eq-common_joint_eq"><span class="math display">\[
     Nq^J = \frac{pS}{2} \iff q^J = \frac{pS}{2N}.
-\tag{27}\]</span></span></p>
-<p>Since <span class="math inline">\(2N &gt; N + 1\)</span> for <span class="math inline">\(N &gt; 1\)</span>, we conclude that the joint equilibrium appropriation <span class="math inline">\(q^J\)</span> is strictly less than the independent equilibrium appropriation <span class="math inline">\(q^*\)</span> (<a href="#eq-common_res_NE" class="quarto-xref">Equation&nbsp;24</a>).</p>
+\tag{26}\]</span></span></p>
+<p>Since <span class="math inline">\(2N &gt; N + 1\)</span> for <span class="math inline">\(N &gt; 1\)</span>, we conclude that the joint equilibrium appropriation <span class="math inline">\(q^J\)</span> is strictly less than the independent equilibrium appropriation <span class="math inline">\(q^*\)</span> (<a href="#eq-common_res_NE" class="quarto-xref">Equation&nbsp;23</a>).</p>
 <p>Let us compare profits between the two cases.</p>
 <p>In the case of independent exploitation:</p>
 <p><span class="math display">\[
@@ -763,11 +758,11 @@ p = \frac{2Q}{S} \\
 \pi^J - \pi^* &amp;= -p(q^* - q^J) + \frac{N}{S}(q^* - q^J)^2 \\
 &amp;= \frac{1}{S}(q^* - q^J)[N(q^* + q^J) - pS].
 \end{aligned}
-\tag{28}\]</span></span></p>
+\tag{27}\]</span></span></p>
 <p>Note that the sign of <span class="math inline">\(\pi^J - \pi^*\)</span> depends on the sign of <span class="math inline">\([N(q^* + q^J) - pS].\)</span> Observe that <span class="math inline">\(pS = (N + 1)q^* = 2N q^J\)</span>, implying that we can write: <span id="eq-pS_exp"><span class="math display">\[
 pS = \frac{(N + 1)q^* + 2N q^J}{2}.
-\tag{29}\]</span></span></p>
-<p>Substituting <a href="#eq-pS_exp" class="quarto-xref">Equation&nbsp;29</a> into the term inside the square bracket of <a href="#eq-prof_diff" class="quarto-xref">Equation&nbsp;28</a>, we get: <span class="math display">\[
+\tag{28}\]</span></span></p>
+<p>Substituting <a href="#eq-pS_exp" class="quarto-xref">Equation&nbsp;28</a> into the term inside the square bracket of <a href="#eq-prof_diff" class="quarto-xref">Equation&nbsp;27</a>, we get: <span class="math display">\[
 N(q^* + q^J) - \frac{(N + 1)q^* + 2N q^J}{2} \\
 = \frac{2N q^* - (N + 1)q^*}{2} \\
 = \frac{(N - 1)q^*}{2},
