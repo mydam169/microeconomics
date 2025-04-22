@@ -584,11 +584,11 @@ u^A(x) &amp;= 100 - 10x,
 \end{aligned}
 \]</span></p>
 <p>where <span class="math inline">\(x\)</span> is the number of cigarettes smoked by James (inside the office). The utility function of James takes into account the cost of cigarettes.</p>
-<ol type="a">
-<li><p>If James does not take into account the harm suffered by Andy, what is the number of cigarettes he smokes?</p></li>
-<li><p>What is the efficient number of cigarettes?</p></li>
-<li><p>Suppose that we wish to use the Coase theorem to achieve an efficient outcome by bargaining. Determine the size of the transfer and the recipient of this transfer if the property rights holder is (i) Andy and (ii) James.</p></li>
-<li><p>Suppose a private negotation is impossible and we need to rely on a command and control solution to the problem. Determine the size of the Pigouvian tax that must be levied on each cigarette in order to achieve the efficient outcome.</p></li>
+<ol type="1">
+<li>If James does not take into account the harm suffered by Andy, what is the number of cigarettes he smokes?</li>
+<li>What is the efficient number of cigarettes?</li>
+<li>Suppose that we wish to use the Coase theorem to achieve an efficient outcome by bargaining. Determine the size of the transfer and the recipient of this transfer if the property rights holder is (i) Andy and (ii) James.</li>
+<li>Suppose a private negotation is impossible and we need to rely on a command and control solution to the problem. Determine the size of the Pigouvian tax that must be levied on each cigarette in order to achieve the efficient outcome.</li>
 </ol>
 </div>
 </section>
@@ -604,9 +604,9 @@ x^E = \sum_j \bar{x}_j.
 \max_{x_j \geq 0} \pi_j(x_j) + p(\bar{x}_j - x_j),
 \]</span></p>
 <p>where <span class="math inline">\(p\)</span> is the price the firm needs to pay for the rights to pollute beyond its permit’s allowance.</p>
-<p>The FOC yields:</p>
+<p>The FOC for an interior solution yields:</p>
 <p><span class="math display">\[
-\pi'_j(x_j) - p \leq 0, \quad \text{with equality for } x &gt; 0.
+\pi'_j(x_j) = p.
 \]</span></p>
 <p>In equilibrium, the price of a permit has to be such that the market clears, namely:</p>
 <p><span class="math display">\[
@@ -692,9 +692,21 @@ u_i(h_i, h_j) = (\bar{h} - h_i) + \beta \ln(h_i + h_j),
 \tag{18}\]</span></span></p>
 <p>As the other friend increases cleaning time, individual <span class="math inline">\(i\)</span> will do the opposite: free-riding behavior. In particular if <span class="math inline">\(h_j \geq \beta\)</span> then roommate <span class="math inline">\(i\)</span> will not spend time cleaning. If <span class="math inline">\(h_j=0\)</span> it is in the best interest of <span class="math inline">\(i\)</span> to clean <span class="math inline">\(h_i=\beta &gt;0.\)</span> Moreover <span class="math inline">\(h_i\)</span> increases in <span class="math inline">\(\beta\)</span> for any fixed <span class="math inline">\(h_j.\)</span></p>
 <p>The NE of the game can be determined by solving for the system of equations involving the two BRs. By symmetry <span class="math inline">\(h^*_i = h^*_j \equiv h^*.\)</span> Substituting <span class="math inline">\(h^*_i = h^*_j \equiv h^*\)</span> into <a href="#eq-ff_FOC_i" class="quarto-xref">Equation&nbsp;18</a> and simplying, we obtain: <span class="math display">\[
-h^* = \frac{\beta}{2},
-\]</span> which is strictly less than <span class="math inline">\(\beta.\)</span></p>
-<p>For example, if <span class="math inline">\(\beta=2\)</span>, then each flatmate will spend 1 hour cleaning in equilibrium.</p>
+h^* = \frac{\beta}{2}.
+\]</span></p>
+<p>For example, if <span class="math inline">\(\beta=2\)</span>, then each flatmate will spend 1 hour cleaning in equilibrium. This duration is strictly less than the efficient level, which can be determined by solving the social planner’s problem (which maximizes the sum of utilities):</p>
+<p><span class="math display">\[
+\max_{h_i, h_j} V = u_i + u_j = 2\bar{h} - (h_i + h_j) + 2\beta \ln (h_j + h_j).
+\]</span></p>
+<p>The FOC w.r.t <span class="math inline">\(h_i\)</span> gives:</p>
+<p><span class="math display">\[
+\frac{2\beta}{h_j + h_j} = 1.
+\]</span></p>
+<p>By symmetry this implies that in a Pareto efficient equilibrium:</p>
+<p><span class="math display">\[
+h_i^* = h_j^* = \beta,
+\]</span></p>
+<p>which is strictly greater than the decentralized equilibrium level.</p>
 </div>
 </section>
 <section id="solutions-to-free-riding" class="level2" data-number="2.4">
