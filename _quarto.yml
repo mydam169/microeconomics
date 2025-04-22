@@ -38,19 +38,19 @@ website:
             href: contents/references.qmd
       - section: "Lectures"
         contents:
-          - text: "Lecture 1"
+          - text: "Chapter 1"
             href: contents/lecture_1.qmd
-          - text: "Lecture 2"
+          - text: "Chapter 2"
             href: contents/lecture_2.qmd
-          - text: "Lecture 3"
+          - text: "Chapter 3"
             href: contents/lecture_3.qmd
-          - text: "Lecture 4"
+          - text: "Chapter 4"
             href: contents/lecture_4.qmd
-          - text: "Lecture 5"
+          - text: "Chapter 5"
             href: contents/lecture_5.qmd
-          - text: "Lecture 6"
+          - text: "Chapter 6"
             href: contents/lecture_6.qmd
-          - text: "Lecture 7"
+          - text: "Chapter 7"
             href: contents/lecture_7.qmd
 
 format:
