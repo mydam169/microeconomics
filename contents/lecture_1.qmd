@@ -532,25 +532,30 @@ If the utility function is continuous and preferences satisfy LNS (thin ICs) ove
 
 ### Necessary conditions
 
-The Lagragian associated with the UMP: $$
+The Lagragian associated with the UMP: 
+
+$$
 L = u(x) + \lambda (w - px)
 $$ {#eq-Lagrangian}
 
-Denote $L_i$ the partial derivative of the Lagrangian with respect to good $i$. The KTT theorem tells us that if $x^*$ is a solution to the UMP then there exists $\lambda^*\geq 0$ such that the following conditions are satisfied: $$
+Denote $L_i$ the partial derivative of the Lagrangian with respect to good $i$. The KTT theorem tells us that if $x^*$ is a solution to the UMP then there exists $\lambda^*\geq 0$ such that the following conditions are satisfied: 
+$$
 \begin{aligned}
-& L_i(x^*) \leq 0, \quad  i=1,\dots, L \\ 
-& L_i(x^*) = 0 \text{ if } x^*_i>0, \quad i=1,\dots,L \\
-& \lambda^* \geq 0 \text{ and } \lambda^*(w - px^*) = 0. 
+& L_i(x^*) \equiv \frac{\partial L}{\partial x_i}(x^*) = 0, \quad  i=1,\dots, L \\ 
+% & L_i(x^*) = 0 \text{ if } x^*_i>0, \quad i=1,\dots,L \\
+& \lambda^* \geq 0, \: w - px^* \geq 0 \text{ and } \lambda^*(w - px^*) = 0. 
 \end{aligned}
 $$ {#eq-NFOCs}
 
-Assume interior solution, then the first set of conditions yields $$
+The first set of conditions yields 
+$$
 u_i(x^*) = \lambda^* p_i.
 $$
 
 If $u$ satisfies strict monotonicity ($u_i>0$), then $\lambda^*>0$ since prices are strictly positive. But $\lambda^*>0$ implies that $w = px^*$, which confirms the LoW.
 
-To eliminate the multiplier, we can form the ratio: $$ 
+To eliminate the multiplier, we can form the ratio: 
+$$ 
 \begin{aligned}
 \frac{u_i(x^*)}{u_j(x^*)} &= \frac{p_i}{p_j} \\
 MRS_{i,j}(x^*) &= \frac{p_i}{p_j} \\
@@ -558,7 +563,7 @@ MRS_{i,j}(x^*) &= \frac{p_i}{p_j} \\
 \end{aligned}
 $$ {#eq-nec_cond_UMP}
 
-Hence at an interior optimum:
+Hence at an optimum:
 
 -   The rate at which the individual substitutes one good for the other is equal to the ratio of their prices - the market value of one good *relative* to the other good. Price levels do not matter
 
@@ -566,17 +571,21 @@ Hence at an interior optimum:
 
 ### The shadow price
 
--   $\lambda^*$ is often interpreted as the shadow price: increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit
+-   $\lambda^*$ is often interpreted as the shadow price: the increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit
 
 -   In other words, it is the shadow price on the constraint (on $w$)
 
--   Mathematically, $$\lambda^* = \frac{\partial u(x^*(p,w))}{\partial w}.$$
+-   Mathematically: 
+    $$
+    \lambda^* = \frac{\partial u(x^*(p,w))}{\partial w}.
+    $$
 
 <details>
 
 <summary>Proof</summary>
 
-We can show this by differentiating the value function w.r.t income: $$
+We can show this by differentiating the value function w.r.t income: 
+$$
 \begin{aligned}
 \frac{\partial u(x^*(p,w))}{\partial w} &= \sum_{i=1}^L u_i(x^*)\frac{\partial x_i(w,p)}{\partial w} \\
 &= \lambda^*\sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} \\
@@ -584,7 +593,9 @@ We can show this by differentiating the value function w.r.t income: $$
 \end{aligned}
 $$
 
-Here we have used the fact that: $$
+Here we have used the fact that: 
+
+$$
 \sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} = 1,
 $$ which comes directly from the binding budget constraint.
 
@@ -606,9 +617,11 @@ $$ which comes directly from the binding budget constraint.
 
 ## Comparative statics
 
-1.  Price elasticity: percentage change in demand following a percentage change in the price of the good: $$
+1.  Price elasticity: percentage change in demand following a percentage change in the price of the good: 
+   
+    $$
      \epsilon_{x_i, p_i} = \frac{\partial x_i(p,w)}{\partial p_i}\frac{p_i}{x_i(p,w)}.
-     $$ {#eq-own_elast_def}
+    $$ {#eq-own_elast_def}
 
     -   If positive: Giffen goods
     -   If negative: normal goods
@@ -617,7 +630,7 @@ $$ which comes directly from the binding budget constraint.
 
     $$
      \epsilon_{x_i, p_j} = \frac{\partial x_i(p,w)}{\partial p_j}\frac{p_j}{x_i(p,w)}.
-     $$ {#eq-cross_elast_def}
+    $$ {#eq-cross_elast_def}
 
     -   If positive: substitutes
     -   If negative: complements
@@ -626,7 +639,7 @@ $$ which comes directly from the binding budget constraint.
 
     $$
      \epsilon_{x_i, w} = \frac{\partial x_i(p,w)}{\partial w}\frac{w}{x_i(p,w)}.
-     $$ {#eq-income_elast_def}
+    $$ {#eq-income_elast_def}
 
     -   If postive: normal goods
     -   If negative: inferior goods
@@ -668,6 +681,7 @@ St.Petersburg paradox: We pay a fee to play a game of chance in which we toss a 
 <summary>Answer</summary>
 
 The expected value of this game is $\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty.$
+One way to explain this paradoxical behavior is to model preferences using a bounded utility function. The individual is then willing to pay up to the certainty equivalent of the game given her utility function. For a concave utility function, which captures risk aversion, the certainty equivalent is smaller than the expected value of the game. In particular, it can be shown that if the utility function is logarithmic, the certainty equivalent is 4.
 
 </details>
 :::

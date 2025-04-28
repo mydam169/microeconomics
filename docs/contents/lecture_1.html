@@ -618,7 +618,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 <p>It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.</p>
 <p>The converse is not true. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
-<div id="82f3c154" class="cell" data-lab="fig-concaveU" data-execution_count="11">
+<div id="de40ea10" class="cell" data-lab="fig-concaveU" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -628,7 +628,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </div>
-<div id="51481aec" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
+<div id="41c1e61e" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -807,17 +807,18 @@ u(x) = \begin{cases}
 <h2 data-number="2.3" class="anchored" data-anchor-id="solving-the-ump"><span class="header-section-number">2.3</span> Solving the UMP</h2>
 <section id="necessary-conditions" class="level3" data-number="2.3.1">
 <h3 data-number="2.3.1" class="anchored" data-anchor-id="necessary-conditions"><span class="header-section-number">2.3.1</span> Necessary conditions</h3>
-<p>The Lagragian associated with the UMP: <span id="eq-Lagrangian"><span class="math display">\[
+<p>The Lagragian associated with the UMP:</p>
+<p><span id="eq-Lagrangian"><span class="math display">\[
 L = u(x) + \lambda (w - px)
 \tag{12}\]</span></span></p>
 <p>Denote <span class="math inline">\(L_i\)</span> the partial derivative of the Lagrangian with respect to good <span class="math inline">\(i\)</span>. The KTT theorem tells us that if <span class="math inline">\(x^*\)</span> is a solution to the UMP then there exists <span class="math inline">\(\lambda^*\geq 0\)</span> such that the following conditions are satisfied: <span id="eq-NFOCs"><span class="math display">\[
 \begin{aligned}
-&amp; L_i(x^*) \leq 0, \quad  i=1,\dots, L \\
-&amp; L_i(x^*) = 0 \text{ if } x^*_i&gt;0, \quad i=1,\dots,L \\
-&amp; \lambda^* \geq 0 \text{ and } \lambda^*(w - px^*) = 0.
+&amp; L_i(x^*) \equiv \frac{\partial L}{\partial x_i}(x^*) = 0, \quad  i=1,\dots, L \\
+% &amp; L_i(x^*) = 0 \text{ if } x^*_i&gt;0, \quad i=1,\dots,L \\
+&amp; \lambda^* \geq 0, \: w - px^* \geq 0 \text{ and } \lambda^*(w - px^*) = 0.
 \end{aligned}
 \tag{13}\]</span></span></p>
-<p>Assume interior solution, then the first set of conditions yields <span class="math display">\[
+<p>The first set of conditions yields <span class="math display">\[
 u_i(x^*) = \lambda^* p_i.
 \]</span></p>
 <p>If <span class="math inline">\(u\)</span> satisfies strict monotonicity (<span class="math inline">\(u_i&gt;0\)</span>), then <span class="math inline">\(\lambda^*&gt;0\)</span> since prices are strictly positive. But <span class="math inline">\(\lambda^*&gt;0\)</span> implies that <span class="math inline">\(w = px^*\)</span>, which confirms the LoW.</p>
@@ -828,7 +829,7 @@ MRS_{i,j}(x^*) &amp;= \frac{p_i}{p_j} \\
 \implies \frac{u_i(x^*)}{p_i} &amp;= \frac{u_j(x^*)}{p_j} = \lambda^*.
 \end{aligned}
 \tag{14}\]</span></span></p>
-<p>Hence at an interior optimum:</p>
+<p>Hence at an optimum:</p>
 <ul>
 <li><p>The rate at which the individual substitutes one good for the other is equal to the ratio of their prices - the market value of one good <em>relative</em> to the other good. Price levels do not matter</p></li>
 <li><p>Marginal utilities per unit of the constraint (e.g.&nbsp;dollar) are equalized across all goods and are equal to the Langrage multiplier, the shadow price</p></li>
@@ -837,9 +838,11 @@ MRS_{i,j}(x^*) &amp;= \frac{p_i}{p_j} \\
 <section id="the-shadow-price" class="level3" data-number="2.3.2">
 <h3 data-number="2.3.2" class="anchored" data-anchor-id="the-shadow-price"><span class="header-section-number">2.3.2</span> The shadow price</h3>
 <ul>
-<li><p><span class="math inline">\(\lambda^*\)</span> is often interpreted as the shadow price: increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit</p></li>
+<li><p><span class="math inline">\(\lambda^*\)</span> is often interpreted as the shadow price: the increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit</p></li>
 <li><p>In other words, it is the shadow price on the constraint (on <span class="math inline">\(w\)</span>)</p></li>
-<li><p>Mathematically, <span class="math display">\[\lambda^* = \frac{\partial u(x^*(p,w))}{\partial w}.\]</span></p></li>
+<li><p>Mathematically: <span class="math display">\[
+\lambda^* = \frac{\partial u(x^*(p,w))}{\partial w}.
+\]</span></p></li>
 </ul>
 <details>
 <summary>
@@ -852,7 +855,8 @@ Proof
 &amp;= \lambda^*.
 \end{aligned}
 \]</span></p>
-<p>Here we have used the fact that: <span class="math display">\[
+<p>Here we have used the fact that:</p>
+<p><span class="math display">\[
 \sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} = 1,
 \]</span> which comes directly from the binding budget constraint.</p>
 </details>
@@ -883,9 +887,10 @@ Proof
 <section id="comparative-statics" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="comparative-statics"><span class="header-section-number">2.4</span> Comparative statics</h2>
 <ol type="1">
-<li><p>Price elasticity: percentage change in demand following a percentage change in the price of the good: <span id="eq-own_elast_def"><span class="math display">\[
+<li><p>Price elasticity: percentage change in demand following a percentage change in the price of the good:</p>
+<p><span id="eq-own_elast_def"><span class="math display">\[
 \epsilon_{x_i, p_i} = \frac{\partial x_i(p,w)}{\partial p_i}\frac{p_i}{x_i(p,w)}.
-  \tag{15}\]</span></span></p>
+\tag{15}\]</span></span></p>
 <ul>
 <li>If positive: Giffen goods</li>
 <li>If negative: normal goods</li>
@@ -893,7 +898,7 @@ Proof
 <li><p>Cross-price elasticity: percentage change in the demand of a good following a percentage change in the price of another good:</p>
 <p><span id="eq-cross_elast_def"><span class="math display">\[
 \epsilon_{x_i, p_j} = \frac{\partial x_i(p,w)}{\partial p_j}\frac{p_j}{x_i(p,w)}.
-  \tag{16}\]</span></span></p>
+\tag{16}\]</span></span></p>
 <ul>
 <li>If positive: substitutes</li>
 <li>If negative: complements</li>
@@ -901,7 +906,7 @@ Proof
 <li><p>Income elasticity: percentage change in the demand of a good following a percentage change in income:</p>
 <p><span id="eq-income_elast_def"><span class="math display">\[
 \epsilon_{x_i, w} = \frac{\partial x_i(p,w)}{\partial w}\frac{w}{x_i(p,w)}.
-  \tag{17}\]</span></span></p>
+\tag{17}\]</span></span></p>
 <ul>
 <li>If postive: normal goods</li>
 <li>If negative: inferior goods</li>
@@ -934,7 +939,7 @@ Answer
 <summary>
 Answer
 </summary>
-<p>The expected value of this game is <span class="math inline">\(\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty.\)</span></p>
+<p>The expected value of this game is <span class="math inline">\(\sum_k (1/2)^k 2^k = 1 + 1 + ... = \infty.\)</span> One way to explain this paradoxical behavior is to model preferences using a bounded utility function. The individual is then willing to pay up to the certainty equivalent of the game given her utility function. For a concave utility function, which captures risk aversion, the certainty equivalent is smaller than the expected value of the game. In particular, it can be shown that if the utility function is logarithmic, the certainty equivalent is 4.</p>
 </details>
 </div>
 <div id="exr-exo-convexity" class="theorem exercise">
