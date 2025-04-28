@@ -404,7 +404,7 @@ Figure&nbsp;2: Increasing labor increases output, but at decreasing rates
 <div id="fig-MPAP" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-MPAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="3e63dfe9" class="cell" data-execution_count="7">
+<div id="1a92e0d0" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -583,7 +583,7 @@ TC = wL + rK.
 <div id="fig-isocost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-isocost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="c343bef2" class="cell" data-execution_count="10">
+<div id="f0b9faee" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -620,13 +620,18 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <p>According to the KTT theorem, if <span class="math inline">\((L^*, K^*)\)</span> is a solution to the CMP, then there exist <span class="math inline">\(\lambda^* \geq 0\)</span> such that:</p>
 <p><span id="eq-KT_cmp"><span class="math display">\[
 \begin{aligned}
-&amp;\mathcal{L}_L (L^*, K^*, \lambda^*) \leq 0, \quad
-\mathcal{L}_K (L^*, K^*, \lambda^*) \leq 0\\
-&amp;\quad \quad \quad \text{ with equality for interior solutions }\\
+&amp;\mathcal{L}_L (L^*, K^*, \lambda^*) = 0, \quad
+\mathcal{L}_K (L^*, K^*, \lambda^*) = 0, \\
+% &amp;\quad \quad \quad \text{ with equality for interior solutions }\\
 &amp;\lambda^* \geq 0, \quad \lambda^*(q(L^*, K^*) - m) = 0.
 \end{aligned}
 \tag{10}\]</span></span></p>
-<p>Assuming interior solutions<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, the FOCs yield:</p>
+<p>The FOCs yield: <span id="eq-FOCs"><span class="math display">\[
+\begin{aligned}
+\lambda^* q_L(L^*, K^*) &amp;=  w, \\
+\lambda^* q_K(L^*, K^*) &amp;=  r.
+\end{aligned}
+\tag{11}\]</span></span></p>
 <p>This implies: <span id="eq-sols_interior"><span class="math display">\[
 \begin{aligned}
 \frac{MP_L}{MP_K} &amp;= \frac{w}{r} \\
@@ -657,12 +662,12 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <section id="explicit-vs-implicit-costs" class="level3" data-number="7.4.1">
 <h3 data-number="7.4.1" class="anchored" data-anchor-id="explicit-vs-implicit-costs"><span class="header-section-number">7.4.1</span> Explicit vs implicit costs</h3>
 <ul>
-<li><p>Explicit costs: Costs that require monetary payments</p></li>
-<li><p>Implicit costs: Do not require monetary outlays but reflect opportunity costs</p></li>
+<li><p>Explicit costs (also called accounting costs): Costs that require monetary payments</p></li>
+<li><p>Implicit costs (or opportunity costs): Do not require monetary outlays and reflect what one must sacrifice when making a choice</p></li>
 <li><p>Example: What is your cost of attending this course?</p>
 <ul>
-<li>Explicit cost: tuition, transportation, etc.</li>
-<li>Implicit cost: the salary you could have earned during the time of study</li>
+<li>Accounting costs: tuition, transportation, etc.</li>
+<li>Opportunity cost: the salary you could have earned during the time of study</li>
 </ul></li>
 </ul>
 </section>
@@ -689,11 +694,10 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <li>Consider a firm with Cobb-Douglas production <span class="math inline">\(q = L^a K^b\)</span> where <span class="math inline">\(K=\bar{K}&gt;0\)</span> is fixed in the SR. Thus the cost function found above is the LR cost. The SR cost can be found by solving the CMP with respect to <span class="math inline">\(L\)</span> only</li>
 </ul></li>
 </ul>
-<!--     * SR greater than LR: makes sense since we have more flexibility (less constraint) to minimize cost than in the SR.  -->
 <div id="fig-SRLRcost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SRLRcost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="95a6f2ef" class="cell" data-execution_count="11">
+<div id="26df8a41" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -711,7 +715,6 @@ Figure&nbsp;6: Short-run vs long-run cost function
 </section>
 <section id="average-and-marginal-costs" class="level3" data-number="7.4.4">
 <h3 data-number="7.4.4" class="anchored" data-anchor-id="average-and-marginal-costs"><span class="header-section-number">7.4.4</span> Average and marginal costs</h3>
-<!-- * The total cost of production consists of fixed cost and variable costs -->
 <ul>
 <li><p>Average cost (AC): total cost of production <em>per output unit</em>:</p>
 <p><span id="eq-ATC_def"><span class="math display">\[
@@ -720,7 +723,7 @@ Figure&nbsp;6: Short-run vs long-run cost function
 <li><p>Marginal cost (MC): the rate at which the total cost increases as the firm produces an additional unit of output. Graphically it is the slope of the total cost curve:</p>
 <p><span id="eq-MC_def"><span class="math display">\[
   MC(q) = C'(q)
-   \tag{15}\]</span></span> in the continuous case.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p></li>
+   \tag{15}\]</span></span> in the continuous case.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
 <li><p>The MC curve crosses the AC curve at the AC’s minimum. In other words, the AC is decreasing when it is above the MC and increasing when it is above the MC.</p></li>
 <li><p>Intuition:</p>
 <ul>
@@ -729,11 +732,10 @@ Figure&nbsp;6: Short-run vs long-run cost function
 <li>After a threshold, producing an additional unit costs more than the AC of existing units</li>
 </ul></li>
 </ul>
-<!--     * Only SR has a fixed cost; the relationship is thus clearer for this case -->
 <div id="fig-ACMCSR" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ACMCSR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="6f005575" class="cell" data-execution_count="12">
+<div id="92957814" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -788,13 +790,7 @@ Figure&nbsp;7: Short-run average and marginal costs
 <div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p>Note that in general we should also check corner solutions (one or both of the inputs being null) or incorporate these constraints directly into the Langrangian (i.e.&nbsp;to add <span class="math inline">\(\lambda_K K + \lambda_L L\)</span>) <span id="eq-FOCs"><span class="math display">\[
-\begin{aligned}
-\lambda^* q_L(L^*, K^*) &amp;=  w, \\
-\lambda^* q_K(L^*, K^*) &amp;=  r.
-\end{aligned}
-\tag{11}\]</span></span><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>It is equal to <span class="math inline">\(\Delta C / \Delta q\)</span> in the discrete case<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>It is equal to <span class="math inline">\(\Delta C / \Delta q\)</span> in the discrete case<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

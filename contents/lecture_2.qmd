@@ -156,6 +156,7 @@ plt.show()
 ```
 
 ## Relationship beteen average and marginal products
+
 ::: {#fig-MPAP fig-cap="Relationship between marginal and average products"}
 ```{python}
 x = np.arange(2, 15, .1)
@@ -410,16 +411,15 @@ According to the KTT theorem, if $(L^*, K^*)$ is a solution to the CMP, then the
 
 $$
 \begin{aligned}
-&\mathcal{L}_L (L^*, K^*, \lambda^*) \leq 0, \quad
-\mathcal{L}_K (L^*, K^*, \lambda^*) \leq 0\\
-&\quad \quad \quad \text{ with equality for interior solutions }\\
+&\mathcal{L}_L (L^*, K^*, \lambda^*) = 0, \quad
+\mathcal{L}_K (L^*, K^*, \lambda^*) = 0, \\
+% &\quad \quad \quad \text{ with equality for interior solutions }\\
 &\lambda^* \geq 0, \quad \lambda^*(q(L^*, K^*) - m) = 0.
 \end{aligned}
 $${#eq-KT_cmp}
     
-Assuming interior solutions[^1], the FOCs yield:
 
-[^1]: Note that in general we should also check corner solutions (one or both of the inputs being null) or incorporate these constraints directly into the Langrangian (i.e. to add $\lambda_K K + \lambda_L L$)
+The FOCs yield:
 $$
 \begin{aligned}
 \lambda^* q_L(L^*, K^*) &=  w, \\
@@ -460,13 +460,13 @@ $$
 
 ### Explicit vs implicit costs
 
-* Explicit costs: Costs that require monetary payments
+* Explicit costs (also called accounting costs): Costs that require monetary payments
 
-* Implicit costs: Do not require monetary outlays but reflect opportunity costs
+* Implicit costs (or opportunity costs): Do not require monetary outlays and reflect what one must sacrifice when making a choice
 
 * Example: What is your cost of attending this course?
-    * Explicit cost: tuition, transportation, etc.
-    * Implicit cost: the salary you could have earned during the time of study
+    * Accounting costs: tuition, transportation, etc.
+    * Opportunity cost: the salary you could have earned during the time of study
     
 ### Sunk vs nonsunk costs
 
@@ -485,8 +485,6 @@ $$
 * Example: In short run, production factors such as land or capital are typically fixed, whereas labor is variable. In the long run, it is possible to buy more land and set up new factories, allowing all factors of production to vary.
 
     * Consider a firm with Cobb-Douglas production $q = L^a K^b$ where $K=\bar{K}>0$ is fixed in the SR. Thus the cost function found above is the LR cost. The SR cost can be found by solving the CMP with respect to $L$ only
-
-<!--     * SR greater than LR: makes sense since we have more flexibility (less constraint) to minimize cost than in the SR.  -->
 
 ::: {#fig-SRLRcost fig-cap="Short-run vs long-run cost function"}
 
@@ -525,8 +523,6 @@ plt.show()
 
 ### Average and marginal costs
 
-<!-- * The total cost of production consists of fixed cost and variable costs -->
-
 * Average cost (AC): total cost of production _per output unit_: 
 
     $$ 
@@ -548,7 +544,6 @@ plt.show()
     * As output increases, the importance of fixed cost declines. Meanwhile, the MC increases (due to decreasing marginal product)
     * After a threshold, producing an additional unit costs more than the AC of existing units
 
-<!--     * Only SR has a fixed cost; the relationship is thus clearer for this case -->
 
 ::: {#fig-ACMCSR fig-cap="Short-run average and marginal costs"}
 ```{python}
