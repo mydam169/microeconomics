@@ -71,20 +71,17 @@ Example: Wheat, corn, or agricultural commodities
 
 ## The PMP
 
-<!-- * Is the dual problem of the cost minimization problem (CMP) introduced previously
-    * In that problem, we implicitly assumed that firms were price-takers in the markets of inputs -->
-
 ::: {#def-PMP}
 ## Firm's PMP
-Consider a price-taking firm in the market of the output good
-Given $p$, the market price of the good, every firm's PMP is:
+Consider a price-taking firm in the market of the output good.
+Given $p$, the market price of the good, the firm's PMP is:
 $$
 \max_{q\geq 0} \pi = R(q) - C(q) = pq - C(q), 
 $$
-where $C(q)$ is the total cost function derived from the CMP introduced previously, $R(q)$ denotes the total revenue. 
+where $C(q)$ is the total cost function derived from the CMP introduced previously and $R(q)$ denotes the total revenue. 
 :::
     
-Observe that the PMP includes the CMP as a first step
+Observe that the PMP includes the CMP as a first step.
 
 ## Necessary conditions
 
@@ -417,7 +414,7 @@ Denote the LR equilibrium quantity, price and market size $q^*$, $p^*$ and $N^*,
     N^* = \frac{q^*}{q_i^*} \approx 41.19 
     $$
 
-* Hence in the LR equilibrium, the price will be about $\$3.94$ per unit. At this price about $92$ units will be produced by about $41$ firms.[^2]
+* Hence in the LR equilibrium, the price will be about $\$3.94$ per unit. At this price, about $92$ units will be produced by about $41$ firms.
 
 :::
 
@@ -461,14 +458,15 @@ We say that a price vector $p\in\mathbb{R^L_{++}}$ and an allocation $x\in\mathb
 
 1. The allocation $x$ is feasible
 2. Given prices, $x$ solves the UMP of every consumer
-3. The equilibrium price $p$ clears all markets. This means that the aggregate demand is equal to aggregate supply for each good:
+3. The equilibrium price $p$ clears all markets. This means that the aggregate demand is equal to aggregate supply for each good:[^2]
     $$ 
     q_j^D(p_j) = q_j^S(p_j),\quad \forall j=1,\dots,L. 
     $$
-    In the case of a pure exchange economy, aggregate supply is equal to total endowment
 :::
 
-Recall that for each consumer that has an interior solultion to their UMP, the marginal utility per dollar is equalized across the goods. Mathematically, this condition was:
+[^2]: In the case of a pure exchange economy, the aggregate supply of each good is just equal to its total endowment.
+
+Recall that for each consumer that has an interior solultion to their UMP, the marginal utility per dollar is equalized across the goods. Mathematically:
 
 $$
     \frac{U^i_k(x^*)}{p_k} = \frac{U^i_l(x^*)}{p_l},
@@ -499,6 +497,7 @@ e^A &=& (100, 350) \\
 e^B &=& (100, 50)
 \end{eqnarray}
 $$
+
 In autarky each individual can always consumer their endowments. The question is, can they do better with trade? If yes, how much (the allocation), and at which terms (the price ratio)? Let us first solve each individual's UMP, which is:
 $$
 \begin{aligned}
@@ -506,16 +505,19 @@ $$
 &\text{s.t. } px^i \leq pe^i,\quad i=A,B.
 \end{aligned}
 $$
+
 In optimality:
 $$
 MRS^i_{1,2} = \frac{p_1}{p_2} \iff p_1x_1^i = p_2x_2^i.
 $${#eq-FOCexm}
+
 The budget constraints bind, implying:
 $$
 \begin{aligned}
 px^i &= pe^i \\
 \end{aligned}
 $${#eq-BC}
+
 @eq-FOCexm and @eq-BC provide a system of two equations in two unknowns for each consumer. Solving this system yields:
 $$
 \begin{aligned}
@@ -523,6 +525,7 @@ x_1^i &= \frac{pe^i}{2p_1}, \quad i=A,B \\
 x_2^i &= \frac{pe^i}{2p_2}, \quad i=A,B. \\
 \end{aligned}
 $${#eq-OptAll}
+
 In order to solve for the price ratio, we only need to consider the market clearing condition for $L-1$ markets, which is just a single market in this example. Let us consider this condition for the market of $x_1$:
 $$
 \begin{aligned}
@@ -559,9 +562,9 @@ The equilibrium we have found in the previous section is called a competitive eq
 
 Economic decisions are all about efficient allocation of resources. Economic problems exist because resources are scarce. A natural question arises, then, is the __competitive equilibrium allocation (CEA)__ obtained by each one acting in their best interest, efficient?
 
-In economics, the notion of efficiency of interest is Pareto efficiency. We say that an allocation is __Pareto efficient__ if there exists no other allocation that is strictly better off for someone without being worse off for someone else. In other words, an efficient allocation is one that cannot be improved for someone without hurting someone else. In a market with no market failures, it can be shown that under mild conditions, a CEA is Pareto efficient. This is the first welfare theorem (FWT). Graphically, the Pareto efficient allocation lies at the tangency of any two ICs in the Edgeworth box. This means that such allocations are not unique, and in fact the locus of all __Pareto efficient allocations (PEA)__ forms the so-called __contract curve__. How come we found only one of them in the previous example? This is because which Pareto efficient allocation can be achieved by market forces alone depends on the initial endowment. If we want to alter the outcome, we need to modify the starting point. This is the idea behind the second welfare theorem (SWT).
+In economics, the notion of efficiency of interest is Pareto efficiency. We say that an allocation is __Pareto efficient__ if there exists no other allocation that is strictly better off for someone without being worse off for someone else. In other words, an efficient allocation is one that cannot be improved for someone without hurting someone else: any change to it penalizes at least an individual. In a market with no market failures, it can be shown that under mild conditions, a CEA is Pareto efficient. This is the first welfare theorem (FWT). Graphically, the Pareto efficient allocation lies at the tangency of two ICs in the Edgeworth box. This means that such allocations are not unique, and in fact the locus of all __Pareto efficient allocations (PEA)__ forms the so-called __contract curve__. How come we found only one of them in the previous example? This is because which Pareto efficient allocation can be achieved by market forces alone depends on the initial endowment. If we wish to alter the outcome, we need start differently. This is the idea behind the second welfare theorem (SWT).
 
-Another natural question that one might ask is why would an economy prefer a different Pareto efficient allocation? Why bother redistributing resources to incentivise the market to achieve a different allocation at all? It is because on top of efficiency, societies also care about equality. If one starts out with abundant resources, then market forces alone tend to lead to an efficient allocation that gives more to the haves and less to the have-nots. 
+Another natural question that one might ask is why would an economy prefer a different Pareto efficient allocation? Why bother redistributing resources to incentivise the market to achieve a different allocation at all? It is because on top of efficiency, societies also care about equality. If one starts out with abundant resources, then market forces alone tend to lead to an efficient allocation that gives more to those with more initial resources. In other words, competitive market forces tend to reinforce existing inequality.
 
 To sum up, the FWT tells us that when there are no market failures, the CEA is Pareto efficient. The SWT says that any Pareto efficient, i.e., any point on the contract curve, can be obtained by redistributing initial resources and then letting the market work (again under some conditions). Let us state these important results formally.
 
@@ -575,6 +578,7 @@ Every competitive equilibrium allocation is Pareto efficient.
 Consider an a efficient allocation $\bar{x}$ and a _redistribution_ of the initial endowment from $e$ to $\bar{e}$ such that $p\bar{e}^i = p\bar{x}^i$ for every individual $i=A, B$. Then every efficient allocation can be supported by a competitive equilibrium allocation.
 :::
 
+::: {#exm-EQM-SWT}
 Let us illustrate the SWT by continuing with @exm-EQM-exchange-eco. The condition for an allocation to be a CEA was:
 $$
 \begin{eqnarray}
@@ -595,6 +599,7 @@ But this is not the only PEA. For example, another PEA satisfying $x_2^i = 2 x_1
 $$
 \bar{x}^i \equiv (x_1^i, x_2^i) = (100, 200), \quad i=A,B.
 $$
+
 Can this this PEA emerge as a CEA? The SWT tells us yes. According to the SWT, we need to modify the initial endowments in such a way that the budget constraint still binds for each consumer:
 $$
 \begin{aligned}
@@ -628,7 +633,7 @@ e &= (100, 350, 100, 50) \\
 \end{aligned}
 $$
 Thus one way to redistribute is to tax $A$ an amount equivalent to 150 units of the first good and give them to $B$. 
-
+:::
 
 # General equilibrium with production
 
@@ -948,6 +953,10 @@ See @exr-LRPEQM. Observe the change in demand and equilibrium of the market.
 </details>
 :::
 
+::: {#exr-NoExcessDemand} 
+Show that if the market clearing condition in @def-GE is satisfied for $L-1$ markets then it is also satisfied for the remaining one. This follows from the Law of Walras. Thanks to this result, we have one fewer market to consider.
+:::
+
 ::: {#exr-PEPOpt}
 Consider a two-person two-good economy with the following preferences:
 $$
@@ -962,6 +971,18 @@ where $x_i$ and $y_i$ the amounts of good $x$ and good $y$ that individual $i$ c
 2. Define and compute the competitive equililibrium of this economy. Are the consumers better off with exchange (compared to eating their own endowments)?
 3. Define and solve the social planner's problem for this economy and determine the set of Pareto efficient allocations (the contract curve) of this economy. 
 4. Does the first welfare theorem hold for this economy? 
+:::
+
+::: {#exr-SWT}
+Show that in @exm-EQM-SWT, the general way to achieve the PEA as a CEA is by redistributing initial resources such that:
+$$
+\begin{aligned}
+e_1^A &= z \in [0, 200], \\
+e_2^A &= 400 - 2z, \\
+e_1^B &= 200 - z, \\
+e_2^B &= 2z.
+\end{aligned}
+$$
 :::
 
 

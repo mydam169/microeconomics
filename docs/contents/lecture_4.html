@@ -350,7 +350,7 @@ MR(q) = p(q) + p'(q)q &lt; p(q).
 <div id="fig-linDemand" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-linDemand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="20fb7859" class="cell" data-execution_count="5">
+<div id="246c25e6" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -382,7 +382,7 @@ Figure&nbsp;1: A monopoly with linear demand and constant marginal cost. The mon
 <div id="fig-Elasticity" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-Elasticity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="3f44da47" class="cell" data-execution_count="6">
+<div id="66810773" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -463,13 +463,15 @@ p^M = \frac{c}{1 - \frac{1}{\epsilon}},
 <ul>
 <li><span class="math inline">\(q_i\)</span> the output produced in plant <span class="math inline">\(i=\{1,2\}\)</span></li>
 <li><span class="math inline">\(Q = \sum_i q_i\)</span> the total output produced by the monopolist</li>
+<li><span class="math inline">\(C_i\)</span> plant <span class="math inline">\(i\)</span>th’s cost of production</li>
+<li><span class="math inline">\(R_i = p(Q)q_i\)</span> the total revenu of plant <span class="math inline">\(i\)</span>th</li>
 </ul>
 <p>The PMP is:</p>
 <p><span id="eq-PMP_multi"><span class="math display">\[
 \begin{aligned}
-\max_{q_1,q_2} \pi_1 + \pi_2 &amp;= R_1(q_1, q_2) - C_1(q_1) + R_2(q_1, q_2) - C_2(q_1) \\
-&amp;= p(q_1, q_2)q_1 - C_1(q_1) + p(q_1, q_2)q_2 - C_2(q_1) \\
-&amp;= p(q_1, q_2)(1_1 + q_2) - C_1(q_1) - C_2(q_1).
+\max_{q_1,q_2} \pi_1 + \pi_2 &amp;= R_1(q_1, q_2) - C_1(q_1) + R_2(q_1, q_2) - C_2(q_2) \\
+&amp;= p(q_1, q_2)q_1 - C_1(q_1) + p(q_1, q_2)q_2 - C_2(q_2) \\
+&amp;= p(q_1, q_2)(q_1 + q_2) - C_1(q_1) - C_2(q_2).
 \end{aligned}
 \tag{7}\]</span></span></p>
 <p>Differentiating w.r.t <span class="math inline">\(q_i\)</span> yields:</p>
@@ -516,7 +518,7 @@ Table&nbsp;1: Impacts of monopolies on welfare
 <div id="fig-SD-perfectComp" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SD-perfectComp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="6431502b" class="cell" data-execution_count="7">
+<div id="86ddfde5" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -534,7 +536,7 @@ Figure&nbsp;3: Welfare distribution in perfect competition
 <div id="fig-SDMon" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SDMon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="bc584fd0" class="cell" data-execution_count="8">
+<div id="a897e41d" class="cell" data-execution_count="8">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -561,7 +563,7 @@ Figure&nbsp;4: Welfare distribution in monopoly
 <div id="fig-elasticityDWL" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-elasticityDWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="4e7add0c" class="cell" data-execution_count="9">
+<div id="0f9b93a7" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -592,7 +594,7 @@ Figure&nbsp;5: Price-elasticity of demand and dead weight loss.
 <p>Monopolies cause a reduction in consumer welfare and a loss of market efficiency. It is a case of market failure. What can the government do to mitigate the consequences? In general it depends on the type of monopolies. A monopoly that arises and persists thanks to economies of scale (decreasing average cost) is called a <strong>natural monopoly</strong>.</p>
 <p>If the monopoly is not a natural monopoly, i.e., if they maintain their dominant position by anticompetitive or restrictive practices (e.g., exclusive dealing, tying, bundling, predatory pricing, etc.), then the general public approach is to try and break them by using antitrust laws.</p>
 <p>If it is a natural monopoly, then the government might attempt to regulate. Now the government faces a dilemma since it is more efficient for a single firm to serve the market thanks to economies of scale. For a natural monopoly the average cost is declining in output. Recall that for output levels for which the average cost is declining, the marginal cost is <em>less</em> than the average cost. If the government requires that the natural monopolist sets price equal to the marginal cost as if it were operating in a perfectly competitive market, it would incur a loss since this price would be below its average cost.</p>
-<p>One public solution is to allow natural monopolists to charge different prices to different groups of customers (e.g., different electricity/water rates depending on whether customers are businesses or households) in such a way that the losses incurred would be offset by the positive profits.</p>
+<p>One public solution is to allow natural monopolists to charge different prices to different groups of customers (e.g., different electricity/water rates depending on whether customers are businesses or households) in such a way that the losses incurred would be offset by the positive profits. This approach follows the so-called Ramsey-Boiteux’s rule, which proposes charging higher prices to groups with less elastic demand.</p>
 </section>
 <section id="monopsony" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Monopsony</h1>
@@ -655,7 +657,7 @@ L &amp;= -5 + \sqrt{325} \approx 13.
 <div id="fig-monopsony-DWL" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-monopsony-DWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="10ff3c59" class="cell" data-execution_count="10">
+<div id="28f5b519" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -696,6 +698,19 @@ p_M &amp;= \left(\frac{a}{q}\right)^{\frac{1}{\epsilon}}.
 </div>
 <div id="exr-multipliant" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 3</strong></span> Consider a multipliant monopoly producing in two different plants, each of which has total cost: <span class="math inline">\(C_i(q_i) = a_i + b_i q_i + \frac{1}{2}c_i q_i^2\)</span>, where <span class="math inline">\(a_i, b_i, c_i&gt;0\)</span>, <span class="math inline">\(i=\{1, 2\}\)</span>. The monopolist faces a linear demand curve given by <span class="math inline">\(p(Q) = A - Q\)</span> with <span class="math inline">\(Q=q_1 + q_2\)</span>. Determine the output of each plant and their joint profits.</p>
+</div>
+<div id="exr-PriceDisc" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Suppose that a monopolist with a constant marginal cost of 4 can identify two markets: <span class="math display">\[
+\begin{aligned}
+q_1 &amp;= 100 - 2p_1 \\
+q_2 &amp;= 120 - 3p_2.
+\end{aligned}
+\]</span></p>
+<ol type="1">
+<li>If the monopolist is allowed to charge different prices, what will be the quantity sold to each group of customers? the prices charged? the consumer surplus?</li>
+<li>If the monopolist is forced to charge a single price, what will this price be? What is the consumer surplus now?</li>
+<li>Compute the demand elasticities associated with the prices and quantities computed in the first question. How can one use the Ramsey-Boiteux’s rule to improve market efficiency?</li>
+</ol>
 </div>
 
 

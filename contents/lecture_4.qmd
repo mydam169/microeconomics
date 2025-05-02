@@ -310,14 +310,16 @@ Consider a monopolist producing the *same good in two different plants* (factori
 
 -   $q_i$ the output produced in plant $i=\{1,2\}$
 -   $Q = \sum_i q_i$ the total output produced by the monopolist
+-   $C_i$ plant $i$th's cost of production
+-   $R_i = p(Q)q_i$ the total revenu of plant $i$th
 
 The PMP is: 
 
 $$
 \begin{aligned}
-\max_{q_1,q_2} \pi_1 + \pi_2 &= R_1(q_1, q_2) - C_1(q_1) + R_2(q_1, q_2) - C_2(q_1) \\
-&= p(q_1, q_2)q_1 - C_1(q_1) + p(q_1, q_2)q_2 - C_2(q_1) \\
-&= p(q_1, q_2)(1_1 + q_2) - C_1(q_1) - C_2(q_1).
+\max_{q_1,q_2} \pi_1 + \pi_2 &= R_1(q_1, q_2) - C_1(q_1) + R_2(q_1, q_2) - C_2(q_2) \\
+&= p(q_1, q_2)q_1 - C_1(q_1) + p(q_1, q_2)q_2 - C_2(q_2) \\
+&= p(q_1, q_2)(q_1 + q_2) - C_1(q_1) - C_2(q_2).
 \end{aligned}
 $${#eq-PMP_multi}
 
@@ -528,7 +530,7 @@ Now the government faces a dilemma since it is more efficient for a single firm 
 For a natural monopoly the average cost is declining in output. Recall that for output levels for which the average cost is declining, the marginal cost is _less_ than the average cost. 
 If the government requires that the natural monopolist sets price equal to the marginal cost as if it were operating in a perfectly competitive market, it would incur a loss since this price would be below its average cost.
 
-One public solution is to allow natural monopolists to charge different prices to different groups of customers (e.g., different electricity/water rates depending on whether customers are businesses or households) in such a way that the losses incurred would be offset by the positive profits. 
+One public solution is to allow natural monopolists to charge different prices to different groups of customers (e.g., different electricity/water rates depending on whether customers are businesses or households) in such a way that the losses incurred would be offset by the positive profits. This approach follows the so-called Ramsey-Boiteux's rule, which proposes charging higher prices to groups with less elastic demand.
 
 # Monopsony
 
@@ -690,4 +692,18 @@ $$
 
 ::: {#exr-multipliant}
 Consider a multipliant monopoly producing in two different plants, each of which has total cost: $C_i(q_i) = a_i + b_i q_i + \frac{1}{2}c_i q_i^2$, where $a_i, b_i, c_i>0$, $i=\{1, 2\}$. The monopolist faces a linear demand curve given by $p(Q) = A - Q$ with $Q=q_1 + q_2$. Determine the output of each plant and their joint profits.
+:::
+
+::: {#exr-PriceDisc}
+Suppose that a monopolist with a constant marginal cost of 4 can identify two markets:
+$$
+\begin{aligned}
+q_1 &= 100 - 2p_1 \\
+q_2 &= 120 - 3p_2.
+\end{aligned}
+$$
+
+1. If the monopolist is allowed to charge different prices, what will be the quantity sold to each group of customers? the prices charged? the consumer surplus?
+2. If the monopolist is forced to charge a single price, what will this price be? What is the consumer surplus now? 
+3. Compute the demand elasticities associated with the prices and quantities computed in the first question. How can one use the Ramsey-Boiteux's rule to improve market efficiency?
 :::

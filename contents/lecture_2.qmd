@@ -411,10 +411,10 @@ According to the KTT theorem, if $(L^*, K^*)$ is a solution to the CMP, then the
 
 $$
 \begin{aligned}
-&\mathcal{L}_L (L^*, K^*, \lambda^*) = 0, \quad
+&\mathcal{L}_L (L^*, K^*, \lambda^*) = 0, \:
 \mathcal{L}_K (L^*, K^*, \lambda^*) = 0, \\
 % &\quad \quad \quad \text{ with equality for interior solutions }\\
-&\lambda^* \geq 0, \quad \lambda^*(q(L^*, K^*) - m) = 0.
+&\lambda^* \geq 0, \: q(L^*, K^*) - m \geq 0, \:  \lambda^*[q(L^*, K^*) - m] = 0.
 \end{aligned}
 $${#eq-KT_cmp}
     
