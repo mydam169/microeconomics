@@ -888,12 +888,14 @@ Consider again the Cournot model with identical linear costs and linear demand f
 
 ::: {#exr-cournotLerner}
 Consider an oligopoly with $m$ firms and unit-elastic demand $q(p) = 1/p$. Suppose that the firms have constant marginal costs satisfying $c_1 \leq c_2 \leq ... \leq c_m$. They engage in Cournot competition.
+
 1. Let $s_i$ denote the market share of firm $i$, defined by $s_i = q_i/Q$ where $q_i$ is the output of firm $i$ and $Q$ is the total output. Show that in equilibrium the market share of each firm is equal to its Lerner index.
 2. Show that in equilibrium, the profit of firm $i$ is equal to $s_i^2$. Hence the industry profit is equal to the Herfindahl index $H=\sum_{i=1}^m s_i^2$
 :::
 
 ::: {#exr-merger}
 Consider Cournot competition with $n$ identical firms facing a constant marginal cost $c>0$. The market demand is linear $p(q) = a - bq$ where $a,b>0$ and $q$ is total output. Assume that $a>c$.
+
 1. Calculate industry output and prices as well as output per firm in equilibrium. What is the total surplus?
 2. Let $m$ out of $n$ firms merge. Show that the merger is profitable for the merged firms if and only if it involves a pre-merger market share of 80 percent.
 3. Show that each of the $n-m$ non-merged firms is better off after the merger.
