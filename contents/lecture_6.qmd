@@ -690,3 +690,9 @@ When an accident occurs, individual $i$ incurs a cost of damage $c^i > 0.$
   
 Determine the competitive equilibrium speeds and the socially optimal ones. Which one is greater? If the government wishes to restore social effciency by imposing a fine, how large must it be? For simplicity assume that $p_i = \beta_i = const>0.$ 
 :::
+
+::: {#exr-ratRace-exo85}
+Consider a group of $n$ students. Suppose each student $i$ puts in $h_i$ hours of work on her classes which involves a disutility of $h_i^2/2$. Her benefits (her grades) depend on how she performs relative to her peers and take the form $u\left(\frac{h_i}{\bar{h}}\right)$ where $\bar{h} = \sum_{i=1}^n h_i$ is the average number of hours devoted to schoolwork of all students. Assume that $u$ is increasing anc concave.
+1. Determine the equilibrium number of hours (the Nash equilibrium)
+2. Determine the Pareto-efficient number of hours and compare it to the Nash equilibrium found in the previous part. Comment on the difference.
+:::
