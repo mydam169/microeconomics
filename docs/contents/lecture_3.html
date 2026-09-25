@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="My Dam">
+
+<title>Chapter 3. Equlibrium – Intermediate Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../contents/lecture_4.html" rel="next">
+<link href="../contents/lecture_2.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b851f334af3abb447df18392212cf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1ca1dd62c07aaf28e56d553fd4136965.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-1b851f334af3abb447df18392212cf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Chapter 3. Equlibrium – Intermediate Microeconomics">
+<meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
+<meta property="og:image" content="lecture_3_files/figure-html/cell-6-output-1.png">
+<meta property="og:site_name" content="Intermediate Microeconomics">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Intermediate Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_3.html">Chapter 3</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Chapter 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
+   
+  <ul>
+  <li><a href="#perfectly-competitive-markets" id="toc-perfectly-competitive-markets" class="nav-link active" data-scroll-target="#perfectly-competitive-markets"><span class="header-section-number">1</span> Perfectly competitive markets</a></li>
+  <li><a href="#firms-profit-maxmimization-problem-pmp" id="toc-firms-profit-maxmimization-problem-pmp" class="nav-link" data-scroll-target="#firms-profit-maxmimization-problem-pmp"><span class="header-section-number">2</span> Firm’s profit maxmimization problem (PMP)</a>
+  <ul class="collapse">
+  <li><a href="#the-pmp" id="toc-the-pmp" class="nav-link" data-scroll-target="#the-pmp"><span class="header-section-number">2.1</span> The PMP</a></li>
+  <li><a href="#necessary-conditions" id="toc-necessary-conditions" class="nav-link" data-scroll-target="#necessary-conditions"><span class="header-section-number">2.2</span> Necessary conditions</a></li>
+  <li><a href="#sufficient-condition" id="toc-sufficient-condition" class="nav-link" data-scroll-target="#sufficient-condition"><span class="header-section-number">2.3</span> Sufficient condition</a></li>
+  <li><a href="#examples" id="toc-examples" class="nav-link" data-scroll-target="#examples"><span class="header-section-number">2.4</span> Examples</a></li>
+  <li><a href="#long-run-vs-short-run-firms-supply" id="toc-long-run-vs-short-run-firms-supply" class="nav-link" data-scroll-target="#long-run-vs-short-run-firms-supply"><span class="header-section-number">2.5</span> Long-run vs short-run firm’s supply</a></li>
+  </ul></li>
+  <li><a href="#partial-equilibrium" id="toc-partial-equilibrium" class="nav-link" data-scroll-target="#partial-equilibrium"><span class="header-section-number">3</span> Partial Equilibrium</a>
+  <ul class="collapse">
+  <li><a href="#short-run-equilibrium" id="toc-short-run-equilibrium" class="nav-link" data-scroll-target="#short-run-equilibrium"><span class="header-section-number">3.1</span> Short-run equilibrium</a></li>
+  <li><a href="#long-run-equilibrium" id="toc-long-run-equilibrium" class="nav-link" data-scroll-target="#long-run-equilibrium"><span class="header-section-number">3.2</span> Long-run equilibrium</a></li>
+  </ul></li>
+  <li><a href="#general-equilibrium-in-a-pure-exchange-economy" id="toc-general-equilibrium-in-a-pure-exchange-economy" class="nav-link" data-scroll-target="#general-equilibrium-in-a-pure-exchange-economy"><span class="header-section-number">4</span> General equilibrium in a pure exchange economy</a></li>
+  <li><a href="#welfare-theorems" id="toc-welfare-theorems" class="nav-link" data-scroll-target="#welfare-theorems"><span class="header-section-number">5</span> Welfare theorems</a></li>
+  <li><a href="#general-equilibrium-with-production" id="toc-general-equilibrium-with-production" class="nav-link" data-scroll-target="#general-equilibrium-with-production"><span class="header-section-number">6</span> General equilibrium with production</a>
+  <ul class="collapse">
+  <li><a href="#adding-production-to-the-economy" id="toc-adding-production-to-the-economy" class="nav-link" data-scroll-target="#adding-production-to-the-economy"><span class="header-section-number">6.1</span> Adding production to the economy</a></li>
+  <li><a href="#ump" id="toc-ump" class="nav-link" data-scroll-target="#ump"><span class="header-section-number">6.2</span> UMP</a></li>
+  <li><a href="#pmp" id="toc-pmp" class="nav-link" data-scroll-target="#pmp"><span class="header-section-number">6.3</span> PMP</a></li>
+  <li><a href="#the-cea" id="toc-the-cea" class="nav-link" data-scroll-target="#the-cea"><span class="header-section-number">6.4</span> The CEA</a></li>
+  </ul></li>
+  <li><a href="#the-social-planners-problem-spp" id="toc-the-social-planners-problem-spp" class="nav-link" data-scroll-target="#the-social-planners-problem-spp"><span class="header-section-number">7</span> The social planner’s problem (SPP)</a>
+  <ul class="collapse">
+  <li><a href="#the-spp-in-a-pure-exchange-economy" id="toc-the-spp-in-a-pure-exchange-economy" class="nav-link" data-scroll-target="#the-spp-in-a-pure-exchange-economy"><span class="header-section-number">7.1</span> The SPP in a pure-exchange economy</a></li>
+  <li><a href="#the-pea-in-a-pure-exchange-economy" id="toc-the-pea-in-a-pure-exchange-economy" class="nav-link" data-scroll-target="#the-pea-in-a-pure-exchange-economy"><span class="header-section-number">7.2</span> The PEA in a pure exchange economy</a></li>
+  <li><a href="#the-spp-in-a-production-economy" id="toc-the-spp-in-a-production-economy" class="nav-link" data-scroll-target="#the-spp-in-a-production-economy"><span class="header-section-number">7.3</span> The SPP in a production economy</a></li>
+  <li><a href="#the-pea-in-a-production-economy" id="toc-the-pea-in-a-production-economy" class="nav-link" data-scroll-target="#the-pea-in-a-production-economy"><span class="header-section-number">7.4</span> The PEA in a production economy</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">8</span> Exercises</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_3.html">Chapter 3</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 3. Equlibrium</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>My Dam <a href="mailto:my-thi-tra.dam@universite-paris-saclay.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In this chapter we will be examining market equilibria. We shall begin by deriving the market supply curve, which results from firms’ optimal production decision. Likewise, market demand results from consumers’ optimal consumption decision. Searching for an equilibrium is essentially searching for prices that equalize demand and supply in the market. When a single market is considered in isolation, its equilibrium is a partial one. When all markets are considered, we speak of a general equilibrium. In a pure exchange economy, all markets are markets of consumption goods. In a production economy, the relevant markets include those of factors of production such as labor, capital and land. In this course, we will be mostly interested in general equilibria in a pure exchange economy.</p>
+<section id="perfectly-competitive-markets" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Perfectly competitive markets</h1>
+<p>Our markets in this chapter are perfectly competitive, their features are:</p>
+<ul>
+<li><p>Fragmentation: large number of producers and consumers whose decisions (to produce or consume) do not influence market prices of the goods. In other words, all market participants are price-takers</p></li>
+<li><p>Undifferentiated products: products of all firms in the same industry are regarded as identical by consumers</p></li>
+<li><p>Perfect information: information on prices are transparent and freely accessible by consumers</p></li>
+<li><p>Free entry and exit: in the long run (LR), firms can freely enter and exit</p></li>
+</ul>
+<p>Example: Wheat, corn, or agricultural commodities</p>
+</section>
+<section id="firms-profit-maxmimization-problem-pmp" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Firm’s profit maxmimization problem (PMP)</h1>
+<section id="the-pmp" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-pmp"><span class="header-section-number">2.1</span> The PMP</h2>
+<div id="def-PMP" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Firm’s PMP)</strong></span> Consider a price-taking firm in the market of the output good. Given <span class="math inline">\(p\)</span>, the market price of the good, the firm’s PMP is: <span class="math display">\[
+\max_{q\geq 0} \pi = R(q) - C(q) = pq - C(q),
+\]</span> where <span class="math inline">\(C(q)\)</span> is the total cost function derived from the CMP introduced previously and <span class="math inline">\(R(q)\)</span> denotes the total revenue.</p>
+</div>
+<p>Observe that the PMP includes the CMP as a first step.</p>
+</section>
+<section id="necessary-conditions" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="necessary-conditions"><span class="header-section-number">2.2</span> Necessary conditions</h2>
+<p>According to the KT conditions, either</p>
+<ul>
+<li><p>we have a corner solution <span class="math inline">\(q=0\)</span>, or</p></li>
+<li><p>We have an interior solution <span class="math inline">\(q&gt;0\)</span> satisfying the FOC:</p>
+<p><span class="math display">\[
+      \pi'(q) = 0 \iff p = C'(q) \\
+      \iff p = MC(q).
+  \]</span></p></li>
+<li><p>Observe that for a price-taking firm, the marginal revenue is the market price of the good (as we shall see later, for a firm with market power, the marginal revenue is <em>less</em> than the price)</p></li>
+<li><p>The FOC above implies that the firm produces up to a point where the marginal revenue (marginal benefit) is equal to the marginal cost.</p></li>
+</ul>
+</section>
+<section id="sufficient-condition" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sufficient-condition"><span class="header-section-number">2.3</span> Sufficient condition</h2>
+<ul>
+<li><p>The FOC is sufficient for a max if the profit function is concave in output. This is called the second-order condition (SOC)</p></li>
+<li><p>We have:</p>
+<p><span class="math display">\[
+  \pi''(q) = -C''(q),
+  \]</span></p>
+<p>implying that the SOC is satisfied if the cost function is convex in <span class="math inline">\(q\)</span> (i.e., if the MC is increasing in output)</p></li>
+</ul>
+</section>
+<section id="examples" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="examples"><span class="header-section-number">2.4</span> Examples</h2>
+<div id="exm-ESCex" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> Let us solve the PMP of a price-taking firm in the output market (and inputs market). Assume that it has a Cobb-Douglas production function defined by <span class="math inline">\(q(L, K) = L^{1/2}K^{1/2}\)</span>. The factor prices are <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span> as before.</p>
+<ul>
+<li><p>Step 1: Solve the CMP:</p>
+<p><span class="math display">\[
+  \begin{aligned}
+  &amp;\min_{K,L} 40L + 10K \\
+  \text{s.t. } &amp;q(L, K) = L^{1/2}K^{1/2} \geq q,
+  \end{aligned}
+  \]</span></p>
+<p>for some target output level <span class="math inline">\(q\)</span>.</p>
+<ul>
+<li>The cost function can be obtained by replacing the solutions of the CMP into the objective function. This yields:</li>
+</ul>
+<p><span class="math display">\[
+  C(q) = 40q.
+  \]</span></p></li>
+<li><p>Step 2: Substitute <span class="math inline">\(C(q)\)</span> obtained from the CMP into the PMP so that this problem reads:</p>
+<p><span class="math display">\[
+  \max_{q\geq0} \pi(q) = pq - 40q = (p - 40)q.
+  \]</span></p>
+<ul>
+<li><p>Clearly if <span class="math inline">\(p&lt;40\)</span> the firm should shut down</p></li>
+<li><p>If <span class="math inline">\(p\geq 40\)</span>, the firm produces as much as possible since the profit is then incresing in output</p></li>
+<li><p>We thus obtain a perfectly elastic individual supply curve</p></li>
+<li><p>Note that this is the long-run individual supply curve since all inputs are variable. One can also verify that the long-run cost function does not have a fixed cost.</p></li>
+</ul></li>
+</ul>
+<div id="fig-PEScurve" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-PEScurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="d4f811e0" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-6-output-1.png" width="361" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PEScurve-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A perfectly elastic long-run supply curve
+</figcaption>
+</figure>
+</div>
+</div>
+<div id="exm-linearSC" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2</strong></span> Suppose we have obtained a convex cost function for the firm of the form: <span class="math display">\[
+C(q) = 0.5 a q^2 + bq + c,
+\]</span> where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> and <span class="math inline">\(c\)</span> are strictly positive constants. Observe that this is a short-run cost function since fixed costs (<span class="math inline">\(c\)</span>) are present. The profit maximizing condition for the firm is: <span id="eq-optimal-SR-supply"><span class="math display">\[
+C'(q) = a q + b = p \iff q = \frac{p - b}{a}.
+\tag{1}\]</span></span></p>
+<p>To determine the short-run supply curve of the firm, we need to understand the nature of the fixed costs represented by <span class="math inline">\(c.\)</span> In the short-run, firms are typically do not try to make positive profits, i.e., they do not need to sell each unit for at least their average total cost. Firms only need to recuperate the non-sunk part of the fixed cost. <strong>Sunk</strong> costs are fixed costs that cannot be recovered by the firm and thus should not affect its decision on future output. For example, advertising costs once spent cannot be recovered. Lease payments, on the other hand, are <strong>non-sunk</strong> fixed costs can be recovered by sublease if the firm eventually decides to shut down.</p>
+<p>For simplicity, suppose that <span class="math inline">\(c\)</span> is non-sunk. The average total cost in this case is equal to the average non-sunk total cost (ANSC).The firm produces so long as the market price is above the ANSC: <span id="eq-positive-prof-cond"><span class="math display">\[
+\begin{aligned}
+\pi(q^*) &gt; 0 &amp;\iff p &gt; \frac{C(q^*)}{q^*} \\
+&amp;\iff p &gt; 0.5 a q^* + b + \frac{c}{q^*} \\
+&amp;\iff p &gt; 0.5 a \frac{p - b}{a} + b + \frac{ca}{p - b} \\
+&amp;\iff (p - b)^2 &gt; 2ca \\
+&amp;\iff p &gt; b + \sqrt{2ca}.
+\end{aligned}
+\tag{2}\]</span></span></p>
+<p>Observe that the last line follows from the fact that <span class="math inline">\(q^* &gt; 0\)</span> if and only if <span class="math inline">\(p &gt; b\)</span> in view of <a href="#eq-optimal-SR-supply" class="quarto-xref">Equation&nbsp;1</a>. This condition tells us that in the SR, the firm suffers from a fixed cost (<span class="math inline">\(c\)</span>), which might prevent it from earning positive profits even if it is operating optimally. Note that <span class="math inline">\(p &gt; b + \sqrt{2ca}\)</span> is equivalent to <span class="math inline">\(q &gt; \sqrt{2c/a}.\)</span></p>
+<div id="fig-profFunc" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-profFunc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="6c7a09f2" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-7-output-1.png" width="353" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-profFunc-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Profit as a function of market price
+</figcaption>
+</figure>
+</div>
+<div id="fig-linearSC" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linearSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="9a0c4124" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-8-output-1.png" width="388" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linearSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: A SR upward sloping supply curve <span class="math inline">\(q = \frac{p - b}{a}\)</span> for <span class="math inline">\(p &gt; b + \sqrt{2ac}\)</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="long-run-vs-short-run-firms-supply" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="long-run-vs-short-run-firms-supply"><span class="header-section-number">2.5</span> Long-run vs short-run firm’s supply</h2>
+<p>The profit maximizing condition for a competitive firm is that its marginal cost is equal to the market price. This is common for the firm both in the long run and in the short run. The difference lies in the shutdown condition.</p>
+<p>In the short run, firms shutdown if the price cannot cover the average non-sunk costs (ANSC), implying that supply will be:</p>
+<ul>
+<li>zero for all levels of output for which the marginal cost (which is equal to the market price under profit maximizing) is <em>below</em> the ANSC curve, and</li>
+<li>the part of the marginal cost that is <em>above</em> the ANSC (when output is positive)</li>
+</ul>
+<div id="fig-SRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-SRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="0d1fd13b" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-9-output-1.png" width="337" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: SR supply curve
+</figcaption>
+</figure>
+</div>
+<p>In the long run, all costs are variable. The average cost (AC) is just the average variable cost (AVC). The firm produces so long as the market price can cover the AVC (or the AC), hence the LR supply curve will be:</p>
+<ul>
+<li>zero for all levels of output for which the marginal cost (which is equal to the market price under profit maximizing) is <em>below</em> the AC (or AVC) curve, and</li>
+<li>the part of the marginal cost that is <em>above</em> the AC (or AVC)</li>
+</ul>
+<p>Note that the SR firms might suffer from losses due to non-sunk fixed costs, but so long as the price can cover the ANSC, it is optimal for them to produce. In the LR, however, the firm produces so long as it earns positive profits and shuts down otherwise.</p>
+<div id="fig-LRSC" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-LRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="67123a75" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-10-output-1.png" width="337" height="356" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-LRSC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: LR supply curve
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="partial-equilibrium" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Partial Equilibrium</h1>
+<p>The equilibrium of a market is a vector of price and quantity for which the market supply and demand are equal. In other words, the equilibrium price is the price that clears the market by equating demand and supply. We have already discussed the market demand curve in the first lecture. We now examine the supply side of the market for which there exists differences between the long run and the short run.</p>
+<section id="short-run-equilibrium" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="short-run-equilibrium"><span class="header-section-number">3.1</span> Short-run equilibrium</h2>
+<p>In the short run, the market supply curve is an horizontal aggregation of individual supplies. In other words, to construct the SR market supply curve, one adds up the quantities supplied by all the firms in the market at each given price. The market demand curve is constructed in the same manner. By equating supply and demand, we can determine the market equilibrium.</p>
+<div id="exm-SREQ" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3</strong></span> Suppose the market demand is given by <span class="math inline">\(q^D(p) = 100 - 2p.\)</span> Consider a market with <span class="math inline">\(N\)</span> identical firms, each facing the same cost function <span class="math inline">\(C(q)=10−5q+2q^2.\)</span> In view of <a href="#exr-SRSupply" class="quarto-xref">Exercise&nbsp;1</a>, the SR market supply is given by: <span class="math display">\[
+q^S(p) =
+\begin{cases} N(p/4 + 5/4) &amp; p &gt; 4\sqrt{2.5}-5\approx 1.32 \\
+                     0 &amp; \mathrm{otherwise.}
+\end{cases}
+\]</span></p>
+<p>In equilibrium <span class="math inline">\(q^S(p) = q^D(p)\)</span>: <span class="math display">\[
+\begin{aligned}
+100 - 2p &amp;= N(p/4 + 5/4) \\
+p &amp;= \frac{5(80 - N)}{8 + N}.
+\end{aligned}
+\]</span> Hence the market price is a decreasing function of the number of firms. Knowing the shutdown price, we can determine the maximum number of firms that can exist in this market: <span class="math display">\[
+\frac{5(80 - N)}{8 + N} = 1.32 \iff N = 61.6.
+\]</span></p>
+</div>
+<p>The short-run equilibrium quantity is:</p>
+<p><span class="math display">\[
+q^* = 100 - 2p^* = \frac{110N}{8 + N}, \quad N \leq 61.
+\]</span></p>
+<p>Hence given the number of firms in the market, we can determine its SR supply curve, which together with the market demand curve defines the equilibrium price and quantity. The market shuts down if <span class="math inline">\(N\)</span> is too large.</p>
+</section>
+<section id="long-run-equilibrium" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="long-run-equilibrium"><span class="header-section-number">3.2</span> Long-run equilibrium</h2>
+<p>In a competitive market, firms can freely enter or exit. If there is an opportunity to make <strong>economic profits</strong> in a market, firms will enter, pushing down market prices and drive away profits. Note that making profits does not imply making economic profits. Economic profits take into account the opportunity cost of the firm. For instance, if leaving money in a bank earns an interest of 5% per month and the firm is generating less than 5% return on investment, it is not making economic profits even though it is making profits. A long-run equilibrium is reached when the following conditions are satisfied:</p>
+<ol type="1">
+<li>Every firm is <strong>maximizing profits</strong>: <span class="math inline">\(p=MC(q)\)</span></li>
+<li>Each firm makes <strong>zero economic profits</strong>: <span class="math inline">\(p=AC(q)\)</span>. This means that firms make the same profits in other competitive markets (hence no incentives for other firms to enter or for existing firms to exit)</li>
+<li>The market clears: market demand equal to LR market supply at the equilibrium price</li>
+</ol>
+<p>Hence in a LR equilibrium, firms are doing the best they can do in the market which they have no incentives to leave and no other firms have incentives to enter because of zero economic profits, and the price is such that supply is equal to demand.</p>
+<div class="{exm-LRPartialEQM}">
+<p>Consider a perfectly competitive industry populated by identical firms with the cost function <span class="math inline">\(C(q)=10 - 5q + 2q^2\)</span>. We would like to determine the long-run equilibrium of the market as well as the equilibrium number of firms operating in it.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>Denote the LR equilibrium quantity, price and market size <span class="math inline">\(q^*\)</span>, <span class="math inline">\(p^*\)</span> and <span class="math inline">\(N^*,\)</span> respectively.</p>
+<ul>
+<li><p>Since each firm in the market sets <span class="math inline">\(MC(q_i^*) = AC(q_i^*)\)</span>: <span class="math display">\[
+  \begin{aligned}
+  -5 + 4 q^*_i &amp;= \frac{10}{q_i^*} - 5 + 2 q_i^* \\
+  q_i^* &amp;= \sqrt{5} \approx 2.24.
+  \end{aligned}
+  \]</span></p></li>
+<li><p>Since <span class="math inline">\(MC(q_i^*) = p^*\)</span>, we can deduce the LR equilibrium market price: <span class="math display">\[
+  p^* = -5 + 4 q^*_i = -5 + 4 \sqrt{5} \approx 3.94
+  \]</span></p></li>
+<li><p>Equilibirum quantity can be found using the market demand equation: <span class="math display">\[
+  q^* = 100 - 2p^* \approx 92.11
+  \]</span></p></li>
+<li><p>The number of active firms in the LR: <span class="math display">\[
+  N^* = \frac{q^*}{q_i^*} \approx 41.19
+  \]</span></p></li>
+<li><p>Hence in the LR equilibrium, the price will be about <span class="math inline">\(\$3.94\)</span> per unit. At this price, about <span class="math inline">\(92\)</span> units will be produced by about <span class="math inline">\(41\)</span> firms.</p></li>
+</ul>
+</div>
+</section>
+</section>
+<section id="general-equilibrium-in-a-pure-exchange-economy" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> General equilibrium in a pure exchange economy</h1>
+<p>The partial equlibrium we consider above concerns a single market. In a general equilibrium analysis, we examine all markets at the same time, taking into account the interconnectedness among different markets. We shall restrict our attention to the case of an exchange economy with two consumers and two consumption goods. Each individual has an initial endowment and they can trade with one another if they wish.</p>
+<p>A list or a vector of <strong>endowments</strong> keeps track of the amount of each good each consumer can enjoy when they do not trade: <span class="math display">\[
+e \equiv (e_1^A, e_2^A;e_1^B, e_2^B).
+\]</span></p>
+<p>The Edgeworth box is a useful tool to represent an exchange economy with two consumers and two goods. The width and length of the box represent the total endowment of each good.</p>
+<div id="fig-EWbox" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-EWbox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="40a4d5c8" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_3_files/figure-html/cell-11-output-1.png" width="517" height="508" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-EWbox-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: An Edgeworth box with two goods and two consumers in a pure exchange economy. The total endownment of each good is 10 units. At the intial endowment, agent A has 2 units of <span class="math inline">\(x_1\)</span> and 8 units of <span class="math inline">\(x_2\)</span> whereas agent B has 8 units of <span class="math inline">\(x_1\)</span> and 2 units of <span class="math inline">\(x_2\)</span>.
+</figcaption>
+</figure>
+</div>
+<p>An <strong>allocation</strong> lists the amount of each good that each consumer consumes: <span class="math display">\[
+x \equiv (x_1^A, x_2^A, x_1^B, x_2^B).
+\]</span></p>
+<p>Note that <span class="math inline">\(x\)</span> can be different from <span class="math inline">\(e\)</span> with trade. An allocation is <strong>feasible</strong> if the total demand/allocation of each good does not exceed its total supply/endowment. In an economy of <span class="math inline">\(N\)</span> consumers and <span class="math inline">\(L\)</span> goods, this means: <span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^N x^i_j \leq \sum_{i=1}^N e^i_j,\quad  j=1,\dots,L.
+\end{aligned}
+\]</span></p>
+<p>In our case of interest <span class="math inline">\(i\in\{A, B\}\)</span> and <span class="math inline">\(L=2.\)</span> Observe that any point inside or on the side of the Edgeworth box is feasible.</p>
+<div id="def-GE" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (General equilibrium in an exchange economy)</strong></span> We say that a price vector <span class="math inline">\(p\in\mathbb{R^L_{++}}\)</span> and an allocation <span class="math inline">\(x\in\mathbb{R^L_{+}}\)</span> constitute a competitive general equilibrium in an exchange economy if:</p>
+<ol type="1">
+<li>The allocation <span class="math inline">\(x\)</span> is feasible</li>
+<li>Given prices, <span class="math inline">\(x\)</span> solves the UMP of every consumer</li>
+<li>The equilibrium price <span class="math inline">\(p\)</span> clears all markets. This means that the aggregate demand is equal to aggregate supply for each good:<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="math display">\[
+q_j^D(p_j) = q_j^S(p_j),\quad \forall j=1,\dots,L.
+\]</span></li>
+</ol>
+</div>
+<p>Recall that for each consumer that has an interior solultion to their UMP, the marginal utility per dollar is equalized across the goods. Mathematically:</p>
+<p><span id="eq-EQMfoc1"><span class="math display">\[
+    \frac{U^i_k(x^*)}{p_k} = \frac{U^i_l(x^*)}{p_l},
+\tag{3}\]</span></span></p>
+<p>where <span class="math inline">\(U^i_k(x^*)\)</span> denotes the partial derivative of <span class="math inline">\(U^i\)</span>, the utility function of consumer <span class="math inline">\(i\)</span> with respect to good <span class="math inline">\(k\)</span>, evaluated at the optimal consumption bundle <span class="math inline">\(x^{*}\)</span> of this person, and <span class="math inline">\(p_k\)</span> is the price of good <span class="math inline">\(k\)</span>. This condition must hold for all goods <span class="math inline">\(k,l=1,\dots,L\)</span> and for every individual <span class="math inline">\(i=1,\dots,N\)</span>. Observe that <a href="#eq-EQMfoc1" class="quarto-xref">Equation&nbsp;3</a> is equivalent to:</p>
+<p><span id="eq-EQMfoc2"><span class="math display">\[
+% \begin{aligned}
+    % \frac{U^i_k(x^*)}{U^i_l(x^*)} &amp;= \frac{p_k}{p_l} \\
+    MRS^i_{k,l}(x^*) = \frac{p_k}{p_l}, \quad\forall i=1,\dots,N.
+% \end{aligned}
+\tag{4}\]</span></span></p>
+<p>Hence in equilibrium, the MRS is equal to the price ratio for each individual. This condition together with binding budget constraints will give us the optimal allocation as a function of prices (or more precisely price ratios), which can in turn be determined by the market clearning conditions. Let us look at an example.</p>
+<div id="exm-EQM-exchange-eco" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4</strong></span> Consider two consumers with identical preferences represented by a Cobb-Douglas utility function: <span class="math display">\[
+u(x_1, x_2) = x_1 x_2.
+\]</span> Their initial endowment is:</p>
+<p><span class="math display">\[
+\begin{eqnarray}
+e^A &amp;=&amp; (100, 350) \\
+e^B &amp;=&amp; (100, 50)
+\end{eqnarray}
+\]</span></p>
+<p>In autarky each individual can always consumer their endowments. The question is, can they do better with trade? If yes, how much (the allocation), and at which terms (the price ratio)? Let us first solve each individual’s UMP, which is: <span class="math display">\[
+\begin{aligned}
+&amp;\max_{x^i} u(x^i) = x_1^i x_2^i,\\
+&amp;\text{s.t. } px^i \leq pe^i,\quad i=A,B.
+\end{aligned}
+\]</span></p>
+<p>In optimality: <span id="eq-FOCexm"><span class="math display">\[
+MRS^i_{1,2} = \frac{p_1}{p_2} \iff p_1x_1^i = p_2x_2^i.
+\tag{5}\]</span></span></p>
+<p>The budget constraints bind, implying: <span id="eq-BC"><span class="math display">\[
+\begin{aligned}
+px^i &amp;= pe^i \\
+\end{aligned}
+\tag{6}\]</span></span></p>
+<p><a href="#eq-FOCexm" class="quarto-xref">Equation&nbsp;5</a> and <a href="#eq-BC" class="quarto-xref">Equation&nbsp;6</a> provide a system of two equations in two unknowns for each consumer. Solving this system yields: <span id="eq-OptAll"><span class="math display">\[
+\begin{aligned}
+x_1^i &amp;= \frac{pe^i}{2p_1}, \quad i=A,B \\
+x_2^i &amp;= \frac{pe^i}{2p_2}, \quad i=A,B. \\
+\end{aligned}
+\tag{7}\]</span></span></p>
+<p>In order to solve for the price ratio, we only need to consider the market clearing condition for <span class="math inline">\(L-1\)</span> markets, which is just a single market in this example. Let us consider this condition for the market of <span class="math inline">\(x_1\)</span>: <span class="math display">\[
+\begin{aligned}
+x_1^A + x_1^B &amp;= e_1^A + e_1^B \\
+\frac{pe^A + pe^B}{2p_1} &amp;= e_1^A + e_1^B \\
+p_2(e^A_2 + e^B_2) &amp;= p_1(e_1^A + e_1^B)
+\end{aligned}
+\]</span></p>
+<p><span id="eq-OptPrice"><span class="math display">\[
+\frac{p_2}{p_1} = \frac{e_1^A + e_1^B}{e_2^A + e_2^B}.
+\tag{8}\]</span></span> Substituting the specific values of endownments into <a href="#eq-OptAll" class="quarto-xref">Equation&nbsp;7</a> and <a href="#eq-OptPrice" class="quarto-xref">Equation&nbsp;8</a>, we obtain the equilibrium allocation and price ratio. In particular:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x_1^A, x_2^A) &amp;= (137.5,275), \\
+(x_1^B, x_2^B) &amp;= (62.5,125), \\
+\frac{p_2}{p_1} &amp;=\frac{1}{2}.
+\end{aligned}
+\]</span></p>
+<p>Observe that in equilibrium, the first good is twice as valuable as the first one. This is no coincidence: each consumer extracts the same utility from each good, and yet the second one is twice as abundant as the first.</p>
+</div>
+<div id="rem-RemQM" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em>. </span>Note that in a market of <span class="math inline">\(L\)</span> goods, one good is chosen as a numeraire and the price ratios give us the prices of the other goods in the units of the numeraire. In a sense, this gives us the <em>real</em> prices of goods, which, rather than <em>nominal</em> prices, matter for optimal allocation. One can verify this intuition quickly by imagining a situation when prices double for all goods (i.e., water raises all boats by the same proportion): the nominal value of wealth doubles, but so does the cost of consumption, hence the optimal allocation should not be modified.</p>
+</div>
+</section>
+<section id="welfare-theorems" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Welfare theorems</h1>
+<p>The equilibrium we have found in the previous section is called a competitive equilibrium. It is <em>competitive</em> in the sense that each person does what is in the best interest and the markets clear at the equilibrium prices. This is also referred to as a decentralized equilibrium because it is not the result of some benevolent central authority allocating aggregate resources in a way that they judge best.</p>
+<p>Economic decisions are all about efficient allocation of resources. Economic problems exist because resources are scarce. A natural question arises, then, is the <strong>competitive equilibrium allocation (CEA)</strong> obtained by each one acting in their best interest, efficient?</p>
+<p>In economics, the notion of efficiency of interest is Pareto efficiency. We say that an allocation is <strong>Pareto efficient</strong> if there exists no other allocation that is strictly better off for someone without being worse off for someone else. In other words, an efficient allocation is one that cannot be improved for someone without hurting someone else: any change to it penalizes at least an individual. In a market with no market failures, it can be shown that under mild conditions, a CEA is Pareto efficient. This is the first welfare theorem (FWT). Graphically, the Pareto efficient allocation lies at the tangency of two ICs in the Edgeworth box. This means that such allocations are not unique, and in fact the locus of all <strong>Pareto efficient allocations (PEA)</strong> forms the so-called <strong>contract curve</strong>. How come we found only one of them in the previous example? This is because which Pareto efficient allocation can be achieved by market forces alone depends on the initial endowment. If we wish to alter the outcome, we need start differently. This is the idea behind the second welfare theorem (SWT).</p>
+<p>Another natural question that one might ask is why would an economy prefer a different Pareto efficient allocation? Why bother redistributing resources to incentivise the market to achieve a different allocation at all? It is because on top of efficiency, societies also care about equality. If one starts out with abundant resources, then market forces alone tend to lead to an efficient allocation that gives more to those with more initial resources. In other words, competitive market forces tend to reinforce existing inequality.</p>
+<p>To sum up, the FWT tells us that when there are no market failures, the CEA is Pareto efficient. The SWT says that any Pareto efficient, i.e., any point on the contract curve, can be obtained by redistributing initial resources and then letting the market work (again under some conditions). Let us state these important results formally.</p>
+<div id="thm-FWT" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 1 (First welfare theorem)</strong></span> Every competitive equilibrium allocation is Pareto efficient.</p>
+</div>
+<div id="thm-SWT" class="theorem">
+<p><span class="theorem-title"><strong>Theorem 2 (Second welfare theorem)</strong></span> Consider an a efficient allocation <span class="math inline">\(\bar{x}\)</span> and a <em>redistribution</em> of the initial endowment from <span class="math inline">\(e\)</span> to <span class="math inline">\(\bar{e}\)</span> such that <span class="math inline">\(p\bar{e}^i = p\bar{x}^i\)</span> for every individual <span class="math inline">\(i=A, B\)</span>. Then every efficient allocation can be supported by a competitive equilibrium allocation.</p>
+</div>
+<div id="exm-EQM-SWT" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5</strong></span> Let us illustrate the SWT by continuing with <a href="#exm-EQM-exchange-eco" class="quarto-xref">Example&nbsp;4</a>. The condition for an allocation to be a CEA was: <span class="math display">\[
+\begin{eqnarray}
+MRS_{1,2}^A(x^A) &amp;=&amp; MRS_{1,2}^B(x^B) = \frac{p_1}{p_2} \\
+\frac{x_2^A}{x_1^A} &amp;=&amp; \frac{x_2^B}{x_1^B} = \frac{1}{2}.
+\end{eqnarray}
+\]</span> Hence any allocation satisfying <span class="math inline">\(x_2^i = 2 x_1^i\)</span> is a CEA, which is also a PEA by the FWT. Given the initial endowment, we have obtained for this example:</p>
+<p><span class="math display">\[
+\begin{aligned}
+(x_1^A, x_2^A) &amp;= (137.5,275), \\
+(x_1^B, x_2^B) &amp;= (62.5,125).
+\end{aligned}
+\]</span></p>
+<p>But this is not the only PEA. For example, another PEA satisfying <span class="math inline">\(x_2^i = 2 x_1^i\)</span> is <span class="math display">\[
+\bar{x}^i \equiv (x_1^i, x_2^i) = (100, 200), \quad i=A,B.
+\]</span></p>
+<p>Can this this PEA emerge as a CEA? The SWT tells us yes. According to the SWT, we need to modify the initial endowments in such a way that the budget constraint still binds for each consumer: <span class="math display">\[
+\begin{aligned}
+p\bar{x}^i &amp;= p\bar{e}^i \\
+p_1 \bar{x}_1^i + p_2 \bar{x}_2^i &amp;= p_1 \bar{e}_1^i + p_2 \bar{e}_2^i \\
+\bar{x}_1^i + \frac{p_2}{p_1} \bar{x}_2^i &amp;= \bar{e}_1^i + \frac{p_2}{p_1} \bar{e}_2^i
+\end{aligned}
+\]</span></p>
+<p><span id="eq-temp"><span class="math display">\[
+\therefore \bar{x}_1^i + 2\bar{x}_2^i = \bar{e}_1^i + 2\bar{e}_2^i.
+\tag{9}\]</span></span></p>
+<p>Substituting the values of the new PEA into <a href="#eq-temp" class="quarto-xref">Equation&nbsp;9</a> for each consumer, we obtain two equations in four unknowns <span class="math inline">\(\bar{e}_1^A, \bar{e}_2^A, \bar{e}_1^B, \bar{e}_2^B\)</span>. We need two other equations to solve for these unknowns; they come from the market clearing conditions. Putting all this together, we obtain the following system: <span class="math display">\[
+\begin{aligned}
+\bar{x}_1^A + 2\bar{x}_2^A &amp;= \bar{e}_1^A + 2\bar{e}_2^A, \\
+\bar{x}_1^B + 2\bar{x}_2^B &amp;= \bar{e}_1^B + 2\bar{e}_2^B, \\
+\bar{x}_1^A + \bar{x}_1^B &amp;= \bar{e}_1^A + \bar{e}_1^B, \\
+\bar{x}_2^A + \bar{x}_2^B &amp;= \bar{e}_2^A + \bar{e}_2^B.
+\end{aligned}
+\]</span></p>
+<p>Note that only three of the four equations from the system above are linearly independent (one degree of freedom), implying that solutions are not unique. One immediate solution is <span class="math inline">\(\bar{e} = \bar{x}\)</span>. In other words, if we give each individual a PEA, they will stick to it. Observe that <span class="math display">\[
+\begin{aligned}
+e &amp;= (100, 350, 100, 50) \\
+\bar{e} &amp;= (100, 200, 100, 200).
+\end{aligned}
+\]</span> Thus one way to redistribute is to tax <span class="math inline">\(A\)</span> an amount equivalent to 150 units of the first good and give them to <span class="math inline">\(B\)</span>.</p>
+</div>
+</section>
+<section id="general-equilibrium-with-production" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> General equilibrium with production</h1>
+<section id="adding-production-to-the-economy" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="adding-production-to-the-economy"><span class="header-section-number">6.1</span> Adding production to the economy</h2>
+<p>In a production economy, consumers own factors of production, which they can rent out to firms to earn income. Firms choose the quantity of factors of production to maximize profit, taking as given the prices (of factors and final consumption goods). Consumers choose the quantity of consumption goods to maximize utility, taking as given prices (of factors and final consumption goods). In equilibrium, aggregate demand is equal to aggregate supply in each market, including markets of production factors.</p>
+<p>Consider an economy two consumers with Cobb-Douglas utility function <span class="math display">\[
+u(x_1^i, x_2^i) = x_1^i x_2^i
+\]</span> for each consumer <span class="math inline">\(i=A, B\)</span> whose endowments are: <span id="eq-endowment"><span class="math display">\[
+\begin{aligned}
+e^A &amp;= (k^A, l^A), \\
+e^B &amp;= (k^B, l^B).
+\end{aligned}
+\tag{10}\]</span></span></p>
+<p>Suppose there are two firms in the economy, each producing one of the consumption goods according to a Cobb-Douglas technology: <span class="math display">\[
+\begin{aligned}
+y_1 = F^1(K_1, L_1) &amp;= K_1^a L_1^b, \\
+y_2 = F^2(K_2, L_2) &amp;= K_2^b L_2^a,
+\end{aligned}
+\]</span> where <span class="math inline">\(a+b=1\)</span> and <span class="math inline">\(a, b \in (0,1)\)</span>.</p>
+<p>An allocation <span class="math inline">\((x_1^A, x_1^B, x_2^A, x_2^B, K_1, L_1, K_2, L_2)\)</span> and a price vector <span class="math inline">\(p=(p_1, p_2, w, r)\)</span> constitute a competive equilibrium (or Walrasian equilibrium) of the production economy if:</p>
+<ol type="1">
+<li><p>Given prices, <span class="math inline">\((x_1^i, x_2^i)\)</span> solves the UMP for each consumer <span class="math inline">\(i\in\{A,B\}.\)</span></p></li>
+<li><p>Given prices, <span class="math inline">\((K_j, L_j)\)</span> solves the PMP for each firm <span class="math inline">\(j\in \{1,2\}.\)</span></p></li>
+<li><p>Prices are such that markets clear: <span class="math display">\[
+\begin{aligned}
+\text{Consumption goods:   }\sum_i x^i_j &amp;= y_j \equiv F^j(K_j, L_j), \quad \forall j=1,2, \\
+\text{Capital good:   }\sum_j K_j &amp;= k^A + k^B, \\
+\text{Labor good:   }\sum_j L_j &amp;= l^A + l^B.
+\end{aligned}
+\]</span> In other words, we are in an equilibrium if ever agent optimizes and markets clear. Let us first consider the consumers, who face the UMP.</p></li>
+</ol>
+</section>
+<section id="ump" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="ump"><span class="header-section-number">6.2</span> UMP</h2>
+<p>Consumer <span class="math inline">\(i\)</span> solves: <span id="eq-UMP"><span class="math display">\[
+\begin{aligned}
+&amp;\max_{x^i} u(x^i) \\
+&amp;\text{s.t. } px^i \leq wl^i + rk^i.
+\end{aligned}
+\tag{11}\]</span></span></p>
+<p>Observe that since consumers own labor and capital, their income come from renting out these factors of production. The FONC yields: <span id="eq-FOC_UMP"><span class="math display">\[
+u'_j(x^i) = \lambda_i p_j, \quad\forall j=1,2.
+\tag{12}\]</span></span></p>
+<p>Since <span class="math inline">\(u'_j&gt;0\)</span> we must have <span class="math inline">\(\lambda &gt; 0\)</span> in optimality, implying that the BC binds: <span class="math display">\[
+px^i = wl^i + rk^i.
+\]</span></p>
+<p>Moreover: <span id="eq-MRS_i"><span class="math display">\[
+MRS_{1,2}^i = \frac{p_1}{p_2},\quad \forall i\in\{A,B\}.
+\tag{13}\]</span></span></p>
+<p><a href="#eq-MRS_i" class="quarto-xref">Equation&nbsp;13</a> implies:</p>
+<p><span class="math display">\[
+\frac{x^i_2}{x^i_1} = \frac{p_1}{p_2} \quad \forall i,
+\]</span></p>
+<p>which together with the binding BC provide the optimal consumption bundle for each consumer as function of factor prices and endowments. In particular:</p>
+<p><span id="eq-demand_conso"><span class="math display">\[
+x_j^i = \frac{wl^i + rk^i}{2p_j},\quad i\in\{A, B\},\quad j\in\{1, 2\}.
+\tag{14}\]</span></span></p>
+<p>Denote the total endowment <span class="math inline">\(l=\sum_i l^i\)</span> and <span class="math inline">\(k= \sum_i k^i.\)</span> By the market clearing condition for good 1: <span id="eq-MC_x1"><span class="math display">\[
+\begin{aligned}
+x_1^A + x_1^B &amp;= y_1 = F^1(K_1, L_1) = K_1^a L_1^b \\
+\frac{wl + rk}{2p_1} &amp;= K_1^a L_1^b.
+\end{aligned}
+\tag{15}\]</span></span></p>
+<p>Likewise for the second good: <span id="eq-MC_x2"><span class="math display">\[
+\frac{wl + rk}{2p_2} = K_2^b L_2^a.
+\tag{16}\]</span></span></p>
+<p>Dividing <a href="#eq-MC_x2" class="quarto-xref">Equation&nbsp;16</a> by <a href="#eq-MC_x1" class="quarto-xref">Equation&nbsp;15</a> side by side yields: <span id="eq-prices_UMP"><span class="math display">\[
+\frac{p_1}{p_2} = \frac{K_2^b L_2^a}{K_1^a L_1^b}.
+\tag{17}\]</span></span></p>
+<p>Next we consider firms, who seek to maximize profits.</p>
+</section>
+<section id="pmp" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="pmp"><span class="header-section-number">6.3</span> PMP</h2>
+<p>Each firm <span class="math inline">\(j=1,2\)</span> solves their profit maximization problem (PMP):</p>
+<p><span id="eq-PMPj"><span class="math display">\[
+\max_{K_j, L_j} \pi_j = p_j F^j(K_j, L_j) - rK_j - wL_j.
+\tag{18}\]</span></span></p>
+<p>In optimality: <span id="eq-PMPj_FOC"><span class="math display">\[
+p_j F_K^j = r, \quad p_j F_L^j = w.
+\tag{19}\]</span></span></p>
+<p>Hence: <span id="eq-prices_PMP"><span class="math display">\[
+\begin{aligned}
+\frac{p_1}{p_2} &amp;= \frac{F_K^2}{F_K^1} = \frac{F_L^2}{F_L^1} \\
+\frac{p_1}{p_2}&amp;= MRT_{1,2}^K = MRT_{1,2}^L.
+\end{aligned}
+\tag{20}\]</span></span></p>
+<p>The <span class="math inline">\(MRT^K_{1,2}\)</span> is the rate at which the economy transforms the second good into the first good using capital. Observe that <a href="#eq-MRS_i" class="quarto-xref">Equation&nbsp;13</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> together say that at an optimum, the economy transforms one good for the other at the rate consumers are willing to substitute one for the other. From <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> and the fact that <span class="math inline">\(a+b=1,\)</span> we have: <span id="eq-rels_K"><span class="math display">\[
+\begin{aligned}
+\frac{p_1}{p_2} = \frac{F_K^2}{F_K^1} &amp;= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
+\frac{b K_2^{b-1} L_2^a}{a K_1^{a-1} L_1^b} &amp;= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
+\implies \frac{K_2}{K_1} &amp;= \frac{b}{a}.
+\end{aligned}
+\tag{21}\]</span></span></p>
+<p>We will now solve for the CEA of this economy using the market clearing conditions.</p>
+</section>
+<section id="the-cea" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="the-cea"><span class="header-section-number">6.4</span> The CEA</h2>
+<p>Combining <a href="#eq-rels_K" class="quarto-xref">Equation&nbsp;21</a> and the market clearing condition for the capital market <span class="math inline">\(K_1 + K_2 = k,\)</span> we can solve for the optimal values of capital. In particular,</p>
+<p><span id="eq-allo_K"><span class="math display">\[
+K_1 = a k, \quad K_2 = b k.
+\tag{22}\]</span></span></p>
+<p>From <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> and <a href="#eq-prices_PMP" class="quarto-xref">Equation&nbsp;20</a> and the fact that <span class="math inline">\(a+b=1,\)</span> we have: <span id="eq-rels_L"><span class="math display">\[
+\frac{L_2}{L_1} = \frac{a}{b}.
+\tag{23}\]</span></span></p>
+<p>Again, combining <a href="#eq-rels_L" class="quarto-xref">Equation&nbsp;23</a> and the market clearing condition for the labor market <span class="math inline">\(L_1 + L_2 = l,\)</span> we obtain:</p>
+<p><span id="eq-allo_L"><span class="math display">\[
+L_1 = a l, \quad L_2 = bl.
+\tag{24}\]</span></span></p>
+<p>Having computed factor demands, we can substitute these values into <a href="#eq-prices_UMP" class="quarto-xref">Equation&nbsp;17</a> to determine equilibrium price ratio <span class="math inline">\(p_1/p_2\)</span>. We can then normalize <span class="math inline">\(p_2\equiv 1,\)</span> to obtain: <span id="eq-price_x1"><span class="math display">\[
+p_1 = \frac{b}{a}\left(\frac{k}{l}\right)^{b-a}.
+\tag{25}\]</span></span></p>
+<p>Factor prices can then be determined from <a href="#eq-PMPj_FOC" class="quarto-xref">Equation&nbsp;19</a>. The equilibrium allocations <span class="math inline">\(x^A, x^B\)</span> can be determined by substituting factor and consumption prices into <a href="#eq-demand_conso" class="quarto-xref">Equation&nbsp;14</a>.</p>
+</section>
+</section>
+<section id="the-social-planners-problem-spp" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> The social planner’s problem (SPP)</h1>
+<p>In a centralized economy, the benevolent social planner allocates resources in such a way that maximizes a social welfare function (weighted sum of utilities) subject to some feasibility constraints. A solution to the social planner’s problem is Pareto efficient.</p>
+<section id="the-spp-in-a-pure-exchange-economy" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="the-spp-in-a-pure-exchange-economy"><span class="header-section-number">7.1</span> The SPP in a pure-exchange economy</h2>
+<p>Mathematically, the social planner solves: <span id="eq-SPP_exchange"><span class="math display">\[
+\begin{aligned}
+&amp;\max_{(x^i)_{i\in I}} \sum_{i\in I} w^i u^i(x^i) \\
+&amp;\text{s.t. } \sum_{i\in I} x^i_j \leq \sum_{i\in I} e^i_j, \quad \forall j\in J,
+\end{aligned}
+\tag{26}\]</span></span></p>
+<p>where <span class="math inline">\(w_i\)</span> are social welfare weights. Note that there are no prices in the social planner’s problem (SPP), why is that? In a decentralized economy, selfish interest and prices guide individuals to efficient decisions. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently.</p>
+</section>
+<section id="the-pea-in-a-pure-exchange-economy" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="the-pea-in-a-pure-exchange-economy"><span class="header-section-number">7.2</span> The PEA in a pure exchange economy</h2>
+<p>The KKT conditions for the SPP’s problem: <span class="math display">\[
+\begin{aligned}
+    w^i u^i_j(x^i) &amp;= \lambda_j, \quad \forall j\in J, \: i\in I, \\
+    \sum_{i\in I} x^i_j &amp;= \sum_{i\in I} e^i_j, \quad \forall j\in J.
+\end{aligned}
+\]</span></p>
+<p>Consumers have identical preferences. Hence: <span class="math display">\[
+\begin{aligned}
+w^A u^A_j(x^A) &amp;= w^B u^B_j(x^B) = \lambda_j\\
+w^A x_j^A &amp;= w^B x_j^B, \\
+\implies \frac{x_j^A}{x_j^B} &amp;= \frac{w^A}{w^B}, \quad j=1,2.
+\end{aligned}
+\]</span></p>
+<p>This together with the binding feasibility constraints characterize the PEA for this economy:</p>
+<p><span class="math display">\[
+x^A = w^A e, \quad x^B = w^B e.
+\]</span></p>
+<p>Thus in a pure exchange economy the PEA is proportional to the social weight of the individual. If the social weights are equal, the aggregate endowments will be divided equally among the consumers. In general the results will be different if social weights are different or preferences are different among consumers.</p>
+</section>
+<section id="the-spp-in-a-production-economy" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="the-spp-in-a-production-economy"><span class="header-section-number">7.3</span> The SPP in a production economy</h2>
+<p>According to the FWT the CEA in the production economy also Pareto efficient. Let us show that the CEA is also a PEA, i.e., that the FWT is verified in this production economy. A PEA consists of a vector of consumption goods and factors of production <span class="math inline">\((x_i)_{i\in I}, (K_j, L_j)_{j=J}\)</span> that maximizes aggregate welfare subject to feasibility constraints.</p>
+</section>
+<section id="the-pea-in-a-production-economy" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="the-pea-in-a-production-economy"><span class="header-section-number">7.4</span> The PEA in a production economy</h2>
+<p>The social planner’s problem for a production economy reads:</p>
+<p><span id="eq-SPP"><span class="math display">\[
+\begin{aligned}
+&amp;\max_{(x^i)_{i\in I}, (K_j, L_j)_{j\in J}} \sum_{i\in I} w^i u^i(x^i) \\
+\text{s.t. }&amp;\begin{cases}
+                \sum_{i\in I} x^i_j \leq F(K_j, L_j) \:\forall j \\
+                \sum_{j\in J} K_j \leq \sum_i k^i \equiv k \\
+                \sum_{j\in J} L_j \leq \sum_i l^i \equiv l
+\end{cases}
+\end{aligned}
+\tag{27}\]</span></span></p>
+<p>where <span class="math inline">\(w_i\)</span> are social welfare weights.</p>
+<div id="rem-SPPProdEco" class="proof remark">
+<p><span class="proof-title"><em>Remark 2</em>. </span>Observe that the first constraint in the SPP is the feasibility constraint on each consumption good. The last two constraints are feasibility constraints on the factors of production.</p>
+</div>
+<p>To solve the SPP, we first set up the Lagrangian:</p>
+<p><span id="eq-SPP_Lang"><span class="math display">\[
+\begin{aligned}
+\mathcal{L} &amp;= \sum_{i\in I} w^i u^i(x^i) \\
+&amp;+ \sum_{j\in J} \lambda_j\left[F(K_j, L_j) - \sum_{i\in I}x^i_j\right] \\
+&amp;+ \mu_K (k - \sum_{j\in J} K_j) \\
+&amp;+ \mu_L (l - \sum_{j\in J} L_j).
+\end{aligned}
+\tag{28}\]</span></span></p>
+<p>The FOCs yield:</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \frac{\partial \mathcal{L}}{\partial x^i_j} &amp;= 0 \iff w^i u^i_j(x^i) = \lambda_j, \quad \forall j\in J, \: i\in I, \\
+    \frac{\partial \mathcal{L}}{\partial K_j} &amp;= 0 \iff \lambda_j MPK_j = \mu_K, \\
+    \frac{\partial \mathcal{L}}{\partial L_j} &amp;= 0 \iff \lambda_j MPL_j = \mu_L.
+\end{aligned}
+\]</span></p>
+<p>Observe that <span class="math inline">\(\lambda_j&gt;0\)</span> for all good <span class="math inline">\(j\)</span> and <span class="math inline">\(\mu_K&gt;0\)</span>, <span class="math inline">\(\mu_L&gt;0\)</span>, implying that the feasibility constraints bind at a PEA. From the FOC w.r.t to the consumption good we obtain: <span id="eq-SPP_FOC"><span class="math display">\[
+MRS^A_{1,2}(x^A) = MRS^B_{1,2}(x^B).
+\tag{29}\]</span></span></p>
+<p>From the FOC w.r.t to factors:</p>
+<p><span class="math display">\[
+\begin{aligned}
+    \lambda_1 MPK_1 = \lambda_2 MPK_2 \iff \frac{\lambda_1}{\lambda_2} &amp;= MRT^K_{1,2} \\
+    \lambda_1 MPL_1 = \lambda_2 MPL_2 \iff \frac{\lambda_1}{\lambda_2} &amp;= MRT^L_{1,2} \\
+    \frac{MPK_1}{MPL_1} = \frac{MPK_2}{MPL_2} \iff MRTS^1_{K,L} &amp;= MRTS^2_{K,L}.
+\end{aligned}
+\]</span></p>
+<p>These conditions being satisfied by the CEA, implying that the CEA is also a PEA.</p>
+</section>
+</section>
+<section id="exercises" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Exercises</h1>
+<div id="exr-SRSupply" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Consider a firm with the total cost function <span class="math inline">\(C(q)=10−5q+2q^2\)</span>. Assume that this fixed cost is evenly distributed into sunk costs, <span class="math inline">\(\$5\)</span>, and non-sunk costs, <span class="math inline">\(\$5\)</span>. Show that the firm’s SR supply curve is given by:</p>
+<p><span class="math display">\[
+q(p) =
+\begin{cases} p/4 + 5/4 &amp; p &gt; 4\sqrt{2.5}-5\approx 1.32 \\
+                     0 &amp; \mathrm{otherwise.}
+\end{cases}
+\]</span></p>
+<details>
+<summary>
+Answer
+</summary>
+<ul>
+<li><p>The nonsunk cost is <span class="math inline">\(NSC(q) = 5 - 5q + 2q^2\)</span></p></li>
+<li><p>Effectively we maximize <span class="math inline">\(pq - NSC(q)\)</span> (we forget about the sunk costs), which is convex in <span class="math inline">\(q\)</span></p></li>
+<li><p>FOC gives: <span class="math display">\[p = MC(q) \iff p = 4q - 5 \iff q = (p+5)/4\]</span></p></li>
+<li><p>Firm produces iff revenue covers nonsunk costs, i.e., if price is greater than ANSC. Shutdown point (crossing point between MC and ANCS):</p>
+<p><span class="math display">\[
+  p = MC(q) = ANSC(q) = \frac{5}{q}-5+2q \\
+  \iff q=\sqrt{2.5}
+  \implies p = 4\sqrt{2.5} - 5 \approx 1.32.
+  \]</span></p>
+<ul>
+<li>Below <span class="math inline">\(p=1.32\)</span>, the firm shuts down since it cannot recover nonsunk costs</li>
+</ul></li>
+</ul>
+</details>
+</div>
+<div id="exr-LRPEQM" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Consider a perfectly competitive industry populated by identical firms with the cost function <span class="math inline">\(C(q)=10 - 5q + 2q^2\)</span>. Suppose the market demand is given by <span class="math inline">\(q^D(p) = 400 - 2p\)</span>. Determine the long-run equilibrium price, quantity and the number of firms.</p>
+<details>
+<summary>
+Answer
+</summary>
+See <a href="#exr-LRPEQM" class="quarto-xref">Exercise&nbsp;2</a>. Observe the change in demand and equilibrium of the market.
+</details>
+</div>
+<div id="exr-NoExcessDemand" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Show that if the market clearing condition in <a href="#def-GE" class="quarto-xref">Definition&nbsp;2</a> is satisfied for <span class="math inline">\(L-1\)</span> markets then it is also satisfied for the remaining one. This follows from the Law of Walras. Thanks to this result, we have one fewer market to consider.</p>
+</div>
+<div id="exr-PEPOpt" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Consider a two-person two-good economy with the following preferences: <span class="math display">\[
+\begin{align}
+    u_1(x_1, y_1) &amp;= x_1y_1, \\
+    u_2(x_2, y_2) &amp;= x_2y_2^2,
+\end{align}
+\]</span> where <span class="math inline">\(x_i\)</span> and <span class="math inline">\(y_i\)</span> the amounts of good <span class="math inline">\(x\)</span> and good <span class="math inline">\(y\)</span> that individual <span class="math inline">\(i\)</span> consumes, respectively. Suppose that the first person has an initial endowment of <span class="math inline">\(40\)</span> units of <span class="math inline">\(x\)</span> and <span class="math inline">\(160\)</span> units of <span class="math inline">\(y\)</span> while the second has <span class="math inline">\(240\)</span> units of <span class="math inline">\(x\)</span> and <span class="math inline">\(120\)</span> units of <span class="math inline">\(y\)</span>.</p>
+<ol type="1">
+<li>Represent this economy using and Edgeworth box.</li>
+<li>Define and compute the competitive equililibrium of this economy. Are the consumers better off with exchange (compared to eating their own endowments)?</li>
+<li>Define and solve the social planner’s problem for this economy and determine the set of Pareto efficient allocations (the contract curve) of this economy.</li>
+<li>Does the first welfare theorem hold for this economy?</li>
+</ol>
+</div>
+<div id="exr-SWT" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Show that in <a href="#exm-EQM-SWT" class="quarto-xref">Example&nbsp;5</a>, the general way to achieve the PEA as a CEA is by redistributing initial resources such that: <span class="math display">\[
+\begin{aligned}
+e_1^A &amp;= z \in [0, 200], \\
+e_2^A &amp;= 400 - 2z, \\
+e_1^B &amp;= 200 - z, \\
+e_2^B &amp;= 2z.
+\end{aligned}
+\]</span></p>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Note that we are given a short-run cost function, which has a fixed cost, but we would like to determine the market equilibrium in the long run.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>In the case of a pure exchange economy, the aggregate supply of each good is just equal to its total endowment.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../contents/lecture_2.html" class="pagination-link" aria-label="Chapter 2">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Chapter 2</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../contents/lecture_4.html" class="pagination-link" aria-label="Chapter 4">
+        <span class="nav-page-text">Chapter 4</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

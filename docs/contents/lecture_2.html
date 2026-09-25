@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="My Dam">
+
+<title>Chapter 2. Producers and supply – Intermediate Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../contents/lecture_3.html" rel="next">
+<link href="../contents/lecture_1.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b851f334af3abb447df18392212cf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1ca1dd62c07aaf28e56d553fd4136965.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-1b851f334af3abb447df18392212cf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Chapter 2. Producers and supply – Intermediate Microeconomics">
+<meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
+<meta property="og:image" content="lecture_2_files/figure-html/fig-decmpl-output-1.png">
+<meta property="og:site_name" content="Intermediate Microeconomics">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Intermediate Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_2.html">Chapter 2</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_2.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Chapter 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
+   
+  <ul>
+  <li><a href="#production-function" id="toc-production-function" class="nav-link active" data-scroll-target="#production-function"><span class="header-section-number">1</span> Production function</a></li>
+  <li><a href="#average-and-marginal-products" id="toc-average-and-marginal-products" class="nav-link" data-scroll-target="#average-and-marginal-products"><span class="header-section-number">2</span> Average and marginal products</a>
+  <ul class="collapse">
+  <li><a href="#average-product-and-productivity" id="toc-average-product-and-productivity" class="nav-link" data-scroll-target="#average-product-and-productivity"><span class="header-section-number">2.1</span> Average product and productivity</a></li>
+  <li><a href="#marginal-product" id="toc-marginal-product" class="nav-link" data-scroll-target="#marginal-product"><span class="header-section-number">2.2</span> Marginal product</a></li>
+  <li><a href="#decreasing-marginal-products" id="toc-decreasing-marginal-products" class="nav-link" data-scroll-target="#decreasing-marginal-products"><span class="header-section-number">2.3</span> Decreasing marginal products</a></li>
+  <li><a href="#relationship-beteen-average-and-marginal-products" id="toc-relationship-beteen-average-and-marginal-products" class="nav-link" data-scroll-target="#relationship-beteen-average-and-marginal-products"><span class="header-section-number">2.4</span> Relationship beteen average and marginal products</a></li>
+  </ul></li>
+  <li><a href="#isoquants" id="toc-isoquants" class="nav-link" data-scroll-target="#isoquants"><span class="header-section-number">3</span> Isoquants</a>
+  <ul class="collapse">
+  <li><a href="#definition" id="toc-definition" class="nav-link" data-scroll-target="#definition"><span class="header-section-number">3.1</span> Definition</a></li>
+  <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">3.2</span> Example</a></li>
+  </ul></li>
+  <li><a href="#marginal-rate-of-technical-substitution-mrts" id="toc-marginal-rate-of-technical-substitution-mrts" class="nav-link" data-scroll-target="#marginal-rate-of-technical-substitution-mrts"><span class="header-section-number">4</span> Marginal rate of technical substitution (MRTS)</a>
+  <ul class="collapse">
+  <li><a href="#definition-1" id="toc-definition-1" class="nav-link" data-scroll-target="#definition-1"><span class="header-section-number">4.1</span> Definition</a></li>
+  <li><a href="#properties" id="toc-properties" class="nav-link" data-scroll-target="#properties"><span class="header-section-number">4.2</span> Properties</a></li>
+  </ul></li>
+  <li><a href="#homogeneity-and-returns-to-scale" id="toc-homogeneity-and-returns-to-scale" class="nav-link" data-scroll-target="#homogeneity-and-returns-to-scale"><span class="header-section-number">5</span> Homogeneity and returns to scale</a></li>
+  <li><a href="#technological-progress" id="toc-technological-progress" class="nav-link" data-scroll-target="#technological-progress"><span class="header-section-number">6</span> Technological progress</a></li>
+  <li><a href="#cost-functions" id="toc-cost-functions" class="nav-link" data-scroll-target="#cost-functions"><span class="header-section-number">7</span> Cost functions</a>
+  <ul class="collapse">
+  <li><a href="#isocost-lines" id="toc-isocost-lines" class="nav-link" data-scroll-target="#isocost-lines"><span class="header-section-number">7.1</span> Isocost lines</a></li>
+  <li><a href="#cost-minimization-problem-cmp" id="toc-cost-minimization-problem-cmp" class="nav-link" data-scroll-target="#cost-minimization-problem-cmp"><span class="header-section-number">7.2</span> Cost minimization problem (CMP)</a>
+  <ul class="collapse">
+  <li><a href="#necessary-conditions" id="toc-necessary-conditions" class="nav-link" data-scroll-target="#necessary-conditions"><span class="header-section-number">7.2.1</span> Necessary conditions</a></li>
+  </ul></li>
+  <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics"><span class="header-section-number">7.3</span> Comparative statics</a></li>
+  <li><a href="#types-of-costs" id="toc-types-of-costs" class="nav-link" data-scroll-target="#types-of-costs"><span class="header-section-number">7.4</span> Types of costs:</a>
+  <ul class="collapse">
+  <li><a href="#explicit-vs-implicit-costs" id="toc-explicit-vs-implicit-costs" class="nav-link" data-scroll-target="#explicit-vs-implicit-costs"><span class="header-section-number">7.4.1</span> Explicit vs implicit costs</a></li>
+  <li><a href="#sunk-vs-nonsunk-costs" id="toc-sunk-vs-nonsunk-costs" class="nav-link" data-scroll-target="#sunk-vs-nonsunk-costs"><span class="header-section-number">7.4.2</span> Sunk vs nonsunk costs</a></li>
+  <li><a href="#long-run-vs-short-run-costs" id="toc-long-run-vs-short-run-costs" class="nav-link" data-scroll-target="#long-run-vs-short-run-costs"><span class="header-section-number">7.4.3</span> Long-run vs short-run costs</a></li>
+  <li><a href="#average-and-marginal-costs" id="toc-average-and-marginal-costs" class="nav-link" data-scroll-target="#average-and-marginal-costs"><span class="header-section-number">7.4.4</span> Average and marginal costs</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">8</span> Exercises</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_2.html">Chapter 2</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 2. Producers and supply</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>My Dam <a href="mailto:my-thi-tra.dam@universite-paris-saclay.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="production-function" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Production function</h1>
+<p>A production function describes how inputs (factors of production such as labor, capital and land, etc.) can be transformed into outputs. We denote the production function by <span class="math inline">\(f:\mathbb{R}^n\to\mathbb{R}_+\)</span>, where <span class="math inline">\(n\)</span> is the number of inputs. In the case of two inputs, capital (<span class="math inline">\(K\)</span>) and labor (<span class="math inline">\(L\)</span>): <span class="math display">\[
+q = f(K, L),
+\]</span> where <span class="math inline">\(q\)</span> is the amount of output.</p>
+<div id="exm-prodFun" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> &nbsp;</p>
+<ol type="1">
+<li><p>Cobb-Douglas production function: <span class="math inline">\(q = AK^{\alpha}L^{\beta}\)</span>, where <span class="math inline">\(A&gt;0\)</span> and <span class="math inline">\(\alpha, \beta \in (0,1)\)</span></p></li>
+<li><p>Leontief production function: <span class="math inline">\(q = A\min\{aK, bL\}\)</span>, where <span class="math inline">\(A, a, b&gt;0.\)</span> This production function captures the idea that inputs must be used in fixed proportion</p></li>
+<li><p>Linear production function: <span class="math inline">\(q = aK + bL\)</span> where <span class="math inline">\(a, b &gt; 0.\)</span> Here inputs are perfectly substitutable (e.g., robots vs human workers in the future)</p></li>
+<li><p>Quasilinear production function: <span class="math inline">\(q = AK^a + bL\)</span> where <span class="math inline">\(A, a, b&gt;0.\)</span> This production function could be used to capture different returns to scales of different inputs. For example scaling is quite straightforward for labor or raw materials but might be complex for capital and land.</p></li>
+<li><p>The Cobb-Douglas, linear and fixed-proportion production functions are all special cases of the CES production function: <span id="eq-CES_prod_function"><span class="math display">\[
+     q = \left(aL^{\frac{s-1}{s}} + bK^{\frac{s-1}{s}}\right)^{\frac{s}{s-1}},
+  \tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(s\)</span> is the EoS. Special cases:</p>
+<ul>
+<li>As <span class="math inline">\(s\to \infty\)</span>: CES <span class="math inline">\(\to\)</span> linear production function</li>
+<li>As <span class="math inline">\(s \to 0\)</span>: CES <span class="math inline">\(\to\)</span> fixed-proportion production function</li>
+<li>As <span class="math inline">\(s \to 1\)</span>: CES <span class="math inline">\(\to\)</span> the Cobb-Douglas production function</li>
+</ul>
+<p>Why is it called CES? Let <span class="math inline">\(q(L, K)\)</span> be a twice differentiable production function of two inputs. The elasticity of substitution between the two factors measures the percentage in the ratio of the inputs in response to a percentage change in the MRTS. Mathematically:</p>
+<p><span id="eq-EoS_def"><span class="math display">\[
+     s = \frac{d\ln \left(\frac{K}{L}\right)}{d \ln MRTS_{L,K}},
+  \tag{2}\]</span></span></p>
+<p>where <span class="math inline">\(MRTS_{L,K} = MP_L/MP_K\)</span>.</p></li>
+</ol>
+</div>
+</section>
+<section id="average-and-marginal-products" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Average and marginal products</h1>
+<section id="average-product-and-productivity" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="average-product-and-productivity"><span class="header-section-number">2.1</span> Average product and productivity</h2>
+<p>The <em>average product</em> is the total units of output produced per unit of input used</p>
+<ul>
+<li>The average product or <em>productivity of labor</em>, <span class="math inline">\(AP_L = q / L\)</span></li>
+<li>The average product or <em>productivity of capital</em>, <span class="math inline">\(AP_K = q / K\)</span></li>
+</ul>
+<p>The higher is the average product, the higher is the productivity. Productivity typically depends on the production technology and the levels of input used.</p>
+<div id="exm-APMP" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2</strong></span> For each of the following production functions, compute the average product of labor (or labor productivity). Determine if increasing labor improves productivity.</p>
+<ol type="1">
+<li><span class="math inline">\(q = 100 \sqrt{L}\)</span></li>
+<li><span class="math inline">\(q = 5 L^{1/2} + 3L - 6\)</span></li>
+</ol>
+</div>
+</section>
+<section id="marginal-product" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="marginal-product"><span class="header-section-number">2.2</span> Marginal product</h2>
+<p>The <em>marginal product</em> is the rate at which total output changes as the firm uses one additional unit of input</p>
+<ul>
+<li><p>The marginal product of labor: <span class="math inline">\(MP_L = \frac{\Delta q}{\Delta L}\)</span> when <span class="math inline">\(L\)</span> is discrete (e.g.&nbsp;number of workers) and <span class="math inline">\(MP_L = \frac{\partial q}{\partial L}\)</span> when <span class="math inline">\(L\)</span> is continuous (e.g.&nbsp;working hours)</p></li>
+<li><p>The marginal product of capital: <span class="math inline">\(MP_K = \frac{\Delta q}{\Delta K}\)</span> when <span class="math inline">\(K\)</span> is discrete and <span class="math inline">\(MP_K = \frac{\partial q}{\partial K}\)</span> when <span class="math inline">\(K\)</span> is continuous</p></li>
+</ul>
+<div id="exm-MPoL" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3</strong></span> Compute the marginal product of labor for the production functions in <a href="#exm-APMP" class="quarto-xref">Example&nbsp;2</a> and determine if it is increasing or decreasing in the amount of input used.</p>
+</div>
+</section>
+<section id="decreasing-marginal-products" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="decreasing-marginal-products"><span class="header-section-number">2.3</span> Decreasing marginal products</h2>
+<div id="cell-fig-decMPL" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div id="fig-decmpl" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-decmpl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="lecture_2_files/figure-html/fig-decmpl-output-1.png" width="348" height="336" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-decmpl-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Increasing labor increases output, but at decreasing rates
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div id="cell-fig-decMPL2" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div id="fig-decmpl2" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-decmpl2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="lecture_2_files/figure-html/fig-decmpl2-output-1.png" width="341" height="336" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-decmpl2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Increasing labor increases output, but at decreasing rates
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="relationship-beteen-average-and-marginal-products" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="relationship-beteen-average-and-marginal-products"><span class="header-section-number">2.4</span> Relationship beteen average and marginal products</h2>
+<div id="fig-MPAP" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-MPAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="536d0cdb" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_2_files/figure-html/cell-8-output-1.png" width="346" height="360" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-MPAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Relationship between marginal and average products
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-MPAP" class="quarto-xref">Figure&nbsp;3</a> suggests that the AP curve crosses the MP curve at its maximum. In particular, as the AP is increasing when it is less than the MP and it is decreasing when it is greater than the MP. This makes sense intuitively since the MP being greater than the AP means the added worker is more productive than the average worker in the existing team, and vice versa.</p>
+<p>Let us formalize this observation. Consider the case of continuous labor input and differentiable production function. Let <span class="math inline">\(\bar{q}(L) = q(L) / L\)</span> be the average product. Differentiating with respect to <span class="math inline">\(L\)</span> yields:</p>
+<p><span id="eq-AP_and_MP"><span class="math display">\[
+\begin{aligned}
+    \bar{q}'(L) &amp;= \frac{q'(L)L - q(L)}{L^2}, \quad L &gt; 0. \\
+    \bar{q}'(L) \geq 0 &amp;\iff q'(L)L - q(L) \geq 0 \\
+    &amp;\iff q'(L) \geq \frac{q(L)}{L} \\
+    &amp;\iff q'(L) \geq \bar{q}(L).         
+\end{aligned}
+\tag{3}\]</span></span></p>
+<p>Thus the average product, <span class="math inline">\(\bar{q}\)</span>, is increasing when the marginal product <span class="math inline">\(q'\)</span> is greater than the average product and is decreasing otherwise.</p>
+</section>
+</section>
+<section id="isoquants" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Isoquants</h1>
+<section id="definition" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">3.1</span> Definition</h2>
+<p>In the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation. In particular, each IC represents combinations of goods that give the consumer the same level of utility.</p>
+<p>Isoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output, but the the <em>levels</em> assocated with the isoquants are <em>cardinal</em>: they represent actual outputs, not just fictive units used to rank bundles.</p>
+</section>
+<section id="example" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="example"><span class="header-section-number">3.2</span> Example</h2>
+<p>Consider the production function <span class="math inline">\(q(K, L) = 5K^{1/2} L^{1/2}\)</span>. We would like to find the the isoquant corresponding to <span class="math inline">\(m &gt; 0\)</span> units of output.</p>
+<p>Observe that <span class="math inline">\(m &gt; 0\)</span> implies that both inputs are strictly positive. We have: <span class="math display">\[
+5K^{1/2} L^{1/2} = m \\
+\iff K = \frac{m^2}{25L}.
+\]</span></p>
+<div id="cell-fig-isoquants" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div id="fig-isoquants" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-isoquants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="lecture_2_files/figure-html/fig-isoquants-output-1.png" width="807" height="458" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-isoquants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Cobb-Douglas production function and isoquants
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="marginal-rate-of-technical-substitution-mrts" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Marginal rate of technical substitution (MRTS)</h1>
+<section id="definition-1" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="definition-1"><span class="header-section-number">4.1</span> Definition</h2>
+<p>The MRTS is the slope of the isoquant (in absolute value):</p>
+<p><span id="eq-MRST_def"><span class="math display">\[
+\frac{-dK}{dL} = \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+\tag{4}\]</span></span></p>
+<p>It tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting outputs.</p>
+<p>As in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where <span class="math inline">\(q(L, K) = m\)</span> for some constant <span class="math inline">\(m&gt;0\)</span>:</p>
+<p><span id="eq-MRST_proof"><span class="math display">\[
+\begin{aligned}
+dq(L, K) &amp;= 0 \\
+\iff q_L dL + q_K dK &amp;= 0 \\
+\iff \frac{-dK}{dL} &amp;= \frac{q_L}{q_K} \\
+&amp;= \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+\end{aligned}
+\tag{5}\]</span></span></p>
+</section>
+<section id="properties" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="properties"><span class="header-section-number">4.2</span> Properties</h2>
+<p>In the case of Cobb-Douglas production function above, the <em>MRTS is decreasing</em> as we move in the south-east direction along one isoquant:</p>
+<ul>
+<li><p>When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker.</p></li>
+<li><p>When capital is scarce, firm is less willing to replace it with workers.</p></li>
+</ul>
+</section>
+</section>
+<section id="homogeneity-and-returns-to-scale" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Homogeneity and returns to scale</h1>
+<p>Let <span class="math inline">\(\alpha &gt; 0\)</span> be the factor by which all inputs change (i.e., each input is multiplied by <span class="math inline">\(\alpha\)</span>). Suppose <span class="math inline">\(q(\alpha K, \alpha L) = \alpha^k q(K, L)\)</span> for some number <span class="math inline">\(k\)</span></p>
+<ul>
+<li>If <span class="math inline">\(k &gt; 1\)</span>: the firm exhibits increasing returns to scale (IRS)</li>
+<li>If <span class="math inline">\(k = 1\)</span>: the firm exhibits constant returns to scale (CRS)</li>
+<li>If <span class="math inline">\(k &lt; 1\)</span>: the firm exhibits decreasing returns to scale (DRS)</li>
+</ul>
+<p>Note that the characterization holds regardless of whether <span class="math inline">\(\alpha\)</span> is greater or smaller than one. If <span class="math inline">\(\alpha \in (0, 1)\)</span> then increasing returns to scale means that as we reduce inputs by a factor of <span class="math inline">\(\alpha\)</span>, the firm’s output falls by more than <span class="math inline">\(\alpha\)</span>.</p>
+<div id="exm-RSC" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4</strong></span> Consider the Cobb-Douglas production function <span class="math inline">\(q = AK^a L^b\)</span> where <span class="math inline">\(A, a, b\)</span> are strictly positive constants. For which values of <span class="math inline">\(a, b\)</span> does this function exhibit increasing, constant or decreasing returns to scale? What kind of returns to scale do linear and fixed-proportion production functions exhibit?</p>
+<details>
+<summary>
+Answer
+</summary>
+<ul>
+<li>Cobb-Douglass:
+<ul>
+<li><p>For some <span class="math inline">\(\alpha &gt; 0\)</span>, we have: <span id="eq-RTS_cobb_douglas"><span class="math display">\[
+  \begin{aligned}
+  q(\alpha L, \alpha K) &amp;= A \alpha^{a+b} K^a L^b \\
+  &amp;= \alpha^{a+b} q(L, K).
+  \end{aligned}
+   \tag{6}\]</span></span></p></li>
+<li><p>Hence the nature of returns to scale depends on <span class="math inline">\(a+b\)</span>. In particular:</p>
+<ul>
+<li>IRS if <span class="math inline">\(a+b &gt; 1\)</span></li>
+<li>DRS if <span class="math inline">\(a+b &lt; 1\)</span></li>
+<li>CRS if <span class="math inline">\(a+b = 1\)</span></li>
+</ul></li>
+</ul></li>
+<li>Linear and fixed-proportion production functions both exhibit CRS</li>
+</ul>
+</details>
+</div>
+</section>
+<section id="technological-progress" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Technological progress</h1>
+<p>A technical progress is a technical advance that allows firms to produce more with the same amount of inputs. In general a technical progress can be:</p>
+<ul>
+<li><strong>Labor enhancing</strong> if MPL increases by more than MPK</li>
+<li><strong>Capital enhancing</strong> if MPK increases by more than MPL</li>
+<li><strong>Neutral</strong> if MPL and MPK increase by the same proportion</li>
+</ul>
+<p>Hence to determine the nature of the tech progress, we need to compare the relative change of the productivity of labor and capital following the change. The percentage change in the marginal product of each input can be expressed as: <span class="math display">\[
+\frac{MP'_i - MP_i}{MP_i} = \frac{MP'_i}{MP_i} - 1, \quad i\in\{K, L\},
+\]</span> where <span class="math inline">\(MP'_i\)</span> denotes the marginal product of input <span class="math inline">\(i\)</span> after the technological progress. Observe that: <span class="math display">\[
+\begin{aligned}
+\frac{MP'_L - MP_L}{MP_L} &amp;\geq \frac{MP'_K - MP_K}{MP_K} \\
+% \iff \frac{MP'_L}{MP_L} \geq \frac{MP'_K}{MP_K} \\
+% \iff \frac{MP'_L}{MP'_K} \geq \frac{MP_L}{MP_K} \\
+MRTS'_{L,K} &amp;\geq MRTS_{L,K}.
+\end{aligned}
+\]</span></p>
+<p>Hence the type of the tech progress can be determined by comparing the MRTSs.</p>
+<div id="exm-typesOfTP" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5</strong></span> Suppose the firm has production function <span class="math inline">\(q = A_1 L^a K^b\)</span>. After a technical progress, it has one of the following PFs.</p>
+<ol type="1">
+<li><span class="math inline">\(q = A_1 L^{a + \delta} K^b\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></li>
+<li><span class="math inline">\(q = A_1 L^a K^{b + \delta}\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></li>
+<li><span class="math inline">\(q = A_2 L^a K^b\)</span> with <span class="math inline">\(A_2 &gt; A_1\)</span></li>
+</ol>
+<p>Let us determine the type of progress that the firm has undergone.</p>
+<p><strong>Labor-enhancing technological progress</strong></p>
+<p>Consider <span class="math inline">\(q = A_1 L^{a + \delta} K^b\)</span> with <span class="math inline">\(\delta &gt; 0\)</span> The MRTS before tech progress: <span class="math display">\[
+MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
+\]</span> After tech progress: <span class="math display">\[
+MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.
+\]</span></p>
+<p>Since <span class="math inline">\(\delta &gt; 0\)</span>, we have <span class="math inline">\(MRTS'_{L,K} &gt; MRTS_{L,K}\)</span>, implying that this is a labor-enhancing (or labor-saving) tech progress. Graphically, on the <span class="math inline">\((K, L)\)</span> plane, the isoquants become steeper</p>
+<p><strong>Capital-enhancing technological progress</strong></p>
+<p>Consider <span class="math inline">\(q = A_1 L^a K^{b + \delta}\)</span> with <span class="math inline">\(\delta &gt; 0\)</span>. The MRTS before tech progress: <span class="math display">\[
+MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
+\]</span> After tech progress: <span class="math display">\[
+MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.
+\]</span></p>
+<p>Since <span class="math inline">\(\delta &gt; 0\)</span>, we have <span class="math inline">\(MRTS'_{L,K} &lt; MRTS_{L,K}\)</span>, which is equivalent to <span class="math inline">\(MRTS'_{K,L} &gt; MRTS_{K,L}\)</span>, implying that this is a capital-enhancing (capital-saving) tech progress. How do the isoquants change graphically?</p>
+<p><strong>Neutral technological progress</strong></p>
+<p>In the final example <span class="math inline">\(q = A_2 L^a K^b\)</span> with <span class="math inline">\(A_2 &gt; A_1\)</span>, the <span class="math inline">\(MRTS\)</span> does not change after the progress, implying that this is a neutral one. Graphically the isoquants do not change.</p>
+</div>
+</section>
+<section id="cost-functions" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Cost functions</h1>
+<section id="isocost-lines" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="isocost-lines"><span class="header-section-number">7.1</span> Isocost lines</h2>
+<div id="def-isocost" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 1 (Isocost)</strong></span> An isocost line is the set of input combinations that yield the same total cost (TC) for the firm. Mathematically, let <span class="math inline">\(w&gt;0\)</span> and <span class="math inline">\(r&gt;0\)</span> be the prices of labor and capital, respectively. Then the isocost consists of all <span class="math inline">\((w, r)\)</span> pairs such that: <span id="eq-isocost_def"><span class="math display">\[
+TC = wL + rK.
+\tag{7}\]</span></span></p>
+</div>
+<div id="fig-isocost" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-isocost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="29b795d0" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_2_files/figure-html/cell-11-output-1.png" width="334" height="332" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-isocost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Isocostline for the case of two inputs
+</figcaption>
+</figure>
+</div>
+<p>Observe that the slope of the isocost line is <span class="math inline">\(-w/r\)</span>, implying that as <span class="math inline">\(w\)</span> rises, this line gets steeper.</p>
+</section>
+<section id="cost-minimization-problem-cmp" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="cost-minimization-problem-cmp"><span class="header-section-number">7.2</span> Cost minimization problem (CMP)</h2>
+<p>The cost minimization problem entails finding a combination of inputs such that the total cost to attain a certain level of output is minimized.</p>
+<div id="def-CMP" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 2 (CMP)</strong></span> <span id="eq-CMP_def"><span class="math display">\[
+\begin{aligned}
+&amp;\min_{L,K} C = wL + rK \\
+&amp;\text{s.t. } q(L, K) \geq m,
+\end{aligned}
+\tag{8}\]</span></span> where <span class="math inline">\(m\)</span> is the target output level.</p>
+</div>
+<p>The idea is to identify the isocost line touching the isoquant that is as close to the origin as possible.</p>
+<section id="necessary-conditions" class="level3" data-number="7.2.1">
+<h3 data-number="7.2.1" class="anchored" data-anchor-id="necessary-conditions"><span class="header-section-number">7.2.1</span> Necessary conditions</h3>
+<p>The Lagrangian of the CMP: <span id="eq-Lagrange_cmp"><span class="math display">\[
+\mathcal{L}(\lambda, L, K) = - C(L, K) + \lambda (q(L,K) - m).
+\tag{9}\]</span></span></p>
+<p>According to the KTT theorem, if <span class="math inline">\((L^*, K^*)\)</span> is a solution to the CMP, then there exist <span class="math inline">\(\lambda^* \geq 0\)</span> such that:</p>
+<p><span id="eq-KT_cmp"><span class="math display">\[
+\begin{aligned}
+&amp;\mathcal{L}_L (L^*, K^*, \lambda^*) = 0, \:
+\mathcal{L}_K (L^*, K^*, \lambda^*) = 0, \\
+% &amp;\quad \quad \quad \text{ with equality for interior solutions }\\
+&amp;\lambda^* \geq 0, \: q(L^*, K^*) - m \geq 0, \:  \lambda^*[q(L^*, K^*) - m] = 0.
+\end{aligned}
+\tag{10}\]</span></span></p>
+<p>The FOCs yield: <span id="eq-FOCs"><span class="math display">\[
+\begin{aligned}
+\lambda^* q_L(L^*, K^*) &amp;=  w, \\
+\lambda^* q_K(L^*, K^*) &amp;=  r.
+\end{aligned}
+\tag{11}\]</span></span></p>
+<p>This implies: <span id="eq-sols_interior"><span class="math display">\[
+\begin{aligned}
+\frac{MP_L}{MP_K} &amp;= \frac{w}{r} \\
+\frac{MP_L}{w} &amp;= \frac{MP_K}{r}=\frac{1}{\lambda^*}.
+\end{aligned}
+\tag{12}\]</span></span></p>
+<p>Note that <span class="math inline">\(\lambda^*\)</span> can be interpreted as a shadow price: the cost of increasing output by a unit: <span class="math display">\[
+\lambda^* = \frac{\partial C^*(r,w,m)}{\partial m}.
+\]</span></p>
+<p><a href="#eq-sols_interior" class="quarto-xref">Equation&nbsp;12</a> states that when minimizing the production cost, the firm rearranges inputs in such manner that the marginal product per currency unit is equalized across all factors. If for example <span class="math inline">\(\frac{MP_L}{w} &gt; \frac{MP_K}{r}\)</span> then we should increase <span class="math inline">\(L\)</span> by reducing <span class="math inline">\(K\)</span> since the former has greater bang for the buck. The condition <span class="math inline">\(\frac{MP_L}{MP_K} = \frac{w}{r} \iff MRTS_{L,K} = \frac{w}{r}\)</span> tells us that the interior optimum is located where the isoquant is tangent to the isocost.</p>
+</section>
+</section>
+<section id="comparative-statics" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="comparative-statics"><span class="header-section-number">7.3</span> Comparative statics</h2>
+<ul>
+<li><p>Solutions to the CMP give us input demands, which typically depend on input prices and the target output, i.e., on <span class="math inline">\(w, r\)</span> and <span class="math inline">\(m\)</span>.</p></li>
+<li><p>This allows us to perform comparative statics</p></li>
+<li><p>The cost is the expenditure that a firm incurs when hiring the <em>optimal</em> amounts of inputs</p></li>
+<li><p>As with input demands, we can express the (optimal) cost function as a function of input prices and target output</p>
+<p><span id="eq-cost_fun"><span class="math display">\[
+  C(w, r, m) = wL(w, r, m) + rK(w, r, m).
+   \tag{13}\]</span></span></p></li>
+<li><p>Likewise, we can also perform comparative statics on it</p></li>
+</ul>
+</section>
+<section id="types-of-costs" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="types-of-costs"><span class="header-section-number">7.4</span> Types of costs:</h2>
+<section id="explicit-vs-implicit-costs" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="explicit-vs-implicit-costs"><span class="header-section-number">7.4.1</span> Explicit vs implicit costs</h3>
+<ul>
+<li><p>Explicit costs (also called accounting costs): Costs that require monetary payments</p></li>
+<li><p>Implicit costs (or opportunity costs): Do not require monetary outlays and reflect what one must sacrifice when making a choice</p></li>
+<li><p>Example: What is your cost of attending this course?</p>
+<ul>
+<li>Accounting costs: tuition, transportation, etc.</li>
+<li>Opportunity cost: the salary you could have earned during the time of study</li>
+</ul></li>
+</ul>
+</section>
+<section id="sunk-vs-nonsunk-costs" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="sunk-vs-nonsunk-costs"><span class="header-section-number">7.4.2</span> Sunk vs nonsunk costs</h3>
+<ul>
+<li>Sunk costs: costs that cannot be recoverred even if the firm chooses to shut down its operations.
+<ul>
+<li>Examples: Advertising expenses already spent, the rent the firm has already paid for the building if the lease does not allow subletting</li>
+</ul></li>
+<li>Nonsunk costs: costs that can be sold back (recoverable or partially recoverable costs) in case the firm shuts down
+<ul>
+<li>Example: Raw materials, the rental cost of the building if the contract allows subleases</li>
+</ul></li>
+</ul>
+</section>
+<section id="long-run-vs-short-run-costs" class="level3" data-number="7.4.3">
+<h3 data-number="7.4.3" class="anchored" data-anchor-id="long-run-vs-short-run-costs"><span class="header-section-number">7.4.3</span> Long-run vs short-run costs</h3>
+<ul>
+<li><p>In the long run (LR), the firm has enough time to vary the amount of all inputs as much as necessary</p></li>
+<li><p>In the short run (SR), the amount of <em>at least one input is fixed</em></p></li>
+<li><p>Example: In short run, production factors such as land or capital are typically fixed, whereas labor is variable. In the long run, it is possible to buy more land and set up new factories, allowing all factors of production to vary.</p>
+<ul>
+<li>Consider a firm with Cobb-Douglas production <span class="math inline">\(q = L^a K^b\)</span> where <span class="math inline">\(K=\bar{K}&gt;0\)</span> is fixed in the SR. Thus the cost function found above is the LR cost. The SR cost can be found by solving the CMP with respect to <span class="math inline">\(L\)</span> only</li>
+</ul></li>
+</ul>
+<div id="fig-SRLRcost" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-SRLRcost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="cd4f7fcb" class="cell" data-execution_count="11">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_2_files/figure-html/cell-12-output-1.png" width="334" height="332" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SRLRcost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Short-run vs long-run cost function
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="average-and-marginal-costs" class="level3" data-number="7.4.4">
+<h3 data-number="7.4.4" class="anchored" data-anchor-id="average-and-marginal-costs"><span class="header-section-number">7.4.4</span> Average and marginal costs</h3>
+<ul>
+<li><p>Average cost (AC): total cost of production <em>per output unit</em>:</p>
+<p><span id="eq-ATC_def"><span class="math display">\[
+  AC(q) = \frac{C(q)}{q},
+   \tag{14}\]</span></span> where <span class="math inline">\(C(q)\)</span> is the total cost.</p></li>
+<li><p>Marginal cost (MC): the rate at which the total cost increases as the firm produces an additional unit of output. Graphically it is the slope of the total cost curve:</p>
+<p><span id="eq-MC_def"><span class="math display">\[
+  MC(q) = C'(q)
+   \tag{15}\]</span></span> in the continuous case.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
+<li><p>The MC curve crosses the AC curve at the AC’s minimum. In other words, the AC is decreasing when it is above the MC and increasing when it is above the MC.</p></li>
+<li><p>Intuition:</p>
+<ul>
+<li>Initially when output is small, the variable cost is small and the fixed cost dominates the total cost</li>
+<li>As output increases, the importance of fixed cost declines. Meanwhile, the MC increases (due to decreasing marginal product)</li>
+<li>After a threshold, producing an additional unit costs more than the AC of existing units</li>
+</ul></li>
+</ul>
+<div id="fig-ACMCSR" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-ACMCSR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="26ae85a5" class="cell" data-execution_count="12">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_2_files/figure-html/cell-13-output-1.png" width="334" height="332" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ACMCSR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Short-run average and marginal costs
+</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+</section>
+</section>
+<section id="exercises" class="level1" data-number="8">
+<h1 data-number="8"><span class="header-section-number">8</span> Exercises</h1>
+<div id="exr-CMP1" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> For each of the following production functions, set up and solve the CMP.</p>
+<ol type="1">
+<li>Cobb-Douglas production function: <span class="math inline">\(q(L,K) = L^a K^b\)</span> where <span class="math inline">\(a, b&gt;0\)</span> and <span class="math inline">\(a+b=1\)</span></li>
+<li>Linear production function: <span class="math inline">\(q(L,K) = aL + bK\)</span> where <span class="math inline">\(a, b&gt;0\)</span>
+<ul>
+<li>Hint: Consider 3 cases: <span class="math inline">\(w/r = a/b\)</span>, <span class="math inline">\(w/r &lt; a/b\)</span> and <span class="math inline">\(w/r &gt; a/b\)</span></li>
+</ul></li>
+</ol>
+</div>
+<div id="exr-CMP2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Consider again the Cobb-Douglas production function in <a href="#exr-CMP1" class="quarto-xref">Exercise&nbsp;1</a>. Let <span class="math inline">\(K(w, r, m)\)</span> and <span class="math inline">\(L(w, r, m)\)</span> denote the input demand for capital and labor, respectively.</p>
+<ol type="1">
+<li>How do input demands change with the ouput level <span class="math inline">\(m\)</span>, and the input price?</li>
+<li>Are they homogeneous functions? If yes of which degree?</li>
+</ol>
+</div>
+<div id="exr-CostFun" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Derive the cost function for a firm with a Cobb-Douglas production function. Is it a homogenous function? Of which degree? Explain.</p>
+</div>
+<div id="exr-LRSRcost" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Let <span class="math inline">\(q = L^{1/2} K^{1/2}\)</span> be the production function. Suppose that in the short run capital is fixed at <span class="math inline">\(\bar{K}=150\)</span>. Find the long-run and short-run cost functions. Which one is smaller? Does it make sense?</p>
+</div>
+<div id="exr-ACMC" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Suppose <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span>. Derive the average and the marginal costs for the Cobb-Douglas production function <span class="math inline">\(q = L^{1/2} K^{1/2}\)</span> in the SR and the LR.</p>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>It is equal to <span class="math inline">\(\Delta C / \Delta q\)</span> in the discrete case<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../contents/lecture_1.html" class="pagination-link" aria-label="Chapter 1">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Chapter 1</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../contents/lecture_3.html" class="pagination-link" aria-label="Chapter 3">
+        <span class="nav-page-text">Chapter 3</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

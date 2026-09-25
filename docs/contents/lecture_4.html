@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="My Dam">
+
+<title>Chapter 4. Monopoly – Intermediate Microeconomics</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../contents/lecture_5.html" rel="next">
+<link href="../contents/lecture_3.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-1b851f334af3abb447df18392212cf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-1ca1dd62c07aaf28e56d553fd4136965.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-1b851f334af3abb447df18392212cf72.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+<meta property="og:title" content="Chapter 4. Monopoly – Intermediate Microeconomics">
+<meta property="og:description" content="Materials for CASED’s pre-Master course in Microeconomics">
+<meta property="og:image" content="lecture_4_files/figure-html/cell-6-output-1.png">
+<meta property="og:site_name" content="Intermediate Microeconomics">
+</head>
+
+<body class="nav-sidebar docked nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Intermediate Microeconomics</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../index.html" aria-current="page"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../contact.html"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_4.html">Chapter 4</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Course information</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Lectures</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_4.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Chapter 4</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 5</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 6</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../contents/lecture_7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Chapter 7</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
+   
+  <ul>
+  <li><a href="#monopoly" id="toc-monopoly" class="nav-link active" data-scroll-target="#monopoly"><span class="header-section-number">1</span> Monopoly</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-monopoly" id="toc-what-is-a-monopoly" class="nav-link" data-scroll-target="#what-is-a-monopoly"><span class="header-section-number">1.1</span> What is a monopoly?</a></li>
+  <li><a href="#profit-maximizing-problem-pmp" id="toc-profit-maximizing-problem-pmp" class="nav-link" data-scroll-target="#profit-maximizing-problem-pmp"><span class="header-section-number">1.2</span> Profit maximizing problem (PMP)</a></li>
+  <li><a href="#monopolistic-outcomes" id="toc-monopolistic-outcomes" class="nav-link" data-scroll-target="#monopolistic-outcomes"><span class="header-section-number">1.3</span> Monopolistic outcomes</a></li>
+  <li><a href="#common-misunderstandings-of-monopoly" id="toc-common-misunderstandings-of-monopoly" class="nav-link" data-scroll-target="#common-misunderstandings-of-monopoly"><span class="header-section-number">1.4</span> Common misunderstandings of monopoly</a>
+  <ul class="collapse">
+  <li><a href="#the-monopolist-can-set-infinitely-high-prices" id="toc-the-monopolist-can-set-infinitely-high-prices" class="nav-link" data-scroll-target="#the-monopolist-can-set-infinitely-high-prices"><span class="header-section-number">1.4.1</span> The monopolist can set infinitely high prices</a></li>
+  <li><a href="#the-monopolist-has-a-supply-curve" id="toc-the-monopolist-has-a-supply-curve" class="nav-link" data-scroll-target="#the-monopolist-has-a-supply-curve"><span class="header-section-number">1.4.2</span> The monopolist has a supply curve</a></li>
+  <li><a href="#the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve" id="toc-the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve" class="nav-link" data-scroll-target="#the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve"><span class="header-section-number">1.4.3</span> The monopolist operates in the inelastic portion of the demand curve</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#the-lerner-index-and-the-inverse-elasticity-pricing-rule" id="toc-the-lerner-index-and-the-inverse-elasticity-pricing-rule" class="nav-link" data-scroll-target="#the-lerner-index-and-the-inverse-elasticity-pricing-rule"><span class="header-section-number">2</span> The Lerner index and the inverse elasticity pricing rule</a>
+  <ul class="collapse">
+  <li><a href="#lerner-index" id="toc-lerner-index" class="nav-link" data-scroll-target="#lerner-index"><span class="header-section-number">2.1</span> Lerner index</a></li>
+  <li><a href="#inverse-elasticity-pricing-rule-iepr" id="toc-inverse-elasticity-pricing-rule-iepr" class="nav-link" data-scroll-target="#inverse-elasticity-pricing-rule-iepr"><span class="header-section-number">2.2</span> Inverse elasticity pricing rule (IEPR)</a></li>
+  </ul></li>
+  <li><a href="#multipliant-monopoly-and-cartel" id="toc-multipliant-monopoly-and-cartel" class="nav-link" data-scroll-target="#multipliant-monopoly-and-cartel"><span class="header-section-number">3</span> Multipliant monopoly and cartel</a></li>
+  <li><a href="#impacts-on-welfare" id="toc-impacts-on-welfare" class="nav-link" data-scroll-target="#impacts-on-welfare"><span class="header-section-number">4</span> Impacts on welfare</a></li>
+  <li><a href="#regulation-of-monopolies" id="toc-regulation-of-monopolies" class="nav-link" data-scroll-target="#regulation-of-monopolies"><span class="header-section-number">5</span> Regulation of monopolies</a></li>
+  <li><a href="#monopsony" id="toc-monopsony" class="nav-link" data-scroll-target="#monopsony"><span class="header-section-number">6</span> Monopsony</a>
+  <ul class="collapse">
+  <li><a href="#what-is-a-monopsony" id="toc-what-is-a-monopsony" class="nav-link" data-scroll-target="#what-is-a-monopsony"><span class="header-section-number">6.1</span> What is a monopsony?</a></li>
+  <li><a href="#modeling-a-monopsony" id="toc-modeling-a-monopsony" class="nav-link" data-scroll-target="#modeling-a-monopsony"><span class="header-section-number">6.2</span> Modeling a monopsony</a></li>
+  </ul></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises"><span class="header-section-number">7</span> Exercises</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../contents/lecture_1.html">Lectures</a></li><li class="breadcrumb-item"><a href="../contents/lecture_4.html">Chapter 4</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Chapter 4. Monopoly</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>My Dam <a href="mailto:my-thi-tra.dam@universite-paris-saclay.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="monopoly" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Monopoly</h1>
+<section id="what-is-a-monopoly" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="what-is-a-monopoly"><span class="header-section-number">1.1</span> What is a monopoly?</h2>
+<p>Unlike a competitive firm, who is a price-taker, a monopolist can determine the outpout level of the whole market and thus is a price-maker. A monopolist can choose any point on the demand curve: choosing the level of output is equivalent to choosing the price at which to sell the good.</p>
+<p>A monopoly emerges due to barriers to entry such as:</p>
+<ol type="1">
+<li><strong>Structural barriers</strong>: such as cost advantage or demand advantage of incumbent firms</li>
+<li><strong>Legal barriers</strong>: such as patents</li>
+<li><strong>Strategic barriers</strong>: incumbent firms can engage in price wars (matching low prices of competitors) to build reputation as an aggressive competitor and deter entry</li>
+</ol>
+</section>
+<section id="profit-maximizing-problem-pmp" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="profit-maximizing-problem-pmp"><span class="header-section-number">1.2</span> Profit maximizing problem (PMP)</h2>
+<p>Just as any other firm, the objective of the monopolist is to maximize profits. The quantity supplied in a monopoly is the solution to the monopolist’s PMP, which is:</p>
+<p><span class="math display">\[
+\max_q \pi = R(q) - C(q) = p(q) q - C(q),
+\]</span></p>
+<p>where <span class="math inline">\(p(q)\)</span> is the inverse demand function and <span class="math inline">\(C(q)\)</span> is the firm’s total cost. Assuming differentiability, the FOC reads:</p>
+<p><span id="eq-FOC"><span class="math display">\[
+\begin{aligned}
+\pi'(q) = p(q) + p'(q)q - C'(q) &amp;= 0 \\
+p(q) + p'(q)q &amp;= C'(q) \\
+MR(q) &amp;= MC(q).
+\end{aligned}
+\tag{1}\]</span></span></p>
+<p>At the profit maximizing output, the monopolist equalizes marginal revenue (MR) and marginal cost (MC).</p>
+<p>In order for the FOC to be sufficient, the SOC needs to be verified, i.e.,</p>
+<p><span class="math display">\[
+\pi''(q) = MR'(q) - MC'(q) \leq 0,
+\]</span></p>
+<p>meaning that the slope of the marginal cost curve is greater or equal to that of the marginal revenue curve. This condition is clearly satisfied in the case of downward sloping MR and upward sloping MC (convex cost function).</p>
+<p>If the SOC then the profit maximizing output is such that <span class="math inline">\(MR(q) = MC(q)\)</span> since:</p>
+<ul>
+<li>If <span class="math inline">\(MR(q) &gt; MC(q)\)</span>, raising output increases profits</li>
+<li>If <span class="math inline">\(MR(q) &lt; MC(q)\)</span>, raising output hurts profits</li>
+</ul>
+</section>
+<section id="monopolistic-outcomes" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="monopolistic-outcomes"><span class="header-section-number">1.3</span> Monopolistic outcomes</h2>
+<p>Recall that for a price-taker, the marginal revenue is the market price. For a monopolist, this is no longer true since the monopolist influences the market price via their output level. In particular, in a monopoly, MR is <em>less</em> than the market price whenever the law of demand holds (decreasing demand curve): <span id="eq-MR"><span class="math display">\[
+MR(q) = p(q) + p'(q)q &lt; p(q).
+\tag{2}\]</span></span></p>
+<p>Hence as output increases, there are two opposing forces acting on the firm’s revenue. On the one hand, selling one additional unit yields an additional revenue equal to the price <span class="math inline">\(p(q)\)</span>. On the other hand, higher supply depresses the price of the good since the demand curve is downward sloping.</p>
+<p>Marginal revenue being less than the price implies that graphically the MR curve lies <em>below</em> the demand curve. Notice that the MR curve and the demand curves originate at the same height since <span class="math inline">\(MR(0) = p(0).\)</span> This is the highest price anyone is willing to pay for the good (the maximum willingness to pay or reservation price).</p>
+<div id="exm-LinearDemand" class="theorem example">
+<p><span class="theorem-title"><strong>Example 1</strong></span> Consider the linear inverse demand function <span class="math inline">\(p(q) = a - bq\)</span> where <span class="math inline">\(a, b &gt; 0.\)</span> The marginal revenue is <span class="math inline">\(RM(q) = R'(q) = a - 2bq,\)</span> which is twice as steep as the demand curve but originates at the same point <span class="math inline">\((0,a)\)</span> as the demand curve. Suppose the market is a monopoly and the monopolist has constant marginal cost <span class="math inline">\(MC(q)=c,\)</span> then monopolist maximizes profits by selling <span class="math inline">\(q=\frac{a-c}{2b}\)</span> at the price <span class="math inline">\(p=\frac{a+c}{2}\)</span>. Observe that <span class="math inline">\(a\)</span> measures the highest reservation price, if <span class="math inline">\(a &lt; c\)</span> the market would cease to exist.</p>
+</div>
+<div id="fig-linDemand" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linDemand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="1dd61b5e" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-6-output-1.png" width="499" height="348" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linDemand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: A monopoly with linear demand and constant marginal cost. The monopoly price is higher and the quantity is lower than in a competitive market. The consumer surplus shrinks and there is a dead weight loss (DWL).
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="common-misunderstandings-of-monopoly" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="common-misunderstandings-of-monopoly"><span class="header-section-number">1.4</span> Common misunderstandings of monopoly</h2>
+<section id="the-monopolist-can-set-infinitely-high-prices" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="the-monopolist-can-set-infinitely-high-prices"><span class="header-section-number">1.4.1</span> The monopolist can set infinitely high prices</h3>
+<p>Being the only firm in the market, the monopolist has market power, but this does not mean it can set any price. Indeed, monopoly prices depend on the market demand, which is the aggegration of consumers’ demand, as we saw previously. The price and quantity combination of the monopolist is constrained by the market demand curve. Since the demand curve is in general downward sloping, in general it is not optimal for the monopolist to set prices as high as possible since as prices increase, the quantity demanded declines.</p>
+</section>
+<section id="the-monopolist-has-a-supply-curve" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="the-monopolist-has-a-supply-curve"><span class="header-section-number">1.4.2</span> The monopolist has a supply curve</h3>
+<p>The monopolist does not have a supply curve since it is a price maker. Indeed, recall that the supply curve is constructed by associating each <em>given price</em> with a quantity that firms are willing to produce. In a monopoly there is <em>no given price</em>: for a monopolist, deciding how much to produce is equivalent to choosing at which price to sell; the two are determined simulatenously via the demand curve.</p>
+</section>
+<section id="the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve" class="level3" data-number="1.4.3">
+<h3 data-number="1.4.3" class="anchored" data-anchor-id="the-monopolist-operates-in-the-inelastic-portion-of-the-demand-curve"><span class="header-section-number">1.4.3</span> The monopolist operates in the inelastic portion of the demand curve</h3>
+<p>Monopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). Increasing the price by 1% would reduce sales by <em>less than</em> 1% for the monopolist, thereby increasing revenues. It will then have incentives to reduce output (raise prices) so long as it is on the inelastic part of the demand curve.</p>
+<div id="fig-Elasticity" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Elasticity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="3b5b0537" class="cell" data-execution_count="6">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-7-output-1.png" width="508" height="332" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Elasticity-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Going from the left to the right, the demand curve becomes less and less elastic <em>even if</em> its slope is constant.
+</figcaption>
+</figure>
+</div>
+</section>
+</section>
+</section>
+<section id="the-lerner-index-and-the-inverse-elasticity-pricing-rule" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The Lerner index and the inverse elasticity pricing rule</h1>
+<section id="lerner-index" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="lerner-index"><span class="header-section-number">2.1</span> Lerner index</h2>
+<p>The Lerner index is the ratio between the markup (difference between the price and the marginal cost) and the price. It is thus also known as the <em>markup index</em>.</p>
+<p><span id="eq-lerner"><span class="math display">\[
+\frac{p - MC(q)}{p}.
+\tag{3}\]</span></span></p>
+<p>Observe that for any perfectly competitive firm, the Lerner index is zero.</p>
+<p>Recall that the price-elasticity of demand for any price variation (not just small ones) is: <span class="math display">\[
+\epsilon_{p,q} = \frac{\%\Delta q}{\%\Delta p}\frac{p}{q}
+\implies \frac{1}{\epsilon_{p,q}} = \frac{\%\Delta p}{\%\Delta q}\frac{q}{p}.
+\]</span></p>
+<p>Hence for a small variation in quantity, we can write: <span id="eq-elasticity_inv"><span class="math display">\[
+\frac{1}{\epsilon_{p,q}} = \frac{\partial p}{\partial q}\frac{q}{p}.
+\tag{4}\]</span></span></p>
+<p>For a monopolist, since <span class="math inline">\(MC(q) = MR(q) = p(q) + p'(q)q\)</span>,</p>
+<p><span class="math display">\[
+\begin{aligned}
+\frac{p - MC(q)}{p} &amp;= \frac{p(q) - p(q) - p'(q)q}{p(q)} \\
+&amp;=\frac{-p'(q)q}{p(q)} \\
+&amp;= -\frac{\partial p}{\partial q}\frac{q}{p} \\
+&amp;= - \frac{1}{\epsilon_{p,q}}.
+\end{aligned}
+\]</span></p>
+<!-- * This is referred to as the inverse elasticity pricing rule (IEPR) -->
+<p>Therefore the monopoly Lerner index is: <span id="eq-Lerner_mon"><span class="math display">\[
+\frac{p - MC(q)}{p} = - \frac{1}{\epsilon_{p,q}}.
+\tag{5}\]</span></span></p>
+<p><a href="#eq-Lerner_mon" class="quarto-xref">Equation&nbsp;5</a> tells us that a monopolist’s ability to set price above the marginal cost (as captured its Lerner index) is inversely related to the price-elasticity of demand:</p>
+<ul>
+<li>On more elastic portions of the demand curve, the Lerner index is small</li>
+<li>As demand becomes relatively inelastic, the Lerner index rises</li>
+</ul>
+<p>Again, a high Lerner index in general does not imply higher profits. In particular, profits per sale are represented by the gap between the price and the <em>average cost</em>, not the marginal cost</p>
+<div id="exm-Lerner-lindemand" class="theorem example">
+<p><span class="theorem-title"><strong>Example 2</strong></span> The Lerner index for a monopoly with constant marginal cost <span class="math inline">\(c\)</span> and linear demand <span class="math inline">\(p(q)=a-bq\)</span> is <span class="math inline">\(\frac{a-c}{a+c} &lt; 1:\)</span> the monopolist cannot have a markup over 100%.</p>
+</div>
+<div id="exm-Lerner-CEdemand" class="theorem example">
+<p><span class="theorem-title"><strong>Example 3</strong></span> Consider again a monopolist with constant marginal cost <span class="math inline">\(c\)</span> facing a constant elasticity demand function <span class="math inline">\(q(p)=ap^{-\epsilon},\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(\epsilon\)</span> are strictly positive. The Lerner index in this market is <span class="math inline">\(1/\epsilon,\)</span> indicating higher markup power for less elastic market.</p>
+</div>
+</section>
+<section id="inverse-elasticity-pricing-rule-iepr" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="inverse-elasticity-pricing-rule-iepr"><span class="header-section-number">2.2</span> Inverse elasticity pricing rule (IEPR)</h2>
+<p>The IEPR can be derived from the monopoly Lerner index (<a href="#eq-Lerner_mon" class="quarto-xref">Equation&nbsp;5</a>):</p>
+<p><span id="eq-IEPR"><span class="math display">\[
+p = \frac{MC(q)}{1 + \frac{1}{\epsilon_{q,p}}}.
+\tag{6}\]</span></span></p>
+<div id="exm-IEPR" class="theorem example">
+<p><span class="theorem-title"><strong>Example 4</strong></span> Consider the constant elasticity demand function above. Suppose the monopolist faces a constant marginal cost of <span class="math inline">\(c\)</span> as before. The monopoly price according to the IEPR is:</p>
+<p><span class="math display">\[
+p^M = \frac{c}{1 - \frac{1}{\epsilon}},
+\]</span> implying thatthat <span class="math inline">\(p^M &gt; 0\)</span> if and only if <span class="math inline">\(\epsilon &gt; 1:\)</span> the monopolist operates on an elastic portion of the demand curve.</p>
+</div>
+</section>
+</section>
+<section id="multipliant-monopoly-and-cartel" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Multipliant monopoly and cartel</h1>
+<p>A mulitpliant monopoly is a monopoly producing the same good in different factories (for example across the globe to cut costs). In each factory, the firm might face a different cost function.</p>
+<p>Consider a monopolist producing the <em>same good in two different plants</em> (factories) and denote:</p>
+<ul>
+<li><span class="math inline">\(q_i\)</span> the output produced in plant <span class="math inline">\(i=\{1,2\}\)</span></li>
+<li><span class="math inline">\(Q = \sum_i q_i\)</span> the total output produced by the monopolist</li>
+<li><span class="math inline">\(C_i\)</span> plant <span class="math inline">\(i\)</span>th’s cost of production</li>
+<li><span class="math inline">\(R_i = p(Q)q_i\)</span> the total revenu of plant <span class="math inline">\(i\)</span>th</li>
+</ul>
+<p>The PMP is:</p>
+<p><span id="eq-PMP_multi"><span class="math display">\[
+\begin{aligned}
+\max_{q_1,q_2} \pi_1 + \pi_2 &amp;= R_1(q_1, q_2) - C_1(q_1) + R_2(q_1, q_2) - C_2(q_2) \\
+&amp;= p(q_1, q_2)q_1 - C_1(q_1) + p(q_1, q_2)q_2 - C_2(q_2) \\
+&amp;= p(q_1, q_2)(q_1 + q_2) - C_1(q_1) - C_2(q_2).
+\end{aligned}
+\tag{7}\]</span></span></p>
+<p>Differentiating w.r.t <span class="math inline">\(q_i\)</span> yields:</p>
+<p><span id="eq-FOCs_multi"><span class="math display">\[
+\begin{aligned}
+p(q_1, q_2) + \frac{\partial p}{\partial q_i}q_i &amp;= \frac{\partial C_i(q_i)}{\partial q_i} \\
+MR_i(q_1, q_2) &amp;= MC_i(q_i), \quad i=1,2.
+\end{aligned}
+\tag{8}\]</span></span></p>
+<div id="exm-cartel" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5</strong></span> A <strong>cartel</strong> is a group of firms coordinating their production decisions to maximize joint profits.</p>
+<p>A famous example of a cartel is the OPEC (Organization of Petrolium Exporting Countries). Some countries, such as Saudi Arabia have lower MC (cost of extracting an additional barrel of oil) while others, such as Angola or Venezuela have higher MC. They coordinate on total output, i.e., agree on the quantity that each member produces, and redistribute joint profits.</p>
+<p>Here is another cartel example in the automotive industry. In 2016, several major European truck manufacturers, including Daimler, Volvo/Renault, Iveco, and DAF, were fined by the European Commission for forming a cartel. These companies had colluded for 14 years to fix prices and delay the introduction of more environmentally friendly truck models. The fines totaled over €2.9 billion, making it one of the largest cartel fines in history.</p>
+</div>
+</section>
+<section id="impacts-on-welfare" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Impacts on welfare</h1>
+<p>The following table sums up the impact on welfare of monopolies compared to more competitive markets</p>
+<div id="tbl-welfareImpact" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-welfareImpact-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Impacts of monopolies on welfare
+</figcaption>
+<div aria-describedby="tbl-welfareImpact-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Consumer Surplus</td>
+<td style="text-align: left;">Lower</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Producer Surplus</td>
+<td style="text-align: left;">Higher</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dead weight loss (DWL)</td>
+<td style="text-align: left;">Higher for monopolies with a unique price</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="fig-SD-perfectComp" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-SD-perfectComp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="e36ffa97" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-8-output-1.png" width="335" height="330" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SD-perfectComp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Welfare distribution in perfect competition
+</figcaption>
+</figure>
+</div>
+<div id="fig-SDMon" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-SDMon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="096af94c" class="cell" data-execution_count="8">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-9-output-1.png" width="335" height="330" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-SDMon-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Welfare distribution in monopoly
+</figcaption>
+</figure>
+</div>
+<p><a href="#fig-elasticityDWL" class="quarto-xref">Figure&nbsp;5</a> shows the impact of price-elasticity of demand on the magnitidue of the dead weight loss due to monpoly. The more elastic is the demand curve, the smaller the DWL appears to be. This is because a higher price-elasticity of demand reduces the markup potential of the monopolist, resulting in an outcome that is closer to the perfectly competitive one. In <a href="#exr-Lerner-CEdemand" class="quarto-xref">Exercise&nbsp;2</a>, you are asked to show the dependence of DWL on elasticity for the constant-elasticity demand case. Note that in general we can always write the DWL as:</p>
+<p><span id="eq-DWL"><span class="math display">\[
+    DWL = \int_{q_M}^{q_C} [p(q) - MC(q)] dq,
+\tag{9}\]</span></span></p>
+<p>where <span class="math inline">\(q_M\)</span> and <span class="math inline">\(q_C\)</span> denote the monopoly and the competitve outputs, respectively.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>With some algebra we can show the following relationship for the constant-elasticity demand: <span id="eq-QMQC-mon"><span class="math display">\[
+    q_M = \left(1 - \frac{1}{\epsilon}\right)^{\frac{\epsilon}{1 + \epsilon}} q_C.
+\tag{10}\]</span></span></p>
+<p>Observe that <span class="math inline">\(q_M \to q_C\)</span> as <span class="math inline">\(\epsilon\to\infty,\)</span> as we have remarked above.</p>
+<div id="fig-elasticityDWL" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-elasticityDWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="af823213" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-10-output-1.png" width="353" height="359" class="figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-10-output-2.png" width="353" height="359" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elasticityDWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Price-elasticity of demand and dead weight loss.
+</figcaption>
+</figure>
+</div>
+<div id="rem-DWL-mon-vs-DWL-tax" class="proof remark">
+<p><span class="proof-title"><em>Remark 1</em>. </span>It is also important to note that this relationship between the price-elasticity of demand and monopoly DWL does not typically apply to other types of DWL. For example, in the context of an excise tax, the distorsion caused by the tax (or the DWL) would be higher the flatter the demand curve. This is because consumers in a market with relatively more elastic demand, consumers have more alternatives which they can turn to rather than continuing to consume the good whose price has increased.</p>
+</div>
+</section>
+<section id="regulation-of-monopolies" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Regulation of monopolies</h1>
+<p>Monopolies cause a reduction in consumer welfare and a loss of market efficiency. It is a case of market failure. What can the government do to mitigate the consequences? In general it depends on the type of monopolies. A monopoly that arises and persists thanks to economies of scale (decreasing average cost) is called a <strong>natural monopoly</strong>.</p>
+<p>If the monopoly is not a natural monopoly, i.e., if they maintain their dominant position by anticompetitive or restrictive practices (e.g., exclusive dealing, tying, bundling, predatory pricing, etc.), then the general public approach is to try and break them by using antitrust laws.</p>
+<p>If it is a natural monopoly, then the government might attempt to regulate. Now the government faces a dilemma since it is more efficient for a single firm to serve the market thanks to economies of scale. For a natural monopoly the average cost is declining in output. Recall that for output levels for which the average cost is declining, the marginal cost is <em>less</em> than the average cost. If the government requires that the natural monopolist sets price equal to the marginal cost as if it were operating in a perfectly competitive market, it would incur a loss since this price would be below its average cost.</p>
+<p>One public solution is to allow natural monopolists to charge different prices to different groups of customers (e.g., different electricity/water rates depending on whether customers are businesses or households) in such a way that the losses incurred would be offset by the positive profits. This approach follows the so-called Ramsey-Boiteux’s rule, which proposes charging higher prices to groups with less elastic demand.</p>
+</section>
+<section id="monopsony" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Monopsony</h1>
+<section id="what-is-a-monopsony" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="what-is-a-monopsony"><span class="header-section-number">6.1</span> What is a monopsony?</h2>
+<p>In contrast to a monopoly, in a <em>monopsony</em>, there is a single buyer and several sellers. The buyer will be able to pay less for each unit of the good than if it had to compete against other buyers.</p>
+<div id="exm-monopsony-quali" class="theorem example">
+<p><span class="theorem-title"><strong>Example 6</strong></span> Examples of a monopsonies abound, spanning from the labor, retail, technology to the public sector.</p>
+<ul>
+<li><p><strong>Labor</strong> market: Large factories in remote areas in developing countries might be the sole buyer of labor in the region. These companies can exert significant control over wages and employment conditions.</p></li>
+<li><p><strong>Retail</strong>: Big supermarket chains such as Walmart (US), Carrefour (France) or Amazon (online) might have important negotiating power over suppliers when they are the dominant buyers of certain products.</p></li>
+<li><p><strong>Content platforms</strong> such as YouTube, Instagram or Spotify might have monopsonistic power over content creators</p></li>
+<li><p><strong>Public defense</strong>: In many countries, the government is the sole purchaser of military equipment and defense-related goods. Companies producing such goods often have to accept the terms and prices dictated by the government.</p></li>
+</ul>
+</div>
+</section>
+<section id="modeling-a-monopsony" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="modeling-a-monopsony"><span class="header-section-number">6.2</span> Modeling a monopsony</h2>
+<p>Consider a firm with production function <span class="math inline">\(q=f(L)\)</span> which is twice differentiable, strictly increasing (<span class="math inline">\(f'&gt;0\)</span>) and strictly concave (<span class="math inline">\(f''&lt;0\)</span>) The firm faces only linear labor cost <span class="math inline">\(w(L)L\)</span> and its profits are given by: <span class="math display">\[
+\pi = pq - w(L)L,
+\]</span> where <span class="math inline">\(p\)</span> is the price of the good produced by the firm</p>
+<p>Note that <span class="math inline">\(w\)</span> is increasing in <span class="math inline">\(L\)</span>: the higher demand for labor, the higher the wage. In other words, the firm is not a price-taker in the labor market: it has influences over the wage by deciding on the number of workers to hire.</p>
+<p>The monopsonist’s PMP: <span class="math display">\[
+\max_{L\geq 0} \pi =pq - w(L)L = pf(L) - w(L)L.
+\]</span></p>
+<p>Differentiating w.r.t <span class="math inline">\(L\)</span> yields: <span id="eq-FOC_monopsony"><span class="math display">\[
+\pi'(L) = 0 \iff pf'(L) = w(L) + w'(L)L.
+\tag{11}\]</span></span></p>
+<p>Observe that the LHS of <a href="#eq-FOC_monopsony" class="quarto-xref">Equation&nbsp;11</a> represents the marginal revenue brought about but an additional worker (<span class="math inline">\(f'\)</span> is the marginal output). It is often referred to as the <strong>marginal revenue product</strong> of labor (<span class="math inline">\(MRP\)</span>).</p>
+<p>The RHS of <a href="#eq-FOC_monopsony" class="quarto-xref">Equation&nbsp;11</a> captures the marginal cost or the <strong>marginal expenditure</strong> on labor (<span class="math inline">\(ME\)</span>). As the labor market becomes scarce, employing an additional worker raises the wage to <span class="math inline">\(w(L)\)</span>. The increased wage <span class="math inline">\(w'&gt;0\)</span> must be enjoyed by all the workers, which is captured by the second term. An analogy with the monopoly might help us remember these terms. In particular:</p>
+<ul>
+<li><span class="math inline">\(w(L)\)</span> to <span class="math inline">\(p(q)\)</span>: Supply to demand</li>
+<li><span class="math inline">\(ME(L)\)</span> to <span class="math inline">\(MR(q)\)</span>: Marginal expenditure to marginal revenue</li>
+<li><span class="math inline">\(MRP(L)\)</span> to <span class="math inline">\(MC(q)\)</span>. Marginal revenue product to marginal cost</li>
+</ul>
+<p>Let us look at a numerical example.</p>
+<div id="exm-monop-Quant" class="theorem example">
+<p><span class="theorem-title"><strong>Example 7</strong></span> Consider a coal mine in a small town with production function <span class="math inline">\(q = 30\ln L\)</span>. The market for coal is a perfectly competitive one with price <span class="math inline">\(p=\$5\)</span> per unit. The labor market where the mine operates has supply given by <span class="math inline">\(w(L) = 5 + \frac{1}{2}L.\)</span> Determine the number of workers hired and the equilibrium wage in this market.</p>
+<p>The monopsony’s PMP: <span class="math display">\[
+\pi(L) = 150\ln(L) - (5 + \frac{1}{2}L)L,
+\]</span></p>
+<p>which is strictly concave in <span class="math inline">\(L.\)</span> The necessary and sufficient condition for a max is: <span class="math display">\[
+\begin{aligned}
+\pi'(L) = 0 \iff \frac{150}{L} &amp;= 5 + L \\
+L^2 + 5L - 150 &amp;= 0 \\
+L &amp;= 10.
+\end{aligned}
+\]</span></p>
+<p>Hence the optimal number of hires is 26 for a wage rate of <span class="math inline">\(w(10) = \$10.\)</span></p>
+<p>If the market were competitive, the firm would have taken the wage as given while soving its PMP. The condition for a max in this case would have been:</p>
+<p><span class="math display">\[
+\begin{aligned}
+pq'(L) &amp;= w(L) \\
+\frac{150}{L} &amp;= 5 + \frac{1}{2}L \\
+L &amp;= -5 + \sqrt{325} \approx 13.
+\end{aligned}
+\]</span></p>
+<p>The competitive wage would have been <span class="math inline">\(w(13)=11.5.\)</span></p>
+</div>
+<div id="fig-monopsony-DWL" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-monopsony-DWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="1cfabd20" class="cell" data-execution_count="10">
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="lecture_4_files/figure-html/cell-11-output-1.png" width="339" height="330" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-monopsony-DWL-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Consequences of monopsony
+</figcaption>
+</figure>
+</div>
+<p>To conclude, we see that compared to a competitive buyer, the monopsonist buys a lower quantity at a lower price and this creates a dead weight loss in the market, as in the case of the monopoly.</p>
+</section>
+</section>
+<section id="exercises" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Exercises</h1>
+<div id="exr-elasticityD" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Consider a market with a linear demand curve <span class="math inline">\(p(q) = a - bq,\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are strictly positive constants. Determine the range of quantities for which the demand curve is elastic or inelastic. Suppose the market is a monopoly and the monopolist faces a linear cost function <span class="math inline">\(C(q)=cq,\)</span> what are the monopoly price and quantity? Does this quantity belong to the elastic or inelastic part of the demand curve?</p>
+</div>
+<div id="exr-Lerner-CEdemand" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> Consider a monopolist with linear marginal cost <span class="math inline">\(MC(q)=cq\)</span> facing a constant elasticity demand function:</p>
+<p><span class="math display">\[
+q(p) = a p ^{-\epsilon} \quad a&gt;0,\:\epsilon &gt; 0.
+\]</span></p>
+<ol type="1">
+<li><p>Show that the monopoly output and price are given by: <span id="eq-CEdemand-Monopoly"><span class="math display">\[
+\begin{aligned}
+q_M &amp;= \left[\frac{\left(1 - 1/\epsilon\right)a^{1/\epsilon}}{c}\right]^{\frac{\epsilon}{1+\epsilon}}, \\
+p_M &amp;= \left(\frac{a}{q}\right)^{\frac{1}{\epsilon}}.
+\end{aligned}
+    \tag{12}\]</span></span></p></li>
+<li><p>Verify that the monopolist operates on an elastic portion of the demand curve</p></li>
+<li><p>Compute the dead weight loss, how does it depend on <span class="math inline">\(\epsilon\)</span>? Interpret.</p></li>
+</ol>
+</div>
+<div id="exr-multipliant" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Consider a multipliant monopoly producing in two different plants, each of which has total cost: <span class="math inline">\(C_i(q_i) = a_i + b_i q_i + \frac{1}{2}c_i q_i^2\)</span>, where <span class="math inline">\(a_i, b_i, c_i&gt;0\)</span>, <span class="math inline">\(i=\{1, 2\}\)</span>. The monopolist faces a linear demand curve given by <span class="math inline">\(p(Q) = A - Q\)</span> with <span class="math inline">\(Q=q_1 + q_2\)</span>. Determine the output of each plant and their joint profits.</p>
+</div>
+<div id="exr-PriceDisc" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Suppose that a monopolist with a constant marginal cost of 4 can identify two markets: <span class="math display">\[
+\begin{aligned}
+q_1 &amp;= 100 - 2p_1 \\
+q_2 &amp;= 120 - 3p_2.
+\end{aligned}
+\]</span></p>
+<ol type="1">
+<li>If the monopolist is allowed to charge different prices, what will be the quantity sold to each group of customers? the prices charged? the consumer surplus?</li>
+<li>If the monopolist is forced to charge a single price, what will this price be? What is the consumer surplus now?</li>
+<li>Compute the demand elasticities associated with the prices and quantities computed in the first question. How can one use the Ramsey-Boiteux’s rule to improve market efficiency?</li>
+</ol>
+</div>
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>In the linear demand case above the DLW was the area of a triangle which we were about to compute without integration.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../contents/lecture_3.html" class="pagination-link" aria-label="Chapter 3">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Chapter 3</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../contents/lecture_5.html" class="pagination-link" aria-label="Chapter 5">
+        <span class="nav-page-text">Chapter 5</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -593,11 +593,11 @@ $$
 \end{aligned}
 $$
 
-Here we have used the fact that: 
-
+The second line comes from the first-order conditions @eq-nec_cond_UMP.
+And the third line comes from the fact the budget constraint binds at the optimum, which implies:
 $$
-\sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} = 1,
-$$ which comes directly from the binding budget constraint.
+\sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} = 1.
+$$
 
 </details>
 
@@ -614,6 +614,17 @@ $$ which comes directly from the binding budget constraint.
     3.  $u_i(x) \neq 0 \: \forall i \iff \nabla u(x) \neq 0$
         -   There is no bliss point
         -   If such a point existed then LNS would be violated, which would contradict monotonicity
+
+### Example: Cobb-Douglas utility function with availability constraints
+
+<iframe id="kt-frame" src="interactives/kuhn-tucker-utility.html" style="width:100%; border:none;" scrolling="no"></iframe>
+<script>
+  const ktFrame = document.getElementById('kt-frame');
+  function resizeKtFrame(){ try { ktFrame.style.height = ktFrame.contentWindow.document.body.scrollHeight + 40 + 'px'; } catch(e){} }
+  ktFrame.addEventListener('load', resizeKtFrame);
+  window.addEventListener('resize', resizeKtFrame);
+  setTimeout(resizeKtFrame, 1200);
+</script>
 
 ## Comparative statics
 

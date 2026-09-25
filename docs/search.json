@@ -100,7 +100,7 @@
     "href": "contents/lecture_1.html#solving-the-ump",
     "title": "Chapter 1. Consumers and demand",
     "section": "2.3 Solving the UMP",
-    "text": "2.3 Solving the UMP\n\n2.3.1 Necessary conditions\nThe Lagragian associated with the UMP:\n\\[\nL = u(x) + \\lambda (w - px)\n\\tag{12}\\]\nDenote \\(L_i\\) the partial derivative of the Lagrangian with respect to good \\(i\\). The KTT theorem tells us that if \\(x^*\\) is a solution to the UMP then there exists \\(\\lambda^*\\geq 0\\) such that the following conditions are satisfied: \\[\n\\begin{aligned}\n& L_i(x^*) \\equiv \\frac{\\partial L}{\\partial x_i}(x^*) = 0, \\quad  i=1,\\dots, L \\\\\n% & L_i(x^*) = 0 \\text{ if } x^*_i&gt;0, \\quad i=1,\\dots,L \\\\\n& \\lambda^* \\geq 0, \\: w - px^* \\geq 0 \\text{ and } \\lambda^*(w - px^*) = 0.\n\\end{aligned}\n\\tag{13}\\]\nThe first set of conditions yields \\[\nu_i(x^*) = \\lambda^* p_i.\n\\]\nIf \\(u\\) satisfies strict monotonicity (\\(u_i&gt;0\\)), then \\(\\lambda^*&gt;0\\) since prices are strictly positive. But \\(\\lambda^*&gt;0\\) implies that \\(w = px^*\\), which confirms the LoW.\nTo eliminate the multiplier, we can form the ratio: \\[\n\\begin{aligned}\n\\frac{u_i(x^*)}{u_j(x^*)} &= \\frac{p_i}{p_j} \\\\\nMRS_{i,j}(x^*) &= \\frac{p_i}{p_j} \\\\\n\\implies \\frac{u_i(x^*)}{p_i} &= \\frac{u_j(x^*)}{p_j} = \\lambda^*.\n\\end{aligned}\n\\tag{14}\\]\nHence at an optimum:\n\nThe rate at which the individual substitutes one good for the other is equal to the ratio of their prices - the market value of one good relative to the other good. Price levels do not matter\nMarginal utilities per unit of the constraint (e.g. dollar) are equalized across all goods and are equal to the Langrage multiplier, the shadow price\n\n\n\n2.3.2 The shadow price\n\n\\(\\lambda^*\\) is often interpreted as the shadow price: the increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit\nIn other words, it is the shadow price on the constraint (on \\(w\\))\nMathematically: \\[\n\\lambda^* = \\frac{\\partial u(x^*(p,w))}{\\partial w}.\n\\]\n\n\n\nProof\n\nWe can show this by differentiating the value function w.r.t income: \\[\n\\begin{aligned}\n\\frac{\\partial u(x^*(p,w))}{\\partial w} &= \\sum_{i=1}^L u_i(x^*)\\frac{\\partial x_i(w,p)}{\\partial w} \\\\\n&= \\lambda^*\\sum_{i=1}^L p_i \\frac{\\partial x_i(w,p)}{\\partial w} \\\\\n&= \\lambda^*.\n\\end{aligned}\n\\]\nHere we have used the fact that:\n\\[\n\\sum_{i=1}^L p_i \\frac{\\partial x_i(w,p)}{\\partial w} = 1,\n\\] which comes directly from the binding budget constraint.\n\n\n\n2.3.3 Sufficient conditions\n\nHow to be sure that the necessary conditions above provide a max, and not a min?\nThe KKT conditions are also sufficient for a max if:\n\n\\(u\\) is quasiconcave\n\nUCS is convex\n\n\\(u\\) is monotone\n\nICs are downward sloping\n\n\\(u_i(x) \\neq 0 \\: \\forall i \\iff \\nabla u(x) \\neq 0\\)\n\nThere is no bliss point\nIf such a point existed then LNS would be violated, which would contradict monotonicity",
+    "text": "2.3 Solving the UMP\n\n2.3.1 Necessary conditions\nThe Lagragian associated with the UMP:\n\\[\nL = u(x) + \\lambda (w - px)\n\\tag{12}\\]\nDenote \\(L_i\\) the partial derivative of the Lagrangian with respect to good \\(i\\). The KTT theorem tells us that if \\(x^*\\) is a solution to the UMP then there exists \\(\\lambda^*\\geq 0\\) such that the following conditions are satisfied: \\[\n\\begin{aligned}\n& L_i(x^*) \\equiv \\frac{\\partial L}{\\partial x_i}(x^*) = 0, \\quad  i=1,\\dots, L \\\\\n% & L_i(x^*) = 0 \\text{ if } x^*_i&gt;0, \\quad i=1,\\dots,L \\\\\n& \\lambda^* \\geq 0, \\: w - px^* \\geq 0 \\text{ and } \\lambda^*(w - px^*) = 0.\n\\end{aligned}\n\\tag{13}\\]\nThe first set of conditions yields \\[\nu_i(x^*) = \\lambda^* p_i.\n\\]\nIf \\(u\\) satisfies strict monotonicity (\\(u_i&gt;0\\)), then \\(\\lambda^*&gt;0\\) since prices are strictly positive. But \\(\\lambda^*&gt;0\\) implies that \\(w = px^*\\), which confirms the LoW.\nTo eliminate the multiplier, we can form the ratio: \\[\n\\begin{aligned}\n\\frac{u_i(x^*)}{u_j(x^*)} &= \\frac{p_i}{p_j} \\\\\nMRS_{i,j}(x^*) &= \\frac{p_i}{p_j} \\\\\n\\implies \\frac{u_i(x^*)}{p_i} &= \\frac{u_j(x^*)}{p_j} = \\lambda^*.\n\\end{aligned}\n\\tag{14}\\]\nHence at an optimum:\n\nThe rate at which the individual substitutes one good for the other is equal to the ratio of their prices - the market value of one good relative to the other good. Price levels do not matter\nMarginal utilities per unit of the constraint (e.g. dollar) are equalized across all goods and are equal to the Langrage multiplier, the shadow price\n\n\n\n2.3.2 The shadow price\n\n\\(\\lambda^*\\) is often interpreted as the shadow price: the increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit\nIn other words, it is the shadow price on the constraint (on \\(w\\))\nMathematically: \\[\n\\lambda^* = \\frac{\\partial u(x^*(p,w))}{\\partial w}.\n\\]\n\n\n\nProof\n\nWe can show this by differentiating the value function w.r.t income: \\[\n\\begin{aligned}\n\\frac{\\partial u(x^*(p,w))}{\\partial w} &= \\sum_{i=1}^L u_i(x^*)\\frac{\\partial x_i(w,p)}{\\partial w} \\\\\n&= \\lambda^*\\sum_{i=1}^L p_i \\frac{\\partial x_i(w,p)}{\\partial w} \\\\\n&= \\lambda^*.\n\\end{aligned}\n\\]\nThe second line comes from the first-order conditions Equation 14. And the third line comes from the fact the budget constraint binds at the optimum, which implies: \\[\n\\sum_{i=1}^L p_i \\frac{\\partial x_i(w,p)}{\\partial w} = 1.\n\\]\n\n\n\n2.3.3 Sufficient conditions\n\nHow to be sure that the necessary conditions above provide a max, and not a min?\nThe KKT conditions are also sufficient for a max if:\n\n\\(u\\) is quasiconcave\n\nUCS is convex\n\n\\(u\\) is monotone\n\nICs are downward sloping\n\n\\(u_i(x) \\neq 0 \\: \\forall i \\iff \\nabla u(x) \\neq 0\\)\n\nThere is no bliss point\nIf such a point existed then LNS would be violated, which would contradict monotonicity\n\n\n\n\n\n2.3.4 Example: Cobb-Douglas utility function with availability constraints",
     "crumbs": [
       "Home",
       "Lectures",
@@ -129,6 +129,894 @@
       "Home",
       "Lectures",
       "Chapter 1"
+    ]
+  },
+  {
+    "objectID": "contents/references.html",
+    "href": "contents/references.html",
+    "title": "Intermediate Microeconomics",
+    "section": "",
+    "text": "Intermediate Microeconomic Theory: Tools and Step-by-Step Examples (Ana Espinola-Arredondo and Felix Munoz-Garcia), MIT Press [AF Int]\nAdvanced Microeconomic Theory: An Intuitive Approach with Examples (Felix Munoz-Garcia), MIT Press [AF Adv]",
+    "crumbs": [
+      "Home",
+      "Course information",
+      "References"
+    ]
+  },
+  {
+    "objectID": "contents/references.html#main-references",
+    "href": "contents/references.html#main-references",
+    "title": "Intermediate Microeconomics",
+    "section": "",
+    "text": "Intermediate Microeconomic Theory: Tools and Step-by-Step Examples (Ana Espinola-Arredondo and Felix Munoz-Garcia), MIT Press [AF Int]\nAdvanced Microeconomic Theory: An Intuitive Approach with Examples (Felix Munoz-Garcia), MIT Press [AF Adv]",
+    "crumbs": [
+      "Home",
+      "Course information",
+      "References"
+    ]
+  },
+  {
+    "objectID": "contents/references.html#other-references",
+    "href": "contents/references.html#other-references",
+    "title": "Intermediate Microeconomics",
+    "section": "Other references",
+    "text": "Other references\n\nIntermediate Microeconomics with Calculus (Hal R. Varian) [Varian]\nThe Economy 2.0 Microeconomics (core-econ.org)",
+    "crumbs": [
+      "Home",
+      "Course information",
+      "References"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html",
+    "href": "contents/lecture_6.html",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "",
+    "text": "Just like market power, externalities and public goods are two other causes of market failures. In presence of externalities or public goods, the competitive market fails to produce an efficient outcome. In this chapter, we will be analyzing these problems and their common solutions.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#definition-and-examples",
+    "href": "contents/lecture_6.html#definition-and-examples",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "1.1 Definition and examples",
+    "text": "1.1 Definition and examples\nAn externality is the effect that agent has on the welfare of another agent beyond the effects transmitted by changes in prices. It typically represents an effect imposed on or benefited by a third party to an exchange/transaction.\n\n\n\nTable 1: Externalities: types and examples\n\n\n\n\n\n\n\nNegative\n\n\nPositive\n\n\n\n\nFrom consumption\n\n\n\n\nPassive smoking\n\n\nNoisy neighbors\n\n\n\n\n\n\nVaccination\n\n\nEducation\n\n\n\n\n\n\nFrom production\n\n\n\n\nAir pollution by coal-powered power stations\n\n\nWater contamination by a firm that dumps industrial wastes directly into the river\n\n\n\n\n\n\nUnpatented research and development\n\n\nApiculture",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#modeling-externalities",
+    "href": "contents/lecture_6.html#modeling-externalities",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "1.2 Modeling externalities",
+    "text": "1.2 Modeling externalities\nConsider a economy with two types of agents: a firm and a consumer. The firm’s productive activities generate negative externalities that affect the consumer.\n\n1.2.1 The representative firm\nThe firm’s objective is to select the optimal level of externality \\(x\\) to maximize profit \\(\\pi(x)\\). We assume that the profit functionis twice differentiable, increasing and concave:\n\\[\n\\pi'(x) &gt; 0 &gt; \\pi''(x).\n\\tag{1}\\]\nIn words, we assume that profits increase with externalities since the firm does not bear the full marginal cost of production. Nevertheless, the marginal benefits of pollution decline. Note that since externalities are generated by production, making decision on externalities can be considered equivalent to making decision on output, as illustrated in Example 1.\n\n\n1.2.2 The reprsentative consumer\nThe consumer has preferences reprsented by an utility function \\(u(q,x),\\) where \\(q\\in\\mathbb{R}_+^n\\) is the consumption bundle, the vector of tradable goods, and \\(x\\) is the negative externatlity, which is not tradable (otherwise it would have had a price and the impact would have been internalized!). We assume:\n\\[\nu_k \\equiv \\frac{\\partial u}{\\partial q_k} \\geq 0,\\quad \\forall k=1,\\dots,n.\n\\tag{2}\\]\nand\n\\[\nu_x \\equiv \\frac{\\partial u}{\\partial x} \\lt 0.\n\\tag{3}\\]\n\n\n1.2.3 Competitive and pareto equilibrium externality\nIn a competitive equilibrium, the firm selects the (private) level of externatlity that maximizes its profits:\n\\[\nx^P = \\arg\\max_{x\\geq 0} \\pi(x),\n\\tag{4}\\]\nThe FOC (for an interior solution) yields:\n\\[\n\\pi'(x^P) = 0.\n\\tag{5}\\]\nIn a Pareto equilibrium, the social planner selects the level of externality that maximizes the sum of profits and utilities:\n\\[\nx^E \\in \\arg\\max_{x\\geq 0} \\pi(x) + u(q, x).\n\\tag{6}\\]\nThe necessary condition for an interior solution (\\(x^E&gt;0\\)) is:\n\\[\n\\pi'(x^E) = - u'(x^E).\n\\tag{7}\\]\nIn other words, the social planner selects a level of externality such that the marginal benefit derived from it by the firm is equal to the marignal damage (disutility) suffered by the consumer.\nSince \\(u'(x)&lt;0,\\) and \\(\\pi''(x)&lt;0,\\) we have:\n\\[\n\\begin{aligned}\n\\pi'(x^E) &&gt; \\pi'(x^P) \\\\\n\\implies x^E &&lt; x^P.\n\\end{aligned}\n\\]\nHence the Pareto efficient level of pollution, \\(x^E\\) is less than the competitve level \\(x^P\\) selected by the firm.\nObserve that if the firm generates positive externalities, then \\(u'(x) &gt; 0\\) and the Pareto efficient level of externality would be greater than that chosen by the firm.\n\nExample 1 (Negative externalities) Consider a firm with \\(\\pi = pq - cq^2\\) where \\(q\\) is the output, \\(p\\) is the price of the good and \\(c&gt;0\\) is a constant. Suppose that externality is a linear function of quantity, namely \\(x=a q,\\) with \\(a &gt;0.\\) Hence:\n\\[\n\\pi(x) = p\\frac{x}{a} - c\\left(\\frac{x}{a}\\right)^2.\n\\]\nThe FOC yields: \\[\nx^P = \\frac{ap}{2c}.\n\\]\nSuppose that the consumer has a damange function defined by:\n\\[\nu(x) = b - cx - \\frac{dx^2}{2},\\quad b,d&gt;0,\n\\]\nObserve that the marginal cost of the damage increases in the level of pollution. This makes sense intuitively if we think about how health deterioration accelerates as pollution gets worse.\nIn view of Equation 7, we can determine the Pareto efficient level of externality:\n\\[\n\\begin{aligned}\n\\pi'(x^E) &= -v'(x^E) \\\\\n\\frac{p}{a}-\\frac{2c}{a^2}x^E &= c+dx^E \\\\\nx^E &= \\frac{ap-a^2c}{2c+ad}.\n\\end{aligned}\n\\]\nWhen is it efficient to have a positive amount of externality, i.e., to have \\(x^E&gt;0?\\) Observe that \\(u'(0)=-c\\) and \\(\\pi'(0)=p/a\\) and \\(x^E &gt; 0\\) if and only if \\(pa-ca^2 &gt;0,\\) which is equivalent to \\(p/a &gt; c\\) or \\(\\pi'(0)&gt;-u'(0).\\) In other words, the economy should generate negative externalities if the marginal benefits of doing so for firms are greater than the marginal costs to consumers at the origin.\n\n\nExample 2 (Positive externalities) Consider two neighboring countries, \\(i\\) and \\(j,\\) simultaneously choosing the level of investment in recycling activities \\(x_i.\\) The benefit from recycling is given by:\n\\[\n\\pi_i(x_i,x_j) = (a - 0.5x_i + 0.25x_j)x_i - bx_i,\n\\]\nwhere \\(a,b&gt;0.\\)\nIn a competitive equilibrium, country \\(i\\) chooses \\(x_i\\) so as to maximize its own benefit. The optimal conditions provide the best response functions for the firms. In particular: \\[\n\\begin{aligned}\n\\frac{\\partial{\\pi_i}}{\\partial x_i} = 0\n\\iff x_i &= a - b + \\frac{x_j}{4} \\\\\nBR_i(x_j) &= a - b + \\frac{x_j}{4},\n\\end{aligned}\n\\]\nand likewise for country \\(j.\\)\nThe NE of this game is: \\[\nx_i^* = x_j^* = \\frac{4(a - b)}{3}.\n\\tag{8}\\]\nTo be Pareto optimal, each country considers not only its own benefit but also that of the other country when making a decision. Another way to think about this is to make a decision from the point of view of a social planner who determines both investment levels to maximize joint benefits:\n\\[\n\\max_{x_i,x_j} \\pi(x_i,x_j) \\equiv \\pi_i(x_i,x_j) + \\pi_j(x_i,x_j).\n\\tag{9}\\]\nThe FOC condition for country \\(i\\) gives:\n\\[\n\\begin{aligned}\n\\frac{\\partial \\pi}{\\partial x_i} &= 0 \\\\\n\\frac{\\partial \\pi_i(x_i,x_j)}{\\partial x_i} + \\frac{\\partial \\pi_j(x_i,x_j)}{\\partial x_i} &= 0 \\\\\nx_i &= a - b + \\frac{x_j}{2}.\n\\end{aligned}\n\\]\nLikewise for country \\(j:\\)\n\\[\nx_j = a - b + \\frac{x_i}{2}.\n\\]\nHence the best response lines are steeper compared to the competitive case, resulting in higher equilibrium investments. In particular, the socially efficient NE is:\n\\[\nx_i^E = x_j^E = 2(a-b).\n\\]",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#solutions-to-externalities",
+    "href": "contents/lecture_6.html#solutions-to-externalities",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "1.3 Solutions to externalities",
+    "text": "1.3 Solutions to externalities\nExternalities lead to an inefficient equilibrium quantity. In the case of negative externalities, the party generating externalities does not fully bear the cost of the production or consumption of the good. Consequently, the economy tends to overproduce or overconsume. In the case of positive externalities, it is the converse. The party generating externalities does not consider the benefits of their consumption or production activities enjoyed by other parties, hence tend to underproduce or underconsume. In either cases, the inefficient quantity leads to a deadweight loss. There are two approaches to address the problem of externalities. One is based on the clear establishment of property rights and the negotiation among the parties involved. When transaction costs become prohibitive, private negotiation might not be possible, calling for public intervention. The most popular forms of public policy interventions include quotas, Pigouvian taxation (or subsidization) and tradable permits.\n\n1.3.1 Private solution\nAccording to the Coase theorem, in absence of transaction costs and presence of well-established property rights, the two parties can negotiate to achieve an efficient level of externality.\nThe result of the negotation will typically be a transfer to the party that has the property rights from the other party. Note that it does not matter who suffers from negative externalities, the party that is supposed to be compensated is the property rights holder.\n\nExample 3 (Private solution to negative externalities) Consider again Example 1 and suppose that the party suffering from negative externalities, the consumer, has the property rights. The firm makes a lump-sum transfer \\(T&gt;0\\) to the consumer if and only if:\n\\[\n\\pi(x) - T \\geq \\pi(0),\n\\]\nwhich can be viewed as the participation constraint of the firm. Given this condition, the consumer determines \\(T,x\\) to maximize welfare:\n\\[\n\\begin{aligned}\n&\\max_{x\\geq 0, T} w + u(x) + T \\\\\n\\text{s.t. }& \\pi(x) - T \\geq \\pi(0),\n\\end{aligned}\n\\]\nwhere \\(w\\) is the initial wealth of the consumer. Observe that the participation constraint binds at the optimum (otherwise the consumer could just demand a larger transfer). We can rewrite the consumder’s program as:\n\\[\n\\max_{x\\geq 0, T} u(x) + \\pi(x) + w - \\pi(0).\n\\]\nThe FOC for an interior solution yields:\n\\[\n\\pi'(x) = -u'(x).\n\\tag{10}\\]\nObserve that the optimality condition (10) coincides with that of the SP’s problem (Equation 7). This implies that the solution to this problem is Pareto efficient. Moreover the size of the transfer will be \\(T^*=\\pi(x^E)-\\pi(0)\\).\nAn alternative way to solve this program is to consider the Lagrangian function:\n\\[\nL(x, T, \\lambda) = w + u(x) + T + \\lambda\\left[\\pi(x) - T - \\pi(0)\\right].\n\\]\nThe FOC with respect to \\(T\\) implies that \\(\\lambda=1\\), which together with the FOC with respect to \\(x\\) implies \\(\\pi'(x)=-u'(x)\\) at the optimum.\n\nWhat if the property rights are assigned to the firm, the party that generates externalities? In this case the consumer will make a transfer to the firm to reduce externalities.\n\nExercise 1 Show that an efficient level of externality is also achieved when the firm is the holder of the property rights. Hints:\n\nThe consumer will offer the firm a payment of \\(T\\) to reduce externalities to \\(x\\)\nWithout negotation, the firm chooses the level of externality \\(x^P\\) which maximizes its profits. What will be the participation constraint of the firm?\nThe consumer solves the UMP to determine the optimal levels of \\(x\\) and \\(T,\\) taking into account the partcipation constraint of the firm\nDoes the constraint bind at the optimum?\nWhat is the optimality condition? Does it suggest that the externality level selected by the consumer is Pareto efficient?\n\n\nThere are advantages and disadvantages associated with the private solution to the externality problem proposed by the Coase theorem. In particular, the disadvantages include:\n\nProperty rights must be clearly defined and enforced\nTransaction costs must be sufficiently small\n\nThe advantage of the private solution is that there is no need for regulator’s intervention (except possibily in the assignment and enforcement of property rights).\n\n\n1.3.2 Public solution\n\n1.3.2.1 Quota\nOne public solution is imposing a quota equal to the Pareto-efficient level of externality. Anything beyond that will be subject to a fine. The disadvantage of this approach is that the social planner must have perfect information about the benefits and the costs of externalities (in order to determine the efficient externality level of each firm).\n\n\n1.3.2.2 Pigouvian taxation\nAn alternative solution is the Pigouvian taxation (on negative externalities) and Pigouvian subsidies (for positive externalities).\nThe Pigouvian tax sets the unit price of externality. The firm’s PMP becomes:\n\\[\n\\max_{x\\geq 0} \\pi(x) - tx,\n\\tag{11}\\]\nwhere \\(t\\) is the magnitude of the tax. The FOC gives:\n\\[\n\\pi'(x) \\leq t,\\quad\\text{with equality for } x &gt;0.\n\\tag{12}\\]\nIn order to incentivize \\(x^E,\\) the Pareto-efficient externality level, the tax must be such that:\n\\[\n-u'(x^E) = t.\n\\tag{13}\\]\nThe tax thus induces the firm to internalize the externality it inflicts on the consumer.\nThe Pigouvian subsidy is a reward to the firm producing any unit beyond its competitive level (and approaching the socially efficient level). The PMP in this case reads:\n\\[\n\\max_{x\\geq 0} \\pi(x) + s(x^E - x).\n\\tag{14}\\]\nThe FOC yields:\n\\[\n\\pi'(x) \\leq s,\\quad\\text{with equality for } x &gt;0.\n\\tag{15}\\]\nThe magnitude of the subsidy must be equal to the marginal benefit received by the consumer, namely:\n\\[\ns = -u'(x^E).\n\\tag{16}\\]\nUnder complete information, setting quotas and taxing or subsidizing are equivalent.\n\nExercise 2 James and Andy share an office. James enjoys smoking while Andy does not. The following functions represent their utilities (or disutilities) from smoking:\n\\[\n\\begin{aligned}\nu^J(x) &= 100 + 10x - 0.1x^2, \\\\\nu^A(x) &= 100 - 10x,\n\\end{aligned}\n\\]\nwhere \\(x\\) is the number of cigarettes smoked by James (inside the office). The utility function of James takes into account the cost of cigarettes.\n\nIf James does not take into account the harm suffered by Andy, what is the number of cigarettes he smokes?\nWhat is the efficient number of cigarettes?\nSuppose that we wish to use the Coase theorem to achieve an efficient outcome by bargaining. Determine the size of the transfer and the recipient of this transfer if the property rights holder is (i) Andy and (ii) James.\nSuppose a private negotation is impossible and we need to rely on a command and control solution to the problem. Determine the size of the Pigouvian tax that must be levied on each cigarette in order to achieve the efficient outcome.\n\n\n\n\n1.3.2.3 Tradable permits\nThe public authority controls the quantity of externality by creating a number of permits, typically pollution permits, each of which grants the right to a fixed level of pollution. Firms can trade permits, thereby creating a market for pollution rights (or carbon market). The price of pollution is determined by market forces rather than being set by the authority.\nEach firm \\(j\\) has a permit that grants them \\(\\bar{x}_j\\) units of pollution. The authority controls the aggregate level of pollution by setting:\n\\[\nx^E = \\sum_j \\bar{x}_j.\n\\]\nEach firm \\(j,\\) being the price-taker in the pollution market, solves:\n\\[\n\\max_{x_j \\geq 0} \\pi_j(x_j) + p(\\bar{x}_j - x_j),\n\\]\nwhere \\(p\\) is the price the firm needs to pay for the rights to pollute beyond its permit’s allowance.\nThe FOC for an interior solution yields:\n\\[\n\\pi'_j(x_j) = p.\n\\]\nIn equilibrium, the price of a permit has to be such that the market clears, namely:\n\\[\nx^E = \\sum_j x_j(p),\n\\]\ni.e., some firms might pollute more, some firms less, but in equilibrium aggregate demand (RHS) must be equal to aggregate supply. The advantage of this approach is that the public authority only needs to gather information at the aggregate level to determine \\(x^E,\\) the total efficient pollution level. In particular, it only needs data on aggregate industry costs and benefits of externalities. This is an advantage of this approach compared to quotas or Pigouvian taxation.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#definition",
+    "href": "contents/lecture_6.html#definition",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "2.1 Definition",
+    "text": "2.1 Definition\n\nGoods can be categorized by two properties:\n\nExcludability\nRivality\n\nA good is said to be excludable if it is possible to prevent an individual from enjoying it. Otherwise it is nonexcludable\n\nExamples of excludable goods: essentially anything that is not freely accessible (access requires a payment, a password, etc.)\nExamples of nonexludable goods: national defense, street lighting, clean air\n\nA good is said to be rival (in consumption) if the consumption of the good of an agent reduces the amount available to other agents. Otherwise it is nonrival\n\nExamples of rival goods: Most goods we consume on a daily basis (food, drinks, sweets, snacks, etc.)\nExamples of nonrival goods: A movie on Netflix, an annoucement from a public radio, a software, the roads very early in the morning",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#categorization-of-goods",
+    "href": "contents/lecture_6.html#categorization-of-goods",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "2.2 Categorization of goods",
+    "text": "2.2 Categorization of goods\n\n\n\n\n\n\n\n\n\nExcludable\nNonexcludable\n\n\n\n\nRival\nPrivate goods  (Example: a cake)\nCommon resources  (Example: fishing grounds)\n\n\nNon-rival\nArtificially scarce goods  (Example: streaming services)\nPublic goods  (Example: national defense)\n\n\n\n\nOnly private goods can be efficiently produced by the competitive market\nA good that is nonexcludable is subject to freeriders: individuals who do not pay or do not sufficiently contribute because they expect the others to do it\n\nCan you think of an example?\n\nThe competitive equilibrium quantity will generally be inefficiently low",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#free-riding-of-public-goods",
+    "href": "contents/lecture_6.html#free-riding-of-public-goods",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "2.3 Free-riding of public goods",
+    "text": "2.3 Free-riding of public goods\nWhen goods are not excludable, they are subject to free-riding: the insufficient contribution of each consumer to the maintenance or replenishment of the goods. This is a common problem in practice. Let us illustrate it with a simple example.\n\nExample 4 Consider two roommates who clean their apartment every Saturday. Every roommate \\(i\\) simultaneously and independently chooses the number of hours she spends cleaning, \\(h_i \\in [0, \\bar{h}]\\) where \\(\\bar{h}\\) denotes the maximum time one can devote to housework. More time devoted to cleaning means less time for leisure (which gives her disutility), but a cleaner leaving space gives her satistfaction.\nHer utility from cleaning can thus be written as: \\[\nu_i(h_i, h_j) = (\\bar{h} - h_i) + \\beta \\ln(h_i + h_j),\n\\tag{17}\\] where \\(\\beta \\ln(h_i + h_j)\\) captures the pleasure derived from cleanliness which is increasing in \\(h_i, h_j\\) and \\(\\beta &gt;0.\\)\nObserve that this is a simultaneous-moves game with two players, the solution is the NE of the game, which can be found by first identifying the best response function of each player \\(BR_i(h_j).\\)\nThe BR function of \\(i\\) is the optimal choice of \\(h_i\\) as a function of \\(h_j\\), which \\(i\\) determines by maximizing Equation 17 subject to \\(h_i \\in [0, \\bar{h}].\\) Observe that \\(u_i\\) is strictly concave in \\(h_i\\) given \\(h_j\\), implying that the FOC is also sufficient. The FOC for an interior solution gives: \\[\n1 = \\frac{\\beta}{h_i + h_j}\\\\\n\\iff h_i(h_j) = \\beta - h_j.\n\\tag{18}\\]\nAs the other friend increases cleaning time, individual \\(i\\) will do the opposite: free-riding behavior. In particular if \\(h_j \\geq \\beta\\) then roommate \\(i\\) will not spend time cleaning. If \\(h_j=0\\) it is in the best interest of \\(i\\) to clean \\(h_i=\\beta &gt;0.\\) Moreover \\(h_i\\) increases in \\(\\beta\\) for any fixed \\(h_j.\\)\nThe NE of the game can be determined by solving for the system of equations involving the two BRs. By symmetry \\(h^*_i = h^*_j \\equiv h^*.\\) Substituting \\(h^*_i = h^*_j \\equiv h^*\\) into Equation 18 and simplying, we obtain: \\[\nh^* = \\frac{\\beta}{2}.\n\\]\nFor example, if \\(\\beta=2\\), then each flatmate will spend 1 hour cleaning in equilibrium. This duration is strictly less than the efficient level, which can be determined by solving the social planner’s problem (which maximizes the sum of utilities):\n\\[\n\\max_{h_i, h_j} V = u_i + u_j = 2\\bar{h} - (h_i + h_j) + 2\\beta \\ln (h_j + h_j).\n\\]\nThe FOC w.r.t \\(h_i\\) gives:\n\\[\n\\frac{2\\beta}{h_j + h_j} = 1.\n\\]\nBy symmetry this implies that in a Pareto efficient equilibrium:\n\\[\nh_i^* = h_j^* = \\beta,\n\\]\nwhich is strictly greater than the decentralized equilibrium level.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#solutions-to-free-riding",
+    "href": "contents/lecture_6.html#solutions-to-free-riding",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "2.4 Solutions to free-riding",
+    "text": "2.4 Solutions to free-riding\nOne way to address free-riding is to require all individuals to pay for the good via taxes rather than voluntary contributions. In the cleaning example, the two could draft the house rules specifiying that each flatmate spends exactly the same number of hours cleaning, even if one of them travels most of the week.\nA less rigid solution is to require users to pay for every usage, such as highway tolls, or entrance fees to public parks. This works if “usage” is unambiguously defined; it could be tricky in the cleaning case (what if one travels half of the week? or having guests over?)",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#common-resources",
+    "href": "contents/lecture_6.html#common-resources",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "2.5 Common resources",
+    "text": "2.5 Common resources\nCommon resources are highly vulnerable to overexploitation and depletion since they are rivalrous but non-excludable in consumption. Examples of common resources include fish in a small lake, roads during traffic hours, etc. When one agent consumes the good, she generates negative externalities by reducing the amount available to others.\n\n\nExample 5 Let \\(S &gt; 0\\) denote the resource stock, for example the number of fish in a lake, which we assume to be fixed on any given day. Assume that \\(N\\) individuals can fish in the lake Fish once caught can be sold in a competitive fish market at competitive market price \\(p\\) (fishers are price-takers) The cost function of individual \\(i\\) can be written as: \\[\nC(q_i, Q_{-i}) = \\frac{q_i(q_i + Q_{-i})}{S},\n\\tag{19}\\] where \\(Q_{-i}=\\sum_{j\\neq i} q_j\\) is the total quantity caught by individuals other than \\(i\\).\nEquation 19 says that:\n\nThe more fish the lake has, the easier it will be to catch one\nThe cost increases in the number of fish caught\nThe fewer the individuals, the easier (less costly in terms of time and effort, etc.) it will be to catch a fish\n\nEvery fisherman \\(i\\) simultaneously and independently solves: \\[\n\\max_{q_i} \\pi_i = p q_i - C(q_i, Q_{-i}).\n\\tag{20}\\]\nThe necessary and sufficient condition for a max is: \\[\np = \\frac{2q_i + Q_{-i}}{S}.\n\\tag{21}\\]\nEquation 21 gives us the best-response function of each individual \\(i\\):\n\\[\nq_i(Q_{-i}) = \\frac{pS - Q_{-i}}{2} = \\frac{pS}{2} - \\frac{Q_{-i}}{2}.\n\\tag{22}\\]\nRhe BR function tells us that:\n\nThe individual appropriation \\(q_i\\) increases in:\n\nThe market value of the resourch \\(p\\)\nThe amount of the resource available\n\nThe individual appropriation decreases if other individuals’ appropriation increases (negative externality)\n\nIt is an externality because it affects \\(q_i\\) not via the price \\(p\\), which is taken as given\nIf \\(Q_{-i} \\geq pS\\), then \\(q_i = 0.\\)\n\n\nLet us find the equilibrium appropriation by invoking symmetry: \\[\nq^*_1 = q^*_2 = \\dots = q^*_N = q^*.\n\\]\nSubstituting this into the BR function to obtain: \\[\n2q^* = pS - (N-1)q^* \\\\\n\\iff q^* = \\frac{pS}{N+1}.\n\\tag{23}\\]\nObserve that the individual equilibrium appropriation increases in the resource stock but decreases in the number of individuals competing for it.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_6.html#common-resources-joint-profit-maximization",
+    "href": "contents/lecture_6.html#common-resources-joint-profit-maximization",
+    "title": "Chapter 6. Externalities and public goods",
+    "section": "2.6 Common resources: Joint profit maximization",
+    "text": "2.6 Common resources: Joint profit maximization\nIn the Example 5, individuals make decisions independently. If individuals coordinate on the level of appropriation to maximize joint profit, i.e., they can achieve even higher level of profits. Interestingly, the joint venture also leads to less intensive resource exploitation. Consider again the setting of Example 5 but now suppose that fishermen decide on the level of appropriation to maximize joint profits.\nThe joint PMP is: \\[\n\\begin{aligned}\n\\max_{q_1,...,q_N} \\pi &\\equiv \\sum_{i=1}^N \\pi_i \\\\\n&= \\sum_{i=1}^N p q_i - \\sum_{i=1}^N C(q_i, Q_{-i}) \\\\\n&= pQ - \\frac{Q^2}{S},\n\\end{aligned}\n\\tag{24}\\] where \\(Q\\equiv \\sum_{i=1}^N q_i = q_i + Q_{-i}\\) is the total appropriation.\nThe FOC w.r.t \\(q_i\\) yields: \\[\np = \\frac{2Q}{S} \\\\\n\\iff \\frac{pS}{2} = q_i + Q_{-i} \\\\\n\\iff q_i = \\frac{pS}{2} - Q_{-i},\n\\tag{25}\\] which is the best response function of \\(i\\).\nThe equilibrium output is thus: \\[\n    Nq^J = \\frac{pS}{2} \\iff q^J = \\frac{pS}{2N}.\n\\tag{26}\\]\nSince \\(2N &gt; N + 1\\) for \\(N &gt; 1\\), we conclude that the joint equilibrium appropriation \\(q^J\\) is strictly less than the independent equilibrium appropriation \\(q^*\\) (Equation 23).\nLet us compare profits between the two cases.\nIn the case of independent exploitation:\n\\[\n\\pi^* = pq^* - \\frac{N{q^*}^2}{S}.\n\\]\nIn the case of cooperative exploitation: \\[\n\\pi^J = pq^J - \\frac{N{q^J}^2}{S}.\n\\]\nThe difference in profits is thus: \\[\n\\begin{aligned}\n\\pi^J - \\pi^* &= -p(q^* - q^J) + \\frac{N}{S}(q^* - q^J)^2 \\\\\n&= \\frac{1}{S}(q^* - q^J)[N(q^* + q^J) - pS].\n\\end{aligned}\n\\tag{27}\\]\nNote that the sign of \\(\\pi^J - \\pi^*\\) depends on the sign of \\([N(q^* + q^J) - pS].\\) Observe that \\(pS = (N + 1)q^* = 2N q^J\\), implying that we can write: \\[\npS = \\frac{(N + 1)q^* + 2N q^J}{2}.\n\\tag{28}\\]\nSubstituting Equation 28 into the term inside the square bracket of Equation 27, we get: \\[\nN(q^* + q^J) - \\frac{(N + 1)q^* + 2N q^J}{2} \\\\\n= \\frac{2N q^* - (N + 1)q^*}{2} \\\\\n= \\frac{(N - 1)q^*}{2},\n\\] which is strictly positive for \\(N&gt;1.\\)\nHence cooperative profits are also greater. In other words, letting individuals form cooperatives to jointly exploit a common resource may alleviate the over-exploitation problem.\n\nRemark 1. Common resources are particularly vulnerable to over-exploitation due to their non-excludable and rivalrous properties. If individuals independently decide on the amount to appropriate from the common resource stock, they will tend to take more than what is socially optimal. From our analyses we can propose two solutions, both of which aim at incentivizing individuals to internalize the externalities of their action:\n\nNationalization of the common resource\nAssigning exclusive rights to cooperatives and not individuals to extract a common resource",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 6"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html",
+    "href": "contents/lecture_4.html",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Unlike a competitive firm, who is a price-taker, a monopolist can determine the outpout level of the whole market and thus is a price-maker. A monopolist can choose any point on the demand curve: choosing the level of output is equivalent to choosing the price at which to sell the good.\nA monopoly emerges due to barriers to entry such as:\n\nStructural barriers: such as cost advantage or demand advantage of incumbent firms\nLegal barriers: such as patents\nStrategic barriers: incumbent firms can engage in price wars (matching low prices of competitors) to build reputation as an aggressive competitor and deter entry\n\n\n\n\nJust as any other firm, the objective of the monopolist is to maximize profits. The quantity supplied in a monopoly is the solution to the monopolist’s PMP, which is:\n\\[\n\\max_q \\pi = R(q) - C(q) = p(q) q - C(q),\n\\]\nwhere \\(p(q)\\) is the inverse demand function and \\(C(q)\\) is the firm’s total cost. Assuming differentiability, the FOC reads:\n\\[\n\\begin{aligned}\n\\pi'(q) = p(q) + p'(q)q - C'(q) &= 0 \\\\\np(q) + p'(q)q &= C'(q) \\\\\nMR(q) &= MC(q).\n\\end{aligned}\n\\tag{1}\\]\nAt the profit maximizing output, the monopolist equalizes marginal revenue (MR) and marginal cost (MC).\nIn order for the FOC to be sufficient, the SOC needs to be verified, i.e.,\n\\[\n\\pi''(q) = MR'(q) - MC'(q) \\leq 0,\n\\]\nmeaning that the slope of the marginal cost curve is greater or equal to that of the marginal revenue curve. This condition is clearly satisfied in the case of downward sloping MR and upward sloping MC (convex cost function).\nIf the SOC then the profit maximizing output is such that \\(MR(q) = MC(q)\\) since:\n\nIf \\(MR(q) &gt; MC(q)\\), raising output increases profits\nIf \\(MR(q) &lt; MC(q)\\), raising output hurts profits\n\n\n\n\nRecall that for a price-taker, the marginal revenue is the market price. For a monopolist, this is no longer true since the monopolist influences the market price via their output level. In particular, in a monopoly, MR is less than the market price whenever the law of demand holds (decreasing demand curve): \\[\nMR(q) = p(q) + p'(q)q &lt; p(q).\n\\tag{2}\\]\nHence as output increases, there are two opposing forces acting on the firm’s revenue. On the one hand, selling one additional unit yields an additional revenue equal to the price \\(p(q)\\). On the other hand, higher supply depresses the price of the good since the demand curve is downward sloping.\nMarginal revenue being less than the price implies that graphically the MR curve lies below the demand curve. Notice that the MR curve and the demand curves originate at the same height since \\(MR(0) = p(0).\\) This is the highest price anyone is willing to pay for the good (the maximum willingness to pay or reservation price).\n\nExample 1 Consider the linear inverse demand function \\(p(q) = a - bq\\) where \\(a, b &gt; 0.\\) The marginal revenue is \\(RM(q) = R'(q) = a - 2bq,\\) which is twice as steep as the demand curve but originates at the same point \\((0,a)\\) as the demand curve. Suppose the market is a monopoly and the monopolist has constant marginal cost \\(MC(q)=c,\\) then monopolist maximizes profits by selling \\(q=\\frac{a-c}{2b}\\) at the price \\(p=\\frac{a+c}{2}\\). Observe that \\(a\\) measures the highest reservation price, if \\(a &lt; c\\) the market would cease to exist.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: A monopoly with linear demand and constant marginal cost. The monopoly price is higher and the quantity is lower than in a competitive market. The consumer surplus shrinks and there is a dead weight loss (DWL).\n\n\n\n\n\n\n\n\nBeing the only firm in the market, the monopolist has market power, but this does not mean it can set any price. Indeed, monopoly prices depend on the market demand, which is the aggegration of consumers’ demand, as we saw previously. The price and quantity combination of the monopolist is constrained by the market demand curve. Since the demand curve is in general downward sloping, in general it is not optimal for the monopolist to set prices as high as possible since as prices increase, the quantity demanded declines.\n\n\n\nThe monopolist does not have a supply curve since it is a price maker. Indeed, recall that the supply curve is constructed by associating each given price with a quantity that firms are willing to produce. In a monopoly there is no given price: for a monopolist, deciding how much to produce is equivalent to choosing at which price to sell; the two are determined simulatenously via the demand curve.\n\n\n\nMonopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). Increasing the price by 1% would reduce sales by less than 1% for the monopolist, thereby increasing revenues. It will then have incentives to reduce output (raise prices) so long as it is on the inelastic part of the demand curve.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Going from the left to the right, the demand curve becomes less and less elastic even if its slope is constant.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#what-is-a-monopoly",
+    "href": "contents/lecture_4.html#what-is-a-monopoly",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Unlike a competitive firm, who is a price-taker, a monopolist can determine the outpout level of the whole market and thus is a price-maker. A monopolist can choose any point on the demand curve: choosing the level of output is equivalent to choosing the price at which to sell the good.\nA monopoly emerges due to barriers to entry such as:\n\nStructural barriers: such as cost advantage or demand advantage of incumbent firms\nLegal barriers: such as patents\nStrategic barriers: incumbent firms can engage in price wars (matching low prices of competitors) to build reputation as an aggressive competitor and deter entry",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#profit-maximizing-problem-pmp",
+    "href": "contents/lecture_4.html#profit-maximizing-problem-pmp",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Just as any other firm, the objective of the monopolist is to maximize profits. The quantity supplied in a monopoly is the solution to the monopolist’s PMP, which is:\n\\[\n\\max_q \\pi = R(q) - C(q) = p(q) q - C(q),\n\\]\nwhere \\(p(q)\\) is the inverse demand function and \\(C(q)\\) is the firm’s total cost. Assuming differentiability, the FOC reads:\n\\[\n\\begin{aligned}\n\\pi'(q) = p(q) + p'(q)q - C'(q) &= 0 \\\\\np(q) + p'(q)q &= C'(q) \\\\\nMR(q) &= MC(q).\n\\end{aligned}\n\\tag{1}\\]\nAt the profit maximizing output, the monopolist equalizes marginal revenue (MR) and marginal cost (MC).\nIn order for the FOC to be sufficient, the SOC needs to be verified, i.e.,\n\\[\n\\pi''(q) = MR'(q) - MC'(q) \\leq 0,\n\\]\nmeaning that the slope of the marginal cost curve is greater or equal to that of the marginal revenue curve. This condition is clearly satisfied in the case of downward sloping MR and upward sloping MC (convex cost function).\nIf the SOC then the profit maximizing output is such that \\(MR(q) = MC(q)\\) since:\n\nIf \\(MR(q) &gt; MC(q)\\), raising output increases profits\nIf \\(MR(q) &lt; MC(q)\\), raising output hurts profits",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#monopolistic-outcomes",
+    "href": "contents/lecture_4.html#monopolistic-outcomes",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Recall that for a price-taker, the marginal revenue is the market price. For a monopolist, this is no longer true since the monopolist influences the market price via their output level. In particular, in a monopoly, MR is less than the market price whenever the law of demand holds (decreasing demand curve): \\[\nMR(q) = p(q) + p'(q)q &lt; p(q).\n\\tag{2}\\]\nHence as output increases, there are two opposing forces acting on the firm’s revenue. On the one hand, selling one additional unit yields an additional revenue equal to the price \\(p(q)\\). On the other hand, higher supply depresses the price of the good since the demand curve is downward sloping.\nMarginal revenue being less than the price implies that graphically the MR curve lies below the demand curve. Notice that the MR curve and the demand curves originate at the same height since \\(MR(0) = p(0).\\) This is the highest price anyone is willing to pay for the good (the maximum willingness to pay or reservation price).\n\nExample 1 Consider the linear inverse demand function \\(p(q) = a - bq\\) where \\(a, b &gt; 0.\\) The marginal revenue is \\(RM(q) = R'(q) = a - 2bq,\\) which is twice as steep as the demand curve but originates at the same point \\((0,a)\\) as the demand curve. Suppose the market is a monopoly and the monopolist has constant marginal cost \\(MC(q)=c,\\) then monopolist maximizes profits by selling \\(q=\\frac{a-c}{2b}\\) at the price \\(p=\\frac{a+c}{2}\\). Observe that \\(a\\) measures the highest reservation price, if \\(a &lt; c\\) the market would cease to exist.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: A monopoly with linear demand and constant marginal cost. The monopoly price is higher and the quantity is lower than in a competitive market. The consumer surplus shrinks and there is a dead weight loss (DWL).",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#common-misunderstandings-of-monopoly",
+    "href": "contents/lecture_4.html#common-misunderstandings-of-monopoly",
+    "title": "Chapter 4. Monopoly",
+    "section": "",
+    "text": "Being the only firm in the market, the monopolist has market power, but this does not mean it can set any price. Indeed, monopoly prices depend on the market demand, which is the aggegration of consumers’ demand, as we saw previously. The price and quantity combination of the monopolist is constrained by the market demand curve. Since the demand curve is in general downward sloping, in general it is not optimal for the monopolist to set prices as high as possible since as prices increase, the quantity demanded declines.\n\n\n\nThe monopolist does not have a supply curve since it is a price maker. Indeed, recall that the supply curve is constructed by associating each given price with a quantity that firms are willing to produce. In a monopoly there is no given price: for a monopolist, deciding how much to produce is equivalent to choosing at which price to sell; the two are determined simulatenously via the demand curve.\n\n\n\nMonopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). Increasing the price by 1% would reduce sales by less than 1% for the monopolist, thereby increasing revenues. It will then have incentives to reduce output (raise prices) so long as it is on the inelastic part of the demand curve.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Going from the left to the right, the demand curve becomes less and less elastic even if its slope is constant.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#lerner-index",
+    "href": "contents/lecture_4.html#lerner-index",
+    "title": "Chapter 4. Monopoly",
+    "section": "2.1 Lerner index",
+    "text": "2.1 Lerner index\nThe Lerner index is the ratio between the markup (difference between the price and the marginal cost) and the price. It is thus also known as the markup index.\n\\[\n\\frac{p - MC(q)}{p}.\n\\tag{3}\\]\nObserve that for any perfectly competitive firm, the Lerner index is zero.\nRecall that the price-elasticity of demand for any price variation (not just small ones) is: \\[\n\\epsilon_{p,q} = \\frac{\\%\\Delta q}{\\%\\Delta p}\\frac{p}{q}\n\\implies \\frac{1}{\\epsilon_{p,q}} = \\frac{\\%\\Delta p}{\\%\\Delta q}\\frac{q}{p}.\n\\]\nHence for a small variation in quantity, we can write: \\[\n\\frac{1}{\\epsilon_{p,q}} = \\frac{\\partial p}{\\partial q}\\frac{q}{p}.\n\\tag{4}\\]\nFor a monopolist, since \\(MC(q) = MR(q) = p(q) + p'(q)q\\),\n\\[\n\\begin{aligned}\n\\frac{p - MC(q)}{p} &= \\frac{p(q) - p(q) - p'(q)q}{p(q)} \\\\\n&=\\frac{-p'(q)q}{p(q)} \\\\\n&= -\\frac{\\partial p}{\\partial q}\\frac{q}{p} \\\\\n&= - \\frac{1}{\\epsilon_{p,q}}.\n\\end{aligned}\n\\]\n\nTherefore the monopoly Lerner index is: \\[\n\\frac{p - MC(q)}{p} = - \\frac{1}{\\epsilon_{p,q}}.\n\\tag{5}\\]\nEquation 5 tells us that a monopolist’s ability to set price above the marginal cost (as captured its Lerner index) is inversely related to the price-elasticity of demand:\n\nOn more elastic portions of the demand curve, the Lerner index is small\nAs demand becomes relatively inelastic, the Lerner index rises\n\nAgain, a high Lerner index in general does not imply higher profits. In particular, profits per sale are represented by the gap between the price and the average cost, not the marginal cost\n\nExample 2 The Lerner index for a monopoly with constant marginal cost \\(c\\) and linear demand \\(p(q)=a-bq\\) is \\(\\frac{a-c}{a+c} &lt; 1:\\) the monopolist cannot have a markup over 100%.\n\n\nExample 3 Consider again a monopolist with constant marginal cost \\(c\\) facing a constant elasticity demand function \\(q(p)=ap^{-\\epsilon},\\) where \\(a\\) and \\(\\epsilon\\) are strictly positive. The Lerner index in this market is \\(1/\\epsilon,\\) indicating higher markup power for less elastic market.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#inverse-elasticity-pricing-rule-iepr",
+    "href": "contents/lecture_4.html#inverse-elasticity-pricing-rule-iepr",
+    "title": "Chapter 4. Monopoly",
+    "section": "2.2 Inverse elasticity pricing rule (IEPR)",
+    "text": "2.2 Inverse elasticity pricing rule (IEPR)\nThe IEPR can be derived from the monopoly Lerner index (Equation 5):\n\\[\np = \\frac{MC(q)}{1 + \\frac{1}{\\epsilon_{q,p}}}.\n\\tag{6}\\]\n\nExample 4 Consider the constant elasticity demand function above. Suppose the monopolist faces a constant marginal cost of \\(c\\) as before. The monopoly price according to the IEPR is:\n\\[\np^M = \\frac{c}{1 - \\frac{1}{\\epsilon}},\n\\] implying thatthat \\(p^M &gt; 0\\) if and only if \\(\\epsilon &gt; 1:\\) the monopolist operates on an elastic portion of the demand curve.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#what-is-a-monopsony",
+    "href": "contents/lecture_4.html#what-is-a-monopsony",
+    "title": "Chapter 4. Monopoly",
+    "section": "6.1 What is a monopsony?",
+    "text": "6.1 What is a monopsony?\nIn contrast to a monopoly, in a monopsony, there is a single buyer and several sellers. The buyer will be able to pay less for each unit of the good than if it had to compete against other buyers.\n\nExample 6 Examples of a monopsonies abound, spanning from the labor, retail, technology to the public sector.\n\nLabor market: Large factories in remote areas in developing countries might be the sole buyer of labor in the region. These companies can exert significant control over wages and employment conditions.\nRetail: Big supermarket chains such as Walmart (US), Carrefour (France) or Amazon (online) might have important negotiating power over suppliers when they are the dominant buyers of certain products.\nContent platforms such as YouTube, Instagram or Spotify might have monopsonistic power over content creators\nPublic defense: In many countries, the government is the sole purchaser of military equipment and defense-related goods. Companies producing such goods often have to accept the terms and prices dictated by the government.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#modeling-a-monopsony",
+    "href": "contents/lecture_4.html#modeling-a-monopsony",
+    "title": "Chapter 4. Monopoly",
+    "section": "6.2 Modeling a monopsony",
+    "text": "6.2 Modeling a monopsony\nConsider a firm with production function \\(q=f(L)\\) which is twice differentiable, strictly increasing (\\(f'&gt;0\\)) and strictly concave (\\(f''&lt;0\\)) The firm faces only linear labor cost \\(w(L)L\\) and its profits are given by: \\[\n\\pi = pq - w(L)L,\n\\] where \\(p\\) is the price of the good produced by the firm\nNote that \\(w\\) is increasing in \\(L\\): the higher demand for labor, the higher the wage. In other words, the firm is not a price-taker in the labor market: it has influences over the wage by deciding on the number of workers to hire.\nThe monopsonist’s PMP: \\[\n\\max_{L\\geq 0} \\pi =pq - w(L)L = pf(L) - w(L)L.\n\\]\nDifferentiating w.r.t \\(L\\) yields: \\[\n\\pi'(L) = 0 \\iff pf'(L) = w(L) + w'(L)L.\n\\tag{11}\\]\nObserve that the LHS of Equation 11 represents the marginal revenue brought about but an additional worker (\\(f'\\) is the marginal output). It is often referred to as the marginal revenue product of labor (\\(MRP\\)).\nThe RHS of Equation 11 captures the marginal cost or the marginal expenditure on labor (\\(ME\\)). As the labor market becomes scarce, employing an additional worker raises the wage to \\(w(L)\\). The increased wage \\(w'&gt;0\\) must be enjoyed by all the workers, which is captured by the second term. An analogy with the monopoly might help us remember these terms. In particular:\n\n\\(w(L)\\) to \\(p(q)\\): Supply to demand\n\\(ME(L)\\) to \\(MR(q)\\): Marginal expenditure to marginal revenue\n\\(MRP(L)\\) to \\(MC(q)\\). Marginal revenue product to marginal cost\n\nLet us look at a numerical example.\n\nExample 7 Consider a coal mine in a small town with production function \\(q = 30\\ln L\\). The market for coal is a perfectly competitive one with price \\(p=\\$5\\) per unit. The labor market where the mine operates has supply given by \\(w(L) = 5 + \\frac{1}{2}L.\\) Determine the number of workers hired and the equilibrium wage in this market.\nThe monopsony’s PMP: \\[\n\\pi(L) = 150\\ln(L) - (5 + \\frac{1}{2}L)L,\n\\]\nwhich is strictly concave in \\(L.\\) The necessary and sufficient condition for a max is: \\[\n\\begin{aligned}\n\\pi'(L) = 0 \\iff \\frac{150}{L} &= 5 + L \\\\\nL^2 + 5L - 150 &= 0 \\\\\nL &= 10.\n\\end{aligned}\n\\]\nHence the optimal number of hires is 26 for a wage rate of \\(w(10) = \\$10.\\)\nIf the market were competitive, the firm would have taken the wage as given while soving its PMP. The condition for a max in this case would have been:\n\\[\n\\begin{aligned}\npq'(L) &= w(L) \\\\\n\\frac{150}{L} &= 5 + \\frac{1}{2}L \\\\\nL &= -5 + \\sqrt{325} \\approx 13.\n\\end{aligned}\n\\]\nThe competitive wage would have been \\(w(13)=11.5.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Consequences of monopsony\n\n\n\nTo conclude, we see that compared to a competitive buyer, the monopsonist buys a lower quantity at a lower price and this creates a dead weight loss in the market, as in the case of the monopoly.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_4.html#footnotes",
+    "href": "contents/lecture_4.html#footnotes",
+    "title": "Chapter 4. Monopoly",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIn the linear demand case above the DLW was the area of a triangle which we were about to compute without integration.↩︎",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 4"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html",
+    "href": "contents/lecture_2.html",
+    "title": "Chapter 2. Producers and supply",
+    "section": "",
+    "text": "A production function describes how inputs (factors of production such as labor, capital and land, etc.) can be transformed into outputs. We denote the production function by \\(f:\\mathbb{R}^n\\to\\mathbb{R}_+\\), where \\(n\\) is the number of inputs. In the case of two inputs, capital (\\(K\\)) and labor (\\(L\\)): \\[\nq = f(K, L),\n\\] where \\(q\\) is the amount of output.\n\nExample 1  \n\nCobb-Douglas production function: \\(q = AK^{\\alpha}L^{\\beta}\\), where \\(A&gt;0\\) and \\(\\alpha, \\beta \\in (0,1)\\)\nLeontief production function: \\(q = A\\min\\{aK, bL\\}\\), where \\(A, a, b&gt;0.\\) This production function captures the idea that inputs must be used in fixed proportion\nLinear production function: \\(q = aK + bL\\) where \\(a, b &gt; 0.\\) Here inputs are perfectly substitutable (e.g., robots vs human workers in the future)\nQuasilinear production function: \\(q = AK^a + bL\\) where \\(A, a, b&gt;0.\\) This production function could be used to capture different returns to scales of different inputs. For example scaling is quite straightforward for labor or raw materials but might be complex for capital and land.\nThe Cobb-Douglas, linear and fixed-proportion production functions are all special cases of the CES production function: \\[\n     q = \\left(aL^{\\frac{s-1}{s}} + bK^{\\frac{s-1}{s}}\\right)^{\\frac{s}{s-1}},\n  \\tag{1}\\]\nwhere \\(s\\) is the EoS. Special cases:\n\nAs \\(s\\to \\infty\\): CES \\(\\to\\) linear production function\nAs \\(s \\to 0\\): CES \\(\\to\\) fixed-proportion production function\nAs \\(s \\to 1\\): CES \\(\\to\\) the Cobb-Douglas production function\n\nWhy is it called CES? Let \\(q(L, K)\\) be a twice differentiable production function of two inputs. The elasticity of substitution between the two factors measures the percentage in the ratio of the inputs in response to a percentage change in the MRTS. Mathematically:\n\\[\n     s = \\frac{d\\ln \\left(\\frac{K}{L}\\right)}{d \\ln MRTS_{L,K}},\n  \\tag{2}\\]\nwhere \\(MRTS_{L,K} = MP_L/MP_K\\).",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#average-product-and-productivity",
+    "href": "contents/lecture_2.html#average-product-and-productivity",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.1 Average product and productivity",
+    "text": "2.1 Average product and productivity\nThe average product is the total units of output produced per unit of input used\n\nThe average product or productivity of labor, \\(AP_L = q / L\\)\nThe average product or productivity of capital, \\(AP_K = q / K\\)\n\nThe higher is the average product, the higher is the productivity. Productivity typically depends on the production technology and the levels of input used.\n\nExample 2 For each of the following production functions, compute the average product of labor (or labor productivity). Determine if increasing labor improves productivity.\n\n\\(q = 100 \\sqrt{L}\\)\n\\(q = 5 L^{1/2} + 3L - 6\\)",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#marginal-product",
+    "href": "contents/lecture_2.html#marginal-product",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.2 Marginal product",
+    "text": "2.2 Marginal product\nThe marginal product is the rate at which total output changes as the firm uses one additional unit of input\n\nThe marginal product of labor: \\(MP_L = \\frac{\\Delta q}{\\Delta L}\\) when \\(L\\) is discrete (e.g. number of workers) and \\(MP_L = \\frac{\\partial q}{\\partial L}\\) when \\(L\\) is continuous (e.g. working hours)\nThe marginal product of capital: \\(MP_K = \\frac{\\Delta q}{\\Delta K}\\) when \\(K\\) is discrete and \\(MP_K = \\frac{\\partial q}{\\partial K}\\) when \\(K\\) is continuous\n\n\nExample 3 Compute the marginal product of labor for the production functions in Example 2 and determine if it is increasing or decreasing in the amount of input used.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#decreasing-marginal-products",
+    "href": "contents/lecture_2.html#decreasing-marginal-products",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.3 Decreasing marginal products",
+    "text": "2.3 Decreasing marginal products\n\n\n\n\n\n\n\n\nFigure 1: Increasing labor increases output, but at decreasing rates\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Increasing labor increases output, but at decreasing rates",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#relationship-beteen-average-and-marginal-products",
+    "href": "contents/lecture_2.html#relationship-beteen-average-and-marginal-products",
+    "title": "Chapter 2. Producers and supply",
+    "section": "2.4 Relationship beteen average and marginal products",
+    "text": "2.4 Relationship beteen average and marginal products\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Relationship between marginal and average products\n\n\n\nFigure 3 suggests that the AP curve crosses the MP curve at its maximum. In particular, as the AP is increasing when it is less than the MP and it is decreasing when it is greater than the MP. This makes sense intuitively since the MP being greater than the AP means the added worker is more productive than the average worker in the existing team, and vice versa.\nLet us formalize this observation. Consider the case of continuous labor input and differentiable production function. Let \\(\\bar{q}(L) = q(L) / L\\) be the average product. Differentiating with respect to \\(L\\) yields:\n\\[\n\\begin{aligned}\n    \\bar{q}'(L) &= \\frac{q'(L)L - q(L)}{L^2}, \\quad L &gt; 0. \\\\\n    \\bar{q}'(L) \\geq 0 &\\iff q'(L)L - q(L) \\geq 0 \\\\\n    &\\iff q'(L) \\geq \\frac{q(L)}{L} \\\\\n    &\\iff q'(L) \\geq \\bar{q}(L).         \n\\end{aligned}\n\\tag{3}\\]\nThus the average product, \\(\\bar{q}\\), is increasing when the marginal product \\(q'\\) is greater than the average product and is decreasing otherwise.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#definition",
+    "href": "contents/lecture_2.html#definition",
+    "title": "Chapter 2. Producers and supply",
+    "section": "3.1 Definition",
+    "text": "3.1 Definition\nIn the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation. In particular, each IC represents combinations of goods that give the consumer the same level of utility.\nIsoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output, but the the levels assocated with the isoquants are cardinal: they represent actual outputs, not just fictive units used to rank bundles.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#example",
+    "href": "contents/lecture_2.html#example",
+    "title": "Chapter 2. Producers and supply",
+    "section": "3.2 Example",
+    "text": "3.2 Example\nConsider the production function \\(q(K, L) = 5K^{1/2} L^{1/2}\\). We would like to find the the isoquant corresponding to \\(m &gt; 0\\) units of output.\nObserve that \\(m &gt; 0\\) implies that both inputs are strictly positive. We have: \\[\n5K^{1/2} L^{1/2} = m \\\\\n\\iff K = \\frac{m^2}{25L}.\n\\]\n\n\n\n\n\n\n\n\nFigure 4: Cobb-Douglas production function and isoquants",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#definition-1",
+    "href": "contents/lecture_2.html#definition-1",
+    "title": "Chapter 2. Producers and supply",
+    "section": "4.1 Definition",
+    "text": "4.1 Definition\nThe MRTS is the slope of the isoquant (in absolute value):\n\\[\n\\frac{-dK}{dL} = \\frac{MP_L}{MP_K} \\equiv MRTS_{L,K}.\n\\tag{4}\\]\nIt tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting outputs.\nAs in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where \\(q(L, K) = m\\) for some constant \\(m&gt;0\\):\n\\[\n\\begin{aligned}\ndq(L, K) &= 0 \\\\\n\\iff q_L dL + q_K dK &= 0 \\\\\n\\iff \\frac{-dK}{dL} &= \\frac{q_L}{q_K} \\\\\n&= \\frac{MP_L}{MP_K} \\equiv MRTS_{L,K}.\n\\end{aligned}\n\\tag{5}\\]",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#properties",
+    "href": "contents/lecture_2.html#properties",
+    "title": "Chapter 2. Producers and supply",
+    "section": "4.2 Properties",
+    "text": "4.2 Properties\nIn the case of Cobb-Douglas production function above, the MRTS is decreasing as we move in the south-east direction along one isoquant:\n\nWhen capital is abundant, the firm is willing to give up many units of capital to hire an additional worker.\nWhen capital is scarce, firm is less willing to replace it with workers.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#isocost-lines",
+    "href": "contents/lecture_2.html#isocost-lines",
+    "title": "Chapter 2. Producers and supply",
+    "section": "7.1 Isocost lines",
+    "text": "7.1 Isocost lines\n\nDefinition 1 (Isocost) An isocost line is the set of input combinations that yield the same total cost (TC) for the firm. Mathematically, let \\(w&gt;0\\) and \\(r&gt;0\\) be the prices of labor and capital, respectively. Then the isocost consists of all \\((w, r)\\) pairs such that: \\[\nTC = wL + rK.\n\\tag{7}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: Isocostline for the case of two inputs\n\n\n\nObserve that the slope of the isocost line is \\(-w/r\\), implying that as \\(w\\) rises, this line gets steeper.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#cost-minimization-problem-cmp",
+    "href": "contents/lecture_2.html#cost-minimization-problem-cmp",
+    "title": "Chapter 2. Producers and supply",
+    "section": "7.2 Cost minimization problem (CMP)",
+    "text": "7.2 Cost minimization problem (CMP)\nThe cost minimization problem entails finding a combination of inputs such that the total cost to attain a certain level of output is minimized.\n\nDefinition 2 (CMP) \\[\n\\begin{aligned}\n&\\min_{L,K} C = wL + rK \\\\\n&\\text{s.t. } q(L, K) \\geq m,\n\\end{aligned}\n\\tag{8}\\] where \\(m\\) is the target output level.\n\nThe idea is to identify the isocost line touching the isoquant that is as close to the origin as possible.\n\n7.2.1 Necessary conditions\nThe Lagrangian of the CMP: \\[\n\\mathcal{L}(\\lambda, L, K) = - C(L, K) + \\lambda (q(L,K) - m).\n\\tag{9}\\]\nAccording to the KTT theorem, if \\((L^*, K^*)\\) is a solution to the CMP, then there exist \\(\\lambda^* \\geq 0\\) such that:\n\\[\n\\begin{aligned}\n&\\mathcal{L}_L (L^*, K^*, \\lambda^*) = 0, \\:\n\\mathcal{L}_K (L^*, K^*, \\lambda^*) = 0, \\\\\n% &\\quad \\quad \\quad \\text{ with equality for interior solutions }\\\\\n&\\lambda^* \\geq 0, \\: q(L^*, K^*) - m \\geq 0, \\:  \\lambda^*[q(L^*, K^*) - m] = 0.\n\\end{aligned}\n\\tag{10}\\]\nThe FOCs yield: \\[\n\\begin{aligned}\n\\lambda^* q_L(L^*, K^*) &=  w, \\\\\n\\lambda^* q_K(L^*, K^*) &=  r.\n\\end{aligned}\n\\tag{11}\\]\nThis implies: \\[\n\\begin{aligned}\n\\frac{MP_L}{MP_K} &= \\frac{w}{r} \\\\\n\\frac{MP_L}{w} &= \\frac{MP_K}{r}=\\frac{1}{\\lambda^*}.\n\\end{aligned}\n\\tag{12}\\]\nNote that \\(\\lambda^*\\) can be interpreted as a shadow price: the cost of increasing output by a unit: \\[\n\\lambda^* = \\frac{\\partial C^*(r,w,m)}{\\partial m}.\n\\]\nEquation 12 states that when minimizing the production cost, the firm rearranges inputs in such manner that the marginal product per currency unit is equalized across all factors. If for example \\(\\frac{MP_L}{w} &gt; \\frac{MP_K}{r}\\) then we should increase \\(L\\) by reducing \\(K\\) since the former has greater bang for the buck. The condition \\(\\frac{MP_L}{MP_K} = \\frac{w}{r} \\iff MRTS_{L,K} = \\frac{w}{r}\\) tells us that the interior optimum is located where the isoquant is tangent to the isocost.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#comparative-statics",
+    "href": "contents/lecture_2.html#comparative-statics",
+    "title": "Chapter 2. Producers and supply",
+    "section": "7.3 Comparative statics",
+    "text": "7.3 Comparative statics\n\nSolutions to the CMP give us input demands, which typically depend on input prices and the target output, i.e., on \\(w, r\\) and \\(m\\).\nThis allows us to perform comparative statics\nThe cost is the expenditure that a firm incurs when hiring the optimal amounts of inputs\nAs with input demands, we can express the (optimal) cost function as a function of input prices and target output\n\\[\n  C(w, r, m) = wL(w, r, m) + rK(w, r, m).\n   \\tag{13}\\]\nLikewise, we can also perform comparative statics on it",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#types-of-costs",
+    "href": "contents/lecture_2.html#types-of-costs",
+    "title": "Chapter 2. Producers and supply",
+    "section": "7.4 Types of costs:",
+    "text": "7.4 Types of costs:\n\n7.4.1 Explicit vs implicit costs\n\nExplicit costs (also called accounting costs): Costs that require monetary payments\nImplicit costs (or opportunity costs): Do not require monetary outlays and reflect what one must sacrifice when making a choice\nExample: What is your cost of attending this course?\n\nAccounting costs: tuition, transportation, etc.\nOpportunity cost: the salary you could have earned during the time of study\n\n\n\n\n7.4.2 Sunk vs nonsunk costs\n\nSunk costs: costs that cannot be recoverred even if the firm chooses to shut down its operations.\n\nExamples: Advertising expenses already spent, the rent the firm has already paid for the building if the lease does not allow subletting\n\nNonsunk costs: costs that can be sold back (recoverable or partially recoverable costs) in case the firm shuts down\n\nExample: Raw materials, the rental cost of the building if the contract allows subleases\n\n\n\n\n7.4.3 Long-run vs short-run costs\n\nIn the long run (LR), the firm has enough time to vary the amount of all inputs as much as necessary\nIn the short run (SR), the amount of at least one input is fixed\nExample: In short run, production factors such as land or capital are typically fixed, whereas labor is variable. In the long run, it is possible to buy more land and set up new factories, allowing all factors of production to vary.\n\nConsider a firm with Cobb-Douglas production \\(q = L^a K^b\\) where \\(K=\\bar{K}&gt;0\\) is fixed in the SR. Thus the cost function found above is the LR cost. The SR cost can be found by solving the CMP with respect to \\(L\\) only\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Short-run vs long-run cost function\n\n\n\n\n\n7.4.4 Average and marginal costs\n\nAverage cost (AC): total cost of production per output unit:\n\\[\n  AC(q) = \\frac{C(q)}{q},\n   \\tag{14}\\] where \\(C(q)\\) is the total cost.\nMarginal cost (MC): the rate at which the total cost increases as the firm produces an additional unit of output. Graphically it is the slope of the total cost curve:\n\\[\n  MC(q) = C'(q)\n   \\tag{15}\\] in the continuous case.1\nThe MC curve crosses the AC curve at the AC’s minimum. In other words, the AC is decreasing when it is above the MC and increasing when it is above the MC.\nIntuition:\n\nInitially when output is small, the variable cost is small and the fixed cost dominates the total cost\nAs output increases, the importance of fixed cost declines. Meanwhile, the MC increases (due to decreasing marginal product)\nAfter a threshold, producing an additional unit costs more than the AC of existing units\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 7: Short-run average and marginal costs",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_2.html#footnotes",
+    "href": "contents/lecture_2.html#footnotes",
+    "title": "Chapter 2. Producers and supply",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nIt is equal to \\(\\Delta C / \\Delta q\\) in the discrete case↩︎",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 2"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html",
+    "href": "contents/lecture_3.html",
+    "title": "Chapter 3. Equlibrium",
+    "section": "",
+    "text": "In this chapter we will be examining market equilibria. We shall begin by deriving the market supply curve, which results from firms’ optimal production decision. Likewise, market demand results from consumers’ optimal consumption decision. Searching for an equilibrium is essentially searching for prices that equalize demand and supply in the market. When a single market is considered in isolation, its equilibrium is a partial one. When all markets are considered, we speak of a general equilibrium. In a pure exchange economy, all markets are markets of consumption goods. In a production economy, the relevant markets include those of factors of production such as labor, capital and land. In this course, we will be mostly interested in general equilibria in a pure exchange economy.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#the-pmp",
+    "href": "contents/lecture_3.html#the-pmp",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.1 The PMP",
+    "text": "2.1 The PMP\n\nDefinition 1 (Firm’s PMP) Consider a price-taking firm in the market of the output good. Given \\(p\\), the market price of the good, the firm’s PMP is: \\[\n\\max_{q\\geq 0} \\pi = R(q) - C(q) = pq - C(q),\n\\] where \\(C(q)\\) is the total cost function derived from the CMP introduced previously and \\(R(q)\\) denotes the total revenue.\n\nObserve that the PMP includes the CMP as a first step.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#necessary-conditions",
+    "href": "contents/lecture_3.html#necessary-conditions",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.2 Necessary conditions",
+    "text": "2.2 Necessary conditions\nAccording to the KT conditions, either\n\nwe have a corner solution \\(q=0\\), or\nWe have an interior solution \\(q&gt;0\\) satisfying the FOC:\n\\[\n      \\pi'(q) = 0 \\iff p = C'(q) \\\\\n      \\iff p = MC(q).\n  \\]\nObserve that for a price-taking firm, the marginal revenue is the market price of the good (as we shall see later, for a firm with market power, the marginal revenue is less than the price)\nThe FOC above implies that the firm produces up to a point where the marginal revenue (marginal benefit) is equal to the marginal cost.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#sufficient-condition",
+    "href": "contents/lecture_3.html#sufficient-condition",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.3 Sufficient condition",
+    "text": "2.3 Sufficient condition\n\nThe FOC is sufficient for a max if the profit function is concave in output. This is called the second-order condition (SOC)\nWe have:\n\\[\n  \\pi''(q) = -C''(q),\n  \\]\nimplying that the SOC is satisfied if the cost function is convex in \\(q\\) (i.e., if the MC is increasing in output)",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#examples",
+    "href": "contents/lecture_3.html#examples",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.4 Examples",
+    "text": "2.4 Examples\n\nExample 1 Let us solve the PMP of a price-taking firm in the output market (and inputs market). Assume that it has a Cobb-Douglas production function defined by \\(q(L, K) = L^{1/2}K^{1/2}\\). The factor prices are \\(w=\\$40\\) and \\(r=\\$10\\) as before.\n\nStep 1: Solve the CMP:\n\\[\n  \\begin{aligned}\n  &\\min_{K,L} 40L + 10K \\\\\n  \\text{s.t. } &q(L, K) = L^{1/2}K^{1/2} \\geq q,\n  \\end{aligned}\n  \\]\nfor some target output level \\(q\\).\n\nThe cost function can be obtained by replacing the solutions of the CMP into the objective function. This yields:\n\n\\[\n  C(q) = 40q.\n  \\]\nStep 2: Substitute \\(C(q)\\) obtained from the CMP into the PMP so that this problem reads:\n\\[\n  \\max_{q\\geq0} \\pi(q) = pq - 40q = (p - 40)q.\n  \\]\n\nClearly if \\(p&lt;40\\) the firm should shut down\nIf \\(p\\geq 40\\), the firm produces as much as possible since the profit is then incresing in output\nWe thus obtain a perfectly elastic individual supply curve\nNote that this is the long-run individual supply curve since all inputs are variable. One can also verify that the long-run cost function does not have a fixed cost.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 1: A perfectly elastic long-run supply curve\n\n\n\n\n\nExample 2 Suppose we have obtained a convex cost function for the firm of the form: \\[\nC(q) = 0.5 a q^2 + bq + c,\n\\] where \\(a\\), \\(b\\) and \\(c\\) are strictly positive constants. Observe that this is a short-run cost function since fixed costs (\\(c\\)) are present. The profit maximizing condition for the firm is: \\[\nC'(q) = a q + b = p \\iff q = \\frac{p - b}{a}.\n\\tag{1}\\]\nTo determine the short-run supply curve of the firm, we need to understand the nature of the fixed costs represented by \\(c.\\) In the short-run, firms are typically do not try to make positive profits, i.e., they do not need to sell each unit for at least their average total cost. Firms only need to recuperate the non-sunk part of the fixed cost. Sunk costs are fixed costs that cannot be recovered by the firm and thus should not affect its decision on future output. For example, advertising costs once spent cannot be recovered. Lease payments, on the other hand, are non-sunk fixed costs can be recovered by sublease if the firm eventually decides to shut down.\nFor simplicity, suppose that \\(c\\) is non-sunk. The average total cost in this case is equal to the average non-sunk total cost (ANSC).The firm produces so long as the market price is above the ANSC: \\[\n\\begin{aligned}\n\\pi(q^*) &gt; 0 &\\iff p &gt; \\frac{C(q^*)}{q^*} \\\\\n&\\iff p &gt; 0.5 a q^* + b + \\frac{c}{q^*} \\\\\n&\\iff p &gt; 0.5 a \\frac{p - b}{a} + b + \\frac{ca}{p - b} \\\\\n&\\iff (p - b)^2 &gt; 2ca \\\\\n&\\iff p &gt; b + \\sqrt{2ca}.\n\\end{aligned}\n\\tag{2}\\]\nObserve that the last line follows from the fact that \\(q^* &gt; 0\\) if and only if \\(p &gt; b\\) in view of Equation 1. This condition tells us that in the SR, the firm suffers from a fixed cost (\\(c\\)), which might prevent it from earning positive profits even if it is operating optimally. Note that \\(p &gt; b + \\sqrt{2ca}\\) is equivalent to \\(q &gt; \\sqrt{2c/a}.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Profit as a function of market price\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: A SR upward sloping supply curve \\(q = \\frac{p - b}{a}\\) for \\(p &gt; b + \\sqrt{2ac}\\)",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#long-run-vs-short-run-firms-supply",
+    "href": "contents/lecture_3.html#long-run-vs-short-run-firms-supply",
+    "title": "Chapter 3. Equlibrium",
+    "section": "2.5 Long-run vs short-run firm’s supply",
+    "text": "2.5 Long-run vs short-run firm’s supply\nThe profit maximizing condition for a competitive firm is that its marginal cost is equal to the market price. This is common for the firm both in the long run and in the short run. The difference lies in the shutdown condition.\nIn the short run, firms shutdown if the price cannot cover the average non-sunk costs (ANSC), implying that supply will be:\n\nzero for all levels of output for which the marginal cost (which is equal to the market price under profit maximizing) is below the ANSC curve, and\nthe part of the marginal cost that is above the ANSC (when output is positive)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: SR supply curve\n\n\n\nIn the long run, all costs are variable. The average cost (AC) is just the average variable cost (AVC). The firm produces so long as the market price can cover the AVC (or the AC), hence the LR supply curve will be:\n\nzero for all levels of output for which the marginal cost (which is equal to the market price under profit maximizing) is below the AC (or AVC) curve, and\nthe part of the marginal cost that is above the AC (or AVC)\n\nNote that the SR firms might suffer from losses due to non-sunk fixed costs, but so long as the price can cover the ANSC, it is optimal for them to produce. In the LR, however, the firm produces so long as it earns positive profits and shuts down otherwise.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: LR supply curve",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#short-run-equilibrium",
+    "href": "contents/lecture_3.html#short-run-equilibrium",
+    "title": "Chapter 3. Equlibrium",
+    "section": "3.1 Short-run equilibrium",
+    "text": "3.1 Short-run equilibrium\nIn the short run, the market supply curve is an horizontal aggregation of individual supplies. In other words, to construct the SR market supply curve, one adds up the quantities supplied by all the firms in the market at each given price. The market demand curve is constructed in the same manner. By equating supply and demand, we can determine the market equilibrium.\n\nExample 3 Suppose the market demand is given by \\(q^D(p) = 100 - 2p.\\) Consider a market with \\(N\\) identical firms, each facing the same cost function \\(C(q)=10−5q+2q^2.\\) In view of Exercise 1, the SR market supply is given by: \\[\nq^S(p) =\n\\begin{cases} N(p/4 + 5/4) & p &gt; 4\\sqrt{2.5}-5\\approx 1.32 \\\\\n                     0 & \\mathrm{otherwise.}\n\\end{cases}\n\\]\nIn equilibrium \\(q^S(p) = q^D(p)\\): \\[\n\\begin{aligned}\n100 - 2p &= N(p/4 + 5/4) \\\\\np &= \\frac{5(80 - N)}{8 + N}.\n\\end{aligned}\n\\] Hence the market price is a decreasing function of the number of firms. Knowing the shutdown price, we can determine the maximum number of firms that can exist in this market: \\[\n\\frac{5(80 - N)}{8 + N} = 1.32 \\iff N = 61.6.\n\\]\n\nThe short-run equilibrium quantity is:\n\\[\nq^* = 100 - 2p^* = \\frac{110N}{8 + N}, \\quad N \\leq 61.\n\\]\nHence given the number of firms in the market, we can determine its SR supply curve, which together with the market demand curve defines the equilibrium price and quantity. The market shuts down if \\(N\\) is too large.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#long-run-equilibrium",
+    "href": "contents/lecture_3.html#long-run-equilibrium",
+    "title": "Chapter 3. Equlibrium",
+    "section": "3.2 Long-run equilibrium",
+    "text": "3.2 Long-run equilibrium\nIn a competitive market, firms can freely enter or exit. If there is an opportunity to make economic profits in a market, firms will enter, pushing down market prices and drive away profits. Note that making profits does not imply making economic profits. Economic profits take into account the opportunity cost of the firm. For instance, if leaving money in a bank earns an interest of 5% per month and the firm is generating less than 5% return on investment, it is not making economic profits even though it is making profits. A long-run equilibrium is reached when the following conditions are satisfied:\n\nEvery firm is maximizing profits: \\(p=MC(q)\\)\nEach firm makes zero economic profits: \\(p=AC(q)\\). This means that firms make the same profits in other competitive markets (hence no incentives for other firms to enter or for existing firms to exit)\nThe market clears: market demand equal to LR market supply at the equilibrium price\n\nHence in a LR equilibrium, firms are doing the best they can do in the market which they have no incentives to leave and no other firms have incentives to enter because of zero economic profits, and the price is such that supply is equal to demand.\n\nConsider a perfectly competitive industry populated by identical firms with the cost function \\(C(q)=10 - 5q + 2q^2\\). We would like to determine the long-run equilibrium of the market as well as the equilibrium number of firms operating in it.1\nDenote the LR equilibrium quantity, price and market size \\(q^*\\), \\(p^*\\) and \\(N^*,\\) respectively.\n\nSince each firm in the market sets \\(MC(q_i^*) = AC(q_i^*)\\): \\[\n  \\begin{aligned}\n  -5 + 4 q^*_i &= \\frac{10}{q_i^*} - 5 + 2 q_i^* \\\\\n  q_i^* &= \\sqrt{5} \\approx 2.24.\n  \\end{aligned}\n  \\]\nSince \\(MC(q_i^*) = p^*\\), we can deduce the LR equilibrium market price: \\[\n  p^* = -5 + 4 q^*_i = -5 + 4 \\sqrt{5} \\approx 3.94\n  \\]\nEquilibirum quantity can be found using the market demand equation: \\[\n  q^* = 100 - 2p^* \\approx 92.11\n  \\]\nThe number of active firms in the LR: \\[\n  N^* = \\frac{q^*}{q_i^*} \\approx 41.19\n  \\]\nHence in the LR equilibrium, the price will be about \\(\\$3.94\\) per unit. At this price, about \\(92\\) units will be produced by about \\(41\\) firms.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#adding-production-to-the-economy",
+    "href": "contents/lecture_3.html#adding-production-to-the-economy",
+    "title": "Chapter 3. Equlibrium",
+    "section": "6.1 Adding production to the economy",
+    "text": "6.1 Adding production to the economy\nIn a production economy, consumers own factors of production, which they can rent out to firms to earn income. Firms choose the quantity of factors of production to maximize profit, taking as given the prices (of factors and final consumption goods). Consumers choose the quantity of consumption goods to maximize utility, taking as given prices (of factors and final consumption goods). In equilibrium, aggregate demand is equal to aggregate supply in each market, including markets of production factors.\nConsider an economy two consumers with Cobb-Douglas utility function \\[\nu(x_1^i, x_2^i) = x_1^i x_2^i\n\\] for each consumer \\(i=A, B\\) whose endowments are: \\[\n\\begin{aligned}\ne^A &= (k^A, l^A), \\\\\ne^B &= (k^B, l^B).\n\\end{aligned}\n\\tag{10}\\]\nSuppose there are two firms in the economy, each producing one of the consumption goods according to a Cobb-Douglas technology: \\[\n\\begin{aligned}\ny_1 = F^1(K_1, L_1) &= K_1^a L_1^b, \\\\\ny_2 = F^2(K_2, L_2) &= K_2^b L_2^a,\n\\end{aligned}\n\\] where \\(a+b=1\\) and \\(a, b \\in (0,1)\\).\nAn allocation \\((x_1^A, x_1^B, x_2^A, x_2^B, K_1, L_1, K_2, L_2)\\) and a price vector \\(p=(p_1, p_2, w, r)\\) constitute a competive equilibrium (or Walrasian equilibrium) of the production economy if:\n\nGiven prices, \\((x_1^i, x_2^i)\\) solves the UMP for each consumer \\(i\\in\\{A,B\\}.\\)\nGiven prices, \\((K_j, L_j)\\) solves the PMP for each firm \\(j\\in \\{1,2\\}.\\)\nPrices are such that markets clear: \\[\n\\begin{aligned}\n\\text{Consumption goods:   }\\sum_i x^i_j &= y_j \\equiv F^j(K_j, L_j), \\quad \\forall j=1,2, \\\\\n\\text{Capital good:   }\\sum_j K_j &= k^A + k^B, \\\\\n\\text{Labor good:   }\\sum_j L_j &= l^A + l^B.\n\\end{aligned}\n\\] In other words, we are in an equilibrium if ever agent optimizes and markets clear. Let us first consider the consumers, who face the UMP.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#ump",
+    "href": "contents/lecture_3.html#ump",
+    "title": "Chapter 3. Equlibrium",
+    "section": "6.2 UMP",
+    "text": "6.2 UMP\nConsumer \\(i\\) solves: \\[\n\\begin{aligned}\n&\\max_{x^i} u(x^i) \\\\\n&\\text{s.t. } px^i \\leq wl^i + rk^i.\n\\end{aligned}\n\\tag{11}\\]\nObserve that since consumers own labor and capital, their income come from renting out these factors of production. The FONC yields: \\[\nu'_j(x^i) = \\lambda_i p_j, \\quad\\forall j=1,2.\n\\tag{12}\\]\nSince \\(u'_j&gt;0\\) we must have \\(\\lambda &gt; 0\\) in optimality, implying that the BC binds: \\[\npx^i = wl^i + rk^i.\n\\]\nMoreover: \\[\nMRS_{1,2}^i = \\frac{p_1}{p_2},\\quad \\forall i\\in\\{A,B\\}.\n\\tag{13}\\]\nEquation 13 implies:\n\\[\n\\frac{x^i_2}{x^i_1} = \\frac{p_1}{p_2} \\quad \\forall i,\n\\]\nwhich together with the binding BC provide the optimal consumption bundle for each consumer as function of factor prices and endowments. In particular:\n\\[\nx_j^i = \\frac{wl^i + rk^i}{2p_j},\\quad i\\in\\{A, B\\},\\quad j\\in\\{1, 2\\}.\n\\tag{14}\\]\nDenote the total endowment \\(l=\\sum_i l^i\\) and \\(k= \\sum_i k^i.\\) By the market clearing condition for good 1: \\[\n\\begin{aligned}\nx_1^A + x_1^B &= y_1 = F^1(K_1, L_1) = K_1^a L_1^b \\\\\n\\frac{wl + rk}{2p_1} &= K_1^a L_1^b.\n\\end{aligned}\n\\tag{15}\\]\nLikewise for the second good: \\[\n\\frac{wl + rk}{2p_2} = K_2^b L_2^a.\n\\tag{16}\\]\nDividing Equation 16 by Equation 15 side by side yields: \\[\n\\frac{p_1}{p_2} = \\frac{K_2^b L_2^a}{K_1^a L_1^b}.\n\\tag{17}\\]\nNext we consider firms, who seek to maximize profits.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#pmp",
+    "href": "contents/lecture_3.html#pmp",
+    "title": "Chapter 3. Equlibrium",
+    "section": "6.3 PMP",
+    "text": "6.3 PMP\nEach firm \\(j=1,2\\) solves their profit maximization problem (PMP):\n\\[\n\\max_{K_j, L_j} \\pi_j = p_j F^j(K_j, L_j) - rK_j - wL_j.\n\\tag{18}\\]\nIn optimality: \\[\np_j F_K^j = r, \\quad p_j F_L^j = w.\n\\tag{19}\\]\nHence: \\[\n\\begin{aligned}\n\\frac{p_1}{p_2} &= \\frac{F_K^2}{F_K^1} = \\frac{F_L^2}{F_L^1} \\\\\n\\frac{p_1}{p_2}&= MRT_{1,2}^K = MRT_{1,2}^L.\n\\end{aligned}\n\\tag{20}\\]\nThe \\(MRT^K_{1,2}\\) is the rate at which the economy transforms the second good into the first good using capital. Observe that Equation 13 and Equation 20 together say that at an optimum, the economy transforms one good for the other at the rate consumers are willing to substitute one for the other. From Equation 17 and Equation 20 and the fact that \\(a+b=1,\\) we have: \\[\n\\begin{aligned}\n\\frac{p_1}{p_2} = \\frac{F_K^2}{F_K^1} &= \\frac{K_2^b L_2^a}{K_1^a L_1^b} \\\\\n\\frac{b K_2^{b-1} L_2^a}{a K_1^{a-1} L_1^b} &= \\frac{K_2^b L_2^a}{K_1^a L_1^b} \\\\\n\\implies \\frac{K_2}{K_1} &= \\frac{b}{a}.\n\\end{aligned}\n\\tag{21}\\]\nWe will now solve for the CEA of this economy using the market clearing conditions.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#the-cea",
+    "href": "contents/lecture_3.html#the-cea",
+    "title": "Chapter 3. Equlibrium",
+    "section": "6.4 The CEA",
+    "text": "6.4 The CEA\nCombining Equation 21 and the market clearing condition for the capital market \\(K_1 + K_2 = k,\\) we can solve for the optimal values of capital. In particular,\n\\[\nK_1 = a k, \\quad K_2 = b k.\n\\tag{22}\\]\nFrom Equation 17 and Equation 20 and the fact that \\(a+b=1,\\) we have: \\[\n\\frac{L_2}{L_1} = \\frac{a}{b}.\n\\tag{23}\\]\nAgain, combining Equation 23 and the market clearing condition for the labor market \\(L_1 + L_2 = l,\\) we obtain:\n\\[\nL_1 = a l, \\quad L_2 = bl.\n\\tag{24}\\]\nHaving computed factor demands, we can substitute these values into Equation 17 to determine equilibrium price ratio \\(p_1/p_2\\). We can then normalize \\(p_2\\equiv 1,\\) to obtain: \\[\np_1 = \\frac{b}{a}\\left(\\frac{k}{l}\\right)^{b-a}.\n\\tag{25}\\]\nFactor prices can then be determined from Equation 19. The equilibrium allocations \\(x^A, x^B\\) can be determined by substituting factor and consumption prices into Equation 14.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#the-spp-in-a-pure-exchange-economy",
+    "href": "contents/lecture_3.html#the-spp-in-a-pure-exchange-economy",
+    "title": "Chapter 3. Equlibrium",
+    "section": "7.1 The SPP in a pure-exchange economy",
+    "text": "7.1 The SPP in a pure-exchange economy\nMathematically, the social planner solves: \\[\n\\begin{aligned}\n&\\max_{(x^i)_{i\\in I}} \\sum_{i\\in I} w^i u^i(x^i) \\\\\n&\\text{s.t. } \\sum_{i\\in I} x^i_j \\leq \\sum_{i\\in I} e^i_j, \\quad \\forall j\\in J,\n\\end{aligned}\n\\tag{26}\\]\nwhere \\(w_i\\) are social welfare weights. Note that there are no prices in the social planner’s problem (SPP), why is that? In a decentralized economy, selfish interest and prices guide individuals to efficient decisions. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#the-pea-in-a-pure-exchange-economy",
+    "href": "contents/lecture_3.html#the-pea-in-a-pure-exchange-economy",
+    "title": "Chapter 3. Equlibrium",
+    "section": "7.2 The PEA in a pure exchange economy",
+    "text": "7.2 The PEA in a pure exchange economy\nThe KKT conditions for the SPP’s problem: \\[\n\\begin{aligned}\n    w^i u^i_j(x^i) &= \\lambda_j, \\quad \\forall j\\in J, \\: i\\in I, \\\\\n    \\sum_{i\\in I} x^i_j &= \\sum_{i\\in I} e^i_j, \\quad \\forall j\\in J.\n\\end{aligned}\n\\]\nConsumers have identical preferences. Hence: \\[\n\\begin{aligned}\nw^A u^A_j(x^A) &= w^B u^B_j(x^B) = \\lambda_j\\\\\nw^A x_j^A &= w^B x_j^B, \\\\\n\\implies \\frac{x_j^A}{x_j^B} &= \\frac{w^A}{w^B}, \\quad j=1,2.\n\\end{aligned}\n\\]\nThis together with the binding feasibility constraints characterize the PEA for this economy:\n\\[\nx^A = w^A e, \\quad x^B = w^B e.\n\\]\nThus in a pure exchange economy the PEA is proportional to the social weight of the individual. If the social weights are equal, the aggregate endowments will be divided equally among the consumers. In general the results will be different if social weights are different or preferences are different among consumers.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#the-spp-in-a-production-economy",
+    "href": "contents/lecture_3.html#the-spp-in-a-production-economy",
+    "title": "Chapter 3. Equlibrium",
+    "section": "7.3 The SPP in a production economy",
+    "text": "7.3 The SPP in a production economy\nAccording to the FWT the CEA in the production economy also Pareto efficient. Let us show that the CEA is also a PEA, i.e., that the FWT is verified in this production economy. A PEA consists of a vector of consumption goods and factors of production \\((x_i)_{i\\in I}, (K_j, L_j)_{j=J}\\) that maximizes aggregate welfare subject to feasibility constraints.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#the-pea-in-a-production-economy",
+    "href": "contents/lecture_3.html#the-pea-in-a-production-economy",
+    "title": "Chapter 3. Equlibrium",
+    "section": "7.4 The PEA in a production economy",
+    "text": "7.4 The PEA in a production economy\nThe social planner’s problem for a production economy reads:\n\\[\n\\begin{aligned}\n&\\max_{(x^i)_{i\\in I}, (K_j, L_j)_{j\\in J}} \\sum_{i\\in I} w^i u^i(x^i) \\\\\n\\text{s.t. }&\\begin{cases}\n                \\sum_{i\\in I} x^i_j \\leq F(K_j, L_j) \\:\\forall j \\\\\n                \\sum_{j\\in J} K_j \\leq \\sum_i k^i \\equiv k \\\\\n                \\sum_{j\\in J} L_j \\leq \\sum_i l^i \\equiv l\n\\end{cases}\n\\end{aligned}\n\\tag{27}\\]\nwhere \\(w_i\\) are social welfare weights.\n\nRemark 2. Observe that the first constraint in the SPP is the feasibility constraint on each consumption good. The last two constraints are feasibility constraints on the factors of production.\n\nTo solve the SPP, we first set up the Lagrangian:\n\\[\n\\begin{aligned}\n\\mathcal{L} &= \\sum_{i\\in I} w^i u^i(x^i) \\\\\n&+ \\sum_{j\\in J} \\lambda_j\\left[F(K_j, L_j) - \\sum_{i\\in I}x^i_j\\right] \\\\\n&+ \\mu_K (k - \\sum_{j\\in J} K_j) \\\\\n&+ \\mu_L (l - \\sum_{j\\in J} L_j).\n\\end{aligned}\n\\tag{28}\\]\nThe FOCs yield:\n\\[\n\\begin{aligned}\n    \\frac{\\partial \\mathcal{L}}{\\partial x^i_j} &= 0 \\iff w^i u^i_j(x^i) = \\lambda_j, \\quad \\forall j\\in J, \\: i\\in I, \\\\\n    \\frac{\\partial \\mathcal{L}}{\\partial K_j} &= 0 \\iff \\lambda_j MPK_j = \\mu_K, \\\\\n    \\frac{\\partial \\mathcal{L}}{\\partial L_j} &= 0 \\iff \\lambda_j MPL_j = \\mu_L.\n\\end{aligned}\n\\]\nObserve that \\(\\lambda_j&gt;0\\) for all good \\(j\\) and \\(\\mu_K&gt;0\\), \\(\\mu_L&gt;0\\), implying that the feasibility constraints bind at a PEA. From the FOC w.r.t to the consumption good we obtain: \\[\nMRS^A_{1,2}(x^A) = MRS^B_{1,2}(x^B).\n\\tag{29}\\]\nFrom the FOC w.r.t to factors:\n\\[\n\\begin{aligned}\n    \\lambda_1 MPK_1 = \\lambda_2 MPK_2 \\iff \\frac{\\lambda_1}{\\lambda_2} &= MRT^K_{1,2} \\\\\n    \\lambda_1 MPL_1 = \\lambda_2 MPL_2 \\iff \\frac{\\lambda_1}{\\lambda_2} &= MRT^L_{1,2} \\\\\n    \\frac{MPK_1}{MPL_1} = \\frac{MPK_2}{MPL_2} \\iff MRTS^1_{K,L} &= MRTS^2_{K,L}.\n\\end{aligned}\n\\]\nThese conditions being satisfied by the CEA, implying that the CEA is also a PEA.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_3.html#footnotes",
+    "href": "contents/lecture_3.html#footnotes",
+    "title": "Chapter 3. Equlibrium",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nNote that we are given a short-run cost function, which has a fixed cost, but we would like to determine the market equilibrium in the long run.↩︎\nIn the case of a pure exchange economy, the aggregate supply of each good is just equal to its total endowment.↩︎",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 3"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html",
+    "href": "contents/lecture_5.html",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "",
+    "text": "This chapter contains a lot of definitions and concepts specific to game theory. In order to help quickly locate and link these concepts together, I have decided to put them all in Section 4. Whenever you encounter a new concept throughout the chapter, you will most likely find its definition there.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html#game-building-blocks-and-examples",
+    "href": "contents/lecture_5.html#game-building-blocks-and-examples",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "2.1 Game building blocks and examples",
+    "text": "2.1 Game building blocks and examples\nIn order to define a game, we typically need at least four elements:\n\nPlayers: who are playing the game (at least two)\nRules: what are the rules of the game, what moves are possible and what are prohibited\nOutcomes: what are the possible results of the games (score combinations leading to a win or a loss, scenario(s) of a draw, etc.)\nPayoffs: the players’ preferences over outcomes\n\nThe objective of each player in a game is to identify strategies that maximize potential payoffs, given what they know about the rules of the game, their opponents, the possible outcomes and their preferences. A strategy is a complete contingent plan telling a player what action to take in every possible situation of the game.\nLet us illustrate these elements via a couple of examples.\n\nExample 1 (Matching pennies)  \n\nPlayers: There are two players A and B\nRules: Each player puts down a coin, either heads or tails up\nOutcomes: Player A wins if the coins match (both heads or tails). Player B wins if the coins do not match.\n\n\n\nExample 2 (Tennis) Let us consider a tennis game in a single tennis tournament (there are doubles and mixed doubles, too). A tennis match typically consists of up to seven sets, each of which consists of several games. We will be considering a single tennis game.\n\nPlayers: two players of the same sex\nRules:\n\nScoring: A game is scored as 15, 30, 40 and game. If both players reach 40, it’s called “deuce.” To win from deuce, a player must win two consecutive points (advantage and game).\nService: One player serves in each game. The server must hit the ball diagonally into the opponent’s service box. A serve that touches the net but lands in the correct box is a “let” and is replayed. A serve is a fault if it lands outside the service box or if the server misses the ball. Two consecutive faults result in a double fault, giving the point to the opponent.\nRallies: After the serve, players rally by hitting the ball back and forth. The ball must be hit before it bounces twice on the player’s side.\nWinning Points: A point is won if the opponent fails to return the ball within the court boundaries, hits it into the net, or touches the net after hitting the ball before the ball lands on the other side of the court, etc.\n\nResults: A single winner by means of the scoring rule (no ties).",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html#assumption-of-common-knowledge-of-rationality",
+    "href": "contents/lecture_5.html#assumption-of-common-knowledge-of-rationality",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "2.2 Assumption of common knowledge of rationality",
+    "text": "2.2 Assumption of common knowledge of rationality\nIn all games studied, we assume that players are rational. Each player knows every element of the game, namely, the players involved, the strategy in each contingency and the resulting payoff in each situation. In addition, every player knows that the other player(s) know all of this, including the fact that this player knows that they know.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html#normal-form",
+    "href": "contents/lecture_5.html#normal-form",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "3.1 Normal form",
+    "text": "3.1 Normal form\nThe normal form is the representation of a game using a matrix whose columns and rows represent all possible outcomes. It is best used to represent games of simultaneous moves where order of play is not important.\n\n3.1.1 Pure strategy Nash equilibrium\nIn the examples that follow, the first number represents the payoff to the player whose strategies show up on each row of the matrix. The second number reprsents the payoff to the player whose strategies show up on each column.Let us try to determine the best responses and the Nash equilibrium of each game. The NE that consists of a strategies that each player chooses with certainty is called a pure strategy NE. We will see that not all games have a pure strategy NE but if we allow players to choose certain strategies probablistically (as is often the case in sports), then a NE generally exists. This type of NE is called a mixed strategy NE.\n\nExample 3  \n\n\n\n\n\n\n\n\n\n\nPlayer A\n\n\n\n\n\n\n\n\nHeads\n\n\nTails\n\n\n\n\nPlayer B\n\n\nHeads\n\n\n(-1,1)\n\n\n(1,-1)\n\n\n\n\nTails\n\n\n(1,-1)\n\n\n(-1,1)\n\n\n\n\n\nFigure 1: Normal form representation of the game of matching pennies. If pennies matched B pays A one dollar, otherwise A pays B one dollar.\n\n\n\n\n\nExample 4 Consider this example from CoreEcon which describes a strategic situation between two farmers who decide on which crop to grow. If both grow the same crop, they will flood the market with the same good and pushing down the price. The land of the person named Anil is equally suitable for both types of crops (cassava and rice). For the other person, Bala, the land is as good as that of Anil for growing rice, but less so for cassava. The outcome of this situation can be predicted using a simple game theory setupt.\n\n\n\n\n\n\n\n\n\n\nBala\n\n\n\n\n\n\n\n\nRice\n\n\nCassava\n\n\n\n\nAnil\n\n\nRice\n\n\n(4,4)\n\n\n(6,3)\n\n\n\n\nCassava\n\n\n(6,6)\n\n\n(5,2)\n\n\n\n\n\nFigure 2: An agricultural game\n\n\n\n\n\nExample 5 Consider a automobile market serviced by two firms, Ford and BMW. If both innovate (for example, introducing new EV models, incorporating AI, etc.), then they will share the market as before but earn lower profits due to the high R&D costs. If one innovates and the other does not, then the market share gained from the former will more than compensate for the high costs and it generates higher profits as a result. If both do not innovate, they continue to earn high profits.\n\n\n\n\n\n\n\n\n\n\nVueling\n\n\n\n\n\n\n\n\nInnovate\n\n\nDo not innovate\n\n\n\n\nEasyJet\n\n\nInnovate\n\n\n(5,5)\n\n\n(10,2)\n\n\n\n\nDo not innovate\n\n\n(2,10)\n\n\n(7,7)\n\n\n\n\n\nFigure 3: A prisoners’ dilemma game of innovation\n\n\n\n\n\nExample 6 Game theory is very much alive in dating. In the simplest scenario, imagine two individuals (the players) deciding how much effort to put into the relationship. If both slack off, they split quickly and move on with no damage done. If one is committed while the other is lukewarm, the one committed ends up paying a higher price and potentially feeling resentful after the split. If both are committed (exerting high efforts), the relationship blossoms and they live happily ever after.1\n\n\n\n\n\n\n\n\n\n\nLover A\n\n\n\n\n\n\n\n\nCommit\n\n\nSlack off\n\n\n\n\nLover B\n\n\nCommit\n\n\n(7,7)\n\n\n(-2,5)\n\n\n\n\nSlack off\n\n\n(5,-2)\n\n\n(0,0)\n\n\n\n\n\nFigure 4: A dating game with multiple Nash equilibria\n\n\n\n\nWhat are the differences in the outcomes of these games? Observe that the game of matching pennies in Example 3 does not have an equilibrium. There is always an incentive to deviate from a chosen strategy depending on the choice of the opponent. In Example 4, we have a unique Nash equilibrium that is also Pareto optimal.2 In Example 5, we have a unique Nash equilibrium which is not Pareto optimal: the pursuit of individual interest does not lead to a socially optimal outcome. This is an example of the famous Prisoners’ Dilemma game. In Example 6, we see a situation of non-uniqueness of equilibria.\n\n\n3.1.2 Mixed strategy Nash equilibrium\nLet us return to Example 3 to illustrate mixed strategy NE. Suppose that B chooses H with probability \\(p\\) and T with probability \\(1-p,\\) and A chooses H with probability \\(q\\) and T with probability \\(1-q.\\) The modified pennies matching game can be rerpresented as in Figure 5.\n\n\n\n\n\n\n\n\n\n\n\n\nPlayer A\n\n\n\n\n\n\n\n\n\n\n\\(q\\)\n\n\n\\(1-q\\)\n\n\n\n\n\n\n\n\n\n\nHeads\n\n\nTails\n\n\n\n\nPlayer B\n\n\n\\(p\\)\n\n\nHeads\n\n\n(-1,1)\n\n\n(1,-1)\n\n\n\n\n\\(1-p\\)\n\n\nTails\n\n\n(1,-1)\n\n\n(-1,1)\n\n\n\n\n\nFigure 5: A mixed strategy matching pennies game\n\n\n\nFor each player, one strategy is preferred to the other iff it generates a higher expected payoff. For A, the expected payoff from playing Heads is:\n\\[\n    \\mathbb{E}^A_H[X] = p \\times 1 + (1 - p) \\times (-1) = 2p - 1.\n\\]\nAnd from playing Tails is:\n\\[\n    \\mathbb{E}^A_T[X] = p \\times (-1) + (1 - p) \\times 1 = 1 - 2p.\n\\]\nHence A strictly prefers Heads to Tails if and only if\n\\[\n\\mathbb{E}^A_H[X] \\gt \\mathbb{E}^A_T[X] \\iff p &gt; \\frac{1}{2}.\n\\]\nHence the best response of \\(A\\) could be written as: \\[\nq(p) = \\begin{cases}\n    1 & p &gt; 0.5 \\\\\n    \\in [0,1] & p = 0.5 \\\\\n    0 & p &lt; 0.5.\n\\end{cases}\n\\tag{1}\\]\nLikewise for B:\n\\[\n\\begin{aligned}\n\\mathbb{E}^B_H[X] &\\gt \\mathbb{E}^B_T[X] \\\\\n1 - 2q &\\gt 2q - 1 \\\\\nq &&lt; \\frac{1}{2}\n\\end{aligned}\n\\]\nThe best response of \\(B\\) is thus:\n\\[\np(q) = \\begin{cases}\n    1 & q &lt; 0.5 \\\\\n    \\in [0,1] & q = 0.5 \\\\\n    0 & q &gt; 0.5\n\\end{cases}\n\\tag{2}\\]\nThe msNE is at the intersection of the two best response curves (red dot in Figure 6), which is when both probabilities are equal to one-half:\n\\[\n    \\mathrm{msNE}(q, p) = (0.5, 0.5).\n\\tag{3}\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 6: Best response functions and msNE in the pennies matching game\n\n\n\nIf A and B are complete strangers then it is safe to assume that both play each strategy with the same probability (i.e., completely random). In this case, each player randomizes and we have a mixed strategy Nash equilibrium (msNE). After a few rounds, they might know each other better and are able to update the values of \\(q\\) and \\(p\\) accordingly and the game might end up with a pure strategy NE. In highly competitive sports, sometimes many strong players lose to completely unknown ones, why might it be the case? One explanation is data availability. Matches of highly ranked players receive much wider media coverage. Their style of play, strengths and weaknesses are analyzed to excruciating details by experts, including the opponents and their coaches. Consequently, we have a player that is almost completely exposed while the other remains a wild card. The lack of information plays to the advantage of the relatively unknown player, typically causing difficulties to the opponent in the first few rallies or encounters. But if there is anything remarkable about top athletes, it is their ability to adapt, i.e., to update their knowledge about the opponent’s style and counterstrike effectively. The advantage due to initial ignorance wears out pretty rapidly if the unknown player does not have real strengths.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html#extensive-form",
+    "href": "contents/lecture_5.html#extensive-form",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "3.2 Extensive form",
+    "text": "3.2 Extensive form\nThe extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in Figure 8. In particular, the normal form representation provies two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant’s “In” is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as sequentially irrational because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of subgame-perfect equilibrium(Definition 9).\n\n\n\n\n\n\n\n\nflowchart LR\n   entrant{P1} --&gt; |In| incumbent{P2} \n   entrant -- Out --&gt; A(\"(0,10)\")\n   incumbent -- Accommodate --&gt; B(\"(5,5)\")\n   incumbent -- Price war --&gt; C(\"(-2,-2)\")\n\n   linkStyle 0 stroke:#111,stroke-width:4px,color:#000\n   linkStyle 2 stroke:#111,stroke-width:4px,color:#000\n\n\n\n\n\n\n\n\nFigure 7: An extensive form game with two players, P1 (entrant) and P2 (incumbent). The entrant moves first.\n\n\n\n\n\n\n\n\n\n\n\n\n\nPotential entrant\n\n\n\n\n\n\n\n\nIn\n\n\nOut\n\n\n\n\nIncumbent\n\n\nAccommodate\n\n\n(5,5)\n\n\n(10,0)\n\n\n\n\nPrice war\n\n\n(-2,-2)\n\n\n(10,0)\n\n\n\n\n\nFigure 8: Normal form representation of a sequential moves game",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html#backward-induction-and-spe",
+    "href": "contents/lecture_5.html#backward-induction-and-spe",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "3.3 Backward induction and SPE",
+    "text": "3.3 Backward induction and SPE\nIt is important to know how to identify and write an SPE. We solve for SPE using backward induction:\n\nStart for the farthest end of the tree, focus on the decision point(s) of the last mover (the smallest subgames)\nIdentify her BR and shade the branch associated with her BR (i.e., the NE associated with each of these subgames)\nConsider the second-to-last mover, identify her BR to the BR of the last mover, then shade this branch (another NE identified)\nRepeat the previous step until we reach the first mover at the root node (the largest subgame is the entire game itself)\n\nThen we need to express the SPE as a strategy profile, which specifies the strategy for each player for every possible decision node where that player could be called to move, even for nodes that are not reached in equilibrium.\n\nExample 7 Consider the following dynamic game with the first mover being Player 1 (P1). We would like to identify the SPE. For convenience I have put all the decision nodes in the diamond boxes.\n\n\n\n\n\nflowchart LR\n    %% upper branch\n    first{P1} -- L --&gt; secondL{P2} \n    secondL -- A --&gt; firstL{P1}\n    firstL -- V --&gt; out2(\"(1,6)\")\n    firstL -- W --&gt; out3(\"(4,5)\")\n    firstL -- X --&gt; out4(\"(5,2)\")\n    secondL -- B --&gt; out1(\"(7,1)\")\n    %% lower branch\n    first -- R --&gt; secondR{P2}\n    secondR -- C --&gt; out5(\"(2,7)\")\n    secondR -- D --&gt; out6(\"(3,4)\")\n    secondR -- E --&gt; firstR{P1}\n    firstR -- Y --&gt; out7(\"(6,8)\")\n    firstR -- Z --&gt; out8(\"(8,3)\")\n\n\n\n\n\n\nObserve that there are 5 subgames including the entire game itself. Let us use backward induction to solve for the NE in every subgame.\n\n\n\n\n\n\n\n\nflowchart LR\n    %% upper branch\n    first{P1} -- L --&gt; secondL{P2} \n\n    subgraph SG3\n        secondL -- A --&gt; firstL{P1}\n        subgraph SG1\n            firstL -- V --&gt; out2(\"(1,6)\")\n            firstL -- W --&gt; out3(\"(4,5)\")\n            firstL -- X --&gt; out4(\"(5,2)\")\n        end\n        secondL -- B --&gt; out1(\"(7,1)\")\n        %% lower branch\n    end\n    \n    first -- R --&gt; secondR{P2}\n    \n    subgraph SG4\n        secondR -- C --&gt; out5(\"(2,7)\")\n        secondR -- D --&gt; out6(\"(3,4)\")\n        secondR -- E --&gt; firstR{P1}\n        subgraph SG2\n            firstR -- Y --&gt; out7(\"(6,8)\")\n            firstR -- Z --&gt; out8(\"(8,3)\")\n        end\n    end\n\n    style SG1 stroke:#0072c7,stroke-width:2px\n    style SG2 stroke:#4fe1d6,stroke-width:2px\n    style SG3 stroke:#db63d6,stroke-width:2px\n\n\n\n\n\n\n\n\nFigure 9: Subgames\n\n\n\nWe now look for the NE in each subgame.\n\n\n\n\n\n\n\n\nflowchart LR\n    firstL{P1} -- V --&gt; out2(\"(1,6)\")\n    firstL -- W --&gt; out3(\"(4,5)\")\n    firstL -- X --&gt; out4(\"(5,2)\")\n    linkStyle 2 stroke:#111,stroke-width:4px,color:#000\n\n\n\n\n\n\n\n\nFigure 10: First subgame (SG1)\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    firstR{P1} -- Y --&gt; out7(\"(6,8)\")\n    firstR -- Z --&gt; out8(\"(8,3)\")\n    linkStyle 1 stroke:#111,stroke-width:4px,color:#000\n\n\n\n\n\n\n\n\nFigure 11: Second subgame (SG2)\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    secondL{P2} -- A --&gt; out4(\"(5,2)\")\n    secondL -- B --&gt; out1(\"(7,1)\")\n    linkStyle 0 stroke:#111,stroke-width:4px,color:#000\n\n\n\n\n\n\n\n\nFigure 12: Third subgame (SG3)\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    secondR{P2} -- C --&gt; out5(\"(2,7)\")\n    secondR -- D --&gt; out6(\"(3,4)\")\n    secondR -- E --&gt; out8(\"(8,3)\")\n    linkStyle 0 stroke:#111,stroke-width:4px,color:#000\n\n\n\n\n\n\n\n\nFigure 13: Fourth subgame (SG4)\n\n\n\n\n\n\n\n\n\n\n\nflowchart LR\n    first{P1} -- L --&gt; out4(\"(5,2)\") \n    first -- R --&gt; out5(\"(2,7)\")\n    linkStyle 0 stroke:#111,stroke-width:4px,color:#000\n\n\n\n\n\n\n\n\nFigure 14: Fifth subgame (root node)\n\n\n\nFinally putting it all together, we can write the SPE as: \\[\nSPE = \\{(L, X/Z), A/C\\}.\n\\tag{4}\\] Recall that we have to specify the strategy for each player for every possible decision node where that player could be called to move, even for nodes that are not reached in equilibrium. We list the strategy profile of every player, one by one, starting with the first mover.\n\n\n\n\n\nflowchart LR\n    %% upper branch\n    first{P1} -- L --&gt; secondL{P2} \n    secondL -- A --&gt; firstL{P1}\n    firstL -- V --&gt; out2(\"(1,6)\")\n    firstL -- W --&gt; out3(\"(4,5)\")\n    firstL -- X --&gt; out4(\"(5,2)\")\n    secondL -- B --&gt; out1(\"(7,1)\")\n    %% lower branch\n    first -- R --&gt; secondR{P2}\n    secondR -- C --&gt; out5(\"(2,7)\")\n    secondR -- D --&gt; out6(\"(3,4)\")\n    secondR -- E --&gt; firstR{P1}\n    firstR -- Y --&gt; out7(\"(6,8)\")\n    firstR -- Z --&gt; out8(\"(8,3)\")\n    linkStyle 0 stroke:#0072c7,stroke-width:4px,color:#000\n    linkStyle 4 stroke:#0072c7,stroke-width:4px,color:#000\n    linkStyle 7 stroke:#db63d6,stroke-width:4px,color:#000\n    linkStyle 11 stroke:#0072c7,stroke-width:4px,color:#000\n    linkStyle 1 stroke:#db63d6,stroke-width:4px,color:#000",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html#cournot-model",
+    "href": "contents/lecture_5.html#cournot-model",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "5.1 Cournot model",
+    "text": "5.1 Cournot model\nThe Cournot model is a simultaneous-moves game in which firms compete on quantity. Consider an industry with two firms (i.e., a douopoly) selling a homogeneous product. Each firm \\(i\\) independently and simultaneously determines output \\(q_i\\) to maximize profits, \\(i=\\{1, 2\\}.\\) They each face a linear total cost \\(C_i(q_i) = cq_i\\), \\(c&gt;0.\\) Linear inverse demand curve: \\(p(q_1, q_2) = a - b\\left(\\sum_{i=1}^N q_i\\right)\\) where \\(a, b&gt;0.\\) Notice that the production choice of each firm affects the market price of the good and consquently the bottom line of the other firm. This would not have been the case in a perfectly competitive market.\nEach firm \\(i\\) solves its profit maximization problem to determine the optimal production level: \\[\n\\begin{aligned}\n\\max_{q_i} \\pi_i &= R_i(q_i) - C_i(q_i) \\\\\n&= p(q_1, q_2)q_i - cq_i \\\\\n&= [a - b(q_1 + q_2)]q_i - cq_i\n\\end{aligned}\n\\tag{9}\\]\nThe FOC yields: \\[\n\\frac{\\partial \\pi_i}{\\partial q_i} = 0 \\iff a - 2bq_i - bq_j = c.\n\\tag{10}\\]\nFrom Equation 10 we can derive the best response (BR) function, which specifies the optimal output of each firm given the output choice of the other firm:\n\\[\nq_i = BR_i(q_j) = \\frac{a - c}{2b} - \\frac{q_j}{2}, \\quad i\\neq j.\n\\tag{11}\\]\nThe two best response functions specify the Nash equiblirium of the the game. \\[\n\\begin{cases}\nq_1 &=  \\frac{a - c}{2b} - \\frac{q_2}{2} \\\\\nq_2 &=  \\frac{a - c}{2b} - \\frac{q_1}{2}.\n\\end{cases}\n\\]\nSolving this system, we obtain the NE of the Cournot game: \\[\n(q_1^*, q_2^*) = \\left(\\frac{a-c}{3b}, \\frac{a-c}{3b}\\right).\n\\tag{12}\\]\nLet us try and visualize this outcome.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 15: Cournot competition on quantity in a duopoly\n\n\n\nFor completeness let us compute the equilibrium price of the duopoly, aggregate output and the profits earned by each firm.\n\nTotal output: \\[\n  Q^C = q_1 + q_2 = 2q^C = \\frac{2(a - c)}{3b}.\n   \\tag{13}\\]\nEqulibrium price via the market demand curve: \\[\n  p^C = a - bQ^C = \\frac{a + 2c}{3}.\n   \\tag{14}\\]\nIdentical individual profits equal to: \\[\n  \\pi^C = p^C q^C - cq^C = \\frac{(a - c)^2}{9b}.\n   \\tag{15}\\]",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html#stackelberg-model",
+    "href": "contents/lecture_5.html#stackelberg-model",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "5.2 Stackelberg model",
+    "text": "5.2 Stackelberg model\nConsider 2 firms with the same constant marginal cost \\(c\\) as in the Cournot case. They also compete on quantity, but sequentially. THe structure of the game is the following:\n\nFirst, firm 1 chooses \\(q_1\\)\nThen, having observed the choice of firm 1, firm 2 chooses \\(q_2\\)\n\nThe first mover advantage can be due to legal barriers. For example, if firm 1 invents a new drug, it typically has a patent that gives exclusive rights to produce and sell it during the lifetime of the patent (up to 20 years for certain drugs).\nWe solve this game by backward induction, starting from firm 2, the follower.\n\n5.2.1 PMP of the follower\nThe PMP of the follower (Firm 2): \\[\n\\max_{q_2} [a - b(q_1 + q_2)]q_2 - cq_2.\n\\]\nFOC w.r.t \\(q_2\\) yields the BR function for Firm 2: \\[\nq_2(q_1) \\equiv BR_2(q_1) = \\frac{a - c}{2b} - \\frac{q_1}{2}.\n\\tag{16}\\]\nObserve that Equation 16 coincides with Equation 11 since in both cases Firm 2 treats \\(q_1\\) as exogenous\n\n\n5.2.2 PMP of the leader\nFirm 1 chooses its own output to maximize profits: \\[\n\\max_{q_1} [a - b(q_1 + BR_2(q_1))]q_1 - cq_1.\n\\tag{17}\\]\nIn Equation 17, Firm 1 anticipates that Firm 2 will be maximizing her profits, i.e., settig \\(q_2 = BR_2(q_1)\\).\nThe FOC w.r.t \\(q_1\\) yields the BR function for Firm 1: \\[\n\\frac{a - c - 2bq_1}{2} = 0\n\\iff q_1^S = \\frac{a-c}{2b}.\n\\tag{18}\\]\nFirm 2’s output can be found using Equation 16: \\[\nq_2^S = \\frac{a - c}{4b} = \\frac{q_1^S}{2}.\n\\tag{19}\\]\n\n\n5.2.3 Stackelberg vs Cournot\nIn Cournot games, both firms produce the same output that is less than that of the Stackelberg’s leader but more than that of the Stackelberg’s follower: \\[\nq^S_{\\text{follower}} &lt; q^C &lt; q^S_{\\text{leader}}.\n\\]\nThe equilibrium price can be computed using the demand function: \\[\np^S = a - b(q^S_{\\text{follower}} + q^S_{\\text{leader}}) = \\frac{3a + c}{4},\n\\tag{20}\\] which is greater than the Cournot price \\(p^C=\\frac{a+2c}{3}\\) since \\(a&gt;c.\\)\nProfits: \\[\n\\pi_{\\text{leader}} = q^S_1(p^S - c) = \\frac{3(a-c)^2}{8b}.\n\\tag{21}\\]\n\\[\n\\pi_{\\text{follower}} = q^S_2(p^S - c) = \\frac{3(a-c)^2}{16b}.\n\\tag{22}\\]\nHence the leader earns higher profits than in the Cournot case thanks to the first mover’s advantage, but the follower earns lower profits.\nTo sum up:\n\\[\n\\begin{aligned}\n&p^S &gt; p^C, \\\\\n&q^S_{\\text{follower}} &lt; q^C &lt; q^S_{\\text{leader}}, \\\\\n&\\pi_{\\text{follower}} &lt; \\pi^C &lt; \\pi_{\\text{leader}}.\n\\end{aligned}\n\\]",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_5.html#footnotes",
+    "href": "contents/lecture_5.html#footnotes",
+    "title": "Chapter 5. Game theory and imperfect competition",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThis is not the only dating theory so please don’t get too carried away.↩︎\nAn allocation is called Pareto optimal if there exists no other feasible allocations that strictly improve the payoff of at least one individual without sacrificing the payoff of another.↩︎",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 5"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html",
+    "href": "contents/lecture_7.html",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "",
+    "text": "Life abounds with uncertainty, which can be viewed as danger or oppotunities. Pandemics are bad. Wars are bad. But if one has the guts to enter the market during the bear, she will be amply rewarded once it gets to the bull. If there were no uncertainty, there would be no bets. Many games and financial products would not have existed. Investment opportunities range from the high risk type, such as startups, cryptocurrencies, leveraged positions in equity trading to safer ones such as highly rated government bonds. We buy insurance to protect ourselves from the risk of sickness. We save more when we are uncertain about the future. Much of the human evolution has been marked with our species’ ingenuity in adapting to and thriving in uncertain environments. Making decisions under uncertainty is often hard, especially when the uncertainty is not quantifiable1. In this chapter, we will be mainly intererested in quantifiable uncertainty or risk, situations in which the decision-maker knows the underlying probability distribution of the random variable of interest (such as future earnings or losses due to sickness). Often times it is hard to make a choice based on pure calculation. Anyone who has ever invested knows that emotion plays no small role in our ability to succeed in a volatile environment.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#three-preferences-towards-risk",
+    "href": "contents/lecture_7.html#three-preferences-towards-risk",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "6.1 Three preferences towards risk",
+    "text": "6.1 Three preferences towards risk\nLet \\(X\\) be a positive-valued random variable that an individual receives. We say that she is risk-averse (or exhibits risk aversion) if:\n\\[\n\\mathbb{E}[u(X)] \\leq u(\\mathbb{E}[X]).\n\\tag{9}\\] \\[\n\\int u(x)dF(x) \\leq u\\left(\\int x dF(x)\\right).\n\\tag{10}\\]\nIf the inequality (9) or (10) reverts, then the individual is risk-loving. If the inequality sign becomes an equality, she is risk-neutral. Mathematically, risk aversion is captured by a concave Bernoulli utility function \\(u\\), risk loving by a convex and risk neutrality by a linear Bernoulli utility function respectively.\nIntuitively, someone who dislikes risk would prefer a sure gain equivalent to the mean of a random variable rather than playing the lottery over the outcomes of the random variable.\n\nExample 2 Consider a game in which one is proposed two options. In the first option, she can either win nothing or $10,000 with equal probabilities (by tossing a fair coin, for example). In the second, she can walk away with $5000 for sure. Which option will she choose? If she is (strictly) risk-averse, then she will (strictly) prefer the second. If risk-loving, she will prefer the first. If risk-neutral, she will be indifferent.\n\n\n\n\n\n\n\n\n\n\nflowchart TB\n    opt1[Option 1] -- 0.5 --&gt; $10000\n    opt1 -- 0.5 --&gt; $0\n\n\n\n\n\n\n\n\n\n\n\n\nflowchart TB\n    opt2[Option 2] -- 1 --&gt; $5000\n\n\n\n\n\n\n\n\n\n\nFigure 2: Choices between lotteries and risk preferences",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#certainty-equivalent-and-risk-premium",
+    "href": "contents/lecture_7.html#certainty-equivalent-and-risk-premium",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "6.2 Certainty equivalent and risk premium",
+    "text": "6.2 Certainty equivalent and risk premium\nBeing strictly risk averse implies that the individual strictly prefers a sure gain to a lottery of the same mean. By continuity, this implies there exists a smaller sure gain that makes the individual indifferent between this smaller sure gain and the lottery. This amount is called the certainty equivalent of the lottery.\n\nDefinition 5 (Certainty equivalent) Let \\(X\\) be a positive-valued continuous random variable with cdf \\(F:\\mathbb{R}_+\\to [0,1].\\) Consider a decision-maker whose risk preferences is represented by continuous, strictly increasing and bounded utility function \\(u:\\mathbb{R}_+\\to\\mathbb{R}.\\) The certainty equivalent of \\(F\\) for this decision-maker is: \\[\n\\begin{aligned}\nc(u, F) &= u^{-1}\\left(U(F)\\right) \\\\\n&=u^{-1}\\left(\\int u(x) dF(x)\\right).\n\\end{aligned}\n\\]\n\nNote that the CE is monetary amount. Clearly the CE is smaller/equal/greater than the mean of the monetary random variable if the decision-maker is risk-averse/neutral/loving. The difference between the CE and the mean of the random monetary prize is called the risk premium, which is positive if and only if the decision-maker is risk-averse.\n\nDefinition 6 (Risk premium) The risk premium is the maxmium amount that a decision maker is willing to pay eliminate risk, i.e., to be indifferent between receving the sure gain equal to the mean prize and the lottery. Mathematically, \\[\n\\begin{aligned}\nRP(u, F) &= EV - c(u, F) \\\\\n&= \\int x dF(x) - c(F, u) \\\\\n&= \\int x dF(x) - u^{-1}\\left(\\int u(x) dF(x)\\right).\n\\end{aligned}\n\\tag{11}\\]\n\nSometimes we denote the risk premium by \\(\\pi.\\) Let us illustrate these two important concepts graphically.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 3: Certainty equivalent and risk premium",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#measure-of-risk-aversion",
+    "href": "contents/lecture_7.html#measure-of-risk-aversion",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "6.3 Measure of risk aversion",
+    "text": "6.3 Measure of risk aversion\nThere are two common measures of risk aversion: the (Arrow-Pratt) coefficient of absolute risk aversion and coefficient of relative risk aversion.\n\nDefinition 7 (Absolute and relative risk aversion) The Arrow-Pratt coefficient of absolute risk aversion for a decision maker with Bernoulli utility function \\(u:\\mathbb{R}_+\\to\\mathbb{R}\\) is: \\[\nA(x) = -\\frac{u''(x)}{u'(x)}.\n\\tag{12}\\] The coefficient of relative risk aversion for the same decision-maker is: \\[\nR(x) = - \\frac{u''(x)x}{u'(x)}.\n\\tag{13}\\]\n\nWhy don’t we just use the convexity of \\(u,\\) namely the second derivative of \\(u?\\) Because this measure has an undesirable property: it is not invariant to a positive linear transformation of \\(u.\\)\n\nExample 3 (CARA utility) The following utility satisfies constant absolute risk aversion \\[\nu(x) = -e^{-ax},\n\\tag{14}\\] where \\(a&gt;0\\) is the coefficient of absolute risk aversion.\n\n\nExample 4 (CRRA utility) The following utility satisfies constant relative risk aversion \\[\nu(x) = \\begin{cases}\n    \\frac{x^{1-\\sigma}-1}{1-\\sigma}, & \\sigma \\neq 1 \\\\\n    \\ln (x), & \\sigma = 1.\n\\end{cases}\n\\tag{15}\\] The coefficient of constasnt relative risk aversion is \\(R(x)=\\sigma.\\) Note that the vNM utility function is homothetic if and only if the Bernoulli utility function is satisfies CRRA.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 4: CARA utility function and increasing absolute risk aversion",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#first-order-stochastic-dominance-fosd",
+    "href": "contents/lecture_7.html#first-order-stochastic-dominance-fosd",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "7.1 First order stochastic dominance (FOSD)",
+    "text": "7.1 First order stochastic dominance (FOSD)\n\nDefinition 8 (FOSD) Lottery \\(F\\) is said to first order stochastically dominate (FOSD) lottery \\(G\\) if for all payoff \\(x\\): \\[\nF(x) \\leq G(x).\n\\]\n\nIntuitively, the stochastically dominant lottery concentrates more probability weight on higher payoff values. Graphically, \\(F\\) FOSD \\(G\\) if \\(F\\) is below \\(G\\).\n\nExample 5 Suppose \\(X\\sim U(0,1)\\) and \\(Y\\sim U(0,2).\\) Denote the cdf of \\(X\\) by \\(F_X\\) and the cdf of \\(Y\\) by \\(F_Y.\\) Then \\(F_Y\\) FOSD \\(F_X.\\) Indeed, the cdf of a \\(U(a,b)\\) random variable is given by: \\[\nF(x) = \\begin{cases}\n    0 & x &lt; a \\\\\n    \\frac{x - a}{b - a} & x \\in [a, b] \\\\\n    1 & x &gt; b.\n\\end{cases}\n\\tag{16}\\] Hence \\[\nF_X(x) = \\begin{cases}\n    0 & x &lt; 0 \\\\\n    x & x \\in [0, 1] \\\\\n    1 & x &gt; 1.\n\\end{cases}\n\\] and \\[\nF_Y(x) = \\begin{cases}\n    0 & x &lt; 0 \\\\\n    \\frac{x}{2} & x \\in [0, 2] \\\\\n    1 & x &gt; 2.\n\\end{cases}\n\\]\nClearly \\(F_Y(x) \\leq F_X(x)\\) for all \\(x,\\) implying that \\(F_Y\\) FOSD \\(F_X.\\)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure 5: FOSD of \\(U(0,2)\\) over \\(U(0,1)\\)",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#second-order-stochastic-dominance-sosd",
+    "href": "contents/lecture_7.html#second-order-stochastic-dominance-sosd",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "7.2 Second order stochastic dominance (SOSD)",
+    "text": "7.2 Second order stochastic dominance (SOSD)\n\nDefinition 9 (SOSD) Lottery \\(F\\) is said to second order stochastically dominate lottery \\(G,\\) denoted \\(F\\) SOSD \\(G,\\) if they have the same mean and for every nondecreasing concave utility function \\(u:\\mathbb{R}\\to\\mathbb{R},\\) the expected utility under \\(F\\) is greater than that under \\(G.\\) Mathematically:\n\\[\n\\begin{aligned}\n\\mathbb{E}_F[X] &= \\mathbb{E}_G[X], \\\\\n\\mathbb{E}_F [u(X)] &\\geq \\mathbb{E}_G[u(X)].\n\\end{aligned}\n\\] or equivalently: \\[\n\\begin{aligned}\n\\int x dF(x) &= \\int x dG(x), \\\\\n\\int u(x) dF(x) &\\geq \\int u(x) dG(x).\n\\end{aligned}\n\\]\n\n\nRemark 2. Note that the inequality condition in Definition 9 can be shown to be equivalent to: \\[\n\\int_a^x [G(t) - F(t)]dt \\geq 0,\\quad x \\in [a,b].\n\\tag{17}\\]\n\n\nExample 6 (Mean-preserving spread) Consider again two random payoffs \\(X\\) and \\(Y\\) where \\(X\\sim U(a,b)\\) and \\(Y\\sim U(a-\\epsilon,b+\\epsilon),\\) where \\(b&gt;a&gt;0\\) and \\(\\epsilon &gt;0.\\) Observe that both \\(X\\) and \\(Y\\) have the same mean equal to \\((b-a)/2\\) but the distribution of \\(Y\\) is more spread out about the mean compared to that of \\(X.\\) We say that the distribution of \\(Y\\) is obtained by a mean-preserving spread of the distribution of \\(X,\\) hence is riskier. Let us show that \\(F_X\\) SOSD \\(F_Y.\\) Denote \\(f_X\\) and \\(f_Y\\) the pdfs of \\(X\\) and \\(Y,\\) respectively. Note that: \\[\n\\begin{aligned}\nf_X(x) &= \\frac{1}{b-a}\\mathbb{1}_{x\\in[a,b]}, \\\\\nf_Y(x) &= \\frac{1}{b-a+2\\epsilon}\\mathbb{1}_{x\\in[a-\\epsilon,b+\\epsilon]},\n\\end{aligned}\n\\] where \\(\\mathbb{1}_{x\\in[c,d]}\\) is an indicator function taking value of one if \\(x\\in[c,d]\\) and zero otherwise. It is easy to check that the cdfs of \\(X\\) and \\(Y\\) can be written as follows: \\[\nF_X(x) = \\begin{cases}\n    0 & x &lt; a \\\\\n    \\frac{x-a}{b-a} & x \\in [a, b] \\\\\n    1 & x &gt; b.\n\\end{cases}\n\\] and \\[\nF_Y(x) = \\begin{cases}\n    0 & x &lt; a-\\epsilon \\\\\n    \\frac{x-a+\\epsilon}{b-a+2\\epsilon} & x \\in [a-\\epsilon,b+\\epsilon] \\\\\n    1 & x &gt; b+\\epsilon.\n\\end{cases}\n\\] We will be proving SOSD using (17). In particular, we only need to verify this condition for \\(x\\in[a,b],\\) namely: \\[\n\\int_{a}^x [F_Y(t) - F_X(t)] dt \\geq 0,\\quad \\forall x\\in[a,b].\n\\] Indeed: \\[\n\\begin{aligned}\nF_Y(t) - F_X(t) &= \\frac{x-a-\\epsilon}{b-a+2\\epsilon} - \\frac{x-a}{b-a} \\\\\n&=\\frac{\\epsilon (a+b-2t)}{(b-a+2\\epsilon)(b-a)} \\\\\n\\implies \\int_{a}^x [F_Y(t) - F_X(t)] dt &= \\frac{\\epsilon}{(b-a+2\\epsilon)(b-a)}\\left[(a+b)x - x^2\\right]_a^x \\\\\n&= \\frac{\\epsilon}{(b-a+2\\epsilon)(b-a)}(x-a)(b-x) \\\\\n&\\geq 0,\n\\end{aligned}\n\\] where the last inequality holds strictly for \\(x\\in(a,b).\\)",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#other-measures-of-stochastic-dominance",
+    "href": "contents/lecture_7.html#other-measures-of-stochastic-dominance",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "7.3 Other measures of stochastic dominance",
+    "text": "7.3 Other measures of stochastic dominance\nLet \\(X\\) be a random variable (such as monetary payoffs). Let \\(F\\) and \\(G\\) are two cdfs over the support of \\(X\\). Suppose also that the pdf associated with \\(F\\) and \\(G\\) exist and are denoted by \\(f\\) and \\(g,\\) respectively.\n\n7.3.1 Hazard rate dominance (HRD)\nThe hazard rate of a lottery \\(F\\) is given by:\n\\[\nHR_F(x) = \\frac{f(x)}{1 - F(x)}.\n\\tag{18}\\]\nIntuitively, the hazard rate is the conditional density of \\(X\\) given the probability of the payoff exceeding \\(x.\\)\nWe say that \\(F\\) dominates \\(G\\) in terms of the hazard rate if:\n\\[\nHR_F(x) \\leq HR_G(x), \\quad \\forall x.\n\\tag{19}\\]\n\nExercise 1 Show that HRD implies FOSD.\n\n\n\n7.3.2 Reverse hazard rate dominance (RHRD)\nThe reverse hazard rate of a lottery \\(F\\) is given by:\n\\[\nRHR_F(x) = \\frac{f(x)}{F(x)}.\n\\tag{20}\\]\nIntuitively, the reverse hazard rate is the conditional density of \\(X\\) given the probability of the payoff being less than \\(x.\\)\nWe say that \\(F\\) dominates \\(G\\) in terms of the reverse hazard rate if:\n\\[\nHR_F(x) \\geq HR_G(x), \\quad \\forall x.\n\\tag{21}\\]\n\nExercise 2 Show that RHRD implies FOSD.\n\n\n\n7.3.3 Likelihood ration dominance (LRD)\nWe say that \\(F\\) dominates \\(G\\) in terms of the likelihood ratio if:\n\\[\n\\frac{f(x)}{g(x)} \\leq \\frac{f(y)}{g(y)}, \\quad \\forall x &lt; y.\n\\tag{22}\\]\n\nExercise 3 Show that LRD implies HRD.\n\nHence LRD is a very strong notion of stochastic dominance, it implies HRD which in turn implies FOSD.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#allaiss-paradox",
+    "href": "contents/lecture_7.html#allaiss-paradox",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "8.1 Allais’s paradox",
+    "text": "8.1 Allais’s paradox\nThe Allais’s paradox illustrates the violation of the independence axiom (IA). Consider the set of prizes \\(C=\\{\\$2.5M, \\$0.5M, 0\\}\\) and two lotteries over \\(C:\\) \\[\nL_1 = (0, 1, 0), \\quad L_1'=\\left(\\frac{10}{100}, \\frac{89}{100}, \\frac{1}{100}\\right).\n\\tag{23}\\]\nMost respondents in controlled experiments will choose \\(L_1,\\) which gives a sure prize of 0.5M: \\[\nL_1 \\succ L_1'\\iff u_{0.5} &gt; \\frac{10}{100}u_{2.5} + \\frac{89}{100}u_{0.5} + \\frac{1}{100}u_{0}.\n\\tag{24}\\]\nNow consider the same set of outcomes but two other lotteries: \\[\nL_2=\\left(0, \\frac{11}{100}, \\frac{89}{100}\\right), \\quad\nL_2'=\\left(\\frac{10}{100}, 0, \\frac{90}{100}\\right).\n\\tag{25}\\]\nMost people strictly prefer \\(L_2'\\) over \\(L_2.\\) By the IA if we add \\(\\frac{89}{100}u_0 - \\frac{89}{100}u_{0.5}\\) to both sides of Equation 24 we should preserve the direction of the inequality, this yields: \\[\n\\frac{11}{100}u_{0.5} + \\frac{89}{100}u_{0} &gt; \\frac{10}{100}u_{5} + \\frac{90}{100}u_{0}.\n\\]\nBut a strict preference of \\(L_2'\\) over \\(L_2\\) implies: \\[\\frac{10}{100}u_{5} + \\frac{90}{100}u_{0} &gt; \\frac{11}{100}u_{0.5} + \\frac{89}{100}u_{0},\n\\] a contradiction.\nOne explanation for this paradox is the unrealistic values of probabilities presented, which are close to one or zero and hence are rarely encountered in practice. Another justification comes from regret theory, according to which individuals do not wish to regret a sure win.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#ellsbergs-paradox-and-ambiguity-aversion",
+    "href": "contents/lecture_7.html#ellsbergs-paradox-and-ambiguity-aversion",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "8.2 Ellsberg’s paradox and ambiguity aversion",
+    "text": "8.2 Ellsberg’s paradox and ambiguity aversion\nIn real life situations, we often have to form some probabilistic judgement while making a decision. In tossing a fair coin, we know that the probability of obtaining either results is one half. But in predicting the probability of a presidential candidate winning, we often need to form some subjective evaluation. One nice thing about subjective probabilities is that they can evolve with new information, and the Bayesian school of thoughts provides us with a natural framework to update our beliefs with new information. The space is too limited here to present the theory of subjective probability and its version of expected utility, but we shall attempt to get a glimpse at it by presenting one of the most (if not the most) famous thought experiments that refreshed and ignited research interest in this domain.\nThere are several versions of this paradox. One of such is the following. In this experiment, Ellsberg presents the subjects with an urn containing 90 balls, 30 of which are known to be red, the remaining 60 balls are black or yellow in unknown proportion. The experiment consists of two parts:\n\nA ball is randomly drawn from the urn. Subjects are asked to bet on the color of the ball, choosing between on red and black. The ball is then returned to the urn.\nA ball is drawn randomly from the same urn. Subjects are asked to choose between two choices again, but now between red or yellow and black or yellow.\n\nSuppose that betting correctly would result in $1000 prize. How would you make your choice in the first part, and in the second part of the experiment?\nIn the first part of the experiment, most subjects prefer betting on red. In the second part, most prefer betting on black or yellow. This is paradoxical because choosing red in the first experiment implies that their subjective probability of the ball being black, \\(P(B)\\) is less than \\(1/3,\\) the objectively (known) probability of the ball being red. This implies that their subjective probability of the ball being yellow, \\(P(Y),\\) is greater than \\(1/3.\\) On the other hand the probability of the ball being black or yellow is \\(P(B\\cup Y)=2/3,\\) whereas \\(P(R\\cup Y)=P(R)+P(Y)=1/3+P(Y).\\) Betting on black or yellow in the second part would imply \\(P(Y)&lt;1/3,\\) contradicting the subjective evaluation of the same individual in the first part. One explanation for this behavior is ambiguity aversion, which leads individuals to prefer situations with known odds.\nThe literature on ambiguity aversion is extensive and growing. Seminal works include the maximin expected utility model (MEU) of Gilboa and Smeidler (1989), the smooth ambiguity aversion model of Klibanoff et al. (2005,2009), to name just a few.",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "contents/lecture_7.html#footnotes",
+    "href": "contents/lecture_7.html#footnotes",
+    "title": "Chapter 7. Decision making under uncertainty",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nA situation known as ambiguity or Knightian uncertainty. Under ambiguity, unlike under risk, the decision-maker does not know the probability law underlying the random variable of interest. Sometimes in the vernacular, risk is referred to as the known unknown and ambiguity as the unknown unknown. Even though they are both uncertainty, ambiguity has been documented to result in higher cognitive load than risk because while risk is processed by the rational powerhouse of our brain, the prefrontal cortex, ambiguity tends to trigger fear and anxiety which are associated with the amygdala in our brain.↩︎\nBoundedness is needed to rule out the St.Petersburg paradox.↩︎\nObserve that this utility function is increasing only for \\(x \\geq -2\\beta/\\gamma.\\)↩︎",
+    "crumbs": [
+      "Home",
+      "Lectures",
+      "Chapter 7"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course plan",
+    "section": "",
+    "text": "In this page you will find a tentative outline of the course. The last meeting will be dedicated to a revision of the topics covered, exam preparation and Q&As.\n\n\n\n\n\n\n\n\n\nLecture\nTopics\nReferences\n\n\n\n\n1\nConsumers and demand\n\nProperties of the preference relation\nUtility representation\nConsumer choice and demand function\n\nChapter 1 (AF Adv)\n\n\n2\nConsumers and demand (cont)\n\nProperties of utility functions\nUtility maximization, Walrasian demand and properties\n\nChapter 1 (AF Adv)\n\n\n3\nFirms and supply\n\nFirms and production function\nExpenditure minimization problem and cost function\n\nChapter 7-8 (AF Int)\n\n\n4\nCompetitive markets and general equilibrium\n\nProfit maximization problem\nShort-run and long-run supply and partial equilibrium\n\nChapter 9 (AF Int) or Chapter 24 (Varian)\n\n\n5\nCompetitive markets and general equilibrium (cont)\n\nGeneral equilibrium in a pure exchange economy\nWelfare theorems\n\nChapter 9 (AF Int) or Chapter 24 (Varian)\n\n\n6\nMonopoly\n\nMonopoly and profit maximization\nLerner index and IEPR\nWelfare analysis and public policy\n\nChapter 7 (AF Adv)\n\n\n7\nGame theory primer and applications in imperfect competition\n\nDefinition, solution concepts and representation\nCommon simultaneous and sequential games\n\nChapter 12-14 (AF Int)\n\n\n8\nExerternalities and public goods\n\nImplications on the efficiency of competitive equilibria\nCommon policy remedies\n\nChapter 17 (AF Int)\n\n\n9\nChoice under uncertainty\n\nLotteries and preferences over lotteries\nExpected utility theory\nApplications\n\nChapter 5 (AF Adv)\n\n\n10\nRevision",
+    "crumbs": [
+      "Home",
+      "Course information",
+      "Schedule"
     ]
   }
 ]

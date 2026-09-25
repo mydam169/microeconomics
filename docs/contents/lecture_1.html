@@ -449,6 +449,7 @@ window.Quarto = {
   <li><a href="#necessary-conditions" id="toc-necessary-conditions" class="nav-link" data-scroll-target="#necessary-conditions"><span class="header-section-number">2.3.1</span> Necessary conditions</a></li>
   <li><a href="#the-shadow-price" id="toc-the-shadow-price" class="nav-link" data-scroll-target="#the-shadow-price"><span class="header-section-number">2.3.2</span> The shadow price</a></li>
   <li><a href="#sufficient-conditions" id="toc-sufficient-conditions" class="nav-link" data-scroll-target="#sufficient-conditions"><span class="header-section-number">2.3.3</span> Sufficient conditions</a></li>
+  <li><a href="#example-cobb-douglas-utility-function-with-availability-constraints" id="toc-example-cobb-douglas-utility-function-with-availability-constraints" class="nav-link" data-scroll-target="#example-cobb-douglas-utility-function-with-availability-constraints"><span class="header-section-number">2.3.4</span> Example: Cobb-Douglas utility function with availability constraints</a></li>
   </ul></li>
   <li><a href="#comparative-statics" id="toc-comparative-statics" class="nav-link" data-scroll-target="#comparative-statics"><span class="header-section-number">2.4</span> Comparative statics</a></li>
   </ul></li>
@@ -489,7 +490,7 @@ window.Quarto = {
 </header>
 
 
-<div id="2c775081" class="cell" data-execution_count="1">
+<div id="899eec43" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>The autoreload extension is already loaded. To reload it, use:
   %reload_ext autoreload</code></pre>
@@ -792,7 +793,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 <p>It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.</p>
 <p>The converse is not true. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
-<div id="bec32867" class="cell" data-lab="fig-concaveU" data-execution_count="11">
+<div id="081c1dfc" class="cell" data-lab="fig-concaveU" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -802,7 +803,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </div>
-<div id="b016f74f" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
+<div id="a12a463a" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1029,10 +1030,9 @@ Proof
 &amp;= \lambda^*.
 \end{aligned}
 \]</span></p>
-<p>Here we have used the fact that:</p>
-<p><span class="math display">\[
-\sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} = 1,
-\]</span> which comes directly from the binding budget constraint.</p>
+<p>The second line comes from the first-order conditions <a href="#eq-nec_cond_UMP" class="quarto-xref">Equation&nbsp;14</a>. And the third line comes from the fact the budget constraint binds at the optimum, which implies: <span class="math display">\[
+\sum_{i=1}^L p_i \frac{\partial x_i(w,p)}{\partial w} = 1.
+\]</span></p>
 </details>
 </section>
 <section id="sufficient-conditions" class="level3" data-number="2.3.3">
@@ -1056,6 +1056,18 @@ Proof
 </ul></li>
 </ol></li>
 </ul>
+</section>
+<section id="example-cobb-douglas-utility-function-with-availability-constraints" class="level3" data-number="2.3.4">
+<h3 data-number="2.3.4" class="anchored" data-anchor-id="example-cobb-douglas-utility-function-with-availability-constraints"><span class="header-section-number">2.3.4</span> Example: Cobb-Douglas utility function with availability constraints</h3>
+<iframe id="kt-frame" src="interactives/kuhn-tucker-utility.html" style="width:100%; border:none;" scrolling="no">
+</iframe>
+<script>
+  const ktFrame = document.getElementById('kt-frame');
+  function resizeKtFrame(){ try { ktFrame.style.height = ktFrame.contentWindow.document.body.scrollHeight + 40 + 'px'; } catch(e){} }
+  ktFrame.addEventListener('load', resizeKtFrame);
+  window.addEventListener('resize', resizeKtFrame);
+  setTimeout(resizeKtFrame, 1200);
+</script>
 </section>
 </section>
 <section id="comparative-statics" class="level2" data-number="2.4">
