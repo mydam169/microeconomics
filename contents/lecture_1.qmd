@@ -283,10 +283,10 @@ mm.plot_convex_UCS()
 Convexity implies diminishing marginal rates of substitution, the term on the RHS of @eq-total-diff-u (in absolute value):
 
 $$
-MRS_{x, y} \equiv \frac{u_x}{u_y} = -\frac{dy}{dx}.
+MRS_{y, x} \equiv \frac{u_x}{u_y} = -\frac{dy}{dx}.
 $$ {#eq-MRS}
 
-The MRS captures our willingness to exchange one good for an additional unit of another. In particular, $MRS_{x,y}$ captures the amount of good $y$ the individual is willing to give up for an additional unit of good $x$ in order to maintain the same level of utility. The intuition behind a decreasing MRS is that as one good gets abundant, we are willing to sacrifice less of the other good for an additional unit of the abundant good. This is due to the preference for variety captured by convexity.
+The MRS captures our willingness to exchange one good for an additional unit of another. In particular, $MRS_{y,x}$ captures the amount of good $y$ the individual is willing to give up for an additional unit of good $x$ in order to maintain the same level of utility. The intuition behind a decreasing MRS is that as one good gets abundant, we are willing to sacrifice less of the other good for an additional unit of the abundant good. This is due to the preference for variety captured by convexity.
 
 ```{python}
 #|label: fig-MRS
