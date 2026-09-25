@@ -1,4 +1,9 @@
 /.quarto/
 .Rproj.user
+_site/
+_environment
+
+.RData
+.Rhistory
 
 **/*.quarto_ipynb
