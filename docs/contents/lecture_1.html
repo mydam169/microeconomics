@@ -490,7 +490,7 @@ window.Quarto = {
 </header>
 
 
-<div id="899eec43" class="cell" data-execution_count="1">
+<div id="64cbd4c8" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>The autoreload extension is already loaded. To reload it, use:
   %reload_ext autoreload</code></pre>
@@ -793,7 +793,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 <p>It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.</p>
 <p>The converse is not true. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
-<div id="081c1dfc" class="cell" data-lab="fig-concaveU" data-execution_count="11">
+<div id="9d00112d" class="cell" data-lab="fig-concaveU" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -803,7 +803,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </div>
-<div id="a12a463a" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
+<div id="df161064" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1016,9 +1016,10 @@ MRS_{i,j}(x^*) &amp;= \frac{p_i}{p_j} \\
 <li><p><span class="math inline">\(\lambda^*\)</span> is often interpreted as the shadow price: the increase in the maximized objective function (indirect utility in this context) as the constraint is relaxed by one unit</p></li>
 <li><p>In other words, it is the shadow price on the constraint (on <span class="math inline">\(w\)</span>)</p></li>
 <li><p>Mathematically: <span class="math display">\[
-\lambda^* = \frac{\partial u(x^*(p,w))}{\partial w}.
+\lambda^* = \frac{\partial u(x^*(p,w))}{\partial w} \equiv \frac{\partial v}{\partial w},
 \]</span></p></li>
 </ul>
+<p>where <span class="math inline">\(v(p,w) = u(x^*(p,w))\)</span> is called the indirect utility function.</p>
 <details>
 <summary>
 Proof
@@ -1059,6 +1060,7 @@ Proof
 </section>
 <section id="example-cobb-douglas-utility-function-with-availability-constraints" class="level3" data-number="2.3.4">
 <h3 data-number="2.3.4" class="anchored" data-anchor-id="example-cobb-douglas-utility-function-with-availability-constraints"><span class="header-section-number">2.3.4</span> Example: Cobb-Douglas utility function with availability constraints</h3>
+<p>Let us consider the Cobb-Douglas utility function <span class="math inline">\(u(x_1, x_2) = x_1^{\alpha}x_2^{1-\alpha}\)</span> with <span class="math inline">\(\alpha\in(0,1)\)</span>. The consumer faces the budget constraint <span class="math inline">\(p_1x_1 + p_2x_2 \leq w\)</span> (Case 1) and an availability constraint on one of the goods <span class="math inline">\(x_1 \leq \bar{x}_1\)</span> or <span class="math inline">\(x_2 \leq \bar{x}_2\)</span> (Case 2). Play around with the interactive below to see how the optimal bundle changes as we vary the parameters of the problem.</p>
 <iframe id="kt-frame" src="interactives/kuhn-tucker-utility.html" style="width:100%; border:none;" scrolling="no">
 </iframe>
 <script>

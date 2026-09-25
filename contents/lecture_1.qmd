@@ -201,6 +201,8 @@ If a preference relation $\succeq$ is rational (complete and transitive) and con
 
 A utility function $u: X \to \mathbb{R}$ is said to **represent** a preference relation $\succeq$ over $X$ if for all $A, B \in X$, it holds $A \succeq B \iff u(A) \geq u(B)$. In other words, ranking bundles is equivalent to ranking utilities assigned to them.
 
+**Very important**: A utility function is not unique. If $u$ represents $\succeq$, then for any strictly increasing function $f$, the function $f \circ u$ also represents $\succeq$. This is because if $u(A) \geq u(B)$, then $f(u(A)) \geq f(u(B))$ since $f$ is strictly increasing.
+
 Let us now look at some common properties of a utility function. Ideally, these properties should correspond to those desired of a preference relation.
 
 ### Ordinality
@@ -311,9 +313,9 @@ An alternative definition of quasiconcavity is the following.
 A utility function $u$ defined on a convex set $X$ is quasiconcave if for all $x, y \in X$: $$ u(\alpha x + (1 - \alpha) y) \geq \min\{u(x), u(y)\}. $$ It is *strictly* quasiconcave if: $$ u(\alpha x + (1 - \alpha) y) > \min\{u(x), u(y)\}. $$
 :::
 
-It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.
+Concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a strictly increasing transformation, which makes it a desirable property of utility functions since representation is not unique. To check quasiconcavity, it is often easier to check the quasiconcavity of its transformation. If a strictly increasing transformation of a utility function is concave, then the orginal utility function is quasiconcave (not necessarily concave), why?
 
-The converse is not true. For example, consider the Cobb-Douglas utility function $u=x^a y^b$, where $a,b>0$. Suppose $a=b=1/4$, then $u$ is strictly concave, hence is also quasiconcave. For $a=b=3/2$, the utility function is quasiconcave but not concave.
+Quasiconcavity does not imply concavity. For example, consider the Cobb-Douglas utility function $u=x^a y^b$, where $a,b>0$. Suppose $a=b=1/4$, then $u$ is strictly concave, hence is also quasiconcave. For $a=b=3/2$, the utility function is quasiconcave but not concave.
 
 ```{python}
 
@@ -524,7 +526,6 @@ If the utility function is continuous and preferences satisfy LNS (thin ICs) ove
     -   Example: we receive a 10% raise but the cost of living also increases by 10%
     -   Formally, this is because the budget set is unchanged; the UMP being the same, so is its solution
 2.  *Law of Walras* (LoW): $px = w$ for all $x=x(p,w)$
-    -   All income is optimally spent on consumption (no excess demand)
     -   This follows from LNS: Any bundle in the interior of the budget set is not optimal since there exists another bundle strictly better in a sufficiently small neighborhood of this bundle
 3.  *Convexity*: If preferences are convex, then $x(p,w)$ defines a convex set. If moreover preferences are strictly convex, then $x(p,w)$ contains a singleton
 
@@ -558,7 +559,7 @@ To eliminate the multiplier, we can form the ratio:
 $$ 
 \begin{aligned}
 \frac{u_i(x^*)}{u_j(x^*)} &= \frac{p_i}{p_j} \\
-MRS_{i,j}(x^*) &= \frac{p_i}{p_j} \\
+MRS_{j,i}(x^*) &= \frac{p_i}{p_j} \\
 \implies \frac{u_i(x^*)}{p_i} &= \frac{u_j(x^*)}{p_j} = \lambda^*.
 \end{aligned}
 $$ {#eq-nec_cond_UMP}
@@ -577,8 +578,10 @@ Hence at an optimum:
 
 -   Mathematically: 
     $$
-    \lambda^* = \frac{\partial u(x^*(p,w))}{\partial w}.
+    \lambda^* = \frac{\partial u(x^*(p,w))}{\partial w} \equiv \frac{\partial v}{\partial w},
     $$
+
+where $v(p,w) = u(x^*(p,w))$ is called the indirect utility function. 
 
 <details>
 
@@ -616,6 +619,8 @@ $$
         -   If such a point existed then LNS would be violated, which would contradict monotonicity
 
 ### Example: Cobb-Douglas utility function with availability constraints
+
+Let us consider the Cobb-Douglas utility function $u(x_1, x_2) = x_1^{\alpha}x_2^{1-\alpha}$ with $\alpha\in(0,1)$. The consumer faces the budget constraint $p_1x_1 + p_2x_2 \leq w$ (Case 1) and an availability constraint on one of the goods $x_1 \leq \bar{x}_1$ or $x_2 \leq \bar{x}_2$ (Case 2). Play around with the interactive below to see how the optimal bundle changes as we vary the parameters of the problem.
 
 <iframe id="kt-frame" src="interactives/kuhn-tucker-utility.html" style="width:100%; border:none;" scrolling="no"></iframe>
 <script>

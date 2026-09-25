@@ -102,7 +102,7 @@ svg text.fb{font-family:var(--serif); font-style:italic; font-size:14px; fill:va
 <main>
   <header>
     <h1>Kuhn&ndash;Tucker conditions for a Cobb&ndash;Douglas consumer</h1>
-    <p>Maximize <span class="tx" data-tex="u(x_1,x_2)=x_1^{\alpha}x_2^{1-\alpha}">u(x&#8321;, x&#8322;) = x&#8321;^&alpha; x&#8322;^(1-&alpha;)</span> subject to the budget constraint, then add an upper limit on how much of one good is available. At the optimum, the gradient of utility equals <span class="tx" data-tex="\lambda">&lambda;</span> times the budget gradient plus <span class="tx" data-tex="\mu">&mu;</span> times the availability gradient: <span class="tx" data-tex="\nabla u = \lambda \nabla g + \mu \nabla h">&nabla;u = &lambda;&nabla;g + &mu;&nabla;h</span>.</p>
+    <p>Maximize <span class="tx" data-tex="u(x_1,x_2)=x_1^{\alpha}x_2^{1-\alpha}">u(x&#8321;, x&#8322;) = x&#8321;^&alpha; x&#8322;^(1-&alpha;)</span> subject to the budget constraint, then add an upper limit on how much of one good is available.</p>
   </header>
 
   <section class="panel controls" aria-label="Parameters">
@@ -118,7 +118,7 @@ svg text.fb{font-family:var(--serif); font-style:italic; font-size:14px; fill:va
         <label><input type="radio" name="good" value="2"> good 2</label>
       </div>
       <div class="row">
-        <label><input type="checkbox" id="grad" checked> Show gradients</label>
+        <label><input type="checkbox" id="grad"> Show gradients</label>
         <label><input type="checkbox" id="fit"> Fit axes to budget</label>
       </div>
     </div>
@@ -154,7 +154,7 @@ svg text.fb{font-family:var(--serif); font-style:italic; font-size:14px; fill:va
 <script>
 (function(){
   const $ = id => document.getElementById(id);
-  const S = {m:60,p1:2,p2:3,cap:10,a:0.5,good:1,grad:true,fit:false};
+  const S = {m:60,p1:2,p2:3,cap:10,a:0.5,good:1,grad:false,fit:false};
   const FIXED_MAX = 40;
   const sigs = {};
 
