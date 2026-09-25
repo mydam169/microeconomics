@@ -219,8 +219,8 @@ Let $x$ and $y$ be two alternatives in $X \subset \mathbb{R}^n$. Then:
     -   Preferences: $x \geq y \implies x \succeq y$ and $x \gt y \implies x \succ y$
     -   Utility: $x \geq y \implies u(x) \geq u(y)$ and $x \gt y \implies u(x) > u(y)$
 -   Strictly monotonic preferences $\iff$ strictly increasing utility functions
-    -   Preferences: $x \geq y \implies x \succ y$
-    -   Utility: $x \geq y \implies u(x) > u(y)$
+    -   Preferences: $x \geq y \text{ and } x \neq y \implies x \succ y$
+    -   Utility: $x \geq y \text{ and } x \neq y \implies u(x) > u(y)$
 
 ::: {#exm-eg-mono-leontief}
 ## Perfect complements
