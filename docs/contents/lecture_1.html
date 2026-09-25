@@ -489,6 +489,12 @@ window.Quarto = {
 </header>
 
 
+<div id="2c775081" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdout">
+<pre><code>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload</code></pre>
+</div>
+</div>
 <section id="consumer-preferences" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Consumer preferences</h1>
 <section id="bundles" class="level2" data-number="1.1">
@@ -680,8 +686,8 @@ B \succ A
 </ul></li>
 <li>Strictly monotonic preferences <span class="math inline">\(\iff\)</span> strictly increasing utility functions
 <ul>
-<li>Preferences: <span class="math inline">\(x \geq y \implies x \succ y\)</span></li>
-<li>Utility: <span class="math inline">\(x \geq y \implies u(x) &gt; u(y)\)</span></li>
+<li>Preferences: <span class="math inline">\(x \geq y \text{ and } x \neq y \implies x \succ y\)</span></li>
+<li>Utility: <span class="math inline">\(x \geq y \text{ and } x \neq y \implies u(x) &gt; u(y)\)</span></li>
 </ul></li>
 </ul>
 <div id="exm-eg-mono-leontief" class="theorem example">
@@ -786,7 +792,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 <p>It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.</p>
 <p>The converse is not true. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
-<div id="f2b613a8" class="cell" data-lab="fig-concaveU" data-execution_count="11">
+<div id="bec32867" class="cell" data-lab="fig-concaveU" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -796,7 +802,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </div>
-<div id="19d2d882" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
+<div id="b016f74f" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
