@@ -294,7 +294,7 @@ Consider the Cobb-Douglas production function $q = AK^a L^b$ where $A, a, b$ are
 </details>
 :::
 
-::: {#exm-RSC2}
+::: {#exr-RSC2}
 Show that if a production function is homogeneous of degree $k$, then the marginal products are homogeneous of degree $k-1$.
 :::
 
@@ -323,17 +323,17 @@ $$
 Hence the type of the technical progress can be determined by comparing the MRTSs. In particular, if $MRTS'_{K, L} > MRTS_{K, L}$, then the technical progress is labor enhancing since each worker must be replaced by more capital, implying that labor has become more productive following the progress. 
     
 ::: {#exm-typesOfTP}
-Suppose the firm has production function $q = A_1 L^a K^b$. After a technical progress, it has one of the following PFs. 
+Suppose the firm has production function $f = A_1 L^a K^b$. After a technical progress, it has one of the following PFs. 
 
-1. $q = A_1 L^{a + \delta} K^b$ with $\delta > 0$
-2. $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$
-3. $q = A_2 L^a K^b$ with $A_2 > A_1$
+1. $f = A_1 L^{a + \delta} K^b$ with $\delta > 0$
+2. $f = A_1 L^a K^{b + \delta}$ with $\delta > 0$
+3. $f = A_2 L^a K^b$ with $A_2 > A_1$
     
 Let us determine the type of progress that the firm has undergone. 
 
 __Labor-enhancing technological progress__
 
-Consider $q = A_1 L^{a + \delta} K^b$ with $\delta > 0$ 
+Consider $f = A_1 L^{a + \delta} K^b$ with $\delta > 0$ 
 The MRTS before tech progress:
 $$
 MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
@@ -347,7 +347,7 @@ Since $\delta > 0$, we have $MRTS'_{L,K} > MRTS_{L,K}$, implying that this is a 
 
 __Capital-enhancing technological progress__
 
-Consider $q = A_1 L^a K^{b + \delta}$ with $\delta > 0$.
+Consider $f = A_1 L^a K^{b + \delta}$ with $\delta > 0$.
 The MRTS before tech progress:
 $$
 MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
@@ -361,7 +361,7 @@ Since $\delta > 0$, we have $MRTS'_{L,K} < MRTS_{L,K}$, which is equivalent to $
 
 __Neutral technological progress__
 
-In the final example $q = A_2 L^a K^b$ with $A_2 > A_1$, the $MRTS$ does not change after the progress, implying that this is a neutral one. Graphically the isoquants do not change.
+In the final example $f = A_2 L^a K^b$ with $A_2 > A_1$, the $MRTS$ does not change after the progress, implying that this is a neutral one. Graphically the isoquants do not change.
 :::
 
 # Cost functions

@@ -478,12 +478,6 @@ window.Quarto = {
 </header>
 
 
-<div id="15b85cf8" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-stdout">
-<pre><code>The autoreload extension is already loaded. To reload it, use:
-  %reload_ext autoreload</code></pre>
-</div>
-</div>
 <section id="production-function" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Production function</h1>
 <p>A production function describes how inputs (factors of production such as labor, capital and land, etc.) can be transformed into outputs. We denote the production function by <span class="math inline">\(f:\mathbb{R}^n\to\mathbb{R}_+\)</span>, where <span class="math inline">\(n\)</span> is the number of inputs. In the case of two inputs, capital (<span class="math inline">\(K\)</span>) and labor (<span class="math inline">\(L\)</span>): <span class="math display">\[
@@ -579,7 +573,7 @@ Figure&nbsp;2: Increasing labor increases output, but at decreasing rates
 <div id="fig-MPAP" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-MPAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="75db5100" class="cell" data-execution_count="7">
+<div id="3b438354" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -701,8 +695,8 @@ Answer
 </ul>
 </details>
 </div>
-<div id="exm-RSC2" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5</strong></span> Show that if a production function is homogeneous of degree <span class="math inline">\(k\)</span>, then the marginal products are homogeneous of degree <span class="math inline">\(k-1\)</span>.</p>
+<div id="exr-RSC2" class="theorem exercise">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Show that if a production function is homogeneous of degree <span class="math inline">\(k\)</span>, then the marginal products are homogeneous of degree <span class="math inline">\(k-1\)</span>.</p>
 </div>
 </section>
 <section id="technological-progress" class="level1" data-number="6">
@@ -725,29 +719,29 @@ MRTS'_{K, L} &amp;\geq MRTS_{K, L}.
 \]</span></p>
 <p>Hence the type of the technical progress can be determined by comparing the MRTSs. In particular, if <span class="math inline">\(MRTS'_{K, L} &gt; MRTS_{K, L}\)</span>, then the technical progress is labor enhancing since each worker must be replaced by more capital, implying that labor has become more productive following the progress.</p>
 <div id="exm-typesOfTP" class="theorem example">
-<p><span class="theorem-title"><strong>Example 6</strong></span> Suppose the firm has production function <span class="math inline">\(q = A_1 L^a K^b\)</span>. After a technical progress, it has one of the following PFs.</p>
+<p><span class="theorem-title"><strong>Example 5</strong></span> Suppose the firm has production function <span class="math inline">\(f = A_1 L^a K^b\)</span>. After a technical progress, it has one of the following PFs.</p>
 <ol type="1">
-<li><span class="math inline">\(q = A_1 L^{a + \delta} K^b\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></li>
-<li><span class="math inline">\(q = A_1 L^a K^{b + \delta}\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></li>
-<li><span class="math inline">\(q = A_2 L^a K^b\)</span> with <span class="math inline">\(A_2 &gt; A_1\)</span></li>
+<li><span class="math inline">\(f = A_1 L^{a + \delta} K^b\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></li>
+<li><span class="math inline">\(f = A_1 L^a K^{b + \delta}\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></li>
+<li><span class="math inline">\(f = A_2 L^a K^b\)</span> with <span class="math inline">\(A_2 &gt; A_1\)</span></li>
 </ol>
 <p>Let us determine the type of progress that the firm has undergone.</p>
 <p><strong>Labor-enhancing technological progress</strong></p>
-<p>Consider <span class="math inline">\(q = A_1 L^{a + \delta} K^b\)</span> with <span class="math inline">\(\delta &gt; 0\)</span> The MRTS before tech progress: <span class="math display">\[
+<p>Consider <span class="math inline">\(f = A_1 L^{a + \delta} K^b\)</span> with <span class="math inline">\(\delta &gt; 0\)</span> The MRTS before tech progress: <span class="math display">\[
 MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
 \]</span> After tech progress: <span class="math display">\[
 MRTS'_{L,K} = \frac{a+\delta}{b}\frac{K}{L}.
 \]</span></p>
 <p>Since <span class="math inline">\(\delta &gt; 0\)</span>, we have <span class="math inline">\(MRTS'_{L,K} &gt; MRTS_{L,K}\)</span>, implying that this is a labor-enhancing (or labor-saving) tech progress. Graphically, on the <span class="math inline">\((K, L)\)</span> plane, the isoquants become steeper</p>
 <p><strong>Capital-enhancing technological progress</strong></p>
-<p>Consider <span class="math inline">\(q = A_1 L^a K^{b + \delta}\)</span> with <span class="math inline">\(\delta &gt; 0\)</span>. The MRTS before tech progress: <span class="math display">\[
+<p>Consider <span class="math inline">\(f = A_1 L^a K^{b + \delta}\)</span> with <span class="math inline">\(\delta &gt; 0\)</span>. The MRTS before tech progress: <span class="math display">\[
 MRTS_{L,K} = \frac{a}{b}\frac{K}{L}.
 \]</span> After tech progress: <span class="math display">\[
 MRTS'_{L,K} = \frac{a}{b+\delta}\frac{K}{L}.
 \]</span></p>
 <p>Since <span class="math inline">\(\delta &gt; 0\)</span>, we have <span class="math inline">\(MRTS'_{L,K} &lt; MRTS_{L,K}\)</span>, which is equivalent to <span class="math inline">\(MRTS'_{K,L} &gt; MRTS_{K,L}\)</span>, implying that this is a capital-enhancing (capital-saving) tech progress. How do the isoquants change graphically?</p>
 <p><strong>Neutral technological progress</strong></p>
-<p>In the final example <span class="math inline">\(q = A_2 L^a K^b\)</span> with <span class="math inline">\(A_2 &gt; A_1\)</span>, the <span class="math inline">\(MRTS\)</span> does not change after the progress, implying that this is a neutral one. Graphically the isoquants do not change.</p>
+<p>In the final example <span class="math inline">\(f = A_2 L^a K^b\)</span> with <span class="math inline">\(A_2 &gt; A_1\)</span>, the <span class="math inline">\(MRTS\)</span> does not change after the progress, implying that this is a neutral one. Graphically the isoquants do not change.</p>
 </div>
 </section>
 <section id="cost-functions" class="level1" data-number="7">
@@ -762,7 +756,7 @@ TC = wL + rK.
 <div id="fig-isocost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-isocost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="7ad3f351" class="cell" data-execution_count="10">
+<div id="880f993d" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -878,7 +872,7 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <div id="fig-SRLRcost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SRLRcost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="2e12b31b" class="cell" data-execution_count="11">
+<div id="4e57d248" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -917,7 +911,7 @@ Figure&nbsp;6: Short-run vs long-run cost function
 <div id="fig-ACMCSR" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ACMCSR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="7072dc73" class="cell" data-execution_count="12">
+<div id="c6289787" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -939,7 +933,7 @@ Figure&nbsp;7: Short-run average and marginal costs
 <section id="exercises" class="level1" data-number="8">
 <h1 data-number="8"><span class="header-section-number">8</span> Exercises</h1>
 <div id="exr-CMP1" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1</strong></span> For each of the following production functions, set up and solve the CMP.</p>
+<p><span class="theorem-title"><strong>Exercise 2</strong></span> For each of the following production functions, set up and solve the CMP.</p>
 <ol type="1">
 <li>Cobb-Douglas production function: <span class="math inline">\(f(L,K) = L^a K^b\)</span> where <span class="math inline">\(a, b&gt;0\)</span> and <span class="math inline">\(a+b=1\)</span></li>
 <li>Linear production function: <span class="math inline">\(f(L,K) = aL + bK\)</span> where <span class="math inline">\(a, b&gt;0\)</span>
@@ -949,20 +943,20 @@ Figure&nbsp;7: Short-run average and marginal costs
 </ol>
 </div>
 <div id="exr-CMP2" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2</strong></span> Consider again the Cobb-Douglas production function in <a href="#exr-CMP1" class="quarto-xref">Exercise&nbsp;1</a>. Let <span class="math inline">\(K(w, r, m)\)</span> and <span class="math inline">\(L(w, r, m)\)</span> denote the input demand for capital and labor, respectively.</p>
+<p><span class="theorem-title"><strong>Exercise 3</strong></span> Consider again the Cobb-Douglas production function in <a href="#exr-CMP1" class="quarto-xref">Exercise&nbsp;2</a>. Let <span class="math inline">\(K(w, r, m)\)</span> and <span class="math inline">\(L(w, r, m)\)</span> denote the input demand for capital and labor, respectively.</p>
 <ol type="1">
 <li>How do input demands change with the ouput level <span class="math inline">\(m\)</span>, and the input price?</li>
 <li>Are they homogeneous functions? If yes of which degree?</li>
 </ol>
 </div>
 <div id="exr-CostFun" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3</strong></span> Derive the cost function for a firm with a Cobb-Douglas production function. Is it a homogenous function? Of which degree? Explain.</p>
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Derive the cost function for a firm with a Cobb-Douglas production function. Is it a homogenous function? Of which degree? Explain.</p>
 </div>
 <div id="exr-LRSRcost" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4</strong></span> Let <span class="math inline">\(f = L^{1/2} K^{1/2}\)</span> be the production function. Suppose that in the short run capital is fixed at <span class="math inline">\(\bar{K}=150\)</span>. Find the long-run and short-run cost functions. Which one is smaller? Does it make sense?</p>
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Let <span class="math inline">\(f = L^{1/2} K^{1/2}\)</span> be the production function. Suppose that in the short run capital is fixed at <span class="math inline">\(\bar{K}=150\)</span>. Find the long-run and short-run cost functions. Which one is smaller? Does it make sense?</p>
 </div>
 <div id="exr-ACMC" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 5</strong></span> Suppose <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span>. Derive the average and the marginal costs for the Cobb-Douglas production function <span class="math inline">\(f = L^{1/2} K^{1/2}\)</span> in the SR and the LR.</p>
+<p><span class="theorem-title"><strong>Exercise 6</strong></span> Suppose <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span>. Derive the average and the marginal costs for the Cobb-Douglas production function <span class="math inline">\(f = L^{1/2} K^{1/2}\)</span> in the SR and the LR.</p>
 </div>
 
 
