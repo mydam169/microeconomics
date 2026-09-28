@@ -490,12 +490,6 @@ window.Quarto = {
 </header>
 
 
-<div id="64cbd4c8" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-stdout">
-<pre><code>The autoreload extension is already loaded. To reload it, use:
-  %reload_ext autoreload</code></pre>
-</div>
-</div>
 <section id="consumer-preferences" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Consumer preferences</h1>
 <section id="bundles" class="level2" data-number="1.1">
@@ -661,6 +655,7 @@ B \succ A
 <p><span class="theorem-title"><strong>Theorem 1 (Existence)</strong></span> If a preference relation <span class="math inline">\(\succeq\)</span> is rational (complete and transitive) and continuous on the set of alternatives <span class="math inline">\(X\subset \mathbb{R}^n\)</span>, then it can be represented by a continuous utility function <span class="math inline">\(u: X \to \mathbb{R}.\)</span></p>
 </div>
 <p>A utility function <span class="math inline">\(u: X \to \mathbb{R}\)</span> is said to <strong>represent</strong> a preference relation <span class="math inline">\(\succeq\)</span> over <span class="math inline">\(X\)</span> if for all <span class="math inline">\(A, B \in X\)</span>, it holds <span class="math inline">\(A \succeq B \iff u(A) \geq u(B)\)</span>. In other words, ranking bundles is equivalent to ranking utilities assigned to them.</p>
+<p><strong>Very important</strong>: A utility function is not unique. If <span class="math inline">\(u\)</span> represents <span class="math inline">\(\succeq\)</span>, then for any strictly increasing function <span class="math inline">\(f\)</span>, the function <span class="math inline">\(f \circ u\)</span> also represents <span class="math inline">\(\succeq\)</span>. This is because if <span class="math inline">\(u(A) \geq u(B)\)</span>, then <span class="math inline">\(f(u(A)) \geq f(u(B))\)</span> since <span class="math inline">\(f\)</span> is strictly increasing.</p>
 <p>Let us now look at some common properties of a utility function. Ideally, these properties should correspond to those desired of a preference relation.</p>
 <section id="ordinality" class="level3" data-number="1.3.1">
 <h3 data-number="1.3.1" class="anchored" data-anchor-id="ordinality"><span class="header-section-number">1.3.1</span> Ordinality</h3>
@@ -791,9 +786,9 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 <div id="def-quasiconc2" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (Quasiconcavity 2)</strong></span> A utility function <span class="math inline">\(u\)</span> defined on a convex set <span class="math inline">\(X\)</span> is quasiconcave if for all <span class="math inline">\(x, y \in X\)</span>: <span class="math display">\[ u(\alpha x + (1 - \alpha) y) \geq \min\{u(x), u(y)\}. \]</span> It is <em>strictly</em> quasiconcave if: <span class="math display">\[ u(\alpha x + (1 - \alpha) y) &gt; \min\{u(x), u(y)\}. \]</span></p>
 </div>
-<p>It is easy to see that concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a monotone transformation, which makes it a desirable property of utility functions. This is not true for concavity.</p>
-<p>The converse is not true. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
-<div id="9d00112d" class="cell" data-lab="fig-concaveU" data-execution_count="11">
+<p>Concavity implies quasiconcavity (proof as exercise). Quasiconcavity is preserved under a strictly increasing transformation, which makes it a desirable property of utility functions since representation is not unique. To check quasiconcavity, it is often easier to check the quasiconcavity of its transformation. If a strictly increasing transformation of a utility function is concave, then the orginal utility function is quasiconcave (not necessarily concave), why?</p>
+<p>Quasiconcavity does not imply concavity. For example, consider the Cobb-Douglas utility function <span class="math inline">\(u=x^a y^b\)</span>, where <span class="math inline">\(a,b&gt;0\)</span>. Suppose <span class="math inline">\(a=b=1/4\)</span>, then <span class="math inline">\(u\)</span> is strictly concave, hence is also quasiconcave. For <span class="math inline">\(a=b=3/2\)</span>, the utility function is quasiconcave but not concave.</p>
+<div id="15a63a42" class="cell" data-lab="fig-concaveU" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -803,7 +798,7 @@ Figure&nbsp;5: Diminishing marginal rates of substitution
 </div>
 </div>
 </div>
-<div id="df161064" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
+<div id="eefde40e" class="cell" data-lab="fig-quasiconcaveU" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -945,7 +940,7 @@ u(x) = \begin{cases}
 <ul>
 <li><p>Denote <span class="math inline">\(w&gt;0\)</span> the consumer’s wage/income, <span class="math inline">\(p\)</span> the vector of prices, <span class="math inline">\(x\)</span> the bundle of goods and services, and <span class="math inline">\(u:\mathbb{R}^L_+\to \mathbb{R}\)</span> the utility function representing the preferences of the consumer. Futhermore, denote <span class="math inline">\(pw\)</span> the dot product of <span class="math inline">\(p\)</span> and <span class="math inline">\(w\)</span> when they are vectors</p></li>
 <li><p>The UMP faced by the consumer is: <span id="eq-UMP"><span class="math display">\[
-      \max_{x \geq 0} u(x) \text{ s.t. } px \leq w      
+      \max u(x) \text{ s.t. } px \leq w      
    \tag{11}\]</span></span></p></li>
 <li><p>The budget set or budget constraint: <span class="math inline">\(B(p,w) \equiv \{x \geq 0: px \leq w\}\)</span>.</p></li>
 <li><p>If <span class="math inline">\(w&gt;0\)</span> and <span class="math inline">\(p &gt; 0\)</span> and <span class="math inline">\(u\)</span> is continuous then a solution to the UMP exists (Weirestrass theorem)</p></li>
@@ -971,7 +966,6 @@ u(x) = \begin{cases}
 </ul></li>
 <li><em>Law of Walras</em> (LoW): <span class="math inline">\(px = w\)</span> for all <span class="math inline">\(x=x(p,w)\)</span>
 <ul>
-<li>All income is optimally spent on consumption (no excess demand)</li>
 <li>This follows from LNS: Any bundle in the interior of the budget set is not optimal since there exists another bundle strictly better in a sufficiently small neighborhood of this bundle</li>
 </ul></li>
 <li><em>Convexity</em>: If preferences are convex, then <span class="math inline">\(x(p,w)\)</span> defines a convex set. If moreover preferences are strictly convex, then <span class="math inline">\(x(p,w)\)</span> contains a singleton</li>
@@ -1000,7 +994,7 @@ u_i(x^*) = \lambda^* p_i.
 <p>To eliminate the multiplier, we can form the ratio: <span id="eq-nec_cond_UMP"><span class="math display">\[
 \begin{aligned}
 \frac{u_i(x^*)}{u_j(x^*)} &amp;= \frac{p_i}{p_j} \\
-MRS_{i,j}(x^*) &amp;= \frac{p_i}{p_j} \\
+MRS_{j,i}(x^*) &amp;= \frac{p_i}{p_j} \\
 \implies \frac{u_i(x^*)}{p_i} &amp;= \frac{u_j(x^*)}{p_j} = \lambda^*.
 \end{aligned}
 \tag{14}\]</span></span></p>

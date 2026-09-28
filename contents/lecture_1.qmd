@@ -500,7 +500,7 @@ Since a homogeneous utility function is homothetic, homogeneous preferences are 
 -   Denote $w>0$ the consumer's wage/income, $p$ the vector of prices, $x$ the bundle of goods and services, and $u:\mathbb{R}^L_+\to \mathbb{R}$ the utility function representing the preferences of the consumer. Futhermore, denote $pw$ the dot product of $p$ and $w$ when they are vectors
 
 -   The UMP faced by the consumer is: $$
-          \max_{x \geq 0} u(x) \text{ s.t. } px \leq w      
+          \max u(x) \text{ s.t. } px \leq w      
       $$ {#eq-UMP}
 
 -   The budget set or budget constraint: $B(p,w) \equiv \{x \geq 0: px \leq w\}$.

@@ -465,7 +465,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>My Dam <a href="mailto:my-thi-tra.dam@universite-paris-saclay.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+             <p>My Dam <a href="mailto:my.dam169@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
           </div>
   </div>
     
@@ -478,6 +478,12 @@ window.Quarto = {
 </header>
 
 
+<div id="15b85cf8" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdout">
+<pre><code>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload</code></pre>
+</div>
+</div>
 <section id="production-function" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Production function</h1>
 <p>A production function describes how inputs (factors of production such as labor, capital and land, etc.) can be transformed into outputs. We denote the production function by <span class="math inline">\(f:\mathbb{R}^n\to\mathbb{R}_+\)</span>, where <span class="math inline">\(n\)</span> is the number of inputs. In the case of two inputs, capital (<span class="math inline">\(K\)</span>) and labor (<span class="math inline">\(L\)</span>): <span class="math display">\[
@@ -501,9 +507,9 @@ q = f(K, L),
 </ul>
 <p>Why is it called CES? Let <span class="math inline">\(q(L, K)\)</span> be a twice differentiable production function of two inputs. The elasticity of substitution between the two factors measures the percentage in the ratio of the inputs in response to a percentage change in the MRTS. Mathematically:</p>
 <p><span id="eq-EoS_def"><span class="math display">\[
-     s = \frac{d\ln \left(\frac{K}{L}\right)}{d \ln MRTS_{L,K}},
+     s = \frac{d\ln \left(\frac{K}{L}\right)}{d \ln MRTS_{K,L}},
   \tag{2}\]</span></span></p>
-<p>where <span class="math inline">\(MRTS_{L,K} = MP_L/MP_K\)</span>.</p></li>
+<p>where <span class="math inline">\(MRTS_{K,L} = MP_L/MP_K\)</span> is the marginal of technical substitution of capital for labor. It measures the rate at which the firm is willing to replace labor with capital while keeping output constant. The EoS is a measure of how easily the firm can substitute one input for another.</p></li>
 </ol>
 </div>
 </section>
@@ -538,6 +544,7 @@ q = f(K, L),
 </section>
 <section id="decreasing-marginal-products" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="decreasing-marginal-products"><span class="header-section-number">2.3</span> Decreasing marginal products</h2>
+<p>Marginal products are typically decreasing in the amount of input used. This is known as the law of diminishing marginal products. This is because the other inputs are held fixed. For example, consider a firm that produces a certain good using labor and capital. If the firm hires more workers but does not increase the amount of capital, then each additional worker has less capital to work with, which reduces their productivity.</p>
 <div id="cell-fig-decMPL" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div id="fig-decmpl" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -572,7 +579,7 @@ Figure&nbsp;2: Increasing labor increases output, but at decreasing rates
 <div id="fig-MPAP" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-MPAP-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="536d0cdb" class="cell" data-execution_count="7">
+<div id="75db5100" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -604,8 +611,8 @@ Figure&nbsp;3: Relationship between marginal and average products
 <h1 data-number="3"><span class="header-section-number">3</span> Isoquants</h1>
 <section id="definition" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">3.1</span> Definition</h2>
-<p>In the first chapter, we saw that indifference curves are nothing but the level curves of the utility function that represents a consumer’s preference relation. In particular, each IC represents combinations of goods that give the consumer the same level of utility.</p>
-<p>Isoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output, but the the <em>levels</em> assocated with the isoquants are <em>cardinal</em>: they represent actual outputs, not just fictive units used to rank bundles.</p>
+<p>In the first chapter, we saw that indifference curves (also known as isoutility curves) are nothing but the level curves of the utility function that represents a consumer’s preference relation. In particular, each IC represents combinations of goods that give the consumer the same level of utility.</p>
+<p>Isoquants are to firms is a similar (but not identical) concept: Each isoquant represents all combinations of inputs that yield the same level of output given the firm’s production technology, but the the <em>levels</em> assocated with the isoquants are <em>cardinal</em>: they represent actual outputs, not just fictive units that are only used for ranking alternatives. This implies that a monotone transformation of the production function does not yield the same isoquants, unlike in the case of indifference curves.</p>
 </section>
 <section id="example" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="example"><span class="header-section-number">3.2</span> Example</h2>
@@ -636,16 +643,16 @@ Figure&nbsp;4: Cobb-Douglas production function and isoquants
 <h2 data-number="4.1" class="anchored" data-anchor-id="definition-1"><span class="header-section-number">4.1</span> Definition</h2>
 <p>The MRTS is the slope of the isoquant (in absolute value):</p>
 <p><span id="eq-MRST_def"><span class="math display">\[
-\frac{-dK}{dL} = \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+\frac{-dK}{dL} = \frac{MP_L}{MP_K} \equiv MRTS_{K,L}.
 \tag{4}\]</span></span></p>
-<p>It tells us for every unit reduction in capital, how many units of labor the firm needs to increase to maintain the same level of output or conversely, how many units of capital the firm is willing to give up to hire an additional worker without hurting outputs.</p>
+<p>It tells us how many units of capital the firm is willing to give up in order to hire one additional worker while keeping output constant. It is decreasing as the amount of labor increases, which is consistent with the law of diminishing marginal products (the additional worker is less productive than the previous one, so the firm is willing to give up less capital to hire them).</p>
 <p>As in the case of MRS, we derive the MRTS by totally differentiating along an isoquant, where <span class="math inline">\(q(L, K) = m\)</span> for some constant <span class="math inline">\(m&gt;0\)</span>:</p>
 <p><span id="eq-MRST_proof"><span class="math display">\[
 \begin{aligned}
-dq(L, K) &amp;= 0 \\
-\iff q_L dL + q_K dK &amp;= 0 \\
-\iff \frac{-dK}{dL} &amp;= \frac{q_L}{q_K} \\
-&amp;= \frac{MP_L}{MP_K} \equiv MRTS_{L,K}.
+df(L, K) &amp;= 0 \\
+\iff f_L dL + f_K dK &amp;= 0 \\
+\iff \frac{-dK}{dL} &amp;= \frac{f_L}{f_K} \\
+&amp;= \frac{MP_L}{MP_K} \equiv MRTS_{K, L}.
 \end{aligned}
 \tag{5}\]</span></span></p>
 </section>
@@ -653,20 +660,21 @@ dq(L, K) &amp;= 0 \\
 <h2 data-number="4.2" class="anchored" data-anchor-id="properties"><span class="header-section-number">4.2</span> Properties</h2>
 <p>In the case of Cobb-Douglas production function above, the <em>MRTS is decreasing</em> as we move in the south-east direction along one isoquant:</p>
 <ul>
-<li><p>When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker.</p></li>
-<li><p>When capital is scarce, firm is less willing to replace it with workers.</p></li>
+<li>When capital is abundant, the firm is willing to give up many units of capital to hire an additional worker (the isoquant is steep). When capital is scarce, the firm is willing to give up only a few units of capital to hire an additional worker (the isoquant is flat).</li>
 </ul>
+<p>How about the case of linear production function? And the case of fixed input proportions?</p>
 </section>
 </section>
 <section id="homogeneity-and-returns-to-scale" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Homogeneity and returns to scale</h1>
-<p>Let <span class="math inline">\(\alpha &gt; 0\)</span> be the factor by which all inputs change (i.e., each input is multiplied by <span class="math inline">\(\alpha\)</span>). Suppose <span class="math inline">\(q(\alpha K, \alpha L) = \alpha^k q(K, L)\)</span> for some number <span class="math inline">\(k\)</span></p>
+<p>Let <span class="math inline">\(\alpha &gt; 0\)</span> be the factor by which all inputs change (i.e., each input is multiplied by <span class="math inline">\(\alpha\)</span>). Suppose <span class="math inline">\(f(\alpha K, \alpha L) = \alpha^k f(K, L)\)</span> for some number <span class="math inline">\(k\)</span></p>
 <ul>
 <li>If <span class="math inline">\(k &gt; 1\)</span>: the firm exhibits increasing returns to scale (IRS)</li>
 <li>If <span class="math inline">\(k = 1\)</span>: the firm exhibits constant returns to scale (CRS)</li>
 <li>If <span class="math inline">\(k &lt; 1\)</span>: the firm exhibits decreasing returns to scale (DRS)</li>
 </ul>
 <p>Note that the characterization holds regardless of whether <span class="math inline">\(\alpha\)</span> is greater or smaller than one. If <span class="math inline">\(\alpha \in (0, 1)\)</span> then increasing returns to scale means that as we reduce inputs by a factor of <span class="math inline">\(\alpha\)</span>, the firm’s output falls by more than <span class="math inline">\(\alpha\)</span>.</p>
+<p>In practice, different activities within the same firm or industry may exhibit different returns to scale. In the automobile industry, for example, design is a nonrival input: a single platform can serve any number of vehicles, so scaling all inputs, including design, raises output more than proportionally (IRS). Assembly, by contrast, exhibits approximately CRS beyond a minimum efficient scale, since it expands by replicating plants and production lines. At the level of the whole firm, coordination and management costs may eventually generate DRS.</p>
 <div id="exm-RSC" class="theorem example">
 <p><span class="theorem-title"><strong>Example 4</strong></span> Consider the Cobb-Douglas production function <span class="math inline">\(q = AK^a L^b\)</span> where <span class="math inline">\(A, a, b\)</span> are strictly positive constants. For which values of <span class="math inline">\(a, b\)</span> does this function exhibit increasing, constant or decreasing returns to scale? What kind of returns to scale do linear and fixed-proportion production functions exhibit?</p>
 <details>
@@ -678,8 +686,8 @@ Answer
 <ul>
 <li><p>For some <span class="math inline">\(\alpha &gt; 0\)</span>, we have: <span id="eq-RTS_cobb_douglas"><span class="math display">\[
   \begin{aligned}
-  q(\alpha L, \alpha K) &amp;= A \alpha^{a+b} K^a L^b \\
-  &amp;= \alpha^{a+b} q(L, K).
+  f(\alpha L, \alpha K) &amp;= A \alpha^{a+b} K^a L^b \\
+  &amp;= \alpha^{a+b} f(L, K).
   \end{aligned}
    \tag{6}\]</span></span></p></li>
 <li><p>Hence the nature of returns to scale depends on <span class="math inline">\(a+b\)</span>. In particular:</p>
@@ -693,6 +701,9 @@ Answer
 </ul>
 </details>
 </div>
+<div id="exm-RSC2" class="theorem example">
+<p><span class="theorem-title"><strong>Example 5</strong></span> Show that if a production function is homogeneous of degree <span class="math inline">\(k\)</span>, then the marginal products are homogeneous of degree <span class="math inline">\(k-1\)</span>.</p>
+</div>
 </section>
 <section id="technological-progress" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Technological progress</h1>
@@ -702,19 +713,19 @@ Answer
 <li><strong>Capital enhancing</strong> if MPK increases by more than MPL</li>
 <li><strong>Neutral</strong> if MPL and MPK increase by the same proportion</li>
 </ul>
-<p>Hence to determine the nature of the tech progress, we need to compare the relative change of the productivity of labor and capital following the change. The percentage change in the marginal product of each input can be expressed as: <span class="math display">\[
+<p>Hence to determine the nature of the tech progress, we need to compare the relative change of the productivity of labor and capital following the change in the production technology. The percentage change in the marginal product of each input can be expressed as: <span class="math display">\[
 \frac{MP'_i - MP_i}{MP_i} = \frac{MP'_i}{MP_i} - 1, \quad i\in\{K, L\},
 \]</span> where <span class="math inline">\(MP'_i\)</span> denotes the marginal product of input <span class="math inline">\(i\)</span> after the technological progress. Observe that: <span class="math display">\[
 \begin{aligned}
 \frac{MP'_L - MP_L}{MP_L} &amp;\geq \frac{MP'_K - MP_K}{MP_K} \\
 % \iff \frac{MP'_L}{MP_L} \geq \frac{MP'_K}{MP_K} \\
 % \iff \frac{MP'_L}{MP'_K} \geq \frac{MP_L}{MP_K} \\
-MRTS'_{L,K} &amp;\geq MRTS_{L,K}.
+MRTS'_{K, L} &amp;\geq MRTS_{K, L}.
 \end{aligned}
 \]</span></p>
-<p>Hence the type of the tech progress can be determined by comparing the MRTSs.</p>
+<p>Hence the type of the technical progress can be determined by comparing the MRTSs. In particular, if <span class="math inline">\(MRTS'_{K, L} &gt; MRTS_{K, L}\)</span>, then the technical progress is labor enhancing since each worker must be replaced by more capital, implying that labor has become more productive following the progress.</p>
 <div id="exm-typesOfTP" class="theorem example">
-<p><span class="theorem-title"><strong>Example 5</strong></span> Suppose the firm has production function <span class="math inline">\(q = A_1 L^a K^b\)</span>. After a technical progress, it has one of the following PFs.</p>
+<p><span class="theorem-title"><strong>Example 6</strong></span> Suppose the firm has production function <span class="math inline">\(q = A_1 L^a K^b\)</span>. After a technical progress, it has one of the following PFs.</p>
 <ol type="1">
 <li><span class="math inline">\(q = A_1 L^{a + \delta} K^b\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></li>
 <li><span class="math inline">\(q = A_1 L^a K^{b + \delta}\)</span> with <span class="math inline">\(\delta &gt; 0\)</span></li>
@@ -751,7 +762,7 @@ TC = wL + rK.
 <div id="fig-isocost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-isocost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="29b795d0" class="cell" data-execution_count="10">
+<div id="7ad3f351" class="cell" data-execution_count="10">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -770,12 +781,12 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 </section>
 <section id="cost-minimization-problem-cmp" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="cost-minimization-problem-cmp"><span class="header-section-number">7.2</span> Cost minimization problem (CMP)</h2>
-<p>The cost minimization problem entails finding a combination of inputs such that the total cost to attain a certain level of output is minimized.</p>
+<p>The cost minimization problem entails finding a combination of inputs that minimizes the total cost of production for a given level of output.</p>
 <div id="def-CMP" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 2 (CMP)</strong></span> <span id="eq-CMP_def"><span class="math display">\[
 \begin{aligned}
 &amp;\min_{L,K} C = wL + rK \\
-&amp;\text{s.t. } q(L, K) \geq m,
+&amp;\text{s.t. } f(L, K) \geq m,
 \end{aligned}
 \tag{8}\]</span></span> where <span class="math inline">\(m\)</span> is the target output level.</p>
 </div>
@@ -783,7 +794,7 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <section id="necessary-conditions" class="level3" data-number="7.2.1">
 <h3 data-number="7.2.1" class="anchored" data-anchor-id="necessary-conditions"><span class="header-section-number">7.2.1</span> Necessary conditions</h3>
 <p>The Lagrangian of the CMP: <span id="eq-Lagrange_cmp"><span class="math display">\[
-\mathcal{L}(\lambda, L, K) = - C(L, K) + \lambda (q(L,K) - m).
+\mathcal{L}(\lambda, L, K) = - C(L, K) + \lambda (f(L,K) - m).
 \tag{9}\]</span></span></p>
 <p>According to the KTT theorem, if <span class="math inline">\((L^*, K^*)\)</span> is a solution to the CMP, then there exist <span class="math inline">\(\lambda^* \geq 0\)</span> such that:</p>
 <p><span id="eq-KT_cmp"><span class="math display">\[
@@ -791,13 +802,13 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 &amp;\mathcal{L}_L (L^*, K^*, \lambda^*) = 0, \:
 \mathcal{L}_K (L^*, K^*, \lambda^*) = 0, \\
 % &amp;\quad \quad \quad \text{ with equality for interior solutions }\\
-&amp;\lambda^* \geq 0, \: q(L^*, K^*) - m \geq 0, \:  \lambda^*[q(L^*, K^*) - m] = 0.
+&amp;\lambda^* \geq 0, \: f(L^*, K^*) - m \geq 0, \:  \lambda^*[f(L^*, K^*) - m] = 0.
 \end{aligned}
 \tag{10}\]</span></span></p>
 <p>The FOCs yield: <span id="eq-FOCs"><span class="math display">\[
 \begin{aligned}
-\lambda^* q_L(L^*, K^*) &amp;=  w, \\
-\lambda^* q_K(L^*, K^*) &amp;=  r.
+\lambda^* f_L(L^*, K^*) &amp;=  w, \\
+\lambda^* f_K(L^*, K^*) &amp;=  r.
 \end{aligned}
 \tag{11}\]</span></span></p>
 <p>This implies: <span id="eq-sols_interior"><span class="math display">\[
@@ -806,10 +817,10 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 \frac{MP_L}{w} &amp;= \frac{MP_K}{r}=\frac{1}{\lambda^*}.
 \end{aligned}
 \tag{12}\]</span></span></p>
-<p>Note that <span class="math inline">\(\lambda^*\)</span> can be interpreted as a shadow price: the cost of increasing output by a unit: <span class="math display">\[
+<p>Note that <span class="math inline">\(\lambda^*\)</span> here, the shadow price, represents the cost of increasing output by a unit: <span class="math display">\[
 \lambda^* = \frac{\partial C^*(r,w,m)}{\partial m}.
 \]</span></p>
-<p><a href="#eq-sols_interior" class="quarto-xref">Equation&nbsp;12</a> states that when minimizing the production cost, the firm rearranges inputs in such manner that the marginal product per currency unit is equalized across all factors. If for example <span class="math inline">\(\frac{MP_L}{w} &gt; \frac{MP_K}{r}\)</span> then we should increase <span class="math inline">\(L\)</span> by reducing <span class="math inline">\(K\)</span> since the former has greater bang for the buck. The condition <span class="math inline">\(\frac{MP_L}{MP_K} = \frac{w}{r} \iff MRTS_{L,K} = \frac{w}{r}\)</span> tells us that the interior optimum is located where the isoquant is tangent to the isocost.</p>
+<p><a href="#eq-sols_interior" class="quarto-xref">Equation&nbsp;12</a> states that when minimizing the production cost, the firm rearranges inputs in such manner that the marginal product per currency unit is equalized across all factors. If for example <span class="math inline">\(\frac{MP_L}{w} &gt; \frac{MP_K}{r}\)</span> then we should increase <span class="math inline">\(L\)</span> by reducing <span class="math inline">\(K\)</span> since the former has greater bang for the buck. The condition <span class="math inline">\(\frac{MP_L}{MP_K} = \frac{w}{r} \iff MRTS_{K, L} = \frac{w}{r}\)</span> tells us that the interior optimum is located where the isoquant is tangent to the isocost.</p>
 </section>
 </section>
 <section id="comparative-statics" class="level2" data-number="7.3">
@@ -831,13 +842,15 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <h3 data-number="7.4.1" class="anchored" data-anchor-id="explicit-vs-implicit-costs"><span class="header-section-number">7.4.1</span> Explicit vs implicit costs</h3>
 <ul>
 <li><p>Explicit costs (also called accounting costs): Costs that require monetary payments</p></li>
-<li><p>Implicit costs (or opportunity costs): Do not require monetary outlays and reflect what one must sacrifice when making a choice</p></li>
+<li><p>Implicit costs: Do not require monetary outlays and reflect what one must sacrifice when making a choice</p></li>
+<li><p>Opportunity cost or economic cost: explicit + implicit costs.</p></li>
 <li><p>Example: What is your cost of attending this course?</p>
 <ul>
-<li>Accounting costs: tuition, transportation, etc.</li>
-<li>Opportunity cost: the salary you could have earned during the time of study</li>
+<li>Explicit costs: tuition, transportation for some, internet connection, etc.</li>
+<li>Implicit costs: the value of the next best alternative use of your time (networking, working for extra money, etc.)</li>
 </ul></li>
 </ul>
+<p>When talking about costs, economists typically refer to opportunity costs, which include both explicit and implicit costs.</p>
 </section>
 <section id="sunk-vs-nonsunk-costs" class="level3" data-number="7.4.2">
 <h3 data-number="7.4.2" class="anchored" data-anchor-id="sunk-vs-nonsunk-costs"><span class="header-section-number">7.4.2</span> Sunk vs nonsunk costs</h3>
@@ -859,13 +872,13 @@ Figure&nbsp;5: Isocostline for the case of two inputs
 <li><p>In the short run (SR), the amount of <em>at least one input is fixed</em></p></li>
 <li><p>Example: In short run, production factors such as land or capital are typically fixed, whereas labor is variable. In the long run, it is possible to buy more land and set up new factories, allowing all factors of production to vary.</p>
 <ul>
-<li>Consider a firm with Cobb-Douglas production <span class="math inline">\(q = L^a K^b\)</span> where <span class="math inline">\(K=\bar{K}&gt;0\)</span> is fixed in the SR. Thus the cost function found above is the LR cost. The SR cost can be found by solving the CMP with respect to <span class="math inline">\(L\)</span> only</li>
+<li>Consider a firm with Cobb-Douglas production <span class="math inline">\(f = L^a K^b\)</span> where <span class="math inline">\(K=\bar{K}&gt;0\)</span> is fixed in the SR. Thus the cost function found above is the LR cost. The SR cost can be found by solving the CMP with respect to <span class="math inline">\(L\)</span> only</li>
 </ul></li>
 </ul>
 <div id="fig-SRLRcost" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-SRLRcost-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="cd4f7fcb" class="cell" data-execution_count="11">
+<div id="2e12b31b" class="cell" data-execution_count="11">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -884,6 +897,7 @@ Figure&nbsp;6: Short-run vs long-run cost function
 <section id="average-and-marginal-costs" class="level3" data-number="7.4.4">
 <h3 data-number="7.4.4" class="anchored" data-anchor-id="average-and-marginal-costs"><span class="header-section-number">7.4.4</span> Average and marginal costs</h3>
 <ul>
+<li><p>Total cost of production: fixed costs + variable costs</p></li>
 <li><p>Average cost (AC): total cost of production <em>per output unit</em>:</p>
 <p><span id="eq-ATC_def"><span class="math display">\[
   AC(q) = \frac{C(q)}{q},
@@ -892,10 +906,10 @@ Figure&nbsp;6: Short-run vs long-run cost function
 <p><span id="eq-MC_def"><span class="math display">\[
   MC(q) = C'(q)
    \tag{15}\]</span></span> in the continuous case.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p></li>
-<li><p>The MC curve crosses the AC curve at the AC’s minimum. In other words, the AC is decreasing when it is above the MC and increasing when it is above the MC.</p></li>
+<li><p>The MC curve crosses the AC curve at the AC’s minimum (if it has a minimum). In other words, the AC is decreasing when it is above the MC and increasing when it is above the MC.</p></li>
 <li><p>Intuition:</p>
 <ul>
-<li>Initially when output is small, the variable cost is small and the fixed cost dominates the total cost</li>
+<li>Initially when output is small, the variable cost is small and the fixed cost dominates the total cost. The extra cost of producing an additional unit is small, so the MC is below the AC and the AC is decreasing.</li>
 <li>As output increases, the importance of fixed cost declines. Meanwhile, the MC increases (due to decreasing marginal product)</li>
 <li>After a threshold, producing an additional unit costs more than the AC of existing units</li>
 </ul></li>
@@ -903,7 +917,7 @@ Figure&nbsp;6: Short-run vs long-run cost function
 <div id="fig-ACMCSR" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ACMCSR-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="26ae85a5" class="cell" data-execution_count="12">
+<div id="7072dc73" class="cell" data-execution_count="12">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -927,8 +941,8 @@ Figure&nbsp;7: Short-run average and marginal costs
 <div id="exr-CMP1" class="theorem exercise">
 <p><span class="theorem-title"><strong>Exercise 1</strong></span> For each of the following production functions, set up and solve the CMP.</p>
 <ol type="1">
-<li>Cobb-Douglas production function: <span class="math inline">\(q(L,K) = L^a K^b\)</span> where <span class="math inline">\(a, b&gt;0\)</span> and <span class="math inline">\(a+b=1\)</span></li>
-<li>Linear production function: <span class="math inline">\(q(L,K) = aL + bK\)</span> where <span class="math inline">\(a, b&gt;0\)</span>
+<li>Cobb-Douglas production function: <span class="math inline">\(f(L,K) = L^a K^b\)</span> where <span class="math inline">\(a, b&gt;0\)</span> and <span class="math inline">\(a+b=1\)</span></li>
+<li>Linear production function: <span class="math inline">\(f(L,K) = aL + bK\)</span> where <span class="math inline">\(a, b&gt;0\)</span>
 <ul>
 <li>Hint: Consider 3 cases: <span class="math inline">\(w/r = a/b\)</span>, <span class="math inline">\(w/r &lt; a/b\)</span> and <span class="math inline">\(w/r &gt; a/b\)</span></li>
 </ul></li>
@@ -945,10 +959,10 @@ Figure&nbsp;7: Short-run average and marginal costs
 <p><span class="theorem-title"><strong>Exercise 3</strong></span> Derive the cost function for a firm with a Cobb-Douglas production function. Is it a homogenous function? Of which degree? Explain.</p>
 </div>
 <div id="exr-LRSRcost" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 4</strong></span> Let <span class="math inline">\(q = L^{1/2} K^{1/2}\)</span> be the production function. Suppose that in the short run capital is fixed at <span class="math inline">\(\bar{K}=150\)</span>. Find the long-run and short-run cost functions. Which one is smaller? Does it make sense?</p>
+<p><span class="theorem-title"><strong>Exercise 4</strong></span> Let <span class="math inline">\(f = L^{1/2} K^{1/2}\)</span> be the production function. Suppose that in the short run capital is fixed at <span class="math inline">\(\bar{K}=150\)</span>. Find the long-run and short-run cost functions. Which one is smaller? Does it make sense?</p>
 </div>
 <div id="exr-ACMC" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 5</strong></span> Suppose <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span>. Derive the average and the marginal costs for the Cobb-Douglas production function <span class="math inline">\(q = L^{1/2} K^{1/2}\)</span> in the SR and the LR.</p>
+<p><span class="theorem-title"><strong>Exercise 5</strong></span> Suppose <span class="math inline">\(w=\$40\)</span> and <span class="math inline">\(r=\$10\)</span>. Derive the average and the marginal costs for the Cobb-Douglas production function <span class="math inline">\(f = L^{1/2} K^{1/2}\)</span> in the SR and the LR.</p>
 </div>
 
 
