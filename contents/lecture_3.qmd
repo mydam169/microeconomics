@@ -427,7 +427,7 @@ $$
 e \equiv (e_1^A, e_2^A;e_1^B, e_2^B).
 $$
 
-The Edgeworth box is a useful tool to represent an exchange economy with two consumers and two goods. The width and length of the box represent the total endowment of each good.
+The Edgeworth box is a useful tool to represent an exchange economy with two consumers and two goods. The width and length of the box represent the total endowment (supply) of each good in the economy.
 
 ::: {#fig-EWbox fig-cap="An Edgeworth box with two goods and two consumers
 in a pure exchange economy. The total endownment of each good is 10 units. At the intial endowment, agent A has 2 units of $x_1$ and 8 units of $x_2$ whereas agent B has 8 units of $x_1$ and 2 units of $x_2$."}
@@ -448,40 +448,41 @@ $$
 \end{aligned}
 $$
 
-In our case of interest $i\in\{A, B\}$ and $L=2.$
-Observe that any point inside or on the side of the Edgeworth box is feasible.
+In our case $N=2$ and $L=2$. 
+Observe that any point inside or on the edge of the Edgeworth box is a feasible allocation.
 
 ::: {#def-GE}
 ## General equilibrium in an exchange economy
 
 We say that a price vector $p\in\mathbb{R^L_{++}}$ and an allocation $x\in\mathbb{R^L_{+}}$ constitute a competitive general equilibrium in an exchange economy if:
 
-1. The allocation $x$ is feasible
-2. Given prices, $x$ solves the UMP of every consumer
-3. The equilibrium price $p$ clears all markets. This means that the aggregate demand is equal to aggregate supply for each good:[^2]
+1. Given prices, $x$ solves the UMP of every consumer
+2. The equilibrium price $p$ clears all markets. This means that the aggregate demand is equal to aggregate supply for each good:[^2]
     $$ 
-    q_j^D(p_j) = q_j^S(p_j),\quad \forall j=1,\dots,L. 
+    x_j(p) = e_j = \sum_{i=1}^N e^i_j,\quad \forall j=1,\dots,L. 
     $$
 :::
+
+Observe that the market clearing conditions imply that the allocation is feasible.
 
 [^2]: In the case of a pure exchange economy, the aggregate supply of each good is just equal to its total endowment.
 
 Recall that for each consumer that has an interior solultion to their UMP, the marginal utility per dollar is equalized across the goods. Mathematically:
 
 $$
-    \frac{U^i_k(x^*)}{p_k} = \frac{U^i_l(x^*)}{p_l},
+    \frac{U^i_k(x^*)}{p_k} = \frac{U^i_l(x^*)}{p_l},\quad \forall i=1,\dots,N, \quad k,l=1,\dots,L.
 $${#eq-EQMfoc1}
 
-where $U^i_k(x^*)$ denotes the partial derivative of $U^i$, the utility function of consumer $i$ with respect to good $k$, evaluated at the optimal consumption bundle $x^{*}$ of this person, and $p_k$ is the price of good $k$. This condition must hold for all goods $k,l=1,\dots,L$ and for every individual $i=1,\dots,N$. Observe that @eq-EQMfoc1 is equivalent to:
+where $U^i_k(x^*)$ denotes the partial derivative of $U^i$, the utility function of consumer $i$, with respect to good $k$, evaluated at the optimal consumption bundle $x^{*}$. This is also equivalent to:
 
 $$
 % \begin{aligned}
     % \frac{U^i_k(x^*)}{U^i_l(x^*)} &= \frac{p_k}{p_l} \\
-    MRS^i_{k,l}(x^*) = \frac{p_k}{p_l}, \quad\forall i=1,\dots,N.
+    MRS^i_{l,k}(x^*) = \frac{p_k}{p_l}, \quad\forall i=1,\dots,N.
 % \end{aligned}
 $${#eq-EQMfoc2}
 
-Hence in equilibrium, the MRS is equal to the price ratio for each individual. This condition together with binding budget constraints will give us the optimal allocation as a function of prices (or more precisely price ratios), which can in turn be determined by the market clearning conditions.  Let us look at an example.
+Hence in equilibrium, each consumer equalizes their MRS to the price ratio. This condition together with binding budget constraints give us the optimal allocation as a function of prices (or more precisely price ratios). Equilibrium prices can in turn be determined by the market clearning conditions. 
 
 
 ::: {#exm-EQM-exchange-eco}
@@ -508,7 +509,7 @@ $$
 
 In optimality:
 $$
-MRS^i_{1,2} = \frac{p_1}{p_2} \iff p_1x_1^i = p_2x_2^i.
+MRS^i_{2,1}(x^*) = \frac{p_1}{p_2} \iff p_1x_1^i = p_2x_2^i.
 $${#eq-FOCexm}
 
 The budget constraints bind, implying:
@@ -526,7 +527,7 @@ x_2^i &= \frac{pe^i}{2p_2}, \quad i=A,B. \\
 \end{aligned}
 $${#eq-OptAll}
 
-In order to solve for the price ratio, we only need to consider the market clearing condition for $L-1$ markets, which is just a single market in this example. Let us consider this condition for the market of $x_1$:
+To solve for the price ratio, we only need to consider the market clearing condition for $L-1$ markets, which is just a single market in this example. Let us consider this condition for the market of $x_1$:
 $$
 \begin{aligned}
 x_1^A + x_1^B &= e_1^A + e_1^B \\
@@ -548,7 +549,7 @@ $$
 \end{aligned}
 $$
 
-Observe that in equilibrium, the first good is twice as valuable as the first one. This is no coincidence: each consumer extracts the same utility from each good, and yet the second one is twice as abundant as the first.
+Observe that in equilibrium, the first good is twice as expensive as the first one. This is no coincidence: each consumer extracts the same utility from each good, and yet the second one is twice as abundant as the first.
 :::
 
 
@@ -582,7 +583,7 @@ Consider an a efficient allocation $\bar{x}$ and a _redistribution_ of the initi
 Let us illustrate the SWT by continuing with @exm-EQM-exchange-eco. The condition for an allocation to be a CEA was:
 $$
 \begin{eqnarray}
-MRS_{1,2}^A(x^A) &=& MRS_{1,2}^B(x^B) = \frac{p_1}{p_2} \\
+MRS_{2,1}^A(x^A) &=& MRS_{2,1}^B(x^B) = \frac{p_1}{p_2} \\
 \frac{x_2^A}{x_1^A} &=& \frac{x_2^B}{x_1^B} = \frac{1}{2}.
 \end{eqnarray}
 $$
@@ -639,7 +640,7 @@ Thus one way to redistribute is to tax $A$ an amount equivalent to 150 units of 
 
 ## Adding production to the economy
 
-In a production economy, consumers own factors of production, which they can rent out to firms to earn income. Firms choose the quantity of factors of production to maximize profit, taking as given the prices (of factors and final consumption goods). Consumers choose the quantity of consumption goods to maximize utility, taking as given prices (of factors and final consumption goods). 
+In an economy with production, consumers own factors of production, which they can rent out to firms to earn income. Firms choose the quantity of factors of production to maximize profit, taking as given the prices (of factors and final consumption goods). Consumers choose the quantity of consumption goods to maximize utility, taking as given prices (of factors and final consumption goods). 
 In equilibrium, aggregate demand is equal to aggregate supply in each market, including markets of production factors.
     
 Consider an economy two consumers with Cobb-Douglas utility function
@@ -669,15 +670,14 @@ An allocation $(x_1^A, x_1^B, x_2^A, x_2^B, K_1, L_1, K_2, L_2)$ and a price vec
 
 2. Given prices, $(K_j, L_j)$ solves the PMP for each firm $j\in \{1,2\}.$
 
-3. Prices are such that markets clear:
+3. Prices $p$ are such that markets (for factors and consumption goods) clear:
     $$
     \begin{aligned}
-    \text{Consumption goods:   }\sum_i x^i_j &= y_j \equiv F^j(K_j, L_j), \quad \forall j=1,2, \\
-    \text{Capital good:   }\sum_j K_j &= k^A + k^B, \\
-    \text{Labor good:   }\sum_j L_j &= l^A + l^B.
+    \text{Consumption goods:   }\sum_i x^i_j(p) &= y_j \equiv F^j(K_j, L_j), \quad \forall j=1,2, \\
+    \text{Capital good:   }\sum_j K_j(p) &= k^A + k^B, \\
+    \text{Labor good:   }\sum_j L_j(p) &= l^A + l^B.
     \end{aligned}
     $$
-In other words, we are in an equilibrium if ever agent optimizes and markets clear. Let us first consider the consumers, who face the UMP.
 
 ## UMP
 
@@ -702,10 +702,10 @@ $$
     
 Moreover:
 $$
-MRS_{1,2}^i = \frac{p_1}{p_2},\quad \forall i\in\{A,B\}.
+MRS_{2,1}^i = \frac{p_1}{p_2},\quad \forall i\in\{A,B\},
 $${#eq-MRS_i}
-    
-@eq-MRS_i implies:
+
+the **exchange efficiency** condition, which can be rewritten as:
     
 $$
 \frac{x^i_2}{x^i_1} = \frac{p_1}{p_2} \quad \forall i, 
@@ -751,15 +751,23 @@ $$
 p_j F_K^j = r, \quad p_j F_L^j = w.
 $${#eq-PMPj_FOC}
 
+This implies **production efficiency**: the MRTS between capital and labor is equalized across firms:
+$$
+\begin{aligned}
+\frac{F_L^1}{F_K^1} &= \frac{F_L^2}{F_K^2} = \frac{w}{r} \\
+\MRTS_{K,L}^1 &= \MRTS_{K,L}^2.
+\end{aligned}
+$$
+
 Hence: 
 $$
 \begin{aligned}
 \frac{p_1}{p_2} &= \frac{F_K^2}{F_K^1} = \frac{F_L^2}{F_L^1} \\
-\frac{p_1}{p_2}&= MRT_{1,2}^K = MRT_{1,2}^L.
+\frac{p_1}{p_2}&= MRT_{1,2}^K = MRT_{2,1}^L.
 \end{aligned}
 $${#eq-prices_PMP}
 
-The $MRT^K_{1,2}$ is the rate at which the economy transforms the second good into the first good using capital. Observe that @eq-MRS_i and @eq-prices_PMP together say that at an optimum, the economy transforms one good for the other at the rate consumers are willing to substitute one for the other. From @eq-prices_UMP and @eq-prices_PMP and the fact that $a+b=1,$ we have:
+The $MRT^K_{1,2}$ is the rate at which the economy transforms the second good into the first good using capital. Observe that @eq-MRS_i and @eq-prices_PMP together say that at an optimum, the economy transforms one good for the other at the rate consumers are willing to substitute one for the other (using any factor). From @eq-prices_UMP and @eq-prices_PMP and the fact that $a+b=1,$ we have:
 $$
 \begin{aligned}
 \frac{p_1}{p_2} = \frac{F_K^2}{F_K^1} &= \frac{K_2^b L_2^a}{K_1^a L_1^b} \\
@@ -798,7 +806,7 @@ Factor prices can then be determined from @eq-PMPj_FOC. The equilibrium allocati
 
 # The social planner's problem (SPP)
 
-In a centralized economy, the benevolent social planner allocates resources in such a way that maximizes a social welfare function (weighted sum of utilities) subject to some feasibility constraints. A solution to the social planner's problem is Pareto efficient. 
+In a centralized economy, the benevolent social planner allocates resources in such a way that maximizes a social welfare function (weighted sum of utilities) subject to feasibility constraints. A solution to the social planner's problem is Pareto efficient. 
 
 ## The SPP in a pure-exchange economy
 Mathematically, the social planner solves:
@@ -809,7 +817,7 @@ $$
 \end{aligned}
 $${#eq-SPP_exchange}
 
-where $w_i$ are social welfare weights. Note that there are no prices in the social planner's problem (SPP), why is that? In a decentralized economy, selfish interest and prices guide individuals to efficient decisions. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently. 
+where $w_i$ are social welfare weights. Note that there are no prices in the social planner's problem (SPP), why? In a decentralized economy, selfish interest and prices guide individuals to efficient allocations. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently. 
 
 ## The PEA in a pure exchange economy
 
