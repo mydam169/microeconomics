@@ -181,7 +181,7 @@ $${#eq-optimal-SR-supply}
 
 To determine the short-run supply curve of the firm, we need to understand the nature of the fixed costs represented by $c$. In the short-run, firms typically do not try to make positive profits. They only need to make enough to cover non-sunk costs (variable costs plus non-sunk fixed costs). 
 
-For simplicity, suppose that $c$ is non-sunk. The total cost given above is the total non-sunk cost. The average total cost is thus equal to the average non-sunk total cost (ANSC).The stays in business so long as the market price is above the ANSC:
+For simplicity, suppose that $c$ is non-sunk. The total cost given above is the total non-sunk cost. The average total cost is thus equal to the average non-sunk total cost (ANSC). The firm stays in business so long as the market price is above the ANSC:
 $$
 \begin{aligned}
 \pi(q^*) > 0 &\iff p > \frac{C(q^*)}{q^*} \\
