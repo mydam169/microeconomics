@@ -2,7 +2,7 @@
 title: "Chapter 3. Equlibrium"
 author:
     name: My Dam
-    email: my-thi-tra.dam@universite-paris-saclay.fr
+    email: my.dam169@gmail.com
 number-sections: true
 execute:
     echo: false
@@ -57,11 +57,11 @@ In this chapter we will be examining market equilibria. We shall begin by derivi
 
 Our markets in this chapter are perfectly competitive, their features are:
 
-* Fragmentation: large number of producers and consumers whose decisions (to produce or consume) do not influence market prices of the goods. In other words, all market participants are price-takers
+* Fragmentation: large number of producers and consumers whose decisions (to produce or consume) do not influence market prices. In other words, all market participants are price-takers
 
 * Undifferentiated products: products of all firms in the same industry are regarded as identical by consumers
 
-* Perfect information: information on prices are transparent and freely accessible by consumers
+* Perfect information: information on prices are transparent and freely accessible to consumers
 
 * Free entry and exit: in the long run (LR), firms can freely enter and exit 
 
@@ -87,7 +87,7 @@ Observe that the PMP includes the CMP as a first step.
 
 According to the KT conditions, either 
 
-* we have a corner solution $q=0$, or
+* We have a corner solution $q=0$, or
 
 * We have an interior solution $q>0$ satisfying the FOC:
 
@@ -98,7 +98,7 @@ According to the KT conditions, either
     
 * Observe that for a price-taking firm, the marginal revenue is the market price of the good (as we shall see later, for a firm with market power, the marginal revenue is _less_ than the price)
 
-* The FOC above implies that the firm produces up to a point where the marginal revenue (marginal benefit) is equal to the marginal cost. 
+* The FOC above implies that the firm produces up to the point where the marginal revenue (marginal benefit) is equal to the marginal cost. 
     
 ## Sufficient condition
 
@@ -117,14 +117,14 @@ According to the KT conditions, either
 ## Examples
 
 ::: {#exm-ESCex}
-Let us solve the PMP of a price-taking firm in the output market (and inputs market). Assume that it has a Cobb-Douglas production function defined by $q(L, K) = L^{1/2}K^{1/2}$. The factor prices are $w=\$40$ and $r=\$10$ as before.
+Let us solve the PMP of a price-taking firm with Cobb-Douglas production function $f(L, K) = L^{1/2}K^{1/2}$. The factor prices are $w=\$40$ and $r=\$10$ as before.
 
 * Step 1: Solve the CMP:
 
     $$
     \begin{aligned}
     &\min_{K,L} 40L + 10K \\
-    \text{s.t. } &q(L, K) = L^{1/2}K^{1/2} \geq q, 
+    \text{s.t. } &f(L, K) = L^{1/2}K^{1/2} \geq q, 
     \end{aligned}
     $$
     
@@ -137,19 +137,18 @@ Let us solve the PMP of a price-taking firm in the output market (and inputs mar
     $$
 
 
-* Step 2: Substitute $C(q)$ obtained from the CMP into the PMP so that this problem reads:
+* Step 2: Substitute $C(q)$ obtained from the CMP into the PMP and solve it:
 
     $$
     \max_{q\geq0} \pi(q) = pq - 40q = (p - 40)q. 
     $$
     
-    * Clearly if $p<40$ the firm should shut down
-    
-    * If $p\geq 40$, the firm produces as much as possible since the profit is then incresing in output
-    
-    * We thus obtain a perfectly elastic individual supply curve
 
-    * Note that this is the long-run individual supply curve since all inputs are variable. One can also verify that the long-run cost function does not have a fixed cost. 
+We consider two cases:\
+
+* If $p<40$ the firm shuts down
+    
+* If $p\geq 40$, the firm produces as much as possible since the profit is then incresing in output
 
 ::: {#fig-PEScurve fig-cap="A perfectly elastic long-run supply curve"}
 ```{python}
@@ -168,20 +167,21 @@ plt.show()
 :::
 :::
 
+Note that this is the long-run individual supply curve since all inputs are variable. One can also verify that the long-run cost function does not have a fixed cost. 
+
 ::: {#exm-linearSC}
-Suppose we have obtained a convex cost function for the firm of the form:
+Suppose we have obtained the following cost function for the firm (in the short run):
 $$
 C(q) = 0.5 a q^2 + bq + c, 
 $$
-where $a$, $b$ and $c$ are strictly positive constants. Observe that this is a short-run cost function since fixed costs ($c$) are present. 
-The profit maximizing condition for the firm is:
+where $a$, $b$ and $c$ are strictly positive constants. The profit maximizing condition is:
 $$
 C'(q) = a q + b = p \iff q = \frac{p - b}{a}. 
 $${#eq-optimal-SR-supply}
 
-To determine the short-run supply curve of the firm, we need to understand the nature of the fixed costs represented by $c.$ In the short-run, firms are typically do not try to make positive profits, i.e., they do not need to sell each unit for at least their average total cost. Firms only need to recuperate the non-sunk part of the fixed cost. __Sunk__ costs are fixed costs that cannot be recovered by the firm and thus should not affect its decision on future output. For example, advertising costs once spent cannot be recovered. Lease payments, on the other hand, are __non-sunk__ fixed costs can be recovered by sublease if the firm eventually decides to shut down.
+To determine the short-run supply curve of the firm, we need to understand the nature of the fixed costs represented by $c$. In the short-run, firms typically do not try to make positive profits. They only need to make enough to cover non-sunk costs (variable costs plus non-sunk fixed costs). 
 
-For simplicity, suppose that $c$ is non-sunk. The average total cost in this case is equal to the average non-sunk total cost (ANSC).The firm produces so long as the market price is above the ANSC:
+For simplicity, suppose that $c$ is non-sunk. The total cost given above is the total non-sunk cost. The average total cost is thus equal to the average non-sunk total cost (ANSC).The stays in business so long as the market price is above the ANSC:
 $$
 \begin{aligned}
 \pi(q^*) > 0 &\iff p > \frac{C(q^*)}{q^*} \\
@@ -192,7 +192,9 @@ $$
 \end{aligned}
 $${#eq-positive-prof-cond}
 
-Observe that the last line follows from the fact that $q^* > 0$ if and only if $p > b$ in view of @eq-optimal-SR-supply. This condition tells us that in the SR, the firm suffers from a fixed cost ($c$), which might prevent it from earning positive profits even if it is operating optimally. Note that $p > b + \sqrt{2ca}$ is equivalent to $q > \sqrt{2c/a}.$
+Note that the third line follows from the condition for $q^* > 0$ implied by @eq-optimal-SR-supply. 
+Observe that the firm produce so long as $p>b$, but it only makes positive profits if $p > b + \sqrt{2ca}$.
+This condition tells us that in the SR the firm might suffer from a loss even when it is operating optimally. 
 
 
 ::: {#fig-profFunc fig-cap="Profit as a function of market price"}
@@ -249,9 +251,7 @@ plt.show()
 
 ## Long-run vs short-run firm's supply
 
-The profit maximizing condition for a competitive firm is that its marginal cost is equal to the market price. This is common for the firm both in the long run and in the short run. The difference lies in the shutdown condition. 
-
-In the short run, firms shutdown if the price cannot cover the average non-sunk costs (ANSC), implying that supply will be:
+To maximize profits, firms choose output where marginal revenue equals marginal cost. This is common for both the long run and the short run. Nevertheless, the shutdown condition differs between the two time horizons. In the short run, firms shutdown if the price cannot cover the average non-sunk costs (ANSC), implying that supply will be:
 
 * zero for all levels of output for which the marginal cost (which is equal to the market price under profit maximizing) is _below_ the ANSC curve, and
 * the part of the marginal cost that is _above_ the ANSC (when output is positive) 
@@ -319,8 +319,8 @@ def MC(q):
 ANSC_min = q[np.argmin(ANSC(q))]
 SRAC_min = q[np.argmin(SRAC(q))]
 
-plt.plot(q, ANSC(q), label='ANSC')
-plt.plot(q, LRAC(q), label='LRAC')
+# plt.plot(q, ANSC(q), label='ANSC')
+plt.plot(q, LRAC(q), label='LRAC', color='orange')
 plt.plot(q, MC(q), label='MC = LR Supply', color='k', lw=3)
 
 plt.ylim([1, 5])
@@ -337,14 +337,14 @@ plt.grid(None)
 
 # Partial Equilibrium
 
-The equilibrium of a market is a vector of price and quantity for which the market supply and demand are equal. In other words, the equilibrium price is the price that clears the market by equating demand and supply. We have already discussed the market demand curve in the first lecture. We now examine the supply side of the market for which there exists differences between the long run and the short run. 
+The equilibrium of a market is a vector of price and quantity for which the market supply and demand are equal. The equilibrium price is the price that clears the market by equating demand and supply. 
 
 ## Short-run equilibrium
 
-In the short run, the market supply curve is an horizontal aggregation of individual supplies. In other words, to construct the SR market supply curve, one adds up the quantities supplied by all the firms in the market at each given price. The market demand curve is constructed in the same manner. By equating supply and demand, we can determine the market equilibrium.
+In the short run, the market supply curve is a horizontal aggregation of individual firms' supply curves. In other words, to construct the SR market supply curve, one adds up the quantities supplied by all the firms in the market at each given price. The market demand curve is constructed in the same manner. By equating supply and demand, we can determine the market equilibrium.
 
 ::: {#exm-SREQ}
-Suppose the market demand is given by $q^D(p) = 100 - 2p.$ Consider a market with $N$ identical firms, each facing the same cost function $C(q)=10−5q+2q^2.$
+Suppose the market demand is given by $q^D(p) = 100 - 2p.$ Consider a market with $N$ identical firms, each facing the same cost function $C(q)=10−5q+2q^2$ with a non-sunk fixed cost equal to $5$.
 In view of @exr-SRSupply, the SR market supply is given by:
 $$
 q^S(p) =
@@ -353,14 +353,14 @@ q^S(p) =
 \end{cases}
 $$
 
-In equilibrium $q^S(p) = q^D(p)$:
+In equilibrium, $q^S(p) = q^D(p)$:
 $$
 \begin{aligned}
 100 - 2p &= N(p/4 + 5/4) \\
 p &= \frac{5(80 - N)}{8 + N}.
 \end{aligned}
 $$
-Hence the market price is a decreasing function of the number of firms. Knowing the shutdown price, we can determine the maximum number of firms that can exist in this market:
+Hence the market price is a decreasing function of the number of firms. Knowing the shutdown price, we can determine the maximum number of firms in this market:
 $$
 \frac{5(80 - N)}{8 + N} = 1.32 \iff N = 61.6.
 $$
@@ -376,11 +376,11 @@ Hence given the number of firms in the market, we can determine its SR supply cu
 
 ## Long-run equilibrium
 
-In a competitive market, firms can freely enter or exit. If there is an opportunity to make __economic profits__ in a market, firms will enter, pushing down market prices and drive away profits. Note that making profits does not imply making economic profits. Economic profits take into account the opportunity cost of the firm. For instance, if leaving money in a bank earns an interest of 5% per month and the firm is generating less than 5% return on investment, it is not making economic profits even though it is making profits. A long-run equilibrium is reached when the following conditions are satisfied:
+In a competitive market, firms can freely enter or exit. If there is an opportunity to make profits in a market, firms will enter, pushing down market prices and drive away profits. In other words, firms make zero (economic) profits in the long run. A long-run equilibrium is thus characterized by the following conditions:
 
 1. Every firm is __maximizing profits__: $p=MC(q)$
-2. Each firm makes __zero economic profits__: $p=AC(q)$. This means that firms make the same profits in other competitive markets (hence no incentives for other firms to enter or for existing firms to exit)
-3. The market clears: market demand equal to LR market supply at the equilibrium price
+2. Each firm makes __zero economic profits__: $p=AC(q)$
+3. The market clears: market demand equal to market supply at the equilibrium price
 
 Hence in a LR equilibrium, firms are doing the best they can do in the market which they have no incentives to leave and no other firms have incentives to enter because of zero economic profits, and the price is such that supply is equal to demand. 
 
@@ -391,7 +391,7 @@ Consider a perfectly competitive industry populated by identical firms with the 
 
 Denote the LR equilibrium quantity, price and market size $q^*$, $p^*$ and $N^*,$ respectively.
 
-* Since each firm in the market sets $MC(q_i^*) = AC(q_i^*)$:
+* Since each firm in the market sets $MC(q_i^*) = AC(q_i^*)$, we have:
     $$
     \begin{aligned}
     -5 + 4 q^*_i &= \frac{10}{q_i^*} - 5 + 2 q_i^* \\
