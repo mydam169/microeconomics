@@ -452,6 +452,7 @@ In our case $N=2$ and $L=2$.
 Observe that any point inside or on the edge of the Edgeworth box is a feasible allocation.
 
 ::: {#def-GE}
+
 ## General equilibrium in an exchange economy
 
 We say that a price vector $p\in\mathbb{R^L_{++}}$ and an allocation $x\in\mathbb{R^L_{+}}$ constitute a competitive general equilibrium in an exchange economy if:
@@ -624,17 +625,60 @@ $$
 \end{aligned}
 $$
     
-Note that only three of the four equations from the system above are linearly independent (one degree of freedom), implying that solutions are not unique.
-One immediate solution is $\bar{e} = \bar{x}$. In other words, if we give each individual a PEA, they will stick to it.
-Observe that
+
+Substituting the values of the new PEA into the above system, we obtain:
+
 $$
 \begin{aligned}
-e &= (100, 350, 100, 50) \\
-\bar{e} &= (100, 200, 100, 200).
+\bar{e}_1^A + 2\bar{e}_2^A &= 100 + 2(200) = 500, \\
+\bar{e}_1^B + 2\bar{e}_2^B &= 100 + 2(200) = 500, \\
+\bar{e}_1^A + \bar{e}_1^B &= 100 + 100 = 200, \\
+\bar{e}_2^A + \bar{e}_2^B &= 200 + 200 = 400.
 \end{aligned}
 $$
-Thus one way to redistribute is to tax $A$ an amount equivalent to 150 units of the first good and give them to $B$. 
-:::
+
+In matrix form:
+
+$$
+\begin{bmatrix}
+1 & 2 & 0 & 0 \\
+0 & 0 & 1 & 2 \\
+1 & 0 & 1 & 0 \\
+0 & 1 & 0 & 1
+\end{bmatrix}
+\begin{bmatrix}
+\bar{e}_1^A \\
+\bar{e}_2^A \\
+\bar{e}_1^B \\
+\bar{e}_2^B
+\end{bmatrix}
+=
+\begin{bmatrix}
+500 \\
+500 \\
+200 \\
+400
+\end{bmatrix}.
+$$
+
+The determinant of the matrix is $0$, implying that the system has infinitely many solutions. Let $\bar{e}_1^A = \alpha \in [0, 200]$ be a free variable. Then we can solve for the other three unknowns in terms of $\alpha$. In particular, we have:
+$$
+\begin{aligned}
+\bar{e}_2^A &= 250 - 0.5 \alpha, \\
+\bar{e}_1^B &= 200 - \alpha, \\
+\bar{e}_2^B &= 150 + 0.5 \alpha.
+\end{aligned}
+$$
+
+For example, if $\alpha = 50$, then: 
+$$
+\begin{aligned}
+\bar{e}_1^A &= 50, \\
+\bar{e}_2^A &= 225, \\
+\bar{e}_1^B &= 150, \\
+\bar{e}_2^B &= 175.
+\end{aligned}
+$$
 
 # General equilibrium with production
 
@@ -755,11 +799,11 @@ This implies **production efficiency**: the MRTS between capital and labor is eq
 $$
 \begin{aligned}
 \frac{F_L^1}{F_K^1} &= \frac{F_L^2}{F_K^2} = \frac{w}{r} \\
-\MRTS_{K,L}^1 &= \MRTS_{K,L}^2.
+MRTS_{K,L}^1 &= MRTS_{K,L}^2.
 \end{aligned}
 $$
 
-Hence: 
+Hence:
 $$
 \begin{aligned}
 \frac{p_1}{p_2} &= \frac{F_K^2}{F_K^1} = \frac{F_L^2}{F_L^1} \\
@@ -981,17 +1025,7 @@ where $x_i$ and $y_i$ the amounts of good $x$ and good $y$ that individual $i$ c
 4. Does the first welfare theorem hold for this economy? 
 :::
 
-::: {#exr-SWT}
-Show that in @exm-EQM-SWT, the general way to achieve the PEA as a CEA is by redistributing initial resources such that:
-$$
-\begin{aligned}
-e_1^A &= z \in [0, 200], \\
-e_2^A &= 400 - 2z, \\
-e_1^B &= 200 - z, \\
-e_2^B &= 2z.
-\end{aligned}
-$$
-:::
+
 
 
 
