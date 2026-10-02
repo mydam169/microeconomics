@@ -564,9 +564,9 @@ The equilibrium we have found in the previous section is called a competitive eq
 
 Economic decisions are all about efficient allocation of resources. Economic problems exist because resources are scarce. A natural question arises, then, is the __competitive equilibrium allocation (CEA)__ obtained by each one acting in their best interest, efficient?
 
-In economics, the notion of efficiency of interest is Pareto efficiency. We say that an allocation is __Pareto efficient__ if there exists no other allocation that is strictly better off for someone without being worse off for someone else. In other words, an efficient allocation is one that cannot be improved for someone without hurting someone else: any change to it penalizes at least an individual. In a market with no market failures, it can be shown that under mild conditions, a CEA is Pareto efficient. This is the first welfare theorem (FWT). Graphically, the Pareto efficient allocation lies at the tangency of two ICs in the Edgeworth box. This means that such allocations are not unique, and in fact the locus of all __Pareto efficient allocations (PEA)__ forms the so-called __contract curve__. How come we found only one of them in the previous example? This is because which Pareto efficient allocation can be achieved by market forces alone depends on the initial endowment. If we wish to alter the outcome, we need start differently. This is the idea behind the second welfare theorem (SWT).
+In economics, the notion of efficiency of interest is Pareto efficiency. We say that an allocation is __Pareto efficient__ if there exists no other allocation that is strictly better off for someone without being worse off for someone else. In other words, an efficient allocation is one that cannot be improved for someone without hurting someone else: any change to it penalizes at least an individual. In a market with no market failures, it can be shown that under mild conditions, a CEA is Pareto efficient. This is the first welfare theorem (FWT). Graphically, the Pareto efficient allocation lies at the tangency of two ICs in the Edgeworth box. This means that such allocations are not unique, and in fact the locus of all __Pareto efficient allocations (PEA)__ forms the so-called __contract curve__. How come we found only one of them in the previous example? This is because which Pareto efficient allocation can be achieved by market forces alone depends on the initial endowment (in addition to market prices). If we wish to alter the outcome, we need to modify the starting point. This is the idea behind the second welfare theorem (SWT).
 
-Another natural question that one might ask is why would an economy prefer a different Pareto efficient allocation? Why bother redistributing resources to incentivise the market to achieve a different allocation at all? It is because on top of efficiency, societies also care about equality. If one starts out with abundant resources, then market forces alone tend to lead to an efficient allocation that gives more to those with more initial resources. In other words, competitive market forces tend to reinforce existing inequality.
+Another natural question that one might ask is why would an economy prefer a different Pareto efficient allocation? Why bother redistributing resources to incentivize the market to achieve a different allocation at all? It is because on top of efficiency, societies also care about equality. Market forces alone tend to lead to an efficient allocation that gives more to those with more initial resources: competitive market forces tend to reinforce existing inequality.
 
 To sum up, the FWT tells us that when there are no market failures, the CEA is Pareto efficient. The SWT says that any Pareto efficient, i.e., any point on the contract curve, can be obtained by redistributing initial resources and then letting the market work (again under some conditions). Let us state these important results formally.
 
@@ -661,7 +661,7 @@ $$
 \end{bmatrix}.
 $$
 
-The determinant of the matrix is $0$, implying that the system has infinitely many solutions. Let $\bar{e}_1^A = \alpha \in [0, 200]$ be a free variable. Then we can solve for the other three unknowns in terms of $\alpha$. In particular, we have:
+The determinant of the matrix is $0$ (its columns are linearly dependent; it has rank $3$ more precisely), implying that the system has infinitely many solutions. Let $\bar{e}_1^A = \alpha \in [0, 200]$ be a free variable. Then we can solve for the other three unknowns in terms of $\alpha$. In particular, we have:
 $$
 \begin{aligned}
 \bar{e}_2^A &= 250 - 0.5 \alpha, \\
@@ -679,8 +679,52 @@ $$
 \bar{e}_2^B &= 175.
 \end{aligned}
 $$
+:::
 
-# General equilibrium with production
+# The social planner's problem (SPP)
+
+In a centralized economy, the benevolent social planner allocates resources in such a way that maximizes a social welfare function (weighted sum of utilities) subject to feasibility constraints. A solution to the social planner's problem is Pareto efficient. This gives use a practical way to check whether a competitive equilibrium allocation is Pareto efficient.
+
+## The SPP in a pure-exchange economy
+Mathematically, the social planner solves:
+$$
+\begin{aligned}
+&\max_{(x^i)_{i\in I}} \sum_{i\in I} w^i u^i(x^i) \\
+&\text{s.t. } \sum_{i\in I} x^i_j \leq \sum_{i\in I} e^i_j, \quad \forall j\in J,
+\end{aligned}
+$${#eq-SPP_exchange}
+
+where $w_i$ are social welfare weights. Note that there are no prices in the social planner's problem (SPP), why? In a decentralized economy, selfish interest and prices guide individuals to efficient allocations. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently. 
+
+## The PEA in a pure exchange economy
+
+The KKT conditions for the SPP's problem:
+$$
+\begin{aligned}
+    w^i u^i_j(x^i) &= \lambda_j, \quad \forall j\in J, \: i\in I, \\
+    \sum_{i\in I} x^i_j &= \sum_{i\in I} e^i_j, \quad \forall j\in J.
+\end{aligned}
+$$
+
+Consumers have identical preferences. Hence:
+$$
+\begin{aligned}
+w^A u^A_j(x^A) &= w^B u^B_j(x^B) = \lambda_j\\
+w^A x_j^A &= w^B x_j^B, \\
+\implies \frac{x_j^A}{x_j^B} &= \frac{w^A}{w^B}, \quad j=1,2.
+\end{aligned}
+$$
+
+This together with the binding feasibility constraints characterize the PEA for this economy:
+    
+$$
+x^A = w^A e, \quad x^B = w^B e.
+$$
+    
+Thus in a pure exchange economy the PEA is proportional to the social weight of the individual. If the social weights are equal, the aggregate endowments will be divided equally among the consumers. In general the results will be different if social weights are different or preferences are different among consumers.
+    
+
+# Extension: General equilibrium with production
 
 ## Adding production to the economy
 
@@ -723,7 +767,7 @@ An allocation $(x_1^A, x_1^B, x_2^A, x_2^B, K_1, L_1, K_2, L_2)$ and a price vec
     \end{aligned}
     $$
 
-## UMP
+### UMP
 
 Consumer $i$ solves:
 $$
@@ -782,7 +826,7 @@ $${#eq-prices_UMP}
 
 Next we consider firms, who seek to maximize profits.
 
-## PMP
+### PMP
 
 Each firm $j=1,2$ solves their profit maximization problem (PMP):
     
@@ -822,7 +866,7 @@ $${#eq-rels_K}
 
 We will now solve for the CEA of this economy using the market clearing conditions.
 
-## The CEA
+### The CEA
 
 Combining @eq-rels_K and the market clearing condition for the capital market $K_1 + K_2 = k,$ we can solve for the optimal values of capital. In particular,
 
@@ -848,55 +892,11 @@ $${#eq-price_x1}
     
 Factor prices can then be determined from @eq-PMPj_FOC. The equilibrium allocations $x^A, x^B$ can be determined by substituting factor and consumption prices into @eq-demand_conso.
 
-# The social planner's problem (SPP)
 
-In a centralized economy, the benevolent social planner allocates resources in such a way that maximizes a social welfare function (weighted sum of utilities) subject to feasibility constraints. A solution to the social planner's problem is Pareto efficient. 
-
-## The SPP in a pure-exchange economy
-Mathematically, the social planner solves:
-$$
-\begin{aligned}
-&\max_{(x^i)_{i\in I}} \sum_{i\in I} w^i u^i(x^i) \\
-&\text{s.t. } \sum_{i\in I} x^i_j \leq \sum_{i\in I} e^i_j, \quad \forall j\in J,
-\end{aligned}
-$${#eq-SPP_exchange}
-
-where $w_i$ are social welfare weights. Note that there are no prices in the social planner's problem (SPP), why? In a decentralized economy, selfish interest and prices guide individuals to efficient allocations. In a centralized economy, the social planner knows what is best and does not need prices as signals to allocate resources efficiently. 
-
-## The PEA in a pure exchange economy
-
-The KKT conditions for the SPP's problem:
-$$
-\begin{aligned}
-    w^i u^i_j(x^i) &= \lambda_j, \quad \forall j\in J, \: i\in I, \\
-    \sum_{i\in I} x^i_j &= \sum_{i\in I} e^i_j, \quad \forall j\in J.
-\end{aligned}
-$$
-
-Consumers have identical preferences. Hence:
-$$
-\begin{aligned}
-w^A u^A_j(x^A) &= w^B u^B_j(x^B) = \lambda_j\\
-w^A x_j^A &= w^B x_j^B, \\
-\implies \frac{x_j^A}{x_j^B} &= \frac{w^A}{w^B}, \quad j=1,2.
-\end{aligned}
-$$
-
-This together with the binding feasibility constraints characterize the PEA for this economy:
-    
-$$
-x^A = w^A e, \quad x^B = w^B e.
-$$
-    
-Thus in a pure exchange economy the PEA is proportional to the social weight of the individual. If the social weights are equal, the aggregate endowments will be divided equally among the consumers. In general the results will be different if social weights are different or preferences are different among consumers.
-    
 ## The SPP in a production economy
 
 According to the FWT the CEA in the production economy also Pareto efficient. Let us show that the CEA is also a PEA, i.e., that the FWT is verified in this production economy.
 A PEA consists of a vector of consumption goods and factors of production $(x_i)_{i\in I}, (K_j, L_j)_{j=J}$ that maximizes aggregate welfare subject to feasibility constraints.
-
-## The PEA in a production economy
-
 The social planner's problem for a production economy reads:
 
 $$
