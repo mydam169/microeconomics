@@ -190,44 +190,6 @@ The monopolist does not have a supply curve since it is a price maker. Indeed, r
 
 Monopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). Increasing the price by 1% would reduce sales by *less than* 1% for the monopolist, thereby increasing revenues. At the same time, reducing output would also lower costs. As a result, the profit-maximizing output cannot be on the inelastic portion of the demand curve because once the firm is there it can increase profits by reducing output (and therefore increasing price). Thus the monopolist will always operate on the elastic portion of the demand curve.
 
-<!-- ::: {#fig-Elasticity fig-cap="Going from the left to the right, the demand curve becomes less and less elastic _even if_ its slope is constant."}
-```{python}
-a = 4
-b = 1
-q = np.linspace(0, 10, 100)
-def demand(q):
-    return a - b * q
-def elas(q):
-    return (-1 / b) * demand(q) / q
-def rev(q):
-    return demand(q) * q
-plt.figure(figsize=(6, 4))
-# elastic demand
-q1 = np.linspace(0, a/(2*b), 50)
-plt.plot(q1, demand(q1), color='green', lw=2, label='Elastic demand')
-# inelastic demand
-q2 = np.linspace(a/(2*b), a/b, 50)
-plt.plot(q2, demand(q2), color='r', lw=2, label='Inelastic demand')
-# elasticity
-plt.plot(q, elas(q), label="Price elasticity of demand")
-# plt.plot(q, demand(q), label="Demand $p(q)$", color='k', lw=1.5)
-plt.plot(q, rev(q), label="Revenue $p(q)q$", color='gray')
-plt.hlines(y=-1, xmin=0, xmax=q.max(), linestyle='dotted', color='gray')
-plt.hlines(y=0, xmin=0, xmax=q.max(), color='gray', lw=0.5)
-plt.vlines(x=a/(2*b), ymin=-5, ymax=5, color='gray', linestyle='dotted')
-
-
-plt.xlabel('Quantity', loc='right')
-plt.ylabel('Price, Elasticity, Revenue', loc='top')
-plt.ylim([-5, 5])
-plt.xlim([0, a/b])
-plt.xticks([])
-plt.yticks([-1, 0])
-plt.grid(None)
-plt.legend()
-plt.show()
-```
-::: -->
 
 # The Lerner index and the inverse elasticity pricing rule
 
