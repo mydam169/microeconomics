@@ -188,9 +188,9 @@ The monopolist does not have a supply curve since it is a price maker. Indeed, r
 
 ### The monopolist operates in the inelastic portion of the demand curve
 
-Monopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). Increasing the price by 1% would reduce sales by *less than* 1% for the monopolist, thereby increasing revenues. It will then have incentives to reduce output (raise prices) so long as it is on the inelastic part of the demand curve.
+Monopolies tend to emerge in markets with few or no close substitutes where demands are relatively inelastic. It is thus tempting to think that monopolists operate on the part of the demand curve where consumers are most insensitive to a variation in price But this might not be profit maximizing. Suppose the firm is operating on the inelastic portion of the demand curve, this means that price-elasticity of demand is less than one (in absolute value). Increasing the price by 1% would reduce sales by *less than* 1% for the monopolist, thereby increasing revenues. At the same time, reducing output would also lower costs. As a result, the profit-maximizing output cannot be on the inelastic portion of the demand curve because once the firm is there it can increase profits by reducing output (and therefore increasing price). Thus the monopolist will always operate on the elastic portion of the demand curve.
 
-::: {#fig-Elasticity fig-cap="Going from the left to the right, the demand curve becomes less and less elastic _even if_ its slope is constant."}
+<!-- ::: {#fig-Elasticity fig-cap="Going from the left to the right, the demand curve becomes less and less elastic _even if_ its slope is constant."}
 ```{python}
 a = 4
 b = 1
@@ -227,7 +227,7 @@ plt.grid(None)
 plt.legend()
 plt.show()
 ```
-:::
+::: -->
 
 # The Lerner index and the inverse elasticity pricing rule
 
@@ -304,7 +304,7 @@ implying thatthat $p^M > 0$ if and only if $\epsilon > 1:$ the monopolist operat
 
 # Multipliant monopoly and cartel
 
-A mulitpliant monopoly is a monopoly producing the same good in different factories (for example across the globe to cut costs). In each factory, the firm might face a different cost function.
+A mulitpliant monopoly is a monopoly producing the same good in different factories. In each factory, the firm might face a different cost function.
 
 Consider a monopolist producing the *same good in two different plants* (factories) and denote:
 
@@ -525,12 +525,12 @@ A monopoly that arises and persists thanks to economies of scale (decreasing ave
 
 If the monopoly is not a natural monopoly, i.e., if they maintain their dominant position by anticompetitive or restrictive practices (e.g., exclusive dealing, tying, bundling, predatory pricing, etc.), then the general public approach is to try and break them by using antitrust laws.
 
-If it is a natural monopoly, then the government might attempt to regulate.
-Now the government faces a dilemma since it is more efficient for a single firm to serve the market thanks to economies of scale.
+If it is a natural monopoly, then the government might attempt to regulate it.
+Now the government faces a dilemma since it is more efficient for a single firm to serve the market thanks to economies of scale (it does not make sense to open up the market to competition).
 For a natural monopoly the average cost is declining in output. Recall that for output levels for which the average cost is declining, the marginal cost is _less_ than the average cost. 
 If the government requires that the natural monopolist sets price equal to the marginal cost as if it were operating in a perfectly competitive market, it would incur a loss since this price would be below its average cost.
 
-One public solution is to allow natural monopolists to charge different prices to different groups of customers (e.g., different electricity/water rates depending on whether customers are businesses or households) in such a way that the losses incurred would be offset by the positive profits. This approach follows the so-called Ramsey-Boiteux's rule, which proposes charging higher prices to groups with less elastic demand.
+One public solution is to allow natural monopolists to charge different prices to different groups of customers (e.g., different electricity/water rates depending on whether customers are businesses or households) in such a way that the losses incurred by serving one group of customers would be offset by profits earned from serving another group. This approach follows the so-called Ramsey-Boiteux's rule, which proposes charging higher prices to groups with less elastic demand in order to minimize the dead weight loss.
 
 # Monopsony
 
@@ -557,7 +557,7 @@ The firm faces only linear labor cost $w(L)L$ and its profits are given by:
 $$
 \pi = pq - w(L)L, 
 $$
-where $p$ is the price of the good produced by the firm
+where $p$ is the price of the good produced by the firm using labor.
 
 Note that $w$ is increasing in $L$: the higher demand for labor, the higher the wage. In other words, the firm is not a price-taker in the labor market: it has influences over the wage by deciding on the number of workers to hire.
 
@@ -571,17 +571,16 @@ $$
 \pi'(L) = 0 \iff pf'(L) = w(L) + w'(L)L.
 $${#eq-FOC_monopsony}
     
-Observe that the LHS of @eq-FOC_monopsony represents the marginal revenue brought about but an additional worker ($f'$ is the marginal output).
+Observe that the LHS of @eq-FOC_monopsony represents the marginal revenue brought about by an additional worker ($f'$ is the marginal output).
 It is often referred to as the **marginal revenue product** of labor ($MRP$). 
     
-The RHS of @eq-FOC_monopsony captures the marginal cost or the **marginal expenditure** on labor ($ME$). As the labor market becomes scarce, employing an additional worker raises the wage to $w(L)$. The increased wage $w'>0$ must be enjoyed by all the workers, which is captured by the second term. 
-An analogy with the monopoly might help us remember these terms. In particular:
+The RHS of @eq-FOC_monopsony captures the marginal cost or the **marginal expenditure** on labor ($ME$). Employing an additional worker raises the wage to $w(L)$. The increased wage $w'>0$ must be enjoyed by all the workers, which is captured by the second term. 
+
+An analogy with the monopoly might help us remember these terms:
 
 * $w(L)$ to $p(q)$: Supply to demand
 * $ME(L)$ to $MR(q)$: Marginal expenditure to marginal revenue
 * $MRP(L)$ to $MC(q)$. Marginal revenue product to marginal cost
-
-Let us look at a numerical example.
 
 ::: {#exm-monop-Quant}
 Consider a coal mine in a small town with production function $q = 30\ln L$. The market for coal is a perfectly competitive one with price $p=\$5$ per unit. The labor market where the mine operates has supply given by $w(L) = 5 + \frac{1}{2}L.$ Determine the number of workers hired and the equilibrium wage in this market.
@@ -662,7 +661,7 @@ plt.show()
 ```
 :::
 
-To conclude, we see that compared to a competitive buyer, the monopsonist buys a lower quantity at a lower price and this creates a dead weight loss in the market, as in the case of the monopoly.
+To conclude, compared to a competitive buyer, the monopsonist buys a lower quantity at a lower price and this creates a dead weight loss in the market, as in the case of the monopoly.
 
 
 # Exercises
