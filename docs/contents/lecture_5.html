@@ -460,7 +460,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>My Dam <a href="mailto:my-thi-tra.dam@universite-paris-saclay.fr" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+             <p>My Dam <a href="mailto:my.dam169@gmail.com" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
           </div>
   </div>
     
@@ -520,13 +520,14 @@ window.Quarto = {
 </section>
 <section id="graphical-representation-of-games" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Graphical representation of games</h1>
-<p>There are two ways to represent a game: by means of a matrix (normal form) or a game tree (extensive form).</p>
+<p>There are two broad ways to represent a game, depending on what we need to capture: the normal form records what players choose and the resulting payoffs, while the extensive form additionally records the order of moves and what each player knows at the time they move.</p>
 <section id="normal-form" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="normal-form"><span class="header-section-number">3.1</span> Normal form</h2>
-<p>The normal form is the representation of a game using a matrix whose columns and rows represent all possible outcomes. It is best used to represent games of simultaneous moves where order of play is not important.</p>
+<p>In the normal form, every player picks a strategy independently and simultaneously — imagine each player sealing their choice in an envelope at the same time, with no one able to peek at anyone else’s before all envelopes are opened together. The game is then fully described by the payoff each player receives for every possible combination of sealed choices (see <a href="#def-normalForm" class="quarto-xref">Definition&nbsp;4</a> for the formal statement).</p>
+<p>In the case of two players, the normal form of a game can be represented using a matrix: one player’s strategies index the rows, the other’s index the columns, and each cell lists the pair of payoffs resulting from that combination of choices — the first number for the player whose strategies show up on each row, the second for the player whose strategies show up on each column. This is the representation used in most of the examples below, though not every normal-form game can be drawn this way (the Cournot model later in this chapter, where firms choose quantities from a continuum, is a normal-form game with no matrix to draw).</p>
 <section id="pure-strategy-nash-equilibrium" class="level3" data-number="3.1.1">
 <h3 data-number="3.1.1" class="anchored" data-anchor-id="pure-strategy-nash-equilibrium"><span class="header-section-number">3.1.1</span> Pure strategy Nash equilibrium</h3>
-<p>In the examples that follow, the first number represents the payoff to the player whose strategies show up on each row of the matrix. The second number reprsents the payoff to the player whose strategies show up on each column.Let us try to determine the best responses and the Nash equilibrium of each game. The NE that consists of a strategies that each player chooses with certainty is called <strong>a pure strategy NE</strong>. We will see that not all games have a pure strategy NE but if we allow players to choose certain strategies probablistically (as is often the case in sports), then a NE generally exists. This type of NE is called a <strong>mixed strategy NE</strong>.</p>
+<p>Let us try to determine the best responses and the Nash equilibrium of each game. The NE that consists of a strategies that each player chooses with certainty is called <strong>a pure strategy NE</strong>. We will see that not all games have a pure strategy NE but if we allow players to choose certain strategies probablistically (as is often the case in sports), then a NE generally exists. This type of NE is called a <strong>mixed strategy NE</strong>.</p>
 <div id="exm-pennies" class="theorem example">
 <p><span class="theorem-title"><strong>Example 3</strong></span> &nbsp;</p>
 <div id="fig-pmatch" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -895,7 +896,7 @@ p(q) = \begin{cases}
 <div id="fig-msNE" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-msNE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="6068c392" class="cell" data-execution_count="5">
+<div id="77a73aca" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -915,7 +916,7 @@ Figure&nbsp;6: Best response functions and msNE in the pennies matching game
 </section>
 <section id="extensive-form" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="extensive-form"><span class="header-section-number">3.2</span> Extensive form</h2>
-<p>The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in <a href="#fig-normFormExtGame" class="quarto-xref">Figure&nbsp;8</a>. In particular, the normal form representation provies two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant’s “In” is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as <em>sequentially irrational</em> because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of <strong>subgame-perfect equilibrium</strong>(<a href="#def-SPE" class="quarto-xref">Definition&nbsp;9</a>).</p>
+<p>The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in <a href="#fig-normFormExtGame" class="quarto-xref">Figure&nbsp;8</a>. In particular, the normal form representation provies two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant’s “In” is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as <em>sequentially irrational</em> because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of <strong>subgame-perfect equilibrium</strong>(<a href="#def-SPE" class="quarto-xref">Definition&nbsp;10</a>).</p>
 <div id="fig-extForm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-extForm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1271,13 +1272,22 @@ s \in \{(H,T), (T,H), (T,T), (H,H)\}.
 <p><span class="theorem-title"><strong>Definition 3 (Payoff function)</strong></span> The payoff function of a player <span class="math inline">\(i\)</span> is a mapping from a strategy profile to a real number <span class="math inline">\(u_i : S_i \times S_{-i} \to \mathbb{R}.\)</span></p>
 </div>
 <p>Observe that the payoff of a player typically depends on the strategies selected by the others. This is the <em>strategic</em> property of games.</p>
+<div id="def-normalForm" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 4 (Normal form (strategic form))</strong></span> A game in normal form (or strategic form) is a triple <span class="math inline">\(G = \big(N, \{S_i\}_{i=1}^N, \{u_i\}_{i=1}^N\big)\)</span>, where:</p>
+<ul>
+<li><span class="math inline">\(N\)</span> is the number of players,</li>
+<li><span class="math inline">\(S_i\)</span> is the strategy set of player <span class="math inline">\(i\)</span>, for <span class="math inline">\(i=1,\dots,N\)</span>,</li>
+<li><span class="math inline">\(u_i : S_1 \times S_2 \times \cdots \times S_N \to \mathbb{R}\)</span> is the payoff function of player <span class="math inline">\(i\)</span> (<a href="#def-payoff" class="quarto-xref">Definition&nbsp;3</a>), mapping each strategy profile <span class="math inline">\(s=(s_1,\dots,s_N)\)</span> (<a href="#def-strategyProfile" class="quarto-xref">Definition&nbsp;2</a>) to a real number.</li>
+</ul>
+<p>When <span class="math inline">\(N=2\)</span> and both strategy sets are finite, <span class="math inline">\(G\)</span> can be represented as a matrix: one player’s strategies index the rows, the other’s index the columns, and each cell <span class="math inline">\((s_1,s_2)\)</span> lists the payoff pair <span class="math inline">\((u_1(s_1,s_2), u_2(s_1,s_2))\)</span> — the convention used in every matrix game in this chapter.</p>
+</div>
 <div id="def-weakDom" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 4 (Strategic dominance)</strong></span> Strategy <span class="math inline">\(s_i\)</span> is a weakly dominant strategy of player <span class="math inline">\(i\)</span> if <span id="eq-weak-dom"><span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 5 (Strategic dominance)</strong></span> Strategy <span class="math inline">\(s_i\)</span> is a weakly dominant strategy of player <span class="math inline">\(i\)</span> if <span id="eq-weak-dom"><span class="math display">\[
 u_i(s_i, s_{-i}) \geq u_i(s_j, s_{-i}),
 \tag{5}\]</span></span> for every <span class="math inline">\(s_i \neq s_j\)</span> and <span class="math inline">\(s_{-i}\)</span> selected by the other players. If the inequality sign in condition <a href="#eq-weak-dom" class="quarto-xref">5</a> is strict, then <span class="math inline">\(s_i\)</span> is called a strictly dominant strategy. If the inequality sign reverses direction, then player <span class="math inline">\(i\)</span> views <span class="math inline">\(s_i\)</span> as a weakly dominated strategy (strictly dominated if the inequality sign is strict.)</p>
 </div>
 <div id="def-bestResponse" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5 (Best response)</strong></span> The strategy <span class="math inline">\(s_i\)</span> of player <span class="math inline">\(i\)</span> is called the best response to her opponents’ strategy profile <span class="math inline">\(s_{-i}\)</span> if: <span id="eq-BRdef"><span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 6 (Best response)</strong></span> The strategy <span class="math inline">\(s_i\)</span> of player <span class="math inline">\(i\)</span> is called the best response to her opponents’ strategy profile <span class="math inline">\(s_{-i}\)</span> if: <span id="eq-BRdef"><span class="math display">\[
 u_i(s_i, s_{-i}) \geq u_i(s_j, s_{-i}), \quad\forall j\neq i.
 \tag{6}\]</span></span> We often write: <span id="eq-BRcorr"><span class="math display">\[
 s_i \in BR_i(s_{-i}).
@@ -1290,18 +1300,18 @@ s_i \in BR_i(s_{-i}).
 <p><span class="proof-title"><em>Remark 2</em>. </span>Observe that a dominant strategy is a best response, but not conversely. In order for a best response to be a dominant strategy, condition <a href="#eq-BRdef" class="quarto-xref">6</a> has to hold for <em>every possible</em> strategy profile selected by the other players. In other words, whatever the strategies selected by the other player(s), the best response remains the same for player <span class="math inline">\(i.\)</span> Strategic dominance is thus a much stronger than best response.</p>
 </div>
 <div id="def-NashEqm" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6 (Nash equilibrium)</strong></span> A strategy profile <span class="math inline">\(s^*=(s^*_i, s^*_{-i})\)</span> is a Nash equilibrium if every player plays their best reponse given their opponnents’ strategies, that is: <span id="eq-NE"><span class="math display">\[
+<p><span class="theorem-title"><strong>Definition 7 (Nash equilibrium)</strong></span> A strategy profile <span class="math inline">\(s^*=(s^*_i, s^*_{-i})\)</span> is a Nash equilibrium if every player plays their best reponse given their opponnents’ strategies, that is: <span id="eq-NE"><span class="math display">\[
 s^*_i \in BR_i(s^*_{-i}),\quad \forall i=1,...,N.
 \tag{8}\]</span></span></p>
 </div>
 <div id="def-infoSet" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 7 (Information set)</strong></span> In the context of extensive form games, an information set faced by a player is a set that connects all the nodes that the player cannot distinguish.</p>
+<p><span class="theorem-title"><strong>Definition 8 (Information set)</strong></span> In the context of extensive form games, an information set faced by a player is a set that connects all the nodes that the player cannot distinguish.</p>
 </div>
 <div id="def-subgame" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Subgame)</strong></span> A subgame is a portion of an extensive-form game that contains a decision node and all subsequent nodes following it. Graphically, if we draw a circle around a subgame, then this circle cannot cross any information set: every subgame must contain all its information sets. The presence of information sets thus reduces the number of subgames.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Subgame)</strong></span> A subgame is a portion of an extensive-form game that contains a decision node and all subsequent nodes following it. Graphically, if we draw a circle around a subgame, then this circle cannot cross any information set: every subgame must contain all its information sets. The presence of information sets thus reduces the number of subgames.</p>
 </div>
 <div id="def-SPE" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Subgame-perfect equilibrium)</strong></span> A strategy profile <span class="math inline">\((s_i^*, s^*_{-i})\)</span> is a SPE if it specifies a Nash equilibrium in each subgame.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Subgame-perfect equilibrium)</strong></span> A strategy profile <span class="math inline">\((s_i^*, s^*_{-i})\)</span> is a SPE if it specifies a Nash equilibrium in each subgame.</p>
 </div>
 </section>
 <section id="applications-to-imperfect-competition" class="level1" data-number="5">
@@ -1336,7 +1346,7 @@ q_2 &amp;=  \frac{a - c}{2b} - \frac{q_1}{2}.
 <div id="fig-cournot-game" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cournot-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="8c0ec43d" class="cell" data-execution_count="6">
+<div id="12564dd0" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

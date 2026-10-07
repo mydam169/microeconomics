@@ -2,7 +2,7 @@
 title: "Chapter 5. Game theory and imperfect competition"
 author:
     name: My Dam
-    email: my-thi-tra.dam@universite-paris-saclay.fr
+    email: my.dam169@gmail.com
 number-sections: true
 execute:
     echo: false
@@ -100,15 +100,17 @@ In all games studied, we assume that players are rational. Each player knows eve
 
 # Graphical representation of games
 
-There are two ways to represent a game: by means of a matrix (normal form) or a game tree (extensive form). 
+There are two broad ways to represent a game, depending on what we need to capture: the normal form records what players choose and the resulting payoffs, while the extensive form additionally records the order of moves and what each player knows at the time they move.
 
 ## Normal form
 
-The normal form is the representation of a game using a matrix whose columns and rows represent all possible outcomes. It is best used to represent games of simultaneous moves where order of play is not important. 
+In the normal form, every player picks a strategy independently and simultaneously — imagine each player sealing their choice in an envelope at the same time, with no one able to peek at anyone else's before all envelopes are opened together. The game is then fully described by the payoff each player receives for every possible combination of sealed choices (see @def-normalForm for the formal statement).
+
+In the case of two players, the normal form of a game can be represented using a matrix: one player's strategies index the rows, the other's index the columns, and each cell lists the pair of payoffs resulting from that combination of choices — the first number for the player whose strategies show up on each row, the second for the player whose strategies show up on each column. This is the representation used in most of the examples below, though not every normal-form game can be drawn this way (the Cournot model later in this chapter, where firms choose quantities from a continuum, is a normal-form game with no matrix to draw).
 
 ### Pure strategy Nash equilibrium
 
-In the examples that follow, the first number represents the payoff to the player whose strategies show up on each row of the matrix. The second number reprsents the payoff to the player whose strategies show up on each column.Let us try to determine the best responses and the Nash equilibrium  of each game. The NE that consists of a strategies that each player chooses with certainty is called __a pure strategy NE__. We will see that not all games have a pure strategy NE but if we allow players to choose certain strategies probablistically (as is often the case in sports), then a NE generally exists. This type of NE is called a __mixed strategy NE__.
+Let us try to determine the best responses and the Nash equilibrium of each game. The NE that consists of a strategies that each player chooses with certainty is called __a pure strategy NE__. We will see that not all games have a pure strategy NE but if we allow players to choose certain strategies probablistically (as is often the case in sports), then a NE generally exists. This type of NE is called a __mixed strategy NE__.
 
 ::: {#exm-pennies}
 ::: {#fig-pmatch fig-cap="Normal form representation of the game of matching pennies. If pennies matched B pays A one dollar, otherwise A pays B one dollar."}
@@ -591,6 +593,17 @@ The payoff function of a player $i$ is a mapping from a strategy profile to a re
 :::
 
 Observe that the payoff of a player typically depends on the strategies selected by the others. This is the _strategic_ property of games.
+
+::: {#def-normalForm}
+## Normal form (strategic form)
+A game in normal form (or strategic form) is a triple $G = \big(N, \{S_i\}_{i=1}^N, \{u_i\}_{i=1}^N\big)$, where:
+
+* $N$ is the number of players,
+* $S_i$ is the strategy set of player $i$, for $i=1,\dots,N$,
+* $u_i : S_1 \times S_2 \times \cdots \times S_N \to \mathbb{R}$ is the payoff function of player $i$ (@def-payoff), mapping each strategy profile $s=(s_1,\dots,s_N)$ (@def-strategyProfile) to a real number.
+
+When $N=2$ and both strategy sets are finite, $G$ can be represented as a matrix: one player's strategies index the rows, the other's index the columns, and each cell $(s_1,s_2)$ lists the payoff pair $(u_1(s_1,s_2), u_2(s_1,s_2))$ — the convention used in every matrix game in this chapter.
+:::
 
 ::: {#def-weakDom}
 ## Strategic dominance
