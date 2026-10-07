@@ -820,31 +820,31 @@ $$
 
 The equilibrium price can be computed using the demand function:
 $$
-p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = \frac{3a + c}{4},
+p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = a - b\left(\frac{a-c}{4b} + \frac{a-c}{2b}\right) = a - \frac{3(a-c)}{4} = \frac{a+3c}{4},
 $${#eq-price_stack}
-which is greater than the Cournot price $p^C=\frac{a+2c}{3}$ since $a>c.$
+which is in fact *lower* than the Cournot price $p^C=\frac{a+2c}{3}$ since $a>c$ implies $\frac{a+3c}{4} < \frac{a+2c}{3}.$ The leader's commitment to a larger output raises total industry output above the Cournot level, and it is this higher aggregate output that pushes the price down.
 
 Profits:
 $$
-\pi_{\text{leader}} = q^S_1(p^S - c) = \frac{3(a-c)^2}{8b}.
+\pi_{\text{leader}} = q^S_1(p^S - c) = \frac{a-c}{2b}\cdot\frac{a-c}{4} = \frac{(a-c)^2}{8b}.
 $${#eq-profit_leader_stack}
 
 $$
-\pi_{\text{follower}} = q^S_2(p^S - c) = \frac{3(a-c)^2}{16b}.
+\pi_{\text{follower}} = q^S_2(p^S - c) = \frac{a-c}{4b}\cdot\frac{a-c}{4} = \frac{(a-c)^2}{16b}.
 $${#eq-profit_follower_stack}
 
-Hence the leader earns higher profits than in the Cournot case thanks to the first mover's advantage, but the follower earns lower profits.
+Hence the leader earns higher profits than in the Cournot case thanks to the first mover's advantage, while the follower earns lower profits — even though the leader's aggressiveness drives the market price down for everyone.
 
 To sum up:
 
 $$
 \begin{aligned}
-&p^S > p^C, \\
+&p^S < p^C, \\
 &q^S_{\text{follower}} < q^C < q^S_{\text{leader}}, \\
 &\pi_{\text{follower}} < \pi^C < \pi_{\text{leader}}.
 \end{aligned}
 $$
-    
+
 <!-- add a table here -->
 
 

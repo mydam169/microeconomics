@@ -473,6 +473,12 @@ window.Quarto = {
 </header>
 
 
+<div id="67c46406" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdout">
+<pre><code>The autoreload extension is already loaded. To reload it, use:
+  %reload_ext autoreload</code></pre>
+</div>
+</div>
 <section id="a-word-on-organization" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> A word on organization</h1>
 <p>This chapter contains a lot of definitions and concepts specific to game theory. In order to help quickly locate and link these concepts together, I have decided to put them all in <a href="#sec-concepts" class="quarto-xref">Section&nbsp;4</a>. Whenever you encounter a new concept throughout the chapter, you will most likely find its definition there.</p>
@@ -896,7 +902,7 @@ p(q) = \begin{cases}
 <div id="fig-msNE" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-msNE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="77a73aca" class="cell" data-execution_count="5">
+<div id="91dbfca7" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1346,7 +1352,7 @@ q_2 &amp;=  \frac{a - c}{2b} - \frac{q_1}{2}.
 <div id="fig-cournot-game" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cournot-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="12564dd0" class="cell" data-execution_count="6">
+<div id="4a80d211" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1413,19 +1419,19 @@ q_2^S = \frac{a - c}{4b} = \frac{q_1^S}{2}.
 q^S_{\text{follower}} &lt; q^C &lt; q^S_{\text{leader}}.
 \]</span></p>
 <p>The equilibrium price can be computed using the demand function: <span id="eq-price_stack"><span class="math display">\[
-p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = \frac{3a + c}{4},
-\tag{20}\]</span></span> which is greater than the Cournot price <span class="math inline">\(p^C=\frac{a+2c}{3}\)</span> since <span class="math inline">\(a&gt;c.\)</span></p>
+p^S = a - b(q^S_{\text{follower}} + q^S_{\text{leader}}) = a - b\left(\frac{a-c}{4b} + \frac{a-c}{2b}\right) = a - \frac{3(a-c)}{4} = \frac{a+3c}{4},
+\tag{20}\]</span></span> which is in fact <em>lower</em> than the Cournot price <span class="math inline">\(p^C=\frac{a+2c}{3}\)</span> since <span class="math inline">\(a&gt;c\)</span> implies <span class="math inline">\(\frac{a+3c}{4} &lt; \frac{a+2c}{3}.\)</span> The leader’s commitment to a larger output raises total industry output above the Cournot level, and it is this higher aggregate output that pushes the price down.</p>
 <p>Profits: <span id="eq-profit_leader_stack"><span class="math display">\[
-\pi_{\text{leader}} = q^S_1(p^S - c) = \frac{3(a-c)^2}{8b}.
+\pi_{\text{leader}} = q^S_1(p^S - c) = \frac{a-c}{2b}\cdot\frac{a-c}{4} = \frac{(a-c)^2}{8b}.
 \tag{21}\]</span></span></p>
 <p><span id="eq-profit_follower_stack"><span class="math display">\[
-\pi_{\text{follower}} = q^S_2(p^S - c) = \frac{3(a-c)^2}{16b}.
+\pi_{\text{follower}} = q^S_2(p^S - c) = \frac{a-c}{4b}\cdot\frac{a-c}{4} = \frac{(a-c)^2}{16b}.
 \tag{22}\]</span></span></p>
-<p>Hence the leader earns higher profits than in the Cournot case thanks to the first mover’s advantage, but the follower earns lower profits.</p>
+<p>Hence the leader earns higher profits than in the Cournot case thanks to the first mover’s advantage, while the follower earns lower profits — even though the leader’s aggressiveness drives the market price down for everyone.</p>
 <p>To sum up:</p>
 <p><span class="math display">\[
 \begin{aligned}
-&amp;p^S &gt; p^C, \\
+&amp;p^S &lt; p^C, \\
 &amp;q^S_{\text{follower}} &lt; q^C &lt; q^S_{\text{leader}}, \\
 &amp;\pi_{\text{follower}} &lt; \pi^C &lt; \pi_{\text{leader}}.
 \end{aligned}
