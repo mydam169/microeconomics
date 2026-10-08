@@ -415,7 +415,7 @@ window.Quarto = {
   <li><a href="#game-building-blocks-and-examples" id="toc-game-building-blocks-and-examples" class="nav-link" data-scroll-target="#game-building-blocks-and-examples"><span class="header-section-number">2.1</span> Game building blocks and examples</a></li>
   <li><a href="#assumption-of-common-knowledge-of-rationality" id="toc-assumption-of-common-knowledge-of-rationality" class="nav-link" data-scroll-target="#assumption-of-common-knowledge-of-rationality"><span class="header-section-number">2.2</span> Assumption of common knowledge of rationality</a></li>
   </ul></li>
-  <li><a href="#graphical-representation-of-games" id="toc-graphical-representation-of-games" class="nav-link" data-scroll-target="#graphical-representation-of-games"><span class="header-section-number">3</span> Graphical representation of games</a>
+  <li><a href="#representation-of-games" id="toc-representation-of-games" class="nav-link" data-scroll-target="#representation-of-games"><span class="header-section-number">3</span> Representation of games</a>
   <ul class="collapse">
   <li><a href="#normal-form" id="toc-normal-form" class="nav-link" data-scroll-target="#normal-form"><span class="header-section-number">3.1</span> Normal form</a>
   <ul class="collapse">
@@ -473,7 +473,7 @@ window.Quarto = {
 </header>
 
 
-<div id="234769f1" class="cell" data-execution_count="1">
+<div id="d40446f7" class="cell" data-execution_count="1">
 <div class="cell-output cell-output-stdout">
 <pre><code>The autoreload extension is already loaded. To reload it, use:
   %reload_ext autoreload</code></pre>
@@ -524,8 +524,8 @@ window.Quarto = {
 <p>In all games studied, we assume that players are rational. Each player knows every element of the game, namely, the players involved, the strategy in each contingency and the resulting payoff in each situation. In addition, every player knows that the other player(s) know all of this, including the fact that this player knows that they know. This assumption is what ultimately justifies solving dynamic games by backward induction later in the chapter: since rationality, and the fact that everyone knows it, is common knowledge, each player can correctly anticipate that every other player will always play a best response from any point in the game onward.</p>
 </section>
 </section>
-<section id="graphical-representation-of-games" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Graphical representation of games</h1>
+<section id="representation-of-games" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Representation of games</h1>
 <p>There are two broad ways to represent a game, depending on what we need to capture: the normal form records what players choose and the resulting payoffs, while the extensive form additionally records the order of moves and what each player knows at the time they move.</p>
 <section id="normal-form" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="normal-form"><span class="header-section-number">3.1</span> Normal form</h2>
@@ -902,7 +902,7 @@ p(q) = \begin{cases}
 <div id="fig-msNE" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-msNE-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="c031409e" class="cell" data-execution_count="5">
+<div id="85de1738" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -922,7 +922,7 @@ Figure&nbsp;6: Best response functions and msNE in the pennies matching game
 </section>
 <section id="extensive-form" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="extensive-form"><span class="header-section-number">3.2</span> Extensive form</h2>
-<p>The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in <a href="#fig-normFormExtGame" class="quarto-xref">Figure&nbsp;8</a>. In particular, the normal form representation provides two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant’s “In” is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as <em>sequentially irrational</em> because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of <strong>subgame-perfect equilibrium</strong>(<a href="#def-SPE" class="quarto-xref">Definition&nbsp;10</a>).</p>
+<p>The extensive form of the game records not just the outcomes but also the dynamic of the game (see <a href="#def-extensiveForm" class="quarto-xref">Definition&nbsp;8</a> for the formal statement). For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in <a href="#fig-normFormExtGame" class="quarto-xref">Figure&nbsp;8</a>. In particular, the normal form representation provides two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant’s “In” is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as <em>sequentially irrational</em> because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of <strong>subgame-perfect equilibrium</strong>(<a href="#def-SPE" class="quarto-xref">Definition&nbsp;11</a>).</p>
 <div id="fig-extForm" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-extForm-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1310,14 +1310,25 @@ s_i \in BR_i(s_{-i}).
 s^*_i \in BR_i(s^*_{-i}),\quad \forall i=1,...,N.
 \tag{8}\]</span></span></p>
 </div>
+<div id="def-extensiveForm" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 8 (Extensive form)</strong></span> A game in extensive form is a tuple <span class="math inline">\(\Gamma = \big(X, x_0, Z, \{A(x)\}_{x\in X\setminus Z}, \iota, \{H_i\}_{i=1}^N, \{u_i\}_{i=1}^N\big)\)</span>, where:</p>
+<ul>
+<li><span class="math inline">\(X\)</span> is the (finite) set of nodes of the game tree, with root <span class="math inline">\(x_0\)</span> and terminal nodes <span class="math inline">\(Z\subset X\)</span>,</li>
+<li><span class="math inline">\(A(x)\)</span> is the set of actions available at each non-terminal (decision) node <span class="math inline">\(x\)</span>,</li>
+<li><span class="math inline">\(\iota(x)\)</span> assigns each decision node <span class="math inline">\(x\)</span> to the player who moves there,</li>
+<li><span class="math inline">\(H_i\)</span> partitions player <span class="math inline">\(i\)</span>’s decision nodes into information sets (<a href="#def-infoSet" class="quarto-xref">Definition&nbsp;9</a>): nodes within the same information set are indistinguishable to player <span class="math inline">\(i\)</span> when it is her turn to move,</li>
+<li><span class="math inline">\(u_i : Z \to \mathbb{R}\)</span> is the payoff function of player <span class="math inline">\(i\)</span>, assigning a payoff to each terminal node of the tree.</li>
+</ul>
+<p>A strategy for player <span class="math inline">\(i\)</span> (<a href="#def-strategy" class="quarto-xref">Definition&nbsp;1</a>) specifies an action from <span class="math inline">\(A(x)\)</span> for every information set in <span class="math inline">\(H_i\)</span>, including those not reached in equilibrium.</p>
+</div>
 <div id="def-infoSet" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 8 (Information set)</strong></span> In the context of extensive form games, an information set faced by a player is a set that connects all the nodes that the player cannot distinguish.</p>
+<p><span class="theorem-title"><strong>Definition 9 (Information set)</strong></span> In the context of extensive form games, an information set faced by a player is a set that connects all the nodes that the player cannot distinguish.</p>
 </div>
 <div id="def-subgame" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 9 (Subgame)</strong></span> A subgame is a portion of an extensive-form game that contains a decision node and all subsequent nodes following it. Graphically, if we draw a circle around a subgame, then this circle cannot cross any information set: every subgame must contain all its information sets. The presence of information sets thus reduces the number of subgames.</p>
+<p><span class="theorem-title"><strong>Definition 10 (Subgame)</strong></span> A subgame is a portion of an extensive-form game that contains a decision node and all subsequent nodes following it. Graphically, if we draw a circle around a subgame, then this circle cannot cross any information set: every subgame must contain all its information sets. The presence of information sets thus reduces the number of subgames.</p>
 </div>
 <div id="def-SPE" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10 (Subgame-perfect equilibrium)</strong></span> A strategy profile <span class="math inline">\((s_i^*, s^*_{-i})\)</span> is a SPE if it specifies a Nash equilibrium in each subgame.</p>
+<p><span class="theorem-title"><strong>Definition 11 (Subgame-perfect equilibrium)</strong></span> A strategy profile <span class="math inline">\((s_i^*, s^*_{-i})\)</span> is a SPE if it specifies a Nash equilibrium in each subgame.</p>
 </div>
 </section>
 <section id="applications-to-imperfect-competition" class="level1" data-number="5">
@@ -1352,7 +1363,7 @@ q_2 &amp;=  \frac{a - c}{2b} - \frac{q_1}{2}.
 <div id="fig-cournot-game" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-cournot-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="173f9a23" class="cell" data-execution_count="6">
+<div id="0050df01" class="cell" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -1422,7 +1433,7 @@ q^S_{\text{follower}} &lt; q^C &lt; q^S_{\text{leader}}.
 <div id="fig-stackelberg-game" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-stackelberg-game-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="62f6219d" class="cell" data-execution_count="7">
+<div id="6326bf4f" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">

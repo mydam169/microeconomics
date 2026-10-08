@@ -98,7 +98,7 @@ Let us consider a tennis game in a single tennis tournament (there are doubles a
 
 In all games studied, we assume that players are rational. Each player knows every element of the game, namely, the players involved, the strategy in each contingency and the resulting payoff in each situation. In addition, every player knows that the other player(s) know all of this, including the fact that this player knows that they know. This assumption is what ultimately justifies solving dynamic games by backward induction later in the chapter: since rationality, and the fact that everyone knows it, is common knowledge, each player can correctly anticipate that every other player will always play a best response from any point in the game onward.
 
-# Graphical representation of games
+# Representation of games
 
 There are two broad ways to represent a game, depending on what we need to capture: the normal form records what players choose and the resulting payoffs, while the extensive form additionally records the order of moves and what each player knows at the time they move.
 
@@ -370,7 +370,7 @@ In highly competitive sports, sometimes many strong players lose to completely u
 
 ## Extensive form 
 
-The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in @fig-normFormExtGame. In particular, the normal form representation provides two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant's "In" is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as _sequentially irrational_ because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of __subgame-perfect equilibrium__(@def-SPE).
+The extensive form of the game records not just the outcomes but also the dynamic of the game (see @def-extensiveForm for the formal statement). For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in @fig-normFormExtGame. In particular, the normal form representation provides two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant's "In" is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as _sequentially irrational_ because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of __subgame-perfect equilibrium__(@def-SPE).
 
 ::: {#fig-extForm fig-cap="An extensive form game with two players, P1 (entrant) and P2 (incumbent). The entrant moves first."}
 ```{mermaid}
@@ -641,6 +641,19 @@ A strategy profile $s^*=(s^*_i, s^*_{-i})$ is a Nash equilibrium if every player
 $$
 s^*_i \in BR_i(s^*_{-i}),\quad \forall i=1,...,N.
 $${#eq-NE}
+:::
+
+::: {#def-extensiveForm}
+## Extensive form
+A game in extensive form is a tuple $\Gamma = \big(X, x_0, Z, \{A(x)\}_{x\in X\setminus Z}, \iota, \{H_i\}_{i=1}^N, \{u_i\}_{i=1}^N\big)$, where:
+
+* $X$ is the (finite) set of nodes of the game tree, with root $x_0$ and terminal nodes $Z\subset X$,
+* $A(x)$ is the set of actions available at each non-terminal (decision) node $x$,
+* $\iota(x)$ assigns each decision node $x$ to the player who moves there,
+* $H_i$ partitions player $i$'s decision nodes into information sets (@def-infoSet): nodes within the same information set are indistinguishable to player $i$ when it is her turn to move,
+* $u_i : Z \to \mathbb{R}$ is the payoff function of player $i$, assigning a payoff to each terminal node of the tree.
+
+A strategy for player $i$ (@def-strategy) specifies an action from $A(x)$ for every information set in $H_i$, including those not reached in equilibrium.
 :::
 
 ::: {#def-infoSet}
