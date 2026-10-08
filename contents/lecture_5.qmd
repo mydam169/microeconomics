@@ -96,7 +96,7 @@ Let us consider a tennis game in a single tennis tournament (there are doubles a
 
 ## Assumption of common knowledge of rationality
 
-In all games studied, we assume that players are rational. Each player knows every element of the game, namely, the players involved, the strategy in each contingency and the resulting payoff in each situation. In addition, every player knows that the other player(s) know all of this, including the fact that this player knows that they know. 
+In all games studied, we assume that players are rational. Each player knows every element of the game, namely, the players involved, the strategy in each contingency and the resulting payoff in each situation. In addition, every player knows that the other player(s) know all of this, including the fact that this player knows that they know. This assumption is what ultimately justifies solving dynamic games by backward induction later in the chapter: since rationality, and the fact that everyone knows it, is common knowledge, each player can correctly anticipate that every other player will always play a best response from any point in the game onward.
 
 # Graphical representation of games
 
@@ -142,7 +142,7 @@ Let us try to determine the best responses and the Nash equilibrium of each game
 :::
 
 ::: {#exm-crops}
-Consider this example from [CoreEcon](https://core-econ.org/the-economy/microeconomics/04-strategic-interactions-02-game-theory.html) which describes a strategic situation between two farmers who decide on which crop to grow. If both grow the same crop, they will flood the market with the same good and pushing down the price. The land of the person named Anil is equally suitable for both types of crops (cassava and rice). For the other person, Bala, the land is as good as that of Anil for growing rice, but less so for cassava. The outcome of this situation can be predicted using a simple game theory setupt.
+Consider this example from [CoreEcon](https://core-econ.org/the-economy/microeconomics/04-strategic-interactions-02-game-theory.html) which describes a strategic situation between two farmers who decide on which crop to grow. If both grow the same crop, they will flood the market with the same good, pushing down the price. The land of the person named Anil is equally suitable for both types of crops (cassava and rice). For the other person, Bala, the land is as good as that of Anil for growing rice, but less so for cassava. The outcome of this situation can be predicted using a simple game theory setup.
 
 ::: {#fig-crop fig-cap="An agricultural game"}
 <table style="width:80%">
@@ -180,7 +180,7 @@ Consider a automobile market serviced by two firms, Ford and BMW. If both innova
     <tr>
         <th></th>
         <th></th>
-        <th colspan=2 style="text-align:center">Vueling</th>
+        <th colspan=2 style="text-align:center">Ford</th>
     </tr>
     <tr style="text-align:center">
         <th></th>
@@ -189,7 +189,7 @@ Consider a automobile market serviced by two firms, Ford and BMW. If both innova
         <td>Do not innovate</td>
     </tr>
     <tr>
-        <th rowspan=2>EasyJet</th>
+        <th rowspan=2>BMW</th>
         <td>Innovate</td>
         <td style="text-align:center">(5,5)</td>
         <td style="text-align:center">(10,2)</td>
@@ -242,7 +242,7 @@ What are the differences in the outcomes of these games? Observe that the game o
 
 ### Mixed strategy Nash equilibrium
 
-Let us return to @exm-pennies to illustrate mixed strategy NE. Suppose that B chooses H with probability $p$ and T with probability $1-p,$ and A chooses H with probability $q$ and T with probability $1-q.$ The modified pennies matching game can be rerpresented as in @fig-penniesMixedStrategy.
+Let us return to @exm-pennies to illustrate mixed strategy NE. Suppose that B chooses H with probability $p$ and T with probability $1-p,$ and A chooses H with probability $q$ and T with probability $1-q.$ The modified pennies matching game can be represented as in @fig-penniesMixedStrategy.
 
 ::: {#fig-penniesMixedStrategy fig-cap="A mixed strategy matching pennies game"}
 <table style="width:80%">
@@ -370,7 +370,7 @@ In highly competitive sports, sometimes many strong players lose to completely u
 
 ## Extensive form 
 
-The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in @fig-normFormExtGame. In particular, the normal form representation provies two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant's "In" is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as _sequentially irrational_ because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of __subgame-perfect equilibrium__(@def-SPE).
+The extensive form of the game records not just the outcomes but also the dynamic of the game. For this reason, it is often used to represent sequential games in which the order of play is important. Indeed, taking out the game dynamic and collapsing it into a matrix typically results in too many equilibria, as we see in @fig-normFormExtGame. In particular, the normal form representation provides two equilibria: (In, Accommodate) and (Out, Price War). Nevertheless, if we examine the game in extensive form using backward induction (starting from the end nodes), it is clear that the best response of the incumbent (P2) to the entrant's "In" is to accommodate. Knowing this, the incumbent would choose to go in. Hence the only equilibrium of the game would be (In, Accommodate). The equilibrium (Out, Price War) is described as _sequentially irrational_ because it is not a NE in the subgame starting from the decision node of the incumbent. In dynamic games, we would like to rule out such irrational equilibria, hence the need for the more refined solution concept of __subgame-perfect equilibrium__(@def-SPE).
 
 ::: {#fig-extForm fig-cap="An extensive form game with two players, P1 (entrant) and P2 (incumbent). The entrant moves first."}
 ```{mermaid}
@@ -414,9 +414,9 @@ flowchart LR
 
 ## Backward induction and SPE
 
-It is important to know how to identify and write an SPE. We solve for SPE using backward induction:
+It is important to know how to identify and write an SPE. Intuitively, backward induction works precisely because of the common knowledge of rationality assumed throughout this chapter: since every player knows that whoever moves last will always pick their best response, that choice can be folded into the payoffs faced by the second-to-last mover, and so on back to the root. This recursive reasoning is exactly what rules out non-credible threats or promises, such as the incumbent's "price war" threat in @fig-extForm. We solve for SPE using backward induction:
 
-  1. Start for the farthest end of the tree, focus on the decision point(s) of the last mover (the smallest subgames)
+  1. Start from the farthest end of the tree, focus on the decision point(s) of the last mover (the smallest subgames)
   2. Identify her BR and shade the branch associated with her BR (i.e., the NE associated with each of these subgames)
   3. Consider the second-to-last mover, identify her BR to the BR of the last mover, then shade this branch (another NE identified)
   4. Repeat the previous step until we reach the first mover at the root node (the largest subgame is the entire game itself)
@@ -637,7 +637,7 @@ Observe that a dominant strategy is a best response, but not conversely. In orde
 
 ::: {#def-NashEqm}
 ## Nash equilibrium
-A strategy profile $s^*=(s^*_i, s^*_{-i})$ is a Nash equilibrium if every player plays their best reponse given their opponnents' strategies, that is:
+A strategy profile $s^*=(s^*_i, s^*_{-i})$ is a Nash equilibrium if every player plays their best response given their opponents' strategies, that is:
 $$
 s^*_i \in BR_i(s^*_{-i}),\quad \forall i=1,...,N.
 $${#eq-NE}
@@ -663,9 +663,9 @@ A strategy profile $(s_i^*, s^*_{-i})$ is a SPE if it specifies a Nash equilibri
 
 ## Cournot model
 
-The Cournot model is a simultaneous-moves game in which firms compete on quantity. Consider an industry with two firms (i.e., a douopoly) selling a homogeneous product. Each firm $i$ independently and simultaneously determines output $q_i$ to maximize profits, $i=\{1, 2\}.$
+The Cournot model is a simultaneous-moves game in which firms compete on quantity. Consider an industry with two firms (i.e., a duopoly) selling a homogeneous product. Each firm $i$ independently and simultaneously determines output $q_i$ to maximize profits, $i=\{1, 2\}.$
 They each face a linear total cost $C_i(q_i) = cq_i$, $c>0.$
-Linear inverse demand curve: $p(q_1, q_2) = a - b\left(\sum_{i=1}^N q_i\right)$ where $a, b>0.$ Notice that the production choice of each firm affects the market price of the good and consquently the bottom line of the other firm. This would not have been the case in a perfectly competitive market.
+Linear inverse demand curve: $p(q_1, q_2) = a - b\left(\sum_{i=1}^N q_i\right)$ where $a, b>0.$ Notice that the production choice of each firm affects the market price of the good and consequently the bottom line of the other firm. This would not have been the case in a perfectly competitive market.
 
 Each firm $i$ solves its profit maximization problem to determine the optimal production level:
 $$
@@ -687,7 +687,7 @@ $$
 q_i = BR_i(q_j) = \frac{a - c}{2b} - \frac{q_j}{2}, \quad i\neq j.
 $${#eq-BR_cournot}
     
-The two best response functions specify the Nash equiblirium of the the game.
+The two best response functions specify the Nash equilibrium of the game.
 $$
 \begin{cases}
 q_1 &=  \frac{a - c}{2b} - \frac{q_2}{2} \\
@@ -753,7 +753,7 @@ For completeness let us compute the equilibrium price of the duopoly, aggregate 
     Q^C = q_1 + q_2 = 2q^C = \frac{2(a - c)}{3b}. 
     $${#eq-totQ_cournot}
     
-* Equlibrium price via the market demand curve:
+* Equilibrium price via the market demand curve:
     $$ 
     p^C = a - bQ^C = \frac{a + 2c}{3}. 
     $${#eq-price_cournot}
@@ -768,7 +768,7 @@ For completeness let us compute the equilibrium price of the duopoly, aggregate 
 ## Stackelberg model
 
 Consider 2 firms with the same constant marginal cost $c$ as in the Cournot case. They also compete on quantity, but _sequentially_.
-THe structure of the game is the following:
+The structure of the game is the following:
 
   * First, firm 1 chooses $q_1$
   * Then, having observed the choice of firm 1, firm 2 chooses $q_2$
@@ -789,7 +789,7 @@ $$
 q_2(q_1) \equiv BR_2(q_1) = \frac{a - c}{2b} - \frac{q_1}{2}.
 $${#eq-BR_stack}
 
-Observe that @eq-BR_stack coincides with @eq-BR_cournot since in both cases Firm 2 treats $q_1$ as exogenous
+Observe that @eq-BR_stack coincides with @eq-BR_cournot since in both cases Firm 2 treats $q_1$ as exogenous.
 
 ### PMP of the leader
 
@@ -798,7 +798,7 @@ $$
 \max_{q_1} [a - b(q_1 + BR_2(q_1))]q_1 - cq_1.
 $${#eq-PMP_stack_leader}
 
-In @eq-PMP_stack_leader, Firm 1 anticipates that Firm 2 will be maximizing her profits, i.e., settig $q_2 = BR_2(q_1)$.
+In @eq-PMP_stack_leader, Firm 1 anticipates that Firm 2 will be maximizing her profits, i.e., setting $q_2 = BR_2(q_1)$.
 
 The FOC w.r.t $q_1$ yields the BR function for Firm 1:
 $$ 
@@ -817,6 +817,33 @@ In Cournot games, both firms produce the same output that is _less_ than that of
 $$
 q^S_{\text{follower}} < q^C < q^S_{\text{leader}}.
 $$
+
+@fig-stackelberg-game shows both equilibria on the same best-response diagram. Notice that the Stackelberg point lies on the follower's best-response curve $BR_2(q_1)$, but away from its intersection with $BR_1(q_2)$: the leader deliberately moves along the follower's reaction curve to the point that maximizes its own profit, rather than settling at the mutual best response that characterizes the Cournot NE.
+
+::: {#fig-stackelberg-game fig-cap="Cournot NE and Stackelberg equilibrium on the same best-response diagram"}
+```{python}
+q1S = (a - c) / (2 * b)
+q2S = (a - c) / (4 * b)
+plt.plot(q, BR1(q), label='$BR_2(q_1)$', color='k', lw=2)
+plt.plot(q, BR2(q), label='$BR_1(q_2)$', color='C0', lw=2)
+plt.plot(q[:65], eqline(q[:65]), linestyle="--", color='gray', label="$q_1=q_2$")
+plt.vlines(x=0, ymin=qmax*0.99, ymax=q.max(), color='C0', lw=4)
+plt.hlines(y=0, xmin=qmax*0.99, xmax=q.max(), color='k', lw=4)
+plt.scatter(qstar, qstar, color='r', s=70, label="Cournot NE")
+plt.scatter(q1S, q2S, color='g', s=70, marker='D', label="Stackelberg eqm")
+plt.vlines(x=q1S, ymin=0, ymax=q2S, linestyle='--', lw=.5, color='g')
+plt.hlines(y=q2S, xmin=0, xmax=q1S, linestyle='--', lw=.5, color='g')
+
+plt.xlabel("$q_1$ (leader)", loc='right')
+plt.ylabel("$q_2$ (follower)", loc='top')
+plt.ylim([0, q.max()])
+plt.xlim([0, q.max()])
+plt.xticks([])
+plt.yticks([])
+plt.legend(loc='best')
+plt.show()
+```
+:::
 
 The equilibrium price can be computed using the demand function:
 $$
@@ -845,7 +872,16 @@ $$
 \end{aligned}
 $$
 
-<!-- add a table here -->
+| | Cournot (each firm) | Stackelberg leader | Stackelberg follower |
+|---|---|---|---|
+| Quantity | $\dfrac{a-c}{3b}$ | $\dfrac{a-c}{2b}$ | $\dfrac{a-c}{4b}$ |
+| Profit | $\dfrac{(a-c)^2}{9b}$ | $\dfrac{(a-c)^2}{8b}$ | $\dfrac{(a-c)^2}{16b}$ |
+
+: Equilibrium outcomes under Cournot and Stackelberg competition {#tbl-cournot-stackelberg}
+
+The market price itself is a single value common to both firms rather than a per-firm quantity: $p^C=\frac{a+2c}{3}$ under Cournot and $p^S=\frac{a+3c}{4}$ under Stackelberg.
+
+Since total Stackelberg output exceeds total Cournot output, consumers are better off under Stackelberg: the lower price raises consumer surplus, even though it comes at the expense of a lower profit for the follower. This is a useful reminder that the winners from a first-mover advantage are not the same as the winners from the market structure overall — a theme we return to in @exr-merger, where firms raise price and hurt consumers by merging rather than moving sequentially.
 
 
 
@@ -891,6 +927,39 @@ Rock-Paper-Scissors is another simultaneous moves game. It can be played among m
 :::
 :::
 
+::: {#exr-battleSexes}
+Consider the following "Battle of the Sexes" game between two partners, A and B, who are deciding whether to spend the evening at the Opera or at a Football match. Both would rather be together than apart, but A prefers the Opera while B prefers Football, as reflected in the payoffs below.
+
+::: {#fig-battleSexes fig-cap="Battle of the Sexes: an asymmetric coordination game"}
+<table style="width:80%">
+    <tr>
+        <th></th>
+        <th></th>
+        <th colspan=2 style="text-align:center">Partner B</th>
+    </tr>
+    <tr style="text-align:center">
+        <th></th>
+        <th></th>
+        <td>Opera</td>
+        <td>Football</td>
+    </tr>
+    <tr>
+        <th rowspan=2>Partner A</th>
+        <td>Opera</td>
+        <td style="text-align:center">(2,1)</td>
+        <td style="text-align:center">(0,0)</td>
+    </tr>
+    <tr>
+        <td>Football</td>
+        <td style="text-align:center">(0,0)</td>
+        <td style="text-align:center">(1,2)</td>
+    </tr>
+</table>
+:::
+
+Find all the pure-strategy Nash equilibria of this game, then find the mixed-strategy NE. Unlike in the matching pennies game, the mixed-strategy probabilities here are not equal to one-half — compute them explicitly and explain why they differ between the two players.
+:::
+
 ::: {#exr-cournot}
 Consider two firms competing à la Cournot facing the same linear demand function $p(q_1,q_2)=a-b(q_1+q_2)$ but with asymmetric costs $C_i(q_i) = c_i q_i$ for $c_i > 0$ and $c_i\neq c_j$, $i,j=\{1, 2\}$. Determine the NE of the Cournot game, the market price as well as the profits earned by each firm in equilibrium.
 :::
@@ -900,14 +969,14 @@ Consider again the Cournot model with identical linear costs and linear demand f
 :::
 
 ::: {#exr-cournotLerner}
-Consider an oligopoly with $m$ firms and unit-elastic demand $q(p) = 1/p$. Suppose that the firms have constant marginal costs satisfying $c_1 \leq c_2 \leq ... \leq c_m$. They engage in Cournot competition.
+This exercise relates market power (the Lerner index) to market structure (the Herfindahl index) under Cournot competition, a classic result discussed in textbooks such as Tirole's *The Theory of Industrial Organization* (1988). Consider an oligopoly with $m$ firms and unit-elastic demand $q(p) = 1/p$. Suppose that the firms have constant marginal costs satisfying $c_1 \leq c_2 \leq ... \leq c_m$. They engage in Cournot competition.
 
 1. Let $s_i$ denote the market share of firm $i$, defined by $s_i = q_i/Q$ where $q_i$ is the output of firm $i$ and $Q$ is the total output. Show that in equilibrium the market share of each firm is equal to its Lerner index.
 2. Show that in equilibrium, the profit of firm $i$ is equal to $s_i^2$. Hence the industry profit is equal to the Herfindahl index $H=\sum_{i=1}^m s_i^2$
 :::
 
 ::: {#exr-merger}
-Consider Cournot competition with $n$ identical firms facing a constant marginal cost $c>0$. The market demand is linear $p(q) = a - bq$ where $a,b>0$ and $q$ is total output. Assume that $a>c$.
+This exercise illustrates the classic "merger paradox" result of Salant, Switzer and Reynolds (1983), who first showed that a Cournot merger is profitable for the merging firms only if it captures at least 80 percent of the pre-merger market. Consider Cournot competition with $n$ identical firms facing a constant marginal cost $c>0$. The market demand is linear $p(q) = a - bq$ where $a,b>0$ and $q$ is total output. Assume that $a>c$.
 
 1. Calculate industry output and prices as well as output per firm in equilibrium. What is the total surplus?
 2. Let $m$ out of $n$ firms merge. Show that the merger is profitable for the merged firms if and only if it involves a pre-merger market share of 80 percent.
